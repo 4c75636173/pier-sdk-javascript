@@ -1,6 +1,6 @@
 {
   "name": "CaaS",
-  "version": "0.0.1-SNAPSHOT",
+  "version": "0.0.1",
   "description": "GestÃ£o de pagamento eletrÃ´nicos como serviÃ§o",
   "license": "Apache 2.0",
   "main": "src/index.js",
