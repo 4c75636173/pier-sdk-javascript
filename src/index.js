@@ -1,9 +1,9 @@
 if (typeof module === 'object' && module.exports) {
   var CaaS = {};
   
-  CaaS.CartaoResponse = require('./model/CartaoResponse.js');
-  
   CaaS.DesbloquearCartaoResponse = require('./model/DesbloquearCartaoResponse.js');
+  
+  CaaS.CartaoResponse = require('./model/CartaoResponse.js');
   
   CaaS.ConsultarExtratoContaResponse = require('./model/ConsultarExtratoContaResponse.js');
   
@@ -13,9 +13,9 @@ if (typeof module === 'object' && module.exports) {
   
   CaaS.ConsultarCartaoResponse = require('./model/ConsultarCartaoResponse.js');
   
-  CaaS.ContaResponse = require('./model/ContaResponse.js');
-  
   CaaS.ExtratoResponse = require('./model/ExtratoResponse.js');
+  
+  CaaS.ContaResponse = require('./model/ContaResponse.js');
   
   CaaS.CancelarCartaoResponse = require('./model/CancelarCartaoResponse.js');
   

@@ -24,21 +24,21 @@ var ContaApi = function ContaApi() {
    * @param {function} callback the callback function
    * @return ContaResponse
    */
-  self.consultarContaUsingGET1 = function(idEmissor, idConta, callback) {
+  self.consultarContaUsingGET = function(idEmissor, idConta, callback) {
     var postBody = null;
     var postBinaryBody = null;
     
      // verify the required parameter 'idEmissor' is set
      if (idEmissor == null) {
-        //throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET1");
-        var errorRequiredMsg = "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET1";
+        //throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
+        var errorRequiredMsg = "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET";
         throw errorRequiredMsg;
      }
      
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        //throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET1");
-        var errorRequiredMsg = "Missing the required parameter 'idConta' when calling consultarContaUsingGET1";
+        //throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET");
+        var errorRequiredMsg = "Missing the required parameter 'idConta' when calling consultarContaUsingGET";
         throw errorRequiredMsg;
      }
      
