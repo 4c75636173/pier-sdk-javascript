@@ -1,125 +1,146 @@
-// require files in Node.js environment
-var $, ContaResponse;
-if (typeof module === 'object' && module.exports) {
-  $ = require('jquery');
-  ContaResponse = require('../model/ContaResponse.js');
-}
-
-// export module for AMD
-if ( typeof define === "function" && define.amd ) {     
-	define(['jquery', 'ContaResponse'], function($, ContaResponse) {
-        return ContaApi;
-	 });
-}
-
-var ContaApi = function ContaApi() {
-	var self = this;
-  
-  
-  /**
-   * /contas/{idConta}
-   * Consulte informaÃ§Ãµes de uma determinada conta
-   * @param {Integer}  idEmissor ID do Emissor
-   * @param {Integer}  idConta ID da Conta
-   * @param {function} callback the callback function
-   * @return ContaResponse
-   */
-  self.consultarContaUsingGET = function(idEmissor, idConta, callback) {
-    var postBody = null;
-    var postBinaryBody = null;
-    
-     // verify the required parameter 'idEmissor' is set
-     if (idEmissor == null) {
-        //throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
-        var errorRequiredMsg = "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET";
-        throw errorRequiredMsg;
-     }
-     
-     // verify the required parameter 'idConta' is set
-     if (idConta == null) {
-        //throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET");
-        var errorRequiredMsg = "Missing the required parameter 'idConta' when calling consultarContaUsingGET";
-        throw errorRequiredMsg;
-     }
-     
-    // create path and map variables
-    var basePath = 'https://localhost/';
-    // if basePath ends with a /, remove it as path starts with a leading /
-    if (basePath.substring(basePath.length-1, basePath.length)=='/') {
-    	basePath = basePath.substring(0, basePath.length-1);
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient', '../model/ConsultarContaResponse', '../model/ContaResponse'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'), require('../model/ConsultarContaResponse'), require('../model/ContaResponse'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    var path = basePath + replaceAll(replaceAll("/api/v1/contas/{idConta}", "\\{format\\}","json")
-, "\\{" + "idConta" + "\\}", encodeURIComponent(idConta.toString()));
-
-    var queryParams = {};
-    var headerParams =  {};
-    var formParams =  {};
-
-    
-    if (idEmissor != null)
-    headerParams.put("idEmissor", idEmissor);
-    
-    
-
-    path += createQueryString(queryParams);
-
-    var options = {type: "GET", async: true, contentType: "application/json", dataType: "json", data: postBody};
-    var request = $.ajax(path, options);
-
-    request.fail(function(jqXHR, textStatus, errorThrown){
-      if (callback) {
-        var error = errorThrown || textStatus || jqXHR.statusText || 'error';
-        callback(null, textStatus, jqXHR, error);
-      }
-    });
-		
-    request.done(function(response, textStatus, jqXHR){
-      
-      /**
-        * @returns ContaResponse
-        */
-      
-      var myResponse = new ContaResponse();
-      myResponse.constructFromObject(response);
-      if (callback) {
-        callback(myResponse, textStatus, jqXHR);
-      }
-      
-    });
- 
-    return request;
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.ConsultarContaResponse, root.Pier.ContaResponse);
   }
-  
-  
+}(this, function(ApiClient, ConsultarContaResponse, ContaResponse) {
+  'use strict';
 
- 	function replaceAll (haystack, needle, replace) {
-		var result= haystack;
-		if (needle !=null && replace!=null) {
-			result= haystack.replace(new RegExp(needle, 'g'), replace);
-		}
-		return result;
-	}
+  /**
+   * Conta service.
+   * @module api/ContaApi
+   * @version 0.0.1
+   */
 
- 	function createQueryString (queryParams) {
-		var queryString ='';
-		var i = 0;
-		for (var queryParamName in queryParams) {
-			if (i==0) {
-				queryString += '?' ;
-			} else {
-				queryString += '&' ;
-			}
-			
-			queryString +=  queryParamName + '=' + encodeURIComponent(queryParams[queryParamName]);
-			i++;
-		}
-		
-		return queryString;
-	}
-}
+  /**
+   * Constructs a new ContaApi. 
+   * @alias module:api/ContaApi
+   * @class
+   * @param {module:ApiClient} apiClient Optional API client implementation to use, default to {@link module:ApiClient#instance}
+   * if unspecified.
+   */
+  var exports = function(apiClient) {
+    this.apiClient = apiClient || ApiClient.instance;
 
-// export module for Node.js
-if (typeof module === 'object' && module.exports) {
-  module.exports = ContaApi;
-}
+
+    /**
+     * Callback function to receive the result of the buscarContaUsingGET operation.
+     * @callback module:api/ContaApi~buscarContaUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConsultarContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * /contas/buscar
+     * Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
+     * @param {Integer} idEmissor ID do Emissor
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.nome Nome
+     * @param {String} opts.cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
+     * @param {String} opts.numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
+     * @param {Integer} opts.idConta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf)
+     * @param {module:api/ContaApi~buscarContaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConsultarContaResponse}
+     */
+    this.buscarContaUsingGET = function(idEmissor, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'idEmissor' is set
+      if (idEmissor == undefined || idEmissor == null) {
+        throw "Missing the required parameter 'idEmissor' when calling buscarContaUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'nome': opts['nome'],
+        'cpf': opts['cpf'],
+        'numeroCartao': opts['numeroCartao'],
+        'idConta': opts['idConta']
+      };
+      var headerParams = {
+        'idEmissor': idEmissor
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConsultarContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/v1/contas/buscar', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarContaUsingGET operation.
+     * @callback module:api/ContaApi~consultarContaUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * /contas/{idConta}
+     * Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
+     * @param {Integer} idEmissor ID do Emissor
+     * @param {Integer} idConta ID da Conta
+     * @param {module:api/ContaApi~consultarContaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ContaResponse}
+     */
+    this.consultarContaUsingGET = function(idEmissor, idConta, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idEmissor' is set
+      if (idEmissor == undefined || idEmissor == null) {
+        throw "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET";
+      }
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling consultarContaUsingGET";
+      }
+
+
+      var pathParams = {
+        'idConta': idConta
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+        'idEmissor': idEmissor
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/v1/contas/{idConta}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+  };
+
+  return exports;
+}));

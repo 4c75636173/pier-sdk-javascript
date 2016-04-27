@@ -1,270 +1,251 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('CartaoResponse', ['jquery'],
-    function($) {
-      return CartaoResponse;
-   });
-}
-
-
-var CartaoResponse = function CartaoResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataValidade = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoEstagio = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoStatus = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.estagio = null;
-  
-  /**
-   * datatype: Boolean
-   **/
-  self.flagCancelamento = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idCartao = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.numeroCartao = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.portador = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.portadorId = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.status = null;
-  
-  /**
-   * datatype: Date
-   **/
-  self.statusData = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.dataValidade = data.dataValidade;
-    
-    self.descricaoEstagio = data.descricaoEstagio;
-    
-    self.descricaoStatus = data.descricaoStatus;
-    
-    self.estagio = data.estagio;
-    
-    self.flagCancelamento = data.flagCancelamento;
-    
-    self.idCartao = data.idCartao;
-    
-    self.numeroCartao = data.numeroCartao;
-    
-    self.portador = data.portador;
-    
-    self.portadorId = data.portadorId;
-    
-    self.status = data.status;
-    
-    self.statusData = data.statusData;
-    
+    root.Pier.CartaoResponse = factory(root.Pier.ApiClient);
   }
-
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataValidade = function() {
-    return self.dataValidade;
-  }
+}(this, function(ApiClient) {
+  'use strict';
 
   /**
-   * @param {String} dataValidade
-   **/
-  self.setDataValidade = function (dataValidade) {
-    self.dataValidade = dataValidade;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoEstagio = function() {
-    return self.descricaoEstagio;
-  }
+   * The CartaoResponse model module.
+   * @module model/CartaoResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} descricaoEstagio
-   **/
-  self.setDescricaoEstagio = function (descricaoEstagio) {
-    self.descricaoEstagio = descricaoEstagio;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoStatus = function() {
-    return self.descricaoStatus;
-  }
+   * Constructs a new <code>CartaoResponse</code>.
+   * @alias module:model/CartaoResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} descricaoStatus
-   **/
-  self.setDescricaoStatus = function (descricaoStatus) {
-    self.descricaoStatus = descricaoStatus;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getEstagio = function() {
-    return self.estagio;
+   * Constructs a <code>CartaoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/CartaoResponse} obj Optional instance to populate.
+   * @return {module:model/CartaoResponse} The populated <code>CartaoResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('bin')) {
+        obj['bin'] = ApiClient.convertToType(data['bin'], 'Integer');
+      }
+      if (data.hasOwnProperty('codRetorno')) {
+        obj['codRetorno'] = ApiClient.convertToType(data['codRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('codigoDesbloqueio')) {
+        obj['codigoDesbloqueio'] = ApiClient.convertToType(data['codigoDesbloqueio'], 'String');
+      }
+      if (data.hasOwnProperty('criptografiaHSM')) {
+        obj['criptografiaHSM'] = ApiClient.convertToType(data['criptografiaHSM'], 'String');
+      }
+      if (data.hasOwnProperty('dataEmissao')) {
+        obj['dataEmissao'] = ApiClient.convertToType(data['dataEmissao'], 'Date');
+      }
+      if (data.hasOwnProperty('dataValidade')) {
+        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
+      }
+      if (data.hasOwnProperty('dataVencimentoPadrao')) {
+        obj['dataVencimentoPadrao'] = ApiClient.convertToType(data['dataVencimentoPadrao'], 'String');
+      }
+      if (data.hasOwnProperty('descricaoRetorno')) {
+        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      }
+      if (data.hasOwnProperty('estagioCartao')) {
+        obj['estagioCartao'] = ApiClient.convertToType(data['estagioCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('estagioData')) {
+        obj['estagioData'] = ApiClient.convertToType(data['estagioData'], 'Date');
+      }
+      if (data.hasOwnProperty('flagReversao')) {
+        obj['flagReversao'] = ApiClient.convertToType(data['flagReversao'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagSenha')) {
+        obj['flagSenha'] = ApiClient.convertToType(data['flagSenha'], 'Boolean');
+      }
+      if (data.hasOwnProperty('idCartao')) {
+        obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('idEmissor')) {
+        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
+      }
+      if (data.hasOwnProperty('idLog')) {
+        obj['idLog'] = ApiClient.convertToType(data['idLog'], 'String');
+      }
+      if (data.hasOwnProperty('idPessoaFisica')) {
+        obj['idPessoaFisica'] = ApiClient.convertToType(data['idPessoaFisica'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroCartao')) {
+        obj['numeroCartao'] = ApiClient.convertToType(data['numeroCartao'], 'String');
+      }
+      if (data.hasOwnProperty('numeroCartaoReal')) {
+        obj['numeroCartaoReal'] = ApiClient.convertToType(data['numeroCartaoReal'], 'String');
+      }
+      if (data.hasOwnProperty('statusCartao')) {
+        obj['statusCartao'] = ApiClient.convertToType(data['statusCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('statusData')) {
+        obj['statusData'] = ApiClient.convertToType(data['statusData'], 'Date');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {Integer} estagio
-   **/
-  self.setEstagio = function (estagio) {
-    self.estagio = estagio;
-  }
-  
-  /**
-   * @return {Boolean}
-   **/
-  self.getFlagCancelamento = function() {
-    return self.flagCancelamento;
-  }
 
   /**
-   * @param {Boolean} flagCancelamento
-   **/
-  self.setFlagCancelamento = function (flagCancelamento) {
-    self.flagCancelamento = flagCancelamento;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdCartao = function() {
-    return self.idCartao;
-  }
+   * @member {Integer} bin
+   */
+  exports.prototype['bin'] = undefined;
 
   /**
-   * @param {Integer} idCartao
-   **/
-  self.setIdCartao = function (idCartao) {
-    self.idCartao = idCartao;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNumeroCartao = function() {
-    return self.numeroCartao;
-  }
+   * @member {Integer} codRetorno
+   */
+  exports.prototype['codRetorno'] = undefined;
 
   /**
-   * @param {String} numeroCartao
-   **/
-  self.setNumeroCartao = function (numeroCartao) {
-    self.numeroCartao = numeroCartao;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getPortador = function() {
-    return self.portador;
-  }
+   * @member {String} codigoDesbloqueio
+   */
+  exports.prototype['codigoDesbloqueio'] = undefined;
 
   /**
-   * @param {String} portador
-   **/
-  self.setPortador = function (portador) {
-    self.portador = portador;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getPortadorId = function() {
-    return self.portadorId;
-  }
+   * @member {String} criptografiaHSM
+   */
+  exports.prototype['criptografiaHSM'] = undefined;
 
   /**
-   * @param {Integer} portadorId
-   **/
-  self.setPortadorId = function (portadorId) {
-    self.portadorId = portadorId;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getStatus = function() {
-    return self.status;
-  }
+   * @member {Date} dataEmissao
+   */
+  exports.prototype['dataEmissao'] = undefined;
 
   /**
-   * @param {Integer} status
-   **/
-  self.setStatus = function (status) {
-    self.status = status;
-  }
-  
-  /**
-   * @return {Date}
-   **/
-  self.getStatusData = function() {
-    return self.statusData;
-  }
+   * @member {Date} dataValidade
+   */
+  exports.prototype['dataValidade'] = undefined;
 
   /**
-   * @param {Date} statusData
-   **/
-  self.setStatusData = function (statusData) {
-    self.statusData = statusData;
-  }
-  
+   * @member {String} dataVencimentoPadrao
+   */
+  exports.prototype['dataVencimentoPadrao'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {String} descricaoRetorno
+   */
+  exports.prototype['descricaoRetorno'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = CartaoResponse;
-}
+  /**
+   * @member {Integer} estagioCartao
+   */
+  exports.prototype['estagioCartao'] = undefined;
+
+  /**
+   * @member {Date} estagioData
+   */
+  exports.prototype['estagioData'] = undefined;
+
+  /**
+   * @member {Boolean} flagReversao
+   */
+  exports.prototype['flagReversao'] = undefined;
+
+  /**
+   * @member {Boolean} flagSenha
+   */
+  exports.prototype['flagSenha'] = undefined;
+
+  /**
+   * @member {Integer} idCartao
+   */
+  exports.prototype['idCartao'] = undefined;
+
+  /**
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * @member {Integer} idEmissor
+   */
+  exports.prototype['idEmissor'] = undefined;
+
+  /**
+   * @member {String} idLog
+   */
+  exports.prototype['idLog'] = undefined;
+
+  /**
+   * @member {Integer} idPessoaFisica
+   */
+  exports.prototype['idPessoaFisica'] = undefined;
+
+  /**
+   * @member {Integer} idProduto
+   */
+  exports.prototype['idProduto'] = undefined;
+
+  /**
+   * @member {String} numeroCartao
+   */
+  exports.prototype['numeroCartao'] = undefined;
+
+  /**
+   * @member {String} numeroCartaoReal
+   */
+  exports.prototype['numeroCartaoReal'] = undefined;
+
+  /**
+   * @member {Integer} statusCartao
+   */
+  exports.prototype['statusCartao'] = undefined;
+
+  /**
+   * @member {Date} statusData
+   */
+  exports.prototype['statusData'] = undefined;
+
+
+
+
+  return exports;
+}));

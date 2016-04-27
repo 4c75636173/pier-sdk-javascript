@@ -1,375 +1,197 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('ConsultarSaldoLimitesResponse', ['jquery'],
-    function($) {
-      return ConsultarSaldoLimitesResponse;
-   });
-}
-
-
-var ConsultarSaldoLimitesResponse = function ConsultarSaldoLimitesResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.codigoRetorno = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataVencimento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoRetorno = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.disponibCompraNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.disponibGlobalCredito = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.disponibParceladoNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.disponibParcelasNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.disponibSaqueNacGlobal = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.limiteCompraNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.limiteGlobalCredito = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.limiteParceladoNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.limiteParcelasNac = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.limiteSaqueNacGlobal = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoAtualFinal = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoDevedor = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoFuturo = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.codigoRetorno = data.codigoRetorno;
-    
-    self.dataVencimento = data.dataVencimento;
-    
-    self.descricaoRetorno = data.descricaoRetorno;
-    
-    self.disponibCompraNac = data.disponibCompraNac;
-    
-    self.disponibGlobalCredito = data.disponibGlobalCredito;
-    
-    self.disponibParceladoNac = data.disponibParceladoNac;
-    
-    self.disponibParcelasNac = data.disponibParcelasNac;
-    
-    self.disponibSaqueNacGlobal = data.disponibSaqueNacGlobal;
-    
-    self.limiteCompraNac = data.limiteCompraNac;
-    
-    self.limiteGlobalCredito = data.limiteGlobalCredito;
-    
-    self.limiteParceladoNac = data.limiteParceladoNac;
-    
-    self.limiteParcelasNac = data.limiteParcelasNac;
-    
-    self.limiteSaqueNacGlobal = data.limiteSaqueNacGlobal;
-    
-    self.saldoAtualFinal = data.saldoAtualFinal;
-    
-    self.saldoDevedor = data.saldoDevedor;
-    
-    self.saldoFuturo = data.saldoFuturo;
-    
+    root.Pier.ConsultarSaldoLimitesResponse = factory(root.Pier.ApiClient);
   }
-
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getCodigoRetorno = function() {
-    return self.codigoRetorno;
-  }
+}(this, function(ApiClient) {
+  'use strict';
 
   /**
-   * @param {Integer} codigoRetorno
-   **/
-  self.setCodigoRetorno = function (codigoRetorno) {
-    self.codigoRetorno = codigoRetorno;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataVencimento = function() {
-    return self.dataVencimento;
-  }
+   * The ConsultarSaldoLimitesResponse model module.
+   * @module model/ConsultarSaldoLimitesResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} dataVencimento
-   **/
-  self.setDataVencimento = function (dataVencimento) {
-    self.dataVencimento = dataVencimento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoRetorno = function() {
-    return self.descricaoRetorno;
-  }
+   * Constructs a new <code>ConsultarSaldoLimitesResponse</code>.
+   * @alias module:model/ConsultarSaldoLimitesResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} descricaoRetorno
-   **/
-  self.setDescricaoRetorno = function (descricaoRetorno) {
-    self.descricaoRetorno = descricaoRetorno;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDisponibCompraNac = function() {
-    return self.disponibCompraNac;
+   * Constructs a <code>ConsultarSaldoLimitesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ConsultarSaldoLimitesResponse} obj Optional instance to populate.
+   * @return {module:model/ConsultarSaldoLimitesResponse} The populated <code>ConsultarSaldoLimitesResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('codRetorno')) {
+        obj['codRetorno'] = ApiClient.convertToType(data['codRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('codigoRetorno')) {
+        obj['codigoRetorno'] = ApiClient.convertToType(data['codigoRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('descricaoRetorno')) {
+        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      }
+      if (data.hasOwnProperty('disponibCompraNac')) {
+        obj['disponibCompraNac'] = ApiClient.convertToType(data['disponibCompraNac'], 'Number');
+      }
+      if (data.hasOwnProperty('disponibGlobalCredito')) {
+        obj['disponibGlobalCredito'] = ApiClient.convertToType(data['disponibGlobalCredito'], 'Number');
+      }
+      if (data.hasOwnProperty('disponibParceladoNac')) {
+        obj['disponibParceladoNac'] = ApiClient.convertToType(data['disponibParceladoNac'], 'Number');
+      }
+      if (data.hasOwnProperty('disponibParcelasNac')) {
+        obj['disponibParcelasNac'] = ApiClient.convertToType(data['disponibParcelasNac'], 'Number');
+      }
+      if (data.hasOwnProperty('disponibSaqueNacGlobal')) {
+        obj['disponibSaqueNacGlobal'] = ApiClient.convertToType(data['disponibSaqueNacGlobal'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteCompraNac')) {
+        obj['limiteCompraNac'] = ApiClient.convertToType(data['limiteCompraNac'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteGlobalCredito')) {
+        obj['limiteGlobalCredito'] = ApiClient.convertToType(data['limiteGlobalCredito'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteParceladoNac')) {
+        obj['limiteParceladoNac'] = ApiClient.convertToType(data['limiteParceladoNac'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteParcelasNac')) {
+        obj['limiteParcelasNac'] = ApiClient.convertToType(data['limiteParcelasNac'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteSaqueNacGlobal')) {
+        obj['limiteSaqueNacGlobal'] = ApiClient.convertToType(data['limiteSaqueNacGlobal'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteSaqueNacPeriodo')) {
+        obj['limiteSaqueNacPeriodo'] = ApiClient.convertToType(data['limiteSaqueNacPeriodo'], 'Number');
+      }
+      if (data.hasOwnProperty('rendaComprovada')) {
+        obj['rendaComprovada'] = ApiClient.convertToType(data['rendaComprovada'], 'Number');
+      }
+      if (data.hasOwnProperty('solicitacaoPendente')) {
+        obj['solicitacaoPendente'] = ApiClient.convertToType(data['solicitacaoPendente'], 'Boolean');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {Number} disponibCompraNac
-   **/
-  self.setDisponibCompraNac = function (disponibCompraNac) {
-    self.disponibCompraNac = disponibCompraNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDisponibGlobalCredito = function() {
-    return self.disponibGlobalCredito;
-  }
 
   /**
-   * @param {Number} disponibGlobalCredito
-   **/
-  self.setDisponibGlobalCredito = function (disponibGlobalCredito) {
-    self.disponibGlobalCredito = disponibGlobalCredito;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDisponibParceladoNac = function() {
-    return self.disponibParceladoNac;
-  }
+   * @member {Integer} codRetorno
+   */
+  exports.prototype['codRetorno'] = undefined;
 
   /**
-   * @param {Number} disponibParceladoNac
-   **/
-  self.setDisponibParceladoNac = function (disponibParceladoNac) {
-    self.disponibParceladoNac = disponibParceladoNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDisponibParcelasNac = function() {
-    return self.disponibParcelasNac;
-  }
+   * @member {Integer} codigoRetorno
+   */
+  exports.prototype['codigoRetorno'] = undefined;
 
   /**
-   * @param {Number} disponibParcelasNac
-   **/
-  self.setDisponibParcelasNac = function (disponibParcelasNac) {
-    self.disponibParcelasNac = disponibParcelasNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDisponibSaqueNacGlobal = function() {
-    return self.disponibSaqueNacGlobal;
-  }
+   * @member {String} descricaoRetorno
+   */
+  exports.prototype['descricaoRetorno'] = undefined;
 
   /**
-   * @param {Number} disponibSaqueNacGlobal
-   **/
-  self.setDisponibSaqueNacGlobal = function (disponibSaqueNacGlobal) {
-    self.disponibSaqueNacGlobal = disponibSaqueNacGlobal;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getLimiteCompraNac = function() {
-    return self.limiteCompraNac;
-  }
+   * @member {Number} disponibCompraNac
+   */
+  exports.prototype['disponibCompraNac'] = undefined;
 
   /**
-   * @param {Number} limiteCompraNac
-   **/
-  self.setLimiteCompraNac = function (limiteCompraNac) {
-    self.limiteCompraNac = limiteCompraNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getLimiteGlobalCredito = function() {
-    return self.limiteGlobalCredito;
-  }
+   * @member {Number} disponibGlobalCredito
+   */
+  exports.prototype['disponibGlobalCredito'] = undefined;
 
   /**
-   * @param {Number} limiteGlobalCredito
-   **/
-  self.setLimiteGlobalCredito = function (limiteGlobalCredito) {
-    self.limiteGlobalCredito = limiteGlobalCredito;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getLimiteParceladoNac = function() {
-    return self.limiteParceladoNac;
-  }
+   * @member {Number} disponibParceladoNac
+   */
+  exports.prototype['disponibParceladoNac'] = undefined;
 
   /**
-   * @param {Number} limiteParceladoNac
-   **/
-  self.setLimiteParceladoNac = function (limiteParceladoNac) {
-    self.limiteParceladoNac = limiteParceladoNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getLimiteParcelasNac = function() {
-    return self.limiteParcelasNac;
-  }
+   * @member {Number} disponibParcelasNac
+   */
+  exports.prototype['disponibParcelasNac'] = undefined;
 
   /**
-   * @param {Number} limiteParcelasNac
-   **/
-  self.setLimiteParcelasNac = function (limiteParcelasNac) {
-    self.limiteParcelasNac = limiteParcelasNac;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getLimiteSaqueNacGlobal = function() {
-    return self.limiteSaqueNacGlobal;
-  }
+   * @member {Number} disponibSaqueNacGlobal
+   */
+  exports.prototype['disponibSaqueNacGlobal'] = undefined;
 
   /**
-   * @param {Number} limiteSaqueNacGlobal
-   **/
-  self.setLimiteSaqueNacGlobal = function (limiteSaqueNacGlobal) {
-    self.limiteSaqueNacGlobal = limiteSaqueNacGlobal;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoAtualFinal = function() {
-    return self.saldoAtualFinal;
-  }
+   * @member {Number} limiteCompraNac
+   */
+  exports.prototype['limiteCompraNac'] = undefined;
 
   /**
-   * @param {Number} saldoAtualFinal
-   **/
-  self.setSaldoAtualFinal = function (saldoAtualFinal) {
-    self.saldoAtualFinal = saldoAtualFinal;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoDevedor = function() {
-    return self.saldoDevedor;
-  }
+   * @member {Number} limiteGlobalCredito
+   */
+  exports.prototype['limiteGlobalCredito'] = undefined;
 
   /**
-   * @param {Number} saldoDevedor
-   **/
-  self.setSaldoDevedor = function (saldoDevedor) {
-    self.saldoDevedor = saldoDevedor;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoFuturo = function() {
-    return self.saldoFuturo;
-  }
+   * @member {Number} limiteParceladoNac
+   */
+  exports.prototype['limiteParceladoNac'] = undefined;
 
   /**
-   * @param {Number} saldoFuturo
-   **/
-  self.setSaldoFuturo = function (saldoFuturo) {
-    self.saldoFuturo = saldoFuturo;
-  }
-  
+   * @member {Number} limiteParcelasNac
+   */
+  exports.prototype['limiteParcelasNac'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {Number} limiteSaqueNacGlobal
+   */
+  exports.prototype['limiteSaqueNacGlobal'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = ConsultarSaldoLimitesResponse;
-}
+  /**
+   * @member {Number} limiteSaqueNacPeriodo
+   */
+  exports.prototype['limiteSaqueNacPeriodo'] = undefined;
+
+  /**
+   * @member {Number} rendaComprovada
+   */
+  exports.prototype['rendaComprovada'] = undefined;
+
+  /**
+   * @member {Boolean} solicitacaoPendente
+   */
+  exports.prototype['solicitacaoPendente'] = undefined;
+
+
+
+
+  return exports;
+}));

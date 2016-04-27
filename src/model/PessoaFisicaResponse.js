@@ -1,438 +1,224 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('PessoaFisicaResponse', ['jquery'],
-    function($) {
-      return PessoaFisicaResponse;
-   });
-}
-
-
-var PessoaFisicaResponse = function PessoaFisicaResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: String
-   **/
-  self.bairro = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cep = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cidade = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.complementoLogradouro = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cpf = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataEmissaoIdentidade = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataNascimento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dddcelular = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dddtelefone = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.endereco = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idPessoaFisica = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.identidade = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nome = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.numeroCelular = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.numeroLogradouro = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.numeroTelefone = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.orgaoEmissor = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.sexo = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.uf = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.bairro = data.bairro;
-    
-    self.cep = data.cep;
-    
-    self.cidade = data.cidade;
-    
-    self.complementoLogradouro = data.complementoLogradouro;
-    
-    self.cpf = data.cpf;
-    
-    self.dataEmissaoIdentidade = data.dataEmissaoIdentidade;
-    
-    self.dataNascimento = data.dataNascimento;
-    
-    self.dddcelular = data.dddcelular;
-    
-    self.dddtelefone = data.dddtelefone;
-    
-    self.endereco = data.endereco;
-    
-    self.idPessoaFisica = data.idPessoaFisica;
-    
-    self.identidade = data.identidade;
-    
-    self.nome = data.nome;
-    
-    self.numeroCelular = data.numeroCelular;
-    
-    self.numeroLogradouro = data.numeroLogradouro;
-    
-    self.numeroTelefone = data.numeroTelefone;
-    
-    self.orgaoEmissor = data.orgaoEmissor;
-    
-    self.sexo = data.sexo;
-    
-    self.uf = data.uf;
-    
+    root.Pier.PessoaFisicaResponse = factory(root.Pier.ApiClient);
   }
-
-  
-  /**
-   * @return {String}
-   **/
-  self.getBairro = function() {
-    return self.bairro;
-  }
+}(this, function(ApiClient) {
+  'use strict';
 
   /**
-   * @param {String} bairro
-   **/
-  self.setBairro = function (bairro) {
-    self.bairro = bairro;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCep = function() {
-    return self.cep;
-  }
+   * The PessoaFisicaResponse model module.
+   * @module model/PessoaFisicaResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} cep
-   **/
-  self.setCep = function (cep) {
-    self.cep = cep;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCidade = function() {
-    return self.cidade;
-  }
+   * Constructs a new <code>PessoaFisicaResponse</code>.
+   * @alias module:model/PessoaFisicaResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} cidade
-   **/
-  self.setCidade = function (cidade) {
-    self.cidade = cidade;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getComplementoLogradouro = function() {
-    return self.complementoLogradouro;
+   * Constructs a <code>PessoaFisicaResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/PessoaFisicaResponse} obj Optional instance to populate.
+   * @return {module:model/PessoaFisicaResponse} The populated <code>PessoaFisicaResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('bairro')) {
+        obj['bairro'] = ApiClient.convertToType(data['bairro'], 'String');
+      }
+      if (data.hasOwnProperty('cep')) {
+        obj['cep'] = ApiClient.convertToType(data['cep'], 'String');
+      }
+      if (data.hasOwnProperty('cidade')) {
+        obj['cidade'] = ApiClient.convertToType(data['cidade'], 'String');
+      }
+      if (data.hasOwnProperty('complementoLogradouro')) {
+        obj['complementoLogradouro'] = ApiClient.convertToType(data['complementoLogradouro'], 'String');
+      }
+      if (data.hasOwnProperty('cpf')) {
+        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
+      }
+      if (data.hasOwnProperty('dataEmissaoIdentidade')) {
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
+      }
+      if (data.hasOwnProperty('dataNascimento')) {
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
+      }
+      if (data.hasOwnProperty('dddcelular')) {
+        obj['dddcelular'] = ApiClient.convertToType(data['dddcelular'], 'String');
+      }
+      if (data.hasOwnProperty('dddtelefone')) {
+        obj['dddtelefone'] = ApiClient.convertToType(data['dddtelefone'], 'String');
+      }
+      if (data.hasOwnProperty('endereco')) {
+        obj['endereco'] = ApiClient.convertToType(data['endereco'], 'String');
+      }
+      if (data.hasOwnProperty('idPessoaFisica')) {
+        obj['idPessoaFisica'] = ApiClient.convertToType(data['idPessoaFisica'], 'Integer');
+      }
+      if (data.hasOwnProperty('identidade')) {
+        obj['identidade'] = ApiClient.convertToType(data['identidade'], 'String');
+      }
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
+      if (data.hasOwnProperty('numeroCelular')) {
+        obj['numeroCelular'] = ApiClient.convertToType(data['numeroCelular'], 'String');
+      }
+      if (data.hasOwnProperty('numeroLogradouro')) {
+        obj['numeroLogradouro'] = ApiClient.convertToType(data['numeroLogradouro'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroTelefone')) {
+        obj['numeroTelefone'] = ApiClient.convertToType(data['numeroTelefone'], 'String');
+      }
+      if (data.hasOwnProperty('orgaoEmissor')) {
+        obj['orgaoEmissor'] = ApiClient.convertToType(data['orgaoEmissor'], 'String');
+      }
+      if (data.hasOwnProperty('sexo')) {
+        obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
+      }
+      if (data.hasOwnProperty('uf')) {
+        obj['uf'] = ApiClient.convertToType(data['uf'], 'String');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {String} complementoLogradouro
-   **/
-  self.setComplementoLogradouro = function (complementoLogradouro) {
-    self.complementoLogradouro = complementoLogradouro;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCpf = function() {
-    return self.cpf;
-  }
 
   /**
-   * @param {String} cpf
-   **/
-  self.setCpf = function (cpf) {
-    self.cpf = cpf;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataEmissaoIdentidade = function() {
-    return self.dataEmissaoIdentidade;
-  }
+   * @member {String} bairro
+   */
+  exports.prototype['bairro'] = undefined;
 
   /**
-   * @param {String} dataEmissaoIdentidade
-   **/
-  self.setDataEmissaoIdentidade = function (dataEmissaoIdentidade) {
-    self.dataEmissaoIdentidade = dataEmissaoIdentidade;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataNascimento = function() {
-    return self.dataNascimento;
-  }
+   * @member {String} cep
+   */
+  exports.prototype['cep'] = undefined;
 
   /**
-   * @param {String} dataNascimento
-   **/
-  self.setDataNascimento = function (dataNascimento) {
-    self.dataNascimento = dataNascimento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDddcelular = function() {
-    return self.dddcelular;
-  }
+   * @member {String} cidade
+   */
+  exports.prototype['cidade'] = undefined;
 
   /**
-   * @param {String} dddcelular
-   **/
-  self.setDddcelular = function (dddcelular) {
-    self.dddcelular = dddcelular;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDddtelefone = function() {
-    return self.dddtelefone;
-  }
+   * @member {String} complementoLogradouro
+   */
+  exports.prototype['complementoLogradouro'] = undefined;
 
   /**
-   * @param {String} dddtelefone
-   **/
-  self.setDddtelefone = function (dddtelefone) {
-    self.dddtelefone = dddtelefone;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getEndereco = function() {
-    return self.endereco;
-  }
+   * @member {String} cpf
+   */
+  exports.prototype['cpf'] = undefined;
 
   /**
-   * @param {String} endereco
-   **/
-  self.setEndereco = function (endereco) {
-    self.endereco = endereco;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdPessoaFisica = function() {
-    return self.idPessoaFisica;
-  }
+   * @member {String} dataEmissaoIdentidade
+   */
+  exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * @param {Integer} idPessoaFisica
-   **/
-  self.setIdPessoaFisica = function (idPessoaFisica) {
-    self.idPessoaFisica = idPessoaFisica;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getIdentidade = function() {
-    return self.identidade;
-  }
+   * @member {String} dataNascimento
+   */
+  exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * @param {String} identidade
-   **/
-  self.setIdentidade = function (identidade) {
-    self.identidade = identidade;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNome = function() {
-    return self.nome;
-  }
+   * @member {String} dddcelular
+   */
+  exports.prototype['dddcelular'] = undefined;
 
   /**
-   * @param {String} nome
-   **/
-  self.setNome = function (nome) {
-    self.nome = nome;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNumeroCelular = function() {
-    return self.numeroCelular;
-  }
+   * @member {String} dddtelefone
+   */
+  exports.prototype['dddtelefone'] = undefined;
 
   /**
-   * @param {String} numeroCelular
-   **/
-  self.setNumeroCelular = function (numeroCelular) {
-    self.numeroCelular = numeroCelular;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getNumeroLogradouro = function() {
-    return self.numeroLogradouro;
-  }
+   * @member {String} endereco
+   */
+  exports.prototype['endereco'] = undefined;
 
   /**
-   * @param {Integer} numeroLogradouro
-   **/
-  self.setNumeroLogradouro = function (numeroLogradouro) {
-    self.numeroLogradouro = numeroLogradouro;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNumeroTelefone = function() {
-    return self.numeroTelefone;
-  }
+   * @member {Integer} idPessoaFisica
+   */
+  exports.prototype['idPessoaFisica'] = undefined;
 
   /**
-   * @param {String} numeroTelefone
-   **/
-  self.setNumeroTelefone = function (numeroTelefone) {
-    self.numeroTelefone = numeroTelefone;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getOrgaoEmissor = function() {
-    return self.orgaoEmissor;
-  }
+   * @member {String} identidade
+   */
+  exports.prototype['identidade'] = undefined;
 
   /**
-   * @param {String} orgaoEmissor
-   **/
-  self.setOrgaoEmissor = function (orgaoEmissor) {
-    self.orgaoEmissor = orgaoEmissor;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getSexo = function() {
-    return self.sexo;
-  }
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
 
   /**
-   * @param {String} sexo
-   **/
-  self.setSexo = function (sexo) {
-    self.sexo = sexo;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getUf = function() {
-    return self.uf;
-  }
+   * @member {String} numeroCelular
+   */
+  exports.prototype['numeroCelular'] = undefined;
 
   /**
-   * @param {String} uf
-   **/
-  self.setUf = function (uf) {
-    self.uf = uf;
-  }
-  
+   * @member {Integer} numeroLogradouro
+   */
+  exports.prototype['numeroLogradouro'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {String} numeroTelefone
+   */
+  exports.prototype['numeroTelefone'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = PessoaFisicaResponse;
-}
+  /**
+   * @member {String} orgaoEmissor
+   */
+  exports.prototype['orgaoEmissor'] = undefined;
+
+  /**
+   * @member {String} sexo
+   */
+  exports.prototype['sexo'] = undefined;
+
+  /**
+   * @member {String} uf
+   */
+  exports.prototype['uf'] = undefined;
+
+
+
+
+  return exports;
+}));

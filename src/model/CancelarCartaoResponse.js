@@ -1,123 +1,89 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('CancelarCartaoResponse', ['jquery'],
-    function($) {
-      return CancelarCartaoResponse;
-   });
-}
-
-
-var CancelarCartaoResponse = function CancelarCartaoResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.codigoRetorno = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoRetorno = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idCartao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idConta = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.codigoRetorno = data.codigoRetorno;
-    
-    self.descricaoRetorno = data.descricaoRetorno;
-    
-    self.idCartao = data.idCartao;
-    
-    self.idConta = data.idConta;
-    
+    root.Pier.CancelarCartaoResponse = factory(root.Pier.ApiClient);
   }
-
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getCodigoRetorno = function() {
-    return self.codigoRetorno;
-  }
+}(this, function(ApiClient) {
+  'use strict';
 
   /**
-   * @param {Integer} codigoRetorno
-   **/
-  self.setCodigoRetorno = function (codigoRetorno) {
-    self.codigoRetorno = codigoRetorno;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoRetorno = function() {
-    return self.descricaoRetorno;
-  }
+   * The CancelarCartaoResponse model module.
+   * @module model/CancelarCartaoResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} descricaoRetorno
-   **/
-  self.setDescricaoRetorno = function (descricaoRetorno) {
-    self.descricaoRetorno = descricaoRetorno;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdCartao = function() {
-    return self.idCartao;
-  }
+   * Constructs a new <code>CancelarCartaoResponse</code>.
+   * @alias module:model/CancelarCartaoResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+  };
 
   /**
-   * @param {Integer} idCartao
-   **/
-  self.setIdCartao = function (idCartao) {
-    self.idCartao = idCartao;
+   * Constructs a <code>CancelarCartaoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/CancelarCartaoResponse} obj Optional instance to populate.
+   * @return {module:model/CancelarCartaoResponse} The populated <code>CancelarCartaoResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('codigoRetorno')) {
+        obj['codigoRetorno'] = ApiClient.convertToType(data['codigoRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('descricaoRetorno')) {
+        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      }
+      if (data.hasOwnProperty('idCartao')) {
+        obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+    }
+    return obj;
   }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdConta = function() {
-    return self.idConta;
-  }
+
 
   /**
-   * @param {Integer} idConta
-   **/
-  self.setIdConta = function (idConta) {
-    self.idConta = idConta;
-  }
-  
+   * @member {Integer} codigoRetorno
+   */
+  exports.prototype['codigoRetorno'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {String} descricaoRetorno
+   */
+  exports.prototype['descricaoRetorno'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = CancelarCartaoResponse;
-}
+  /**
+   * @member {Integer} idCartao
+   */
+  exports.prototype['idCartao'] = undefined;
+
+  /**
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+
+
+
+  return exports;
+}));

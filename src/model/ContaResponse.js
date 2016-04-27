@@ -1,756 +1,359 @@
-// require files in Node.js environment
-var CartaoResponse;var PessoaFisicaResponse;var SaldoLimiteResponse;
-if (typeof module === 'object' && module.exports) {
-  
-  CartaoResponse = require('./CartaoResponse.js');
-  PessoaFisicaResponse = require('./PessoaFisicaResponse.js');
-  SaldoLimiteResponse = require('./SaldoLimiteResponse.js');
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('ContaResponse', ['jquery', 'CartaoResponse', 'PessoaFisicaResponse', 'SaldoLimiteResponse'],
-    function($, CartaoResponse, PessoaFisicaResponse, SaldoLimiteResponse) {
-      return ContaResponse;
-   });
-}
-
-
-var ContaResponse = function ContaResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.bin = null;
-  
-  /**
-   * datatype: CartaoResponse
-   **/
-  self.cartao = new CartaoResponse();
-  
-  /**
-   * datatype: String
-   **/
-  self.dataCadastramento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataUltimoPagamento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataVencCobranca = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dddcelularSMS = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoStatus = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.diasEmAtraso = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.emissor = null;
-  
-  /**
-   * datatype: Boolean
-   **/
-  self.flagCancelamento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.formaEnvioFatura = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idBandeira = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idConta = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idEmissor = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idEndereco = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idFantasiaBasica = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idOrigemComercial = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idProduto = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idProposta = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.melhorDia = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nomeCredor = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nomeProduto = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.numCelularSMS = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.pagamentos = null;
-  
-  /**
-   * datatype: Boolean
-   **/
-  self.permiteRefinanciamento = null;
-  
-  /**
-   * datatype: PessoaFisicaResponse
-   **/
-  self.pessoaFisica = new PessoaFisicaResponse();
-  
-  /**
-   * datatype: Integer
-   **/
-  self.quantidadePagamentos = null;
-  
-  /**
-   * datatype: SaldoLimiteResponse
-   **/
-  self.saldoLimite = new SaldoLimiteResponse();
-  
-  /**
-   * datatype: Integer
-   **/
-  self.status = null;
-  
-  /**
-   * datatype: Date
-   **/
-  self.statusData = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.taxaRefinanciamento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.vcto = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.vencimento1 = null;
-  
-  /**
-   * datatype: Boolean
-   **/
-  self.vinculoOrigemUsuario = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient', './ConsultarContaCartaoResponse', './PessoaFisicaResponse', './SaldoLimiteResponse'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'), require('./ConsultarContaCartaoResponse'), require('./PessoaFisicaResponse'), require('./SaldoLimiteResponse'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.bin = data.bin;
-    
-    self.cartao.constructFromObject(data.cartao);
-    
-    self.dataCadastramento = data.dataCadastramento;
-    
-    self.dataUltimoPagamento = data.dataUltimoPagamento;
-    
-    self.dataVencCobranca = data.dataVencCobranca;
-    
-    self.dddcelularSMS = data.dddcelularSMS;
-    
-    self.descricaoStatus = data.descricaoStatus;
-    
-    self.diasEmAtraso = data.diasEmAtraso;
-    
-    self.emissor = data.emissor;
-    
-    self.flagCancelamento = data.flagCancelamento;
-    
-    self.formaEnvioFatura = data.formaEnvioFatura;
-    
-    self.idBandeira = data.idBandeira;
-    
-    self.idConta = data.idConta;
-    
-    self.idEmissor = data.idEmissor;
-    
-    self.idEndereco = data.idEndereco;
-    
-    self.idFantasiaBasica = data.idFantasiaBasica;
-    
-    self.idOrigemComercial = data.idOrigemComercial;
-    
-    self.idProduto = data.idProduto;
-    
-    self.idProposta = data.idProposta;
-    
-    self.melhorDia = data.melhorDia;
-    
-    self.nomeCredor = data.nomeCredor;
-    
-    self.nomeProduto = data.nomeProduto;
-    
-    self.numCelularSMS = data.numCelularSMS;
-    
-    self.pagamentos = data.pagamentos;
-    
-    self.permiteRefinanciamento = data.permiteRefinanciamento;
-    
-    self.pessoaFisica.constructFromObject(data.pessoaFisica);
-    
-    self.quantidadePagamentos = data.quantidadePagamentos;
-    
-    self.saldoLimite.constructFromObject(data.saldoLimite);
-    
-    self.status = data.status;
-    
-    self.statusData = data.statusData;
-    
-    self.taxaRefinanciamento = data.taxaRefinanciamento;
-    
-    self.vcto = data.vcto;
-    
-    self.vencimento1 = data.vencimento1;
-    
-    self.vinculoOrigemUsuario = data.vinculoOrigemUsuario;
-    
+    root.Pier.ContaResponse = factory(root.Pier.ApiClient, root.Pier.ConsultarContaCartaoResponse, root.Pier.PessoaFisicaResponse, root.Pier.SaldoLimiteResponse);
   }
-
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getBin = function() {
-    return self.bin;
-  }
+}(this, function(ApiClient, ConsultarContaCartaoResponse, PessoaFisicaResponse, SaldoLimiteResponse) {
+  'use strict';
 
   /**
-   * @param {Integer} bin
-   **/
-  self.setBin = function (bin) {
-    self.bin = bin;
-  }
-  
-  /**
-   * @return {CartaoResponse}
-   **/
-  self.getCartao = function() {
-    return self.cartao;
-  }
+   * The ContaResponse model module.
+   * @module model/ContaResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {CartaoResponse} cartao
-   **/
-  self.setCartao = function (cartao) {
-    self.cartao = cartao;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataCadastramento = function() {
-    return self.dataCadastramento;
-  }
+   * Constructs a new <code>ContaResponse</code>.
+   * @alias module:model/ContaResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} dataCadastramento
-   **/
-  self.setDataCadastramento = function (dataCadastramento) {
-    self.dataCadastramento = dataCadastramento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataUltimoPagamento = function() {
-    return self.dataUltimoPagamento;
+   * Constructs a <code>ContaResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ContaResponse} obj Optional instance to populate.
+   * @return {module:model/ContaResponse} The populated <code>ContaResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('bin')) {
+        obj['bin'] = ApiClient.convertToType(data['bin'], 'Integer');
+      }
+      if (data.hasOwnProperty('cartao')) {
+        obj['cartao'] = ConsultarContaCartaoResponse.constructFromObject(data['cartao']);
+      }
+      if (data.hasOwnProperty('dataCadastramento')) {
+        obj['dataCadastramento'] = ApiClient.convertToType(data['dataCadastramento'], 'String');
+      }
+      if (data.hasOwnProperty('dataUltimoPagamento')) {
+        obj['dataUltimoPagamento'] = ApiClient.convertToType(data['dataUltimoPagamento'], 'String');
+      }
+      if (data.hasOwnProperty('dataVencCobranca')) {
+        obj['dataVencCobranca'] = ApiClient.convertToType(data['dataVencCobranca'], 'String');
+      }
+      if (data.hasOwnProperty('dddcelularSMS')) {
+        obj['dddcelularSMS'] = ApiClient.convertToType(data['dddcelularSMS'], 'String');
+      }
+      if (data.hasOwnProperty('descricaoStatus')) {
+        obj['descricaoStatus'] = ApiClient.convertToType(data['descricaoStatus'], 'String');
+      }
+      if (data.hasOwnProperty('diasEmAtraso')) {
+        obj['diasEmAtraso'] = ApiClient.convertToType(data['diasEmAtraso'], 'Integer');
+      }
+      if (data.hasOwnProperty('emissor')) {
+        obj['emissor'] = ApiClient.convertToType(data['emissor'], 'String');
+      }
+      if (data.hasOwnProperty('flagCancelamento')) {
+        obj['flagCancelamento'] = ApiClient.convertToType(data['flagCancelamento'], 'Boolean');
+      }
+      if (data.hasOwnProperty('formaEnvioFatura')) {
+        obj['formaEnvioFatura'] = ApiClient.convertToType(data['formaEnvioFatura'], 'String');
+      }
+      if (data.hasOwnProperty('idBandeira')) {
+        obj['idBandeira'] = ApiClient.convertToType(data['idBandeira'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('idEmissor')) {
+        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
+      }
+      if (data.hasOwnProperty('idEndereco')) {
+        obj['idEndereco'] = ApiClient.convertToType(data['idEndereco'], 'Integer');
+      }
+      if (data.hasOwnProperty('idFantasiaBasica')) {
+        obj['idFantasiaBasica'] = ApiClient.convertToType(data['idFantasiaBasica'], 'Integer');
+      }
+      if (data.hasOwnProperty('idOrigemComercial')) {
+        obj['idOrigemComercial'] = ApiClient.convertToType(data['idOrigemComercial'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProposta')) {
+        obj['idProposta'] = ApiClient.convertToType(data['idProposta'], 'Integer');
+      }
+      if (data.hasOwnProperty('melhorDia')) {
+        obj['melhorDia'] = ApiClient.convertToType(data['melhorDia'], 'Integer');
+      }
+      if (data.hasOwnProperty('nomeCredor')) {
+        obj['nomeCredor'] = ApiClient.convertToType(data['nomeCredor'], 'String');
+      }
+      if (data.hasOwnProperty('nomeProduto')) {
+        obj['nomeProduto'] = ApiClient.convertToType(data['nomeProduto'], 'String');
+      }
+      if (data.hasOwnProperty('numCelularSMS')) {
+        obj['numCelularSMS'] = ApiClient.convertToType(data['numCelularSMS'], 'String');
+      }
+      if (data.hasOwnProperty('pagamentos')) {
+        obj['pagamentos'] = ApiClient.convertToType(data['pagamentos'], 'Number');
+      }
+      if (data.hasOwnProperty('permiteRefinanciamento')) {
+        obj['permiteRefinanciamento'] = ApiClient.convertToType(data['permiteRefinanciamento'], 'Boolean');
+      }
+      if (data.hasOwnProperty('pessoaFisica')) {
+        obj['pessoaFisica'] = PessoaFisicaResponse.constructFromObject(data['pessoaFisica']);
+      }
+      if (data.hasOwnProperty('quantidadePagamentos')) {
+        obj['quantidadePagamentos'] = ApiClient.convertToType(data['quantidadePagamentos'], 'Integer');
+      }
+      if (data.hasOwnProperty('saldoLimite')) {
+        obj['saldoLimite'] = SaldoLimiteResponse.constructFromObject(data['saldoLimite']);
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
+      if (data.hasOwnProperty('statusData')) {
+        obj['statusData'] = ApiClient.convertToType(data['statusData'], 'Date');
+      }
+      if (data.hasOwnProperty('taxaRefinanciamento')) {
+        obj['taxaRefinanciamento'] = ApiClient.convertToType(data['taxaRefinanciamento'], 'String');
+      }
+      if (data.hasOwnProperty('vcto')) {
+        obj['vcto'] = ApiClient.convertToType(data['vcto'], 'String');
+      }
+      if (data.hasOwnProperty('vencimento1')) {
+        obj['vencimento1'] = ApiClient.convertToType(data['vencimento1'], 'Integer');
+      }
+      if (data.hasOwnProperty('vinculoOrigemUsuario')) {
+        obj['vinculoOrigemUsuario'] = ApiClient.convertToType(data['vinculoOrigemUsuario'], 'Boolean');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {String} dataUltimoPagamento
-   **/
-  self.setDataUltimoPagamento = function (dataUltimoPagamento) {
-    self.dataUltimoPagamento = dataUltimoPagamento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataVencCobranca = function() {
-    return self.dataVencCobranca;
-  }
 
   /**
-   * @param {String} dataVencCobranca
-   **/
-  self.setDataVencCobranca = function (dataVencCobranca) {
-    self.dataVencCobranca = dataVencCobranca;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDddcelularSMS = function() {
-    return self.dddcelularSMS;
-  }
+   * @member {Integer} bin
+   */
+  exports.prototype['bin'] = undefined;
 
   /**
-   * @param {String} dddcelularSMS
-   **/
-  self.setDddcelularSMS = function (dddcelularSMS) {
-    self.dddcelularSMS = dddcelularSMS;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoStatus = function() {
-    return self.descricaoStatus;
-  }
+   * @member {module:model/ConsultarContaCartaoResponse} cartao
+   */
+  exports.prototype['cartao'] = undefined;
 
   /**
-   * @param {String} descricaoStatus
-   **/
-  self.setDescricaoStatus = function (descricaoStatus) {
-    self.descricaoStatus = descricaoStatus;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getDiasEmAtraso = function() {
-    return self.diasEmAtraso;
-  }
+   * @member {String} dataCadastramento
+   */
+  exports.prototype['dataCadastramento'] = undefined;
 
   /**
-   * @param {Integer} diasEmAtraso
-   **/
-  self.setDiasEmAtraso = function (diasEmAtraso) {
-    self.diasEmAtraso = diasEmAtraso;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getEmissor = function() {
-    return self.emissor;
-  }
+   * @member {String} dataUltimoPagamento
+   */
+  exports.prototype['dataUltimoPagamento'] = undefined;
 
   /**
-   * @param {String} emissor
-   **/
-  self.setEmissor = function (emissor) {
-    self.emissor = emissor;
-  }
-  
-  /**
-   * @return {Boolean}
-   **/
-  self.getFlagCancelamento = function() {
-    return self.flagCancelamento;
-  }
+   * @member {String} dataVencCobranca
+   */
+  exports.prototype['dataVencCobranca'] = undefined;
 
   /**
-   * @param {Boolean} flagCancelamento
-   **/
-  self.setFlagCancelamento = function (flagCancelamento) {
-    self.flagCancelamento = flagCancelamento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getFormaEnvioFatura = function() {
-    return self.formaEnvioFatura;
-  }
+   * @member {String} dddcelularSMS
+   */
+  exports.prototype['dddcelularSMS'] = undefined;
 
   /**
-   * @param {String} formaEnvioFatura
-   **/
-  self.setFormaEnvioFatura = function (formaEnvioFatura) {
-    self.formaEnvioFatura = formaEnvioFatura;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdBandeira = function() {
-    return self.idBandeira;
-  }
+   * @member {String} descricaoStatus
+   */
+  exports.prototype['descricaoStatus'] = undefined;
 
   /**
-   * @param {Integer} idBandeira
-   **/
-  self.setIdBandeira = function (idBandeira) {
-    self.idBandeira = idBandeira;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdConta = function() {
-    return self.idConta;
-  }
+   * @member {Integer} diasEmAtraso
+   */
+  exports.prototype['diasEmAtraso'] = undefined;
 
   /**
-   * @param {Integer} idConta
-   **/
-  self.setIdConta = function (idConta) {
-    self.idConta = idConta;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdEmissor = function() {
-    return self.idEmissor;
-  }
+   * @member {String} emissor
+   */
+  exports.prototype['emissor'] = undefined;
 
   /**
-   * @param {Integer} idEmissor
-   **/
-  self.setIdEmissor = function (idEmissor) {
-    self.idEmissor = idEmissor;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdEndereco = function() {
-    return self.idEndereco;
-  }
+   * @member {Boolean} flagCancelamento
+   */
+  exports.prototype['flagCancelamento'] = undefined;
 
   /**
-   * @param {Integer} idEndereco
-   **/
-  self.setIdEndereco = function (idEndereco) {
-    self.idEndereco = idEndereco;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdFantasiaBasica = function() {
-    return self.idFantasiaBasica;
-  }
+   * @member {String} formaEnvioFatura
+   */
+  exports.prototype['formaEnvioFatura'] = undefined;
 
   /**
-   * @param {Integer} idFantasiaBasica
-   **/
-  self.setIdFantasiaBasica = function (idFantasiaBasica) {
-    self.idFantasiaBasica = idFantasiaBasica;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdOrigemComercial = function() {
-    return self.idOrigemComercial;
-  }
+   * @member {Integer} idBandeira
+   */
+  exports.prototype['idBandeira'] = undefined;
 
   /**
-   * @param {Integer} idOrigemComercial
-   **/
-  self.setIdOrigemComercial = function (idOrigemComercial) {
-    self.idOrigemComercial = idOrigemComercial;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdProduto = function() {
-    return self.idProduto;
-  }
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
 
   /**
-   * @param {Integer} idProduto
-   **/
-  self.setIdProduto = function (idProduto) {
-    self.idProduto = idProduto;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdProposta = function() {
-    return self.idProposta;
-  }
+   * @member {Integer} idEmissor
+   */
+  exports.prototype['idEmissor'] = undefined;
 
   /**
-   * @param {Integer} idProposta
-   **/
-  self.setIdProposta = function (idProposta) {
-    self.idProposta = idProposta;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getMelhorDia = function() {
-    return self.melhorDia;
-  }
+   * @member {Integer} idEndereco
+   */
+  exports.prototype['idEndereco'] = undefined;
 
   /**
-   * @param {Integer} melhorDia
-   **/
-  self.setMelhorDia = function (melhorDia) {
-    self.melhorDia = melhorDia;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNomeCredor = function() {
-    return self.nomeCredor;
-  }
+   * @member {Integer} idFantasiaBasica
+   */
+  exports.prototype['idFantasiaBasica'] = undefined;
 
   /**
-   * @param {String} nomeCredor
-   **/
-  self.setNomeCredor = function (nomeCredor) {
-    self.nomeCredor = nomeCredor;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNomeProduto = function() {
-    return self.nomeProduto;
-  }
+   * @member {Integer} idOrigemComercial
+   */
+  exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * @param {String} nomeProduto
-   **/
-  self.setNomeProduto = function (nomeProduto) {
-    self.nomeProduto = nomeProduto;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNumCelularSMS = function() {
-    return self.numCelularSMS;
-  }
+   * @member {Integer} idProduto
+   */
+  exports.prototype['idProduto'] = undefined;
 
   /**
-   * @param {String} numCelularSMS
-   **/
-  self.setNumCelularSMS = function (numCelularSMS) {
-    self.numCelularSMS = numCelularSMS;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getPagamentos = function() {
-    return self.pagamentos;
-  }
+   * @member {Integer} idProposta
+   */
+  exports.prototype['idProposta'] = undefined;
 
   /**
-   * @param {Number} pagamentos
-   **/
-  self.setPagamentos = function (pagamentos) {
-    self.pagamentos = pagamentos;
-  }
-  
-  /**
-   * @return {Boolean}
-   **/
-  self.getPermiteRefinanciamento = function() {
-    return self.permiteRefinanciamento;
-  }
+   * @member {Integer} melhorDia
+   */
+  exports.prototype['melhorDia'] = undefined;
 
   /**
-   * @param {Boolean} permiteRefinanciamento
-   **/
-  self.setPermiteRefinanciamento = function (permiteRefinanciamento) {
-    self.permiteRefinanciamento = permiteRefinanciamento;
-  }
-  
-  /**
-   * @return {PessoaFisicaResponse}
-   **/
-  self.getPessoaFisica = function() {
-    return self.pessoaFisica;
-  }
+   * @member {String} nomeCredor
+   */
+  exports.prototype['nomeCredor'] = undefined;
 
   /**
-   * @param {PessoaFisicaResponse} pessoaFisica
-   **/
-  self.setPessoaFisica = function (pessoaFisica) {
-    self.pessoaFisica = pessoaFisica;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getQuantidadePagamentos = function() {
-    return self.quantidadePagamentos;
-  }
+   * @member {String} nomeProduto
+   */
+  exports.prototype['nomeProduto'] = undefined;
 
   /**
-   * @param {Integer} quantidadePagamentos
-   **/
-  self.setQuantidadePagamentos = function (quantidadePagamentos) {
-    self.quantidadePagamentos = quantidadePagamentos;
-  }
-  
-  /**
-   * @return {SaldoLimiteResponse}
-   **/
-  self.getSaldoLimite = function() {
-    return self.saldoLimite;
-  }
+   * @member {String} numCelularSMS
+   */
+  exports.prototype['numCelularSMS'] = undefined;
 
   /**
-   * @param {SaldoLimiteResponse} saldoLimite
-   **/
-  self.setSaldoLimite = function (saldoLimite) {
-    self.saldoLimite = saldoLimite;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getStatus = function() {
-    return self.status;
-  }
+   * @member {Number} pagamentos
+   */
+  exports.prototype['pagamentos'] = undefined;
 
   /**
-   * @param {Integer} status
-   **/
-  self.setStatus = function (status) {
-    self.status = status;
-  }
-  
-  /**
-   * @return {Date}
-   **/
-  self.getStatusData = function() {
-    return self.statusData;
-  }
+   * @member {Boolean} permiteRefinanciamento
+   */
+  exports.prototype['permiteRefinanciamento'] = undefined;
 
   /**
-   * @param {Date} statusData
-   **/
-  self.setStatusData = function (statusData) {
-    self.statusData = statusData;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getTaxaRefinanciamento = function() {
-    return self.taxaRefinanciamento;
-  }
+   * @member {module:model/PessoaFisicaResponse} pessoaFisica
+   */
+  exports.prototype['pessoaFisica'] = undefined;
 
   /**
-   * @param {String} taxaRefinanciamento
-   **/
-  self.setTaxaRefinanciamento = function (taxaRefinanciamento) {
-    self.taxaRefinanciamento = taxaRefinanciamento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getVcto = function() {
-    return self.vcto;
-  }
+   * @member {Integer} quantidadePagamentos
+   */
+  exports.prototype['quantidadePagamentos'] = undefined;
 
   /**
-   * @param {String} vcto
-   **/
-  self.setVcto = function (vcto) {
-    self.vcto = vcto;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getVencimento1 = function() {
-    return self.vencimento1;
-  }
+   * @member {module:model/SaldoLimiteResponse} saldoLimite
+   */
+  exports.prototype['saldoLimite'] = undefined;
 
   /**
-   * @param {Integer} vencimento1
-   **/
-  self.setVencimento1 = function (vencimento1) {
-    self.vencimento1 = vencimento1;
-  }
-  
-  /**
-   * @return {Boolean}
-   **/
-  self.getVinculoOrigemUsuario = function() {
-    return self.vinculoOrigemUsuario;
-  }
+   * @member {Integer} status
+   */
+  exports.prototype['status'] = undefined;
 
   /**
-   * @param {Boolean} vinculoOrigemUsuario
-   **/
-  self.setVinculoOrigemUsuario = function (vinculoOrigemUsuario) {
-    self.vinculoOrigemUsuario = vinculoOrigemUsuario;
-  }
-  
+   * @member {Date} statusData
+   */
+  exports.prototype['statusData'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {String} taxaRefinanciamento
+   */
+  exports.prototype['taxaRefinanciamento'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = ContaResponse;
-}
+  /**
+   * @member {String} vcto
+   */
+  exports.prototype['vcto'] = undefined;
+
+  /**
+   * @member {Integer} vencimento1
+   */
+  exports.prototype['vencimento1'] = undefined;
+
+  /**
+   * @member {Boolean} vinculoOrigemUsuario
+   */
+  exports.prototype['vinculoOrigemUsuario'] = undefined;
+
+
+
+
+  return exports;
+}));

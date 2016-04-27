@@ -1,270 +1,80 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('ConsultarCartaoResponse', ['jquery'],
-    function($) {
-      return ConsultarCartaoResponse;
-   });
-}
-
-
-var ConsultarCartaoResponse = function ConsultarCartaoResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.codigoRetorno = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cvv2 = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataValidade = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoRetorno = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idCartao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idConta = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nomePortador = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.numCartao = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoDisponivel = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.statusCartao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.statusConta = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient', './CartaoResponse'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'), require('./CartaoResponse'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.codigoRetorno = data.codigoRetorno;
-    
-    self.cvv2 = data.cvv2;
-    
-    self.dataValidade = data.dataValidade;
-    
-    self.descricaoRetorno = data.descricaoRetorno;
-    
-    self.idCartao = data.idCartao;
-    
-    self.idConta = data.idConta;
-    
-    self.nomePortador = data.nomePortador;
-    
-    self.numCartao = data.numCartao;
-    
-    self.saldoDisponivel = data.saldoDisponivel;
-    
-    self.statusCartao = data.statusCartao;
-    
-    self.statusConta = data.statusConta;
-    
+    root.Pier.ConsultarCartaoResponse = factory(root.Pier.ApiClient, root.Pier.CartaoResponse);
   }
-
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getCodigoRetorno = function() {
-    return self.codigoRetorno;
-  }
+}(this, function(ApiClient, CartaoResponse) {
+  'use strict';
 
   /**
-   * @param {Integer} codigoRetorno
-   **/
-  self.setCodigoRetorno = function (codigoRetorno) {
-    self.codigoRetorno = codigoRetorno;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCvv2 = function() {
-    return self.cvv2;
-  }
+   * The ConsultarCartaoResponse model module.
+   * @module model/ConsultarCartaoResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} cvv2
-   **/
-  self.setCvv2 = function (cvv2) {
-    self.cvv2 = cvv2;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataValidade = function() {
-    return self.dataValidade;
-  }
+   * Constructs a new <code>ConsultarCartaoResponse</code>.
+   * @alias module:model/ConsultarCartaoResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+  };
 
   /**
-   * @param {String} dataValidade
-   **/
-  self.setDataValidade = function (dataValidade) {
-    self.dataValidade = dataValidade;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoRetorno = function() {
-    return self.descricaoRetorno;
+   * Constructs a <code>ConsultarCartaoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ConsultarCartaoResponse} obj Optional instance to populate.
+   * @return {module:model/ConsultarCartaoResponse} The populated <code>ConsultarCartaoResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('cartoes')) {
+        obj['cartoes'] = ApiClient.convertToType(data['cartoes'], [CartaoResponse]);
+      }
+      if (data.hasOwnProperty('codigoRetorno')) {
+        obj['codigoRetorno'] = ApiClient.convertToType(data['codigoRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('descricaoRetorno')) {
+        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {String} descricaoRetorno
-   **/
-  self.setDescricaoRetorno = function (descricaoRetorno) {
-    self.descricaoRetorno = descricaoRetorno;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdCartao = function() {
-    return self.idCartao;
-  }
 
   /**
-   * @param {Integer} idCartao
-   **/
-  self.setIdCartao = function (idCartao) {
-    self.idCartao = idCartao;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdConta = function() {
-    return self.idConta;
-  }
+   * @member {Array.<module:model/CartaoResponse>} cartoes
+   */
+  exports.prototype['cartoes'] = undefined;
 
   /**
-   * @param {Integer} idConta
-   **/
-  self.setIdConta = function (idConta) {
-    self.idConta = idConta;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNomePortador = function() {
-    return self.nomePortador;
-  }
+   * @member {Integer} codigoRetorno
+   */
+  exports.prototype['codigoRetorno'] = undefined;
 
   /**
-   * @param {String} nomePortador
-   **/
-  self.setNomePortador = function (nomePortador) {
-    self.nomePortador = nomePortador;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNumCartao = function() {
-    return self.numCartao;
-  }
+   * @member {String} descricaoRetorno
+   */
+  exports.prototype['descricaoRetorno'] = undefined;
 
-  /**
-   * @param {String} numCartao
-   **/
-  self.setNumCartao = function (numCartao) {
-    self.numCartao = numCartao;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoDisponivel = function() {
-    return self.saldoDisponivel;
-  }
 
-  /**
-   * @param {Number} saldoDisponivel
-   **/
-  self.setSaldoDisponivel = function (saldoDisponivel) {
-    self.saldoDisponivel = saldoDisponivel;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getStatusCartao = function() {
-    return self.statusCartao;
-  }
 
-  /**
-   * @param {Integer} statusCartao
-   **/
-  self.setStatusCartao = function (statusCartao) {
-    self.statusCartao = statusCartao;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getStatusConta = function() {
-    return self.statusConta;
-  }
 
-  /**
-   * @param {Integer} statusConta
-   **/
-  self.setStatusConta = function (statusConta) {
-    self.statusConta = statusConta;
-  }
-  
-
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
-
-if (typeof module === 'object' && module.exports) {
-  module.exports = ConsultarCartaoResponse;
-}
+  return exports;
+}));

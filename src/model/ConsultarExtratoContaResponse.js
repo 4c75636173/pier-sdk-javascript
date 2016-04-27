@@ -1,376 +1,197 @@
-// require files in Node.js environment
-var ExtratoResponse;
-if (typeof module === 'object' && module.exports) {
-  
-  ExtratoResponse = require('./ExtratoResponse.js');
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('ConsultarExtratoContaResponse', ['jquery', 'Array'],
-    function($, Array) {
-      return ConsultarExtratoContaResponse;
-   });
-}
-
-
-var ConsultarExtratoContaResponse = function ConsultarExtratoContaResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.codigoRetorno = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.comprasNacionais = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cpf = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.creditosNacionais = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataVencimento = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.debitosNacionais = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoRetorno = null;
-  
-  /**
-   * datatype: Array
-   **/
-  self.extrato = [];
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idCartao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idConta = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.multa = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.pagamentos = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoAtualFinal = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.saldoExtratoAnterior = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.tarifasNacionais = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.valorMinimoExtrato = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient', './ExtratoResponse'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'), require('./ExtratoResponse'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.codigoRetorno = data.codigoRetorno;
-    
-    self.comprasNacionais = data.comprasNacionais;
-    
-    self.cpf = data.cpf;
-    
-    self.creditosNacionais = data.creditosNacionais;
-    
-    self.dataVencimento = data.dataVencimento;
-    
-    self.debitosNacionais = data.debitosNacionais;
-    
-    self.descricaoRetorno = data.descricaoRetorno;
-    
-    self.extrato = new Array();
-    
-    self.idCartao = data.idCartao;
-    
-    self.idConta = data.idConta;
-    
-    self.multa = data.multa;
-    
-    self.pagamentos = data.pagamentos;
-    
-    self.saldoAtualFinal = data.saldoAtualFinal;
-    
-    self.saldoExtratoAnterior = data.saldoExtratoAnterior;
-    
-    self.tarifasNacionais = data.tarifasNacionais;
-    
-    self.valorMinimoExtrato = data.valorMinimoExtrato;
-    
+    root.Pier.ConsultarExtratoContaResponse = factory(root.Pier.ApiClient, root.Pier.ExtratoResponse);
   }
-
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getCodigoRetorno = function() {
-    return self.codigoRetorno;
-  }
+}(this, function(ApiClient, ExtratoResponse) {
+  'use strict';
 
   /**
-   * @param {Integer} codigoRetorno
-   **/
-  self.setCodigoRetorno = function (codigoRetorno) {
-    self.codigoRetorno = codigoRetorno;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getComprasNacionais = function() {
-    return self.comprasNacionais;
-  }
+   * The ConsultarExtratoContaResponse model module.
+   * @module model/ConsultarExtratoContaResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {Number} comprasNacionais
-   **/
-  self.setComprasNacionais = function (comprasNacionais) {
-    self.comprasNacionais = comprasNacionais;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCpf = function() {
-    return self.cpf;
-  }
+   * Constructs a new <code>ConsultarExtratoContaResponse</code>.
+   * @alias module:model/ConsultarExtratoContaResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} cpf
-   **/
-  self.setCpf = function (cpf) {
-    self.cpf = cpf;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getCreditosNacionais = function() {
-    return self.creditosNacionais;
+   * Constructs a <code>ConsultarExtratoContaResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ConsultarExtratoContaResponse} obj Optional instance to populate.
+   * @return {module:model/ConsultarExtratoContaResponse} The populated <code>ConsultarExtratoContaResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('codigoRetorno')) {
+        obj['codigoRetorno'] = ApiClient.convertToType(data['codigoRetorno'], 'Integer');
+      }
+      if (data.hasOwnProperty('comprasNacionais')) {
+        obj['comprasNacionais'] = ApiClient.convertToType(data['comprasNacionais'], 'Number');
+      }
+      if (data.hasOwnProperty('cpf')) {
+        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
+      }
+      if (data.hasOwnProperty('creditosNacionais')) {
+        obj['creditosNacionais'] = ApiClient.convertToType(data['creditosNacionais'], 'Number');
+      }
+      if (data.hasOwnProperty('dataVencimento')) {
+        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'String');
+      }
+      if (data.hasOwnProperty('debitosNacionais')) {
+        obj['debitosNacionais'] = ApiClient.convertToType(data['debitosNacionais'], 'Number');
+      }
+      if (data.hasOwnProperty('descricaoRetorno')) {
+        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      }
+      if (data.hasOwnProperty('extrato')) {
+        obj['extrato'] = ApiClient.convertToType(data['extrato'], [ExtratoResponse]);
+      }
+      if (data.hasOwnProperty('idCartao')) {
+        obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('multa')) {
+        obj['multa'] = ApiClient.convertToType(data['multa'], 'Number');
+      }
+      if (data.hasOwnProperty('pagamentos')) {
+        obj['pagamentos'] = ApiClient.convertToType(data['pagamentos'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoAtualFinal')) {
+        obj['saldoAtualFinal'] = ApiClient.convertToType(data['saldoAtualFinal'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoExtratoAnterior')) {
+        obj['saldoExtratoAnterior'] = ApiClient.convertToType(data['saldoExtratoAnterior'], 'Number');
+      }
+      if (data.hasOwnProperty('tarifasNacionais')) {
+        obj['tarifasNacionais'] = ApiClient.convertToType(data['tarifasNacionais'], 'Number');
+      }
+      if (data.hasOwnProperty('valorMinimoExtrato')) {
+        obj['valorMinimoExtrato'] = ApiClient.convertToType(data['valorMinimoExtrato'], 'Number');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {Number} creditosNacionais
-   **/
-  self.setCreditosNacionais = function (creditosNacionais) {
-    self.creditosNacionais = creditosNacionais;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataVencimento = function() {
-    return self.dataVencimento;
-  }
 
   /**
-   * @param {String} dataVencimento
-   **/
-  self.setDataVencimento = function (dataVencimento) {
-    self.dataVencimento = dataVencimento;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDebitosNacionais = function() {
-    return self.debitosNacionais;
-  }
+   * @member {Integer} codigoRetorno
+   */
+  exports.prototype['codigoRetorno'] = undefined;
 
   /**
-   * @param {Number} debitosNacionais
-   **/
-  self.setDebitosNacionais = function (debitosNacionais) {
-    self.debitosNacionais = debitosNacionais;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoRetorno = function() {
-    return self.descricaoRetorno;
-  }
+   * @member {Number} comprasNacionais
+   */
+  exports.prototype['comprasNacionais'] = undefined;
 
   /**
-   * @param {String} descricaoRetorno
-   **/
-  self.setDescricaoRetorno = function (descricaoRetorno) {
-    self.descricaoRetorno = descricaoRetorno;
-  }
-  
-  /**
-   * @return {Array}
-   **/
-  self.getExtrato = function() {
-    return self.extrato;
-  }
+   * @member {String} cpf
+   */
+  exports.prototype['cpf'] = undefined;
 
   /**
-   * @param {Array} extrato
-   **/
-  self.setExtrato = function (extrato) {
-    self.extrato = extrato;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdCartao = function() {
-    return self.idCartao;
-  }
+   * @member {Number} creditosNacionais
+   */
+  exports.prototype['creditosNacionais'] = undefined;
 
   /**
-   * @param {Integer} idCartao
-   **/
-  self.setIdCartao = function (idCartao) {
-    self.idCartao = idCartao;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdConta = function() {
-    return self.idConta;
-  }
+   * @member {String} dataVencimento
+   */
+  exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * @param {Integer} idConta
-   **/
-  self.setIdConta = function (idConta) {
-    self.idConta = idConta;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getMulta = function() {
-    return self.multa;
-  }
+   * @member {Number} debitosNacionais
+   */
+  exports.prototype['debitosNacionais'] = undefined;
 
   /**
-   * @param {Number} multa
-   **/
-  self.setMulta = function (multa) {
-    self.multa = multa;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getPagamentos = function() {
-    return self.pagamentos;
-  }
+   * @member {String} descricaoRetorno
+   */
+  exports.prototype['descricaoRetorno'] = undefined;
 
   /**
-   * @param {Number} pagamentos
-   **/
-  self.setPagamentos = function (pagamentos) {
-    self.pagamentos = pagamentos;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoAtualFinal = function() {
-    return self.saldoAtualFinal;
-  }
+   * @member {Array.<module:model/ExtratoResponse>} extrato
+   */
+  exports.prototype['extrato'] = undefined;
 
   /**
-   * @param {Number} saldoAtualFinal
-   **/
-  self.setSaldoAtualFinal = function (saldoAtualFinal) {
-    self.saldoAtualFinal = saldoAtualFinal;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getSaldoExtratoAnterior = function() {
-    return self.saldoExtratoAnterior;
-  }
+   * @member {Integer} idCartao
+   */
+  exports.prototype['idCartao'] = undefined;
 
   /**
-   * @param {Number} saldoExtratoAnterior
-   **/
-  self.setSaldoExtratoAnterior = function (saldoExtratoAnterior) {
-    self.saldoExtratoAnterior = saldoExtratoAnterior;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getTarifasNacionais = function() {
-    return self.tarifasNacionais;
-  }
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
 
   /**
-   * @param {Number} tarifasNacionais
-   **/
-  self.setTarifasNacionais = function (tarifasNacionais) {
-    self.tarifasNacionais = tarifasNacionais;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getValorMinimoExtrato = function() {
-    return self.valorMinimoExtrato;
-  }
+   * @member {Number} multa
+   */
+  exports.prototype['multa'] = undefined;
 
   /**
-   * @param {Number} valorMinimoExtrato
-   **/
-  self.setValorMinimoExtrato = function (valorMinimoExtrato) {
-    self.valorMinimoExtrato = valorMinimoExtrato;
-  }
-  
+   * @member {Number} pagamentos
+   */
+  exports.prototype['pagamentos'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {Number} saldoAtualFinal
+   */
+  exports.prototype['saldoAtualFinal'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = ConsultarExtratoContaResponse;
-}
+  /**
+   * @member {Number} saldoExtratoAnterior
+   */
+  exports.prototype['saldoExtratoAnterior'] = undefined;
+
+  /**
+   * @member {Number} tarifasNacionais
+   */
+  exports.prototype['tarifasNacionais'] = undefined;
+
+  /**
+   * @member {Number} valorMinimoExtrato
+   */
+  exports.prototype['valorMinimoExtrato'] = undefined;
+
+
+
+
+  return exports;
+}));

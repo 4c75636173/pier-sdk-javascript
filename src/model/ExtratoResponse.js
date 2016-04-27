@@ -1,627 +1,305 @@
-// require files in Node.js environment
-
-if (typeof module === 'object' && module.exports) {
-  
-}
-
-
-
-
-//export module
-if ( typeof define === "function" && define.amd ) {
-  define('ExtratoResponse', ['jquery'],
-    function($) {
-      return ExtratoResponse;
-   });
-}
-
-
-var ExtratoResponse = function ExtratoResponse() { 
-  var self = this;
-  
-  /**
-   * datatype: String
-   **/
-  self.cartao = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.chip = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.cidadeUFPais = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.codigoAutorizacao = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.codigoMoeda = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.codigoMoedaDestino = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.cotacaoDolar = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.credito = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataCompra = null;
-  
-  /**
-   * datatype: Date
-   **/
-  self.dataCotacaoDolar = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataEntradaCompra = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.dataTransacaoUTC = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.debito = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoModoEntrada = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.descricaoTransacao = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.encargosFinanceiros = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.historico = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idEventoExterno = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idTipoTransacao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.idTransacao = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.mcc = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nomeEstabVisa = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.nomePlastico = null;
-  
-  /**
-   * datatype: Integer
-   **/
-  self.numeroEstabelecimento = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.origem = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.taxaEmbarque = null;
-  
-  /**
-   * datatype: String
-   **/
-  self.tipoEvento = null;
-  
-  /**
-   * datatype: Number
-   **/
-  self.valorDolar = null;
-  
-  
-  self.constructFromObject = function(data) {
-    if (!data) {
-      return;
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
     }
-    
-    self.cartao = data.cartao;
-    
-    self.chip = data.chip;
-    
-    self.cidadeUFPais = data.cidadeUFPais;
-    
-    self.codigoAutorizacao = data.codigoAutorizacao;
-    
-    self.codigoMoeda = data.codigoMoeda;
-    
-    self.codigoMoedaDestino = data.codigoMoedaDestino;
-    
-    self.cotacaoDolar = data.cotacaoDolar;
-    
-    self.credito = data.credito;
-    
-    self.dataCompra = data.dataCompra;
-    
-    self.dataCotacaoDolar = data.dataCotacaoDolar;
-    
-    self.dataEntradaCompra = data.dataEntradaCompra;
-    
-    self.dataTransacaoUTC = data.dataTransacaoUTC;
-    
-    self.debito = data.debito;
-    
-    self.descricaoModoEntrada = data.descricaoModoEntrada;
-    
-    self.descricaoTransacao = data.descricaoTransacao;
-    
-    self.encargosFinanceiros = data.encargosFinanceiros;
-    
-    self.historico = data.historico;
-    
-    self.idEventoExterno = data.idEventoExterno;
-    
-    self.idTipoTransacao = data.idTipoTransacao;
-    
-    self.idTransacao = data.idTransacao;
-    
-    self.mcc = data.mcc;
-    
-    self.nomeEstabVisa = data.nomeEstabVisa;
-    
-    self.nomePlastico = data.nomePlastico;
-    
-    self.numeroEstabelecimento = data.numeroEstabelecimento;
-    
-    self.origem = data.origem;
-    
-    self.taxaEmbarque = data.taxaEmbarque;
-    
-    self.tipoEvento = data.tipoEvento;
-    
-    self.valorDolar = data.valorDolar;
-    
+    root.Pier.ExtratoResponse = factory(root.Pier.ApiClient);
   }
-
-  
-  /**
-   * @return {String}
-   **/
-  self.getCartao = function() {
-    return self.cartao;
-  }
+}(this, function(ApiClient) {
+  'use strict';
 
   /**
-   * @param {String} cartao
-   **/
-  self.setCartao = function (cartao) {
-    self.cartao = cartao;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getChip = function() {
-    return self.chip;
-  }
+   * The ExtratoResponse model module.
+   * @module model/ExtratoResponse
+   * @version 0.0.1
+   */
 
   /**
-   * @param {String} chip
-   **/
-  self.setChip = function (chip) {
-    self.chip = chip;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCidadeUFPais = function() {
-    return self.cidadeUFPais;
-  }
+   * Constructs a new <code>ExtratoResponse</code>.
+   * @alias module:model/ExtratoResponse
+   * @class
+   */
+  var exports = function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   /**
-   * @param {String} cidadeUFPais
-   **/
-  self.setCidadeUFPais = function (cidadeUFPais) {
-    self.cidadeUFPais = cidadeUFPais;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCodigoAutorizacao = function() {
-    return self.codigoAutorizacao;
+   * Constructs a <code>ExtratoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/ExtratoResponse} obj Optional instance to populate.
+   * @return {module:model/ExtratoResponse} The populated <code>ExtratoResponse</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('cartao')) {
+        obj['cartao'] = ApiClient.convertToType(data['cartao'], 'String');
+      }
+      if (data.hasOwnProperty('chip')) {
+        obj['chip'] = ApiClient.convertToType(data['chip'], 'String');
+      }
+      if (data.hasOwnProperty('cidadeUFPais')) {
+        obj['cidadeUFPais'] = ApiClient.convertToType(data['cidadeUFPais'], 'String');
+      }
+      if (data.hasOwnProperty('codigoAutorizacao')) {
+        obj['codigoAutorizacao'] = ApiClient.convertToType(data['codigoAutorizacao'], 'String');
+      }
+      if (data.hasOwnProperty('codigoMoeda')) {
+        obj['codigoMoeda'] = ApiClient.convertToType(data['codigoMoeda'], 'String');
+      }
+      if (data.hasOwnProperty('codigoMoedaDestino')) {
+        obj['codigoMoedaDestino'] = ApiClient.convertToType(data['codigoMoedaDestino'], 'String');
+      }
+      if (data.hasOwnProperty('cotacaoDolar')) {
+        obj['cotacaoDolar'] = ApiClient.convertToType(data['cotacaoDolar'], 'Number');
+      }
+      if (data.hasOwnProperty('credito')) {
+        obj['credito'] = ApiClient.convertToType(data['credito'], 'Number');
+      }
+      if (data.hasOwnProperty('dataCompra')) {
+        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], 'String');
+      }
+      if (data.hasOwnProperty('dataCotacaoDolar')) {
+        obj['dataCotacaoDolar'] = ApiClient.convertToType(data['dataCotacaoDolar'], 'Date');
+      }
+      if (data.hasOwnProperty('dataEntradaCompra')) {
+        obj['dataEntradaCompra'] = ApiClient.convertToType(data['dataEntradaCompra'], 'String');
+      }
+      if (data.hasOwnProperty('dataTransacaoUTC')) {
+        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'String');
+      }
+      if (data.hasOwnProperty('debito')) {
+        obj['debito'] = ApiClient.convertToType(data['debito'], 'Number');
+      }
+      if (data.hasOwnProperty('descricaoModoEntrada')) {
+        obj['descricaoModoEntrada'] = ApiClient.convertToType(data['descricaoModoEntrada'], 'String');
+      }
+      if (data.hasOwnProperty('descricaoTransacao')) {
+        obj['descricaoTransacao'] = ApiClient.convertToType(data['descricaoTransacao'], 'String');
+      }
+      if (data.hasOwnProperty('encargosFinanceiros')) {
+        obj['encargosFinanceiros'] = ApiClient.convertToType(data['encargosFinanceiros'], 'Number');
+      }
+      if (data.hasOwnProperty('historico')) {
+        obj['historico'] = ApiClient.convertToType(data['historico'], 'String');
+      }
+      if (data.hasOwnProperty('idEventoExterno')) {
+        obj['idEventoExterno'] = ApiClient.convertToType(data['idEventoExterno'], 'Integer');
+      }
+      if (data.hasOwnProperty('idTipoTransacao')) {
+        obj['idTipoTransacao'] = ApiClient.convertToType(data['idTipoTransacao'], 'Integer');
+      }
+      if (data.hasOwnProperty('idTransacao')) {
+        obj['idTransacao'] = ApiClient.convertToType(data['idTransacao'], 'Integer');
+      }
+      if (data.hasOwnProperty('mcc')) {
+        obj['mcc'] = ApiClient.convertToType(data['mcc'], 'Integer');
+      }
+      if (data.hasOwnProperty('nomeEstabVisa')) {
+        obj['nomeEstabVisa'] = ApiClient.convertToType(data['nomeEstabVisa'], 'String');
+      }
+      if (data.hasOwnProperty('nomePlastico')) {
+        obj['nomePlastico'] = ApiClient.convertToType(data['nomePlastico'], 'String');
+      }
+      if (data.hasOwnProperty('numeroEstabelecimento')) {
+        obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'Integer');
+      }
+      if (data.hasOwnProperty('origem')) {
+        obj['origem'] = ApiClient.convertToType(data['origem'], 'String');
+      }
+      if (data.hasOwnProperty('taxaEmbarque')) {
+        obj['taxaEmbarque'] = ApiClient.convertToType(data['taxaEmbarque'], 'Number');
+      }
+      if (data.hasOwnProperty('tipoEvento')) {
+        obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
+      }
+      if (data.hasOwnProperty('valorDolar')) {
+        obj['valorDolar'] = ApiClient.convertToType(data['valorDolar'], 'Number');
+      }
+    }
+    return obj;
   }
 
-  /**
-   * @param {String} codigoAutorizacao
-   **/
-  self.setCodigoAutorizacao = function (codigoAutorizacao) {
-    self.codigoAutorizacao = codigoAutorizacao;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCodigoMoeda = function() {
-    return self.codigoMoeda;
-  }
 
   /**
-   * @param {String} codigoMoeda
-   **/
-  self.setCodigoMoeda = function (codigoMoeda) {
-    self.codigoMoeda = codigoMoeda;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getCodigoMoedaDestino = function() {
-    return self.codigoMoedaDestino;
-  }
+   * @member {String} cartao
+   */
+  exports.prototype['cartao'] = undefined;
 
   /**
-   * @param {String} codigoMoedaDestino
-   **/
-  self.setCodigoMoedaDestino = function (codigoMoedaDestino) {
-    self.codigoMoedaDestino = codigoMoedaDestino;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getCotacaoDolar = function() {
-    return self.cotacaoDolar;
-  }
+   * @member {String} chip
+   */
+  exports.prototype['chip'] = undefined;
 
   /**
-   * @param {Number} cotacaoDolar
-   **/
-  self.setCotacaoDolar = function (cotacaoDolar) {
-    self.cotacaoDolar = cotacaoDolar;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getCredito = function() {
-    return self.credito;
-  }
+   * @member {String} cidadeUFPais
+   */
+  exports.prototype['cidadeUFPais'] = undefined;
 
   /**
-   * @param {Number} credito
-   **/
-  self.setCredito = function (credito) {
-    self.credito = credito;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataCompra = function() {
-    return self.dataCompra;
-  }
+   * @member {String} codigoAutorizacao
+   */
+  exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * @param {String} dataCompra
-   **/
-  self.setDataCompra = function (dataCompra) {
-    self.dataCompra = dataCompra;
-  }
-  
-  /**
-   * @return {Date}
-   **/
-  self.getDataCotacaoDolar = function() {
-    return self.dataCotacaoDolar;
-  }
+   * @member {String} codigoMoeda
+   */
+  exports.prototype['codigoMoeda'] = undefined;
 
   /**
-   * @param {Date} dataCotacaoDolar
-   **/
-  self.setDataCotacaoDolar = function (dataCotacaoDolar) {
-    self.dataCotacaoDolar = dataCotacaoDolar;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataEntradaCompra = function() {
-    return self.dataEntradaCompra;
-  }
+   * @member {String} codigoMoedaDestino
+   */
+  exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * @param {String} dataEntradaCompra
-   **/
-  self.setDataEntradaCompra = function (dataEntradaCompra) {
-    self.dataEntradaCompra = dataEntradaCompra;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDataTransacaoUTC = function() {
-    return self.dataTransacaoUTC;
-  }
+   * @member {Number} cotacaoDolar
+   */
+  exports.prototype['cotacaoDolar'] = undefined;
 
   /**
-   * @param {String} dataTransacaoUTC
-   **/
-  self.setDataTransacaoUTC = function (dataTransacaoUTC) {
-    self.dataTransacaoUTC = dataTransacaoUTC;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getDebito = function() {
-    return self.debito;
-  }
+   * @member {Number} credito
+   */
+  exports.prototype['credito'] = undefined;
 
   /**
-   * @param {Number} debito
-   **/
-  self.setDebito = function (debito) {
-    self.debito = debito;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoModoEntrada = function() {
-    return self.descricaoModoEntrada;
-  }
+   * @member {String} dataCompra
+   */
+  exports.prototype['dataCompra'] = undefined;
 
   /**
-   * @param {String} descricaoModoEntrada
-   **/
-  self.setDescricaoModoEntrada = function (descricaoModoEntrada) {
-    self.descricaoModoEntrada = descricaoModoEntrada;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getDescricaoTransacao = function() {
-    return self.descricaoTransacao;
-  }
+   * @member {Date} dataCotacaoDolar
+   */
+  exports.prototype['dataCotacaoDolar'] = undefined;
 
   /**
-   * @param {String} descricaoTransacao
-   **/
-  self.setDescricaoTransacao = function (descricaoTransacao) {
-    self.descricaoTransacao = descricaoTransacao;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getEncargosFinanceiros = function() {
-    return self.encargosFinanceiros;
-  }
+   * @member {String} dataEntradaCompra
+   */
+  exports.prototype['dataEntradaCompra'] = undefined;
 
   /**
-   * @param {Number} encargosFinanceiros
-   **/
-  self.setEncargosFinanceiros = function (encargosFinanceiros) {
-    self.encargosFinanceiros = encargosFinanceiros;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getHistorico = function() {
-    return self.historico;
-  }
+   * @member {String} dataTransacaoUTC
+   */
+  exports.prototype['dataTransacaoUTC'] = undefined;
 
   /**
-   * @param {String} historico
-   **/
-  self.setHistorico = function (historico) {
-    self.historico = historico;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdEventoExterno = function() {
-    return self.idEventoExterno;
-  }
+   * @member {Number} debito
+   */
+  exports.prototype['debito'] = undefined;
 
   /**
-   * @param {Integer} idEventoExterno
-   **/
-  self.setIdEventoExterno = function (idEventoExterno) {
-    self.idEventoExterno = idEventoExterno;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdTipoTransacao = function() {
-    return self.idTipoTransacao;
-  }
+   * @member {String} descricaoModoEntrada
+   */
+  exports.prototype['descricaoModoEntrada'] = undefined;
 
   /**
-   * @param {Integer} idTipoTransacao
-   **/
-  self.setIdTipoTransacao = function (idTipoTransacao) {
-    self.idTipoTransacao = idTipoTransacao;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getIdTransacao = function() {
-    return self.idTransacao;
-  }
+   * @member {String} descricaoTransacao
+   */
+  exports.prototype['descricaoTransacao'] = undefined;
 
   /**
-   * @param {Integer} idTransacao
-   **/
-  self.setIdTransacao = function (idTransacao) {
-    self.idTransacao = idTransacao;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getMcc = function() {
-    return self.mcc;
-  }
+   * @member {Number} encargosFinanceiros
+   */
+  exports.prototype['encargosFinanceiros'] = undefined;
 
   /**
-   * @param {Integer} mcc
-   **/
-  self.setMcc = function (mcc) {
-    self.mcc = mcc;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNomeEstabVisa = function() {
-    return self.nomeEstabVisa;
-  }
+   * @member {String} historico
+   */
+  exports.prototype['historico'] = undefined;
 
   /**
-   * @param {String} nomeEstabVisa
-   **/
-  self.setNomeEstabVisa = function (nomeEstabVisa) {
-    self.nomeEstabVisa = nomeEstabVisa;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getNomePlastico = function() {
-    return self.nomePlastico;
-  }
+   * @member {Integer} idEventoExterno
+   */
+  exports.prototype['idEventoExterno'] = undefined;
 
   /**
-   * @param {String} nomePlastico
-   **/
-  self.setNomePlastico = function (nomePlastico) {
-    self.nomePlastico = nomePlastico;
-  }
-  
-  /**
-   * @return {Integer}
-   **/
-  self.getNumeroEstabelecimento = function() {
-    return self.numeroEstabelecimento;
-  }
+   * @member {Integer} idTipoTransacao
+   */
+  exports.prototype['idTipoTransacao'] = undefined;
 
   /**
-   * @param {Integer} numeroEstabelecimento
-   **/
-  self.setNumeroEstabelecimento = function (numeroEstabelecimento) {
-    self.numeroEstabelecimento = numeroEstabelecimento;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getOrigem = function() {
-    return self.origem;
-  }
+   * @member {Integer} idTransacao
+   */
+  exports.prototype['idTransacao'] = undefined;
 
   /**
-   * @param {String} origem
-   **/
-  self.setOrigem = function (origem) {
-    self.origem = origem;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getTaxaEmbarque = function() {
-    return self.taxaEmbarque;
-  }
+   * @member {Integer} mcc
+   */
+  exports.prototype['mcc'] = undefined;
 
   /**
-   * @param {Number} taxaEmbarque
-   **/
-  self.setTaxaEmbarque = function (taxaEmbarque) {
-    self.taxaEmbarque = taxaEmbarque;
-  }
-  
-  /**
-   * @return {String}
-   **/
-  self.getTipoEvento = function() {
-    return self.tipoEvento;
-  }
+   * @member {String} nomeEstabVisa
+   */
+  exports.prototype['nomeEstabVisa'] = undefined;
 
   /**
-   * @param {String} tipoEvento
-   **/
-  self.setTipoEvento = function (tipoEvento) {
-    self.tipoEvento = tipoEvento;
-  }
-  
-  /**
-   * @return {Number}
-   **/
-  self.getValorDolar = function() {
-    return self.valorDolar;
-  }
+   * @member {String} nomePlastico
+   */
+  exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * @param {Number} valorDolar
-   **/
-  self.setValorDolar = function (valorDolar) {
-    self.valorDolar = valorDolar;
-  }
-  
+   * @member {Integer} numeroEstabelecimento
+   */
+  exports.prototype['numeroEstabelecimento'] = undefined;
 
-  self.toJson = function () {
-    return JSON.stringify(self);
-  }
-}
+  /**
+   * @member {String} origem
+   */
+  exports.prototype['origem'] = undefined;
 
-if (typeof module === 'object' && module.exports) {
-  module.exports = ExtratoResponse;
-}
+  /**
+   * @member {Number} taxaEmbarque
+   */
+  exports.prototype['taxaEmbarque'] = undefined;
+
+  /**
+   * @member {String} tipoEvento
+   */
+  exports.prototype['tipoEvento'] = undefined;
+
+  /**
+   * @member {Number} valorDolar
+   */
+  exports.prototype['valorDolar'] = undefined;
+
+
+
+
+  return exports;
+}));
