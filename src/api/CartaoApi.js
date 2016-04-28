@@ -10,20 +10,20 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoResponseApi = factory(root.Pier.ApiClient, root.Pier.CancelarCartaoResponse, root.Pier.ConsultarCartaoResponse, root.Pier.ConsultarExtratoContaResponse, root.Pier.ConsultarSaldoLimitesResponse, root.Pier.DesbloquearCartaoResponse);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.CancelarCartaoResponse, root.Pier.ConsultarCartaoResponse, root.Pier.ConsultarExtratoContaResponse, root.Pier.ConsultarSaldoLimitesResponse, root.Pier.DesbloquearCartaoResponse);
   }
 }(this, function(ApiClient, CancelarCartaoResponse, ConsultarCartaoResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, DesbloquearCartaoResponse) {
   'use strict';
 
   /**
-   * CartaoResponse service.
-   * @module api/CartaoResponseApi
+   * Cartao service.
+   * @module api/CartaoApi
    * @version 0.0.1
    */
 
   /**
-   * Constructs a new CartaoResponseApi. 
-   * @alias module:api/CartaoResponseApi
+   * Constructs a new CartaoApi. 
+   * @alias module:api/CartaoApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use, default to {@link module:ApiClient#instance}
    * if unspecified.
@@ -34,7 +34,7 @@
 
     /**
      * Callback function to receive the result of the cancelarCartaoUsingPOST operation.
-     * @callback module:api/CartaoResponseApi~cancelarCartaoUsingPOSTCallback
+     * @callback module:api/CartaoApi~cancelarCartaoUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CancelarCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -43,21 +43,15 @@
     /**
      * /contas/{idConta}/cartoes/{idCartao}/cancelar
      * Cancelar um determinado cart\u00C3\u00A3o
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
      * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
      * @param {Integer} motivo Motivo do cancelamento
      * @param {String} observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
-     * @param {module:api/CartaoResponseApi~cancelarCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~cancelarCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CancelarCartaoResponse}
      */
-    this.cancelarCartaoUsingPOST = function(idEmissor, idConta, idCartao, motivo, observacao, callback) {
+    this.cancelarCartaoUsingPOST = function(idConta, idCartao, motivo, observacao, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling cancelarCartaoUsingPOST";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -89,7 +83,6 @@
         'observacao': observacao
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
@@ -108,7 +101,7 @@
 
     /**
      * Callback function to receive the result of the consultarCartaoUsingGET operation.
-     * @callback module:api/CartaoResponseApi~consultarCartaoUsingGETCallback
+     * @callback module:api/CartaoApi~consultarCartaoUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ConsultarCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -117,22 +110,16 @@
     /**
      * /contas/{idConta}/cartoes/{idCartao}
      * Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta que pertence o cart\u00C3\u00A3o
      * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar
      * @param {Object} opts Optional parameters
      * @param {String} opts.numeroCartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
-     * @param {module:api/CartaoResponseApi~consultarCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConsultarCartaoResponse}
      */
-    this.consultarCartaoUsingGET = function(idEmissor, idConta, idCartao, opts, callback) {
+    this.consultarCartaoUsingGET = function(idConta, idCartao, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling consultarCartaoUsingGET";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -152,7 +139,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'idEmissor': idEmissor,
         'numeroCartao': opts['numeroCartao']
       };
       var formParams = {
@@ -172,7 +158,7 @@
 
     /**
      * Callback function to receive the result of the consultarCartoesUsingGET operation.
-     * @callback module:api/CartaoResponseApi~consultarCartoesUsingGETCallback
+     * @callback module:api/CartaoApi~consultarCartoesUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ConsultarCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -181,18 +167,12 @@
     /**
      * /contas/{idConta}/cartoes
      * Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
-     * @param {module:api/CartaoResponseApi~consultarCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConsultarCartaoResponse}
      */
-    this.consultarCartoesUsingGET = function(idEmissor, idConta, callback) {
+    this.consultarCartoesUsingGET = function(idConta, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling consultarCartoesUsingGET";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -206,7 +186,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
@@ -225,7 +204,7 @@
 
     /**
      * Callback function to receive the result of the consultarExtratoFaturasUsingGET operation.
-     * @callback module:api/CartaoResponseApi~consultarExtratoFaturasUsingGETCallback
+     * @callback module:api/CartaoApi~consultarExtratoFaturasUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ConsultarExtratoContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -234,20 +213,14 @@
     /**
      * /contas/{idConta}/cartoes/{idCartao}/faturas
      * Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
      * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
      * @param {String} dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
-     * @param {module:api/CartaoResponseApi~consultarExtratoFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarExtratoFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConsultarExtratoContaResponse}
      */
-    this.consultarExtratoFaturasUsingGET = function(idEmissor, idConta, idCartao, dataVencimento, callback) {
+    this.consultarExtratoFaturasUsingGET = function(idConta, idCartao, dataVencimento, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling consultarExtratoFaturasUsingGET";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -273,7 +246,6 @@
         'dataVencimento': dataVencimento
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
@@ -292,7 +264,7 @@
 
     /**
      * Callback function to receive the result of the consultarSaldosLimitesUsingGET operation.
-     * @callback module:api/CartaoResponseApi~consultarSaldosLimitesUsingGETCallback
+     * @callback module:api/CartaoApi~consultarSaldosLimitesUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ConsultarSaldoLimitesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -301,19 +273,13 @@
     /**
      * /contas/{idConta}/cartoes/{idCartao}/limites
      * Consulte os limites de um determinado cart\u00C3\u00A3o
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
      * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-     * @param {module:api/CartaoResponseApi~consultarSaldosLimitesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarSaldosLimitesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConsultarSaldoLimitesResponse}
      */
-    this.consultarSaldosLimitesUsingGET = function(idEmissor, idConta, idCartao, callback) {
+    this.consultarSaldosLimitesUsingGET = function(idConta, idCartao, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling consultarSaldosLimitesUsingGET";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -333,7 +299,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
@@ -352,7 +317,7 @@
 
     /**
      * Callback function to receive the result of the desbloquearCartaoUsingPOST operation.
-     * @callback module:api/CartaoResponseApi~desbloquearCartaoUsingPOSTCallback
+     * @callback module:api/CartaoApi~desbloquearCartaoUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/DesbloquearCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -361,20 +326,14 @@
     /**
      * /contas/{idConta}/cartoes/{idCartao}/desbloquear
      * Desbloquear cart\u00C3\u00A3o de uma determinada conta
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
      * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
      * @param {String} codigoSegurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
-     * @param {module:api/CartaoResponseApi~desbloquearCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~desbloquearCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DesbloquearCartaoResponse}
      */
-    this.desbloquearCartaoUsingPOST = function(idEmissor, idConta, idCartao, codigoSegurancao, callback) {
+    this.desbloquearCartaoUsingPOST = function(idConta, idCartao, codigoSegurancao, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling desbloquearCartaoUsingPOST";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -399,7 +358,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'idEmissor': idEmissor,
         'codigoSegurancao': codigoSegurancao
       };
       var formParams = {

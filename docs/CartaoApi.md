@@ -1,20 +1,20 @@
-# Pier.CartaoResponseApi
+# Pier.CartaoApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelarCartaoUsingPOST**](CartaoResponseApi.md#cancelarCartaoUsingPOST) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
-[**consultarCartaoUsingGET**](CartaoResponseApi.md#consultarCartaoUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
-[**consultarCartoesUsingGET**](CartaoResponseApi.md#consultarCartoesUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
-[**consultarExtratoFaturasUsingGET**](CartaoResponseApi.md#consultarExtratoFaturasUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
-[**consultarSaldosLimitesUsingGET**](CartaoResponseApi.md#consultarSaldosLimitesUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
-[**desbloquearCartaoUsingPOST**](CartaoResponseApi.md#desbloquearCartaoUsingPOST) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
+[**cancelarCartaoUsingPOST**](CartaoApi.md#cancelarCartaoUsingPOST) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar | /contas/{idConta}/cartoes/{idCartao}/cancelar
+[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
+[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
+[**consultarExtratoFaturasUsingGET**](CartaoApi.md#consultarExtratoFaturasUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/faturas | /contas/{idConta}/cartoes/{idCartao}/faturas
+[**consultarSaldosLimitesUsingGET**](CartaoApi.md#consultarSaldosLimitesUsingGET) | **GET** /api/v1/contas/{idConta}/cartoes/{idCartao}/limites | /contas/{idConta}/cartoes/{idCartao}/limites
+[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
 
 
 <a name="cancelarCartaoUsingPOST"></a>
 # **cancelarCartaoUsingPOST**
-> CancelarCartaoResponse cancelarCartaoUsingPOST(idEmissor, idConta, idCartao, motivo, observacao)
+> CancelarCartaoResponse cancelarCartaoUsingPOST(idConta, idCartao, motivo, observacao)
 
 /contas/{idConta}/cartoes/{idCartao}/cancelar
 
@@ -31,9 +31,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta
 
@@ -51,14 +49,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancelarCartaoUsingPOST(idEmissor, idConta, idCartao, motivo, observacao, callback);
+api.cancelarCartaoUsingPOST(idConta, idCartao, motivo, observacao, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
  **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
  **motivo** | **Integer**| Motivo do cancelamento | 
@@ -79,7 +76,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarCartaoUsingGET"></a>
 # **consultarCartaoUsingGET**
-> ConsultarCartaoResponse consultarCartaoUsingGET(idEmissor, idConta, idCartao, opts)
+> ConsultarCartaoResponse consultarCartaoUsingGET(idConta, idCartao, opts)
 
 /contas/{idConta}/cartoes/{idCartao}
 
@@ -96,9 +93,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta que pertence o cart\u00C3\u00A3o
 
@@ -115,14 +110,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarCartaoUsingGET(idEmissor, idConta, idCartao, opts, callback);
+api.consultarCartaoUsingGET(idConta, idCartao, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta que pertence o cart\u00C3\u00A3o | 
  **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar | 
  **numeroCartao** | **String**| N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) | [optional] 
@@ -142,7 +136,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarCartoesUsingGET"></a>
 # **consultarCartoesUsingGET**
-> ConsultarCartaoResponse consultarCartoesUsingGET(idEmissor, idConta)
+> ConsultarCartaoResponse consultarCartoesUsingGET(idConta)
 
 /contas/{idConta}/cartoes
 
@@ -159,9 +153,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta
 
@@ -173,14 +165,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarCartoesUsingGET(idEmissor, idConta, callback);
+api.consultarCartoesUsingGET(idConta, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
 
 ### Return type
@@ -198,7 +189,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarExtratoFaturasUsingGET"></a>
 # **consultarExtratoFaturasUsingGET**
-> ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET(idEmissor, idConta, idCartao, dataVencimento)
+> ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET(idConta, idCartao, dataVencimento)
 
 /contas/{idConta}/cartoes/{idCartao}/faturas
 
@@ -215,9 +206,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta
 
@@ -233,14 +222,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarExtratoFaturasUsingGET(idEmissor, idConta, idCartao, dataVencimento, callback);
+api.consultarExtratoFaturasUsingGET(idConta, idCartao, dataVencimento, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
  **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o extrato | 
  **dataVencimento** | **String**| Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es | 
@@ -260,7 +248,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarSaldosLimitesUsingGET"></a>
 # **consultarSaldosLimitesUsingGET**
-> ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET(idEmissor, idConta, idCartao)
+> ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET(idConta, idCartao)
 
 /contas/{idConta}/cartoes/{idCartao}/limites
 
@@ -277,9 +265,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta
 
@@ -293,14 +279,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarSaldosLimitesUsingGET(idEmissor, idConta, idCartao, callback);
+api.consultarSaldosLimitesUsingGET(idConta, idCartao, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
  **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
 
@@ -319,7 +304,7 @@ Name | Type | Description  | Notes
 
 <a name="desbloquearCartaoUsingPOST"></a>
 # **desbloquearCartaoUsingPOST**
-> DesbloquearCartaoResponse desbloquearCartaoUsingPOST(idEmissor, idConta, idCartao, codigoSegurancao)
+> DesbloquearCartaoResponse desbloquearCartaoUsingPOST(idConta, idCartao, codigoSegurancao)
 
 /contas/{idConta}/cartoes/{idCartao}/desbloquear
 
@@ -336,9 +321,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.CartaoResponseApi()
-
-var idEmissor = 56; // {Integer} ID do Emissor
+var apiInstance = new Pier.CartaoApi()
 
 var idConta = 56; // {Integer} ID da Conta
 
@@ -354,14 +337,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desbloquearCartaoUsingPOST(idEmissor, idConta, idCartao, codigoSegurancao, callback);
+api.desbloquearCartaoUsingPOST(idConta, idCartao, codigoSegurancao, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
  **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
  **codigoSegurancao** | **String**| C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o | 

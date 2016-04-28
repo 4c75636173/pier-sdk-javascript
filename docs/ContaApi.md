@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="buscarContaUsingGET"></a>
 # **buscarContaUsingGET**
-> ConsultarContaResponse buscarContaUsingGET(idEmissor, opts)
+> ConsultarContaResponse buscarContaUsingGET(opts)
 
 /contas/buscar
 
@@ -29,8 +29,6 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.ContaApi()
 
-var idEmissor = 56; // {Integer} ID do Emissor
-
 var opts = { 
   'nome': "nome_example", // {String} Nome
   'cpf': "cpf_example", // {String} CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
@@ -45,14 +43,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.buscarContaUsingGET(idEmissor, opts, callback);
+api.buscarContaUsingGET(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **nome** | **String**| Nome | [optional] 
  **cpf** | **String**| CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta) | [optional] 
  **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta) | [optional] 
@@ -73,7 +70,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarContaUsingGET"></a>
 # **consultarContaUsingGET**
-> ContaResponse consultarContaUsingGET(idEmissor, idConta)
+> ContaResponse consultarContaUsingGET(idConta)
 
 /contas/{idConta}
 
@@ -92,8 +89,6 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.ContaApi()
 
-var idEmissor = 56; // {Integer} ID do Emissor
-
 var idConta = 56; // {Integer} ID da Conta
 
 
@@ -104,14 +99,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarContaUsingGET(idEmissor, idConta, callback);
+api.consultarContaUsingGET(idConta, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idEmissor** | **Integer**| ID do Emissor | 
  **idConta** | **Integer**| ID da Conta | 
 
 ### Return type

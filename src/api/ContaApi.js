@@ -43,7 +43,6 @@
     /**
      * /contas/buscar
      * Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Object} opts Optional parameters
      * @param {String} opts.nome Nome
      * @param {String} opts.cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
@@ -52,14 +51,9 @@
      * @param {module:api/ContaApi~buscarContaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConsultarContaResponse}
      */
-    this.buscarContaUsingGET = function(idEmissor, opts, callback) {
+    this.buscarContaUsingGET = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling buscarContaUsingGET";
-      }
 
 
       var pathParams = {
@@ -71,7 +65,6 @@
         'idConta': opts['idConta']
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
@@ -99,18 +92,12 @@
     /**
      * /contas/{idConta}
      * Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
-     * @param {Integer} idEmissor ID do Emissor
      * @param {Integer} idConta ID da Conta
      * @param {module:api/ContaApi~consultarContaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.consultarContaUsingGET = function(idEmissor, idConta, callback) {
+    this.consultarContaUsingGET = function(idConta, callback) {
       var postBody = null;
-
-      // verify the required parameter 'idEmissor' is set
-      if (idEmissor == undefined || idEmissor == null) {
-        throw "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET";
-      }
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
@@ -124,7 +111,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'idEmissor': idEmissor
       };
       var formParams = {
       };
