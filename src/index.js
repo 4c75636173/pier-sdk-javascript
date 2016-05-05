@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AuthToken', './model/Body', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/CartaoResponse', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/ExtraInfo', './model/ExtratoResponse', './model/PessoaFisicaResponse', './model/SaldoLimiteResponse', './api/CartaoApi', './api/ContaApi', './api/TokenApi'], factory);
+    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/CartaoResponse', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/ExtraInfo', './model/ExtratoResponse', './model/PessoaFisicaResponse', './model/SaldoLimiteResponse', './api/CartaoApi', './api/ContaApi', './api/TokenApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/Body'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/CartaoResponse'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/PessoaFisicaResponse'), require('./model/SaldoLimiteResponse'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/TokenApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/CartaoResponse'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/PessoaFisicaResponse'), require('./model/SaldoLimiteResponse'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/TokenApi'));
   }
-}(function(ApiClient, AuthToken, Body, BodyAccessToken, CancelarCartaoResponse, CartaoResponse, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, ExtraInfo, ExtratoResponse, PessoaFisicaResponse, SaldoLimiteResponse, CartaoApi, ContaApi, TokenApi) {
+}(function(ApiClient, AuthToken, BodyAccessToken, CancelarCartaoResponse, CartaoResponse, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, ExtraInfo, ExtratoResponse, PessoaFisicaResponse, SaldoLimiteResponse, CartaoApi, ContaApi, TokenApi) {
   'use strict';
 
   /**
@@ -51,11 +51,6 @@
      * @property {module:model/AuthToken}
      */
     AuthToken: AuthToken,
-    /**
-     * The Body model constructor.
-     * @property {module:model/Body}
-     */
-    Body: Body,
     /**
      * The BodyAccessToken model constructor.
      * @property {module:model/BodyAccessToken}

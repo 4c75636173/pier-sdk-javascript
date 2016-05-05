@@ -93,7 +93,7 @@
       var returnType = CancelarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes/{idCartao}/cancelar', 'POST',
+        '/v1/contas/{idConta}/cartoes/{idCartao}/cancelar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -150,7 +150,7 @@
       var returnType = ConsultarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes/{idCartao}', 'GET',
+        '/v1/contas/{idConta}/cartoes/{idCartao}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -196,7 +196,7 @@
       var returnType = ConsultarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes', 'GET',
+        '/v1/contas/{idConta}/cartoes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -256,7 +256,7 @@
       var returnType = ConsultarExtratoContaResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes/{idCartao}/faturas', 'GET',
+        '/v1/contas/{idConta}/cartoes/{idCartao}/faturas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -309,7 +309,7 @@
       var returnType = ConsultarSaldoLimitesResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes/{idCartao}/limites', 'GET',
+        '/v1/contas/{idConta}/cartoes/{idCartao}/limites', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -369,7 +369,7 @@
       var returnType = DesbloquearCartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear', 'POST',
+        '/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

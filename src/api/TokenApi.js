@@ -70,7 +70,51 @@
       var returnType = BodyAccessToken;
 
       return this.apiClient.callApi(
-        '/api/v1/tokens/callback', 'POST',
+        '/v1/tokens/callback', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarUsingPOST operation.
+     * @callback module:api/TokenApi~validarUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * /tokens/validar
+     * @param {module:model/BodyAccessToken} bodyAccessToken bodyAccessToken
+     * @param {module:api/TokenApi~validarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.validarUsingPOST = function(bodyAccessToken, callback) {
+      var postBody = bodyAccessToken;
+
+      // verify the required parameter 'bodyAccessToken' is set
+      if (bodyAccessToken == undefined || bodyAccessToken == null) {
+        throw "Missing the required parameter 'bodyAccessToken' when calling validarUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/v1/tokens/validar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

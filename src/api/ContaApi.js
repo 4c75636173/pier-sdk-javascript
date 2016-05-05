@@ -75,7 +75,7 @@
       var returnType = ConsultarContaResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/buscar', 'GET',
+        '/v1/contas/buscar', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -121,7 +121,7 @@
       var returnType = ContaResponse;
 
       return this.apiClient.callApi(
-        '/api/v1/contas/{idConta}', 'GET',
+        '/v1/contas/{idConta}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

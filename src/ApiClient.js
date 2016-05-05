@@ -40,7 +40,8 @@
      * @type {Array.<String>}
      */
     this.authentications = {
-      'access_token': {type: 'apiKey', 'in': 'header', name: 'access_token'}
+      'access_token': {type: 'apiKey', 'in': 'header', name: 'access_token'},
+      'client_id': {type: 'apiKey', 'in': 'header', name: 'client_id'}
     };
 
     /**

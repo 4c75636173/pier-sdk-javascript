@@ -105,10 +105,10 @@
     ACTIVE: "ACTIVE",
     
     /**
-     * value: REVOKE
+     * value: REVOKED
      * @const
      */
-    REVOKE: "REVOKE",
+    REVOKED: "REVOKED",
     
     /**
      * value: DELETED

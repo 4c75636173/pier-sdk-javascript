@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Body'], factory);
+    define(['../ApiClient', './AuthToken'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Body'));
+    module.exports = factory(require('../ApiClient'), require('./AuthToken'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.BodyAccessToken = factory(root.Pier.ApiClient, root.Pier.Body);
+    root.Pier.BodyAccessToken = factory(root.Pier.ApiClient, root.Pier.AuthToken);
   }
-}(this, function(ApiClient, Body) {
+}(this, function(ApiClient, AuthToken) {
   'use strict';
 
   /**
@@ -29,6 +29,8 @@
   var exports = function() {
 
 
+
+
   };
 
   /**
@@ -42,8 +44,14 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('body')) {
-        obj['body'] = Body.constructFromObject(data['body']);
+      if (data.hasOwnProperty('AuthToken')) {
+        obj['AuthToken'] = AuthToken.constructFromObject(data['AuthToken']);
+      }
+      if (data.hasOwnProperty('action')) {
+        obj['action'] = ApiClient.convertToType(data['action'], 'String');
+      }
+      if (data.hasOwnProperty('user')) {
+        obj['user'] = ApiClient.convertToType(data['user'], 'String');
       }
     }
     return obj;
@@ -51,12 +59,45 @@
 
 
   /**
-   * @member {module:model/Body} body
+   * @member {module:model/AuthToken} AuthToken
    */
-  exports.prototype['body'] = undefined;
+  exports.prototype['AuthToken'] = undefined;
+
+  /**
+   * @member {module:model/BodyAccessToken.ActionEnum} action
+   */
+  exports.prototype['action'] = undefined;
+
+  /**
+   * @member {String} user
+   */
+  exports.prototype['user'] = undefined;
 
 
-
+  /**
+   * Allowed values for the <code>action</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ActionEnum = { 
+    /**
+     * value: CREATED
+     * @const
+     */
+    CREATED: "CREATED",
+    
+    /**
+     * value: UPDATED
+     * @const
+     */
+    UPDATED: "UPDATED",
+    
+    /**
+     * value: DELETED
+     * @const
+     */
+    DELETED: "DELETED"
+  };
 
   return exports;
 }));
