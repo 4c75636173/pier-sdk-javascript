@@ -1,18 +1,21 @@
 {
   "name": "Pier",
   "version": "0.0.1",
-  "description": "Gest\u00C3\u00A3o de pagamento eletr\u00C3\u00B4nicos como servi\u00C3\u00A7o",
+  "description": "Gestão de pagamento eletrónicos como serviço",
   "license": "Apache 2.0",
   "main": "src/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive"
+    "test": "mocha --timeout 30000 --recursive",
+    "debug": "mocha --timeout 30000 --recursive --watch"
   },
   "dependencies": {
     "superagent": "1.7.1"
   },
   "devDependencies": {
+    "chai": "3.5.0",
+    "dotenv": "2.0.0",
+    "expect.js": "~0.3.1",
     "mocha": "~2.3.4",
-    "sinon": "1.17.3",
-    "expect.js": "~0.3.1"
+    "sinon": "1.17.3"
   }
 }
