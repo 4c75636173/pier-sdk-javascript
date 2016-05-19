@@ -18,7 +18,7 @@
   /**
    * The DesbloquearCartaoResponse model module.
    * @module model/DesbloquearCartaoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

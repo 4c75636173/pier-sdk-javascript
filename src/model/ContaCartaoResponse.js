@@ -18,7 +18,7 @@
   /**
    * The ContaCartaoResponse model module.
    * @module model/ContaCartaoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

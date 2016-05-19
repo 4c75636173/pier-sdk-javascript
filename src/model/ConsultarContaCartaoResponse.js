@@ -18,7 +18,7 @@
   /**
    * The ConsultarContaCartaoResponse model module.
    * @module model/ConsultarContaCartaoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

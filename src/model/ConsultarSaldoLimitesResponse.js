@@ -18,7 +18,7 @@
   /**
    * The ConsultarSaldoLimitesResponse model module.
    * @module model/ConsultarSaldoLimitesResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The SaldoLimiteResponse model module.
    * @module model/SaldoLimiteResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The ExtratoResponse model module.
    * @module model/ExtratoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

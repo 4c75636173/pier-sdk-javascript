@@ -18,7 +18,7 @@
   /**
    * The CartaoResponse model module.
    * @module model/CartaoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

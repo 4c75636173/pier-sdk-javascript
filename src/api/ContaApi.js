@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConsultarContaResponse', '../model/ContaResponse'], factory);
+    define(['../ApiClient', '../model/ConsultarContaResponse', '../model/ContaResponse', '../model/ConsultarExtratoContaResponse', '../model/ConsultarSaldoLimitesResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConsultarContaResponse'), require('../model/ContaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConsultarContaResponse'), require('../model/ContaResponse'), require('../model/ConsultarExtratoContaResponse'), require('../model/ConsultarSaldoLimitesResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.ConsultarContaResponse, root.Pier.ContaResponse);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.ConsultarContaResponse, root.Pier.ContaResponse, root.Pier.ConsultarExtratoContaResponse, root.Pier.ConsultarSaldoLimitesResponse);
   }
-}(this, function(ApiClient, ConsultarContaResponse, ContaResponse) {
+}(this, function(ApiClient, ConsultarContaResponse, ContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse) {
   'use strict';
 
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**
@@ -122,6 +122,105 @@
 
       return this.apiClient.callApi(
         '/v1/contas/{idConta}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarExtratoFaturasUsingGET operation.
+     * @callback module:api/ContaApi~consultarExtratoFaturasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConsultarExtratoContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * /contas/{idConta}/faturas
+     * Consulte os extratos/faturas de uma determinada conta
+     * @param {Integer} idConta ID da Conta
+     * @param {String} dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
+     * @param {module:api/ContaApi~consultarExtratoFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConsultarExtratoContaResponse}
+     */
+    this.consultarExtratoFaturasUsingGET = function(idConta, dataVencimento, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling consultarExtratoFaturasUsingGET";
+      }
+
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling consultarExtratoFaturasUsingGET";
+      }
+
+
+      var pathParams = {
+        'idConta': idConta
+      };
+      var queryParams = {
+        'dataVencimento': dataVencimento
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConsultarExtratoContaResponse;
+
+      return this.apiClient.callApi(
+        '/v1/contas/{idConta}/faturas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarSaldosLimitesUsingGET operation.
+     * @callback module:api/ContaApi~consultarSaldosLimitesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConsultarSaldoLimitesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * /contas/{idConta}/limites
+     * Consulte os limites de uma determinada conta
+     * @param {Integer} idConta ID da Conta
+     * @param {module:api/ContaApi~consultarSaldosLimitesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConsultarSaldoLimitesResponse}
+     */
+    this.consultarSaldosLimitesUsingGET = function(idConta, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling consultarSaldosLimitesUsingGET";
+      }
+
+
+      var pathParams = {
+        'idConta': idConta
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConsultarSaldoLimitesResponse;
+
+      return this.apiClient.callApi(
+        '/v1/contas/{idConta}/limites', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

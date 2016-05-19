@@ -18,7 +18,7 @@
   /**
    * The CancelarCartaoResponse model module.
    * @module model/CancelarCartaoResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**

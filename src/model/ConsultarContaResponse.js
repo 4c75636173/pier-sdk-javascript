@@ -18,7 +18,7 @@
   /**
    * The ConsultarContaResponse model module.
    * @module model/ConsultarContaResponse
-   * @version 0.0.1
+   * @version 1.0.0
    */
 
   /**
