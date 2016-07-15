@@ -18,7 +18,7 @@
   /**
    * Token service.
    * @module api/TokenApi
-   * @version 1.0.0
+   * @version 1.1.0
    */
 
   /**
@@ -70,7 +70,7 @@
       var returnType = BodyAccessToken;
 
       return this.apiClient.callApi(
-        '/v1/tokens/callback', 'POST',
+        '/v1.1/tokens/callback', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -114,7 +114,7 @@
       var returnType = Object;
 
       return this.apiClient.callApi(
-        '/v1/tokens/validar', 'POST',
+        '/v1.1/tokens/validar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -4,17 +4,18 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/bloquear | /contas/{idConta}/cartoes/{idCartao}/bloquear
-[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /v1/contas/{idConta}/cartoes/{idCartao} | /contas/{idConta}/cartoes/{idCartao}
-[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /v1/contas/{idConta}/cartoes | /contas/{idConta}/cartoes
-[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /v1/contas/{idConta}/cartoes/{idCartao}/desbloquear | /contas/{idConta}/cartoes/{idCartao}/desbloquear
+[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
+[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
+[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
+[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
+[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /v1.1/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
 
 
 <a name="bloquearCartaoUsingPOST"></a>
 # **bloquearCartaoUsingPOST**
 > CancelarCartaoResponse bloquearCartaoUsingPOST(idConta, idCartao, motivo, opts)
 
-/contas/{idConta}/cartoes/{idCartao}/bloquear
+Bloqueia um cart\u00C3\u00A3o
 
 Bloquear um determinado cart\u00C3\u00A3o
 
@@ -77,7 +78,7 @@ Name | Type | Description  | Notes
 # **consultarCartaoUsingGET**
 > ConsultarCartaoResponse consultarCartaoUsingGET(idConta, idCartao, opts)
 
-/contas/{idConta}/cartoes/{idCartao}
+Retorna um cart\u00C3\u00A3o
 
 Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
 
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 # **consultarCartoesUsingGET**
 > ConsultarCartaoResponse consultarCartoesUsingGET(idConta)
 
-/contas/{idConta}/cartoes
+Retorna todos os cart\u00C3\u00B5es
 
 Consultar todos os cart\u00C3\u00B5es de uma determinada conta
 
@@ -190,7 +191,7 @@ Name | Type | Description  | Notes
 # **desbloquearCartaoUsingPOST**
 > DesbloquearCartaoResponse desbloquearCartaoUsingPOST(idConta, idCartao, opts)
 
-/contas/{idConta}/cartoes/{idCartao}/desbloquear
+Desbloqueia um cart\u00C3\u00A3o
 
 Desbloquear cart\u00C3\u00A3o de uma determinada conta
 
@@ -236,6 +237,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="embossadoCartaoUsingPUT"></a>
+# **embossadoCartaoUsingPUT**
+> EmbossadoCartaoResponse embossadoCartaoUsingPUT(idConta, idCartao)
+
+Embossado
+
+N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CartaoApi()
+
+var idConta = 56; // {Integer} ID da Conta
+
+var idCartao = 56; // {Integer} ID do Cart\u00C3\u00A3o que deseja cancelar
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.embossadoCartaoUsingPUT(idConta, idCartao, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idConta** | **Integer**| ID da Conta | 
+ **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
+
+### Return type
+
+[**EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
 
 ### Authorization
 
