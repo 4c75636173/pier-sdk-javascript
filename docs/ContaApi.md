@@ -4,10 +4,10 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buscarContaUsingGET**](ContaApi.md#buscarContaUsingGET) | **GET** /v1.1/contas/buscar | Buscar contas
-[**consultarContaUsingGET**](ContaApi.md#consultarContaUsingGET) | **GET** /v1.1/contas/{idConta} | Retorna uma conta
-[**consultarExtratoFaturasUsingGET**](ContaApi.md#consultarExtratoFaturasUsingGET) | **GET** /v1.1/contas/{idConta}/faturas | Retorna os extratos
-[**consultarSaldosLimitesUsingGET**](ContaApi.md#consultarSaldosLimitesUsingGET) | **GET** /v1.1/contas/{idConta}/limites | Retorna o limite
+[**buscarContaUsingGET**](ContaApi.md#buscarContaUsingGET) | **GET** /api/contas/buscar | Buscar contas
+[**consultarContaUsingGET**](ContaApi.md#consultarContaUsingGET) | **GET** /api/contas/{idConta} | Retorna uma conta
+[**consultarExtratoFaturasUsingGET**](ContaApi.md#consultarExtratoFaturasUsingGET) | **GET** /api/contas/{idConta}/faturas | Retorna os extratos
+[**consultarSaldosLimitesUsingGET**](ContaApi.md#consultarSaldosLimitesUsingGET) | **GET** /api/contas/{idConta}/limites | Retorna o limite
 
 
 <a name="buscarContaUsingGET"></a>

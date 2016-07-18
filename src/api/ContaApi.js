@@ -75,7 +75,7 @@
       var returnType = ConsultarContaResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/buscar', 'GET',
+        '/api/contas/buscar', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -121,7 +121,7 @@
       var returnType = ContaResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}', 'GET',
+        '/api/contas/{idConta}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -174,7 +174,7 @@
       var returnType = ConsultarExtratoContaResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/faturas', 'GET',
+        '/api/contas/{idConta}/faturas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -220,7 +220,7 @@
       var returnType = ConsultarSaldoLimitesResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/limites', 'GET',
+        '/api/contas/{idConta}/limites', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

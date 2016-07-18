@@ -90,7 +90,7 @@
       var returnType = CancelarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear', 'POST',
+        '/api/contas/{idConta}/cartoes/{idCartao}/bloquear', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -147,7 +147,7 @@
       var returnType = ConsultarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/cartoes/{idCartao}', 'GET',
+        '/api/contas/{idConta}/cartoes/{idCartao}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -193,7 +193,7 @@
       var returnType = ConsultarCartaoResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/cartoes', 'GET',
+        '/api/contas/{idConta}/cartoes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -250,7 +250,7 @@
       var returnType = DesbloquearCartaoResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear', 'POST',
+        '/api/contas/{idConta}/cartoes/{idCartao}/desbloquear', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -303,7 +303,7 @@
       var returnType = EmbossadoCartaoResponse;
 
       return this.apiClient.callApi(
-        '/v1.1/contas/{idConta}/cartoes/{idCartao}/embossado', 'PUT',
+        '/api/contas/{idConta}/cartoes/{idCartao}/embossado', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

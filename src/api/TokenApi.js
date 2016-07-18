@@ -70,7 +70,7 @@
       var returnType = BodyAccessToken;
 
       return this.apiClient.callApi(
-        '/v1.1/tokens/callback', 'POST',
+        '/api/tokens/callback', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -114,7 +114,7 @@
       var returnType = Object;
 
       return this.apiClient.callApi(
-        '/v1.1/tokens/validar', 'POST',
+        '/api/tokens/validar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

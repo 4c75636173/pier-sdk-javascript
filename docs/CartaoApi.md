@@ -4,11 +4,11 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
-[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
-[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /v1.1/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
-[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
-[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /v1.1/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
+[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
+[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /api/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
+[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /api/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
+[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
+[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /api/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
 
 
 <a name="bloquearCartaoUsingPOST"></a>
