@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaResponse model module.
    * @module model/PessoaFisicaResponse
-   * @version 1.1.0
+   * @version 2.0.0
    */
 
   /**

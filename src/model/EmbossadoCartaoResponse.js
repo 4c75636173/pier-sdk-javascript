@@ -18,7 +18,7 @@
   /**
    * The EmbossadoCartaoResponse model module.
    * @module model/EmbossadoCartaoResponse
-   * @version 1.1.0
+   * @version 2.0.0
    */
 
   /**
