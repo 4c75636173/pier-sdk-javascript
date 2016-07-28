@@ -50,6 +50,7 @@
 
 
 
+
   };
 
   /**
@@ -116,6 +117,9 @@
       }
       if (data.hasOwnProperty('idProduto')) {
         obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      }
+      if (data.hasOwnProperty('nomePlastico')) {
+        obj['nomePlastico'] = ApiClient.convertToType(data['nomePlastico'], 'String');
       }
       if (data.hasOwnProperty('numeroCartao')) {
         obj['numeroCartao'] = ApiClient.convertToType(data['numeroCartao'], 'String');
@@ -223,6 +227,11 @@
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
+
+  /**
+   * @member {String} nomePlastico
+   */
+  exports.prototype['nomePlastico'] = undefined;
 
   /**
    * @member {String} numeroCartao
