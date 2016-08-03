@@ -62,13 +62,13 @@
         obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
       }
       if (data.hasOwnProperty('dataCadastroConta')) {
-        obj['dataCadastroConta'] = ApiClient.convertToType(data['dataCadastroConta'], 'String');
+        obj['dataCadastroConta'] = ApiClient.convertToType(data['dataCadastroConta'], 'Date');
       }
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'Date');
       }
       if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'Date');
       }
       if (data.hasOwnProperty('dddCelular')) {
         obj['dddCelular'] = ApiClient.convertToType(data['dddCelular'], 'String');
@@ -113,17 +113,17 @@
   exports.prototype['cpf'] = undefined;
 
   /**
-   * @member {String} dataCadastroConta
+   * @member {Date} dataCadastroConta
    */
   exports.prototype['dataCadastroConta'] = undefined;
 
   /**
-   * @member {String} dataEmissaoIdentidade
+   * @member {Date} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * @member {String} dataNascimento
+   * @member {Date} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
