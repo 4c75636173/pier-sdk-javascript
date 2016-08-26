@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EstgioCarto'], factory);
+    define(['../ApiClient', './StatusCarto'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EstgioCarto'));
+    module.exports = factory(require('../ApiClient'), require('./StatusCarto'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ListaDeStatusCartes = factory(root.Pier.ApiClient, root.Pier.EstgioCarto);
+    root.Pier.ListaDeStatusCartes = factory(root.Pier.ApiClient, root.Pier.StatusCarto);
   }
-}(this, function(ApiClient, EstgioCarto) {
+}(this, function(ApiClient, StatusCarto) {
   'use strict';
 
   /**
@@ -44,7 +44,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('statusCartoes')) {
-        obj['statusCartoes'] = ApiClient.convertToType(data['statusCartoes'], [EstgioCarto]);
+        obj['statusCartoes'] = ApiClient.convertToType(data['statusCartoes'], [StatusCarto]);
       }
     }
     return obj;
@@ -53,7 +53,7 @@
 
   /**
    * Lista de status cart\u00C3\u00B5es
-   * @member {Array.<module:model/EstgioCarto>} statusCartoes
+   * @member {Array.<module:model/StatusCarto>} statusCartoes
    */
   exports.prototype['statusCartoes'] = undefined;
 

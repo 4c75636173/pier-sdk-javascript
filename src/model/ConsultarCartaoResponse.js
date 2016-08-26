@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './CartaoResponse'], factory);
+    define(['../ApiClient', './CartaoResponseOld'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CartaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('./CartaoResponseOld'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ConsultarCartaoResponse = factory(root.Pier.ApiClient, root.Pier.CartaoResponse);
+    root.Pier.ConsultarCartaoResponse = factory(root.Pier.ApiClient, root.Pier.CartaoResponseOld);
   }
-}(this, function(ApiClient, CartaoResponse) {
+}(this, function(ApiClient, CartaoResponseOld) {
   'use strict';
 
   /**
@@ -45,7 +45,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('cartoes')) {
-        obj['cartoes'] = ApiClient.convertToType(data['cartoes'], [CartaoResponse]);
+        obj['cartoes'] = ApiClient.convertToType(data['cartoes'], [CartaoResponseOld]);
       }
       if (data.hasOwnProperty('codigoRetorno')) {
         obj['codigoRetorno'] = ApiClient.convertToType(data['codigoRetorno'], 'Integer');
@@ -59,7 +59,7 @@
 
 
   /**
-   * @member {Array.<module:model/CartaoResponse>} cartoes
+   * @member {Array.<module:model/CartaoResponseOld>} cartoes
    */
   exports.prototype['cartoes'] = undefined;
 

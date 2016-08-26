@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './LocalDateTime'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./LocalDateTime'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoResponse = factory(root.Pier.ApiClient);
+    root.Pier.CartaoResponse = factory(root.Pier.ApiClient, root.Pier.LocalDateTime);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, LocalDateTime) {
   'use strict';
 
   /**
@@ -25,32 +25,41 @@
    * Constructs a new <code>CartaoResponse</code>.
    * @alias module:model/CartaoResponse
    * @class
+   * @param arquivoImpressao
+   * @param codigoDesbloqueio
+   * @param dataEstagioCartao
+   * @param dataGeracao
+   * @param dataImpressao
+   * @param dataStatusCartao
+   * @param dataValidade
+   * @param flagImpressaoOrigemComercial
+   * @param flagProvisorio
+   * @param id
+   * @param idConta
+   * @param idEstagioCartao
+   * @param idPessoa
+   * @param idStatusCartao
+   * @param numeroCartao
+   * @param portador
    */
-  var exports = function() {
+  var exports = function(arquivoImpressao, codigoDesbloqueio, dataEstagioCartao, dataGeracao, dataImpressao, dataStatusCartao, dataValidade, flagImpressaoOrigemComercial, flagProvisorio, id, idConta, idEstagioCartao, idPessoa, idStatusCartao, numeroCartao, portador) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    this['arquivoImpressao'] = arquivoImpressao;
+    this['codigoDesbloqueio'] = codigoDesbloqueio;
+    this['dataEstagioCartao'] = dataEstagioCartao;
+    this['dataGeracao'] = dataGeracao;
+    this['dataImpressao'] = dataImpressao;
+    this['dataStatusCartao'] = dataStatusCartao;
+    this['dataValidade'] = dataValidade;
+    this['flagImpressaoOrigemComercial'] = flagImpressaoOrigemComercial;
+    this['flagProvisorio'] = flagProvisorio;
+    this['id'] = id;
+    this['idConta'] = idConta;
+    this['idEstagioCartao'] = idEstagioCartao;
+    this['idPessoa'] = idPessoa;
+    this['idStatusCartao'] = idStatusCartao;
+    this['numeroCartao'] = numeroCartao;
+    this['portador'] = portador;
   };
 
   /**
@@ -64,74 +73,53 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('bin')) {
-        obj['bin'] = ApiClient.convertToType(data['bin'], 'Integer');
-      }
-      if (data.hasOwnProperty('codRetorno')) {
-        obj['codRetorno'] = ApiClient.convertToType(data['codRetorno'], 'Integer');
+      if (data.hasOwnProperty('arquivoImpressao')) {
+        obj['arquivoImpressao'] = ApiClient.convertToType(data['arquivoImpressao'], 'String');
       }
       if (data.hasOwnProperty('codigoDesbloqueio')) {
         obj['codigoDesbloqueio'] = ApiClient.convertToType(data['codigoDesbloqueio'], 'String');
       }
-      if (data.hasOwnProperty('criptografiaHSM')) {
-        obj['criptografiaHSM'] = ApiClient.convertToType(data['criptografiaHSM'], 'String');
+      if (data.hasOwnProperty('dataEstagioCartao')) {
+        obj['dataEstagioCartao'] = LocalDateTime.constructFromObject(data['dataEstagioCartao']);
       }
-      if (data.hasOwnProperty('dataEmissao')) {
-        obj['dataEmissao'] = ApiClient.convertToType(data['dataEmissao'], 'Date');
+      if (data.hasOwnProperty('dataGeracao')) {
+        obj['dataGeracao'] = LocalDateTime.constructFromObject(data['dataGeracao']);
+      }
+      if (data.hasOwnProperty('dataImpressao')) {
+        obj['dataImpressao'] = LocalDateTime.constructFromObject(data['dataImpressao']);
+      }
+      if (data.hasOwnProperty('dataStatusCartao')) {
+        obj['dataStatusCartao'] = LocalDateTime.constructFromObject(data['dataStatusCartao']);
       }
       if (data.hasOwnProperty('dataValidade')) {
-        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
+        obj['dataValidade'] = LocalDateTime.constructFromObject(data['dataValidade']);
       }
-      if (data.hasOwnProperty('dataVencimentoPadrao')) {
-        obj['dataVencimentoPadrao'] = ApiClient.convertToType(data['dataVencimentoPadrao'], 'String');
+      if (data.hasOwnProperty('flagImpressaoOrigemComercial')) {
+        obj['flagImpressaoOrigemComercial'] = ApiClient.convertToType(data['flagImpressaoOrigemComercial'], 'Integer');
       }
-      if (data.hasOwnProperty('descricaoRetorno')) {
-        obj['descricaoRetorno'] = ApiClient.convertToType(data['descricaoRetorno'], 'String');
+      if (data.hasOwnProperty('flagProvisorio')) {
+        obj['flagProvisorio'] = ApiClient.convertToType(data['flagProvisorio'], 'Integer');
       }
-      if (data.hasOwnProperty('estagioCartao')) {
-        obj['estagioCartao'] = ApiClient.convertToType(data['estagioCartao'], 'Integer');
-      }
-      if (data.hasOwnProperty('estagioData')) {
-        obj['estagioData'] = ApiClient.convertToType(data['estagioData'], 'Date');
-      }
-      if (data.hasOwnProperty('flagReversao')) {
-        obj['flagReversao'] = ApiClient.convertToType(data['flagReversao'], 'Boolean');
-      }
-      if (data.hasOwnProperty('flagSenha')) {
-        obj['flagSenha'] = ApiClient.convertToType(data['flagSenha'], 'Boolean');
-      }
-      if (data.hasOwnProperty('idCartao')) {
-        obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
-      if (data.hasOwnProperty('idEmissor')) {
-        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
+      if (data.hasOwnProperty('idEstagioCartao')) {
+        obj['idEstagioCartao'] = ApiClient.convertToType(data['idEstagioCartao'], 'Integer');
       }
-      if (data.hasOwnProperty('idLog')) {
-        obj['idLog'] = ApiClient.convertToType(data['idLog'], 'String');
+      if (data.hasOwnProperty('idPessoa')) {
+        obj['idPessoa'] = ApiClient.convertToType(data['idPessoa'], 'Integer');
       }
-      if (data.hasOwnProperty('idPessoaFisica')) {
-        obj['idPessoaFisica'] = ApiClient.convertToType(data['idPessoaFisica'], 'Integer');
-      }
-      if (data.hasOwnProperty('idProduto')) {
-        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
-      }
-      if (data.hasOwnProperty('nomePlastico')) {
-        obj['nomePlastico'] = ApiClient.convertToType(data['nomePlastico'], 'String');
+      if (data.hasOwnProperty('idStatusCartao')) {
+        obj['idStatusCartao'] = ApiClient.convertToType(data['idStatusCartao'], 'Integer');
       }
       if (data.hasOwnProperty('numeroCartao')) {
         obj['numeroCartao'] = ApiClient.convertToType(data['numeroCartao'], 'String');
       }
-      if (data.hasOwnProperty('numeroCartaoReal')) {
-        obj['numeroCartaoReal'] = ApiClient.convertToType(data['numeroCartaoReal'], 'String');
-      }
-      if (data.hasOwnProperty('statusCartao')) {
-        obj['statusCartao'] = ApiClient.convertToType(data['statusCartao'], 'Integer');
-      }
-      if (data.hasOwnProperty('statusData')) {
-        obj['statusData'] = ApiClient.convertToType(data['statusData'], 'Date');
+      if (data.hasOwnProperty('portador')) {
+        obj['portador'] = ApiClient.convertToType(data['portador'], 'Integer');
       }
     }
     return obj;
@@ -139,119 +127,100 @@
 
 
   /**
-   * @member {Integer} bin
+   * Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+   * @member {String} arquivoImpressao
    */
-  exports.prototype['bin'] = undefined;
+  exports.prototype['arquivoImpressao'] = undefined;
 
   /**
-   * @member {Integer} codRetorno
-   */
-  exports.prototype['codRetorno'] = undefined;
-
-  /**
+   * Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    * @member {String} codigoDesbloqueio
    */
   exports.prototype['codigoDesbloqueio'] = undefined;
 
   /**
-   * @member {String} criptografiaHSM
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * @member {module:model/LocalDateTime} dataEstagioCartao
    */
-  exports.prototype['criptografiaHSM'] = undefined;
+  exports.prototype['dataEstagioCartao'] = undefined;
 
   /**
-   * @member {Date} dataEmissao
+   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   * @member {module:model/LocalDateTime} dataGeracao
    */
-  exports.prototype['dataEmissao'] = undefined;
+  exports.prototype['dataGeracao'] = undefined;
 
   /**
-   * @member {Date} dataValidade
+   * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+   * @member {module:model/LocalDateTime} dataImpressao
+   */
+  exports.prototype['dataImpressao'] = undefined;
+
+  /**
+   * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * @member {module:model/LocalDateTime} dataStatusCartao
+   */
+  exports.prototype['dataStatusCartao'] = undefined;
+
+  /**
+   * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * @member {module:model/LocalDateTime} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * @member {String} dataVencimentoPadrao
+   * Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+   * @member {Integer} flagImpressaoOrigemComercial
    */
-  exports.prototype['dataVencimentoPadrao'] = undefined;
+  exports.prototype['flagImpressaoOrigemComercial'] = undefined;
 
   /**
-   * @member {String} descricaoRetorno
+   * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+   * @member {Integer} flagProvisorio
    */
-  exports.prototype['descricaoRetorno'] = undefined;
+  exports.prototype['flagProvisorio'] = undefined;
 
   /**
-   * @member {Integer} estagioCartao
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @member {Integer} id
    */
-  exports.prototype['estagioCartao'] = undefined;
+  exports.prototype['id'] = undefined;
 
   /**
-   * @member {Date} estagioData
-   */
-  exports.prototype['estagioData'] = undefined;
-
-  /**
-   * @member {Boolean} flagReversao
-   */
-  exports.prototype['flagReversao'] = undefined;
-
-  /**
-   * @member {Boolean} flagSenha
-   */
-  exports.prototype['flagSenha'] = undefined;
-
-  /**
-   * @member {Integer} idCartao
-   */
-  exports.prototype['idCartao'] = undefined;
-
-  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * @member {Integer} idEmissor
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @member {Integer} idEstagioCartao
    */
-  exports.prototype['idEmissor'] = undefined;
+  exports.prototype['idEstagioCartao'] = undefined;
 
   /**
-   * @member {String} idLog
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+   * @member {Integer} idPessoa
    */
-  exports.prototype['idLog'] = undefined;
+  exports.prototype['idPessoa'] = undefined;
 
   /**
-   * @member {Integer} idPessoaFisica
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+   * @member {Integer} idStatusCartao
    */
-  exports.prototype['idPessoaFisica'] = undefined;
+  exports.prototype['idStatusCartao'] = undefined;
 
   /**
-   * @member {Integer} idProduto
-   */
-  exports.prototype['idProduto'] = undefined;
-
-  /**
-   * @member {String} nomePlastico
-   */
-  exports.prototype['nomePlastico'] = undefined;
-
-  /**
+   * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * @member {String} numeroCartaoReal
+   * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+   * @member {Integer} portador
    */
-  exports.prototype['numeroCartaoReal'] = undefined;
-
-  /**
-   * @member {Integer} statusCartao
-   */
-  exports.prototype['statusCartao'] = undefined;
-
-  /**
-   * @member {Date} statusData
-   */
-  exports.prototype['statusData'] = undefined;
+  exports.prototype['portador'] = undefined;
 
 
 
