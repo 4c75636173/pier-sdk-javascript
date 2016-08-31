@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/EstagioCartao', '../model/ListaEstagiosCartoes'], factory);
+    define(['../ApiClient', '../model/EstagioCartao', '../model/PageEstagiosCartoes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartao'), require('../model/ListaEstagiosCartoes'));
+    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartao'), require('../model/PageEstagiosCartoes'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EstagioCartaoApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartao, root.Pier.ListaEstagiosCartoes);
+    root.Pier.EstagioCartaoApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartao, root.Pier.PageEstagiosCartoes);
   }
-}(this, function(ApiClient, EstagioCartao, ListaEstagiosCartoes) {
+}(this, function(ApiClient, EstagioCartao, PageEstagiosCartoes) {
   'use strict';
 
   /**
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the listarEstagiosCartoesUsingGET operation.
      * @callback module:api/EstagioCartaoApi~listarEstagiosCartoesUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListaEstagiosCartoes} data The data returned by the service call.
+     * @param {module:model/PageEstagiosCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -95,7 +95,7 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/EstagioCartaoApi~listarEstagiosCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ListaEstagiosCartoes}
+     * data is of type: {module:model/PageEstagiosCartoes}
      */
     this.listarEstagiosCartoesUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -118,7 +118,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ListaEstagiosCartoes;
+      var returnType = PageEstagiosCartoes;
 
       return this.apiClient.callApi(
         '/api/estagios-cartoes', 'GET',

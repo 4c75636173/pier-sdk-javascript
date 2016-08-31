@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/Cartao', './model/CartaoResponseOld', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/EmbossadoCartaoResponse', './model/EstagioCartao', './model/ExtraInfo', './model/ExtratoResponse', './model/ListaCartoes', './model/ListaEstagiosCartoes', './model/ListaOrigensComerciais', './model/ListaProdutos', './model/ListaStatusCartoes', './model/OrigemComercial', './model/PessoaFisicaResponse', './model/Produto', './model/SaldoLimiteResponse', './model/StatusCartao', './api/BaseApi', './api/CartaoApi', './api/CartaoOldApi', './api/ContaApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/TokenApi'], factory);
+    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/Cartao', './model/CartaoResponseOld', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/EmbossadoCartaoResponse', './model/EstagioCartao', './model/ExtraInfo', './model/ExtratoResponse', './model/ListaCartoes', './model/ListaOrigensComerciais', './model/ListaProdutos', './model/ListaStatusCartoes', './model/OrigemComercial', './model/PageEstagiosCartoes', './model/PageImplOfEstagioCartao', './model/PessoaFisicaResponse', './model/Produto', './model/SaldoLimiteResponse', './model/StatusCartao', './api/BaseApi', './api/CartaoApi', './api/CartaoOldApi', './api/ContaApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/TokenApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/Cartao'), require('./model/CartaoResponseOld'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/EmbossadoCartaoResponse'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/ListaCartoes'), require('./model/ListaEstagiosCartoes'), require('./model/ListaOrigensComerciais'), require('./model/ListaProdutos'), require('./model/ListaStatusCartoes'), require('./model/OrigemComercial'), require('./model/PessoaFisicaResponse'), require('./model/Produto'), require('./model/SaldoLimiteResponse'), require('./model/StatusCartao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/CartaoOldApi'), require('./api/ContaApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/TokenApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/Cartao'), require('./model/CartaoResponseOld'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/EmbossadoCartaoResponse'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/ListaCartoes'), require('./model/ListaOrigensComerciais'), require('./model/ListaProdutos'), require('./model/ListaStatusCartoes'), require('./model/OrigemComercial'), require('./model/PageEstagiosCartoes'), require('./model/PageImplOfEstagioCartao'), require('./model/PessoaFisicaResponse'), require('./model/Produto'), require('./model/SaldoLimiteResponse'), require('./model/StatusCartao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/CartaoOldApi'), require('./api/ContaApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/TokenApi'));
   }
-}(function(ApiClient, AuthToken, BodyAccessToken, CancelarCartaoResponse, Cartao, CartaoResponseOld, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, EmbossadoCartaoResponse, EstagioCartao, ExtraInfo, ExtratoResponse, ListaCartoes, ListaEstagiosCartoes, ListaOrigensComerciais, ListaProdutos, ListaStatusCartoes, OrigemComercial, PessoaFisicaResponse, Produto, SaldoLimiteResponse, StatusCartao, BaseApi, CartaoApi, CartaoOldApi, ContaApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartaoApi, TokenApi) {
+}(function(ApiClient, AuthToken, BodyAccessToken, CancelarCartaoResponse, Cartao, CartaoResponseOld, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, EmbossadoCartaoResponse, EstagioCartao, ExtraInfo, ExtratoResponse, ListaCartoes, ListaOrigensComerciais, ListaProdutos, ListaStatusCartoes, OrigemComercial, PageEstagiosCartoes, PageImplOfEstagioCartao, PessoaFisicaResponse, Produto, SaldoLimiteResponse, StatusCartao, BaseApi, CartaoApi, CartaoOldApi, ContaApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartaoApi, TokenApi) {
   'use strict';
 
   /**
@@ -137,11 +137,6 @@
      */
     ListaCartoes: ListaCartoes,
     /**
-     * The ListaEstagiosCartoes model constructor.
-     * @property {module:model/ListaEstagiosCartoes}
-     */
-    ListaEstagiosCartoes: ListaEstagiosCartoes,
-    /**
      * The ListaOrigensComerciais model constructor.
      * @property {module:model/ListaOrigensComerciais}
      */
@@ -161,6 +156,16 @@
      * @property {module:model/OrigemComercial}
      */
     OrigemComercial: OrigemComercial,
+    /**
+     * The PageEstagiosCartoes model constructor.
+     * @property {module:model/PageEstagiosCartoes}
+     */
+    PageEstagiosCartoes: PageEstagiosCartoes,
+    /**
+     * The PageImplOfEstagioCartao model constructor.
+     * @property {module:model/PageImplOfEstagioCartao}
+     */
+    PageImplOfEstagioCartao: PageImplOfEstagioCartao,
     /**
      * The PessoaFisicaResponse model constructor.
      * @property {module:model/PessoaFisicaResponse}

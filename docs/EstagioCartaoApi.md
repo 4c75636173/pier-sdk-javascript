@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarEstagiosCartoesUsingGET"></a>
 # **listarEstagiosCartoesUsingGET**
-> ListaEstagiosCartoes listarEstagiosCartoesUsingGET(opts)
+> PageEstagiosCartoes listarEstagiosCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaEstagiosCartoes**](ListaEstagiosCartoes.md)
+[**PageEstagiosCartoes**](PageEstagiosCartoes.md)
 
 ### Authorization
 
