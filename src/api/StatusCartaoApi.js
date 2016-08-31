@@ -10,20 +10,20 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.StatusCartoApi = factory(root.Pier.ApiClient, root.Pier.StatusCartao, root.Pier.ListaStatusCartoes);
+    root.Pier.StatusCartaoApi = factory(root.Pier.ApiClient, root.Pier.StatusCartao, root.Pier.ListaStatusCartoes);
   }
 }(this, function(ApiClient, StatusCartao, ListaStatusCartoes) {
   'use strict';
 
   /**
-   * StatusCarto service.
-   * @module api/StatusCartoApi
+   * StatusCartao service.
+   * @module api/StatusCartaoApi
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new StatusCartoApi. 
-   * @alias module:api/StatusCartoApi
+   * Constructs a new StatusCartaoApi. 
+   * @alias module:api/StatusCartaoApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use, default to {@link module:ApiClient#instance}
    * if unspecified.
@@ -34,7 +34,7 @@
 
     /**
      * Callback function to receive the result of the consultarStatusCartaoUsingGET operation.
-     * @callback module:api/StatusCartoApi~consultarStatusCartaoUsingGETCallback
+     * @callback module:api/StatusCartaoApi~consultarStatusCartaoUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusCartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,7 +44,7 @@
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
      * @param {Integer} idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusCartoApi~consultarStatusCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusCartaoApi~consultarStatusCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusCartao}
      */
     this.consultarStatusCartaoUsingGET = function(idStatusCartao, callback) {
@@ -80,7 +80,7 @@
 
     /**
      * Callback function to receive the result of the listarStatusCartoesUsingGET operation.
-     * @callback module:api/StatusCartoApi~listarStatusCartoesUsingGETCallback
+     * @callback module:api/StatusCartaoApi~listarStatusCartoesUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ListaStatusCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -106,7 +106,7 @@
      * @param {Integer} opts.flagExcecaoBandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/StatusCartoApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusCartaoApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ListaStatusCartoes}
      */
     this.listarStatusCartoesUsingGET = function(opts, callback) {

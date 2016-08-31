@@ -1,11 +1,11 @@
-# Pier.StatusCartoApi
+# Pier.StatusCartaoApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarStatusCartaoUsingGET**](StatusCartoApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
-[**listarStatusCartoesUsingGET**](StatusCartoApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
+[**consultarStatusCartaoUsingGET**](StatusCartaoApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id_status_cartao} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
+[**listarStatusCartoesUsingGET**](StatusCartaoApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
 
 <a name="consultarStatusCartaoUsingGET"></a>
@@ -27,7 +27,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.StatusCartoApi()
+var apiInstance = new Pier.StatusCartaoApi()
 
 var idStatusCartao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
@@ -80,7 +80,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.StatusCartoApi()
+var apiInstance = new Pier.StatusCartaoApi()
 
 var opts = { 
   'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
