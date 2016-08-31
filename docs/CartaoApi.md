@@ -4,20 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bloquearCartaoUsingPOST**](CartaoApi.md#bloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/bloquear | Bloqueia um cart\u00C3\u00A3o
-[**consultarCartaoUsingGET**](CartaoApi.md#consultarCartaoUsingGET) | **GET** /api/contas/{idConta}/cartoes/{idCartao} | Retorna um cart\u00C3\u00A3o
-[**consultarCartoesUsingGET**](CartaoApi.md#consultarCartoesUsingGET) | **GET** /api/contas/{idConta}/cartoes | Retorna todos os cart\u00C3\u00B5es
-[**desbloquearCartaoUsingPOST**](CartaoApi.md#desbloquearCartaoUsingPOST) | **POST** /api/contas/{idConta}/cartoes/{idCartao}/desbloquear | Desbloqueia um cart\u00C3\u00A3o
-[**embossadoCartaoUsingPUT**](CartaoApi.md#embossadoCartaoUsingPUT) | **PUT** /api/contas/{idConta}/cartoes/{idCartao}/embossado | Embossado
+[**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
-<a name="bloquearCartaoUsingPOST"></a>
-# **bloquearCartaoUsingPOST**
-> CancelarCartaoResponse bloquearCartaoUsingPOST(idConta, idCartao, motivo, opts)
+<a name="consultarUsingGET"></a>
+# **consultarUsingGET**
+> OrigemComercial consultarUsingGET(idCartao)
 
-Bloqueia um cart\u00C3\u00A3o
+Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
-Bloquear um determinado cart\u00C3\u00A3o
+Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```javascript
@@ -32,14 +29,80 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.CartaoApi()
 
-var idConta = 56; // {Integer} ID da Conta
+var idCartao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
-var idCartao = 56; // {Integer} ID do Cart\u00C3\u00A3o que deseja cancelar
 
-var motivo = 56; // {Integer} Motivo do bloqueio
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET(idCartao, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idCartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**OrigemComercial**](OrigemComercial.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET"></a>
+# **listarUsingGET**
+> ListaCartoes listarUsingGET(opts)
+
+Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CartaoApi()
 
 var opts = { 
-  'observacao': "observacao_example" // {String} Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  'idStatusCartao': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+  'idEstagioCartao': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+  'idProduto': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+  'portador': 56, // {Integer} Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando '1', corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+  'numeroCartao': "numeroCartao_example", // {String} Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+  'nomeImpresso': "nomeImpresso_example", // {String} Apresenta o nome impresso no cart\u00C3\u00A3o.
+  'dataGeracao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+  'dataStatusCartao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+  'dataEstagioCartao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+  'dataValidade': "dataValidade_example", // {String} Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+  'dataImpressao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+  'arquivoImpressao': "arquivoImpressao_example", // {String} Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+  'flagImpressaoOrigemComercial': 56, // {Integer} Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+  'flagProvisorio': 56, // {Integer} Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+  'codigoDesbloqueio': "codigoDesbloqueio_example", // {String} Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
 
 var callback = function(error, data, response) {
@@ -49,250 +112,37 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.bloquearCartaoUsingPOST(idConta, idCartao, motivo, opts, callback);
+api.listarUsingGET(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| ID da Conta | 
- **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
- **motivo** | **Integer**| Motivo do bloqueio | 
- **observacao** | **String**| Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
+ **idStatusCartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id). | [optional] 
+ **idEstagioCartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | [optional] 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id) | [optional] 
+ **idProduto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
+ **portador** | **Integer**| Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional. | [optional] 
+ **numeroCartao** | **String**| Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o. | [optional] 
+ **nomeImpresso** | **String**| Apresenta o nome impresso no cart\u00C3\u00A3o. | [optional] 
+ **dataGeracao** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **dataStatusCartao** | **ModelDate**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **dataEstagioCartao** | **ModelDate**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
+ **dataValidade** | **String**| Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver. | [optional] 
+ **dataImpressao** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
+ **arquivoImpressao** | **String**| Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. | [optional] 
+ **flagImpressaoOrigemComercial** | **Integer**| Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. | [optional] 
+ **flagProvisorio** | **Integer**| Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo. | [optional] 
+ **codigoDesbloqueio** | **String**| Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 ### Return type
 
-[**CancelarCartaoResponse**](CancelarCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarCartaoUsingGET"></a>
-# **consultarCartaoUsingGET**
-> ConsultarCartaoResponse consultarCartaoUsingGET(idConta, idCartao, opts)
-
-Retorna um cart\u00C3\u00A3o
-
-Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var idConta = 56; // {Integer} ID da Conta que pertence o cart\u00C3\u00A3o
-
-var idCartao = 56; // {Integer} ID do Cart\u00C3\u00A3o que deseja consultar
-
-var opts = { 
-  'numeroCartao': "numeroCartao_example" // {String} N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarCartaoUsingGET(idConta, idCartao, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| ID da Conta que pertence o cart\u00C3\u00A3o | 
- **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar | 
- **numeroCartao** | **String**| N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional) | [optional] 
-
-### Return type
-
-[**ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarCartoesUsingGET"></a>
-# **consultarCartoesUsingGET**
-> ConsultarCartaoResponse consultarCartoesUsingGET(idConta)
-
-Retorna todos os cart\u00C3\u00B5es
-
-Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var idConta = 56; // {Integer} ID da Conta
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarCartoesUsingGET(idConta, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| ID da Conta | 
-
-### Return type
-
-[**ConsultarCartaoResponse**](ConsultarCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="desbloquearCartaoUsingPOST"></a>
-# **desbloquearCartaoUsingPOST**
-> DesbloquearCartaoResponse desbloquearCartaoUsingPOST(idConta, idCartao, opts)
-
-Desbloqueia um cart\u00C3\u00A3o
-
-Desbloquear cart\u00C3\u00A3o de uma determinada conta
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var idConta = 56; // {Integer} ID da Conta
-
-var idCartao = 56; // {Integer} ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-
-var opts = { 
-  'codigoSegurancao': "codigoSegurancao_example" // {String} C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.desbloquearCartaoUsingPOST(idConta, idCartao, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| ID da Conta | 
- **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite | 
- **codigoSegurancao** | **String**| C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o | [optional] 
-
-### Return type
-
-[**DesbloquearCartaoResponse**](DesbloquearCartaoResponse.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="embossadoCartaoUsingPUT"></a>
-# **embossadoCartaoUsingPUT**
-> EmbossadoCartaoResponse embossadoCartaoUsingPUT(idConta, idCartao)
-
-Embossado
-
-N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var idConta = 56; // {Integer} ID da Conta
-
-var idCartao = 56; // {Integer} ID do Cart\u00C3\u00A3o que deseja cancelar
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.embossadoCartaoUsingPUT(idConta, idCartao, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| ID da Conta | 
- **idCartao** | **Integer**| ID do Cart\u00C3\u00A3o que deseja cancelar | 
-
-### Return type
-
-[**EmbossadoCartaoResponse**](EmbossadoCartaoResponse.md)
+[**ListaCartoes**](ListaCartoes.md)
 
 ### Authorization
 

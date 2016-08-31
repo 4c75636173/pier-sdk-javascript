@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarProdutosUsingGET"></a>
 # **listarProdutosUsingGET**
-> ListaDePessoas listarProdutosUsingGET(opts)
+> ListaProdutos listarProdutosUsingGET(opts)
 
 Lista os Produtos do Emissor
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDePessoas**](ListaDePessoas.md)
+[**ListaProdutos**](ListaProdutos.md)
 
 ### Authorization
 

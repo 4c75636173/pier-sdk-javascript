@@ -10,37 +10,39 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EstgioCarto = factory(root.Pier.ApiClient);
+    root.Pier.Produto = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The EstgioCarto model module.
-   * @module model/EstgioCarto
+   * The Produto model module.
+   * @module model/Produto
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>EstgioCarto</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
-   * @alias module:model/EstgioCarto
+   * Constructs a new <code>Produto</code>.
+   * Produto
+   * @alias module:model/Produto
    * @class
    * @param id
    * @param nome
+   * @param status
    */
-  var exports = function(id, nome) {
+  var exports = function(id, nome, status) {
 
     this['id'] = id;
     this['nome'] = nome;
+    this['status'] = status;
   };
 
   /**
-   * Constructs a <code>EstgioCarto</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Produto</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/EstgioCarto} obj Optional instance to populate.
-   * @return {module:model/EstgioCarto} The populated <code>EstgioCarto</code> instance.
+   * @param {module:model/Produto} obj Optional instance to populate.
+   * @return {module:model/Produto} The populated <code>Produto</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -52,22 +54,31 @@
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      }
     }
     return obj;
   }
 
 
   /**
-   * Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
+
+  /**
+   * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+   * @member {String} status
+   */
+  exports.prototype['status'] = undefined;
 
 
 

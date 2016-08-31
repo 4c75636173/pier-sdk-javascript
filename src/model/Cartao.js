@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Carto = factory(root.Pier.ApiClient);
+    root.Pier.Cartao = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The Carto model module.
-   * @module model/Carto
+   * The Cartao model module.
+   * @module model/Cartao
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>Carto</code>.
+   * Constructs a new <code>Cartao</code>.
    * Objeto Cart\u00C3\u00A3o
-   * @alias module:model/Carto
+   * @alias module:model/Cartao
    * @class
    */
   var exports = function() {
@@ -50,11 +50,11 @@
   };
 
   /**
-   * Constructs a <code>Carto</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Cartao</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Carto} obj Optional instance to populate.
-   * @return {module:model/Carto} The populated <code>Carto</code> instance.
+   * @param {module:model/Cartao} obj Optional instance to populate.
+   * @return {module:model/Cartao} The populated <code>Cartao</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

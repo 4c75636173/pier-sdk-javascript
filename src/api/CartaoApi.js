@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/CancelarCartaoResponse', '../model/ConsultarCartaoResponse', '../model/DesbloquearCartaoResponse', '../model/EmbossadoCartaoResponse'], factory);
+    define(['../ApiClient', '../model/OrigemComercial', '../model/ModelDate', '../model/ListaCartoes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CancelarCartaoResponse'), require('../model/ConsultarCartaoResponse'), require('../model/DesbloquearCartaoResponse'), require('../model/EmbossadoCartaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/ModelDate'), require('../model/ListaCartoes'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.CancelarCartaoResponse, root.Pier.ConsultarCartaoResponse, root.Pier.DesbloquearCartaoResponse, root.Pier.EmbossadoCartaoResponse);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.ModelDate, root.Pier.ListaCartoes);
   }
-}(this, function(ApiClient, CancelarCartaoResponse, ConsultarCartaoResponse, DesbloquearCartaoResponse, EmbossadoCartaoResponse) {
+}(this, function(ApiClient, OrigemComercial, ModelDate, ListaCartoes) {
   'use strict';
 
   /**
@@ -33,51 +33,114 @@
 
 
     /**
-     * Callback function to receive the result of the bloquearCartaoUsingPOST operation.
-     * @callback module:api/CartaoApi~bloquearCartaoUsingPOSTCallback
+     * Callback function to receive the result of the consultarUsingGET operation.
+     * @callback module:api/CartaoApi~consultarUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CancelarCartaoResponse} data The data returned by the service call.
+     * @param {module:model/OrigemComercial} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Bloqueia um cart\u00C3\u00A3o
-     * Bloquear um determinado cart\u00C3\u00A3o
-     * @param {Integer} idConta ID da Conta
-     * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
-     * @param {Integer} motivo Motivo do bloqueio
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
-     * @param {module:api/CartaoApi~bloquearCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/CancelarCartaoResponse}
+     * Apresenta os dados de um determinado Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {module:api/CartaoApi~consultarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/OrigemComercial}
      */
-    this.bloquearCartaoUsingPOST = function(idConta, idCartao, motivo, opts, callback) {
+    this.consultarUsingGET = function(idCartao, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idCartao' is set
+      if (idCartao == undefined || idCartao == null) {
+        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET";
+      }
+
+
+      var pathParams = {
+        'id_cartao': idCartao
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrigemComercial;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id_cartao}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET operation.
+     * @callback module:api/CartaoApi~listarUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ListaCartoes} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+     * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
+     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+     * @param {Integer} opts.portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+     * @param {String} opts.numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+     * @param {String} opts.nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+     * @param {module:model/ModelDate} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param {module:model/ModelDate} opts.dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {module:model/ModelDate} opts.dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {String} opts.dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+     * @param {module:model/ModelDate} opts.dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param {String} opts.arquivoImpressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+     * @param {Integer} opts.flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+     * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+     * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {module:api/CartaoApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ListaCartoes}
+     */
+    this.listarUsingGET = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling bloquearCartaoUsingPOST";
-      }
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling bloquearCartaoUsingPOST";
-      }
-
-      // verify the required parameter 'motivo' is set
-      if (motivo == undefined || motivo == null) {
-        throw "Missing the required parameter 'motivo' when calling bloquearCartaoUsingPOST";
-      }
-
 
       var pathParams = {
-        'idConta': idConta,
-        'idCartao': idCartao
       };
       var queryParams = {
-        'motivo': motivo,
-        'observacao': opts['observacao']
+        'id': opts['id'],
+        'idStatusCartao': opts['idStatusCartao'],
+        'idEstagioCartao': opts['idEstagioCartao'],
+        'idConta': opts['idConta'],
+        'idPessoa': opts['idPessoa'],
+        'idProduto': opts['idProduto'],
+        'portador': opts['portador'],
+        'numeroCartao': opts['numeroCartao'],
+        'nomeImpresso': opts['nomeImpresso'],
+        'dataGeracao': opts['dataGeracao'],
+        'dataStatusCartao': opts['dataStatusCartao'],
+        'dataEstagioCartao': opts['dataEstagioCartao'],
+        'dataValidade': opts['dataValidade'],
+        'dataImpressao': opts['dataImpressao'],
+        'arquivoImpressao': opts['arquivoImpressao'],
+        'flagImpressaoOrigemComercial': opts['flagImpressaoOrigemComercial'],
+        'flagProvisorio': opts['flagProvisorio'],
+        'codigoDesbloqueio': opts['codigoDesbloqueio'],
+        'page': opts['page'],
+        'limit': opts['limit']
       };
       var headerParams = {
       };
@@ -87,223 +150,10 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CancelarCartaoResponse;
+      var returnType = ListaCartoes;
 
       return this.apiClient.callApi(
-        '/api/contas/{idConta}/cartoes/{idCartao}/bloquear', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarCartaoUsingGET operation.
-     * @callback module:api/CartaoApi~consultarCartaoUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ConsultarCartaoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retorna um cart\u00C3\u00A3o
-     * Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-     * @param {Integer} idConta ID da Conta que pertence o cart\u00C3\u00A3o
-     * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.numeroCartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
-     * @param {module:api/CartaoApi~consultarCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ConsultarCartaoResponse}
-     */
-    this.consultarCartaoUsingGET = function(idConta, idCartao, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarCartaoUsingGET";
-      }
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarCartaoUsingGET";
-      }
-
-
-      var pathParams = {
-        'idConta': idConta,
-        'idCartao': idCartao
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-        'numeroCartao': opts['numeroCartao']
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ConsultarCartaoResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{idConta}/cartoes/{idCartao}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarCartoesUsingGET operation.
-     * @callback module:api/CartaoApi~consultarCartoesUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ConsultarCartaoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retorna todos os cart\u00C3\u00B5es
-     * Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-     * @param {Integer} idConta ID da Conta
-     * @param {module:api/CartaoApi~consultarCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ConsultarCartaoResponse}
-     */
-    this.consultarCartoesUsingGET = function(idConta, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarCartoesUsingGET";
-      }
-
-
-      var pathParams = {
-        'idConta': idConta
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ConsultarCartaoResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{idConta}/cartoes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the desbloquearCartaoUsingPOST operation.
-     * @callback module:api/CartaoApi~desbloquearCartaoUsingPOSTCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DesbloquearCartaoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Desbloqueia um cart\u00C3\u00A3o
-     * Desbloquear cart\u00C3\u00A3o de uma determinada conta
-     * @param {Integer} idConta ID da Conta
-     * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.codigoSegurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~desbloquearCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/DesbloquearCartaoResponse}
-     */
-    this.desbloquearCartaoUsingPOST = function(idConta, idCartao, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling desbloquearCartaoUsingPOST";
-      }
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling desbloquearCartaoUsingPOST";
-      }
-
-
-      var pathParams = {
-        'idConta': idConta,
-        'idCartao': idCartao
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-        'codigoSegurancao': opts['codigoSegurancao']
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = DesbloquearCartaoResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{idConta}/cartoes/{idCartao}/desbloquear', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the embossadoCartaoUsingPUT operation.
-     * @callback module:api/CartaoApi~embossadoCartaoUsingPUTCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EmbossadoCartaoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Embossado
-     * N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-     * @param {Integer} idConta ID da Conta
-     * @param {Integer} idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
-     * @param {module:api/CartaoApi~embossadoCartaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/EmbossadoCartaoResponse}
-     */
-    this.embossadoCartaoUsingPUT = function(idConta, idCartao, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling embossadoCartaoUsingPUT";
-      }
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling embossadoCartaoUsingPUT";
-      }
-
-
-      var pathParams = {
-        'idConta': idConta,
-        'idCartao': idCartao
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = EmbossadoCartaoResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{idConta}/cartoes/{idCartao}/embossado', 'PUT',
+        '/api/cartoes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

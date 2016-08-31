@@ -1,4 +1,4 @@
-# Pier.EstgioCarto
+# Pier.EstagioCartao
 
 ## Properties
 Name | Type | Description | Notes

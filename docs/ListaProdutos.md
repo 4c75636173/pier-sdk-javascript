@@ -1,8 +1,8 @@
-# Pier.ListaDeCartes
+# Pier.ListaProdutos
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartoes** | [**[Carto]**](Carto.md) | Lista de cart\u00C3\u00B5es | [optional] 
+**produtos** | [**[Produto]**](Produto.md) | Lista de produtos | [optional] 
 
 

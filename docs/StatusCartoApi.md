@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="consultarStatusCartaoUsingGET"></a>
 # **consultarStatusCartaoUsingGET**
-> StatusCarto consultarStatusCartaoUsingGET(idStatusCartao)
+> StatusCartao consultarStatusCartaoUsingGET(idStatusCartao)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusCarto**](StatusCarto.md)
+[**StatusCartao**](StatusCartao.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarStatusCartoesUsingGET"></a>
 # **listarStatusCartoesUsingGET**
-> ListaDeStatusCartes listarStatusCartoesUsingGET(opts)
+> ListaStatusCartoes listarStatusCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDeStatusCartes**](ListaDeStatusCartes.md)
+[**ListaStatusCartoes**](ListaStatusCartoes.md)
 
 ### Authorization
 

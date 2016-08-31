@@ -1,8 +1,8 @@
-# Pier.ListaDePessoas
+# Pier.ListaCartoes
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pessoas** | [**[Pessoa]**](Pessoa.md) | Lista de pessoas | [optional] 
+**cartoes** | [**[Cartao]**](Cartao.md) | Lista de cart\u00C3\u00B5es | [optional] 
 
 

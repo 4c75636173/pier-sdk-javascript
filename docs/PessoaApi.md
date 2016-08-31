@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarUsingGET1"></a>
 # **listarUsingGET1**
-> ListaDeOrigensComerciais listarUsingGET1(opts)
+> ListaOrigensComerciais listarUsingGET1(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDeOrigensComerciais**](ListaDeOrigensComerciais.md)
+[**ListaOrigensComerciais**](ListaOrigensComerciais.md)
 
 ### Authorization
 

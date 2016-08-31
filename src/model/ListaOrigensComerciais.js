@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ListaDeOrigensComerciais = factory(root.Pier.ApiClient, root.Pier.OrigemComercial);
+    root.Pier.ListaOrigensComerciais = factory(root.Pier.ApiClient, root.Pier.OrigemComercial);
   }
 }(this, function(ApiClient, OrigemComercial) {
   'use strict';
 
   /**
-   * The ListaDeOrigensComerciais model module.
-   * @module model/ListaDeOrigensComerciais
+   * The ListaOrigensComerciais model module.
+   * @module model/ListaOrigensComerciais
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>ListaDeOrigensComerciais</code>.
+   * Constructs a new <code>ListaOrigensComerciais</code>.
    * Lista de Origens Comerciais
-   * @alias module:model/ListaDeOrigensComerciais
+   * @alias module:model/ListaOrigensComerciais
    * @class
    */
   var exports = function() {
@@ -33,11 +33,11 @@
   };
 
   /**
-   * Constructs a <code>ListaDeOrigensComerciais</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ListaOrigensComerciais</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ListaDeOrigensComerciais} obj Optional instance to populate.
-   * @return {module:model/ListaDeOrigensComerciais} The populated <code>ListaDeOrigensComerciais</code> instance.
+   * @param {module:model/ListaOrigensComerciais} obj Optional instance to populate.
+   * @return {module:model/ListaOrigensComerciais} The populated <code>ListaOrigensComerciais</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

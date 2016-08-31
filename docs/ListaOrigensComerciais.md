@@ -1,4 +1,4 @@
-# Pier.ListaDeOrigensComerciais
+# Pier.ListaOrigensComerciais
 
 ## Properties
 Name | Type | Description | Notes

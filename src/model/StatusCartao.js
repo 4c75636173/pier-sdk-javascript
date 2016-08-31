@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.StatusCarto = factory(root.Pier.ApiClient);
+    root.Pier.StatusCartao = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The StatusCarto model module.
-   * @module model/StatusCarto
+   * The StatusCartao model module.
+   * @module model/StatusCartao
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>StatusCarto</code>.
+   * Constructs a new <code>StatusCartao</code>.
    * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
-   * @alias module:model/StatusCarto
+   * @alias module:model/StatusCartao
    * @class
    * @param flagAlteraStatus
    * @param flagCadastroNovaSenha
@@ -59,11 +59,11 @@
   };
 
   /**
-   * Constructs a <code>StatusCarto</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>StatusCartao</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/StatusCarto} obj Optional instance to populate.
-   * @return {module:model/StatusCarto} The populated <code>StatusCarto</code> instance.
+   * @param {module:model/StatusCartao} obj Optional instance to populate.
+   * @return {module:model/StatusCartao} The populated <code>StatusCartao</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

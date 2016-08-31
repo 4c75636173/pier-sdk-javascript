@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarOrigensComerciaisUsingGET"></a>
 # **listarOrigensComerciaisUsingGET**
-> ListaDeOrigensComerciais listarOrigensComerciaisUsingGET(opts)
+> ListaOrigensComerciais listarOrigensComerciaisUsingGET(opts)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaDeOrigensComerciais**](ListaDeOrigensComerciais.md)
+[**ListaOrigensComerciais**](ListaOrigensComerciais.md)
 
 ### Authorization
 

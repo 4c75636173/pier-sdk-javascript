@@ -1,16 +1,16 @@
-# Pier.EstgioCartoApi
+# Pier.EstagioCartaoApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarEstagioCartaoUsingGET**](EstgioCartoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
-[**listarEstagiosCartoesUsingGET**](EstgioCartoApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
+[**consultarEstagioCartaoUsingGET**](EstagioCartaoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
+[**listarEstagiosCartoesUsingGET**](EstagioCartaoApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
 
 <a name="consultarEstagioCartaoUsingGET"></a>
 # **consultarEstagioCartaoUsingGET**
-> EstgioCarto consultarEstagioCartaoUsingGET(idEstagioCartao)
+> EstagioCartao consultarEstagioCartaoUsingGET(idEstagioCartao)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
 
@@ -27,7 +27,7 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.EstgioCartoApi()
+var apiInstance = new Pier.EstagioCartaoApi()
 
 var idEstagioCartao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EstgioCarto**](EstgioCarto.md)
+[**EstagioCartao**](EstagioCartao.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarEstagiosCartoesUsingGET"></a>
 # **listarEstagiosCartoesUsingGET**
-> ListaDeEstgiosCartes listarEstagiosCartoesUsingGET(id, nome, opts)
+> ListaEstagiosCartoes listarEstagiosCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
 
@@ -80,13 +80,11 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.EstgioCartoApi()
-
-var id = 789; // {Integer} Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-
-var nome = "nome_example"; // {String} Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+var apiInstance = new Pier.EstagioCartaoApi()
 
 var opts = { 
+  'id': 789, // {Integer} Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+  'nome': "nome_example", // {String} Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
@@ -98,21 +96,21 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarEstagiosCartoesUsingGET(id, nome, opts, callback);
+api.listarEstagiosCartoesUsingGET(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
- **nome** | **String**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | 
+ **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
+ **nome** | **String**| Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 ### Return type
 
-[**ListaDeEstgiosCartes**](ListaDeEstgiosCartes.md)
+[**ListaEstagiosCartoes**](ListaEstagiosCartoes.md)
 
 ### Authorization
 

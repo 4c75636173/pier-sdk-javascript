@@ -1,4 +1,4 @@
-# Pier.StatusCarto
+# Pier.StatusCartao
 
 ## Properties
 Name | Type | Description | Notes

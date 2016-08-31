@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/CartaoResponseOld', './model/Carto', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/EmbossadoCartaoResponse', './model/EstgioCarto', './model/ExtraInfo', './model/ExtratoResponse', './model/ListaDeCartes', './model/ListaDeEstgiosCartes', './model/ListaDeOrigensComerciais', './model/ListaDePessoas', './model/ListaDeStatusCartes', './model/OrigemComercial', './model/Pessoa', './model/PessoaFisicaResponse', './model/SaldoLimiteResponse', './model/StatusCarto', './api/BaseApi', './api/CartaoApi', './api/CartoApi', './api/ContaApi', './api/EstgioCartoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartoApi', './api/TokenApi'], factory);
+    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/CancelarCartaoResponse', './model/Cartao', './model/CartaoResponseOld', './model/ConsultarCartaoResponse', './model/ConsultarContaCartaoResponse', './model/ConsultarContaResponse', './model/ConsultarExtratoContaResponse', './model/ConsultarSaldoLimitesResponse', './model/ContaCartaoResponse', './model/ContaResponse', './model/DesbloquearCartaoResponse', './model/EmbossadoCartaoResponse', './model/EstagioCartao', './model/ExtraInfo', './model/ExtratoResponse', './model/ListaCartoes', './model/ListaEstagiosCartoes', './model/ListaOrigensComerciais', './model/ListaProdutos', './model/ListaStatusCartoes', './model/OrigemComercial', './model/PessoaFisicaResponse', './model/Produto', './model/SaldoLimiteResponse', './model/StatusCartao', './api/BaseApi', './api/CartaoApi', './api/CartaoOldApi', './api/ContaApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartoApi', './api/TokenApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/CartaoResponseOld'), require('./model/Carto'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/EmbossadoCartaoResponse'), require('./model/EstgioCarto'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/ListaDeCartes'), require('./model/ListaDeEstgiosCartes'), require('./model/ListaDeOrigensComerciais'), require('./model/ListaDePessoas'), require('./model/ListaDeStatusCartes'), require('./model/OrigemComercial'), require('./model/Pessoa'), require('./model/PessoaFisicaResponse'), require('./model/SaldoLimiteResponse'), require('./model/StatusCarto'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/CartoApi'), require('./api/ContaApi'), require('./api/EstgioCartoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartoApi'), require('./api/TokenApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/CancelarCartaoResponse'), require('./model/Cartao'), require('./model/CartaoResponseOld'), require('./model/ConsultarCartaoResponse'), require('./model/ConsultarContaCartaoResponse'), require('./model/ConsultarContaResponse'), require('./model/ConsultarExtratoContaResponse'), require('./model/ConsultarSaldoLimitesResponse'), require('./model/ContaCartaoResponse'), require('./model/ContaResponse'), require('./model/DesbloquearCartaoResponse'), require('./model/EmbossadoCartaoResponse'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/ExtratoResponse'), require('./model/ListaCartoes'), require('./model/ListaEstagiosCartoes'), require('./model/ListaOrigensComerciais'), require('./model/ListaProdutos'), require('./model/ListaStatusCartoes'), require('./model/OrigemComercial'), require('./model/PessoaFisicaResponse'), require('./model/Produto'), require('./model/SaldoLimiteResponse'), require('./model/StatusCartao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/CartaoOldApi'), require('./api/ContaApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartoApi'), require('./api/TokenApi'));
   }
-}(function(ApiClient, AuthToken, BodyAccessToken, CancelarCartaoResponse, CartaoResponseOld, Carto, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, EmbossadoCartaoResponse, EstgioCarto, ExtraInfo, ExtratoResponse, ListaDeCartes, ListaDeEstgiosCartes, ListaDeOrigensComerciais, ListaDePessoas, ListaDeStatusCartes, OrigemComercial, Pessoa, PessoaFisicaResponse, SaldoLimiteResponse, StatusCarto, BaseApi, CartaoApi, CartoApi, ContaApi, EstgioCartoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartoApi, TokenApi) {
+}(function(ApiClient, AuthToken, BodyAccessToken, CancelarCartaoResponse, Cartao, CartaoResponseOld, ConsultarCartaoResponse, ConsultarContaCartaoResponse, ConsultarContaResponse, ConsultarExtratoContaResponse, ConsultarSaldoLimitesResponse, ContaCartaoResponse, ContaResponse, DesbloquearCartaoResponse, EmbossadoCartaoResponse, EstagioCartao, ExtraInfo, ExtratoResponse, ListaCartoes, ListaEstagiosCartoes, ListaOrigensComerciais, ListaProdutos, ListaStatusCartoes, OrigemComercial, PessoaFisicaResponse, Produto, SaldoLimiteResponse, StatusCartao, BaseApi, CartaoApi, CartaoOldApi, ContaApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartoApi, TokenApi) {
   'use strict';
 
   /**
@@ -62,15 +62,15 @@
      */
     CancelarCartaoResponse: CancelarCartaoResponse,
     /**
+     * The Cartao model constructor.
+     * @property {module:model/Cartao}
+     */
+    Cartao: Cartao,
+    /**
      * The CartaoResponseOld model constructor.
      * @property {module:model/CartaoResponseOld}
      */
     CartaoResponseOld: CartaoResponseOld,
-    /**
-     * The Carto model constructor.
-     * @property {module:model/Carto}
-     */
-    Carto: Carto,
     /**
      * The ConsultarCartaoResponse model constructor.
      * @property {module:model/ConsultarCartaoResponse}
@@ -117,10 +117,10 @@
      */
     EmbossadoCartaoResponse: EmbossadoCartaoResponse,
     /**
-     * The EstgioCarto model constructor.
-     * @property {module:model/EstgioCarto}
+     * The EstagioCartao model constructor.
+     * @property {module:model/EstagioCartao}
      */
-    EstgioCarto: EstgioCarto,
+    EstagioCartao: EstagioCartao,
     /**
      * The ExtraInfo model constructor.
      * @property {module:model/ExtraInfo}
@@ -132,55 +132,55 @@
      */
     ExtratoResponse: ExtratoResponse,
     /**
-     * The ListaDeCartes model constructor.
-     * @property {module:model/ListaDeCartes}
+     * The ListaCartoes model constructor.
+     * @property {module:model/ListaCartoes}
      */
-    ListaDeCartes: ListaDeCartes,
+    ListaCartoes: ListaCartoes,
     /**
-     * The ListaDeEstgiosCartes model constructor.
-     * @property {module:model/ListaDeEstgiosCartes}
+     * The ListaEstagiosCartoes model constructor.
+     * @property {module:model/ListaEstagiosCartoes}
      */
-    ListaDeEstgiosCartes: ListaDeEstgiosCartes,
+    ListaEstagiosCartoes: ListaEstagiosCartoes,
     /**
-     * The ListaDeOrigensComerciais model constructor.
-     * @property {module:model/ListaDeOrigensComerciais}
+     * The ListaOrigensComerciais model constructor.
+     * @property {module:model/ListaOrigensComerciais}
      */
-    ListaDeOrigensComerciais: ListaDeOrigensComerciais,
+    ListaOrigensComerciais: ListaOrigensComerciais,
     /**
-     * The ListaDePessoas model constructor.
-     * @property {module:model/ListaDePessoas}
+     * The ListaProdutos model constructor.
+     * @property {module:model/ListaProdutos}
      */
-    ListaDePessoas: ListaDePessoas,
+    ListaProdutos: ListaProdutos,
     /**
-     * The ListaDeStatusCartes model constructor.
-     * @property {module:model/ListaDeStatusCartes}
+     * The ListaStatusCartoes model constructor.
+     * @property {module:model/ListaStatusCartoes}
      */
-    ListaDeStatusCartes: ListaDeStatusCartes,
+    ListaStatusCartoes: ListaStatusCartoes,
     /**
      * The OrigemComercial model constructor.
      * @property {module:model/OrigemComercial}
      */
     OrigemComercial: OrigemComercial,
     /**
-     * The Pessoa model constructor.
-     * @property {module:model/Pessoa}
-     */
-    Pessoa: Pessoa,
-    /**
      * The PessoaFisicaResponse model constructor.
      * @property {module:model/PessoaFisicaResponse}
      */
     PessoaFisicaResponse: PessoaFisicaResponse,
+    /**
+     * The Produto model constructor.
+     * @property {module:model/Produto}
+     */
+    Produto: Produto,
     /**
      * The SaldoLimiteResponse model constructor.
      * @property {module:model/SaldoLimiteResponse}
      */
     SaldoLimiteResponse: SaldoLimiteResponse,
     /**
-     * The StatusCarto model constructor.
-     * @property {module:model/StatusCarto}
+     * The StatusCartao model constructor.
+     * @property {module:model/StatusCartao}
      */
-    StatusCarto: StatusCarto,
+    StatusCartao: StatusCartao,
     /**
      * The BaseApi service constructor.
      * @property {module:api/BaseApi}
@@ -192,20 +192,20 @@
      */
     CartaoApi: CartaoApi,
     /**
-     * The CartoApi service constructor.
-     * @property {module:api/CartoApi}
+     * The CartaoOldApi service constructor.
+     * @property {module:api/CartaoOldApi}
      */
-    CartoApi: CartoApi,
+    CartaoOldApi: CartaoOldApi,
     /**
      * The ContaApi service constructor.
      * @property {module:api/ContaApi}
      */
     ContaApi: ContaApi,
     /**
-     * The EstgioCartoApi service constructor.
-     * @property {module:api/EstgioCartoApi}
+     * The EstagioCartaoApi service constructor.
+     * @property {module:api/EstagioCartaoApi}
      */
-    EstgioCartoApi: EstgioCartoApi,
+    EstagioCartaoApi: EstagioCartaoApi,
     /**
      * The OrigemComercialApi service constructor.
      * @property {module:api/OrigemComercialApi}
