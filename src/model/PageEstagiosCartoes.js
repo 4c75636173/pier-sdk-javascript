@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './PageImplOfEstagioCartao'], factory);
+    define(['../ApiClient', './PageApiOfEstagioCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PageImplOfEstagioCartao'));
+    module.exports = factory(require('../ApiClient'), require('./PageApiOfEstagioCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageEstagiosCartoes = factory(root.Pier.ApiClient, root.Pier.PageImplOfEstagioCartao);
+    root.Pier.PageEstagiosCartoes = factory(root.Pier.ApiClient, root.Pier.PageApiOfEstagioCartao);
   }
-}(this, function(ApiClient, PageImplOfEstagioCartao) {
+}(this, function(ApiClient, PageApiOfEstagioCartao) {
   'use strict';
 
   /**
@@ -44,7 +44,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('estagioCartoes')) {
-        obj['estagioCartoes'] = PageImplOfEstagioCartao.constructFromObject(data['estagioCartoes']);
+        obj['estagioCartoes'] = PageApiOfEstagioCartao.constructFromObject(data['estagioCartoes']);
       }
     }
     return obj;
@@ -52,7 +52,7 @@
 
 
   /**
-   * @member {module:model/PageImplOfEstagioCartao} estagioCartoes
+   * @member {module:model/PageApiOfEstagioCartao} estagioCartoes
    */
   exports.prototype['estagioCartoes'] = undefined;
 
