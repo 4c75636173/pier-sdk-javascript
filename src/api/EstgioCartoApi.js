@@ -89,24 +89,34 @@
     /**
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
      * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+     * @param {Integer} id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param {String} nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-     * @param {String} opts.nome Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/EstgioCartoApi~listarEstagiosCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ListaDeEstgiosCartes}
      */
-    this.listarEstagiosCartoesUsingGET = function(opts, callback) {
+    this.listarEstagiosCartoesUsingGET = function(id, nome, opts, callback) {
       opts = opts || {};
       var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling listarEstagiosCartoesUsingGET";
+      }
+
+      // verify the required parameter 'nome' is set
+      if (nome == undefined || nome == null) {
+        throw "Missing the required parameter 'nome' when calling listarEstagiosCartoesUsingGET";
+      }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'id_estagio_cartao': opts['idEstagioCartao'],
-        'nome': opts['nome'],
+        'id': id,
+        'nome': nome,
         'page': opts['page'],
         'limit': opts['limit']
       };

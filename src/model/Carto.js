@@ -1,73 +1,60 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './LocalDateTime'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LocalDateTime'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoResponse = factory(root.Pier.ApiClient, root.Pier.LocalDateTime);
+    root.Pier.Carto = factory(root.Pier.ApiClient);
   }
-}(this, function(ApiClient, LocalDateTime) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The CartaoResponse model module.
-   * @module model/CartaoResponse
+   * The Carto model module.
+   * @module model/Carto
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>CartaoResponse</code>.
-   * @alias module:model/CartaoResponse
+   * Constructs a new <code>Carto</code>.
+   * Objeto Cart\u00C3\u00A3o
+   * @alias module:model/Carto
    * @class
-   * @param arquivoImpressao
-   * @param codigoDesbloqueio
-   * @param dataEstagioCartao
-   * @param dataGeracao
-   * @param dataImpressao
-   * @param dataStatusCartao
-   * @param dataValidade
-   * @param flagImpressaoOrigemComercial
-   * @param flagProvisorio
-   * @param id
-   * @param idConta
-   * @param idEstagioCartao
-   * @param idPessoa
-   * @param idStatusCartao
-   * @param numeroCartao
-   * @param portador
    */
-  var exports = function(arquivoImpressao, codigoDesbloqueio, dataEstagioCartao, dataGeracao, dataImpressao, dataStatusCartao, dataValidade, flagImpressaoOrigemComercial, flagProvisorio, id, idConta, idEstagioCartao, idPessoa, idStatusCartao, numeroCartao, portador) {
+  var exports = function() {
 
-    this['arquivoImpressao'] = arquivoImpressao;
-    this['codigoDesbloqueio'] = codigoDesbloqueio;
-    this['dataEstagioCartao'] = dataEstagioCartao;
-    this['dataGeracao'] = dataGeracao;
-    this['dataImpressao'] = dataImpressao;
-    this['dataStatusCartao'] = dataStatusCartao;
-    this['dataValidade'] = dataValidade;
-    this['flagImpressaoOrigemComercial'] = flagImpressaoOrigemComercial;
-    this['flagProvisorio'] = flagProvisorio;
-    this['id'] = id;
-    this['idConta'] = idConta;
-    this['idEstagioCartao'] = idEstagioCartao;
-    this['idPessoa'] = idPessoa;
-    this['idStatusCartao'] = idStatusCartao;
-    this['numeroCartao'] = numeroCartao;
-    this['portador'] = portador;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
   /**
-   * Constructs a <code>CartaoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Carto</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CartaoResponse} obj Optional instance to populate.
-   * @return {module:model/CartaoResponse} The populated <code>CartaoResponse</code> instance.
+   * @param {module:model/Carto} obj Optional instance to populate.
+   * @return {module:model/Carto} The populated <code>Carto</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -80,19 +67,19 @@
         obj['codigoDesbloqueio'] = ApiClient.convertToType(data['codigoDesbloqueio'], 'String');
       }
       if (data.hasOwnProperty('dataEstagioCartao')) {
-        obj['dataEstagioCartao'] = LocalDateTime.constructFromObject(data['dataEstagioCartao']);
+        obj['dataEstagioCartao'] = ApiClient.convertToType(data['dataEstagioCartao'], 'Date');
       }
       if (data.hasOwnProperty('dataGeracao')) {
-        obj['dataGeracao'] = LocalDateTime.constructFromObject(data['dataGeracao']);
+        obj['dataGeracao'] = ApiClient.convertToType(data['dataGeracao'], 'Date');
       }
       if (data.hasOwnProperty('dataImpressao')) {
-        obj['dataImpressao'] = LocalDateTime.constructFromObject(data['dataImpressao']);
+        obj['dataImpressao'] = ApiClient.convertToType(data['dataImpressao'], 'Date');
       }
       if (data.hasOwnProperty('dataStatusCartao')) {
-        obj['dataStatusCartao'] = LocalDateTime.constructFromObject(data['dataStatusCartao']);
+        obj['dataStatusCartao'] = ApiClient.convertToType(data['dataStatusCartao'], 'Date');
       }
       if (data.hasOwnProperty('dataValidade')) {
-        obj['dataValidade'] = LocalDateTime.constructFromObject(data['dataValidade']);
+        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
       }
       if (data.hasOwnProperty('flagImpressaoOrigemComercial')) {
         obj['flagImpressaoOrigemComercial'] = ApiClient.convertToType(data['flagImpressaoOrigemComercial'], 'Integer');
@@ -112,8 +99,14 @@
       if (data.hasOwnProperty('idPessoa')) {
         obj['idPessoa'] = ApiClient.convertToType(data['idPessoa'], 'Integer');
       }
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      }
       if (data.hasOwnProperty('idStatusCartao')) {
         obj['idStatusCartao'] = ApiClient.convertToType(data['idStatusCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('nomeImpresso')) {
+        obj['nomeImpresso'] = ApiClient.convertToType(data['nomeImpresso'], 'String');
       }
       if (data.hasOwnProperty('numeroCartao')) {
         obj['numeroCartao'] = ApiClient.convertToType(data['numeroCartao'], 'String');
@@ -140,31 +133,31 @@
 
   /**
    * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-   * @member {module:model/LocalDateTime} dataEstagioCartao
+   * @member {Date} dataEstagioCartao
    */
   exports.prototype['dataEstagioCartao'] = undefined;
 
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   * @member {module:model/LocalDateTime} dataGeracao
+   * @member {Date} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-   * @member {module:model/LocalDateTime} dataImpressao
+   * @member {Date} dataImpressao
    */
   exports.prototype['dataImpressao'] = undefined;
 
   /**
    * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-   * @member {module:model/LocalDateTime} dataStatusCartao
+   * @member {Date} dataStatusCartao
    */
   exports.prototype['dataStatusCartao'] = undefined;
 
   /**
    * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
-   * @member {module:model/LocalDateTime} dataValidade
+   * @member {Date} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
@@ -205,10 +198,22 @@
   exports.prototype['idPessoa'] = undefined;
 
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * @member {Integer} idProduto
+   */
+  exports.prototype['idProduto'] = undefined;
+
+  /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    * @member {Integer} idStatusCartao
    */
   exports.prototype['idStatusCartao'] = undefined;
+
+  /**
+   * Apresenta o nome impresso no cart\u00C3\u00A3o.
+   * @member {String} nomeImpresso
+   */
+  exports.prototype['nomeImpresso'] = undefined;
 
   /**
    * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.

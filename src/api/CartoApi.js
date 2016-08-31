@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/OrigemComercial', '../model/ListaDeCartes'], factory);
+    define(['../ApiClient', '../model/OrigemComercial', '../model/ModelDate', '../model/ListaDeCartes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/ListaDeCartes'));
+    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/ModelDate'), require('../model/ListaDeCartes'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartoApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.ListaDeCartes);
+    root.Pier.CartoApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.ModelDate, root.Pier.ListaDeCartes);
   }
-}(this, function(ApiClient, OrigemComercial, ListaDeCartes) {
+}(this, function(ApiClient, OrigemComercial, ModelDate, ListaDeCartes) {
   'use strict';
 
   /**
@@ -90,18 +90,20 @@
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
-     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id).
-     * @param {Integer} opts.portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+     * @param {Integer} opts.portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
      * @param {String} opts.numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
-     * @param {String} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-     * @param {String} opts.dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-     * @param {String} opts.dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-     * @param {String} opts.dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato AAAA-MM, quando houver.
-     * @param {String} opts.dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param {String} opts.nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+     * @param {module:model/ModelDate} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param {module:model/ModelDate} opts.dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {module:model/ModelDate} opts.dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {String} opts.dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+     * @param {module:model/ModelDate} opts.dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
      * @param {String} opts.arquivoImpressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
      * @param {Integer} opts.flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
@@ -119,22 +121,24 @@
       var pathParams = {
       };
       var queryParams = {
-        'id_cartao': opts['idCartao'],
-        'id_status_cartao': opts['idStatusCartao'],
-        'id_estagio_cartao': opts['idEstagioCartao'],
-        'id_conta': opts['idConta'],
-        'id_pessoa': opts['idPessoa'],
+        'id': opts['id'],
+        'idStatusCartao': opts['idStatusCartao'],
+        'idEstagioCartao': opts['idEstagioCartao'],
+        'idConta': opts['idConta'],
+        'idPessoa': opts['idPessoa'],
+        'idProduto': opts['idProduto'],
         'portador': opts['portador'],
-        'numero_cartao': opts['numeroCartao'],
-        'data_geracao': opts['dataGeracao'],
-        'data_status_cartao': opts['dataStatusCartao'],
-        'data_estagio_cartao': opts['dataEstagioCartao'],
-        'data_validade': opts['dataValidade'],
-        'data_impressao': opts['dataImpressao'],
-        'arquivo_impressao': opts['arquivoImpressao'],
-        'flag_impressao_origem_comercial': opts['flagImpressaoOrigemComercial'],
-        'flag_provisorio': opts['flagProvisorio'],
-        'codigo_desbloqueio': opts['codigoDesbloqueio'],
+        'numeroCartao': opts['numeroCartao'],
+        'nomeImpresso': opts['nomeImpresso'],
+        'dataGeracao': opts['dataGeracao'],
+        'dataStatusCartao': opts['dataStatusCartao'],
+        'dataEstagioCartao': opts['dataEstagioCartao'],
+        'dataValidade': opts['dataValidade'],
+        'dataImpressao': opts['dataImpressao'],
+        'arquivoImpressao': opts['arquivoImpressao'],
+        'flagImpressaoOrigemComercial': opts['flagImpressaoOrigemComercial'],
+        'flagProvisorio': opts['flagProvisorio'],
+        'codigoDesbloqueio': opts['codigoDesbloqueio'],
         'page': opts['page'],
         'limit': opts['limit']
       };

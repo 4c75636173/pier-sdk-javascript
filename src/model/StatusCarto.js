@@ -28,39 +28,30 @@
    * @class
    * @param flagAlteraStatus
    * @param flagCadastroNovaSenha
-   * @param flagCadastroSenha
-   * @param flagCancelaCartao
    * @param flagCancelaConta
    * @param flagCobraTarifa
-   * @param flagDesbloqueio
    * @param flagDestinoTransferencia
    * @param flagEmiteProvisorio
    * @param flagExcecaoBandeira
    * @param flagOrigemTransferencia
    * @param flagReemiteCartao
-   * @param flagReversaoCancelamento
-   * @param flagReversaoDesbloqueio
    * @param id
    * @param idStatusDestinoConta
    * @param idStatusDestinoDesbloqueio
    * @param nome
    */
-  var exports = function(flagAlteraStatus, flagCadastroNovaSenha, flagCadastroSenha, flagCancelaCartao, flagCancelaConta, flagCobraTarifa, flagDesbloqueio, flagDestinoTransferencia, flagEmiteProvisorio, flagExcecaoBandeira, flagOrigemTransferencia, flagReemiteCartao, flagReversaoCancelamento, flagReversaoDesbloqueio, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome) {
+  var exports = function(flagAlteraStatus, flagCadastroNovaSenha, flagCancelaConta, flagCobraTarifa, flagDestinoTransferencia, flagEmiteProvisorio, flagExcecaoBandeira, flagOrigemTransferencia, flagReemiteCartao, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome) {
 
     this['flagAlteraStatus'] = flagAlteraStatus;
     this['flagCadastroNovaSenha'] = flagCadastroNovaSenha;
-    this['flagCadastroSenha'] = flagCadastroSenha;
-    this['flagCancelaCartao'] = flagCancelaCartao;
     this['flagCancelaConta'] = flagCancelaConta;
+
     this['flagCobraTarifa'] = flagCobraTarifa;
-    this['flagDesbloqueio'] = flagDesbloqueio;
     this['flagDestinoTransferencia'] = flagDestinoTransferencia;
     this['flagEmiteProvisorio'] = flagEmiteProvisorio;
     this['flagExcecaoBandeira'] = flagExcecaoBandeira;
     this['flagOrigemTransferencia'] = flagOrigemTransferencia;
     this['flagReemiteCartao'] = flagReemiteCartao;
-    this['flagReversaoCancelamento'] = flagReversaoCancelamento;
-    this['flagReversaoDesbloqueio'] = flagReversaoDesbloqueio;
     this['id'] = id;
     this['idStatusDestinoConta'] = idStatusDestinoConta;
     this['idStatusDestinoDesbloqueio'] = idStatusDestinoDesbloqueio;
@@ -79,46 +70,34 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('flagAlteraStatus')) {
-        obj['flagAlteraStatus'] = ApiClient.convertToType(data['flagAlteraStatus'], 'String');
+        obj['flagAlteraStatus'] = ApiClient.convertToType(data['flagAlteraStatus'], 'Integer');
       }
       if (data.hasOwnProperty('flagCadastroNovaSenha')) {
-        obj['flagCadastroNovaSenha'] = ApiClient.convertToType(data['flagCadastroNovaSenha'], 'String');
-      }
-      if (data.hasOwnProperty('flagCadastroSenha')) {
-        obj['flagCadastroSenha'] = ApiClient.convertToType(data['flagCadastroSenha'], 'String');
-      }
-      if (data.hasOwnProperty('flagCancelaCartao')) {
-        obj['flagCancelaCartao'] = ApiClient.convertToType(data['flagCancelaCartao'], 'String');
+        obj['flagCadastroNovaSenha'] = ApiClient.convertToType(data['flagCadastroNovaSenha'], 'Integer');
       }
       if (data.hasOwnProperty('flagCancelaConta')) {
-        obj['flagCancelaConta'] = ApiClient.convertToType(data['flagCancelaConta'], 'String');
+        obj['flagCancelaConta'] = ApiClient.convertToType(data['flagCancelaConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagCancelaNoDesbloqueio')) {
+        obj['flagCancelaNoDesbloqueio'] = ApiClient.convertToType(data['flagCancelaNoDesbloqueio'], 'Integer');
       }
       if (data.hasOwnProperty('flagCobraTarifa')) {
-        obj['flagCobraTarifa'] = ApiClient.convertToType(data['flagCobraTarifa'], 'String');
-      }
-      if (data.hasOwnProperty('flagDesbloqueio')) {
-        obj['flagDesbloqueio'] = ApiClient.convertToType(data['flagDesbloqueio'], 'String');
+        obj['flagCobraTarifa'] = ApiClient.convertToType(data['flagCobraTarifa'], 'Integer');
       }
       if (data.hasOwnProperty('flagDestinoTransferencia')) {
-        obj['flagDestinoTransferencia'] = ApiClient.convertToType(data['flagDestinoTransferencia'], 'String');
+        obj['flagDestinoTransferencia'] = ApiClient.convertToType(data['flagDestinoTransferencia'], 'Integer');
       }
       if (data.hasOwnProperty('flagEmiteProvisorio')) {
-        obj['flagEmiteProvisorio'] = ApiClient.convertToType(data['flagEmiteProvisorio'], 'String');
+        obj['flagEmiteProvisorio'] = ApiClient.convertToType(data['flagEmiteProvisorio'], 'Integer');
       }
       if (data.hasOwnProperty('flagExcecaoBandeira')) {
-        obj['flagExcecaoBandeira'] = ApiClient.convertToType(data['flagExcecaoBandeira'], 'String');
+        obj['flagExcecaoBandeira'] = ApiClient.convertToType(data['flagExcecaoBandeira'], 'Integer');
       }
       if (data.hasOwnProperty('flagOrigemTransferencia')) {
-        obj['flagOrigemTransferencia'] = ApiClient.convertToType(data['flagOrigemTransferencia'], 'String');
+        obj['flagOrigemTransferencia'] = ApiClient.convertToType(data['flagOrigemTransferencia'], 'Integer');
       }
       if (data.hasOwnProperty('flagReemiteCartao')) {
-        obj['flagReemiteCartao'] = ApiClient.convertToType(data['flagReemiteCartao'], 'String');
-      }
-      if (data.hasOwnProperty('flagReversaoCancelamento')) {
-        obj['flagReversaoCancelamento'] = ApiClient.convertToType(data['flagReversaoCancelamento'], 'String');
-      }
-      if (data.hasOwnProperty('flagReversaoDesbloqueio')) {
-        obj['flagReversaoDesbloqueio'] = ApiClient.convertToType(data['flagReversaoDesbloqueio'], 'String');
+        obj['flagReemiteCartao'] = ApiClient.convertToType(data['flagReemiteCartao'], 'Integer');
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
@@ -138,88 +117,64 @@
 
 
   /**
-   * Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.
-   * @member {String} flagAlteraStatus
+   * Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
+   * @member {Integer} flagAlteraStatus
    */
   exports.prototype['flagAlteraStatus'] = undefined;
 
   /**
-   * Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.
-   * @member {String} flagCadastroNovaSenha
+   * Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.
+   * @member {Integer} flagCadastroNovaSenha
    */
   exports.prototype['flagCadastroNovaSenha'] = undefined;
 
   /**
-   * Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.
-   * @member {String} flagCadastroSenha
-   */
-  exports.prototype['flagCadastroSenha'] = undefined;
-
-  /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.
-   * @member {String} flagCancelaCartao
-   */
-  exports.prototype['flagCancelaCartao'] = undefined;
-
-  /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.
-   * @member {String} flagCancelaConta
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.
+   * @member {Integer} flagCancelaConta
    */
   exports.prototype['flagCancelaConta'] = undefined;
 
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.
-   * @member {String} flagCobraTarifa
+   * Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
+   * @member {Integer} flagCancelaNoDesbloqueio
+   */
+  exports.prototype['flagCancelaNoDesbloqueio'] = undefined;
+
+  /**
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+   * @member {Integer} flagCobraTarifa
    */
   exports.prototype['flagCobraTarifa'] = undefined;
 
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.
-   * @member {String} flagDesbloqueio
-   */
-  exports.prototype['flagDesbloqueio'] = undefined;
-
-  /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
-   * @member {String} flagDestinoTransferencia
+   * @member {Integer} flagDestinoTransferencia
    */
   exports.prototype['flagDestinoTransferencia'] = undefined;
 
   /**
-   * Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. 
-   * @member {String} flagEmiteProvisorio
+   * Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.
+   * @member {Integer} flagEmiteProvisorio
    */
   exports.prototype['flagEmiteProvisorio'] = undefined;
 
   /**
    * Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
-   * @member {String} flagExcecaoBandeira
+   * @member {Integer} flagExcecaoBandeira
    */
   exports.prototype['flagExcecaoBandeira'] = undefined;
 
   /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
-   * @member {String} flagOrigemTransferencia
+   * @member {Integer} flagOrigemTransferencia
    */
   exports.prototype['flagOrigemTransferencia'] = undefined;
 
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.
-   * @member {String} flagReemiteCartao
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.
+   * @member {Integer} flagReemiteCartao
    */
   exports.prototype['flagReemiteCartao'] = undefined;
-
-  /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.
-   * @member {String} flagReversaoCancelamento
-   */
-  exports.prototype['flagReversaoCancelamento'] = undefined;
-
-  /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.
-   * @member {String} flagReversaoDesbloqueio
-   */
-  exports.prototype['flagReversaoDesbloqueio'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
@@ -228,13 +183,13 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.
+   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
    * @member {Integer} idStatusDestinoConta
    */
   exports.prototype['idStatusDestinoConta'] = undefined;
 
   /**
-   * Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.
+   * Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
    * @member {Integer} idStatusDestinoDesbloqueio
    */
   exports.prototype['idStatusDestinoDesbloqueio'] = undefined;
