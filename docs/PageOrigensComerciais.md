@@ -1,9 +1,9 @@
-# Pier.ListaProdutos
+# Pier.PageOrigensComerciais
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[Produto]**](Produto.md) |  | [optional] 
+**content** | [**[OrigemComercial]**](OrigemComercial.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

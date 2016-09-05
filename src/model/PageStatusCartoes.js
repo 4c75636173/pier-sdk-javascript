@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Produto'], factory);
+    define(['../ApiClient', './StatusCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Produto'));
+    module.exports = factory(require('../ApiClient'), require('./StatusCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ListaProdutos = factory(root.Pier.ApiClient, root.Pier.Produto);
+    root.Pier.PageStatusCartoes = factory(root.Pier.ApiClient, root.Pier.StatusCartao);
   }
-}(this, function(ApiClient, Produto) {
+}(this, function(ApiClient, StatusCartao) {
   'use strict';
 
   /**
-   * The ListaProdutos model module.
-   * @module model/ListaProdutos
+   * The PageStatusCartoes model module.
+   * @module model/PageStatusCartoes
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>ListaProdutos</code>.
-   * Lista de Produtos
-   * @alias module:model/ListaProdutos
+   * Constructs a new <code>PageStatusCartoes</code>.
+   * Lista de Status Cart\u00C3\u00B5es
+   * @alias module:model/PageStatusCartoes
    * @class
    */
   var exports = function() {
@@ -46,18 +46,18 @@
   };
 
   /**
-   * Constructs a <code>ListaProdutos</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageStatusCartoes</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ListaProdutos} obj Optional instance to populate.
-   * @return {module:model/ListaProdutos} The populated <code>ListaProdutos</code> instance.
+   * @param {module:model/PageStatusCartoes} obj Optional instance to populate.
+   * @return {module:model/PageStatusCartoes} The populated <code>PageStatusCartoes</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Produto]);
+        obj['content'] = ApiClient.convertToType(data['content'], [StatusCartao]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/Produto>} content
+   * @member {Array.<module:model/StatusCartao>} content
    */
   exports.prototype['content'] = undefined;
 

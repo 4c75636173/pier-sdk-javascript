@@ -23,7 +23,7 @@
 
   /**
    * Constructs a new <code>PageEstagiosCartoes</code>.
-   * Page de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+   * Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
    * @alias module:model/PageEstagiosCartoes
    * @class
    */

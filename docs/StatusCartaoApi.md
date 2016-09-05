@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="listarStatusCartoesUsingGET"></a>
 # **listarStatusCartoesUsingGET**
-> ListaStatusCartoes listarStatusCartoesUsingGET(opts)
+> PageStatusCartoes listarStatusCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaStatusCartoes**](ListaStatusCartoes.md)
+[**PageStatusCartoes**](PageStatusCartoes.md)
 
 ### Authorization
 

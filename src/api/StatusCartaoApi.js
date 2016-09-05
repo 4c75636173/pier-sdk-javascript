@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/StatusCartao', '../model/ListaStatusCartoes'], factory);
+    define(['../ApiClient', '../model/StatusCartao', '../model/PageStatusCartoes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/StatusCartao'), require('../model/ListaStatusCartoes'));
+    module.exports = factory(require('../ApiClient'), require('../model/StatusCartao'), require('../model/PageStatusCartoes'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.StatusCartaoApi = factory(root.Pier.ApiClient, root.Pier.StatusCartao, root.Pier.ListaStatusCartoes);
+    root.Pier.StatusCartaoApi = factory(root.Pier.ApiClient, root.Pier.StatusCartao, root.Pier.PageStatusCartoes);
   }
-}(this, function(ApiClient, StatusCartao, ListaStatusCartoes) {
+}(this, function(ApiClient, StatusCartao, PageStatusCartoes) {
   'use strict';
 
   /**
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the listarStatusCartoesUsingGET operation.
      * @callback module:api/StatusCartaoApi~listarStatusCartoesUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListaStatusCartoes} data The data returned by the service call.
+     * @param {module:model/PageStatusCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -107,7 +107,7 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/StatusCartaoApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ListaStatusCartoes}
+     * data is of type: {module:model/PageStatusCartoes}
      */
     this.listarStatusCartoesUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -142,7 +142,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ListaStatusCartoes;
+      var returnType = PageStatusCartoes;
 
       return this.apiClient.callApi(
         '/api/status-cartoes', 'GET',

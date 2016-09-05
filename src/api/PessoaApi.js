@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/OrigemComercial', '../model/ListaOrigensComerciais'], factory);
+    define(['../ApiClient', '../model/OrigemComercial', '../model/PagePessoas'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/ListaOrigensComerciais'));
+    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/PagePessoas'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.ListaOrigensComerciais);
+    root.Pier.PessoaApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.PagePessoas);
   }
-}(this, function(ApiClient, OrigemComercial, ListaOrigensComerciais) {
+}(this, function(ApiClient, OrigemComercial, PagePessoas) {
   'use strict';
 
   /**
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the listarUsingGET1 operation.
      * @callback module:api/PessoaApi~listarUsingGET1Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListaOrigensComerciais} data The data returned by the service call.
+     * @param {module:model/PagePessoas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -100,7 +100,7 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/PessoaApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ListaOrigensComerciais}
+     * data is of type: {module:model/PagePessoas}
      */
     this.listarUsingGET1 = function(opts, callback) {
       opts = opts || {};
@@ -128,7 +128,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ListaOrigensComerciais;
+      var returnType = PagePessoas;
 
       return this.apiClient.callApi(
         '/api/pessoas', 'GET',

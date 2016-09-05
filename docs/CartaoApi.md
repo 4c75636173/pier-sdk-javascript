@@ -5,12 +5,13 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET**](CartaoApi.md#consultarUsingGET) | **GET** /api/cartoes/{id_cartao} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**debloquearUsingGET**](CartaoApi.md#debloquearUsingGET) | **GET** /api/cartoes/{id_cartao}/desbloqueio | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**listarUsingGET**](CartaoApi.md#listarUsingGET) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
 
 <a name="consultarUsingGET"></a>
 # **consultarUsingGET**
-> OrigemComercial consultarUsingGET(idCartao)
+> Cartao consultarUsingGET(idCartao)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -50,7 +51,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**Cartao**](Cartao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="debloquearUsingGET"></a>
+# **debloquearUsingGET**
+> Cartao debloquearUsingGET(idCartao)
+
+Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CartaoApi()
+
+var idCartao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.debloquearUsingGET(idCartao, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idCartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**Cartao**](Cartao.md)
 
 ### Authorization
 
@@ -63,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="listarUsingGET"></a>
 # **listarUsingGET**
-> ListaCartoes listarUsingGET(opts)
+> PageCartoes listarUsingGET(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -142,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaCartoes**](ListaCartoes.md)
+[**PageCartoes**](PageCartoes.md)
 
 ### Authorization
 

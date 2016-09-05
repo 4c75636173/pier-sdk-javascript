@@ -1,9 +1,9 @@
-# Pier.ListaProdutos
+# Pier.PageStatusCartoes
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[Produto]**](Produto.md) |  | [optional] 
+**content** | [**[StatusCartao]**](StatusCartao.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 
