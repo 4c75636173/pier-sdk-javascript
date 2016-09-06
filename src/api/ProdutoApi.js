@@ -90,9 +90,9 @@
      * Lista os Produtos do Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-     * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-     * @param {String} opts.status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+     * @param {String} opts.status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/ProdutoApi~listarProdutosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -106,7 +106,7 @@
       var pathParams = {
       };
       var queryParams = {
-        'id_produto': opts['idProduto'],
+        'id': opts['id'],
         'nome': opts['nome'],
         'status': opts['status'],
         'page': opts['page'],

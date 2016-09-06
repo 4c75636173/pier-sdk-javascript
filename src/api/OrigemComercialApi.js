@@ -90,9 +90,9 @@
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
      * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idOrigemComercial ID da Origem Comercial
-     * @param {String} opts.nome Nome da Origem Comercial
-     * @param {String} opts.status Status da Origem Comercial
+     * @param {Integer} opts.id Id da origem comercial
+     * @param {String} opts.nome Nome da origem comercial
+     * @param {String} opts.status Status da origem comercial
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/OrigemComercialApi~listarOrigensComerciaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -106,7 +106,7 @@
       var pathParams = {
       };
       var queryParams = {
-        'id_origem_comercial': opts['idOrigemComercial'],
+        'id': opts['id'],
         'nome': opts['nome'],
         'status': opts['status'],
         'page': opts['page'],

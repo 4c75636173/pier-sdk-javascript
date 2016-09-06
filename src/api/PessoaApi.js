@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/OrigemComercial', '../model/PagePessoas'], factory);
+    define(['../ApiClient', '../model/OrigemComercial', '../model/ModelDate', '../model/PagePessoas'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/PagePessoas'));
+    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercial'), require('../model/ModelDate'), require('../model/PagePessoas'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.PagePessoas);
+    root.Pier.PessoaApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercial, root.Pier.ModelDate, root.Pier.PagePessoas);
   }
-}(this, function(ApiClient, OrigemComercial, PagePessoas) {
+}(this, function(ApiClient, OrigemComercial, ModelDate, PagePessoas) {
   'use strict';
 
   /**
@@ -90,13 +90,13 @@
      * Lista as Pessoas cadastradas no Emissor
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
      * @param {String} opts.nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
      * @param {String} opts.tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
      * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
      * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @param {Date} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-     * @param {String} opts.cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/PessoaApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
@@ -110,13 +110,13 @@
       var pathParams = {
       };
       var queryParams = {
-        'id_pessoa': opts['idPessoa'],
+        'id': opts['id'],
         'nome': opts['nome'],
         'tipo': opts['tipo'],
         'cpf': opts['cpf'],
         'cnpj': opts['cnpj'],
-        'data_nascimento': opts['dataNascimento'],
-        'cnpj': opts['cnpj2'],
+        'dataNascimento': opts['dataNascimento'],
+        'sexo': opts['sexo'],
         'page': opts['page'],
         'limit': opts['limit']
       };
