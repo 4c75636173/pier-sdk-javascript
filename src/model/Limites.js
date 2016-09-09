@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.LimiteDisponibilidade = factory(root.Pier.ApiClient);
+    root.Pier.Limites = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The LimiteDisponibilidade model module.
-   * @module model/LimiteDisponibilidade
+   * The Limites model module.
+   * @module model/Limites
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>LimiteDisponibilidade</code>.
-   * LimiteDisponibilidade
-   * @alias module:model/LimiteDisponibilidade
+   * Constructs a new <code>Limites</code>.
+   * Limites
+   * @alias module:model/Limites
    * @class
    * @param id
    * @param limiteCompra
@@ -64,11 +64,11 @@
   };
 
   /**
-   * Constructs a <code>LimiteDisponibilidade</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Limites</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LimiteDisponibilidade} obj Optional instance to populate.
-   * @return {module:model/LimiteDisponibilidade} The populated <code>LimiteDisponibilidade</code> instance.
+   * @param {module:model/Limites} obj Optional instance to populate.
+   * @return {module:model/Limites} The populated <code>Limites</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -154,7 +154,6 @@
   exports.prototype['limiteExtra'] = undefined;
 
   /**
-   * Campo que 
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;

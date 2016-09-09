@@ -4,17 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa.
 [**listarUsingGET1**](PessoaApi.md#listarUsingGET1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 <a name="consultarUsingGET1"></a>
 # **consultarUsingGET1**
-> OrigemComercial consultarUsingGET1(idOrigemComercial)
+> Pessoa consultarUsingGET1(idPessoa)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+Apresenta os dados de uma determinada Pessoa.
 
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -29,7 +29,7 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.PessoaApi()
 
-var idOrigemComercial = 789; // {Integer} ID da Origem Comercial
+var idPessoa = 789; // {Integer} ID da Origem Comercial
 
 
 var callback = function(error, data, response) {
@@ -39,18 +39,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET1(idOrigemComercial, callback);
+api.consultarUsingGET1(idPessoa, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idOrigemComercial** | **Integer**| ID da Origem Comercial | 
+ **idPessoa** | **Integer**| ID da Origem Comercial | 
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**Pessoa**](Pessoa.md)
 
 ### Authorization
 

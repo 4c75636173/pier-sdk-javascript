@@ -1,4 +1,4 @@
-# Pier.LimiteDisponibilidade
+# Pier.Limites
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **limiteConsignado** | **Number** |  | 
 **limiteExterno** | **Number** |  | 
 **limiteExtra** | **Number** |  | 
-**limiteGlobal** | **Number** | Campo que  | 
+**limiteGlobal** | **Number** |  | 
 **limiteInternacionalCompra** | **Number** |  | 
 **limiteInternacionalParcelado** | **Number** |  | 
 **limiteInternacionalParcelas** | **Number** |  | 
