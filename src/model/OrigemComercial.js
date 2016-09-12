@@ -55,7 +55,7 @@
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
       if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
       }
     }
     return obj;
@@ -76,7 +76,7 @@
 
   /**
    * Status da origem comercial
-   * @member {String} status
+   * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 

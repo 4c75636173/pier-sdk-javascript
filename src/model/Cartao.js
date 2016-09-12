@@ -156,7 +156,7 @@
   exports.prototype['dataStatusCartao'] = undefined;
 
   /**
-   * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
    * @member {Date} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;

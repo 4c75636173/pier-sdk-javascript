@@ -92,7 +92,7 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.id Id da origem comercial
      * @param {String} opts.nome Nome da origem comercial
-     * @param {String} opts.status Status da origem comercial
+     * @param {Integer} opts.status Status da origem comercial
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/OrigemComercialApi~listarOrigensComerciaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response

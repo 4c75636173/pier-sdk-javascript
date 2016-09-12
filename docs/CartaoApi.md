@@ -311,7 +311,7 @@ var opts = {
   'dataGeracao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
   'dataStatusCartao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
   'dataEstagioCartao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-  'dataValidade': "dataValidade_example", // {String} Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
+  'dataValidade': "dataValidade_example", // {String} Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
   'dataImpressao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
   'arquivoImpressao': "arquivoImpressao_example", // {String} Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
   'flagImpressaoOrigemComercial': 56, // {Integer} Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
  **dataGeracao** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
  **dataStatusCartao** | **ModelDate**| Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
  **dataEstagioCartao** | **ModelDate**| Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver. | [optional] 
- **dataValidade** | **String**| Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver. | [optional] 
+ **dataValidade** | **String**| Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver. | [optional] 
  **dataImpressao** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica. | [optional] 
  **arquivoImpressao** | **String**| Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver. | [optional] 
  **flagImpressaoOrigemComercial** | **Integer**| Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial. | [optional] 
