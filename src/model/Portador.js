@@ -132,6 +132,7 @@
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
+   * Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;

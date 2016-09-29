@@ -222,7 +222,7 @@
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+   * Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;

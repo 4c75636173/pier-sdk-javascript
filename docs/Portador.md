@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **idPessoa** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
 **idProduto** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
 **nomeImpresso** | **String** | Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
-**tipoPortador** | **String** |  | [optional] 
+**tipoPortador** | **String** | Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
 
 

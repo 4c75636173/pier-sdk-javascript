@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Limites', '../model/Portador', '../model/Saldos', '../model/Cartao', '../model/PageCartoes', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/LimiteDisponibilidade', '../model/Portador', '../model/Cartao', '../model/PageCartoes', '../model/ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Limites'), require('../model/Portador'), require('../model/Saldos'), require('../model/Cartao'), require('../model/PageCartoes'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/Cartao'), require('../model/PageCartoes'), require('../model/ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.Limites, root.Pier.Portador, root.Pier.Saldos, root.Pier.Cartao, root.Pier.PageCartoes, root.Pier.ModelDate);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.Cartao, root.Pier.PageCartoes, root.Pier.ModelDate);
   }
-}(this, function(ApiClient, Limites, Portador, Saldos, Cartao, PageCartoes, ModelDate) {
+}(this, function(ApiClient, LimiteDisponibilidade, Portador, Cartao, PageCartoes, ModelDate) {
   'use strict';
 
   /**
@@ -33,10 +33,10 @@
 
 
     /**
-     * Callback function to receive the result of the consultarLimiteUsingGET operation.
-     * @callback module:api/CartaoApi~consultarLimiteUsingGETCallback
+     * Callback function to receive the result of the consultarLimiteDisponibilidadeUsingGET operation.
+     * @callback module:api/CartaoApi~consultarLimiteDisponibilidadeUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Limites} data The data returned by the service call.
+     * @param {module:model/LimiteDisponibilidade} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -44,15 +44,15 @@
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarLimiteUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Limites}
+     * @param {module:api/CartaoApi~consultarLimiteDisponibilidadeUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LimiteDisponibilidade}
      */
-    this.consultarLimiteUsingGET = function(idCartao, callback) {
+    this.consultarLimiteDisponibilidadeUsingGET = function(idCartao, callback) {
       var postBody = null;
 
       // verify the required parameter 'idCartao' is set
       if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarLimiteUsingGET";
+        throw "Missing the required parameter 'idCartao' when calling consultarLimiteDisponibilidadeUsingGET";
       }
 
 
@@ -69,10 +69,10 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Limites;
+      var returnType = LimiteDisponibilidade;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/limites', 'GET',
+        '/api/cartoes/{id_cartao}/limites-disponibilidades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -119,52 +119,6 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id_cartao}/portadores', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarSaldoUsingGET operation.
-     * @callback module:api/CartaoApi~consultarSaldoUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Saldos} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite consultar os saldos dispon\u00C3\u00ADveis para uso pelo Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarSaldoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Saldos}
-     */
-    this.consultarSaldoUsingGET = function(idCartao, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarSaldoUsingGET";
-      }
-
-
-      var pathParams = {
-        'id_cartao': idCartao
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = Saldos;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/saldos-disponiveis', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -280,7 +234,7 @@
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-     * @param {String} opts.tipoPortador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+     * @param {String} opts.tipoPortador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
      * @param {String} opts.numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
      * @param {String} opts.nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
