@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/LimiteDisponibilidade', '../model/Portador', '../model/Cartao', '../model/PageCartoes', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/LimiteDisponibilidade', '../model/Portador', '../model/Cartao', '../model/PageCartoes', '../model/ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/Cartao'), require('../model/PageCartoes'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/Cartao'), require('../model/PageCartoes'), require('../model/ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.Cartao, root.Pier.PageCartoes, root.Pier.ModelDate);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.Cartao, root.Pier.PageCartoes, root.Pier.ModelDate);
   }
-}(this, function(ApiClient, LimiteDisponibilidade, Portador, Cartao, PageCartoes, ModelDate) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, LimiteDisponibilidade, Portador, Cartao, PageCartoes, ModelDate) {
   'use strict';
 
   /**
@@ -31,6 +31,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the alterarStatusImpressaoUsingPUT operation.
+     * @callback module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HistoricoImpressaoCartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} idStatusImpressao Id .
+     * @param {module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/HistoricoImpressaoCartao}
+     */
+    this.alterarStatusImpressaoUsingPUT = function(idCartao, idStatusImpressao, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idCartao' is set
+      if (idCartao == undefined || idCartao == null) {
+        throw "Missing the required parameter 'idCartao' when calling alterarStatusImpressaoUsingPUT";
+      }
+
+      // verify the required parameter 'idStatusImpressao' is set
+      if (idStatusImpressao == undefined || idStatusImpressao == null) {
+        throw "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id_cartao': idCartao,
+        'id_status_impressao': idStatusImpressao
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = HistoricoImpressaoCartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the consultarLimiteDisponibilidadeUsingGET operation.
