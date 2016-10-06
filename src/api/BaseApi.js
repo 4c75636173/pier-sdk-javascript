@@ -18,7 +18,7 @@
   /**
    * Base service.
    * @module api/BaseApi
-   * @version 1.1.0
+   * @version 2.0.0
    */
 
   /**
@@ -41,7 +41,7 @@
      */
 
     /**
-     * /bases/clear
+     * /api/bases/clear
      * @param {module:api/BaseApi~clearUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BodyAccessToken}
      */

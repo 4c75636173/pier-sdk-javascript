@@ -18,7 +18,7 @@
   /**
    * Token service.
    * @module api/TokenApi
-   * @version 1.1.0
+   * @version 2.0.0
    */
 
   /**
@@ -41,7 +41,7 @@
      */
 
     /**
-     * /tokens/callback
+     * /api/tokens/callback
      * @param {module:model/BodyAccessToken} bodyAccessToken bodyAccessToken
      * @param {module:api/TokenApi~callbackUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BodyAccessToken}
@@ -85,7 +85,7 @@
      */
 
     /**
-     * /tokens/validar
+     * /api/tokens/validar
      * @param {module:model/BodyAccessToken} bodyAccessToken bodyAccessToken
      * @param {module:api/TokenApi~validarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}

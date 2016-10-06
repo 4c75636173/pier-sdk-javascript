@@ -18,7 +18,7 @@
   /**
    * The Cartao model module.
    * @module model/Cartao
-   * @version 1.1.0
+   * @version 2.0.0
    */
 
   /**

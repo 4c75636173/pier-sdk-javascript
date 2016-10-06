@@ -4,15 +4,15 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**callbackUsingPOST**](TokenApi.md#callbackUsingPOST) | **POST** /api/tokens/callback | /tokens/callback
-[**validarUsingPOST**](TokenApi.md#validarUsingPOST) | **POST** /api/tokens/validar | /tokens/validar
+[**callbackUsingPOST**](TokenApi.md#callbackUsingPOST) | **POST** /api/tokens/callback | /api/tokens/callback
+[**validarUsingPOST**](TokenApi.md#validarUsingPOST) | **POST** /api/tokens/validar | /api/tokens/validar
 
 
 <a name="callbackUsingPOST"></a>
 # **callbackUsingPOST**
 > BodyAccessToken callbackUsingPOST(bodyAccessToken)
 
-/tokens/callback
+/api/tokens/callback
 
 ### Example
 ```javascript
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 # **validarUsingPOST**
 > Object validarUsingPOST(bodyAccessToken)
 
-/tokens/validar
+/api/tokens/validar
 
 ### Example
 ```javascript
