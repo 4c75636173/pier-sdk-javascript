@@ -4,17 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarOrigemComercialUsingGET**](OrigemComercialApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-[**listarOrigensComerciaisUsingGET**](OrigemComercialApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+[**consultarOrigemComercialUsingGET**](OrigemComercialApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id_origem_comercial} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
+[**listarOrigensComerciaisUsingGET**](OrigemComercialApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 
 
 <a name="consultarOrigemComercialUsingGET"></a>
 # **consultarOrigemComercialUsingGET**
 > OrigemComercial consultarOrigemComercialUsingGET(idOrigemComercial)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
+Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 
-Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **listarOrigensComerciaisUsingGET**
 > PageOrigensComerciais listarOrigensComerciaisUsingGET(opts)
 
-Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 
 Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
 

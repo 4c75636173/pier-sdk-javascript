@@ -4,17 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET3**](StatusImpressaoApi.md#consultarUsingGET3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
-[**listarUsingGET3**](StatusImpressaoApi.md#listarUsingGET3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+[**consultarUsingGET3**](StatusImpressaoApi.md#consultarUsingGET3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**listarUsingGET3**](StatusImpressaoApi.md#listarUsingGET3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 <a name="consultarUsingGET3"></a>
 # **consultarUsingGET3**
 > StatusImpressao consultarUsingGET3(idStatusImpressao)
 
-Apresenta os dados de um determinado Status Impress\u00C3\u00A3o 
+Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
-Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```javascript
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **listarUsingGET3**
 > PageStatusImpressao listarUsingGET3(opts)
 
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o 
+Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
 

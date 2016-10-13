@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa.
+[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
 [**listarUsingGET1**](PessoaApi.md#listarUsingGET1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **consultarUsingGET1**
 > Pessoa consultarUsingGET1(idPessoa)
 
-Apresenta os dados de uma determinada Pessoa.
+Apresenta os dados de uma determinada Pessoa
 
 Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 

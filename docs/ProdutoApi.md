@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarProdutoUsingGET**](ProdutoApi.md#consultarProdutoUsingGET) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto.
+[**consultarProdutoUsingGET**](ProdutoApi.md#consultarProdutoUsingGET) | **GET** /api/produtos/{id_produto} | Apresenta os dados de um determinado Produto
 [**listarProdutosUsingGET**](ProdutoApi.md#listarProdutosUsingGET) | **GET** /api/produtos | Lista os Produtos do Emissor
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **consultarProdutoUsingGET**
 > Produto consultarProdutoUsingGET(idProduto)
 
-Apresenta os dados de um determinado Produto.
+Apresenta os dados de um determinado Produto
 
 Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 Lista os Produtos do Emissor
 
-Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
+Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
 
 ### Example
 ```javascript

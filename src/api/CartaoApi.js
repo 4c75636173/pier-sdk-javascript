@@ -41,7 +41,8 @@
      */
 
     /**
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
      * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idStatusImpressao Id .
      * @param {module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -139,7 +140,7 @@
      */
 
     /**
-     * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+     * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarPortadorUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -223,8 +224,8 @@
     }
 
     /**
-     * Callback function to receive the result of the debloquearUsingGET operation.
-     * @callback module:api/CartaoApi~debloquearUsingGETCallback
+     * Callback function to receive the result of the desbloquearUsingPUT operation.
+     * @callback module:api/CartaoApi~desbloquearUsingPUTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Cartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -234,15 +235,15 @@
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~debloquearUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~desbloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.debloquearUsingGET = function(idCartao, callback) {
+    this.desbloquearUsingPUT = function(idCartao, callback) {
       var postBody = null;
 
       // verify the required parameter 'idCartao' is set
       if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling debloquearUsingGET";
+        throw "Missing the required parameter 'idCartao' when calling desbloquearUsingPUT";
       }
 
 
@@ -262,7 +263,7 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/desbloqueio', 'GET',
+        '/api/cartoes/{id_cartao}/desbloqueio', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
