@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | /api/bases/clear
+[**clearUsingGET**](BaseApi.md#clearUsingGET) | **GET** /api/bases/clear | Limpar mapa de bases
 
 
 <a name="clearUsingGET"></a>
 # **clearUsingGET**
 > BodyAccessToken clearUsingGET
 
-/api/bases/clear
+Limpar mapa de bases
 
 ### Example
 ```javascript

@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarEstagioCartaoUsingGET operation.
-     * @callback module:api/EstagioCartaoApi~consultarEstagioCartaoUsingGETCallback
+     * Callback function to receive the result of the consultarEstagioCartaoUsingGET1 operation.
+     * @callback module:api/EstagioCartaoApi~consultarEstagioCartaoUsingGET1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstagioCartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-     * @param {module:api/EstagioCartaoApi~consultarEstagioCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstagioCartaoApi~consultarEstagioCartaoUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstagioCartao}
      */
-    this.consultarEstagioCartaoUsingGET = function(idEstagioCartao, callback) {
+    this.consultarEstagioCartaoUsingGET1 = function(idEstagioCartao, callback) {
       var postBody = null;
 
       // verify the required parameter 'idEstagioCartao' is set
       if (idEstagioCartao == undefined || idEstagioCartao == null) {
-        throw "Missing the required parameter 'idEstagioCartao' when calling consultarEstagioCartaoUsingGET";
+        throw "Missing the required parameter 'idEstagioCartao' when calling consultarEstagioCartaoUsingGET1";
       }
 
 

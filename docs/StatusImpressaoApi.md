@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET3**](StatusImpressaoApi.md#consultarUsingGET3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-[**listarUsingGET3**](StatusImpressaoApi.md#listarUsingGET3) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET4**](StatusImpressaoApi.md#listarUsingGET4) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 <a name="consultarUsingGET3"></a>
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET3"></a>
-# **listarUsingGET3**
-> PageStatusImpressao listarUsingGET3(opts)
+<a name="listarUsingGET4"></a>
+# **listarUsingGET4**
+> PageStatusImpressao listarUsingGET4(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -96,7 +96,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET3(opts, callback);
+api.listarUsingGET4(opts, callback);
 ```
 
 ### Parameters

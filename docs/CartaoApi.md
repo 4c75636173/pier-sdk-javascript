@@ -35,7 +35,7 @@ var apiInstance = new Pier.CartaoApi()
 
 var idCartao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
-var idStatusImpressao = 789; // {Integer} Id .
+var idStatusImpressao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
 
 
 var callback = function(error, data, response) {
@@ -53,7 +53,7 @@ api.alterarStatusImpressaoUsingPUT(idCartao, idStatusImpressao, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idCartao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
- **idStatusImpressao** | **Integer**| Id . | 
+ **idStatusImpressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | 
 
 ### Return type
 

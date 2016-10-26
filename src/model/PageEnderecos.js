@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './StatusImpressao'], factory);
+    define(['../ApiClient', './Endereco'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./StatusImpressao'));
+    module.exports = factory(require('../ApiClient'), require('./Endereco'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageStatusImpressao = factory(root.Pier.ApiClient, root.Pier.StatusImpressao);
+    root.Pier.PageEnderecos = factory(root.Pier.ApiClient, root.Pier.Endereco);
   }
-}(this, function(ApiClient, StatusImpressao) {
+}(this, function(ApiClient, Endereco) {
   'use strict';
 
   /**
-   * The PageStatusImpressao model module.
-   * @module model/PageStatusImpressao
+   * The PageEnderecos model module.
+   * @module model/PageEnderecos
    * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>PageStatusImpressao</code>.
-   * Lista de Status Impress\u00C3\u00A3o
-   * @alias module:model/PageStatusImpressao
+   * Constructs a new <code>PageEnderecos</code>.
+   * Lista de Endere\u00C3\u00A7os
+   * @alias module:model/PageEnderecos
    * @class
    */
   var exports = function() {
@@ -46,18 +46,18 @@
   };
 
   /**
-   * Constructs a <code>PageStatusImpressao</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageEnderecos</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PageStatusImpressao} obj Optional instance to populate.
-   * @return {module:model/PageStatusImpressao} The populated <code>PageStatusImpressao</code> instance.
+   * @param {module:model/PageEnderecos} obj Optional instance to populate.
+   * @return {module:model/PageEnderecos} The populated <code>PageEnderecos</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [StatusImpressao]);
+        obj['content'] = ApiClient.convertToType(data['content'], [Endereco]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/StatusImpressao>} content
+   * @member {Array.<module:model/Endereco>} content
    */
   exports.prototype['content'] = undefined;
 

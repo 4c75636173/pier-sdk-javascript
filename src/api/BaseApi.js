@@ -41,7 +41,7 @@
      */
 
     /**
-     * /api/bases/clear
+     * Limpar mapa de bases
      * @param {module:api/BaseApi~clearUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BodyAccessToken}
      */

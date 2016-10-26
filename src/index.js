@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/Cartao', './model/EstagioCartao', './model/ExtraInfo', './model/HistoricoImpressaoCartao', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/OrigemComercial', './model/PageCartoes', './model/PageEstagiosCartoes', './model/PageOrigensComerciais', './model/PagePessoas', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/Pessoa', './model/Portador', './model/Produto', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './api/BaseApi', './api/CartaoApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/StatusContaApi', './api/StatusImpressaoApi', './api/TokenApi'], factory);
+    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/Cartao', './model/Endereco', './model/EstagioCartao', './model/ExtraInfo', './model/HistoricoImpressaoCartao', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/OrigemComercial', './model/PageCartoes', './model/PageEnderecos', './model/PageEstagiosCartoes', './model/PageOrigensComerciais', './model/PagePessoas', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/Pessoa', './model/Portador', './model/Produto', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './api/BaseApi', './api/CartaoApi', './api/EnderecoApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/StatusContaApi', './api/StatusImpressaoApi', './api/TokenApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/HistoricoImpressaoCartao'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/OrigemComercial'), require('./model/PageCartoes'), require('./model/PageEstagiosCartoes'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/StatusContaApi'), require('./api/StatusImpressaoApi'), require('./api/TokenApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/Endereco'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/HistoricoImpressaoCartao'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/OrigemComercial'), require('./model/PageCartoes'), require('./model/PageEnderecos'), require('./model/PageEstagiosCartoes'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/EnderecoApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/StatusContaApi'), require('./api/StatusImpressaoApi'), require('./api/TokenApi'));
   }
-}(function(ApiClient, AuthToken, BodyAccessToken, Cartao, EstagioCartao, ExtraInfo, HistoricoImpressaoCartao, LimiteDisponibilidade, ListaProdutos, OrigemComercial, PageCartoes, PageEstagiosCartoes, PageOrigensComerciais, PagePessoas, PageStatusCartoes, PageStatusContas, PageStatusImpressao, Pessoa, Portador, Produto, StatusCartao, StatusConta, StatusImpressao, BaseApi, CartaoApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartaoApi, StatusContaApi, StatusImpressaoApi, TokenApi) {
+}(function(ApiClient, AuthToken, BodyAccessToken, Cartao, Endereco, EstagioCartao, ExtraInfo, HistoricoImpressaoCartao, LimiteDisponibilidade, ListaProdutos, OrigemComercial, PageCartoes, PageEnderecos, PageEstagiosCartoes, PageOrigensComerciais, PagePessoas, PageStatusCartoes, PageStatusContas, PageStatusImpressao, Pessoa, Portador, Produto, StatusCartao, StatusConta, StatusImpressao, BaseApi, CartaoApi, EnderecoApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartaoApi, StatusContaApi, StatusImpressaoApi, TokenApi) {
   'use strict';
 
   /**
@@ -62,6 +62,11 @@
      */
     Cartao: Cartao,
     /**
+     * The Endereco model constructor.
+     * @property {module:model/Endereco}
+     */
+    Endereco: Endereco,
+    /**
      * The EstagioCartao model constructor.
      * @property {module:model/EstagioCartao}
      */
@@ -96,6 +101,11 @@
      * @property {module:model/PageCartoes}
      */
     PageCartoes: PageCartoes,
+    /**
+     * The PageEnderecos model constructor.
+     * @property {module:model/PageEnderecos}
+     */
+    PageEnderecos: PageEnderecos,
     /**
      * The PageEstagiosCartoes model constructor.
      * @property {module:model/PageEstagiosCartoes}
@@ -166,6 +176,11 @@
      * @property {module:api/CartaoApi}
      */
     CartaoApi: CartaoApi,
+    /**
+     * The EnderecoApi service constructor.
+     * @property {module:api/EnderecoApi}
+     */
+    EnderecoApi: EnderecoApi,
     /**
      * The EstagioCartaoApi service constructor.
      * @property {module:api/EstagioCartaoApi}

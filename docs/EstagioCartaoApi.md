@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarEstagioCartaoUsingGET**](EstagioCartaoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
+[**consultarEstagioCartaoUsingGET1**](EstagioCartaoApi.md#consultarEstagioCartaoUsingGET1) | **GET** /api/estagios-cartoes/{id_estagio_cartao} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](EstagioCartaoApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 
 
-<a name="consultarEstagioCartaoUsingGET"></a>
-# **consultarEstagioCartaoUsingGET**
-> EstagioCartao consultarEstagioCartaoUsingGET(idEstagioCartao)
+<a name="consultarEstagioCartaoUsingGET1"></a>
+# **consultarEstagioCartaoUsingGET1**
+> EstagioCartao consultarEstagioCartaoUsingGET1(idEstagioCartao)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 
@@ -39,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarEstagioCartaoUsingGET(idEstagioCartao, callback);
+api.consultarEstagioCartaoUsingGET1(idEstagioCartao, callback);
 ```
 
 ### Parameters

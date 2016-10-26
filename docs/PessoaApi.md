@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**listarUsingGET1**](PessoaApi.md#listarUsingGET1) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET2**](PessoaApi.md#listarUsingGET2) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
 <a name="consultarUsingGET1"></a>
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET1"></a>
-# **listarUsingGET1**
-> PagePessoas listarUsingGET1(opts)
+<a name="listarUsingGET2"></a>
+# **listarUsingGET2**
+> PagePessoas listarUsingGET2(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -101,7 +101,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET1(opts, callback);
+api.listarUsingGET2(opts, callback);
 ```
 
 ### Parameters

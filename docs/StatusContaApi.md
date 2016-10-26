@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET2**](StatusContaApi.md#consultarUsingGET2) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listarUsingGET2**](StatusContaApi.md#listarUsingGET2) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET3**](StatusContaApi.md#listarUsingGET3) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
 <a name="consultarUsingGET2"></a>
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET2"></a>
-# **listarUsingGET2**
-> PageStatusContas listarUsingGET2(opts)
+<a name="listarUsingGET3"></a>
+# **listarUsingGET3**
+> PageStatusContas listarUsingGET3(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -98,7 +98,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET2(opts, callback);
+api.listarUsingGET3(opts, callback);
 ```
 
 ### Parameters
