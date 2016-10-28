@@ -41,15 +41,15 @@
      */
 
     /**
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+     * Atualiza os dados de um determinado Endere\u00C3\u00A7o
+     * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
      * @param {Integer} id id
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
      * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
      * @param {String} opts.logradouro Apresenta o nome do Logradouro
-     * @param {String} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param {Integer} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
      * @param {String} opts.complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
      * @param {String} opts.pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
      * @param {String} opts.bairro Apresenta nome do bairro
@@ -103,8 +103,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarEstagioCartaoUsingGET operation.
-     * @callback module:api/EnderecoApi~consultarEstagioCartaoUsingGETCallback
+     * Callback function to receive the result of the consultarUsingGET2 operation.
+     * @callback module:api/EnderecoApi~consultarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Endereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -114,15 +114,15 @@
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-     * @param {module:api/EnderecoApi~consultarEstagioCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EnderecoApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Endereco}
      */
-    this.consultarEstagioCartaoUsingGET = function(idEndereco, callback) {
+    this.consultarUsingGET2 = function(idEndereco, callback) {
       var postBody = null;
 
       // verify the required parameter 'idEndereco' is set
       if (idEndereco == undefined || idEndereco == null) {
-        throw "Missing the required parameter 'idEndereco' when calling consultarEstagioCartaoUsingGET";
+        throw "Missing the required parameter 'idEndereco' when calling consultarUsingGET2";
       }
 
 
@@ -149,8 +149,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET1 operation.
-     * @callback module:api/EnderecoApi~listarUsingGET1Callback
+     * Callback function to receive the result of the listarUsingGET2 operation.
+     * @callback module:api/EnderecoApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEnderecos} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -165,7 +165,7 @@
      * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
      * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
      * @param {String} opts.logradouro Apresenta o nome do Logradouro
-     * @param {String} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param {Integer} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
      * @param {String} opts.complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
      * @param {String} opts.pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
      * @param {String} opts.bairro Apresenta nome do bairro
@@ -176,10 +176,10 @@
      * @param {Date} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/EnderecoApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EnderecoApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecos}
      */
-    this.listarUsingGET1 = function(opts, callback) {
+    this.listarUsingGET2 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -235,9 +235,9 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
      * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
      * @param {String} opts.logradouro Apresenta o nome do Logradouro
-     * @param {String} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param {Integer} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
      * @param {String} opts.complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
      * @param {String} opts.pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
      * @param {String} opts.bairro Apresenta nome do bairro

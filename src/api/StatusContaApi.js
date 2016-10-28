@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET2 operation.
-     * @callback module:api/StatusContaApi~consultarUsingGET2Callback
+     * Callback function to receive the result of the consultarUsingGET4 operation.
+     * @callback module:api/StatusContaApi~consultarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusConta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-     * @param {module:api/StatusContaApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusContaApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusConta}
      */
-    this.consultarUsingGET2 = function(idStatusConta, callback) {
+    this.consultarUsingGET4 = function(idStatusConta, callback) {
       var postBody = null;
 
       // verify the required parameter 'idStatusConta' is set
       if (idStatusConta == undefined || idStatusConta == null) {
-        throw "Missing the required parameter 'idStatusConta' when calling consultarUsingGET2";
+        throw "Missing the required parameter 'idStatusConta' when calling consultarUsingGET4";
       }
 
 
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET3 operation.
-     * @callback module:api/StatusContaApi~listarUsingGET3Callback
+     * Callback function to receive the result of the listarUsingGET4 operation.
+     * @callback module:api/StatusContaApi~listarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -96,10 +96,10 @@
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/StatusContaApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusContaApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContas}
      */
-    this.listarUsingGET3 = function(opts, callback) {
+    this.listarUsingGET4 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

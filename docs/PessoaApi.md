@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](PessoaApi.md#consultarUsingGET1) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
-[**listarUsingGET2**](PessoaApi.md#listarUsingGET2) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**consultarUsingGET3**](PessoaApi.md#consultarUsingGET3) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
+[**listarUsingGET3**](PessoaApi.md#listarUsingGET3) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
 
 
-<a name="consultarUsingGET1"></a>
-# **consultarUsingGET1**
-> Pessoa consultarUsingGET1(idPessoa)
+<a name="consultarUsingGET3"></a>
+# **consultarUsingGET3**
+> Pessoa consultarUsingGET3(idPessoa)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -39,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET1(idPessoa, callback);
+api.consultarUsingGET3(idPessoa, callback);
 ```
 
 ### Parameters
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET2"></a>
-# **listarUsingGET2**
-> PagePessoas listarUsingGET2(opts)
+<a name="listarUsingGET3"></a>
+# **listarUsingGET3**
+> PagePessoas listarUsingGET3(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -101,7 +101,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET2(opts, callback);
+api.listarUsingGET3(opts, callback);
 ```
 
 ### Parameters

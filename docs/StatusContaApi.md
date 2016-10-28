@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET2**](StatusContaApi.md#consultarUsingGET2) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
-[**listarUsingGET3**](StatusContaApi.md#listarUsingGET3) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**consultarUsingGET4**](StatusContaApi.md#consultarUsingGET4) | **GET** /api/status-contas/{id_status_conta} | Apresenta os dados de um determinado Status Conta
+[**listarUsingGET4**](StatusContaApi.md#listarUsingGET4) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 
 
-<a name="consultarUsingGET2"></a>
-# **consultarUsingGET2**
-> StatusConta consultarUsingGET2(idStatusConta)
+<a name="consultarUsingGET4"></a>
+# **consultarUsingGET4**
+> StatusConta consultarUsingGET4(idStatusConta)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -39,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET2(idStatusConta, callback);
+api.consultarUsingGET4(idStatusConta, callback);
 ```
 
 ### Parameters
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET3"></a>
-# **listarUsingGET3**
-> PageStatusContas listarUsingGET3(opts)
+<a name="listarUsingGET4"></a>
+# **listarUsingGET4**
+> PageStatusContas listarUsingGET4(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -98,7 +98,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET3(opts, callback);
+api.listarUsingGET4(opts, callback);
 ```
 
 ### Parameters

@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET3**](StatusImpressaoApi.md#consultarUsingGET3) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-[**listarUsingGET4**](StatusImpressaoApi.md#listarUsingGET4) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**consultarUsingGET5**](StatusImpressaoApi.md#consultarUsingGET5) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**listarUsingGET5**](StatusImpressaoApi.md#listarUsingGET5) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
-<a name="consultarUsingGET3"></a>
-# **consultarUsingGET3**
-> StatusImpressao consultarUsingGET3(idStatusImpressao)
+<a name="consultarUsingGET5"></a>
+# **consultarUsingGET5**
+> StatusImpressao consultarUsingGET5(idStatusImpressao)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -39,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET3(idStatusImpressao, callback);
+api.consultarUsingGET5(idStatusImpressao, callback);
 ```
 
 ### Parameters
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET4"></a>
-# **listarUsingGET4**
-> PageStatusImpressao listarUsingGET4(opts)
+<a name="listarUsingGET5"></a>
+# **listarUsingGET5**
+> PageStatusImpressao listarUsingGET5(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -96,7 +96,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET4(opts, callback);
+api.listarUsingGET5(opts, callback);
 ```
 
 ### Parameters

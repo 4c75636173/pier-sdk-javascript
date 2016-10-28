@@ -4,9 +4,9 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT**](EnderecoApi.md#alterarUsingPUT) | **PUT** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**consultarEstagioCartaoUsingGET**](EnderecoApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/enderecos/{id_endereco} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**listarUsingGET1**](EnderecoApi.md#listarUsingGET1) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**alterarUsingPUT**](EnderecoApi.md#alterarUsingPUT) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET2**](EnderecoApi.md#consultarUsingGET2) | **GET** /api/enderecos/{id_endereco} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**listarUsingGET2**](EnderecoApi.md#listarUsingGET2) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**salvarUsingPOST**](EnderecoApi.md#salvarUsingPOST) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 # **alterarUsingPUT**
 > Endereco alterarUsingPUT(id, opts)
 
-Realiza o cadastro de um novo Endere\u00C3\u00A7o
+Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
 
 ### Example
 ```javascript
@@ -36,9 +36,9 @@ var id = 789; // {Integer} id
 var opts = { 
   'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
   'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
-  'numero': "numero_example", // {String} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   'bairro': "bairro_example", // {String} Apresenta nome do bairro
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
  **id** | **Integer**| id | 
  **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
  **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
+ **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
  **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **String**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **String**| Apresenta nome do bairro | [optional] 
@@ -87,9 +87,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarEstagioCartaoUsingGET"></a>
-# **consultarEstagioCartaoUsingGET**
-> Endereco consultarEstagioCartaoUsingGET(idEndereco)
+<a name="consultarUsingGET2"></a>
+# **consultarUsingGET2**
+> Endereco consultarUsingGET2(idEndereco)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -118,7 +118,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarEstagioCartaoUsingGET(idEndereco, callback);
+api.consultarUsingGET2(idEndereco, callback);
 ```
 
 ### Parameters
@@ -140,9 +140,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET1"></a>
-# **listarUsingGET1**
-> PageEnderecos listarUsingGET1(opts)
+<a name="listarUsingGET2"></a>
+# **listarUsingGET2**
+> PageEnderecos listarUsingGET2(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -167,7 +167,7 @@ var opts = {
   'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
   'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
   'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
-  'numero': "numero_example", // {String} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   'bairro': "bairro_example", // {String} Apresenta nome do bairro
@@ -187,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET1(opts, callback);
+api.listarUsingGET2(opts, callback);
 ```
 
 ### Parameters
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
  **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
  **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
  **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **String**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **String**| Apresenta nome do bairro | [optional] 
@@ -248,9 +248,9 @@ var apiInstance = new Pier.EnderecoApi()
 var opts = { 
   'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
   'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
   'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
-  'numero': "numero_example", // {String} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
   'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
   'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
   'bairro': "bairro_example", // {String} Apresenta nome do bairro
@@ -275,9 +275,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
  **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) | [optional] 
+ **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
  **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **String**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
  **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
  **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
  **bairro** | **String**| Apresenta nome do bairro | [optional] 

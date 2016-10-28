@@ -87,7 +87,7 @@
         obj['logradouro'] = ApiClient.convertToType(data['logradouro'], 'String');
       }
       if (data.hasOwnProperty('numero')) {
-        obj['numero'] = ApiClient.convertToType(data['numero'], 'String');
+        obj['numero'] = ApiClient.convertToType(data['numero'], 'Integer');
       }
       if (data.hasOwnProperty('pais')) {
         obj['pais'] = ApiClient.convertToType(data['pais'], 'String');
@@ -110,7 +110,7 @@
   exports.prototype['bairro'] = undefined;
 
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
@@ -165,7 +165,7 @@
 
   /**
    * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-   * @member {String} numero
+   * @member {Integer} numero
    */
   exports.prototype['numero'] = undefined;
 

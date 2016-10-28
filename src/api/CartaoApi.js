@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/LimiteDisponibilidade', '../model/Portador', '../model/Cartao', '../model/PageCartoes', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/Portador', '../model/PageCartoes', '../model/ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/Cartao'), require('../model/PageCartoes'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/PageCartoes'), require('../model/ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.Cartao, root.Pier.PageCartoes, root.Pier.ModelDate);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.PageCartoes, root.Pier.ModelDate);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, LimiteDisponibilidade, Portador, Cartao, PageCartoes, ModelDate) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, Portador, PageCartoes, ModelDate) {
   'use strict';
 
   /**
@@ -80,6 +80,66 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the bloquearUsingPUT operation.
+     * @callback module:api/CartaoApi~bloquearUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+     * @param {String} observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
+     * @param {module:api/CartaoApi~bloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/Cartao}
+     */
+    this.bloquearUsingPUT = function(idCartao, idStatus, observacao, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idCartao' is set
+      if (idCartao == undefined || idCartao == null) {
+        throw "Missing the required parameter 'idCartao' when calling bloquearUsingPUT";
+      }
+
+      // verify the required parameter 'idStatus' is set
+      if (idStatus == undefined || idStatus == null) {
+        throw "Missing the required parameter 'idStatus' when calling bloquearUsingPUT";
+      }
+
+      // verify the required parameter 'observacao' is set
+      if (observacao == undefined || observacao == null) {
+        throw "Missing the required parameter 'observacao' when calling bloquearUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id_cartao': idCartao
+      };
+      var queryParams = {
+        'id_status': idStatus,
+        'observacao': observacao
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Cartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id_cartao}/bloqueio', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

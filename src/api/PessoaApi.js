@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET1 operation.
-     * @callback module:api/PessoaApi~consultarUsingGET1Callback
+     * Callback function to receive the result of the consultarUsingGET3 operation.
+     * @callback module:api/PessoaApi~consultarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Pessoa} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Integer} idPessoa ID da Origem Comercial
-     * @param {module:api/PessoaApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PessoaApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
      */
-    this.consultarUsingGET1 = function(idPessoa, callback) {
+    this.consultarUsingGET3 = function(idPessoa, callback) {
       var postBody = null;
 
       // verify the required parameter 'idPessoa' is set
       if (idPessoa == undefined || idPessoa == null) {
-        throw "Missing the required parameter 'idPessoa' when calling consultarUsingGET1";
+        throw "Missing the required parameter 'idPessoa' when calling consultarUsingGET3";
       }
 
 
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET2 operation.
-     * @callback module:api/PessoaApi~listarUsingGET2Callback
+     * Callback function to receive the result of the listarUsingGET3 operation.
+     * @callback module:api/PessoaApi~listarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -99,10 +99,10 @@
      * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/PessoaApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PessoaApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoas}
      */
-    this.listarUsingGET2 = function(opts, callback) {
+    this.listarUsingGET3 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

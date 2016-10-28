@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET3 operation.
-     * @callback module:api/StatusImpressaoApi~consultarUsingGET3Callback
+     * Callback function to receive the result of the consultarUsingGET5 operation.
+     * @callback module:api/StatusImpressaoApi~consultarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusImpressaoApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusImpressaoApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressao}
      */
-    this.consultarUsingGET3 = function(idStatusImpressao, callback) {
+    this.consultarUsingGET5 = function(idStatusImpressao, callback) {
       var postBody = null;
 
       // verify the required parameter 'idStatusImpressao' is set
       if (idStatusImpressao == undefined || idStatusImpressao == null) {
-        throw "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET3";
+        throw "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET5";
       }
 
 
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET4 operation.
-     * @callback module:api/StatusImpressaoApi~listarUsingGET4Callback
+     * Callback function to receive the result of the listarUsingGET5 operation.
+     * @callback module:api/StatusImpressaoApi~listarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -94,10 +94,10 @@
      * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/StatusImpressaoApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusImpressaoApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressao}
      */
-    this.listarUsingGET4 = function(opts, callback) {
+    this.listarUsingGET5 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
