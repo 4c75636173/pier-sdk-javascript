@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET4 operation.
-     * @callback module:api/StatusContaApi~listarUsingGET4Callback
+     * Callback function to receive the result of the listarUsingGET5 operation.
+     * @callback module:api/StatusContaApi~listarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -96,10 +96,10 @@
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/StatusContaApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusContaApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContas}
      */
-    this.listarUsingGET4 = function(opts, callback) {
+    this.listarUsingGET5 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

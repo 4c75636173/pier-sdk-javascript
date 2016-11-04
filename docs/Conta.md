@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dataCadastro** | **Date** | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
 **dataStatusConta** | **Date** | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
+**dataUltimaAlteracaoVencimento** | **Date** | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
 **diaVencimento** | **Integer** | Apresenta o dia de vencimento. | [optional] 
 **id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
 **idOrigemComercial** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. | [optional] 

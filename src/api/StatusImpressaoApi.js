@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/StatusImpressaoApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET6 operation.
+     * @callback module:api/StatusImpressaoApi~listarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -94,10 +94,10 @@
      * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/StatusImpressaoApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusImpressaoApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressao}
      */
-    this.listarUsingGET5 = function(opts, callback) {
+    this.listarUsingGET6 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

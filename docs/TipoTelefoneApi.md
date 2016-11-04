@@ -1,20 +1,20 @@
-# Pier.StatusImpressaoApi
+# Pier.TipoTelefoneApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET5**](StatusImpressaoApi.md#consultarUsingGET5) | **GET** /api/status-impressoes/{id_status_impressao} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-[**listarUsingGET6**](StatusImpressaoApi.md#listarUsingGET6) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**consultarUsingGET8**](TipoTelefoneApi.md#consultarUsingGET8) | **GET** /api/tipos-telefones/{id_tipo_telefone} | Apresenta os dados de um determinado Tipo de Telefone
+[**listarUsingGET9**](TipoTelefoneApi.md#listarUsingGET9) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
 
 
-<a name="consultarUsingGET5"></a>
-# **consultarUsingGET5**
-> StatusImpressao consultarUsingGET5(idStatusImpressao)
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> TipoTelefone consultarUsingGET8(idTipoTelefone)
 
-Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+Apresenta os dados de um determinado Tipo de Telefone
 
-Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```javascript
@@ -27,9 +27,9 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.StatusImpressaoApi()
+var apiInstance = new Pier.TipoTelefoneApi()
 
-var idStatusImpressao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+var idTipoTelefone = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
 
 
 var callback = function(error, data, response) {
@@ -39,18 +39,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET5(idStatusImpressao, callback);
+api.consultarUsingGET8(idTipoTelefone, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idStatusImpressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **idTipoTelefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
 
 ### Return type
 
-[**StatusImpressao**](StatusImpressao.md)
+[**TipoTelefone**](TipoTelefone.md)
 
 ### Authorization
 
@@ -61,13 +61,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PageStatusImpressao listarUsingGET6(opts)
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PageTipoTelefones listarUsingGET9(opts)
 
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+Lista os Tipos de Telefones
 
-Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -80,11 +80,11 @@ access_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //access_token.apiKeyPrefix['access_token'] = "Token"
 
-var apiInstance = new Pier.StatusImpressaoApi()
+var apiInstance = new Pier.TipoTelefoneApi()
 
 var opts = { 
-  'id': 789, // {Integer} Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-  'nome': "nome_example", // {String} Nome do status impress\u00C3\u00A3o
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  'nome': "nome_example", // {String} Nome do Tipo do Telefone
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
@@ -96,21 +96,21 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
- **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **nome** | **String**| Nome do Tipo do Telefone | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
 ### Return type
 
-[**PageStatusImpressao**](PageStatusImpressao.md)
+[**PageTipoTelefones**](PageTipoTelefones.md)
 
 ### Authorization
 

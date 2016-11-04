@@ -33,6 +33,59 @@
 
 
     /**
+     * Callback function to receive the result of the alterarVencimentoUsingPUT operation.
+     * @callback module:api/ContaApi~alterarVencimentoUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Conta} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Alterar vencimento
+     * Esse recurso permite alterar o vencimento de uma conta especifica.
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} novoDiaVencimento Novo dia de vencimento.
+     * @param {module:api/ContaApi~alterarVencimentoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/Conta}
+     */
+    this.alterarVencimentoUsingPUT = function(idConta, novoDiaVencimento, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling alterarVencimentoUsingPUT";
+      }
+
+      // verify the required parameter 'novoDiaVencimento' is set
+      if (novoDiaVencimento == undefined || novoDiaVencimento == null) {
+        throw "Missing the required parameter 'novoDiaVencimento' when calling alterarVencimentoUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id_conta': idConta
+      };
+      var queryParams = {
+        'novo_dia_vencimento': novoDiaVencimento
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Conta;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id_conta}/alterar-vencimento', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the consultarUsingGET1 operation.
      * @callback module:api/ContaApi~consultarUsingGET1Callback
      * @param {String} error Error message, if any.
@@ -87,8 +140,8 @@
      */
 
     /**
-     * Lista contas existentes na base de dados do Emissor.
-     * Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+     * Lista contas existentes na base de dados do Emissor
+     * Este recurso permite listar contas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
@@ -99,6 +152,7 @@
      * @param {Integer} opts.melhorDiaCompra Apresenta o melhor dia de compra.
      * @param {module:model/ModelDate} opts.dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
      * @param {module:model/ModelDate} opts.dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param {module:model/ModelDate} opts.dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/ContaApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
@@ -121,6 +175,7 @@
         'melhorDiaCompra': opts['melhorDiaCompra'],
         'dataStatusConta': opts['dataStatusConta'],
         'dataCadastro': opts['dataCadastro'],
+        'dataUltimaAlteracaoVencimento': opts['dataUltimaAlteracaoVencimento'],
         'page': opts['page'],
         'limit': opts['limit']
       };

@@ -38,6 +38,7 @@
 
 
 
+
   };
 
   /**
@@ -56,6 +57,9 @@
       }
       if (data.hasOwnProperty('dataStatusConta')) {
         obj['dataStatusConta'] = ApiClient.convertToType(data['dataStatusConta'], 'Date');
+      }
+      if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
+        obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
       }
       if (data.hasOwnProperty('diaVencimento')) {
         obj['diaVencimento'] = ApiClient.convertToType(data['diaVencimento'], 'Integer');
@@ -94,6 +98,12 @@
    * @member {Date} dataStatusConta
    */
   exports.prototype['dataStatusConta'] = undefined;
+
+  /**
+   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   * @member {Date} dataUltimaAlteracaoVencimento
+   */
+  exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
   /**
    * Apresenta o dia de vencimento.

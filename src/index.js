@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/Cartao', './model/Conta', './model/Endereco', './model/EstagioCartao', './model/ExtraInfo', './model/HistoricoImpressaoCartao', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/OrigemComercial', './model/PageCartoes', './model/PageEnderecos', './model/PageEstagiosCartoes', './model/PageOrigensComerciais', './model/PagePessoas', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/Pessoa', './model/Portador', './model/Produto', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './api/BaseApi', './api/CartaoApi', './api/ContaApi', './api/EnderecoApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/StatusContaApi', './api/StatusImpressaoApi', './api/TokenApi'], factory);
+    define(['./ApiClient', './model/AuthToken', './model/BodyAccessToken', './model/Cartao', './model/Conta', './model/Endereco', './model/EstagioCartao', './model/ExtraInfo', './model/HistoricoImpressaoCartao', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/OrigemComercial', './model/PageCartoes', './model/PageEnderecos', './model/PageEstagiosCartoes', './model/PageOrigensComerciais', './model/PagePessoas', './model/PagePortador', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/PageTelefones', './model/PageTipoTelefones', './model/PageTiposEndereco', './model/Pessoa', './model/Portador', './model/Produto', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './model/Telefone', './model/TipoEndereco', './model/TipoTelefone', './api/BaseApi', './api/CartaoApi', './api/ContaApi', './api/EnderecoApi', './api/EstagioCartaoApi', './api/OrigemComercialApi', './api/PessoaApi', './api/PortadorApi', './api/ProdutoApi', './api/StatusCartaoApi', './api/StatusContaApi', './api/StatusImpressaoApi', './api/TelefoneApi', './api/TipoEnderecoApi', './api/TipoTelefoneApi', './api/TokenApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/Conta'), require('./model/Endereco'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/HistoricoImpressaoCartao'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/OrigemComercial'), require('./model/PageCartoes'), require('./model/PageEnderecos'), require('./model/PageEstagiosCartoes'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/EnderecoApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/StatusContaApi'), require('./api/StatusImpressaoApi'), require('./api/TokenApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/Conta'), require('./model/Endereco'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/HistoricoImpressaoCartao'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/OrigemComercial'), require('./model/PageCartoes'), require('./model/PageEnderecos'), require('./model/PageEstagiosCartoes'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PagePortador'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/PageTelefones'), require('./model/PageTipoTelefones'), require('./model/PageTiposEndereco'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./model/Telefone'), require('./model/TipoEndereco'), require('./model/TipoTelefone'), require('./api/BaseApi'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/EnderecoApi'), require('./api/EstagioCartaoApi'), require('./api/OrigemComercialApi'), require('./api/PessoaApi'), require('./api/PortadorApi'), require('./api/ProdutoApi'), require('./api/StatusCartaoApi'), require('./api/StatusContaApi'), require('./api/StatusImpressaoApi'), require('./api/TelefoneApi'), require('./api/TipoEnderecoApi'), require('./api/TipoTelefoneApi'), require('./api/TokenApi'));
   }
-}(function(ApiClient, AuthToken, BodyAccessToken, Cartao, Conta, Endereco, EstagioCartao, ExtraInfo, HistoricoImpressaoCartao, LimiteDisponibilidade, ListaProdutos, OrigemComercial, PageCartoes, PageEnderecos, PageEstagiosCartoes, PageOrigensComerciais, PagePessoas, PageStatusCartoes, PageStatusContas, PageStatusImpressao, Pessoa, Portador, Produto, StatusCartao, StatusConta, StatusImpressao, BaseApi, CartaoApi, ContaApi, EnderecoApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, ProdutoApi, StatusCartaoApi, StatusContaApi, StatusImpressaoApi, TokenApi) {
+}(function(ApiClient, AuthToken, BodyAccessToken, Cartao, Conta, Endereco, EstagioCartao, ExtraInfo, HistoricoImpressaoCartao, LimiteDisponibilidade, ListaProdutos, OrigemComercial, PageCartoes, PageEnderecos, PageEstagiosCartoes, PageOrigensComerciais, PagePessoas, PagePortador, PageStatusCartoes, PageStatusContas, PageStatusImpressao, PageTelefones, PageTipoTelefones, PageTiposEndereco, Pessoa, Portador, Produto, StatusCartao, StatusConta, StatusImpressao, Telefone, TipoEndereco, TipoTelefone, BaseApi, CartaoApi, ContaApi, EnderecoApi, EstagioCartaoApi, OrigemComercialApi, PessoaApi, PortadorApi, ProdutoApi, StatusCartaoApi, StatusContaApi, StatusImpressaoApi, TelefoneApi, TipoEnderecoApi, TipoTelefoneApi, TokenApi) {
   'use strict';
 
   /**
@@ -127,6 +127,11 @@
      */
     PagePessoas: PagePessoas,
     /**
+     * The PagePortador model constructor.
+     * @property {module:model/PagePortador}
+     */
+    PagePortador: PagePortador,
+    /**
      * The PageStatusCartoes model constructor.
      * @property {module:model/PageStatusCartoes}
      */
@@ -141,6 +146,21 @@
      * @property {module:model/PageStatusImpressao}
      */
     PageStatusImpressao: PageStatusImpressao,
+    /**
+     * The PageTelefones model constructor.
+     * @property {module:model/PageTelefones}
+     */
+    PageTelefones: PageTelefones,
+    /**
+     * The PageTipoTelefones model constructor.
+     * @property {module:model/PageTipoTelefones}
+     */
+    PageTipoTelefones: PageTipoTelefones,
+    /**
+     * The PageTiposEndereco model constructor.
+     * @property {module:model/PageTiposEndereco}
+     */
+    PageTiposEndereco: PageTiposEndereco,
     /**
      * The Pessoa model constructor.
      * @property {module:model/Pessoa}
@@ -171,6 +191,21 @@
      * @property {module:model/StatusImpressao}
      */
     StatusImpressao: StatusImpressao,
+    /**
+     * The Telefone model constructor.
+     * @property {module:model/Telefone}
+     */
+    Telefone: Telefone,
+    /**
+     * The TipoEndereco model constructor.
+     * @property {module:model/TipoEndereco}
+     */
+    TipoEndereco: TipoEndereco,
+    /**
+     * The TipoTelefone model constructor.
+     * @property {module:model/TipoTelefone}
+     */
+    TipoTelefone: TipoTelefone,
     /**
      * The BaseApi service constructor.
      * @property {module:api/BaseApi}
@@ -207,6 +242,11 @@
      */
     PessoaApi: PessoaApi,
     /**
+     * The PortadorApi service constructor.
+     * @property {module:api/PortadorApi}
+     */
+    PortadorApi: PortadorApi,
+    /**
      * The ProdutoApi service constructor.
      * @property {module:api/ProdutoApi}
      */
@@ -226,6 +266,21 @@
      * @property {module:api/StatusImpressaoApi}
      */
     StatusImpressaoApi: StatusImpressaoApi,
+    /**
+     * The TelefoneApi service constructor.
+     * @property {module:api/TelefoneApi}
+     */
+    TelefoneApi: TelefoneApi,
+    /**
+     * The TipoEnderecoApi service constructor.
+     * @property {module:api/TipoEnderecoApi}
+     */
+    TipoEnderecoApi: TipoEnderecoApi,
+    /**
+     * The TipoTelefoneApi service constructor.
+     * @property {module:api/TipoTelefoneApi}
+     */
+    TipoTelefoneApi: TipoTelefoneApi,
     /**
      * The TokenApi service constructor.
      * @property {module:api/TokenApi}

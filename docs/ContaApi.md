@@ -4,9 +4,66 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id_conta}/alterar-vencimento | Alterar vencimento
 [**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id_conta} | Apresenta dados de uma determinada conta
-[**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor.
+[**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 
+
+<a name="alterarVencimentoUsingPUT"></a>
+# **alterarVencimentoUsingPUT**
+> Conta alterarVencimentoUsingPUT(idConta, novoDiaVencimento)
+
+Alterar vencimento
+
+Esse recurso permite alterar o vencimento de uma conta especifica.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.ContaApi()
+
+var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var novoDiaVencimento = 56; // {Integer} Novo dia de vencimento.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarVencimentoUsingPUT(idConta, novoDiaVencimento, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **novoDiaVencimento** | **Integer**| Novo dia de vencimento. | 
+
+### Return type
+
+[**Conta**](Conta.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="consultarUsingGET1"></a>
 # **consultarUsingGET1**
@@ -65,9 +122,9 @@ Name | Type | Description  | Notes
 # **listarUsingGET1**
 > Conta listarUsingGET1(opts)
 
-Lista contas existentes na base de dados do Emissor.
+Lista contas existentes na base de dados do Emissor
 
-Este m\u00C3\u00A9todo permite listar contas existentes na base de dados do Emissor.
+Este recurso permite listar contas existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -92,6 +149,7 @@ var opts = {
   'melhorDiaCompra': 56, // {Integer} Apresenta o melhor dia de compra.
   'dataStatusConta': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
   'dataCadastro': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+  'dataUltimaAlteracaoVencimento': new Pier.ModelDate(), // {ModelDate} Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
@@ -119,6 +177,7 @@ Name | Type | Description  | Notes
  **melhorDiaCompra** | **Integer**| Apresenta o melhor dia de compra. | [optional] 
  **dataStatusConta** | **ModelDate**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
  **dataCadastro** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **dataUltimaAlteracaoVencimento** | **ModelDate**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 
