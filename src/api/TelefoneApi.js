@@ -138,8 +138,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST1 operation.
-     * @callback module:api/TelefoneApi~salvarUsingPOST1Callback
+     * Callback function to receive the result of the salvarUsingPOST2 operation.
+     * @callback module:api/TelefoneApi~salvarUsingPOST2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Telefone} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -154,10 +154,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/TelefoneApi~salvarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TelefoneApi~salvarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Telefone}
      */
-    this.salvarUsingPOST1 = function(opts, callback) {
+    this.salvarUsingPOST2 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

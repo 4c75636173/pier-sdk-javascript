@@ -4,9 +4,80 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterarUsingPUT1**](PessoaApi.md#alterarUsingPUT1) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
 [**consultarUsingGET3**](PessoaApi.md#consultarUsingGET3) | **GET** /api/pessoas/{id_pessoa} | Apresenta os dados de uma determinada Pessoa
 [**listarUsingGET3**](PessoaApi.md#listarUsingGET3) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**salvarUsingPOST1**](PessoaApi.md#salvarUsingPOST1) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
 
+
+<a name="alterarUsingPUT1"></a>
+# **alterarUsingPUT1**
+> Pessoa alterarUsingPUT1(id, nome, tipo, opts)
+
+Atualiza os dados de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.PessoaApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+var nome = "nome_example"; // {String} Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+
+var tipo = "tipo_example"; // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+
+var opts = { 
+  'cpf': "cpf_example", // {String} N\u00C3\u00BAmero do CPF, quando PF.
+  'cnpj': "cnpj_example", // {String} N\u00C3\u00BAmero do CNPJ, quando PJ.
+  'dataNascimento': new Pier.ModelDate(), // {ModelDate} Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+  'sexo': "sexo_example" // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT1(id, nome, tipo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+ **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
+ **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
+ **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
+ **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
+ **dataNascimento** | **ModelDate**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+
+### Return type
+
+[**Pessoa**](Pessoa.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="consultarUsingGET3"></a>
 # **consultarUsingGET3**
@@ -29,7 +100,7 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.PessoaApi()
 
-var idPessoa = 789; // {Integer} ID da Origem Comercial
+var idPessoa = 789; // {Integer} ID da Pessoa
 
 
 var callback = function(error, data, response) {
@@ -46,7 +117,7 @@ api.consultarUsingGET3(idPessoa, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idPessoa** | **Integer**| ID da Origem Comercial | 
+ **idPessoa** | **Integer**| ID da Pessoa | 
 
 ### Return type
 
@@ -121,6 +192,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PagePessoas**](PagePessoas.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST1"></a>
+# **salvarUsingPOST1**
+> Pessoa salvarUsingPOST1(nome, tipo, opts)
+
+Realiza o cadastro de um nova Pessoa
+
+Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.PessoaApi()
+
+var nome = "nome_example"; // {String} Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+
+var tipo = "tipo_example"; // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+
+var opts = { 
+  'cpf': "cpf_example", // {String} N\u00C3\u00BAmero do CPF, quando PF.
+  'cnpj': "cnpj_example", // {String} N\u00C3\u00BAmero do CNPJ, quando PJ.
+  'dataNascimento': new Pier.ModelDate(), // {ModelDate} Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+  'sexo': "sexo_example" // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST1(nome, tipo, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nome** | **String**| Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;. | 
+ **tipo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica). | 
+ **cpf** | **String**| N\u00C3\u00BAmero do CPF, quando PF. | [optional] 
+ **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
+ **dataNascimento** | **ModelDate**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
+ **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+
+### Return type
+
+[**Pessoa**](Pessoa.md)
 
 ### Authorization
 

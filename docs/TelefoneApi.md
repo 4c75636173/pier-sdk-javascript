@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET6**](TelefoneApi.md#consultarUsingGET6) | **GET** /api/telefones/{id_telefone} | Apresenta os dados de um determinado Telefone
 [**listarUsingGET7**](TelefoneApi.md#listarUsingGET7) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**salvarUsingPOST1**](TelefoneApi.md#salvarUsingPOST1) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST2**](TelefoneApi.md#salvarUsingPOST2) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 <a name="consultarUsingGET6"></a>
@@ -132,9 +132,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST1"></a>
-# **salvarUsingPOST1**
-> Telefone salvarUsingPOST1(opts)
+<a name="salvarUsingPOST2"></a>
+# **salvarUsingPOST2**
+> Telefone salvarUsingPOST2(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -168,7 +168,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST1(opts, callback);
+api.salvarUsingPOST2(opts, callback);
 ```
 
 ### Parameters
