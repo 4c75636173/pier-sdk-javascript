@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id_conta}/alterar-vencimento | Alterar vencimento
 [**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id_conta} | Apresenta dados de uma determinada conta
+[**gerarCartaoUsingPUT**](ContaApi.md#gerarCartaoUsingPUT) | **PUT** /api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 
 
@@ -108,6 +109,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Conta**](Conta.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="gerarCartaoUsingPUT"></a>
+# **gerarCartaoUsingPUT**
+> CartaoImpressao gerarCartaoUsingPUT(idConta, idPessoa)
+
+Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.ContaApi()
+
+var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var idPessoa = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.gerarCartaoUsingPUT(idConta, idPessoa, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+
+### Return type
+
+[**CartaoImpressao**](CartaoImpressao.md)
 
 ### Authorization
 

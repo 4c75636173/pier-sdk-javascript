@@ -174,8 +174,8 @@ var opts = {
   'cidade': "cidade_example", // {String} Apresenta nome da cidade
   'uf': "uf_example", // {String} Apresenta sigla da Unidade Federativa
   'pais': "pais_example", // {String} Apresenta nome do Pais
-  'dataInclusao': new Date("2013-10-20T19:20:30+01:00"), // {Date} Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-  'dataUltimaAtualizacao': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+  'dataInclusao': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+  'dataUltimaAtualizacao': new Pier.ModelDate(), // {ModelDate} Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
@@ -206,8 +206,8 @@ Name | Type | Description  | Notes
  **cidade** | **String**| Apresenta nome da cidade | [optional] 
  **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
  **pais** | **String**| Apresenta nome do Pais | [optional] 
- **dataInclusao** | **Date**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
- **dataUltimaAtualizacao** | **Date**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
+ **dataInclusao** | **ModelDate**| Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o | [optional] 
+ **dataUltimaAtualizacao** | **ModelDate**| Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

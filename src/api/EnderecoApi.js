@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Endereco', '../model/PageEnderecos'], factory);
+    define(['../ApiClient', '../model/Endereco', '../model/ModelDate', '../model/PageEnderecos'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/PageEnderecos'));
+    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/ModelDate'), require('../model/PageEnderecos'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EnderecoApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.PageEnderecos);
+    root.Pier.EnderecoApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.ModelDate, root.Pier.PageEnderecos);
   }
-}(this, function(ApiClient, Endereco, PageEnderecos) {
+}(this, function(ApiClient, Endereco, ModelDate, PageEnderecos) {
   'use strict';
 
   /**
@@ -172,8 +172,8 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {Date} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-     * @param {Date} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+     * @param {module:model/ModelDate} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+     * @param {module:model/ModelDate} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/EnderecoApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response

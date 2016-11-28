@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Conta', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/Conta', '../model/CartaoImpressao', '../model/ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/CartaoImpressao'), require('../model/ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.ModelDate);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.CartaoImpressao, root.Pier.ModelDate);
   }
-}(this, function(ApiClient, Conta, ModelDate) {
+}(this, function(ApiClient, Conta, CartaoImpressao, ModelDate) {
   'use strict';
 
   /**
@@ -126,6 +126,58 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id_conta}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the gerarCartaoUsingPUT operation.
+     * @callback module:api/ContaApi~gerarCartaoUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CartaoImpressao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+     * @param {module:api/ContaApi~gerarCartaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CartaoImpressao}
+     */
+    this.gerarCartaoUsingPUT = function(idConta, idPessoa, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling gerarCartaoUsingPUT";
+      }
+
+      // verify the required parameter 'idPessoa' is set
+      if (idPessoa == undefined || idPessoa == null) {
+        throw "Missing the required parameter 'idPessoa' when calling gerarCartaoUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id_conta': idConta,
+        'id_pessoa': idPessoa
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CartaoImpressao;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
