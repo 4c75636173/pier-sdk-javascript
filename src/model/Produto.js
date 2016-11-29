@@ -1,0 +1,87 @@
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['../ApiClient'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(require('../ApiClient'));
+  } else {
+    // Browser globals (root is window)
+    if (!root.Pier) {
+      root.Pier = {};
+    }
+    root.Pier.Produto = factory(root.Pier.ApiClient);
+  }
+}(this, function(ApiClient) {
+  'use strict';
+
+  /**
+   * The Produto model module.
+   * @module model/Produto
+   * @version 2.0.0
+   */
+
+  /**
+   * Constructs a new <code>Produto</code>.
+   * Produto
+   * @alias module:model/Produto
+   * @class
+   * @param id
+   * @param nome
+   * @param status
+   */
+  var exports = function(id, nome, status) {
+
+    this['id'] = id;
+    this['nome'] = nome;
+    this['status'] = status;
+  };
+
+  /**
+   * Constructs a <code>Produto</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/Produto} obj Optional instance to populate.
+   * @return {module:model/Produto} The populated <code>Produto</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) { 
+      obj = obj || new exports();
+
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
+    }
+    return obj;
+  }
+
+
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
+
+  /**
+   * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+   * @member {Integer} status
+   */
+  exports.prototype['status'] = undefined;
+
+
+
+
+  return exports;
+}));
