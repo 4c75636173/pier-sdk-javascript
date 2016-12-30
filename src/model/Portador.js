@@ -39,7 +39,6 @@
 
 
 
-
   };
 
   /**
@@ -64,9 +63,6 @@
       }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
-      }
-      if (data.hasOwnProperty('idImagem')) {
-        obj['idImagem'] = ApiClient.convertToType(data['idImagem'], 'Integer');
       }
       if (data.hasOwnProperty('idParentesco')) {
         obj['idParentesco'] = ApiClient.convertToType(data['idParentesco'], 'Integer');
@@ -114,12 +110,6 @@
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
-
-  /**
-   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-   * @member {Integer} idImagem
-   */
-  exports.prototype['idImagem'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
