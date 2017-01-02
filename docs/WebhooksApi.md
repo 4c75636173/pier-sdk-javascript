@@ -4,15 +4,15 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT2**](WebhooksApi.md#alterarUsingPUT2) | **PUT** /api/webhooks | Alterar Webhook
+[**alterarUsingPUT3**](WebhooksApi.md#alterarUsingPUT3) | **PUT** /api/webhooks | Alterar Webhook
 [**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET10**](WebhooksApi.md#listarUsingGET10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST3**](WebhooksApi.md#salvarUsingPOST3) | **POST** /api/webhooks | Salvar Webhook
 
 
-<a name="alterarUsingPUT2"></a>
-# **alterarUsingPUT2**
-> WebHook alterarUsingPUT2(id, evento, metodo, url)
+<a name="alterarUsingPUT3"></a>
+# **alterarUsingPUT3**
+> WebHook alterarUsingPUT3(id, evento, metodo, url)
 
 Alterar Webhook
 
@@ -47,7 +47,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT2(id, evento, metodo, url, callback);
+api.alterarUsingPUT3(id, evento, metodo, url, callback);
 ```
 
 ### Parameters

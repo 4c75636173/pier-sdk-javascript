@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT2 operation.
-     * @callback module:api/WebhooksApi~alterarUsingPUT2Callback
+     * Callback function to receive the result of the alterarUsingPUT3 operation.
+     * @callback module:api/WebhooksApi~alterarUsingPUT3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -47,30 +47,30 @@
      * @param {module:model/ModelObject} evento Evento a ser chamado pelo WebHook
      * @param {module:model/ModelObject} metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~alterarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~alterarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.alterarUsingPUT2 = function(id, evento, metodo, url, callback) {
+    this.alterarUsingPUT3 = function(id, evento, metodo, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT3";
       }
 
       // verify the required parameter 'evento' is set
       if (evento == undefined || evento == null) {
-        throw "Missing the required parameter 'evento' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'evento' when calling alterarUsingPUT3";
       }
 
       // verify the required parameter 'metodo' is set
       if (metodo == undefined || metodo == null) {
-        throw "Missing the required parameter 'metodo' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'metodo' when calling alterarUsingPUT3";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'url' when calling alterarUsingPUT3";
       }
 
 
