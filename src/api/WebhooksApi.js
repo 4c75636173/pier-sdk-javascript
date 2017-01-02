@@ -110,21 +110,21 @@
     /**
      * Consultar Webhook
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-     * @param {Integer} idWebhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
      * @param {module:api/WebhooksApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.consultarUsingGET9 = function(idWebhook, callback) {
+    this.consultarUsingGET9 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idWebhook' is set
-      if (idWebhook == undefined || idWebhook == null) {
-        throw "Missing the required parameter 'idWebhook' when calling consultarUsingGET9";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
       }
 
 
       var pathParams = {
-        'id_webhook': idWebhook
+        'id': id
       };
       var queryParams = {
       };
@@ -139,7 +139,7 @@
       var returnType = WebHook;
 
       return this.apiClient.callApi(
-        '/api/webhooks/{id_webhook}', 'GET',
+        '/api/webhooks/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

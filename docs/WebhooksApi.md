@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT2**](WebhooksApi.md#alterarUsingPUT2) | **PUT** /api/webhooks | Alterar Webhook
-[**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id_webhook} | Consultar Webhook
+[**consultarUsingGET9**](WebhooksApi.md#consultarUsingGET9) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET10**](WebhooksApi.md#listarUsingGET10) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST3**](WebhooksApi.md#salvarUsingPOST3) | **POST** /api/webhooks | Salvar Webhook
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarUsingGET9"></a>
 # **consultarUsingGET9**
-> WebHook consultarUsingGET9(idWebhook)
+> WebHook consultarUsingGET9(id)
 
 Consultar Webhook
 
@@ -93,7 +93,7 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.WebhooksApi()
 
-var idWebhook = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
 
 
 var callback = function(error, data, response) {
@@ -103,14 +103,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(idWebhook, callback);
+api.consultarUsingGET9(id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idWebhook** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id). | 
 
 ### Return type
 
