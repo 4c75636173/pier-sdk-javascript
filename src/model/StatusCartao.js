@@ -26,22 +26,22 @@
    * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
    * @alias module:model/StatusCartao
    * @class
-   * @param flagCancelaCartao
-   * @param flagCobraTarifa
    * @param id
-   * @param idStatusDestinoConta
-   * @param idStatusDestinoDesbloqueio
    * @param nome
+   * @param flagCancelaCartao
+   * @param idStatusDestinoDesbloqueio
+   * @param idStatusDestinoConta
+   * @param flagCobraTarifa
    */
-  var exports = function(flagCancelaCartao, flagCobraTarifa, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome) {
+  var exports = function(id, nome, flagCancelaCartao, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa) {
 
+    this['id'] = id;
+    this['nome'] = nome;
     this['flagCancelaCartao'] = flagCancelaCartao;
 
-    this['flagCobraTarifa'] = flagCobraTarifa;
-    this['id'] = id;
-    this['idStatusDestinoConta'] = idStatusDestinoConta;
     this['idStatusDestinoDesbloqueio'] = idStatusDestinoDesbloqueio;
-    this['nome'] = nome;
+    this['idStatusDestinoConta'] = idStatusDestinoConta;
+    this['flagCobraTarifa'] = flagCobraTarifa;
   };
 
   /**
@@ -55,31 +55,43 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
       if (data.hasOwnProperty('flagCancelaCartao')) {
         obj['flagCancelaCartao'] = ApiClient.convertToType(data['flagCancelaCartao'], 'Integer');
       }
       if (data.hasOwnProperty('flagCancelaNoDesbloqueio')) {
         obj['flagCancelaNoDesbloqueio'] = ApiClient.convertToType(data['flagCancelaNoDesbloqueio'], 'Integer');
       }
-      if (data.hasOwnProperty('flagCobraTarifa')) {
-        obj['flagCobraTarifa'] = ApiClient.convertToType(data['flagCobraTarifa'], 'Integer');
-      }
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      if (data.hasOwnProperty('idStatusDestinoDesbloqueio')) {
+        obj['idStatusDestinoDesbloqueio'] = ApiClient.convertToType(data['idStatusDestinoDesbloqueio'], 'Integer');
       }
       if (data.hasOwnProperty('idStatusDestinoConta')) {
         obj['idStatusDestinoConta'] = ApiClient.convertToType(data['idStatusDestinoConta'], 'Integer');
       }
-      if (data.hasOwnProperty('idStatusDestinoDesbloqueio')) {
-        obj['idStatusDestinoDesbloqueio'] = ApiClient.convertToType(data['idStatusDestinoDesbloqueio'], 'Integer');
-      }
-      if (data.hasOwnProperty('nome')) {
-        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      if (data.hasOwnProperty('flagCobraTarifa')) {
+        obj['flagCobraTarifa'] = ApiClient.convertToType(data['flagCobraTarifa'], 'Integer');
       }
     }
     return obj;
   }
 
+
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
+
+  /**
+   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
 
   /**
    * Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -94,16 +106,10 @@
   exports.prototype['flagCancelaNoDesbloqueio'] = undefined;
 
   /**
-   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-   * @member {Integer} flagCobraTarifa
+   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+   * @member {Integer} idStatusDestinoDesbloqueio
    */
-  exports.prototype['flagCobraTarifa'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
+  exports.prototype['idStatusDestinoDesbloqueio'] = undefined;
 
   /**
    * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
@@ -112,16 +118,10 @@
   exports.prototype['idStatusDestinoConta'] = undefined;
 
   /**
-   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
-   * @member {Integer} idStatusDestinoDesbloqueio
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+   * @member {Integer} flagCobraTarifa
    */
-  exports.prototype['idStatusDestinoDesbloqueio'] = undefined;
-
-  /**
-   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
-   * @member {String} nome
-   */
-  exports.prototype['nome'] = undefined;
+  exports.prototype['flagCobraTarifa'] = undefined;
 
 
 

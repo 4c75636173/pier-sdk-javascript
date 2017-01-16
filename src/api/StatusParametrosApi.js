@@ -43,21 +43,21 @@
     /**
      * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarEstagioCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstagioCartao}
      */
-    this.consultarEstagioCartaoUsingGET = function(idEstagioCartao, callback) {
+    this.consultarEstagioCartaoUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idEstagioCartao' is set
-      if (idEstagioCartao == undefined || idEstagioCartao == null) {
-        throw "Missing the required parameter 'idEstagioCartao' when calling consultarEstagioCartaoUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarEstagioCartaoUsingGET";
       }
 
 
       var pathParams = {
-        'id_estagio_cartao': idEstagioCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -72,7 +72,7 @@
       var returnType = EstagioCartao;
 
       return this.apiClient.callApi(
-        '/api/estagios-cartoes/{id_estagio_cartao}', 'GET',
+        '/api/estagios-cartoes/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -89,21 +89,21 @@
     /**
      * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarStatusCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusCartao}
      */
-    this.consultarStatusCartaoUsingGET = function(idStatusCartao, callback) {
+    this.consultarStatusCartaoUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idStatusCartao' is set
-      if (idStatusCartao == undefined || idStatusCartao == null) {
-        throw "Missing the required parameter 'idStatusCartao' when calling consultarStatusCartaoUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarStatusCartaoUsingGET";
       }
 
 
       var pathParams = {
-        'id_status_cartao': idStatusCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -118,7 +118,7 @@
       var returnType = StatusCartao;
 
       return this.apiClient.callApi(
-        '/api/status-cartoes/{id_status_cartao}', 'GET',
+        '/api/status-cartoes/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -135,21 +135,21 @@
     /**
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
      * @param {module:api/StatusParametrosApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusConta}
      */
-    this.consultarUsingGET4 = function(idStatusConta, callback) {
+    this.consultarUsingGET4 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idStatusConta' is set
-      if (idStatusConta == undefined || idStatusConta == null) {
-        throw "Missing the required parameter 'idStatusConta' when calling consultarUsingGET4";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
       }
 
 
       var pathParams = {
-        'id_status_conta': idStatusConta
+        'id': id
       };
       var queryParams = {
       };
@@ -164,7 +164,7 @@
       var returnType = StatusConta;
 
       return this.apiClient.callApi(
-        '/api/status-contas/{id_status_conta}', 'GET',
+        '/api/status-contas/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -181,21 +181,21 @@
     /**
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressao}
      */
-    this.consultarUsingGET5 = function(idStatusImpressao, callback) {
+    this.consultarUsingGET5 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idStatusImpressao' is set
-      if (idStatusImpressao == undefined || idStatusImpressao == null) {
-        throw "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET5";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
       }
 
 
       var pathParams = {
-        'id_status_impressao': idStatusImpressao
+        'id': id
       };
       var queryParams = {
       };
@@ -210,7 +210,7 @@
       var returnType = StatusImpressao;
 
       return this.apiClient.callApi(
-        '/api/status-impressoes/{id_status_impressao}', 'GET',
+        '/api/status-impressoes/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -228,10 +228,10 @@
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-     * @param {String} opts.nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param {String} opts.nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {module:api/StatusParametrosApi~listarEstagiosCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstagiosCartoes}
      */
@@ -243,10 +243,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'id': opts['id'],
-        'nome': opts['nome'],
         'page': opts['page'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
       };
       var headerParams = {
       };
@@ -277,6 +277,8 @@
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
      * @param {String} opts.nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
      * @param {Integer} opts.flagCancelaCartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -284,8 +286,6 @@
      * @param {Integer} opts.idStatusDestinoDesbloqueio Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
      * @param {Integer} opts.idStatusDestinoConta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
      * @param {Integer} opts.flagCobraTarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/StatusParametrosApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusCartoes}
      */
@@ -297,15 +297,15 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'nome': opts['nome'],
         'flagCancelaCartao': opts['flagCancelaCartao'],
         'flagCancelaNoDesbloqueio': opts['flagCancelaNoDesbloqueio'],
         'idStatusDestinoDesbloqueio': opts['idStatusDestinoDesbloqueio'],
         'idStatusDestinoConta': opts['idStatusDestinoConta'],
-        'flagCobraTarifa': opts['flagCobraTarifa'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'flagCobraTarifa': opts['flagCobraTarifa']
       };
       var headerParams = {
       };
@@ -336,12 +336,12 @@
      * Lista os Status Contas cadastrados para o Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
      * @param {String} opts.nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
      * @param {Integer} opts.flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/StatusParametrosApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContas}
      */
@@ -353,12 +353,12 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'nome': opts['nome'],
         'flagAlteraLimite': opts['flagAlteraLimite'],
-        'mensagemConsultaNegada': opts['mensagemConsultaNegada'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'mensagemConsultaNegada': opts['mensagemConsultaNegada']
       };
       var headerParams = {
       };
@@ -389,10 +389,10 @@
      * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-     * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
      * @param {module:api/StatusParametrosApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressao}
      */
@@ -404,10 +404,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'id': opts['id'],
-        'nome': opts['nome'],
         'page': opts['page'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
       };
       var headerParams = {
       };

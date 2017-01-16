@@ -32,13 +32,13 @@
    */
   var exports = function(id, nome, tipo) {
 
-
-
-
     this['id'] = id;
     this['nome'] = nome;
-
     this['tipo'] = tipo;
+
+
+
+
   };
 
   /**
@@ -52,49 +52,31 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('cnpj')) {
-        obj['cnpj'] = ApiClient.convertToType(data['cnpj'], 'String');
-      }
-      if (data.hasOwnProperty('cpf')) {
-        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
-      }
-      if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'Date');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
-      if (data.hasOwnProperty('sexo')) {
-        obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
-      }
       if (data.hasOwnProperty('tipo')) {
         obj['tipo'] = ApiClient.convertToType(data['tipo'], 'String');
+      }
+      if (data.hasOwnProperty('cpf')) {
+        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
+      }
+      if (data.hasOwnProperty('cnpj')) {
+        obj['cnpj'] = ApiClient.convertToType(data['cnpj'], 'String');
+      }
+      if (data.hasOwnProperty('dataNascimento')) {
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'Date');
+      }
+      if (data.hasOwnProperty('sexo')) {
+        obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
       }
     }
     return obj;
   }
 
-
-  /**
-   * N\u00C3\u00BAmero do CNPJ, quando PJ.
-   * @member {String} cnpj
-   */
-  exports.prototype['cnpj'] = undefined;
-
-  /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
-   * @member {String} cpf
-   */
-  exports.prototype['cpf'] = undefined;
-
-  /**
-   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-   * @member {Date} dataNascimento
-   */
-  exports.prototype['dataNascimento'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -109,16 +91,34 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
-   * @member {String} sexo
-   */
-  exports.prototype['sexo'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
    * @member {String} tipo
    */
   exports.prototype['tipo'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero do CPF, quando PF.
+   * @member {String} cpf
+   */
+  exports.prototype['cpf'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @member {String} cnpj
+   */
+  exports.prototype['cnpj'] = undefined;
+
+  /**
+   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+   * @member {Date} dataNascimento
+   */
+  exports.prototype['dataNascimento'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * @member {String} sexo
+   */
+  exports.prototype['sexo'] = undefined;
 
 
 

@@ -33,9 +33,9 @@ var apiInstance = new Pier.WebhooksApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo identificador do Webhook
 
-var evento = new Pier.ModelObject(); // {ModelObject} Evento a ser chamado pelo WebHook
+var evento = "evento_example"; // {String} Evento a ser chamado pelo WebHook
 
-var metodo = new Pier.ModelObject(); // {ModelObject} M\u00C3\u00A9todo que a ser chamado pelo WebHook
+var metodo = "metodo_example"; // {String} M\u00C3\u00A9todo que a ser chamado pelo WebHook
 
 var url = "url_example"; // {String} URL que a ser consumida pelo WebHook
 
@@ -55,8 +55,8 @@ api.alterarUsingPUT3(id, evento, metodo, url, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
- **evento** | [**ModelObject**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**ModelObject**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 ### Return type
@@ -147,12 +147,12 @@ access_token.apiKey = "YOUR API KEY"
 var apiInstance = new Pier.WebhooksApi()
 
 var opts = { 
-  'id': 789, // {Integer} Id do WebHook
-  'evento': new Pier.ModelObject(), // {ModelObject} Evento a ser chamado pelo WebHook
-  'metodo': new Pier.ModelObject(), // {ModelObject} M\u00C3\u00A9todo que a ser chamado pelo WebHook
-  'url': "url_example", // {String} URL que a ser consumida pelo WebHook
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} Id do WebHook
+  'evento': "evento_example", // {String} Evento a ser chamado pelo WebHook
+  'metodo': "metodo_example", // {String} M\u00C3\u00A9todo que a ser chamado pelo WebHook
+  'url': "url_example" // {String} URL que a ser consumida pelo WebHook
 };
 
 var callback = function(error, data, response) {
@@ -169,12 +169,12 @@ api.listarUsingGET10(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Id do WebHook | [optional] 
- **evento** | [**ModelObject**](.md)| Evento a ser chamado pelo WebHook | [optional] 
- **metodo** | [**ModelObject**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
- **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| Id do WebHook | [optional] 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | [optional] 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
+ **url** | **String**| URL que a ser consumida pelo WebHook | [optional] 
 
 ### Return type
 
@@ -210,9 +210,9 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.WebhooksApi()
 
-var evento = new Pier.ModelObject(); // {ModelObject} Evento a ser chamado pelo WebHook
+var evento = "evento_example"; // {String} Evento a ser chamado pelo WebHook
 
-var metodo = new Pier.ModelObject(); // {ModelObject} M\u00C3\u00A9todo que a ser chamado pelo WebHook
+var metodo = "metodo_example"; // {String} M\u00C3\u00A9todo que a ser chamado pelo WebHook
 
 var url = "url_example"; // {String} URL que a ser consumida pelo WebHook
 
@@ -231,8 +231,8 @@ api.salvarUsingPOST3(evento, metodo, url, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **evento** | [**ModelObject**](.md)| Evento a ser chamado pelo WebHook | 
- **metodo** | [**ModelObject**](.md)| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
+ **evento** | **String**| Evento a ser chamado pelo WebHook | 
+ **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
 
 ### Return type

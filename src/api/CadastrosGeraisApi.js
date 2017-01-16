@@ -239,21 +239,21 @@
     /**
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
      * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idOrigemComercial ID da Origem Comercial
+     * @param {Integer} id ID da Origem Comercial
      * @param {module:api/CadastrosGeraisApi~consultarOrigemComercialUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OrigemComercial}
      */
-    this.consultarOrigemComercialUsingGET = function(idOrigemComercial, callback) {
+    this.consultarOrigemComercialUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idOrigemComercial' is set
-      if (idOrigemComercial == undefined || idOrigemComercial == null) {
-        throw "Missing the required parameter 'idOrigemComercial' when calling consultarOrigemComercialUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarOrigemComercialUsingGET";
       }
 
 
       var pathParams = {
-        'id_origem_comercial': idOrigemComercial
+        'id': id
       };
       var queryParams = {
       };
@@ -268,7 +268,7 @@
       var returnType = OrigemComercial;
 
       return this.apiClient.callApi(
-        '/api/origens-comerciais/{id_origem_comercial}', 'GET',
+        '/api/origens-comerciais/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -285,21 +285,21 @@
     /**
      * Apresenta os dados de um determinado Produto
      * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
      * @param {module:api/CadastrosGeraisApi~consultarProdutoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Produto}
      */
-    this.consultarProdutoUsingGET = function(idProduto, callback) {
+    this.consultarProdutoUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idProduto' is set
-      if (idProduto == undefined || idProduto == null) {
-        throw "Missing the required parameter 'idProduto' when calling consultarProdutoUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarProdutoUsingGET";
       }
 
 
       var pathParams = {
-        'id_produto': idProduto
+        'id': id
       };
       var queryParams = {
       };
@@ -314,7 +314,7 @@
       var returnType = Produto;
 
       return this.apiClient.callApi(
-        '/api/produtos/{id_produto}', 'GET',
+        '/api/produtos/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -331,21 +331,21 @@
     /**
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {module:api/CadastrosGeraisApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Endereco}
      */
-    this.consultarUsingGET2 = function(idEndereco, callback) {
+    this.consultarUsingGET2 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idEndereco' is set
-      if (idEndereco == undefined || idEndereco == null) {
-        throw "Missing the required parameter 'idEndereco' when calling consultarUsingGET2";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
       }
 
 
       var pathParams = {
-        'id_endereco': idEndereco
+        'id': id
       };
       var queryParams = {
       };
@@ -360,7 +360,7 @@
       var returnType = Endereco;
 
       return this.apiClient.callApi(
-        '/api/enderecos/{id_endereco}', 'GET',
+        '/api/enderecos/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -377,21 +377,21 @@
     /**
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-     * @param {Integer} idPessoa ID da Pessoa
+     * @param {Integer} id ID da Pessoa
      * @param {module:api/CadastrosGeraisApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
      */
-    this.consultarUsingGET3 = function(idPessoa, callback) {
+    this.consultarUsingGET3 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idPessoa' is set
-      if (idPessoa == undefined || idPessoa == null) {
-        throw "Missing the required parameter 'idPessoa' when calling consultarUsingGET3";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
       }
 
 
       var pathParams = {
-        'id_pessoa': idPessoa
+        'id': id
       };
       var queryParams = {
       };
@@ -406,7 +406,7 @@
       var returnType = Pessoa;
 
       return this.apiClient.callApi(
-        '/api/pessoas/{id_pessoa}', 'GET',
+        '/api/pessoas/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -423,21 +423,21 @@
     /**
      * Apresenta os dados de um determinado Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
      * @param {module:api/CadastrosGeraisApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Telefone}
      */
-    this.consultarUsingGET6 = function(idTelefone, callback) {
+    this.consultarUsingGET6 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idTelefone' is set
-      if (idTelefone == undefined || idTelefone == null) {
-        throw "Missing the required parameter 'idTelefone' when calling consultarUsingGET6";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
       }
 
 
       var pathParams = {
-        'id_telefone': idTelefone
+        'id': id
       };
       var queryParams = {
       };
@@ -452,7 +452,7 @@
       var returnType = Telefone;
 
       return this.apiClient.callApi(
-        '/api/telefones/{id_telefone}', 'GET',
+        '/api/telefones/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -469,21 +469,21 @@
     /**
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
      * @param {module:api/CadastrosGeraisApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEndereco}
      */
-    this.consultarUsingGET7 = function(idTipoEndereco, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idTipoEndereco' is set
-      if (idTipoEndereco == undefined || idTipoEndereco == null) {
-        throw "Missing the required parameter 'idTipoEndereco' when calling consultarUsingGET7";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 
       var pathParams = {
-        'id_tipo_endereco': idTipoEndereco
+        'id': id
       };
       var queryParams = {
       };
@@ -498,7 +498,7 @@
       var returnType = TipoEndereco;
 
       return this.apiClient.callApi(
-        '/api/tipos-endereco/{id_tipo_endereco}', 'GET',
+        '/api/tipos-enderecos/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -515,21 +515,21 @@
     /**
      * Apresenta os dados de um determinado Tipo de Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
      * @param {module:api/CadastrosGeraisApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTelefone}
      */
-    this.consultarUsingGET8 = function(idTipoTelefone, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idTipoTelefone' is set
-      if (idTipoTelefone == undefined || idTipoTelefone == null) {
-        throw "Missing the required parameter 'idTipoTelefone' when calling consultarUsingGET8";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 
       var pathParams = {
-        'id_tipo_telefone': idTipoTelefone
+        'id': id
       };
       var queryParams = {
       };
@@ -544,7 +544,7 @@
       var returnType = TipoTelefone;
 
       return this.apiClient.callApi(
-        '/api/tipos-telefones/{id_tipo_telefone}', 'GET',
+        '/api/tipos-telefones/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -562,11 +562,11 @@
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
      * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id Id da origem comercial
      * @param {String} opts.nome Nome da origem comercial
      * @param {Integer} opts.status Status da origem comercial
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarOrigensComerciaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOrigensComerciais}
      */
@@ -578,11 +578,11 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'nome': opts['nome'],
-        'status': opts['status'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'status': opts['status']
       };
       var headerParams = {
       };
@@ -613,11 +613,11 @@
      * Lista os Produtos do Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
      * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
      * @param {Integer} opts.status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarProdutosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ListaProdutos}
      */
@@ -629,11 +629,11 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'nome': opts['nome'],
-        'status': opts['status'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'status': opts['status']
       };
       var headerParams = {
       };
@@ -664,6 +664,8 @@
      * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
      * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -678,8 +680,6 @@
      * @param {String} opts.pais Apresenta nome do Pais
      * @param {module:model/ModelDate} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @param {module:model/ModelDate} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecos}
      */
@@ -691,6 +691,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'idPessoa': opts['idPessoa'],
         'idTipoEndereco': opts['idTipoEndereco'],
@@ -704,9 +706,7 @@
         'uf': opts['uf'],
         'pais': opts['pais'],
         'dataInclusao': opts['dataInclusao'],
-        'dataUltimaAtualizacao': opts['dataUltimaAtualizacao'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'dataUltimaAtualizacao': opts['dataUltimaAtualizacao']
       };
       var headerParams = {
       };
@@ -737,6 +737,8 @@
      * Lista as Pessoas cadastradas no Emissor
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
      * @param {String} opts.nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
      * @param {String} opts.tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
@@ -744,8 +746,6 @@
      * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
      * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
      * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoas}
      */
@@ -757,15 +757,15 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'nome': opts['nome'],
         'tipo': opts['tipo'],
         'cpf': opts['cpf'],
         'cnpj': opts['cnpj'],
         'dataNascimento': opts['dataNascimento'],
-        'sexo': opts['sexo'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'sexo': opts['sexo']
       };
       var headerParams = {
       };
@@ -796,6 +796,8 @@
      * Lista os Portadores existentes
      * Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -807,8 +809,6 @@
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortador}
      */
@@ -820,6 +820,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'idConta': opts['idConta'],
         'idProduto': opts['idProduto'],
         'idPessoa': opts['idPessoa'],
@@ -830,9 +832,7 @@
         'idTipoCartao': opts['idTipoCartao'],
         'flagAtivo': opts['flagAtivo'],
         'dataCadastroPortador': opts['dataCadastroPortador'],
-        'dataCancelamentoPortador': opts['dataCancelamentoPortador'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'dataCancelamentoPortador': opts['dataCancelamentoPortador']
       };
       var headerParams = {
       };
@@ -863,6 +863,8 @@
      * Lista os Telefones cadastrados no Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
      * @param {Integer} opts.idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
      * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -870,8 +872,6 @@
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
      * @param {Integer} opts.status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CadastrosGeraisApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefones}
      */
@@ -883,15 +883,15 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'idTipoTelefone': opts['idTipoTelefone'],
         'idPessoa': opts['idPessoa'],
         'ddd': opts['ddd'],
         'telefone': opts['telefone'],
         'ramal': opts['ramal'],
-        'status': opts['status'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'status': opts['status']
       };
       var headerParams = {
       };
@@ -922,10 +922,10 @@
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-     * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+     * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
      * @param {module:api/CadastrosGeraisApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTiposEndereco}
      */
@@ -937,10 +937,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'id': opts['id'],
-        'nome': opts['nome'],
         'page': opts['page'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
       };
       var headerParams = {
       };
@@ -953,7 +953,7 @@
       var returnType = PageTiposEndereco;
 
       return this.apiClient.callApi(
-        '/api/tipos-endereco', 'GET',
+        '/api/tipos-enderecos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -971,10 +971,10 @@
      * Lista os Tipos de Telefones
      * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-     * @param {String} opts.nome Nome do Tipo do Telefone
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @param {String} opts.nome Nome do Tipo do Telefone
      * @param {module:api/CadastrosGeraisApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefones}
      */
@@ -986,10 +986,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'id': opts['id'],
-        'nome': opts['nome'],
         'page': opts['page'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
       };
       var headerParams = {
       };

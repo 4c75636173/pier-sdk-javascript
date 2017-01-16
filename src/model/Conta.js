@@ -52,20 +52,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('dataCadastro')) {
-        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
-      }
-      if (data.hasOwnProperty('dataStatusConta')) {
-        obj['dataStatusConta'] = ApiClient.convertToType(data['dataStatusConta'], 'Date');
-      }
-      if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
-        obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
-      }
-      if (data.hasOwnProperty('diaVencimento')) {
-        obj['diaVencimento'] = ApiClient.convertToType(data['diaVencimento'], 'Integer');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
       if (data.hasOwnProperty('idOrigemComercial')) {
         obj['idOrigemComercial'] = ApiClient.convertToType(data['idOrigemComercial'], 'Integer');
@@ -73,14 +64,23 @@
       if (data.hasOwnProperty('idPessoa')) {
         obj['idPessoa'] = ApiClient.convertToType(data['idPessoa'], 'Integer');
       }
-      if (data.hasOwnProperty('idProduto')) {
-        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
-      }
       if (data.hasOwnProperty('idStatusConta')) {
         obj['idStatusConta'] = ApiClient.convertToType(data['idStatusConta'], 'Integer');
       }
+      if (data.hasOwnProperty('diaVencimento')) {
+        obj['diaVencimento'] = ApiClient.convertToType(data['diaVencimento'], 'Integer');
+      }
       if (data.hasOwnProperty('melhorDiaCompra')) {
         obj['melhorDiaCompra'] = ApiClient.convertToType(data['melhorDiaCompra'], 'Integer');
+      }
+      if (data.hasOwnProperty('dataStatusConta')) {
+        obj['dataStatusConta'] = ApiClient.convertToType(data['dataStatusConta'], 'Date');
+      }
+      if (data.hasOwnProperty('dataCadastro')) {
+        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
+      }
+      if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
+        obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
       }
     }
     return obj;
@@ -88,34 +88,16 @@
 
 
   /**
-   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   * @member {Date} dataCadastro
-   */
-  exports.prototype['dataCadastro'] = undefined;
-
-  /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-   * @member {Date} dataStatusConta
-   */
-  exports.prototype['dataStatusConta'] = undefined;
-
-  /**
-   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   * @member {Date} dataUltimaAlteracaoVencimento
-   */
-  exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
-
-  /**
-   * Apresenta o dia de vencimento.
-   * @member {Integer} diaVencimento
-   */
-  exports.prototype['diaVencimento'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+   * @member {Integer} idProduto
+   */
+  exports.prototype['idProduto'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -130,22 +112,40 @@
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-   * @member {Integer} idProduto
-   */
-  exports.prototype['idProduto'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
+   * Apresenta o dia de vencimento.
+   * @member {Integer} diaVencimento
+   */
+  exports.prototype['diaVencimento'] = undefined;
+
+  /**
    * Apresenta o melhor dia de compra.
    * @member {Integer} melhorDiaCompra
    */
   exports.prototype['melhorDiaCompra'] = undefined;
+
+  /**
+   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+   * @member {Date} dataStatusConta
+   */
+  exports.prototype['dataStatusConta'] = undefined;
+
+  /**
+   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   * @member {Date} dataCadastro
+   */
+  exports.prototype['dataCadastro'] = undefined;
+
+  /**
+   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   * @member {Date} dataUltimaAlteracaoVencimento
+   */
+  exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
 
 

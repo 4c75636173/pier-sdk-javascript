@@ -45,25 +45,19 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('criptogramaResposta')) {
-        obj['criptogramaResposta'] = ApiClient.convertToType(data['criptogramaResposta'], 'String');
-      }
       if (data.hasOwnProperty('statusCartao')) {
         obj['statusCartao'] = ApiClient.convertToType(data['statusCartao'], 'String');
       }
       if (data.hasOwnProperty('statusConta')) {
         obj['statusConta'] = ApiClient.convertToType(data['statusConta'], 'String');
       }
+      if (data.hasOwnProperty('criptogramaResposta')) {
+        obj['criptogramaResposta'] = ApiClient.convertToType(data['criptogramaResposta'], 'String');
+      }
     }
     return obj;
   }
 
-
-  /**
-   * Criptograma de resposta
-   * @member {String} criptogramaResposta
-   */
-  exports.prototype['criptogramaResposta'] = undefined;
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
@@ -76,6 +70,12 @@
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
+
+  /**
+   * Criptograma de resposta
+   * @member {String} criptogramaResposta
+   */
+  exports.prototype['criptogramaResposta'] = undefined;
 
 
 

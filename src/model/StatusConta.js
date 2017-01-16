@@ -26,16 +26,16 @@
    * Status Conta
    * @alias module:model/StatusConta
    * @class
-   * @param flagAlteraLimite
    * @param id
    * @param nome
+   * @param flagAlteraLimite
    */
-  var exports = function(flagAlteraLimite, id, nome) {
+  var exports = function(id, nome, flagAlteraLimite) {
 
-    this['flagAlteraLimite'] = flagAlteraLimite;
     this['id'] = id;
-
     this['nome'] = nome;
+    this['flagAlteraLimite'] = flagAlteraLimite;
+
   };
 
   /**
@@ -49,28 +49,22 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('flagAlteraLimite')) {
-        obj['flagAlteraLimite'] = ApiClient.convertToType(data['flagAlteraLimite'], 'Integer');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('mensagemConsultaNegada')) {
-        obj['mensagemConsultaNegada'] = ApiClient.convertToType(data['mensagemConsultaNegada'], 'String');
-      }
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
+      if (data.hasOwnProperty('flagAlteraLimite')) {
+        obj['flagAlteraLimite'] = ApiClient.convertToType(data['flagAlteraLimite'], 'Integer');
+      }
+      if (data.hasOwnProperty('mensagemConsultaNegada')) {
+        obj['mensagemConsultaNegada'] = ApiClient.convertToType(data['mensagemConsultaNegada'], 'String');
       }
     }
     return obj;
   }
 
-
-  /**
-   * Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-   * @member {Integer} flagAlteraLimite
-   */
-  exports.prototype['flagAlteraLimite'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
@@ -79,16 +73,22 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-   * @member {String} mensagemConsultaNegada
-   */
-  exports.prototype['mensagemConsultaNegada'] = undefined;
-
-  /**
    * Nome atribu\u00C3\u00ADdo ao Status da Conta.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagAlteraLimite
+   */
+  exports.prototype['flagAlteraLimite'] = undefined;
+
+  /**
+   * Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+   * @member {String} mensagemConsultaNegada
+   */
+  exports.prototype['mensagemConsultaNegada'] = undefined;
 
 
 

@@ -26,15 +26,15 @@
    * Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
    * @alias module:model/WebHook
    * @class
-   * @param evento
    * @param id
+   * @param evento
    * @param metodo
    * @param url
    */
-  var exports = function(evento, id, metodo, url) {
+  var exports = function(id, evento, metodo, url) {
 
-    this['evento'] = evento;
     this['id'] = id;
+    this['evento'] = evento;
     this['metodo'] = metodo;
     this['url'] = url;
   };
@@ -50,11 +50,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('evento')) {
-        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
+      if (data.hasOwnProperty('evento')) {
+        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
       }
       if (data.hasOwnProperty('metodo')) {
         obj['metodo'] = ApiClient.convertToType(data['metodo'], 'String');
@@ -68,16 +68,16 @@
 
 
   /**
-   * Evento a ser chamado pelo WebHook
-   * @member {module:model/WebHook.EventoEnum} evento
-   */
-  exports.prototype['evento'] = undefined;
-
-  /**
    * Id do WebHook
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
+
+  /**
+   * Evento a ser chamado pelo WebHook
+   * @member {module:model/WebHook.EventoEnum} evento
+   */
+  exports.prototype['evento'] = undefined;
 
   /**
    * M\u00C3\u00A9todo que a ser chamado pelo WebHook

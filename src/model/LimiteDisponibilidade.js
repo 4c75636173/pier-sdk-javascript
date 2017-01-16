@@ -27,50 +27,50 @@
    * @alias module:model/LimiteDisponibilidade
    * @class
    * @param id
-   * @param limiteCompra
-   * @param limiteConsignado
    * @param limiteGlobal
+   * @param limiteCompra
+   * @param limiteParcelado
+   * @param limiteParcelas
+   * @param limiteSaqueGlobal
+   * @param limiteSaquePeriodo
+   * @param limiteConsignado
    * @param limiteInternacionalCompra
    * @param limiteInternacionalParcelado
    * @param limiteInternacionalParcelas
    * @param limiteInternacionalSaqueGlobal
    * @param limiteInternacionalSaquePeriodo
-   * @param limiteParcelado
-   * @param limiteParcelas
-   * @param limiteSaqueGlobal
-   * @param limiteSaquePeriodo
-   * @param saldoDisponivelCompra
-   * @param saldoDisponivelCompraInternacional
    * @param saldoDisponivelGlobal
+   * @param saldoDisponivelCompra
    * @param saldoDisponivelParcelado
    * @param saldoDisponivelParcelas
    * @param saldoDisponivelSaque
-   * @param saldoDisponivelSaqueInternacional
    * @param saldoPontosFidelidade
+   * @param saldoDisponivelCompraInternacional
+   * @param saldoDisponivelSaqueInternacional
    */
-  var exports = function(id, limiteCompra, limiteConsignado, limiteGlobal, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, saldoDisponivelCompra, saldoDisponivelCompraInternacional, saldoDisponivelGlobal, saldoDisponivelParcelado, saldoDisponivelParcelas, saldoDisponivelSaque, saldoDisponivelSaqueInternacional, saldoPontosFidelidade) {
+  var exports = function(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, saldoDisponivelGlobal, saldoDisponivelCompra, saldoDisponivelParcelado, saldoDisponivelParcelas, saldoDisponivelSaque, saldoPontosFidelidade, saldoDisponivelCompraInternacional, saldoDisponivelSaqueInternacional) {
 
     this['id'] = id;
-    this['limiteCompra'] = limiteCompra;
-    this['limiteConsignado'] = limiteConsignado;
     this['limiteGlobal'] = limiteGlobal;
+    this['limiteCompra'] = limiteCompra;
+    this['limiteParcelado'] = limiteParcelado;
+    this['limiteParcelas'] = limiteParcelas;
+    this['limiteSaqueGlobal'] = limiteSaqueGlobal;
+    this['limiteSaquePeriodo'] = limiteSaquePeriodo;
+    this['limiteConsignado'] = limiteConsignado;
     this['limiteInternacionalCompra'] = limiteInternacionalCompra;
     this['limiteInternacionalParcelado'] = limiteInternacionalParcelado;
     this['limiteInternacionalParcelas'] = limiteInternacionalParcelas;
     this['limiteInternacionalSaqueGlobal'] = limiteInternacionalSaqueGlobal;
     this['limiteInternacionalSaquePeriodo'] = limiteInternacionalSaquePeriodo;
-    this['limiteParcelado'] = limiteParcelado;
-    this['limiteParcelas'] = limiteParcelas;
-    this['limiteSaqueGlobal'] = limiteSaqueGlobal;
-    this['limiteSaquePeriodo'] = limiteSaquePeriodo;
-    this['saldoDisponivelCompra'] = saldoDisponivelCompra;
-    this['saldoDisponivelCompraInternacional'] = saldoDisponivelCompraInternacional;
     this['saldoDisponivelGlobal'] = saldoDisponivelGlobal;
+    this['saldoDisponivelCompra'] = saldoDisponivelCompra;
     this['saldoDisponivelParcelado'] = saldoDisponivelParcelado;
     this['saldoDisponivelParcelas'] = saldoDisponivelParcelas;
     this['saldoDisponivelSaque'] = saldoDisponivelSaque;
-    this['saldoDisponivelSaqueInternacional'] = saldoDisponivelSaqueInternacional;
     this['saldoPontosFidelidade'] = saldoPontosFidelidade;
+    this['saldoDisponivelCompraInternacional'] = saldoDisponivelCompraInternacional;
+    this['saldoDisponivelSaqueInternacional'] = saldoDisponivelSaqueInternacional;
   };
 
   /**
@@ -87,14 +87,26 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
+      if (data.hasOwnProperty('limiteGlobal')) {
+        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
+      }
       if (data.hasOwnProperty('limiteCompra')) {
         obj['limiteCompra'] = ApiClient.convertToType(data['limiteCompra'], 'Number');
       }
+      if (data.hasOwnProperty('limiteParcelado')) {
+        obj['limiteParcelado'] = ApiClient.convertToType(data['limiteParcelado'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteParcelas')) {
+        obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteSaqueGlobal')) {
+        obj['limiteSaqueGlobal'] = ApiClient.convertToType(data['limiteSaqueGlobal'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteSaquePeriodo')) {
+        obj['limiteSaquePeriodo'] = ApiClient.convertToType(data['limiteSaquePeriodo'], 'Number');
+      }
       if (data.hasOwnProperty('limiteConsignado')) {
         obj['limiteConsignado'] = ApiClient.convertToType(data['limiteConsignado'], 'Number');
-      }
-      if (data.hasOwnProperty('limiteGlobal')) {
-        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
       }
       if (data.hasOwnProperty('limiteInternacionalCompra')) {
         obj['limiteInternacionalCompra'] = ApiClient.convertToType(data['limiteInternacionalCompra'], 'Number');
@@ -111,26 +123,11 @@
       if (data.hasOwnProperty('limiteInternacionalSaquePeriodo')) {
         obj['limiteInternacionalSaquePeriodo'] = ApiClient.convertToType(data['limiteInternacionalSaquePeriodo'], 'Number');
       }
-      if (data.hasOwnProperty('limiteParcelado')) {
-        obj['limiteParcelado'] = ApiClient.convertToType(data['limiteParcelado'], 'Number');
-      }
-      if (data.hasOwnProperty('limiteParcelas')) {
-        obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
-      }
-      if (data.hasOwnProperty('limiteSaqueGlobal')) {
-        obj['limiteSaqueGlobal'] = ApiClient.convertToType(data['limiteSaqueGlobal'], 'Number');
-      }
-      if (data.hasOwnProperty('limiteSaquePeriodo')) {
-        obj['limiteSaquePeriodo'] = ApiClient.convertToType(data['limiteSaquePeriodo'], 'Number');
+      if (data.hasOwnProperty('saldoDisponivelGlobal')) {
+        obj['saldoDisponivelGlobal'] = ApiClient.convertToType(data['saldoDisponivelGlobal'], 'Number');
       }
       if (data.hasOwnProperty('saldoDisponivelCompra')) {
         obj['saldoDisponivelCompra'] = ApiClient.convertToType(data['saldoDisponivelCompra'], 'Number');
-      }
-      if (data.hasOwnProperty('saldoDisponivelCompraInternacional')) {
-        obj['saldoDisponivelCompraInternacional'] = ApiClient.convertToType(data['saldoDisponivelCompraInternacional'], 'Number');
-      }
-      if (data.hasOwnProperty('saldoDisponivelGlobal')) {
-        obj['saldoDisponivelGlobal'] = ApiClient.convertToType(data['saldoDisponivelGlobal'], 'Number');
       }
       if (data.hasOwnProperty('saldoDisponivelParcelado')) {
         obj['saldoDisponivelParcelado'] = ApiClient.convertToType(data['saldoDisponivelParcelado'], 'Number');
@@ -141,11 +138,14 @@
       if (data.hasOwnProperty('saldoDisponivelSaque')) {
         obj['saldoDisponivelSaque'] = ApiClient.convertToType(data['saldoDisponivelSaque'], 'Number');
       }
-      if (data.hasOwnProperty('saldoDisponivelSaqueInternacional')) {
-        obj['saldoDisponivelSaqueInternacional'] = ApiClient.convertToType(data['saldoDisponivelSaqueInternacional'], 'Number');
-      }
       if (data.hasOwnProperty('saldoPontosFidelidade')) {
         obj['saldoPontosFidelidade'] = ApiClient.convertToType(data['saldoPontosFidelidade'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoDisponivelCompraInternacional')) {
+        obj['saldoDisponivelCompraInternacional'] = ApiClient.convertToType(data['saldoDisponivelCompraInternacional'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoDisponivelSaqueInternacional')) {
+        obj['saldoDisponivelSaqueInternacional'] = ApiClient.convertToType(data['saldoDisponivelSaqueInternacional'], 'Number');
       }
     }
     return obj;
@@ -159,22 +159,46 @@
   exports.prototype['id'] = undefined;
 
   /**
+   * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+   * @member {Number} limiteGlobal
+   */
+  exports.prototype['limiteGlobal'] = undefined;
+
+  /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
    * @member {Number} limiteCompra
    */
   exports.prototype['limiteCompra'] = undefined;
 
   /**
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+   * @member {Number} limiteParcelado
+   */
+  exports.prototype['limiteParcelado'] = undefined;
+
+  /**
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * @member {Number} limiteParcelas
+   */
+  exports.prototype['limiteParcelas'] = undefined;
+
+  /**
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+   * @member {Number} limiteSaqueGlobal
+   */
+  exports.prototype['limiteSaqueGlobal'] = undefined;
+
+  /**
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * @member {Number} limiteSaquePeriodo
+   */
+  exports.prototype['limiteSaquePeriodo'] = undefined;
+
+  /**
    * Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
    * @member {Number} limiteConsignado
    */
   exports.prototype['limiteConsignado'] = undefined;
-
-  /**
-   * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
-   * @member {Number} limiteGlobal
-   */
-  exports.prototype['limiteGlobal'] = undefined;
 
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
@@ -207,46 +231,16 @@
   exports.prototype['limiteInternacionalSaquePeriodo'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
-   * @member {Number} limiteParcelado
+   * Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+   * @member {Number} saldoDisponivelGlobal
    */
-  exports.prototype['limiteParcelado'] = undefined;
-
-  /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
-   * @member {Number} limiteParcelas
-   */
-  exports.prototype['limiteParcelas'] = undefined;
-
-  /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
-   * @member {Number} limiteSaqueGlobal
-   */
-  exports.prototype['limiteSaqueGlobal'] = undefined;
-
-  /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
-   * @member {Number} limiteSaquePeriodo
-   */
-  exports.prototype['limiteSaquePeriodo'] = undefined;
+  exports.prototype['saldoDisponivelGlobal'] = undefined;
 
   /**
    * Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
    * @member {Number} saldoDisponivelCompra
    */
   exports.prototype['saldoDisponivelCompra'] = undefined;
-
-  /**
-   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
-   * @member {Number} saldoDisponivelCompraInternacional
-   */
-  exports.prototype['saldoDisponivelCompraInternacional'] = undefined;
-
-  /**
-   * Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-   * @member {Number} saldoDisponivelGlobal
-   */
-  exports.prototype['saldoDisponivelGlobal'] = undefined;
 
   /**
    * Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
@@ -267,16 +261,22 @@
   exports.prototype['saldoDisponivelSaque'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
-   * @member {Number} saldoDisponivelSaqueInternacional
-   */
-  exports.prototype['saldoDisponivelSaqueInternacional'] = undefined;
-
-  /**
    * Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
    * @member {Number} saldoPontosFidelidade
    */
   exports.prototype['saldoPontosFidelidade'] = undefined;
+
+  /**
+   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+   * @member {Number} saldoDisponivelCompraInternacional
+   */
+  exports.prototype['saldoDisponivelCompraInternacional'] = undefined;
+
+  /**
+   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+   * @member {Number} saldoDisponivelSaqueInternacional
+   */
+  exports.prototype['saldoDisponivelSaqueInternacional'] = undefined;
 
 
 

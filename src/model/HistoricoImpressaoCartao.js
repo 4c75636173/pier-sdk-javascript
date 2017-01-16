@@ -32,10 +32,10 @@
    */
   var exports = function(id, idCartao, idStatusImpressaoCartao) {
 
-
     this['id'] = id;
     this['idCartao'] = idCartao;
     this['idStatusImpressaoCartao'] = idStatusImpressaoCartao;
+
 
   };
 
@@ -50,9 +50,6 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('dataHistorico')) {
-        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'Date');
-      }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
@@ -65,16 +62,13 @@
       if (data.hasOwnProperty('mensagemHistorico')) {
         obj['mensagemHistorico'] = ApiClient.convertToType(data['mensagemHistorico'], 'String');
       }
+      if (data.hasOwnProperty('dataHistorico')) {
+        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'Date');
+      }
     }
     return obj;
   }
 
-
-  /**
-   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-   * @member {Date} dataHistorico
-   */
-  exports.prototype['dataHistorico'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
@@ -99,6 +93,12 @@
    * @member {String} mensagemHistorico
    */
   exports.prototype['mensagemHistorico'] = undefined;
+
+  /**
+   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+   * @member {Date} dataHistorico
+   */
+  exports.prototype['dataHistorico'] = undefined;
 
 
 

@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Conta', '../model/CartaoImpressao', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/CartaoImpressao'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.CartaoImpressao, root.Pier.ModelDate);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate);
   }
-}(this, function(ApiClient, Conta, CartaoImpressao, ModelDate) {
+}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate) {
   'use strict';
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Alterar limite
      * Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Number} limiteGlobal Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
      * @param {Number} limiteCompra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
      * @param {Number} limiteParcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
@@ -59,12 +59,12 @@
      * @param {module:api/ContaApi~alterarLimiteUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
-    this.alterarLimiteUsingPUT = function(idConta, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, callback) {
+    this.alterarLimiteUsingPUT = function(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling alterarLimiteUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarLimiteUsingPUT";
       }
 
       // verify the required parameter 'limiteGlobal' is set
@@ -129,7 +129,7 @@
 
 
       var pathParams = {
-        'id_conta': idConta
+        'id': id
       };
       var queryParams = {
         'limiteGlobal': limiteGlobal,
@@ -156,7 +156,7 @@
       var returnType = Conta;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}/alterar-limites', 'PUT',
+        '/api/contas/{id}/alterar-limites', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -173,17 +173,17 @@
     /**
      * Alterar vencimento
      * Esse recurso permite alterar o vencimento de uma conta especifica.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} novoDiaVencimento Novo dia de vencimento.
      * @param {module:api/ContaApi~alterarVencimentoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
-    this.alterarVencimentoUsingPUT = function(idConta, novoDiaVencimento, callback) {
+    this.alterarVencimentoUsingPUT = function(id, novoDiaVencimento, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling alterarVencimentoUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarVencimentoUsingPUT";
       }
 
       // verify the required parameter 'novoDiaVencimento' is set
@@ -193,7 +193,7 @@
 
 
       var pathParams = {
-        'id_conta': idConta
+        'id': id
       };
       var queryParams = {
         'novo_dia_vencimento': novoDiaVencimento
@@ -209,7 +209,53 @@
       var returnType = Conta;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}/alterar-vencimento', 'PUT',
+        '/api/contas/{id}/alterar-vencimento', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarLimiteDisponibilidadeUsingGET1 operation.
+     * @callback module:api/ContaApi~consultarLimiteDisponibilidadeUsingGET1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LimiteDisponibilidade} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta os limites da conta
+     * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {module:api/ContaApi~consultarLimiteDisponibilidadeUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LimiteDisponibilidade}
+     */
+    this.consultarLimiteDisponibilidadeUsingGET1 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarLimiteDisponibilidadeUsingGET1";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LimiteDisponibilidade;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/limites-disponibilidades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -226,21 +272,21 @@
     /**
      * Apresenta dados de uma determinada conta
      * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {module:api/ContaApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
-    this.consultarUsingGET1 = function(idConta, callback) {
+    this.consultarUsingGET1 = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarUsingGET1";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET1";
       }
 
 
       var pathParams = {
-        'id_conta': idConta
+        'id': id
       };
       var queryParams = {
       };
@@ -255,7 +301,7 @@
       var returnType = Conta;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}', 'GET',
+        '/api/contas/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -271,17 +317,17 @@
 
     /**
      * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
      * @param {module:api/ContaApi~gerarCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoImpressao}
      */
-    this.gerarCartaoUsingPOST = function(idConta, idPessoa, callback) {
+    this.gerarCartaoUsingPOST = function(id, idPessoa, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idConta' is set
-      if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling gerarCartaoUsingPOST";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling gerarCartaoUsingPOST";
       }
 
       // verify the required parameter 'idPessoa' is set
@@ -291,7 +337,7 @@
 
 
       var pathParams = {
-        'id_conta': idConta,
+        'id': id,
         'id_pessoa': idPessoa
       };
       var queryParams = {
@@ -307,7 +353,7 @@
       var returnType = CartaoImpressao;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao', 'POST',
+        '/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -325,6 +371,8 @@
      * Lista contas existentes na base de dados do Emissor
      * Este recurso permite listar contas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
      * @param {Integer} opts.idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -335,8 +383,6 @@
      * @param {module:model/ModelDate} opts.dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
      * @param {module:model/ModelDate} opts.dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @param {module:model/ModelDate} opts.dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/ContaApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
@@ -348,6 +394,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'idProduto': opts['idProduto'],
         'idOrigemComercial': opts['idOrigemComercial'],
@@ -357,9 +405,7 @@
         'melhorDiaCompra': opts['melhorDiaCompra'],
         'dataStatusConta': opts['dataStatusConta'],
         'dataCadastro': opts['dataCadastro'],
-        'dataUltimaAlteracaoVencimento': opts['dataUltimaAlteracaoVencimento'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'dataUltimaAlteracaoVencimento': opts['dataUltimaAlteracaoVencimento']
       };
       var headerParams = {
       };

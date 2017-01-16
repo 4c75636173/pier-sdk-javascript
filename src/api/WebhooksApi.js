@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ModelObject', '../model/WebHook', '../model/PageWebHooks'], factory);
+    define(['../ApiClient', '../model/WebHook', '../model/PageWebHooks'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelObject'), require('../model/WebHook'), require('../model/PageWebHooks'));
+    module.exports = factory(require('../ApiClient'), require('../model/WebHook'), require('../model/PageWebHooks'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.WebhooksApi = factory(root.Pier.ApiClient, root.Pier.ModelObject, root.Pier.WebHook, root.Pier.PageWebHooks);
+    root.Pier.WebhooksApi = factory(root.Pier.ApiClient, root.Pier.WebHook, root.Pier.PageWebHooks);
   }
-}(this, function(ApiClient, ModelObject, WebHook, PageWebHooks) {
+}(this, function(ApiClient, WebHook, PageWebHooks) {
   'use strict';
 
   /**
@@ -44,8 +44,8 @@
      * Alterar Webhook
      * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
      * @param {Integer} id C\u00C3\u00B3digo identificador do Webhook
-     * @param {module:model/ModelObject} evento Evento a ser chamado pelo WebHook
-     * @param {module:model/ModelObject} metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+     * @param {module:model/String} evento Evento a ser chamado pelo WebHook
+     * @param {module:model/String} metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
      * @param {module:api/WebhooksApi~alterarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
@@ -157,12 +157,12 @@
      * Lista os Webhooks
      * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.id Id do WebHook
-     * @param {module:model/ModelObject} opts.evento Evento a ser chamado pelo WebHook
-     * @param {module:model/ModelObject} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
-     * @param {String} opts.url URL que a ser consumida pelo WebHook
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id Id do WebHook
+     * @param {module:model/String} opts.evento Evento a ser chamado pelo WebHook
+     * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+     * @param {String} opts.url URL que a ser consumida pelo WebHook
      * @param {module:api/WebhooksApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHooks}
      */
@@ -174,12 +174,12 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'evento': opts['evento'],
         'metodo': opts['metodo'],
-        'url': opts['url'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'url': opts['url']
       };
       var headerParams = {
       };
@@ -209,8 +209,8 @@
     /**
      * Salvar Webhook
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-     * @param {module:model/ModelObject} evento Evento a ser chamado pelo WebHook
-     * @param {module:model/ModelObject} metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+     * @param {module:model/String} evento Evento a ser chamado pelo WebHook
+     * @param {module:model/String} metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
      * @param {module:api/WebhooksApi~salvarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}

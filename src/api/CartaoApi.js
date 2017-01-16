@@ -43,30 +43,27 @@
     /**
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {Integer} idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
      * @param {module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/HistoricoImpressaoCartao}
      */
-    this.alterarStatusImpressaoUsingPUT = function(idCartao, idStatusImpressao, callback) {
+    this.alterarStatusImpressaoUsingPUT = function(id, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling alterarStatusImpressaoUsingPUT";
-      }
-
-      // verify the required parameter 'idStatusImpressao' is set
-      if (idStatusImpressao == undefined || idStatusImpressao == null) {
-        throw "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarStatusImpressaoUsingPUT";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao,
-        'id_status_impressao': idStatusImpressao
+        'id': id
       };
       var queryParams = {
+        'id_status_impressao': opts['idStatusImpressao']
       };
       var headerParams = {
       };
@@ -79,7 +76,7 @@
       var returnType = HistoricoImpressaoCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ', 'PUT',
+        '/api/cartoes/{id}/alterar-status-impressao', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -94,19 +91,19 @@
      */
 
     /**
-     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
-     * Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+     * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+     * Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
      * @param {Integer} idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
      * @param {module:api/CartaoApi~atribuirPessoaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.atribuirPessoaUsingPUT = function(idCartao, idPessoa, callback) {
+    this.atribuirPessoaUsingPUT = function(id, idPessoa, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling atribuirPessoaUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling atribuirPessoaUsingPUT";
       }
 
       // verify the required parameter 'idPessoa' is set
@@ -116,7 +113,7 @@
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
         'id_pessoa': idPessoa
@@ -132,7 +129,7 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/atribuir-pessoa', 'PUT',
+        '/api/cartoes/{id}/atribuir-pessoa', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -149,18 +146,18 @@
     /**
      * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
      * @param {String} observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
      * @param {module:api/CartaoApi~bloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.bloquearUsingPUT = function(idCartao, idStatus, observacao, callback) {
+    this.bloquearUsingPUT = function(id, idStatus, observacao, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling bloquearUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling bloquearUsingPUT";
       }
 
       // verify the required parameter 'idStatus' is set
@@ -175,7 +172,7 @@
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
         'id_status': idStatus,
@@ -192,7 +189,7 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/bloqueio', 'PUT',
+        '/api/cartoes/{id}/bloquear', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -209,17 +206,17 @@
     /**
      * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
      * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {String} senha Senha para ser cadastrada ou alterada.
      * @param {module:api/CartaoApi~cadastrarAlterarSenhaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.cadastrarAlterarSenhaUsingPUT = function(idCartao, senha, callback) {
+    this.cadastrarAlterarSenhaUsingPUT = function(id, senha, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling cadastrarAlterarSenhaUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling cadastrarAlterarSenhaUsingPUT";
       }
 
       // verify the required parameter 'senha' is set
@@ -231,7 +228,7 @@
       var pathParams = {
       };
       var queryParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var headerParams = {
         'senha': senha
@@ -245,7 +242,7 @@
       var returnType = 'String';
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/alterar-senha', 'PUT',
+        '/api/cartoes/{id}/alterar-senha', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -262,21 +259,21 @@
     /**
      * Apresenta os limites do Portador do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarLimiteDisponibilidadeUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidade}
      */
-    this.consultarLimiteDisponibilidadeUsingGET = function(idCartao, callback) {
+    this.consultarLimiteDisponibilidadeUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarLimiteDisponibilidadeUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarLimiteDisponibilidadeUsingGET";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -291,7 +288,7 @@
       var returnType = LimiteDisponibilidade;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/limites-disponibilidades', 'GET',
+        '/api/cartoes/{id}/limites-disponibilidades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -308,21 +305,21 @@
     /**
      * Apresenta os dados do Portador do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarPortadorUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Portador}
      */
-    this.consultarPortadorUsingGET = function(idCartao, callback) {
+    this.consultarPortadorUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarPortadorUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarPortadorUsingGET";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -337,7 +334,7 @@
       var returnType = Portador;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/portadores', 'GET',
+        '/api/cartoes/{id}/portadores', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -354,21 +351,21 @@
     /**
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.consultarUsingGET = function(idCartao, callback) {
+    this.consultarUsingGET = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -383,7 +380,7 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}', 'GET',
+        '/api/cartoes/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -400,21 +397,21 @@
     /**
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~desbloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.desbloquearUsingPUT = function(idCartao, callback) {
+    this.desbloquearUsingPUT = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling desbloquearUsingPUT";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling desbloquearUsingPUT";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -429,7 +426,72 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/desbloqueio', 'PUT',
+        '/api/cartoes/{id}/desbloquear', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarLotesCartoesPrePagosUsingGET operation.
+     * @callback module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageCartoes} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
+     * @param {Integer} opts.idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param {Integer} opts.idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+     * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+     * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+     * @param {Date} opts.dataCadastroLote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+     * @param {String} opts.usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
+     * @param {Integer} opts.flagProcessado Indica o Status de Processamento do Lote.
+     * @param {module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCartoes}
+     */
+    this.listarLotesCartoesPrePagosUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'idOrigemComercial': opts['idOrigemComercial'],
+        'idProduto': opts['idProduto'],
+        'idTipoCartao': opts['idTipoCartao'],
+        'idImagem': opts['idImagem'],
+        'idEndereco': opts['idEndereco'],
+        'quantidadeCartoes': opts['quantidadeCartoes'],
+        'dataCadastroLote': opts['dataCadastroLote'],
+        'usuarioCadastro': opts['usuarioCadastro'],
+        'flagProcessado': opts['flagProcessado']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageCartoes;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/pre-pagos/lotes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -447,6 +509,8 @@
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -465,8 +529,6 @@
      * @param {Integer} opts.flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:api/CartaoApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartoes}
      */
@@ -478,6 +540,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
         'id': opts['id'],
         'idStatusCartao': opts['idStatusCartao'],
         'idEstagioCartao': opts['idEstagioCartao'],
@@ -495,9 +559,7 @@
         'arquivoImpressao': opts['arquivoImpressao'],
         'flagImpressaoOrigemComercial': opts['flagImpressaoOrigemComercial'],
         'flagProvisorio': opts['flagProvisorio'],
-        'codigoDesbloqueio': opts['codigoDesbloqueio'],
-        'page': opts['page'],
-        'limit': opts['limit']
+        'codigoDesbloqueio': opts['codigoDesbloqueio']
       };
       var headerParams = {
       };
@@ -525,8 +587,8 @@
      */
 
     /**
-     * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
      * @param {String} criptograma Criptograma do cart\u00C3\u00A3o no formato de55
      * @param {module:api/CartaoApi~validarCartaoChipBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -549,7 +611,7 @@
       var pathParams = {
       };
       var queryParams = {
-        'numeroCartao': numeroCartao,
+        'numero_cartao': numeroCartao,
         'criptograma': criptograma
       };
       var headerParams = {
@@ -563,7 +625,7 @@
       var returnType = ValidaCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar/chip', 'GET',
+        '/api/cartoes/bandeirados/validar-chip', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -579,7 +641,7 @@
 
     /**
      * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
      * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
      * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -614,10 +676,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'numeroCartao': numeroCartao,
-        'nomePortador': nomePortador,
-        'dataValidade': dataValidade,
-        'codigoSeguranca': codigoSeguranca
+        'numero_cartao': numeroCartao,
+        'nome_portador': nomePortador,
+        'data_validade': dataValidade,
+        'codigo_seguranca': codigoSeguranca
       };
       var headerParams = {
       };
@@ -630,7 +692,7 @@
       var returnType = ValidaCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar/digitado', 'GET',
+        '/api/cartoes/bandeirados/validar-digitado', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -646,7 +708,7 @@
 
     /**
      * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
      * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
      * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -681,10 +743,10 @@
       var pathParams = {
       };
       var queryParams = {
-        'numeroCartao': numeroCartao,
-        'nomePortador': nomePortador,
-        'dataValidade': dataValidade,
-        'codigoSeguranca': codigoSeguranca
+        'numero_cartao': numeroCartao,
+        'nome_portador': nomePortador,
+        'data_validade': dataValidade,
+        'codigo_seguranca': codigoSeguranca
       };
       var headerParams = {
       };
@@ -697,7 +759,7 @@
       var returnType = ValidaCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/nao-bandeirados/validar/digitado', 'GET',
+        '/api/cartoes/nao-bandeirados/validar-digitado', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -713,7 +775,7 @@
 
     /**
      * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
      * @param {String} trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
      * @param {String} trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
@@ -742,7 +804,7 @@
       var pathParams = {
       };
       var queryParams = {
-        'numeroCartao': numeroCartao,
+        'numero_cartao': numeroCartao,
         'trilha1': trilha1,
         'trilha2': trilha2
       };
@@ -757,15 +819,15 @@
       var returnType = ValidaCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar/tarja', 'GET',
+        '/api/cartoes/bandeirados/validar-tarja', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the validarSenhaUsingPOST operation.
-     * @callback module:api/CartaoApi~validarSenhaUsingPOSTCallback
+     * Callback function to receive the result of the validarSenhaUsingGET operation.
+     * @callback module:api/CartaoApi~validarSenhaUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -774,29 +836,29 @@
     /**
      * Permite validar a senha de um Cart\u00C3\u00A3o
      * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {String} senha Senha para ser validada.
-     * @param {module:api/CartaoApi~validarSenhaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~validarSenhaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.validarSenhaUsingPOST = function(idCartao, senha, callback) {
+    this.validarSenhaUsingGET = function(id, senha, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling validarSenhaUsingPOST";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling validarSenhaUsingGET";
       }
 
       // verify the required parameter 'senha' is set
       if (senha == undefined || senha == null) {
-        throw "Missing the required parameter 'senha' when calling validarSenhaUsingPOST";
+        throw "Missing the required parameter 'senha' when calling validarSenhaUsingGET";
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var headerParams = {
         'senha': senha
@@ -810,7 +872,7 @@
       var returnType = 'String';
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/validar-senha', 'POST',
+        '/api/cartoes/{id}/validar-senha', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
