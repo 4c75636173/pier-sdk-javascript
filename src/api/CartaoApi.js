@@ -44,13 +44,11 @@
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+     * @param {Integer} idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
      * @param {module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/HistoricoImpressaoCartao}
      */
-    this.alterarStatusImpressaoUsingPUT = function(id, opts, callback) {
-      opts = opts || {};
+    this.alterarStatusImpressaoUsingPUT = function(id, idStatusImpressao, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -58,12 +56,17 @@
         throw "Missing the required parameter 'id' when calling alterarStatusImpressaoUsingPUT";
       }
 
+      // verify the required parameter 'idStatusImpressao' is set
+      if (idStatusImpressao == undefined || idStatusImpressao == null) {
+        throw "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT";
+      }
+
 
       var pathParams = {
         'id': id
       };
       var queryParams = {
-        'id_status_impressao': opts['idStatusImpressao']
+        'id_status_impressao': idStatusImpressao
       };
       var headerParams = {
       };
@@ -226,9 +229,9 @@
 
 
       var pathParams = {
+        'id': id
       };
       var queryParams = {
-        'id': id
       };
       var headerParams = {
         'senha': senha
@@ -856,9 +859,9 @@
 
 
       var pathParams = {
+        'id': id
       };
       var queryParams = {
-        'id': id
       };
       var headerParams = {
         'senha': senha

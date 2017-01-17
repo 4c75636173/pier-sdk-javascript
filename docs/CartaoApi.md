@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 <a name="alterarStatusImpressaoUsingPUT"></a>
 # **alterarStatusImpressaoUsingPUT**
-> HistoricoImpressaoCartao alterarStatusImpressaoUsingPUT(id, opts)
+> HistoricoImpressaoCartao alterarStatusImpressaoUsingPUT(id, idStatusImpressao)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 
@@ -44,9 +44,8 @@ var apiInstance = new Pier.CartaoApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
 
-var opts = { 
-  'idStatusImpressao': 789 // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
-};
+var idStatusImpressao = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -55,7 +54,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarStatusImpressaoUsingPUT(id, opts, callback);
+api.alterarStatusImpressaoUsingPUT(id, idStatusImpressao, callback);
 ```
 
 ### Parameters
@@ -63,7 +62,7 @@ api.alterarStatusImpressaoUsingPUT(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
- **idStatusImpressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | [optional] 
+ **idStatusImpressao** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id). | 
 
 ### Return type
 
