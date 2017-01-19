@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id_conta}/faturas | Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id_conta}/faturas | Listar Faturas da Conta
 [**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**transacoesUsingPOST**](ContaApi.md#transacoesUsingPOST) | **POST** /api/contas/{id_conta}/transacoes | Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+[**transacoesUsingPOST**](ContaApi.md#transacoesUsingPOST) | **POST** /api/contas/{id_conta}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
 <a name="alterarLimiteUsingPUT"></a>
@@ -323,6 +323,8 @@ Name | Type | Description  | Notes
 # **listarFaturasUsingGET**
 > Fatura listarFaturasUsingGET(opts)
 
+Listar Faturas da Conta
+
 Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
 
 ### Example
@@ -457,7 +459,9 @@ Name | Type | Description  | Notes
 # **transacoesUsingPOST**
 > PageTransacaoResponse transacoesUsingPOST(opts)
 
-Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+Permite listar uma linha do tempo com os eventos da conta
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
 
 ### Example
 ```javascript
