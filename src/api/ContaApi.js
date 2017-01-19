@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate'], factory);
+    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate', '../model/Fatura', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'));
+    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'), require('../model/Fatura'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate, root.Pier.Fatura, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate) {
+}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate, Fatura, PageTransacaoResponse) {
   'use strict';
 
   /**
@@ -360,6 +360,54 @@
     }
 
     /**
+     * Callback function to receive the result of the listarFaturasUsingGET operation.
+     * @callback module:api/ContaApi~listarFaturasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Fatura} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+     * @param {module:model/ModelDate} opts.dataVencimento Data de Vencimento da Fatura.
+     * @param {module:api/ContaApi~listarFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/Fatura}
+     */
+    this.listarFaturasUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'dataVencimento': opts['dataVencimento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Fatura;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id_conta}/faturas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarUsingGET1 operation.
      * @callback module:api/ContaApi~listarUsingGET1Callback
      * @param {String} error Error message, if any.
@@ -419,6 +467,52 @@
 
       return this.apiClient.callApi(
         '/api/contas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the transacoesUsingPOST operation.
+     * @callback module:api/ContaApi~transacoesUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTransacaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {module:api/ContaApi~transacoesUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTransacaoResponse}
+     */
+    this.transacoesUsingPOST = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idConta': opts['idConta']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTransacaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id_conta}/transacoes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -36,6 +36,7 @@
     this['nome'] = nome;
     this['flagAlteraLimite'] = flagAlteraLimite;
 
+
   };
 
   /**
@@ -60,6 +61,9 @@
       }
       if (data.hasOwnProperty('mensagemConsultaNegada')) {
         obj['mensagemConsultaNegada'] = ApiClient.convertToType(data['mensagemConsultaNegada'], 'String');
+      }
+      if (data.hasOwnProperty('flagPermiteNovaViaCartao')) {
+        obj['flagPermiteNovaViaCartao'] = ApiClient.convertToType(data['flagPermiteNovaViaCartao'], 'Integer');
       }
     }
     return obj;
@@ -89,6 +93,12 @@
    * @member {String} mensagemConsultaNegada
    */
   exports.prototype['mensagemConsultaNegada'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagPermiteNovaViaCartao
+   */
+  exports.prototype['flagPermiteNovaViaCartao'] = undefined;
 
 
 

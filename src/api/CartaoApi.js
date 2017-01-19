@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/Portador', '../model/PageCartoes', '../model/ModelDate', '../model/ValidaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/Portador', '../model/LoteCartoesPrePagos', '../model/PageCartoes', '../model/ModelDate', '../model/ValidaCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/PageCartoes'), require('../model/ModelDate'), require('../model/ValidaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/Portador'), require('../model/LoteCartoesPrePagos'), require('../model/PageCartoes'), require('../model/ModelDate'), require('../model/ValidaCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.PageCartoes, root.Pier.ModelDate, root.Pier.ValidaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.Portador, root.Pier.LoteCartoesPrePagos, root.Pier.PageCartoes, root.Pier.ModelDate, root.Pier.ValidaCartao);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, Portador, PageCartoes, ModelDate, ValidaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, Portador, LoteCartoesPrePagos, PageCartoes, ModelDate, ValidaCartao) {
   'use strict';
 
   /**
@@ -436,6 +436,105 @@
     }
 
     /**
+     * Callback function to receive the result of the gerarLotesCartoesPrePagosUsingPOST operation.
+     * @callback module:api/CartaoApi~gerarLotesCartoesPrePagosUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LoteCartoesPrePagos} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+     * @param {Integer} opts.idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+     * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+     * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+     * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+     * @param {module:api/CartaoApi~gerarLotesCartoesPrePagosUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LoteCartoesPrePagos}
+     */
+    this.gerarLotesCartoesPrePagosUsingPOST = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idOrigemComercial': opts['idOrigemComercial'],
+        'idProduto': opts['idProduto'],
+        'idTipoCartao': opts['idTipoCartao'],
+        'idImagem': opts['idImagem'],
+        'idEndereco': opts['idEndereco'],
+        'quantidadeCartoes': opts['quantidadeCartoes']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LoteCartoesPrePagos;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/pre-pagos/lotes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the gerarNovaViaUsingPOST operation.
+     * @callback module:api/CartaoApi~gerarNovaViaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gerar uma nova via de Cart\u00C3\u00A3o
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+     * @param {module:api/CartaoApi~gerarNovaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/Cartao}
+     */
+    this.gerarNovaViaUsingPOST = function(idCartao, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idCartao' is set
+      if (idCartao == undefined || idCartao == null) {
+        throw "Missing the required parameter 'idCartao' when calling gerarNovaViaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id_cartao': idCartao
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Cartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id_cartao}/gerar-nova-via', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarLotesCartoesPrePagosUsingGET operation.
      * @callback module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback
      * @param {String} error Error message, if any.
@@ -456,9 +555,9 @@
      * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
      * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-     * @param {Date} opts.dataCadastroLote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+     * @param {Date} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
      * @param {String} opts.usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
-     * @param {Integer} opts.flagProcessado Indica o Status de Processamento do Lote.
+     * @param {Integer} opts.statusProcessamento Indica o Status de Processamento do Lote.
      * @param {module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartoes}
      */
@@ -479,9 +578,9 @@
         'idImagem': opts['idImagem'],
         'idEndereco': opts['idEndereco'],
         'quantidadeCartoes': opts['quantidadeCartoes'],
-        'dataCadastroLote': opts['dataCadastroLote'],
+        'dataCadastro': opts['dataCadastro'],
         'usuarioCadastro': opts['usuarioCadastro'],
-        'flagProcessado': opts['flagProcessado']
+        'statusProcessamento': opts['statusProcessamento']
       };
       var headerParams = {
       };

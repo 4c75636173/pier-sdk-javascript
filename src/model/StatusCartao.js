@@ -42,6 +42,7 @@
     this['idStatusDestinoDesbloqueio'] = idStatusDestinoDesbloqueio;
     this['idStatusDestinoConta'] = idStatusDestinoConta;
     this['flagCobraTarifa'] = flagCobraTarifa;
+
   };
 
   /**
@@ -75,6 +76,9 @@
       }
       if (data.hasOwnProperty('flagCobraTarifa')) {
         obj['flagCobraTarifa'] = ApiClient.convertToType(data['flagCobraTarifa'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagPermiteNovaViaCartao')) {
+        obj['flagPermiteNovaViaCartao'] = ApiClient.convertToType(data['flagPermiteNovaViaCartao'], 'Integer');
       }
     }
     return obj;
@@ -122,6 +126,12 @@
    * @member {Integer} flagCobraTarifa
    */
   exports.prototype['flagCobraTarifa'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagPermiteNovaViaCartao
+   */
+  exports.prototype['flagPermiteNovaViaCartao'] = undefined;
 
 
 
