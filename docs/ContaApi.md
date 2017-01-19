@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id_conta}/faturas | Listar Faturas da Conta
+[**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
 [**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**transacoesUsingPOST**](ContaApi.md#transacoesUsingPOST) | **POST** /api/contas/{id_conta}/timeline | Permite listar uma linha do tempo com os eventos da conta
+[**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
 <a name="alterarLimiteUsingPUT"></a>
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 <a name="listarFaturasUsingGET"></a>
 # **listarFaturasUsingGET**
-> Fatura listarFaturasUsingGET(opts)
+> Fatura listarFaturasUsingGET(id, opts)
 
 Listar Faturas da Conta
 
@@ -340,10 +340,11 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.ContaApi()
 
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'id': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
   'dataVencimento': new Pier.ModelDate() // {ModelDate} Data de Vencimento da Fatura.
 };
 
@@ -354,16 +355,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarFaturasUsingGET(opts, callback);
+api.listarFaturasUsingGET(id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
  **dataVencimento** | **ModelDate**| Data de Vencimento da Fatura. | [optional] 
 
 ### Return type
@@ -455,9 +456,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="transacoesUsingPOST"></a>
-# **transacoesUsingPOST**
-> PageTransacaoResponse transacoesUsingPOST(opts)
+<a name="transacoesUsingGET"></a>
+# **transacoesUsingGET**
+> PageTransacaoResponse transacoesUsingGET(opts)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -489,7 +490,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.transacoesUsingPOST(opts, callback);
+api.transacoesUsingGET(opts, callback);
 ```
 
 ### Parameters

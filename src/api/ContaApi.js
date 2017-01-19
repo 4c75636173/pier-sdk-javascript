@@ -370,25 +370,30 @@
     /**
      * Listar Faturas da Conta
      * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
      * @param {module:model/ModelDate} opts.dataVencimento Data de Vencimento da Fatura.
      * @param {module:api/ContaApi~listarFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Fatura}
      */
-    this.listarFaturasUsingGET = function(opts, callback) {
+    this.listarFaturasUsingGET = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling listarFaturasUsingGET";
+      }
+
 
       var pathParams = {
+        'id': id
       };
       var queryParams = {
         'page': opts['page'],
         'limit': opts['limit'],
-        'id': opts['id'],
         'dataVencimento': opts['dataVencimento']
       };
       var headerParams = {
@@ -402,7 +407,7 @@
       var returnType = Fatura;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}/faturas', 'GET',
+        '/api/contas/{id}/faturas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -474,8 +479,8 @@
     }
 
     /**
-     * Callback function to receive the result of the transacoesUsingPOST operation.
-     * @callback module:api/ContaApi~transacoesUsingPOSTCallback
+     * Callback function to receive the result of the transacoesUsingGET operation.
+     * @callback module:api/ContaApi~transacoesUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -488,10 +493,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {module:api/ContaApi~transacoesUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~transacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransacaoResponse}
      */
-    this.transacoesUsingPOST = function(opts, callback) {
+    this.transacoesUsingGET = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -514,7 +519,7 @@
       var returnType = PageTransacaoResponse;
 
       return this.apiClient.callApi(
-        '/api/contas/{id_conta}/timeline', 'POST',
+        '/api/contas/{id}/timeline', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

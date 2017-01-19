@@ -499,21 +499,21 @@
     /**
      * Gerar uma nova via de Cart\u00C3\u00A3o
      * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
      * @param {module:api/CartaoApi~gerarNovaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.gerarNovaViaUsingPOST = function(idCartao, callback) {
+    this.gerarNovaViaUsingPOST = function(id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling gerarNovaViaUsingPOST";
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling gerarNovaViaUsingPOST";
       }
 
 
       var pathParams = {
-        'id_cartao': idCartao
+        'id': id
       };
       var queryParams = {
       };
@@ -528,7 +528,7 @@
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id_cartao}/gerar-nova-via', 'POST',
+        '/api/cartoes/{id}/gerar-nova-via', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
