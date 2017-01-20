@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 <a name="transacoesUsingGET"></a>
 # **transacoesUsingGET**
-> PageTransacaoResponse transacoesUsingGET(opts)
+> PageTransacaoResponse transacoesUsingGET(id, opts)
 
 Permite listar uma linha do tempo com os eventos da conta
 
@@ -477,10 +477,11 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.ContaApi()
 
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'idConta': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
 };
 
 var callback = function(error, data, response) {
@@ -490,16 +491,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.transacoesUsingGET(opts, callback);
+api.transacoesUsingGET(id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | [optional] 
 
 ### Return type
 
