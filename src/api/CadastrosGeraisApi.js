@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Endereco', '../model/ModelDate', '../model/Pessoa', '../model/Telefone', '../model/OrigemComercial', '../model/Produto', '../model/TipoEndereco', '../model/TipoTelefone', '../model/PageOrigensComerciais', '../model/ListaProdutos', '../model/PageEnderecos', '../model/PagePessoas', '../model/PagePortador', '../model/PageTelefones', '../model/PageTiposEndereco', '../model/PageTipoTelefones'], factory);
+    define(['../ApiClient', '../model/Endereco', '../model/ModelDate', '../model/Pessoa', '../model/Telefone', '../model/OrigemComercial', '../model/Produto', '../model/TipoEndereco', '../model/TipoTelefone', '../model/HistoricoTelefone', '../model/PageOrigensComerciais', '../model/ListaProdutos', '../model/PageTipoTelefones', '../model/PageEnderecos', '../model/PagePessoas', '../model/PagePortador', '../model/PageTelefones', '../model/PageTiposEndereco'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/ModelDate'), require('../model/Pessoa'), require('../model/Telefone'), require('../model/OrigemComercial'), require('../model/Produto'), require('../model/TipoEndereco'), require('../model/TipoTelefone'), require('../model/PageOrigensComerciais'), require('../model/ListaProdutos'), require('../model/PageEnderecos'), require('../model/PagePessoas'), require('../model/PagePortador'), require('../model/PageTelefones'), require('../model/PageTiposEndereco'), require('../model/PageTipoTelefones'));
+    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/ModelDate'), require('../model/Pessoa'), require('../model/Telefone'), require('../model/OrigemComercial'), require('../model/Produto'), require('../model/TipoEndereco'), require('../model/TipoTelefone'), require('../model/HistoricoTelefone'), require('../model/PageOrigensComerciais'), require('../model/ListaProdutos'), require('../model/PageTipoTelefones'), require('../model/PageEnderecos'), require('../model/PagePessoas'), require('../model/PagePortador'), require('../model/PageTelefones'), require('../model/PageTiposEndereco'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.ModelDate, root.Pier.Pessoa, root.Pier.Telefone, root.Pier.OrigemComercial, root.Pier.Produto, root.Pier.TipoEndereco, root.Pier.TipoTelefone, root.Pier.PageOrigensComerciais, root.Pier.ListaProdutos, root.Pier.PageEnderecos, root.Pier.PagePessoas, root.Pier.PagePortador, root.Pier.PageTelefones, root.Pier.PageTiposEndereco, root.Pier.PageTipoTelefones);
+    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.ModelDate, root.Pier.Pessoa, root.Pier.Telefone, root.Pier.OrigemComercial, root.Pier.Produto, root.Pier.TipoEndereco, root.Pier.TipoTelefone, root.Pier.HistoricoTelefone, root.Pier.PageOrigensComerciais, root.Pier.ListaProdutos, root.Pier.PageTipoTelefones, root.Pier.PageEnderecos, root.Pier.PagePessoas, root.Pier.PagePortador, root.Pier.PageTelefones, root.Pier.PageTiposEndereco);
   }
-}(this, function(ApiClient, Endereco, ModelDate, Pessoa, Telefone, OrigemComercial, Produto, TipoEndereco, TipoTelefone, PageOrigensComerciais, ListaProdutos, PageEnderecos, PagePessoas, PagePortador, PageTelefones, PageTiposEndereco, PageTipoTelefones) {
+}(this, function(ApiClient, Endereco, ModelDate, Pessoa, Telefone, OrigemComercial, Produto, TipoEndereco, TipoTelefone, HistoricoTelefone, PageOrigensComerciais, ListaProdutos, PageTipoTelefones, PageEnderecos, PagePessoas, PagePortador, PageTelefones, PageTiposEndereco) {
   'use strict';
 
   /**
@@ -119,7 +119,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
      * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
      * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
      * @param {module:api/CadastrosGeraisApi~alterarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
@@ -321,8 +321,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET2 operation.
-     * @callback module:api/CadastrosGeraisApi~consultarUsingGET2Callback
+     * Callback function to receive the result of the consultarUsingGET3 operation.
+     * @callback module:api/CadastrosGeraisApi~consultarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Endereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -332,15 +332,15 @@
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-     * @param {module:api/CadastrosGeraisApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Endereco}
      */
-    this.consultarUsingGET2 = function(id, callback) {
+    this.consultarUsingGET3 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
       }
 
 
@@ -367,8 +367,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET3 operation.
-     * @callback module:api/CadastrosGeraisApi~consultarUsingGET3Callback
+     * Callback function to receive the result of the consultarUsingGET4 operation.
+     * @callback module:api/CadastrosGeraisApi~consultarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Pessoa} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -378,15 +378,15 @@
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastrosGeraisApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
      */
-    this.consultarUsingGET3 = function(id, callback) {
+    this.consultarUsingGET4 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
       }
 
 
@@ -413,8 +413,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/CadastrosGeraisApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/CadastrosGeraisApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Telefone} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -424,15 +424,15 @@
      * Apresenta os dados de um determinado Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-     * @param {module:api/CadastrosGeraisApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Telefone}
      */
-    this.consultarUsingGET6 = function(id, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 
@@ -459,8 +459,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/CadastrosGeraisApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/CadastrosGeraisApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoEndereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -470,15 +470,15 @@
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-     * @param {module:api/CadastrosGeraisApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEndereco}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 
@@ -505,8 +505,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET8 operation.
-     * @callback module:api/CadastrosGeraisApi~consultarUsingGET8Callback
+     * Callback function to receive the result of the consultarUsingGET9 operation.
+     * @callback module:api/CadastrosGeraisApi~consultarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTelefone} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -516,15 +516,15 @@
      * Apresenta os dados de um determinado Tipo de Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-     * @param {module:api/CadastrosGeraisApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTelefone}
      */
-    this.consultarUsingGET8 = function(id, callback) {
+    this.consultarUsingGET9 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
       }
 
 
@@ -545,6 +545,52 @@
 
       return this.apiClient.callApi(
         '/api/tipos-telefones/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarHistoricoTelefonesUsingGET operation.
+     * @callback module:api/CadastrosGeraisApi~listarHistoricoTelefonesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HistoricoTelefone} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+     * Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+     * @param {module:api/CadastrosGeraisApi~listarHistoricoTelefonesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/HistoricoTelefone}
+     */
+    this.listarHistoricoTelefonesUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling listarHistoricoTelefonesUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = HistoricoTelefone;
+
+      return this.apiClient.callApi(
+        '/api/pessoas/{id}/historico-telefones', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -653,8 +699,57 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET2 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET2Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET10Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTipoTelefones} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os Tipos de Telefones
+     * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @param {String} opts.nome Nome do Tipo do Telefone
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoTelefones}
+     */
+    this.listarUsingGET10 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTipoTelefones;
+
+      return this.apiClient.callApi(
+        '/api/tipos-telefones', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET3 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEnderecos} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -680,10 +775,10 @@
      * @param {String} opts.pais Apresenta nome do Pais
      * @param {module:model/ModelDate} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @param {module:model/ModelDate} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecos}
      */
-    this.listarUsingGET2 = function(opts, callback) {
+    this.listarUsingGET3 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -726,8 +821,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET3 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET3Callback
+     * Callback function to receive the result of the listarUsingGET4 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -746,10 +841,10 @@
      * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
      * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
      * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoas}
      */
-    this.listarUsingGET3 = function(opts, callback) {
+    this.listarUsingGET4 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -785,8 +880,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET4 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET4Callback
+     * Callback function to receive the result of the listarUsingGET5 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortador} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -804,15 +899,14 @@
      * @param {Integer} opts.idParentesco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
      * @param {String} opts.tipoPortador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
      * @param {String} opts.nomeImpresso Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-     * @param {Integer} opts.idImagem Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
      * @param {Integer} opts.idTipoCartao Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortador}
      */
-    this.listarUsingGET4 = function(opts, callback) {
+    this.listarUsingGET5 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -828,7 +922,6 @@
         'idParentesco': opts['idParentesco'],
         'tipoPortador': opts['tipoPortador'],
         'nomeImpresso': opts['nomeImpresso'],
-        'idImagem': opts['idImagem'],
         'idTipoCartao': opts['idTipoCartao'],
         'flagAtivo': opts['flagAtivo'],
         'dataCadastroPortador': opts['dataCadastroPortador'],
@@ -852,8 +945,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET7 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET7Callback
+     * Callback function to receive the result of the listarUsingGET8 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefones} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -872,10 +965,10 @@
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
      * @param {Integer} opts.status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefones}
      */
-    this.listarUsingGET7 = function(opts, callback) {
+    this.listarUsingGET8 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -911,8 +1004,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTiposEndereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -926,10 +1019,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
      * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTiposEndereco}
      */
-    this.listarUsingGET8 = function(opts, callback) {
+    this.listarUsingGET9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -960,57 +1053,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET9Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageTipoTelefones} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista os Tipos de Telefones
-     * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-     * @param {String} opts.nome Nome do Tipo do Telefone
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageTipoTelefones}
-     */
-    this.listarUsingGET9 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'id': opts['id'],
-        'nome': opts['nome']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageTipoTelefones;
-
-      return this.apiClient.callApi(
-        '/api/tipos-telefones', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOSTCallback
+     * Callback function to receive the result of the salvarUsingPOST1 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Endereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1031,10 +1075,10 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Endereco}
      */
-    this.salvarUsingPOST = function(opts, callback) {
+    this.salvarUsingPOST1 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1072,8 +1116,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST1 operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST1Callback
+     * Callback function to receive the result of the salvarUsingPOST2 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Pessoa} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1087,23 +1131,23 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
      * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
      * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
      */
-    this.salvarUsingPOST1 = function(nome, tipo, opts, callback) {
+    this.salvarUsingPOST2 = function(nome, tipo, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'nome' is set
       if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling salvarUsingPOST1";
+        throw "Missing the required parameter 'nome' when calling salvarUsingPOST2";
       }
 
       // verify the required parameter 'tipo' is set
       if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST1";
+        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST2";
       }
 
 
@@ -1135,8 +1179,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST2 operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST2Callback
+     * Callback function to receive the result of the salvarUsingPOST3 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Telefone} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1151,10 +1195,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Telefone}
      */
-    this.salvarUsingPOST2 = function(opts, callback) {
+    this.salvarUsingPOST3 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

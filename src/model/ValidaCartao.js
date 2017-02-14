@@ -32,6 +32,11 @@
 
 
 
+
+
+
+
+
   };
 
   /**
@@ -45,11 +50,26 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('idStatusCartao')) {
+        obj['idStatusCartao'] = ApiClient.convertToType(data['idStatusCartao'], 'Integer');
+      }
       if (data.hasOwnProperty('statusCartao')) {
         obj['statusCartao'] = ApiClient.convertToType(data['statusCartao'], 'String');
       }
+      if (data.hasOwnProperty('idStatusConta')) {
+        obj['idStatusConta'] = ApiClient.convertToType(data['idStatusConta'], 'Integer');
+      }
       if (data.hasOwnProperty('statusConta')) {
         obj['statusConta'] = ApiClient.convertToType(data['statusConta'], 'String');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroAgencia')) {
+        obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroContaCorrente')) {
+        obj['numeroContaCorrente'] = ApiClient.convertToType(data['numeroContaCorrente'], 'String');
       }
       if (data.hasOwnProperty('criptogramaResposta')) {
         obj['criptogramaResposta'] = ApiClient.convertToType(data['criptogramaResposta'], 'String');
@@ -61,15 +81,45 @@
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * @member {Integer} idStatusCartao
+   */
+  exports.prototype['idStatusCartao'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
    * @member {String} statusCartao
    */
   exports.prototype['statusCartao'] = undefined;
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * @member {Integer} idStatusConta
+   */
+  exports.prototype['idStatusConta'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo identificador da conta.
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * @member {Integer} numeroAgencia
+   */
+  exports.prototype['numeroAgencia'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da conta corrente.
+   * @member {String} numeroContaCorrente
+   */
+  exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
    * Criptograma de resposta

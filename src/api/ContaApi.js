@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate', '../model/Fatura', '../model/PageTransacaoResponse'], factory);
+    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate', '../model/FaturaResponse', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'), require('../model/Fatura'), require('../model/PageTransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'), require('../model/FaturaResponse'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate, root.Pier.Fatura, root.Pier.PageTransacaoResponse);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate, root.Pier.FaturaResponse, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate, Fatura, PageTransacaoResponse) {
+}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate, FaturaResponse, PageTransacaoResponse) {
   'use strict';
 
   /**
@@ -262,8 +262,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET1 operation.
-     * @callback module:api/ContaApi~consultarUsingGET1Callback
+     * Callback function to receive the result of the consultarUsingGET2 operation.
+     * @callback module:api/ContaApi~consultarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Conta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -273,15 +273,15 @@
      * Apresenta dados de uma determinada conta
      * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {module:api/ContaApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
-    this.consultarUsingGET1 = function(id, callback) {
+    this.consultarUsingGET2 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET1";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
       }
 
 
@@ -317,12 +317,16 @@
 
     /**
      * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+     * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
      * @param {module:api/ContaApi~gerarCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoImpressao}
      */
-    this.gerarCartaoUsingPOST = function(id, idPessoa, callback) {
+    this.gerarCartaoUsingPOST = function(id, idPessoa, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -341,6 +345,7 @@
         'id_pessoa': idPessoa
       };
       var queryParams = {
+        'id_tipo_plastico': opts['idTipoPlastico']
       };
       var headerParams = {
       };
@@ -363,7 +368,7 @@
      * Callback function to receive the result of the listarFaturasUsingGET operation.
      * @callback module:api/ContaApi~listarFaturasUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Fatura} data The data returned by the service call.
+     * @param {module:model/FaturaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -376,7 +381,7 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:model/ModelDate} opts.dataVencimento Data de Vencimento da Fatura.
      * @param {module:api/ContaApi~listarFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Fatura}
+     * data is of type: {module:model/FaturaResponse}
      */
     this.listarFaturasUsingGET = function(id, opts, callback) {
       opts = opts || {};
@@ -404,7 +409,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Fatura;
+      var returnType = FaturaResponse;
 
       return this.apiClient.callApi(
         '/api/contas/{id}/faturas', 'GET',
@@ -414,8 +419,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET1 operation.
-     * @callback module:api/ContaApi~listarUsingGET1Callback
+     * Callback function to receive the result of the listarUsingGET2 operation.
+     * @callback module:api/ContaApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Conta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -437,10 +442,10 @@
      * @param {module:model/ModelDate} opts.dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
      * @param {module:model/ModelDate} opts.dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @param {module:model/ModelDate} opts.dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-     * @param {module:api/ContaApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Conta}
      */
-    this.listarUsingGET1 = function(opts, callback) {
+    this.listarUsingGET2 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

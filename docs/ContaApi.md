@@ -7,10 +7,10 @@ Method | HTTP request | Description
 [**alterarLimiteUsingPUT**](ContaApi.md#alterarLimiteUsingPUT) | **PUT** /api/contas/{id}/alterar-limites | Alterar limite
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Alterar vencimento
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultarUsingGET1**](ContaApi.md#consultarUsingGET1) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET2**](ContaApi.md#consultarUsingGET2) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listarUsingGET1**](ContaApi.md#listarUsingGET1) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET2**](ContaApi.md#listarUsingGET2) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 
 
@@ -212,9 +212,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET1"></a>
-# **consultarUsingGET1**
-> Conta consultarUsingGET1(id)
+<a name="consultarUsingGET2"></a>
+# **consultarUsingGET2**
+> Conta consultarUsingGET2(id)
 
 Apresenta dados de uma determinada conta
 
@@ -243,7 +243,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET1(id, callback);
+api.consultarUsingGET2(id, callback);
 ```
 
 ### Parameters
@@ -267,9 +267,11 @@ Name | Type | Description  | Notes
 
 <a name="gerarCartaoUsingPOST"></a>
 # **gerarCartaoUsingPOST**
-> CartaoImpressao gerarCartaoUsingPOST(id, idPessoa)
+> CartaoImpressao gerarCartaoUsingPOST(id, idPessoa, opts)
 
 Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+
+Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
 
 ### Example
 ```javascript
@@ -288,6 +290,9 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 
 var idPessoa = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
 
+var opts = { 
+  'idTipoPlastico': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -296,7 +301,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarCartaoUsingPOST(id, idPessoa, callback);
+api.gerarCartaoUsingPOST(id, idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -305,6 +310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **idPessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
+ **idTipoPlastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
 
 ### Return type
 
@@ -321,7 +327,7 @@ Name | Type | Description  | Notes
 
 <a name="listarFaturasUsingGET"></a>
 # **listarFaturasUsingGET**
-> Fatura listarFaturasUsingGET(id, opts)
+> FaturaResponse listarFaturasUsingGET(id, opts)
 
 Listar Faturas da Conta
 
@@ -369,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Fatura**](Fatura.md)
+[**FaturaResponse**](FaturaResponse.md)
 
 ### Authorization
 
@@ -380,9 +386,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET1"></a>
-# **listarUsingGET1**
-> Conta listarUsingGET1(opts)
+<a name="listarUsingGET2"></a>
+# **listarUsingGET2**
+> Conta listarUsingGET2(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -423,7 +429,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET1(opts, callback);
+api.listarUsingGET2(opts, callback);
 ```
 
 ### Parameters

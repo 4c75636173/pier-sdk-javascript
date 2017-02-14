@@ -39,7 +39,6 @@
 
 
 
-
   };
 
   /**
@@ -70,9 +69,6 @@
       }
       if (data.hasOwnProperty('nomeImpresso')) {
         obj['nomeImpresso'] = ApiClient.convertToType(data['nomeImpresso'], 'String');
-      }
-      if (data.hasOwnProperty('idImagem')) {
-        obj['idImagem'] = ApiClient.convertToType(data['idImagem'], 'Integer');
       }
       if (data.hasOwnProperty('idTipoCartao')) {
         obj['idTipoCartao'] = ApiClient.convertToType(data['idTipoCartao'], 'Integer');
@@ -126,12 +122,6 @@
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
-
-  /**
-   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-   * @member {Integer} idImagem
-   */
-  exports.prototype['idImagem'] = undefined;
 
   /**
    * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
