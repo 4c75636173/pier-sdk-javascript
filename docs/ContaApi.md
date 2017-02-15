@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 <a name="listarFaturasUsingGET"></a>
 # **listarFaturasUsingGET**
-> FaturaResponse listarFaturasUsingGET(id, opts)
+> PageFaturas listarFaturasUsingGET(id, opts)
 
 Listar Faturas da Conta
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FaturaResponse**](FaturaResponse.md)
+[**PageFaturas**](PageFaturas.md)
 
 ### Authorization
 

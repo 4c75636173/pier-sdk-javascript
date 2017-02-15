@@ -18,7 +18,7 @@
   /**
    * The Pessoa model module.
    * @module model/Pessoa
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**

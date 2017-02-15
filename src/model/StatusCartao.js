@@ -18,7 +18,7 @@
   /**
    * The StatusCartao model module.
    * @module model/StatusCartao
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**

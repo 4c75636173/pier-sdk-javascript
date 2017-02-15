@@ -18,7 +18,7 @@
   /**
    * The HistoricoImpressaoCartao model module.
    * @module model/HistoricoImpressaoCartao
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**

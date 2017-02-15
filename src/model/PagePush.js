@@ -18,7 +18,7 @@
   /**
    * The PagePush model module.
    * @module model/PagePush
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**

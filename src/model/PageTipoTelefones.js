@@ -18,7 +18,7 @@
   /**
    * The PageTipoTelefones model module.
    * @module model/PageTipoTelefones
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**

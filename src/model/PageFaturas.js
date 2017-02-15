@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Cartao'], factory);
+    define(['../ApiClient', './FaturaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Cartao'));
+    module.exports = factory(require('../ApiClient'), require('./FaturaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageCartoes = factory(root.Pier.ApiClient, root.Pier.Cartao);
+    root.Pier.PageFaturas = factory(root.Pier.ApiClient, root.Pier.FaturaResponse);
   }
-}(this, function(ApiClient, Cartao) {
+}(this, function(ApiClient, FaturaResponse) {
   'use strict';
 
   /**
-   * The PageCartoes model module.
-   * @module model/PageCartoes
+   * The PageFaturas model module.
+   * @module model/PageFaturas
    * @version 2.5.5
    */
 
   /**
-   * Constructs a new <code>PageCartoes</code>.
-   * Lista de Cart\u00C3\u00B5es
-   * @alias module:model/PageCartoes
+   * Constructs a new <code>PageFaturas</code>.
+   * Lista de faturas
+   * @alias module:model/PageFaturas
    * @class
    */
   var exports = function() {
@@ -46,18 +46,18 @@
   };
 
   /**
-   * Constructs a <code>PageCartoes</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageFaturas</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PageCartoes} obj Optional instance to populate.
-   * @return {module:model/PageCartoes} The populated <code>PageCartoes</code> instance.
+   * @param {module:model/PageFaturas} obj Optional instance to populate.
+   * @return {module:model/PageFaturas} The populated <code>PageFaturas</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Cartao]);
+        obj['content'] = ApiClient.convertToType(data['content'], [FaturaResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/Cartao>} content
+   * @member {Array.<module:model/FaturaResponse>} content
    */
   exports.prototype['content'] = undefined;
 

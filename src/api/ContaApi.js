@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate', '../model/FaturaResponse', '../model/PageTransacaoResponse'], factory);
+    define(['../ApiClient', '../model/Conta', '../model/LimiteDisponibilidade', '../model/CartaoImpressao', '../model/ModelDate', '../model/PageFaturas', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'), require('../model/FaturaResponse'), require('../model/PageTransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Conta'), require('../model/LimiteDisponibilidade'), require('../model/CartaoImpressao'), require('../model/ModelDate'), require('../model/PageFaturas'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate, root.Pier.FaturaResponse, root.Pier.PageTransacaoResponse);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.Conta, root.Pier.LimiteDisponibilidade, root.Pier.CartaoImpressao, root.Pier.ModelDate, root.Pier.PageFaturas, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate, FaturaResponse, PageTransacaoResponse) {
+}(this, function(ApiClient, Conta, LimiteDisponibilidade, CartaoImpressao, ModelDate, PageFaturas, PageTransacaoResponse) {
   'use strict';
 
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.0.0
+   * @version 2.5.5
    */
 
   /**
@@ -368,7 +368,7 @@
      * Callback function to receive the result of the listarFaturasUsingGET operation.
      * @callback module:api/ContaApi~listarFaturasUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/FaturaResponse} data The data returned by the service call.
+     * @param {module:model/PageFaturas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -381,7 +381,7 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:model/ModelDate} opts.dataVencimento Data de Vencimento da Fatura.
      * @param {module:api/ContaApi~listarFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FaturaResponse}
+     * data is of type: {module:model/PageFaturas}
      */
     this.listarFaturasUsingGET = function(id, opts, callback) {
       opts = opts || {};
@@ -409,7 +409,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = FaturaResponse;
+      var returnType = PageFaturas;
 
       return this.apiClient.callApi(
         '/api/contas/{id}/faturas', 'GET',
