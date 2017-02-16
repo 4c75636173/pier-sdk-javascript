@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="listarUsingGET"></a>
 # **listarUsingGET**
-> AtendimentoCliente listarUsingGET(opts)
+> PageAtendimentoClientes listarUsingGET(opts)
 
 Lista todos os atendimentos
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AtendimentoCliente**](AtendimentoCliente.md)
+[**PageAtendimentoClientes**](PageAtendimentoClientes.md)
 
 ### Authorization
 

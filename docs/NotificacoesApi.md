@@ -5,7 +5,6 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarSMSUsingPOST**](NotificacoesApi.md#atualizarSMSUsingPOST) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
-[**limparAcessoTWWUsingGET**](NotificacoesApi.md#limparAcessoTWWUsingGET) | **GET** /api/notificacoes/sms/limpar | Limpar Acessos
 [**listarPushUsingGET**](NotificacoesApi.md#listarPushUsingGET) | **GET** /api/notificacoes/push | Listar Push
 [**listarSMSUsingGET**](NotificacoesApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**responderSMSUsingPOST**](NotificacoesApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
@@ -17,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="atualizarSMSUsingPOST"></a>
 # **atualizarSMSUsingPOST**
-> SMS atualizarSMSUsingPOST(nsu, status, data, textoStatus, operadora)
+> SMS atualizarSMSUsingPOST(opts)
 
 Atualizar SMS
 
@@ -36,16 +35,13 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.NotificacoesApi()
 
-var nsu = "nsu_example"; // {String} Seu n\u00C3\u00BAmero
-
-var status = "status_example"; // {String} Status
-
-var data = "data_example"; // {String} Data
-
-var textoStatus = "textoStatus_example"; // {String} TextoStatus
-
-var operadora = "operadora_example"; // {String} Operadora
-
+var opts = { 
+  'nsu': "nsu_example", // {String} Seu n\u00C3\u00BAmero
+  'status': "status_example", // {String} Status
+  'data': "data_example", // {String} Data
+  'textoStatus': "textoStatus_example", // {String} TextoStatus
+  'operadora': "operadora_example" // {String} Operadora
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -54,69 +50,22 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarSMSUsingPOST(nsu, status, data, textoStatus, operadora, callback);
+api.atualizarSMSUsingPOST(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **String**| Seu n\u00C3\u00BAmero | 
- **status** | **String**| Status | 
- **data** | **String**| Data | 
- **textoStatus** | **String**| TextoStatus | 
- **operadora** | **String**| Operadora | 
+ **nsu** | **String**| Seu n\u00C3\u00BAmero | [optional] 
+ **status** | **String**| Status | [optional] 
+ **data** | **String**| Data | [optional] 
+ **textoStatus** | **String**| TextoStatus | [optional] 
+ **operadora** | **String**| Operadora | [optional] 
 
 ### Return type
 
 [**SMS**](SMS.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="limparAcessoTWWUsingGET"></a>
-# **limparAcessoTWWUsingGET**
-> &#39;String&#39; limparAcessoTWWUsingGET
-
-Limpar Acessos
-
-Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.NotificacoesApi()
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.limparAcessoTWWUsingGET(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**&#39;String&#39;**
 
 ### Authorization
 
@@ -261,7 +210,7 @@ Name | Type | Description  | Notes
 
 <a name="responderSMSUsingPOST"></a>
 # **responderSMSUsingPOST**
-> SMS responderSMSUsingPOST(nsu, data, resposta)
+> SMS responderSMSUsingPOST(opts)
 
 Responder SMS
 
@@ -280,12 +229,11 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.NotificacoesApi()
 
-var nsu = "nsu_example"; // {String} Seu n\u00C3\u00BAmero
-
-var data = "data_example"; // {String} Data
-
-var resposta = "resposta_example"; // {String} TextoStatus
-
+var opts = { 
+  'nsu': "nsu_example", // {String} Seu n\u00C3\u00BAmero
+  'data': "data_example", // {String} Data
+  'resposta': "resposta_example" // {String} TextoStatus
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -294,16 +242,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.responderSMSUsingPOST(nsu, data, resposta, callback);
+api.responderSMSUsingPOST(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nsu** | **String**| Seu n\u00C3\u00BAmero | 
- **data** | **String**| Data | 
- **resposta** | **String**| TextoStatus | 
+ **nsu** | **String**| Seu n\u00C3\u00BAmero | [optional] 
+ **data** | **String**| Data | [optional] 
+ **resposta** | **String**| TextoStatus | [optional] 
 
 ### Return type
 

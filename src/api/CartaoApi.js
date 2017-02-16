@@ -33,6 +33,59 @@
 
 
     /**
+     * Callback function to receive the result of the alterarAlterarSenhaUsingPUT operation.
+     * @callback module:api/CartaoApi~alterarAlterarSenhaUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {String} senha Senha para ser cadastrada ou alterada.
+     * @param {module:api/CartaoApi~alterarAlterarSenhaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.alterarAlterarSenhaUsingPUT = function(id, senha, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarAlterarSenhaUsingPUT";
+      }
+
+      // verify the required parameter 'senha' is set
+      if (senha == undefined || senha == null) {
+        throw "Missing the required parameter 'senha' when calling alterarAlterarSenhaUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+        'senha': senha
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/alterar-senha', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the alterarStatusImpressaoUsingPUT operation.
      * @callback module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -199,32 +252,32 @@
     }
 
     /**
-     * Callback function to receive the result of the cadastrarAlterarSenhaUsingPUT operation.
-     * @callback module:api/CartaoApi~cadastrarAlterarSenhaUsingPUTCallback
+     * Callback function to receive the result of the cadastrarAlterarSenhaUsingPOST operation.
+     * @callback module:api/CartaoApi~cadastrarAlterarSenhaUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
+     * Realiza o cadastro da senha de um Cart\u00C3\u00A3o
      * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {String} senha Senha para ser cadastrada ou alterada.
-     * @param {module:api/CartaoApi~cadastrarAlterarSenhaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~cadastrarAlterarSenhaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.cadastrarAlterarSenhaUsingPUT = function(id, senha, callback) {
+    this.cadastrarAlterarSenhaUsingPOST = function(id, senha, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling cadastrarAlterarSenhaUsingPUT";
+        throw "Missing the required parameter 'id' when calling cadastrarAlterarSenhaUsingPOST";
       }
 
       // verify the required parameter 'senha' is set
       if (senha == undefined || senha == null) {
-        throw "Missing the required parameter 'senha' when calling cadastrarAlterarSenhaUsingPUT";
+        throw "Missing the required parameter 'senha' when calling cadastrarAlterarSenhaUsingPOST";
       }
 
 
@@ -245,7 +298,7 @@
       var returnType = 'String';
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id}/alterar-senha', 'PUT',
+        '/api/cartoes/{id}/cadastrar-senha', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

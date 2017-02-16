@@ -100,8 +100,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/WebhooksApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/WebhooksApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -111,15 +111,15 @@
      * Consultar Webhook
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-     * @param {module:api/WebhooksApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.consultarUsingGET10 = function(id, callback) {
+    this.consultarUsingGET11 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -146,8 +146,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/WebhooksApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/WebhooksApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHooks} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -163,10 +163,10 @@
      * @param {module:model/String} opts.evento Evento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHooks}
      */
-    this.listarUsingGET11 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

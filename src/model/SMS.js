@@ -27,25 +27,32 @@
    * @alias module:model/SMS
    * @class
    * @param status
+   * @param descricaoStatus
    * @param idPessoa
    * @param idConta
    * @param celular
+   * @param operadora
    * @param conteudo
+   * @param resposta
    * @param dataAgendamento
    * @param quantidadeTentativasEnvio
    * @param dataInclusao
    * @param dataAlteracaoStatus
    */
-  var exports = function(status, idPessoa, idConta, celular, conteudo, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus) {
+  var exports = function(status, descricaoStatus, idPessoa, idConta, celular, operadora, conteudo, resposta, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus) {
+
 
 
 
 
     this['status'] = status;
+    this['descricaoStatus'] = descricaoStatus;
     this['idPessoa'] = idPessoa;
     this['idConta'] = idConta;
     this['celular'] = celular;
+    this['operadora'] = operadora;
     this['conteudo'] = conteudo;
+    this['resposta'] = resposta;
     this['dataAgendamento'] = dataAgendamento;
     this['quantidadeTentativasEnvio'] = quantidadeTentativasEnvio;
     this['dataInclusao'] = dataInclusao;
@@ -64,6 +71,9 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
       if (data.hasOwnProperty('nsu')) {
         obj['nsu'] = ApiClient.convertToType(data['nsu'], 'Integer');
       }
@@ -76,6 +86,9 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
+      if (data.hasOwnProperty('descricaoStatus')) {
+        obj['descricaoStatus'] = ApiClient.convertToType(data['descricaoStatus'], 'String');
+      }
       if (data.hasOwnProperty('idPessoa')) {
         obj['idPessoa'] = ApiClient.convertToType(data['idPessoa'], 'Integer');
       }
@@ -85,8 +98,14 @@
       if (data.hasOwnProperty('celular')) {
         obj['celular'] = ApiClient.convertToType(data['celular'], 'String');
       }
+      if (data.hasOwnProperty('operadora')) {
+        obj['operadora'] = ApiClient.convertToType(data['operadora'], 'String');
+      }
       if (data.hasOwnProperty('conteudo')) {
         obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
+      }
+      if (data.hasOwnProperty('resposta')) {
+        obj['resposta'] = ApiClient.convertToType(data['resposta'], 'String');
       }
       if (data.hasOwnProperty('dataAgendamento')) {
         obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'Date');
@@ -107,6 +126,12 @@
     return obj;
   }
 
+
+  /**
+   * C\u00C3\u00B3digo Identificador.
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
 
   /**
    * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
@@ -133,6 +158,12 @@
   exports.prototype['status'] = undefined;
 
   /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * @member {String} descricaoStatus
+   */
+  exports.prototype['descricaoStatus'] = undefined;
+
+  /**
    * C\u00C3\u00B3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
@@ -151,10 +182,22 @@
   exports.prototype['celular'] = undefined;
 
   /**
+   * Apresenta a operadora do celular a ser eviado o SMS
+   * @member {String} operadora
+   */
+  exports.prototype['operadora'] = undefined;
+
+  /**
    * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
+
+  /**
+   * Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+   * @member {String} resposta
+   */
+  exports.prototype['resposta'] = undefined;
 
   /**
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o

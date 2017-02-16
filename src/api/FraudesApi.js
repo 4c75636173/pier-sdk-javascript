@@ -1,18 +1,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AtendimentoCliente'], factory);
+    define(['../ApiClient', '../model/AtendimentoCliente', '../model/PageAtendimentoClientes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AtendimentoCliente'));
+    module.exports = factory(require('../ApiClient'), require('../model/AtendimentoCliente'), require('../model/PageAtendimentoClientes'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.FraudesApi = factory(root.Pier.ApiClient, root.Pier.AtendimentoCliente);
+    root.Pier.FraudesApi = factory(root.Pier.ApiClient, root.Pier.AtendimentoCliente, root.Pier.PageAtendimentoClientes);
   }
-}(this, function(ApiClient, AtendimentoCliente) {
+}(this, function(ApiClient, AtendimentoCliente, PageAtendimentoClientes) {
   'use strict';
 
   /**
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the listarUsingGET operation.
      * @callback module:api/FraudesApi~listarUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AtendimentoCliente} data The data returned by the service call.
+     * @param {module:model/PageAtendimentoClientes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -98,7 +98,7 @@
      * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
      * @param {Date} opts.dataAtendimento Apresenta a data em que o Atendimento foi realizado.
      * @param {module:api/FraudesApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/AtendimentoCliente}
+     * data is of type: {module:model/PageAtendimentoClientes}
      */
     this.listarUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -124,7 +124,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = AtendimentoCliente;
+      var returnType = PageAtendimentoClientes;
 
       return this.apiClient.callApi(
         '/api/atendimento-clientes', 'GET',

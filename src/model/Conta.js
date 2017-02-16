@@ -39,6 +39,8 @@
 
 
 
+
+
   };
 
   /**
@@ -81,6 +83,12 @@
       }
       if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
         obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
+      }
+      if (data.hasOwnProperty('numeroAgencia')) {
+        obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroContaCorrente')) {
+        obj['numeroContaCorrente'] = ApiClient.convertToType(data['numeroContaCorrente'], 'String');
       }
     }
     return obj;
@@ -146,6 +154,18 @@
    * @member {Date} dataUltimaAlteracaoVencimento
    */
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * @member {Integer} numeroAgencia
+   */
+  exports.prototype['numeroAgencia'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da conta corrente.
+   * @member {String} numeroContaCorrente
+   */
+  exports.prototype['numeroContaCorrente'] = undefined;
 
 
 

@@ -43,51 +43,28 @@
     /**
      * Atualizar SMS
      * Esse recurso permite atualizar o status do SMS do emissor
-     * @param {String} nsu Seu n\u00C3\u00BAmero
-     * @param {String} status Status
-     * @param {String} data Data
-     * @param {String} textoStatus TextoStatus
-     * @param {String} operadora Operadora
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.nsu Seu n\u00C3\u00BAmero
+     * @param {String} opts.status Status
+     * @param {String} opts.data Data
+     * @param {String} opts.textoStatus TextoStatus
+     * @param {String} opts.operadora Operadora
      * @param {module:api/NotificacoesApi~atualizarSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/SMS}
      */
-    this.atualizarSMSUsingPOST = function(nsu, status, data, textoStatus, operadora, callback) {
+    this.atualizarSMSUsingPOST = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'nsu' is set
-      if (nsu == undefined || nsu == null) {
-        throw "Missing the required parameter 'nsu' when calling atualizarSMSUsingPOST";
-      }
-
-      // verify the required parameter 'status' is set
-      if (status == undefined || status == null) {
-        throw "Missing the required parameter 'status' when calling atualizarSMSUsingPOST";
-      }
-
-      // verify the required parameter 'data' is set
-      if (data == undefined || data == null) {
-        throw "Missing the required parameter 'data' when calling atualizarSMSUsingPOST";
-      }
-
-      // verify the required parameter 'textoStatus' is set
-      if (textoStatus == undefined || textoStatus == null) {
-        throw "Missing the required parameter 'textoStatus' when calling atualizarSMSUsingPOST";
-      }
-
-      // verify the required parameter 'operadora' is set
-      if (operadora == undefined || operadora == null) {
-        throw "Missing the required parameter 'operadora' when calling atualizarSMSUsingPOST";
-      }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'nsu': nsu,
-        'status': status,
-        'data': data,
-        'texto_status': textoStatus,
-        'operadora': operadora
+        'nsu': opts['nsu'],
+        'status': opts['status'],
+        'data': opts['data'],
+        'texto_status': opts['textoStatus'],
+        'operadora': opts['operadora']
       };
       var headerParams = {
       };
@@ -101,45 +78,6 @@
 
       return this.apiClient.callApi(
         '/api/notificacoes/sms/atualizar-status', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the limparAcessoTWWUsingGET operation.
-     * @callback module:api/NotificacoesApi~limparAcessoTWWUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Limpar Acessos
-     * Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-     * @param {module:api/NotificacoesApi~limparAcessoTWWUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {'String'}
-     */
-    this.limparAcessoTWWUsingGET = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/api/notificacoes/sms/limpar', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -266,37 +204,24 @@
     /**
      * Responder SMS
      * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-     * @param {String} nsu Seu n\u00C3\u00BAmero
-     * @param {String} data Data
-     * @param {String} resposta TextoStatus
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.nsu Seu n\u00C3\u00BAmero
+     * @param {String} opts.data Data
+     * @param {String} opts.resposta TextoStatus
      * @param {module:api/NotificacoesApi~responderSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/SMS}
      */
-    this.responderSMSUsingPOST = function(nsu, data, resposta, callback) {
+    this.responderSMSUsingPOST = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'nsu' is set
-      if (nsu == undefined || nsu == null) {
-        throw "Missing the required parameter 'nsu' when calling responderSMSUsingPOST";
-      }
-
-      // verify the required parameter 'data' is set
-      if (data == undefined || data == null) {
-        throw "Missing the required parameter 'data' when calling responderSMSUsingPOST";
-      }
-
-      // verify the required parameter 'resposta' is set
-      if (resposta == undefined || resposta == null) {
-        throw "Missing the required parameter 'resposta' when calling responderSMSUsingPOST";
-      }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'nsu': nsu,
-        'data': data,
-        'resposta': resposta
+        'nsu': opts['nsu'],
+        'data': opts['data'],
+        'resposta': opts['resposta']
       };
       var headerParams = {
       };

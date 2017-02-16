@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT3**](WebhooksApi.md#alterarUsingPUT3) | **PUT** /api/webhooks | Alterar Webhook
-[**consultarUsingGET10**](WebhooksApi.md#consultarUsingGET10) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET11**](WebhooksApi.md#listarUsingGET11) | **GET** /api/webhooks | Lista os Webhooks
+[**consultarUsingGET11**](WebhooksApi.md#consultarUsingGET11) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET12**](WebhooksApi.md#listarUsingGET12) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST4**](WebhooksApi.md#salvarUsingPOST4) | **POST** /api/webhooks | Salvar Webhook
 
 
@@ -72,9 +72,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET10"></a>
-# **consultarUsingGET10**
-> WebHook consultarUsingGET10(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> WebHook consultarUsingGET11(id)
 
 Consultar Webhook
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET10(id, callback);
+api.consultarUsingGET11(id, callback);
 ```
 
 ### Parameters
@@ -125,9 +125,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageWebHooks listarUsingGET11(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageWebHooks listarUsingGET12(opts)
 
 Lista os Webhooks
 
@@ -162,7 +162,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
