@@ -18,7 +18,7 @@
   /**
    * The TransacaoResponse model module.
    * @module model/TransacaoResponse
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

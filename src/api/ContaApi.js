@@ -18,7 +18,7 @@
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The Telefone model module.
    * @module model/Telefone
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

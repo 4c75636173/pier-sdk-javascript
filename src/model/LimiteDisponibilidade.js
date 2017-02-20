@@ -18,7 +18,7 @@
   /**
    * The LimiteDisponibilidade model module.
    * @module model/LimiteDisponibilidade
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageEnderecos model module.
    * @module model/PageEnderecos
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

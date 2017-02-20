@@ -18,7 +18,7 @@
   /**
    * The Produto model module.
    * @module model/Produto
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

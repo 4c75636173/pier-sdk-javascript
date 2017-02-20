@@ -18,7 +18,7 @@
   /**
    * The PagePortador model module.
    * @module model/PagePortador
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

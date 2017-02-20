@@ -18,7 +18,7 @@
   /**
    * Fraudes service.
    * @module api/FraudesApi
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**

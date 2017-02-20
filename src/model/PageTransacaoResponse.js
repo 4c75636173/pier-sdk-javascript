@@ -18,7 +18,7 @@
   /**
    * The PageTransacaoResponse model module.
    * @module model/PageTransacaoResponse
-   * @version 2.5.5
+   * @version 2.6.1
    */
 
   /**
