@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**listarFaturasConsignadasUsingGET**](ContaApi.md#listarFaturasConsignadasUsingGET) | **GET** /api/contas/{id}/faturas-consignadas | Listar Faturas consignadas da Conta
 [**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Listar Faturas da Conta
-[**listarUsingGET15**](ContaApi.md#listarUsingGET15) | **GET** /api/contas/{id}/transferencias | Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+[**listarUsingGET15**](ContaApi.md#listarUsingGET15) | **GET** /api/contas/{id}/transferencias | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listarUsingGET3**](ContaApi.md#listarUsingGET3) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferirUsingPOST**](ContaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -631,9 +631,9 @@ Name | Type | Description  | Notes
 # **listarUsingGET15**
 > PageTransferencias listarUsingGET15(id, opts)
 
-Lista as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta
+Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito realizadas pela conta existentes na base do emissor.
+Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
 
 ### Example
 ```javascript

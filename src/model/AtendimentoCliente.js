@@ -18,7 +18,7 @@
   /**
    * The AtendimentoCliente model module.
    * @module model/AtendimentoCliente
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

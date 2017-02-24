@@ -18,7 +18,7 @@
   /**
    * The StatusConta model module.
    * @module model/StatusConta
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

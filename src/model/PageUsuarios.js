@@ -18,7 +18,7 @@
   /**
    * The PageUsuarios model module.
    * @module model/PageUsuarios
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

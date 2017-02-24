@@ -18,7 +18,7 @@
   /**
    * The ListaProdutos model module.
    * @module model/ListaProdutos
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

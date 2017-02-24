@@ -18,7 +18,7 @@
   /**
    * The Conta model module.
    * @module model/Conta
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

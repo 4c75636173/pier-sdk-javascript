@@ -18,7 +18,7 @@
   /**
    * The Token model module.
    * @module model/Token
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

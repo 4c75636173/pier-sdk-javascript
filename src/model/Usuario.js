@@ -18,7 +18,7 @@
   /**
    * The Usuario model module.
    * @module model/Usuario
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

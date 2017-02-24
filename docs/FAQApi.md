@@ -4,17 +4,19 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ para um determinado Emissor.
-[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Altera os par\u00C3\u00A2metros de uma FAQ existente.
-[**consultarUsingGET5**](FAQApi.md#consultarUsingGET5) | **GET** /api/faqs/{id} | Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
-[**listarUsingGET5**](FAQApi.md#listarUsingGET5) | **GET** /api/faqs | Lista todas as FAQs de um determinado emissor.
+[**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
+[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultarUsingGET5**](FAQApi.md#consultarUsingGET5) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET5**](FAQApi.md#listarUsingGET5) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
 # **adicionarUsingPOST**
 > FAQ adicionarUsingPOST(pergunta, resposta, opts)
 
-Adiciona uma nova FAQ para um determinado Emissor.
+Adiciona uma nova FAQ
+
+Adiciona uma nova FAQ
 
 ### Example
 ```javascript
@@ -78,7 +80,9 @@ Name | Type | Description  | Notes
 # **alterarUsingPUT2**
 > FAQ alterarUsingPUT2(id, pergunta, resposta, opts)
 
-Altera os par\u00C3\u00A2metros de uma FAQ existente.
+Alterar FAQ
+
+Alterar FAQ
 
 ### Example
 ```javascript
@@ -145,7 +149,9 @@ Name | Type | Description  | Notes
 # **consultarUsingGET5**
 > FAQ consultarUsingGET5(id)
 
-Consulta os detalhes de uma determinada FAQ relacionada a um Emissor.
+Consultar FAQ por id
+
+Consulta os detalhes de uma determinada FAQ
 
 ### Example
 ```javascript
@@ -196,7 +202,9 @@ Name | Type | Description  | Notes
 # **listarUsingGET5**
 > PageFaqs listarUsingGET5(opts)
 
-Lista todas as FAQs de um determinado emissor.
+Lista FAQs
+
+Lista todas as FAQs
 
 ### Example
 ```javascript

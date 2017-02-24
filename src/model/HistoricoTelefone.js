@@ -18,7 +18,7 @@
   /**
    * The HistoricoTelefone model module.
    * @module model/HistoricoTelefone
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

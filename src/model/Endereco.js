@@ -18,7 +18,7 @@
   /**
    * The Endereco model module.
    * @module model/Endereco
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

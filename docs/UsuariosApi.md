@@ -5,11 +5,11 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterarUsingPUT6**](UsuariosApi.md#alterarUsingPUT6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+[**alterarUsingPUT6**](UsuariosApi.md#alterarUsingPUT6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados
 [**consultarUsingGET16**](UsuariosApi.md#consultarUsingGET16) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**listarUsingGET16**](UsuariosApi.md#listarUsingGET16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+[**listarUsingGET16**](UsuariosApi.md#listarUsingGET16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST6**](UsuariosApi.md#salvarUsingPOST6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio na base do PIER
+[**salvarUsingPOST6**](UsuariosApi.md#salvarUsingPOST6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 # **alterarUsingPUT6**
 > Usuario alterarUsingPUT6(id, update)
 
-Alterar os usu\u00C3\u00A1rios cadastrados na base do PIER
+Alterar os usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 # **listarUsingGET16**
 > PageUsuarios listarUsingGET16(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER
+Lista os Usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
 
@@ -304,9 +304,9 @@ Name | Type | Description  | Notes
 # **salvarUsingPOST6**
 > Usuario salvarUsingPOST6(persist)
 
-Cadastrar Usu\u00C3\u00A1rio na base do PIER
+Cadastrar Usu\u00C3\u00A1rio
 
-Esse recurso permite cadastrar usu\u00C3\u00A1rios na base do PIER.
+Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
 ### Example
 ```javascript

@@ -18,7 +18,7 @@
   /**
    * The PageTipoBoleto model module.
    * @module model/PageTipoBoleto
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

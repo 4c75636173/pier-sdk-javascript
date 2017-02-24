@@ -18,7 +18,7 @@
   /**
    * The Base model module.
    * @module model/Base
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**

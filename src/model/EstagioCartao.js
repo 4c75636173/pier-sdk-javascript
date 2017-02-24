@@ -18,7 +18,7 @@
   /**
    * The EstagioCartao model module.
    * @module model/EstagioCartao
-   * @version 2.6.1
+   * @version 2.8.0
    */
 
   /**
