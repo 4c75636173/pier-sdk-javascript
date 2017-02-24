@@ -80,8 +80,8 @@
       if (data.hasOwnProperty('idEmissor')) {
         obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
       }
-      if (data.hasOwnProperty('evento')) {
-        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
+      if (data.hasOwnProperty('tipoEvento')) {
+        obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -146,10 +146,10 @@
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * Evento de notifica\u00C3\u00A7\u00C3\u00A3o
-   * @member {module:model/SMS.EventoEnum} evento
+   * TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+   * @member {module:model/SMS.TipoEventoEnum} tipoEvento
    */
-  exports.prototype['evento'] = undefined;
+  exports.prototype['tipoEvento'] = undefined;
 
   /**
    * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -231,11 +231,11 @@
 
 
   /**
-   * Allowed values for the <code>evento</code> property.
+   * Allowed values for the <code>tipoEvento</code> property.
    * @enum {String}
    * @readonly
    */
-  exports.EventoEnum = { 
+  exports.TipoEventoEnum = { 
     /**
      * value: RISCO_FRAUDE
      * @const

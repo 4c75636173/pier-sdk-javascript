@@ -32,9 +32,9 @@
    * @param tokenServidor
    * @param titulo
    * @param conteudo
-   * @param evento
+   * @param tipoEvento
    */
-  var exports = function(idPessoa, idConta, tokenDispositivo, tokenServidor, titulo, conteudo, evento) {
+  var exports = function(idPessoa, idConta, tokenDispositivo, tokenServidor, titulo, conteudo, tipoEvento) {
 
     this['idPessoa'] = idPessoa;
     this['idConta'] = idConta;
@@ -42,7 +42,7 @@
     this['tokenServidor'] = tokenServidor;
     this['titulo'] = titulo;
     this['conteudo'] = conteudo;
-    this['evento'] = evento;
+    this['tipoEvento'] = tipoEvento;
 
 
 
@@ -77,8 +77,8 @@
       if (data.hasOwnProperty('conteudo')) {
         obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
       }
-      if (data.hasOwnProperty('evento')) {
-        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
+      if (data.hasOwnProperty('tipoEvento')) {
+        obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
       }
       if (data.hasOwnProperty('icone')) {
         obj['icone'] = ApiClient.convertToType(data['icone'], 'String');
@@ -131,10 +131,10 @@
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
-   * @member {module:model/PushFCMEGCM.EventoEnum} evento
+   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * @member {module:model/PushFCMEGCM.TipoEventoEnum} tipoEvento
    */
-  exports.prototype['evento'] = undefined;
+  exports.prototype['tipoEvento'] = undefined;
 
   /**
    * Apresenta o nome do icone a ser apresentado no push.
@@ -156,11 +156,11 @@
 
 
   /**
-   * Allowed values for the <code>evento</code> property.
+   * Allowed values for the <code>tipoEvento</code> property.
    * @enum {String}
    * @readonly
    */
-  exports.EventoEnum = { 
+  exports.TipoEventoEnum = { 
     /**
      * value: RISCO_FRAUDE
      * @const

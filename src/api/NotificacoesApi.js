@@ -98,7 +98,7 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {module:model/ModelDate} opts.dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
-     * @param {module:model/String} opts.evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.plataforma Plataforma de Push notifications.
      * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -116,7 +116,7 @@
         'page': opts['page'],
         'limit': opts['limit'],
         'dataEnvio': opts['dataEnvio'],
-        'evento': opts['evento'],
+        'tipoEvento': opts['tipoEvento'],
         'status': opts['status'],
         'plataforma': opts['plataforma'],
         'protocolo': opts['protocolo']
@@ -153,7 +153,7 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Date} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-     * @param {module:model/String} opts.evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
      * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -171,7 +171,7 @@
         'page': opts['page'],
         'limit': opts['limit'],
         'dataInclusao': opts['dataInclusao'],
-        'evento': opts['evento'],
+        'tipoEvento': opts['tipoEvento'],
         'status': opts['status'],
         'operadora': opts['operadora'],
         'protocolo': opts['protocolo']

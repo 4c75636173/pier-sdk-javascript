@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AtendimentoCliente', './model/AuthToken', './model/BodyAccessToken', './model/Cartao', './model/CartaoImpressao', './model/Conta', './model/Endereco', './model/EstagioCartao', './model/ExtraInfo', './model/FaturaResponse', './model/HistoricoImpressaoCartao', './model/HistoricoTelefone', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/LoteCartoesPrePagos', './model/NotificacaoPushResponse', './model/NotificacaoSMSBody', './model/NotificacaoSMSResponse', './model/OrigemComercial', './model/PageAtendimentoClientes', './model/PageCartoes', './model/PageEnderecos', './model/PageEstagiosCartoes', './model/PageFaturas', './model/PageOrigensComerciais', './model/PagePessoas', './model/PagePortador', './model/PagePush', './model/PageSMS', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/PageTelefones', './model/PageTipoTelefones', './model/PageTiposEndereco', './model/PageTransacaoResponse', './model/PageTransferencias', './model/PageWebHooks', './model/Pessoa', './model/Portador', './model/Produto', './model/PushAPNS', './model/PushFCMEGCM', './model/SMS', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './model/Telefone', './model/TipoEndereco', './model/TipoTelefone', './model/TransacaoResponse', './model/Transferencia', './model/ValidaCartao', './model/WebHook', './api/BaseApi', './api/CadastrosGeraisApi', './api/CartaoApi', './api/ContaApi', './api/FraudesApi', './api/NotificacoesApi', './api/StatusParametrosApi', './api/TokenApi', './api/WebhooksApi'], factory);
+    define(['./ApiClient', './model/AtendimentoCliente', './model/AuthToken', './model/Base', './model/BodyAccessToken', './model/Cartao', './model/CartaoImpressao', './model/Conta', './model/DividaClienteResponse', './model/Endereco', './model/EstagioCartao', './model/ExtraInfo', './model/FAQ', './model/FaturaResponse', './model/HistoricoImpressaoCartao', './model/HistoricoTelefone', './model/LimiteDisponibilidade', './model/ListaProdutos', './model/LoteCartoesPrePagos', './model/NotificacaoPushResponse', './model/NotificacaoSMSBody', './model/NotificacaoSMSResponse', './model/OrigemComercial', './model/PageAtendimentoClientes', './model/PageBases', './model/PageCartoes', './model/PageEnderecos', './model/PageEstagiosCartoes', './model/PageFaqs', './model/PageFaturas', './model/PageOrigensComerciais', './model/PagePessoas', './model/PagePortador', './model/PagePush', './model/PageSMS', './model/PageStatusCartoes', './model/PageStatusContas', './model/PageStatusImpressao', './model/PageTelefones', './model/PageTipoBoleto', './model/PageTipoTelefones', './model/PageTiposEndereco', './model/PageTransacaoResponse', './model/PageTransferencias', './model/PageUsuarios', './model/PageWebHooks', './model/Pessoa', './model/Portador', './model/Produto', './model/PushAPNS', './model/PushFCMEGCM', './model/RiscoFraudeDetalhadoResponse', './model/RiscoFraudeResponse', './model/RiscoFraudeResponsePage', './model/SMS', './model/StatusCartao', './model/StatusConta', './model/StatusImpressao', './model/Telefone', './model/TipoEndereco', './model/TipoTelefone', './model/Token', './model/TransacaoResponse', './model/Transferencia', './model/Usuario', './model/ValidaCartao', './model/WebHook', './api/BaseApi', './api/CadastrosGeraisApi', './api/CartaoApi', './api/ContaApi', './api/FAQApi', './api/NotificacoesApi', './api/RiscoFraudeApi', './api/StatusParametrosApi', './api/TokenApi', './api/UsuariosApi', './api/WebhooksApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AtendimentoCliente'), require('./model/AuthToken'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/CartaoImpressao'), require('./model/Conta'), require('./model/Endereco'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/FaturaResponse'), require('./model/HistoricoImpressaoCartao'), require('./model/HistoricoTelefone'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/LoteCartoesPrePagos'), require('./model/NotificacaoPushResponse'), require('./model/NotificacaoSMSBody'), require('./model/NotificacaoSMSResponse'), require('./model/OrigemComercial'), require('./model/PageAtendimentoClientes'), require('./model/PageCartoes'), require('./model/PageEnderecos'), require('./model/PageEstagiosCartoes'), require('./model/PageFaturas'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PagePortador'), require('./model/PagePush'), require('./model/PageSMS'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/PageTelefones'), require('./model/PageTipoTelefones'), require('./model/PageTiposEndereco'), require('./model/PageTransacaoResponse'), require('./model/PageTransferencias'), require('./model/PageWebHooks'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/PushAPNS'), require('./model/PushFCMEGCM'), require('./model/SMS'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./model/Telefone'), require('./model/TipoEndereco'), require('./model/TipoTelefone'), require('./model/TransacaoResponse'), require('./model/Transferencia'), require('./model/ValidaCartao'), require('./model/WebHook'), require('./api/BaseApi'), require('./api/CadastrosGeraisApi'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/FraudesApi'), require('./api/NotificacoesApi'), require('./api/StatusParametrosApi'), require('./api/TokenApi'), require('./api/WebhooksApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AtendimentoCliente'), require('./model/AuthToken'), require('./model/Base'), require('./model/BodyAccessToken'), require('./model/Cartao'), require('./model/CartaoImpressao'), require('./model/Conta'), require('./model/DividaClienteResponse'), require('./model/Endereco'), require('./model/EstagioCartao'), require('./model/ExtraInfo'), require('./model/FAQ'), require('./model/FaturaResponse'), require('./model/HistoricoImpressaoCartao'), require('./model/HistoricoTelefone'), require('./model/LimiteDisponibilidade'), require('./model/ListaProdutos'), require('./model/LoteCartoesPrePagos'), require('./model/NotificacaoPushResponse'), require('./model/NotificacaoSMSBody'), require('./model/NotificacaoSMSResponse'), require('./model/OrigemComercial'), require('./model/PageAtendimentoClientes'), require('./model/PageBases'), require('./model/PageCartoes'), require('./model/PageEnderecos'), require('./model/PageEstagiosCartoes'), require('./model/PageFaqs'), require('./model/PageFaturas'), require('./model/PageOrigensComerciais'), require('./model/PagePessoas'), require('./model/PagePortador'), require('./model/PagePush'), require('./model/PageSMS'), require('./model/PageStatusCartoes'), require('./model/PageStatusContas'), require('./model/PageStatusImpressao'), require('./model/PageTelefones'), require('./model/PageTipoBoleto'), require('./model/PageTipoTelefones'), require('./model/PageTiposEndereco'), require('./model/PageTransacaoResponse'), require('./model/PageTransferencias'), require('./model/PageUsuarios'), require('./model/PageWebHooks'), require('./model/Pessoa'), require('./model/Portador'), require('./model/Produto'), require('./model/PushAPNS'), require('./model/PushFCMEGCM'), require('./model/RiscoFraudeDetalhadoResponse'), require('./model/RiscoFraudeResponse'), require('./model/RiscoFraudeResponsePage'), require('./model/SMS'), require('./model/StatusCartao'), require('./model/StatusConta'), require('./model/StatusImpressao'), require('./model/Telefone'), require('./model/TipoEndereco'), require('./model/TipoTelefone'), require('./model/Token'), require('./model/TransacaoResponse'), require('./model/Transferencia'), require('./model/Usuario'), require('./model/ValidaCartao'), require('./model/WebHook'), require('./api/BaseApi'), require('./api/CadastrosGeraisApi'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/FAQApi'), require('./api/NotificacoesApi'), require('./api/RiscoFraudeApi'), require('./api/StatusParametrosApi'), require('./api/TokenApi'), require('./api/UsuariosApi'), require('./api/WebhooksApi'));
   }
-}(function(ApiClient, AtendimentoCliente, AuthToken, BodyAccessToken, Cartao, CartaoImpressao, Conta, Endereco, EstagioCartao, ExtraInfo, FaturaResponse, HistoricoImpressaoCartao, HistoricoTelefone, LimiteDisponibilidade, ListaProdutos, LoteCartoesPrePagos, NotificacaoPushResponse, NotificacaoSMSBody, NotificacaoSMSResponse, OrigemComercial, PageAtendimentoClientes, PageCartoes, PageEnderecos, PageEstagiosCartoes, PageFaturas, PageOrigensComerciais, PagePessoas, PagePortador, PagePush, PageSMS, PageStatusCartoes, PageStatusContas, PageStatusImpressao, PageTelefones, PageTipoTelefones, PageTiposEndereco, PageTransacaoResponse, PageTransferencias, PageWebHooks, Pessoa, Portador, Produto, PushAPNS, PushFCMEGCM, SMS, StatusCartao, StatusConta, StatusImpressao, Telefone, TipoEndereco, TipoTelefone, TransacaoResponse, Transferencia, ValidaCartao, WebHook, BaseApi, CadastrosGeraisApi, CartaoApi, ContaApi, FraudesApi, NotificacoesApi, StatusParametrosApi, TokenApi, WebhooksApi) {
+}(function(ApiClient, AtendimentoCliente, AuthToken, Base, BodyAccessToken, Cartao, CartaoImpressao, Conta, DividaClienteResponse, Endereco, EstagioCartao, ExtraInfo, FAQ, FaturaResponse, HistoricoImpressaoCartao, HistoricoTelefone, LimiteDisponibilidade, ListaProdutos, LoteCartoesPrePagos, NotificacaoPushResponse, NotificacaoSMSBody, NotificacaoSMSResponse, OrigemComercial, PageAtendimentoClientes, PageBases, PageCartoes, PageEnderecos, PageEstagiosCartoes, PageFaqs, PageFaturas, PageOrigensComerciais, PagePessoas, PagePortador, PagePush, PageSMS, PageStatusCartoes, PageStatusContas, PageStatusImpressao, PageTelefones, PageTipoBoleto, PageTipoTelefones, PageTiposEndereco, PageTransacaoResponse, PageTransferencias, PageUsuarios, PageWebHooks, Pessoa, Portador, Produto, PushAPNS, PushFCMEGCM, RiscoFraudeDetalhadoResponse, RiscoFraudeResponse, RiscoFraudeResponsePage, SMS, StatusCartao, StatusConta, StatusImpressao, Telefone, TipoEndereco, TipoTelefone, Token, TransacaoResponse, Transferencia, Usuario, ValidaCartao, WebHook, BaseApi, CadastrosGeraisApi, CartaoApi, ContaApi, FAQApi, NotificacoesApi, RiscoFraudeApi, StatusParametrosApi, TokenApi, UsuariosApi, WebhooksApi) {
   'use strict';
 
   /**
@@ -57,6 +57,11 @@
      */
     AuthToken: AuthToken,
     /**
+     * The Base model constructor.
+     * @property {module:model/Base}
+     */
+    Base: Base,
+    /**
      * The BodyAccessToken model constructor.
      * @property {module:model/BodyAccessToken}
      */
@@ -77,6 +82,11 @@
      */
     Conta: Conta,
     /**
+     * The DividaClienteResponse model constructor.
+     * @property {module:model/DividaClienteResponse}
+     */
+    DividaClienteResponse: DividaClienteResponse,
+    /**
      * The Endereco model constructor.
      * @property {module:model/Endereco}
      */
@@ -91,6 +101,11 @@
      * @property {module:model/ExtraInfo}
      */
     ExtraInfo: ExtraInfo,
+    /**
+     * The FAQ model constructor.
+     * @property {module:model/FAQ}
+     */
+    FAQ: FAQ,
     /**
      * The FaturaResponse model constructor.
      * @property {module:model/FaturaResponse}
@@ -147,6 +162,11 @@
      */
     PageAtendimentoClientes: PageAtendimentoClientes,
     /**
+     * The PageBases model constructor.
+     * @property {module:model/PageBases}
+     */
+    PageBases: PageBases,
+    /**
      * The PageCartoes model constructor.
      * @property {module:model/PageCartoes}
      */
@@ -161,6 +181,11 @@
      * @property {module:model/PageEstagiosCartoes}
      */
     PageEstagiosCartoes: PageEstagiosCartoes,
+    /**
+     * The PageFaqs model constructor.
+     * @property {module:model/PageFaqs}
+     */
+    PageFaqs: PageFaqs,
     /**
      * The PageFaturas model constructor.
      * @property {module:model/PageFaturas}
@@ -212,6 +237,11 @@
      */
     PageTelefones: PageTelefones,
     /**
+     * The PageTipoBoleto model constructor.
+     * @property {module:model/PageTipoBoleto}
+     */
+    PageTipoBoleto: PageTipoBoleto,
+    /**
      * The PageTipoTelefones model constructor.
      * @property {module:model/PageTipoTelefones}
      */
@@ -231,6 +261,11 @@
      * @property {module:model/PageTransferencias}
      */
     PageTransferencias: PageTransferencias,
+    /**
+     * The PageUsuarios model constructor.
+     * @property {module:model/PageUsuarios}
+     */
+    PageUsuarios: PageUsuarios,
     /**
      * The PageWebHooks model constructor.
      * @property {module:model/PageWebHooks}
@@ -261,6 +296,21 @@
      * @property {module:model/PushFCMEGCM}
      */
     PushFCMEGCM: PushFCMEGCM,
+    /**
+     * The RiscoFraudeDetalhadoResponse model constructor.
+     * @property {module:model/RiscoFraudeDetalhadoResponse}
+     */
+    RiscoFraudeDetalhadoResponse: RiscoFraudeDetalhadoResponse,
+    /**
+     * The RiscoFraudeResponse model constructor.
+     * @property {module:model/RiscoFraudeResponse}
+     */
+    RiscoFraudeResponse: RiscoFraudeResponse,
+    /**
+     * The RiscoFraudeResponsePage model constructor.
+     * @property {module:model/RiscoFraudeResponsePage}
+     */
+    RiscoFraudeResponsePage: RiscoFraudeResponsePage,
     /**
      * The SMS model constructor.
      * @property {module:model/SMS}
@@ -297,6 +347,11 @@
      */
     TipoTelefone: TipoTelefone,
     /**
+     * The Token model constructor.
+     * @property {module:model/Token}
+     */
+    Token: Token,
+    /**
      * The TransacaoResponse model constructor.
      * @property {module:model/TransacaoResponse}
      */
@@ -306,6 +361,11 @@
      * @property {module:model/Transferencia}
      */
     Transferencia: Transferencia,
+    /**
+     * The Usuario model constructor.
+     * @property {module:model/Usuario}
+     */
+    Usuario: Usuario,
     /**
      * The ValidaCartao model constructor.
      * @property {module:model/ValidaCartao}
@@ -337,15 +397,20 @@
      */
     ContaApi: ContaApi,
     /**
-     * The FraudesApi service constructor.
-     * @property {module:api/FraudesApi}
+     * The FAQApi service constructor.
+     * @property {module:api/FAQApi}
      */
-    FraudesApi: FraudesApi,
+    FAQApi: FAQApi,
     /**
      * The NotificacoesApi service constructor.
      * @property {module:api/NotificacoesApi}
      */
     NotificacoesApi: NotificacoesApi,
+    /**
+     * The RiscoFraudeApi service constructor.
+     * @property {module:api/RiscoFraudeApi}
+     */
+    RiscoFraudeApi: RiscoFraudeApi,
     /**
      * The StatusParametrosApi service constructor.
      * @property {module:api/StatusParametrosApi}
@@ -356,6 +421,11 @@
      * @property {module:api/TokenApi}
      */
     TokenApi: TokenApi,
+    /**
+     * The UsuariosApi service constructor.
+     * @property {module:api/UsuariosApi}
+     */
+    UsuariosApi: UsuariosApi,
     /**
      * The WebhooksApi service constructor.
      * @property {module:api/WebhooksApi}

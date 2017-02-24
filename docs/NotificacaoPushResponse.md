@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dataEnvio** | **Date** | Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
 **idEmissor** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id). | [optional] 
-**evento** | **String** | Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+**tipoEvento** | **String** | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **status** | **String** | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **idPessoa** | **Integer** | C\u00C3\u00B3digo identificado da pessoa | 
 **idConta** | **Integer** | C\u00C3\u00B3digo identificador da conta | 

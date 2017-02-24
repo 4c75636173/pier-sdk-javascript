@@ -397,8 +397,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET1 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET1Callback
+     * Callback function to receive the result of the consultarUsingGET2 operation.
+     * @callback module:api/CartaoApi~consultarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Cartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -408,15 +408,15 @@
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Cartao}
      */
-    this.consultarUsingGET1 = function(id, callback) {
+    this.consultarUsingGET2 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET1";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
       }
 
 
@@ -608,7 +608,7 @@
      * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
      * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-     * @param {Date} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+     * @param {module:model/ModelDate} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
      * @param {String} opts.usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
      * @param {Integer} opts.statusProcessamento Indica o Status de Processamento do Lote.
      * @param {module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -653,8 +653,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET1 operation.
-     * @callback module:api/CartaoApi~listarUsingGET1Callback
+     * Callback function to receive the result of the listarUsingGET2 operation.
+     * @callback module:api/CartaoApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -684,10 +684,10 @@
      * @param {Integer} opts.flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-     * @param {module:api/CartaoApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartoes}
      */
-    this.listarUsingGET1 = function(opts, callback) {
+    this.listarUsingGET2 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

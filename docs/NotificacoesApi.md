@@ -101,7 +101,7 @@ var opts = {
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   'dataEnvio': new Pier.ModelDate(), // {ModelDate} Apresenta a data e em que o registro foi enviado para o dispositivo.
-  'evento': "evento_example", // {String} Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+  'tipoEvento': "tipoEvento_example", // {String} Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
   'status': "status_example", // {String} Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
   'plataforma': "plataforma_example", // {String} Plataforma de Push notifications.
   'protocolo': "protocolo_example" // {String} N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **dataEnvio** | **ModelDate**| Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
- **evento** | **String**| Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **tipoEvento** | **String**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **String**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **plataforma** | **String**| Plataforma de Push notifications. | [optional] 
  **protocolo** | **String**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
@@ -167,7 +167,7 @@ var opts = {
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   'dataInclusao': new Date("2013-10-20T19:20:30+01:00"), // {Date} Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-  'evento': "evento_example", // {String} Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+  'tipoEvento': "tipoEvento_example", // {String} Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
   'status': "status_example", // {String} Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
   'operadora': "operadora_example", // {String} Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
   'protocolo': "protocolo_example" // {String} N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
  **dataInclusao** | **Date**| Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | [optional] 
- **evento** | **String**| Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **tipoEvento** | **String**| Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **status** | **String**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **operadora** | **String**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 
  **protocolo** | **String**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 

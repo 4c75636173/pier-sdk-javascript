@@ -4,33 +4,34 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT**](CadastrosGeraisApi.md#alterarUsingPUT) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
-[**alterarUsingPUT1**](CadastrosGeraisApi.md#alterarUsingPUT1) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
-[**alterarUsingPUT2**](CadastrosGeraisApi.md#alterarUsingPUT2) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterarUsingPUT1**](CadastrosGeraisApi.md#alterarUsingPUT1) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**alterarUsingPUT3**](CadastrosGeraisApi.md#alterarUsingPUT3) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
+[**alterarUsingPUT4**](CadastrosGeraisApi.md#alterarUsingPUT4) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 [**consultarOrigemComercialUsingGET**](CadastrosGeraisApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarProdutoUsingGET**](CadastrosGeraisApi.md#consultarProdutoUsingGET) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
-[**consultarUsingGET3**](CadastrosGeraisApi.md#consultarUsingGET3) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET4**](CadastrosGeraisApi.md#consultarUsingGET4) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET7**](CadastrosGeraisApi.md#consultarUsingGET7) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultarUsingGET8**](CadastrosGeraisApi.md#consultarUsingGET8) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET9**](CadastrosGeraisApi.md#consultarUsingGET9) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET10**](CadastrosGeraisApi.md#consultarUsingGET10) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET11**](CadastrosGeraisApi.md#consultarUsingGET11) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultarUsingGET12**](CadastrosGeraisApi.md#consultarUsingGET12) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultarUsingGET13**](CadastrosGeraisApi.md#consultarUsingGET13) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET4**](CadastrosGeraisApi.md#consultarUsingGET4) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET6**](CadastrosGeraisApi.md#consultarUsingGET6) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
 [**listarHistoricoTelefonesUsingGET**](CadastrosGeraisApi.md#listarHistoricoTelefonesUsingGET) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProdutosUsingGET**](CadastrosGeraisApi.md#listarProdutosUsingGET) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET10**](CadastrosGeraisApi.md#listarUsingGET10) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET3**](CadastrosGeraisApi.md#listarUsingGET3) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET5**](CadastrosGeraisApi.md#listarUsingGET5) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**salvarUsingPOST1**](CadastrosGeraisApi.md#salvarUsingPOST1) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST3**](CadastrosGeraisApi.md#salvarUsingPOST3) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**listarUsingGET11**](CadastrosGeraisApi.md#listarUsingGET11) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET12**](CadastrosGeraisApi.md#listarUsingGET12) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET13**](CadastrosGeraisApi.md#listarUsingGET13) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET6**](CadastrosGeraisApi.md#listarUsingGET6) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET7**](CadastrosGeraisApi.md#listarUsingGET7) | **GET** /api/portadores | Lista os Portadores existentes
+[**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST3**](CadastrosGeraisApi.md#salvarUsingPOST3) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
-<a name="alterarUsingPUT"></a>
-# **alterarUsingPUT**
-> Endereco alterarUsingPUT(id, opts)
+<a name="alterarUsingPUT1"></a>
+# **alterarUsingPUT1**
+> Endereco alterarUsingPUT1(id, opts)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -72,7 +73,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT(id, opts, callback);
+api.alterarUsingPUT1(id, opts, callback);
 ```
 
 ### Parameters
@@ -105,9 +106,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT1"></a>
-# **alterarUsingPUT1**
-> Pessoa alterarUsingPUT1(id, nome, tipo, opts)
+<a name="alterarUsingPUT3"></a>
+# **alterarUsingPUT3**
+> Pessoa alterarUsingPUT3(id, nome, tipo, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -146,7 +147,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT1(id, nome, tipo, opts, callback);
+api.alterarUsingPUT3(id, nome, tipo, opts, callback);
 ```
 
 ### Parameters
@@ -174,9 +175,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT2"></a>
-# **alterarUsingPUT2**
-> Telefone alterarUsingPUT2(id, opts)
+<a name="alterarUsingPUT4"></a>
+# **alterarUsingPUT4**
+> Telefone alterarUsingPUT4(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -211,7 +212,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT2(id, opts, callback);
+api.alterarUsingPUT4(id, opts, callback);
 ```
 
 ### Parameters
@@ -343,115 +344,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET3"></a>
-# **consultarUsingGET3**
-> Endereco consultarUsingGET3(id)
-
-Apresenta os dados de um determinado Endere\u00C3\u00A7o
-
-Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CadastrosGeraisApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET3(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
-
-### Return type
-
-[**Endereco**](Endereco.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET4"></a>
-# **consultarUsingGET4**
-> Pessoa consultarUsingGET4(id)
-
-Apresenta os dados de uma determinada Pessoa
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CadastrosGeraisApi()
-
-var id = 789; // {Integer} ID da Pessoa
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET4(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID da Pessoa | 
-
-### Return type
-
-[**Pessoa**](Pessoa.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET7"></a>
-# **consultarUsingGET7**
-> Telefone consultarUsingGET7(id)
+<a name="consultarUsingGET10"></a>
+# **consultarUsingGET10**
+> Telefone consultarUsingGET10(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -480,7 +375,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET7(id, callback);
+api.consultarUsingGET10(id, callback);
 ```
 
 ### Parameters
@@ -502,9 +397,71 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> TipoEndereco consultarUsingGET8(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> PageTipoBoleto consultarUsingGET11(opts)
+
+Lista os tipos de boletos do emissor 
+
+Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo de boleto.
+  'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+  'banco': 789 // {Integer} C\u00C3\u00B3digo identificador do banco.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET11(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de boleto. | [optional] 
+ **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto. | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo identificador do banco. | [optional] 
+
+### Return type
+
+[**PageTipoBoleto**](PageTipoBoleto.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> TipoEndereco consultarUsingGET12(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -533,7 +490,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -555,9 +512,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> TipoTelefone consultarUsingGET9(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> TipoTelefone consultarUsingGET13(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -586,7 +543,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -598,6 +555,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TipoTelefone**](TipoTelefone.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET4"></a>
+# **consultarUsingGET4**
+> Endereco consultarUsingGET4(id)
+
+Apresenta os dados de um determinado Endere\u00C3\u00A7o
+
+Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET4(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
+
+### Return type
+
+[**Endereco**](Endereco.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET6"></a>
+# **consultarUsingGET6**
+> Pessoa consultarUsingGET6(id)
+
+Apresenta os dados de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET6(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+
+### Return type
+
+[**Pessoa**](Pessoa.md)
 
 ### Authorization
 
@@ -785,9 +848,139 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageTipoTelefones listarUsingGET10(opts)
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageTelefones listarUsingGET11(opts)
+
+Lista os Telefones cadastrados no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+  'idTipoTelefone': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+  'ddd': "ddd_example", // {String} C\u00C3\u00B3digo DDD do telefone (id).
+  'telefone': "telefone_example", // {String} N\u00C3\u00BAmero do telefone.
+  'ramal': "ramal_example", // {String} N\u00C3\u00BAmero do ramal.
+  'status': 56 // {Integer} Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET11(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | [optional] 
+ **idTipoTelefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. | [optional] 
+ **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | [optional] 
+ **telefone** | **String**| N\u00C3\u00BAmero do telefone. | [optional] 
+ **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+ **status** | **Integer**| Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
+
+### Return type
+
+[**PageTelefones**](PageTelefones.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageTiposEndereco listarUsingGET12(opts)
+
+Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  'nome': "nome_example" // {String} Nome do Tipo do Endere\u00C3\u00A7o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET12(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
+ **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
+
+### Return type
+
+[**PageTiposEndereco**](PageTiposEndereco.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageTipoTelefones listarUsingGET13(opts)
 
 Lista os Tipos de Telefones
 
@@ -820,7 +1013,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET13(opts, callback);
 ```
 
 ### Parameters
@@ -845,9 +1038,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET3"></a>
-# **listarUsingGET3**
-> PageEnderecos listarUsingGET3(opts)
+<a name="listarUsingGET4"></a>
+# **listarUsingGET4**
+> PageEnderecos listarUsingGET4(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -892,7 +1085,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET3(opts, callback);
+api.listarUsingGET4(opts, callback);
 ```
 
 ### Parameters
@@ -929,9 +1122,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET4"></a>
-# **listarUsingGET4**
-> PagePessoas listarUsingGET4(opts)
+<a name="listarUsingGET6"></a>
+# **listarUsingGET6**
+> PagePessoas listarUsingGET6(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -969,7 +1162,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET4(opts, callback);
+api.listarUsingGET6(opts, callback);
 ```
 
 ### Parameters
@@ -999,9 +1192,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET5"></a>
-# **listarUsingGET5**
-> PagePortador listarUsingGET5(opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PagePortador listarUsingGET7(opts)
 
 Lista os Portadores existentes
 
@@ -1042,7 +1235,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET5(opts, callback);
+api.listarUsingGET7(opts, callback);
 ```
 
 ### Parameters
@@ -1075,139 +1268,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageTelefones listarUsingGET8(opts)
-
-Lista os Telefones cadastrados no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CadastrosGeraisApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-  'idTipoTelefone': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
-  'ddd': "ddd_example", // {String} C\u00C3\u00B3digo DDD do telefone (id).
-  'telefone': "telefone_example", // {String} N\u00C3\u00BAmero do telefone.
-  'ramal': "ramal_example", // {String} N\u00C3\u00BAmero do ramal.
-  'status': 56 // {Integer} Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET8(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id). | [optional] 
- **idTipoTelefone** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence. | [optional] 
- **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | [optional] 
- **telefone** | **String**| N\u00C3\u00BAmero do telefone. | [optional] 
- **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
- **status** | **Integer**| Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
-
-### Return type
-
-[**PageTelefones**](PageTelefones.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageTiposEndereco listarUsingGET9(opts)
-
-Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CadastrosGeraisApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  'nome': "nome_example" // {String} Nome do Tipo do Endere\u00C3\u00A7o
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET9(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
- **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
-
-### Return type
-
-[**PageTiposEndereco**](PageTiposEndereco.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST1"></a>
-# **salvarUsingPOST1**
-> Endereco salvarUsingPOST1(opts)
+<a name="salvarUsingPOST2"></a>
+# **salvarUsingPOST2**
+> Endereco salvarUsingPOST2(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1247,7 +1310,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST1(opts, callback);
+api.salvarUsingPOST2(opts, callback);
 ```
 
 ### Parameters
@@ -1279,9 +1342,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST2"></a>
-# **salvarUsingPOST2**
-> Pessoa salvarUsingPOST2(nome, tipo, opts)
+<a name="salvarUsingPOST3"></a>
+# **salvarUsingPOST3**
+> Pessoa salvarUsingPOST3(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1318,7 +1381,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST2(nome, tipo, opts, callback);
+api.salvarUsingPOST3(nome, tipo, opts, callback);
 ```
 
 ### Parameters
@@ -1345,9 +1408,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST3"></a>
-# **salvarUsingPOST3**
-> Telefone salvarUsingPOST3(opts)
+<a name="salvarUsingPOST4"></a>
+# **salvarUsingPOST4**
+> Telefone salvarUsingPOST4(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1381,7 +1444,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST3(opts, callback);
+api.salvarUsingPOST4(opts, callback);
 ```
 
 ### Parameters

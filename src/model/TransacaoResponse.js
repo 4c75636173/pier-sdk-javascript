@@ -48,8 +48,6 @@
 
 
 
-
-
   };
 
   /**
@@ -113,12 +111,6 @@
       }
       if (data.hasOwnProperty('tipoEstabelecimento')) {
         obj['tipoEstabelecimento'] = ApiClient.convertToType(data['tipoEstabelecimento'], 'String');
-      }
-      if (data.hasOwnProperty('latitude')) {
-        obj['latitude'] = ApiClient.convertToType(data['latitude'], 'String');
-      }
-      if (data.hasOwnProperty('longetude')) {
-        obj['longetude'] = ApiClient.convertToType(data['longetude'], 'String');
       }
       if (data.hasOwnProperty('idGrupoMCC')) {
         obj['idGrupoMCC'] = ApiClient.convertToType(data['idGrupoMCC'], 'Integer');
@@ -220,16 +212,6 @@
    * @member {String} tipoEstabelecimento
    */
   exports.prototype['tipoEstabelecimento'] = undefined;
-
-  /**
-   * @member {String} latitude
-   */
-  exports.prototype['latitude'] = undefined;
-
-  /**
-   * @member {String} longetude
-   */
-  exports.prototype['longetude'] = undefined;
 
   /**
    * @member {Integer} idGrupoMCC

@@ -27,14 +27,14 @@
    * @alias module:model/WebHook
    * @class
    * @param id
-   * @param evento
+   * @param tipoEvento
    * @param metodo
    * @param url
    */
-  var exports = function(id, evento, metodo, url) {
+  var exports = function(id, tipoEvento, metodo, url) {
 
     this['id'] = id;
-    this['evento'] = evento;
+    this['tipoEvento'] = tipoEvento;
     this['metodo'] = metodo;
     this['url'] = url;
   };
@@ -53,8 +53,8 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('evento')) {
-        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
+      if (data.hasOwnProperty('tipoEvento')) {
+        obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
       }
       if (data.hasOwnProperty('metodo')) {
         obj['metodo'] = ApiClient.convertToType(data['metodo'], 'String');
@@ -74,10 +74,10 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Evento a ser chamado pelo WebHook
-   * @member {module:model/WebHook.EventoEnum} evento
+   * TipoEvento a ser chamado pelo WebHook
+   * @member {module:model/WebHook.TipoEventoEnum} tipoEvento
    */
-  exports.prototype['evento'] = undefined;
+  exports.prototype['tipoEvento'] = undefined;
 
   /**
    * M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -93,11 +93,11 @@
 
 
   /**
-   * Allowed values for the <code>evento</code> property.
+   * Allowed values for the <code>tipoEvento</code> property.
    * @enum {String}
    * @readonly
    */
-  exports.EventoEnum = { 
+  exports.TipoEventoEnum = { 
     /**
      * value: RISCO_FRAUDE
      * @const

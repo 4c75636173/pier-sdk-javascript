@@ -31,9 +31,9 @@
    * @param idConta
    * @param celular
    * @param conteudo
-   * @param evento
+   * @param tipoEvento
    */
-  var exports = function(nsu, idPessoa, idConta, celular, conteudo, evento) {
+  var exports = function(nsu, idPessoa, idConta, celular, conteudo, tipoEvento) {
 
     this['nsu'] = nsu;
     this['idPessoa'] = idPessoa;
@@ -41,7 +41,7 @@
     this['celular'] = celular;
     this['conteudo'] = conteudo;
 
-    this['evento'] = evento;
+    this['tipoEvento'] = tipoEvento;
   };
 
   /**
@@ -73,8 +73,8 @@
       if (data.hasOwnProperty('dataAgendamento')) {
         obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'Date');
       }
-      if (data.hasOwnProperty('evento')) {
-        obj['evento'] = ApiClient.convertToType(data['evento'], 'String');
+      if (data.hasOwnProperty('tipoEvento')) {
+        obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
       }
     }
     return obj;
@@ -118,18 +118,18 @@
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
-   * @member {module:model/NotificacaoSMSBody.EventoEnum} evento
+   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * @member {module:model/NotificacaoSMSBody.TipoEventoEnum} tipoEvento
    */
-  exports.prototype['evento'] = undefined;
+  exports.prototype['tipoEvento'] = undefined;
 
 
   /**
-   * Allowed values for the <code>evento</code> property.
+   * Allowed values for the <code>tipoEvento</code> property.
    * @enum {String}
    * @readonly
    */
-  exports.EventoEnum = { 
+  exports.TipoEventoEnum = { 
     /**
      * value: RISCO_FRAUDE
      * @const

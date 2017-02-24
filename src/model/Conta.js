@@ -41,6 +41,7 @@
 
 
 
+
   };
 
   /**
@@ -86,6 +87,9 @@
       }
       if (data.hasOwnProperty('numeroAgencia')) {
         obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
+      }
+      if (data.hasOwnProperty('valorRenda')) {
+        obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
       }
       if (data.hasOwnProperty('numeroContaCorrente')) {
         obj['numeroContaCorrente'] = ApiClient.convertToType(data['numeroContaCorrente'], 'String');
@@ -160,6 +164,12 @@
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
+
+  /**
+   * Apresenta o valor da renda comprovada
+   * @member {Number} valorRenda
+   */
+  exports.prototype['valorRenda'] = undefined;
 
   /**
    * N\u00C3\u00BAmero da conta corrente.

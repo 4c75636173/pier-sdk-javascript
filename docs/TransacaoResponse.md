@@ -20,8 +20,6 @@ Name | Type | Description | Notes
 **estabelecimento** | **String** |  | [optional] 
 **flagCredito** | **Integer** |  | [optional] 
 **tipoEstabelecimento** | **String** |  | [optional] 
-**latitude** | **String** |  | [optional] 
-**longetude** | **String** |  | [optional] 
 **idGrupoMCC** | **Integer** |  | [optional] 
 **flagSolicitouContestacao** | **Integer** |  | [optional] 
 
