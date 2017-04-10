@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/EstagioCartao', '../model/StatusCartao', '../model/StatusConta', '../model/StatusImpressao', '../model/PageEstagiosCartoes', '../model/PageStatusCartoes', '../model/PageStatusImpressao', '../model/PageStatusContas'], factory);
+    define(['../ApiClient', '../model/EstagioCartao', '../model/StatusCartao', '../model/StatusConta', '../model/StatusImpressao', '../model/PageEstagiosCartoes', '../model/PageStatusCartoes', '../model/PageStatusContas', '../model/PageStatusImpressao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartao'), require('../model/StatusCartao'), require('../model/StatusConta'), require('../model/StatusImpressao'), require('../model/PageEstagiosCartoes'), require('../model/PageStatusCartoes'), require('../model/PageStatusImpressao'), require('../model/PageStatusContas'));
+    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartao'), require('../model/StatusCartao'), require('../model/StatusConta'), require('../model/StatusImpressao'), require('../model/PageEstagiosCartoes'), require('../model/PageStatusCartoes'), require('../model/PageStatusContas'), require('../model/PageStatusImpressao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.StatusParametrosApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartao, root.Pier.StatusCartao, root.Pier.StatusConta, root.Pier.StatusImpressao, root.Pier.PageEstagiosCartoes, root.Pier.PageStatusCartoes, root.Pier.PageStatusImpressao, root.Pier.PageStatusContas);
+    root.Pier.StatusParametrosApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartao, root.Pier.StatusCartao, root.Pier.StatusConta, root.Pier.StatusImpressao, root.Pier.PageEstagiosCartoes, root.Pier.PageStatusCartoes, root.Pier.PageStatusContas, root.Pier.PageStatusImpressao);
   }
-}(this, function(ApiClient, EstagioCartao, StatusCartao, StatusConta, StatusImpressao, PageEstagiosCartoes, PageStatusCartoes, PageStatusImpressao, PageStatusContas) {
+}(this, function(ApiClient, EstagioCartao, StatusCartao, StatusConta, StatusImpressao, PageEstagiosCartoes, PageStatusCartoes, PageStatusContas, PageStatusImpressao) {
   'use strict';
 
   /**
    * StatusParametros service.
    * @module api/StatusParametrosApi
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET8 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET8Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusConta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusConta}
      */
-    this.consultarUsingGET8 = function(id, callback) {
+    this.consultarUsingGET11 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET9 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET9Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressao}
      */
-    this.consultarUsingGET9 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -327,57 +327,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET10 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET10Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusImpressao} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-     * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
-     * @param {module:api/StatusParametrosApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusImpressao}
-     */
-    this.listarUsingGET10 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'id': opts['id'],
-        'nome': opts['nome']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageStatusImpressao;
-
-      return this.apiClient.callApi(
-        '/api/status-impressoes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET9Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -394,10 +345,10 @@
      * @param {Integer} opts.flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-     * @param {module:api/StatusParametrosApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContas}
      */
-    this.listarUsingGET9 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -425,6 +376,55 @@
 
       return this.apiClient.callApi(
         '/api/status-contas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET13 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET13Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageStatusImpressao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+     * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
+     * @param {module:api/StatusParametrosApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageStatusImpressao}
+     */
+    this.listarUsingGET13 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageStatusImpressao;
+
+      return this.apiClient.callApi(
+        '/api/status-impressoes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

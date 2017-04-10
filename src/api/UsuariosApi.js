@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Usuario', '../model/PageUsuarios'], factory);
+    define(['../ApiClient', '../model/UsuarioUpdate', '../model/UsuarioResponse', '../model/PageUsuarios', '../model/UsuarioPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Usuario'), require('../model/PageUsuarios'));
+    module.exports = factory(require('../ApiClient'), require('../model/UsuarioUpdate'), require('../model/UsuarioResponse'), require('../model/PageUsuarios'), require('../model/UsuarioPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.UsuariosApi = factory(root.Pier.ApiClient, root.Pier.Usuario, root.Pier.PageUsuarios);
+    root.Pier.UsuariosApi = factory(root.Pier.ApiClient, root.Pier.UsuarioUpdate, root.Pier.UsuarioResponse, root.Pier.PageUsuarios, root.Pier.UsuarioPersist);
   }
-}(this, function(ApiClient, Usuario, PageUsuarios) {
+}(this, function(ApiClient, UsuarioUpdate, UsuarioResponse, PageUsuarios, UsuarioPersist) {
   'use strict';
 
   /**
    * Usuarios service.
    * @module api/UsuariosApi
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -93,32 +93,32 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT6 operation.
-     * @callback module:api/UsuariosApi~alterarUsingPUT6Callback
+     * Callback function to receive the result of the alterarUsingPUT9 operation.
+     * @callback module:api/UsuariosApi~alterarUsingPUT9Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Usuario} data The data returned by the service call.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Alterar os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:model/Usuario} update update
-     * @param {module:api/UsuariosApi~alterarUsingPUT6Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Usuario}
+     * @param {module:model/UsuarioUpdate} update update
+     * @param {module:api/UsuariosApi~alterarUsingPUT9Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
      */
-    this.alterarUsingPUT6 = function(id, update, callback) {
+    this.alterarUsingPUT9 = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT6";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT9";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling alterarUsingPUT6";
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT9";
       }
 
 
@@ -135,7 +135,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Usuario;
+      var returnType = UsuarioResponse;
 
       return this.apiClient.callApi(
         '/api/usuarios/{id}', 'PUT',
@@ -145,10 +145,10 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET16 operation.
-     * @callback module:api/UsuariosApi~consultarUsingGET16Callback
+     * Callback function to receive the result of the consultarUsingGET22 operation.
+     * @callback module:api/UsuariosApi~consultarUsingGET22Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Usuario} data The data returned by the service call.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,15 +156,15 @@
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:api/UsuariosApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Usuario}
+     * @param {module:api/UsuariosApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET16 = function(id, callback) {
+    this.consultarUsingGET22 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
       }
 
 
@@ -181,7 +181,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Usuario;
+      var returnType = UsuarioResponse;
 
       return this.apiClient.callApi(
         '/api/usuarios/{id}', 'GET',
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/UsuariosApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/UsuariosApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarios} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -204,15 +204,14 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.id Id do Usuario
      * @param {String} opts.nome Nome do Usuario
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuariosApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuariosApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarios}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -222,7 +221,6 @@
       var queryParams = {
         'page': opts['page'],
         'limit': opts['limit'],
-        'id': opts['id'],
         'nome': opts['nome'],
         'cpf': opts['cpf'],
         'email': opts['email'],
@@ -292,26 +290,26 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST6 operation.
-     * @callback module:api/UsuariosApi~salvarUsingPOST6Callback
+     * Callback function to receive the result of the salvarUsingPOST8 operation.
+     * @callback module:api/UsuariosApi~salvarUsingPOST8Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Usuario} data The data returned by the service call.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Cadastrar Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio
      * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
-     * @param {module:model/Usuario} persist persist
-     * @param {module:api/UsuariosApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Usuario}
+     * @param {module:model/UsuarioPersist} persist persist
+     * @param {module:api/UsuariosApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
      */
-    this.salvarUsingPOST6 = function(persist, callback) {
+    this.salvarUsingPOST8 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST6";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
       }
 
 
@@ -327,7 +325,7 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Usuario;
+      var returnType = UsuarioResponse;
 
       return this.apiClient.callApi(
         '/api/usuarios', 'POST',

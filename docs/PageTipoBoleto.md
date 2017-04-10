@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[FaturaResponse]**](FaturaResponse.md) |  | [optional] 
+**content** | **[Object]** |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

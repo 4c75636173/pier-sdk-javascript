@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Produto = factory(root.Pier.ApiClient);
+    root.Pier.ProdutoDetalhesResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The Produto model module.
-   * @module model/Produto
-   * @version 2.8.0
+   * The ProdutoDetalhesResponse model module.
+   * @module model/ProdutoDetalhesResponse
+   * @version 2.12.0
    */
 
   /**
-   * Constructs a new <code>Produto</code>.
-   * Produto
-   * @alias module:model/Produto
+   * Constructs a new <code>ProdutoDetalhesResponse</code>.
+   * ProdutoDetalhes
+   * @alias module:model/ProdutoDetalhesResponse
    * @class
    * @param id
    * @param nome
@@ -35,14 +35,16 @@
     this['id'] = id;
     this['nome'] = nome;
     this['status'] = status;
+
+
   };
 
   /**
-   * Constructs a <code>Produto</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProdutoDetalhesResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Produto} obj Optional instance to populate.
-   * @return {module:model/Produto} The populated <code>Produto</code> instance.
+   * @param {module:model/ProdutoDetalhesResponse} obj Optional instance to populate.
+   * @return {module:model/ProdutoDetalhesResponse} The populated <code>ProdutoDetalhesResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -56,6 +58,12 @@
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
+      if (data.hasOwnProperty('idFantasiaBasica')) {
+        obj['idFantasiaBasica'] = ApiClient.convertToType(data['idFantasiaBasica'], 'Integer');
+      }
+      if (data.hasOwnProperty('fantasiaBasica')) {
+        obj['fantasiaBasica'] = ApiClient.convertToType(data['fantasiaBasica'], 'String');
       }
     }
     return obj;
@@ -79,6 +87,18 @@
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   * @member {Integer} idFantasiaBasica
+   */
+  exports.prototype['idFantasiaBasica'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.
+   * @member {String} fantasiaBasica
+   */
+  exports.prototype['fantasiaBasica'] = undefined;
 
 
 

@@ -5,28 +5,39 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT1**](CadastrosGeraisApi.md#alterarUsingPUT1) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
-[**alterarUsingPUT3**](CadastrosGeraisApi.md#alterarUsingPUT3) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
-[**alterarUsingPUT4**](CadastrosGeraisApi.md#alterarUsingPUT4) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterarUsingPUT4**](CadastrosGeraisApi.md#alterarUsingPUT4) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
+[**alterarUsingPUT5**](CadastrosGeraisApi.md#alterarUsingPUT5) | **PUT** /api/pessoas | Atualiza os dados de uma determinada Pessoa
+[**alterarUsingPUT6**](CadastrosGeraisApi.md#alterarUsingPUT6) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 [**consultarOrigemComercialUsingGET**](CadastrosGeraisApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarProdutoUsingGET**](CadastrosGeraisApi.md#consultarProdutoUsingGET) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
-[**consultarUsingGET10**](CadastrosGeraisApi.md#consultarUsingGET10) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultarUsingGET11**](CadastrosGeraisApi.md#consultarUsingGET11) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultarUsingGET12**](CadastrosGeraisApi.md#consultarUsingGET12) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET13**](CadastrosGeraisApi.md#consultarUsingGET13) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET13**](CadastrosGeraisApi.md#consultarUsingGET13) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET14**](CadastrosGeraisApi.md#consultarUsingGET14) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultarUsingGET15**](CadastrosGeraisApi.md#consultarUsingGET15) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultarUsingGET16**](CadastrosGeraisApi.md#consultarUsingGET16) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultarUsingGET18**](CadastrosGeraisApi.md#consultarUsingGET18) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**consultarUsingGET4**](CadastrosGeraisApi.md#consultarUsingGET4) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET6**](CadastrosGeraisApi.md#consultarUsingGET6) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET5**](CadastrosGeraisApi.md#consultarUsingGET5) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET8**](CadastrosGeraisApi.md#consultarUsingGET8) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET9**](CadastrosGeraisApi.md#consultarUsingGET9) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**listarEstadosCivisUsingGET**](CadastrosGeraisApi.md#listarEstadosCivisUsingGET) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
 [**listarHistoricoTelefonesUsingGET**](CadastrosGeraisApi.md#listarHistoricoTelefonesUsingGET) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
+[**listarNaturezasOcupacoesUsingGET**](CadastrosGeraisApi.md#listarNaturezasOcupacoesUsingGET) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProdutosUsingGET**](CadastrosGeraisApi.md#listarProdutosUsingGET) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET11**](CadastrosGeraisApi.md#listarUsingGET11) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET12**](CadastrosGeraisApi.md#listarUsingGET12) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET13**](CadastrosGeraisApi.md#listarUsingGET13) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarProfissoesUsingGET**](CadastrosGeraisApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
+[**listarUsingGET10**](CadastrosGeraisApi.md#listarUsingGET10) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET15**](CadastrosGeraisApi.md#listarUsingGET15) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
 [**listarUsingGET4**](CadastrosGeraisApi.md#listarUsingGET4) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET6**](CadastrosGeraisApi.md#listarUsingGET6) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET7**](CadastrosGeraisApi.md#listarUsingGET7) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET5**](CadastrosGeraisApi.md#listarUsingGET5) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**salvarPessoaFisicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/contas-pessoas/fisicas | Cadastro de Conta e Pessoa Fisica
+[**salvarPessoaJuridicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/contas-pessoas/juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
 [**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST3**](CadastrosGeraisApi.md#salvarUsingPOST3) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST5**](CadastrosGeraisApi.md#salvarUsingPOST5) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 <a name="alterarUsingPUT1"></a>
@@ -106,9 +117,82 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT3"></a>
-# **alterarUsingPUT3**
-> Pessoa alterarUsingPUT3(id, nome, tipo, opts)
+<a name="alterarUsingPUT4"></a>
+# **alterarUsingPUT4**
+> PessoaDetalheResponse alterarUsingPUT4(id, opts)
+
+Atualiza os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor od detalhes de uma determinada Pessoa.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+var opts = { 
+  'nomeMae': "nomeMae_example", // {String} Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  'idEstadoCivil': 789, // {Integer} Id Estado civil da pessoa fisica
+  'profissao': "profissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
+  'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
+  'email': "email_example", // {String} Email da pessoa fisica
+  'nomeEmpresa': "nomeEmpresa_example" // {String} Nome que deve ser impresso no cart\u00C3\u00A3o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT4(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+ **nomeMae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **idEstadoCivil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nomeEmpresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT5"></a>
+# **alterarUsingPUT5**
+> Pessoa alterarUsingPUT5(id, nome, tipo, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -137,7 +221,11 @@ var opts = {
   'cpf': "cpf_example", // {String} N\u00C3\u00BAmero do CPF, quando PF.
   'cnpj': "cnpj_example", // {String} N\u00C3\u00BAmero do CNPJ, quando PJ.
   'dataNascimento': new Pier.ModelDate(), // {ModelDate} Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-  'sexo': "sexo_example" // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'sexo': "sexo_example", // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'numeroIdentidade': "numeroIdentidade_example", // {String} N\u00C3\u00BAmero da Identidade.
+  'orgaoExpedidorIdentidade': "orgaoExpedidorIdentidade_example", // {String} Org\u00C3\u00A3o expedidor do Identidade.
+  'unidadeFederativaIdentidade': "unidadeFederativaIdentidade_example", // {String} Sigla da Unidade Federativa de onde foi expedido a Identidade
+  'dataEmissaoIdentidade': new Pier.ModelDate() // {ModelDate} Data emiss\u00C3\u00A3o da Identidade.
 };
 
 var callback = function(error, data, response) {
@@ -147,7 +235,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT3(id, nome, tipo, opts, callback);
+api.alterarUsingPUT5(id, nome, tipo, opts, callback);
 ```
 
 ### Parameters
@@ -161,6 +249,10 @@ Name | Type | Description  | Notes
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
  **dataNascimento** | **ModelDate**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+ **numeroIdentidade** | **String**| N\u00C3\u00BAmero da Identidade. | [optional] 
+ **orgaoExpedidorIdentidade** | **String**| Org\u00C3\u00A3o expedidor do Identidade. | [optional] 
+ **unidadeFederativaIdentidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
+ **dataEmissaoIdentidade** | **ModelDate**| Data emiss\u00C3\u00A3o da Identidade. | [optional] 
 
 ### Return type
 
@@ -175,9 +267,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT4"></a>
-# **alterarUsingPUT4**
-> Telefone alterarUsingPUT4(id, opts)
+<a name="alterarUsingPUT6"></a>
+# **alterarUsingPUT6**
+> Telefone alterarUsingPUT6(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -212,7 +304,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT4(id, opts, callback);
+api.alterarUsingPUT6(id, opts, callback);
 ```
 
 ### Parameters
@@ -293,7 +385,7 @@ Name | Type | Description  | Notes
 
 <a name="consultarProdutoUsingGET"></a>
 # **consultarProdutoUsingGET**
-> Produto consultarProdutoUsingGET(id)
+> ProdutoDetalhesResponse consultarProdutoUsingGET(id)
 
 Apresenta os dados de um determinado Produto
 
@@ -333,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Produto**](Produto.md)
+[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
 
 ### Authorization
 
@@ -344,9 +436,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET10"></a>
-# **consultarUsingGET10**
-> Telefone consultarUsingGET10(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> Telefone consultarUsingGET13(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -375,7 +467,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET10(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -397,9 +489,69 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET11"></a>
-# **consultarUsingGET11**
-> PageTipoBoleto consultarUsingGET11(opts)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> PageTipoAjuste consultarUsingGET14(opts)
+
+Lista os tipos de ajustes do emissor 
+
+Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo de ajuste.
+  'descricao': "descricao_example" // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET14(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
+ **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste. | [optional] 
+
+### Return type
+
+[**PageTipoAjuste**](PageTipoAjuste.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> PageTipoBoleto consultarUsingGET15(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -433,7 +585,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET11(opts, callback);
+api.consultarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -459,9 +611,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> TipoEndereco consultarUsingGET12(id)
+<a name="consultarUsingGET16"></a>
+# **consultarUsingGET16**
+> TipoEndereco consultarUsingGET16(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -490,7 +642,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET16(id, callback);
 ```
 
 ### Parameters
@@ -512,9 +664,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> TipoTelefone consultarUsingGET13(id)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> TipoTelefone consultarUsingGET18(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -543,7 +695,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET18(id, callback);
 ```
 
 ### Parameters
@@ -618,9 +770,115 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> Pessoa consultarUsingGET6(id)
+<a name="consultarUsingGET5"></a>
+# **consultarUsingGET5**
+> Estabelecimento consultarUsingGET5(id)
+
+Consultar estabelecimento por id
+
+Consulta os detalhes de um determinado estabelecimento
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} Id
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET5(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id | 
+
+### Return type
+
+[**Estabelecimento**](Estabelecimento.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> PessoaDetalheResponse consultarUsingGET8(id)
+
+Apresenta os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET8(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET9"></a>
+# **consultarUsingGET9**
+> Pessoa consultarUsingGET9(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -649,7 +907,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(id, callback);
+api.consultarUsingGET9(id, callback);
 ```
 
 ### Parameters
@@ -661,6 +919,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Pessoa**](Pessoa.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarEstadosCivisUsingGET"></a>
+# **listarEstadosCivisUsingGET**
+> PageCampoCodificadoDescricao listarEstadosCivisUsingGET(opts)
+
+Lista os Estados C\u00C3\u00ADvis
+
+Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarEstadosCivisUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+### Return type
+
+[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
 
 ### Authorization
 
@@ -714,6 +1028,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HistoricoTelefone**](HistoricoTelefone.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarNaturezasOcupacoesUsingGET"></a>
+# **listarNaturezasOcupacoesUsingGET**
+> PageCampoCodificadoDescricao listarNaturezasOcupacoesUsingGET(opts)
+
+Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
+
+Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarNaturezasOcupacoesUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+### Return type
+
+[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
 
 ### Authorization
 
@@ -812,7 +1182,8 @@ var opts = {
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
   'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
   'nome': "nome_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-  'status': 56 // {Integer} Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+  'status': 56, // {Integer} Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+  'idFantasiaBasica': 789 // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
 };
 
 var callback = function(error, data, response) {
@@ -834,6 +1205,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
  **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
  **status** | **Integer**| Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo). | [optional] 
+ **idFantasiaBasica** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence. | [optional] 
 
 ### Return type
 
@@ -848,9 +1220,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageTelefones listarUsingGET11(opts)
+<a name="listarProfissoesUsingGET"></a>
+# **listarProfissoesUsingGET**
+> PageCampoCodificadoDescricao listarProfissoesUsingGET(opts)
+
+Lista profiss\u00C3\u00B5es
+
+Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarProfissoesUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+
+### Return type
+
+[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PagePortador listarUsingGET10(opts)
+
+Lista os Portadores existentes
+
+Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+  'idProduto': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+  'idParentesco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+  'tipoPortador': "tipoPortador_example", // {String} Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+  'nomeImpresso': "nomeImpresso_example", // {String} Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+  'idTipoCartao': 789, // {Integer} Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+  'flagAtivo': 56, // {Integer} Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+  'dataCadastroPortador': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+  'dataCancelamentoPortador': new Pier.ModelDate() // {ModelDate} Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET10(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
+ **idProduto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
+ **idParentesco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
+ **tipoPortador** | **String**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
+ **nomeImpresso** | **String**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
+ **idTipoCartao** | **Integer**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
+ **flagAtivo** | **Integer**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
+ **dataCadastroPortador** | **ModelDate**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **dataCancelamentoPortador** | **ModelDate**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+
+### Return type
+
+[**PagePortador**](PagePortador.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> PageTelefones listarUsingGET14(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -888,7 +1392,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET14(opts, callback);
 ```
 
 ### Parameters
@@ -918,9 +1422,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageTiposEndereco listarUsingGET12(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PageTiposEndereco listarUsingGET15(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -953,7 +1457,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -978,9 +1482,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET13"></a>
-# **listarUsingGET13**
-> PageTipoTelefones listarUsingGET13(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageTipoTelefones listarUsingGET17(opts)
 
 Lista os Tipos de Telefones
 
@@ -1013,7 +1517,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET13(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -1122,9 +1626,179 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PagePessoas listarUsingGET6(opts)
+<a name="listarUsingGET5"></a>
+# **listarUsingGET5**
+> PageEstabelecimentos listarUsingGET5(opts)
+
+Lista Estabelecimentos
+
+Lista todas os Estabelecimentos
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+  'numeroReceitaFederal': 789, // {Integer} Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+  'nome': "nome_example", // {String} Nome do Estabelecimento.
+  'descricao': "descricao_example", // {String} Raz\u00C3\u00A3o Social do Estabelecimento.
+  'nomeFantasia': "nomeFantasia_example", // {String} T\u00C3\u00ADtulo Comercial do Estabelecimento.
+  'cep': "cep_example", // {String} C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+  'nomeLogradouro': "nomeLogradouro_example", // {String} Nome do Logradouro.
+  'numeroEndereco': 789, // {Integer} N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+  'complemento': "complemento_example", // {String} Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+  'bairro': "bairro_example", // {String} Nome do bairro do endere\u00C3\u00A7o.
+  'cidade': "cidade_example", // {String} Nome da cidade do endere\u00C3\u00A7o.
+  'uf': "uf_example", // {String} Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+  'pais': "pais_example", // {String} Nome do pa\u00C3\u00ADs.
+  'dataCadastramento': new Pier.ModelDate(), // {ModelDate} Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
+  'contato': "contato_example", // {String} Nome da pessoa para contato com o Estabelecimento.
+  'email': "email_example", // {String} E-mail da pessoa para contato com o Estabelecimento.
+  'flagArquivoSecrFazenda': 56, // {Integer} Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+  'flagCartaoDigitado': 56, // {Integer} Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+  'inativo': 56 // {Integer} Indica se o estabelecimento est\u00C3\u00A1 inativo.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET5(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
+ **numeroReceitaFederal** | **Integer**| Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. | [optional] 
+ **nome** | **String**| Nome do Estabelecimento. | [optional] 
+ **descricao** | **String**| Raz\u00C3\u00A3o Social do Estabelecimento. | [optional] 
+ **nomeFantasia** | **String**| T\u00C3\u00ADtulo Comercial do Estabelecimento. | [optional] 
+ **cep** | **String**| C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP). | [optional] 
+ **nomeLogradouro** | **String**| Nome do Logradouro. | [optional] 
+ **numeroEndereco** | **Integer**| N\u00C3\u00BAmero do endere\u00C3\u00A7o. | [optional] 
+ **complemento** | **String**| Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o. | [optional] 
+ **bairro** | **String**| Nome do bairro do endere\u00C3\u00A7o. | [optional] 
+ **cidade** | **String**| Nome da cidade do endere\u00C3\u00A7o. | [optional] 
+ **uf** | **String**| Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. | [optional] 
+ **pais** | **String**| Nome do pa\u00C3\u00ADs. | [optional] 
+ **dataCadastramento** | **ModelDate**| Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd. | [optional] 
+ **contato** | **String**| Nome da pessoa para contato com o Estabelecimento. | [optional] 
+ **email** | **String**| E-mail da pessoa para contato com o Estabelecimento. | [optional] 
+ **flagArquivoSecrFazenda** | **Integer**| Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual. | [optional] 
+ **flagCartaoDigitado** | **Integer**| Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o. | [optional] 
+ **inativo** | **Integer**| Indica se o estabelecimento est\u00C3\u00A1 inativo. | [optional] 
+
+### Return type
+
+[**PageEstabelecimentos**](PageEstabelecimentos.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET8"></a>
+# **listarUsingGET8**
+> PessoaDetalheResponse listarUsingGET8(opts)
+
+Lista os Detalhes das Pessoas cadastradas no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo identificador da pessoa
+  'nomeMae': "nomeMae_example", // {String} Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  'idEstadoCivil': 789, // {Integer} Id Estado civil da pessoa fisica
+  'profissao': "profissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
+  'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
+  'email': "email_example", // {String} Email da pessoa fisica
+  'nomeEmpresa': "nomeEmpresa_example" // {String} Nome que deve ser impresso no cart\u00C3\u00A3o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET8(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo identificador da pessoa | [optional] 
+ **nomeMae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **idEstadoCivil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **profissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nomeEmpresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PagePessoas listarUsingGET9(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1152,7 +1826,11 @@ var opts = {
   'cpf': "cpf_example", // {String} N\u00C3\u00BAmero do CPF, quando PF.
   'cnpj': "cnpj_example", // {String} N\u00C3\u00BAmero do CNPJ, quando PJ.
   'dataNascimento': new Pier.ModelDate(), // {ModelDate} Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-  'sexo': "sexo_example" // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'sexo': "sexo_example", // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'numeroIdentidade': "numeroIdentidade_example", // {String} N\u00C3\u00BAmero da Identidade
+  'orgaoExpedidorIdentidade': "orgaoExpedidorIdentidade_example", // {String} Org\u00C3\u00A3o expedidor do RG.
+  'unidadeFederativaIdentidade': "unidadeFederativaIdentidade_example", // {String} Sigla da Unidade Federativa de onde foi expedido a Identidade
+  'dataEmissaoIdentidade': new Pier.ModelDate() // {ModelDate} Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
 };
 
 var callback = function(error, data, response) {
@@ -1162,7 +1840,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters
@@ -1178,6 +1856,10 @@ Name | Type | Description  | Notes
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
  **dataNascimento** | **ModelDate**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+ **numeroIdentidade** | **String**| N\u00C3\u00BAmero da Identidade | [optional] 
+ **orgaoExpedidorIdentidade** | **String**| Org\u00C3\u00A3o expedidor do RG. | [optional] 
+ **unidadeFederativaIdentidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
+ **dataEmissaoIdentidade** | **ModelDate**| Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd | [optional] 
 
 ### Return type
 
@@ -1192,13 +1874,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET7"></a>
-# **listarUsingGET7**
-> PagePortador listarUsingGET7(opts)
+<a name="salvarPessoaFisicaAprovadaUsingPOST"></a>
+# **salvarPessoaFisicaAprovadaUsingPOST**
+> PessoaFisicaAprovadaResponse salvarPessoaFisicaAprovadaUsingPOST(pessoaPersist)
 
-Lista os Portadores existentes
+Cadastro de Conta e Pessoa Fisica
 
-Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00C3\u00ADsica, recebendo nesta opera\u00C3\u00A7\u00C3\u00A3o todos os dados cadastrais que se fazem necess\u00C3\u00A1rios para isso. Uma vez criado, poder\u00C3\u00A1 ser acionado o m\u00C3\u00A9todo de &#39;Gera\u00C3\u00A7\u00C3\u00A3o de Cart\u00C3\u00A3o&#39; para o cliente e seus adicionais.
 
 ### Example
 ```javascript
@@ -1213,20 +1895,8 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.CadastrosGeraisApi()
 
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'idConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-  'idProduto': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-  'idParentesco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
-  'tipoPortador': "tipoPortador_example", // {String} Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
-  'nomeImpresso': "nomeImpresso_example", // {String} Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
-  'idTipoCartao': 789, // {Integer} Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
-  'flagAtivo': 56, // {Integer} Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
-  'dataCadastroPortador': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-  'dataCancelamentoPortador': new Pier.ModelDate() // {ModelDate} Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-};
+var pessoaPersist = new Pier.PessoaFisicaAprovadaPersist(); // {PessoaFisicaAprovadaPersist} pessoaPersist
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1235,29 +1905,71 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET7(opts, callback);
+api.salvarPessoaFisicaAprovadaUsingPOST(pessoaPersist, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
- **idProduto** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id). | [optional] 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id). | [optional] 
- **idParentesco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id) | [optional] 
- **tipoPortador** | **String**| Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional). | [optional] 
- **nomeImpresso** | **String**| Apresenta o nome a ser impresso no cart\u00C3\u00A3o. | [optional] 
- **idTipoCartao** | **Integer**| Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta. | [optional] 
- **flagAtivo** | **Integer**| Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o. | [optional] 
- **dataCadastroPortador** | **ModelDate**| Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
- **dataCancelamentoPortador** | **ModelDate**| Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **pessoaPersist** | [**PessoaFisicaAprovadaPersist**](PessoaFisicaAprovadaPersist.md)| pessoaPersist | 
 
 ### Return type
 
-[**PagePortador**](PagePortador.md)
+[**PessoaFisicaAprovadaResponse**](PessoaFisicaAprovadaResponse.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarPessoaJuridicaAprovadaUsingPOST"></a>
+# **salvarPessoaJuridicaAprovadaUsingPOST**
+> PessoaJuridicaAprovadaResponse salvarPessoaJuridicaAprovadaUsingPOST(pessoaPersist)
+
+Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+
+Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00C3\u00ADdica, recebendo nesta opera\u00C3\u00A7\u00C3\u00A3o todos os dados cadastrais que se fazem necess\u00C3\u00A1rios para isso, inclu\u00C3\u00ADndo o registro de cada um dos s\u00C3\u00B3cios. Uma vez criado, poder\u00C3\u00A1 ser acionado o m\u00C3\u00A9todo de &#39;Gera\u00C3\u00A7\u00C3\u00A3o de Cart\u00C3\u00A3o&#39; para o cliente e cada um dos s\u00C3\u00B3cios vinculados.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var pessoaPersist = new Pier.PessoaJuridicaAprovadaPersist(); // {PessoaJuridicaAprovadaPersist} pessoaPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarPessoaJuridicaAprovadaUsingPOST(pessoaPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pessoaPersist** | [**PessoaJuridicaAprovadaPersist**](PessoaJuridicaAprovadaPersist.md)| pessoaPersist | 
+
+### Return type
+
+[**PessoaJuridicaAprovadaResponse**](PessoaJuridicaAprovadaResponse.md)
 
 ### Authorization
 
@@ -1342,9 +2054,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST3"></a>
-# **salvarUsingPOST3**
-> Pessoa salvarUsingPOST3(nome, tipo, opts)
+<a name="salvarUsingPOST4"></a>
+# **salvarUsingPOST4**
+> Pessoa salvarUsingPOST4(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1371,7 +2083,11 @@ var opts = {
   'cpf': "cpf_example", // {String} N\u00C3\u00BAmero do CPF, quando PF.
   'cnpj': "cnpj_example", // {String} N\u00C3\u00BAmero do CNPJ, quando PJ.
   'dataNascimento': new Pier.ModelDate(), // {ModelDate} Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-  'sexo': "sexo_example" // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'sexo': "sexo_example", // {String} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+  'numeroIdentidade': "numeroIdentidade_example", // {String} N\u00C3\u00BAmero da Identidade.
+  'orgaoExpedidorIdentidade': "orgaoExpedidorIdentidade_example", // {String} Org\u00C3\u00A3o expedidor do Identidade.
+  'unidadeFederativaIdentidade': "unidadeFederativaIdentidade_example", // {String} Sigla da Unidade Federativa de onde foi expedido a Identidade
+  'dataEmissaoIdentidade': new Pier.ModelDate() // {ModelDate} Data emiss\u00C3\u00A3o da Identidade.
 };
 
 var callback = function(error, data, response) {
@@ -1381,7 +2097,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST3(nome, tipo, opts, callback);
+api.salvarUsingPOST4(nome, tipo, opts, callback);
 ```
 
 ### Parameters
@@ -1394,6 +2110,10 @@ Name | Type | Description  | Notes
  **cnpj** | **String**| N\u00C3\u00BAmero do CNPJ, quando PJ. | [optional] 
  **dataNascimento** | **ModelDate**| Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
  **sexo** | **String**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado). | [optional] 
+ **numeroIdentidade** | **String**| N\u00C3\u00BAmero da Identidade. | [optional] 
+ **orgaoExpedidorIdentidade** | **String**| Org\u00C3\u00A3o expedidor do Identidade. | [optional] 
+ **unidadeFederativaIdentidade** | **String**| Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
+ **dataEmissaoIdentidade** | **ModelDate**| Data emiss\u00C3\u00A3o da Identidade. | [optional] 
 
 ### Return type
 
@@ -1408,9 +2128,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST4"></a>
-# **salvarUsingPOST4**
-> Telefone salvarUsingPOST4(opts)
+<a name="salvarUsingPOST5"></a>
+# **salvarUsingPOST5**
+> Telefone salvarUsingPOST5(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1444,7 +2164,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST4(opts, callback);
+api.salvarUsingPOST5(opts, callback);
 ```
 
 ### Parameters

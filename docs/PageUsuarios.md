@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[Usuario]**](Usuario.md) |  | [optional] 
+**content** | [**[UsuarioResponse]**](UsuarioResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

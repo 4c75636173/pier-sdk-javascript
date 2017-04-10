@@ -18,7 +18,7 @@
   /**
    * The LoteCartoesPrePagos model module.
    * @module model/LoteCartoesPrePagos
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -32,12 +32,12 @@
    * @param idTipoCartao
    * @param idImagem
    * @param idEndereco
-   * @param quantidadeCartoes
+   * @param quantidade
    * @param dataCadastro
    * @param usuarioCadastro
    * @param statusProcessamento
    */
-  var exports = function(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento) {
+  var exports = function(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento) {
 
     this['id'] = id;
     this['idOrigemComercial'] = idOrigemComercial;
@@ -45,7 +45,7 @@
     this['idTipoCartao'] = idTipoCartao;
     this['idImagem'] = idImagem;
     this['idEndereco'] = idEndereco;
-    this['quantidadeCartoes'] = quantidadeCartoes;
+    this['quantidade'] = quantidade;
     this['dataCadastro'] = dataCadastro;
     this['usuarioCadastro'] = usuarioCadastro;
     this['statusProcessamento'] = statusProcessamento;
@@ -80,8 +80,8 @@
       if (data.hasOwnProperty('idEndereco')) {
         obj['idEndereco'] = ApiClient.convertToType(data['idEndereco'], 'Integer');
       }
-      if (data.hasOwnProperty('quantidadeCartoes')) {
-        obj['quantidadeCartoes'] = ApiClient.convertToType(data['quantidadeCartoes'], 'Integer');
+      if (data.hasOwnProperty('quantidade')) {
+        obj['quantidade'] = ApiClient.convertToType(data['quantidade'], 'Integer');
       }
       if (data.hasOwnProperty('dataCadastro')) {
         obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
@@ -135,9 +135,9 @@
 
   /**
    * N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-   * @member {Integer} quantidadeCartoes
+   * @member {Integer} quantidade
    */
-  exports.prototype['quantidadeCartoes'] = undefined;
+  exports.prototype['quantidade'] = undefined;
 
   /**
    * Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.

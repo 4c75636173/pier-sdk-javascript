@@ -18,7 +18,7 @@
   /**
    * The StatusImpressao model module.
    * @module model/StatusImpressao
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**

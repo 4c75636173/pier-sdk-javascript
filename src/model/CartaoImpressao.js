@@ -18,7 +18,7 @@
   /**
    * The CartaoImpressao model module.
    * @module model/CartaoImpressao
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The FAQ model module.
    * @module model/FAQ
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -50,8 +50,8 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idFaq')) {
-        obj['idFaq'] = ApiClient.convertToType(data['idFaq'], 'Integer');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('idEmissor')) {
         obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
@@ -81,9 +81,9 @@
 
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-   * @member {Integer} idFaq
+   * @member {Integer} id
    */
-  exports.prototype['idFaq'] = undefined;
+  exports.prototype['id'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).

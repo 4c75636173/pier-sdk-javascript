@@ -18,7 +18,7 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -28,6 +28,12 @@
    * @class
    */
   var exports = function() {
+
+
+
+
+
+
 
 
 
@@ -53,26 +59,44 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('descricao')) {
-        obj['descricao'] = ApiClient.convertToType(data['descricao'], 'String');
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
-      if (data.hasOwnProperty('banco')) {
-        obj['banco'] = ApiClient.convertToType(data['banco'], 'Integer');
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
-      if (data.hasOwnProperty('faixaNossoNumero')) {
-        obj['faixaNossoNumero'] = ApiClient.convertToType(data['faixaNossoNumero'], 'Integer');
+      if (data.hasOwnProperty('dataVencimento')) {
+        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'Date');
       }
-      if (data.hasOwnProperty('minNossoNumero')) {
-        obj['minNossoNumero'] = ApiClient.convertToType(data['minNossoNumero'], 'Number');
+      if (data.hasOwnProperty('saldoFaturaAnterior')) {
+        obj['saldoFaturaAnterior'] = ApiClient.convertToType(data['saldoFaturaAnterior'], 'Number');
       }
-      if (data.hasOwnProperty('maxNossoNumero')) {
-        obj['maxNossoNumero'] = ApiClient.convertToType(data['maxNossoNumero'], 'Number');
+      if (data.hasOwnProperty('saldoMulta')) {
+        obj['saldoMulta'] = ApiClient.convertToType(data['saldoMulta'], 'Number');
       }
-      if (data.hasOwnProperty('tamNossoNumero')) {
-        obj['tamNossoNumero'] = ApiClient.convertToType(data['tamNossoNumero'], 'Integer');
+      if (data.hasOwnProperty('saldoCompras')) {
+        obj['saldoCompras'] = ApiClient.convertToType(data['saldoCompras'], 'Number');
       }
-      if (data.hasOwnProperty('ultimoNossoNumero')) {
-        obj['ultimoNossoNumero'] = ApiClient.convertToType(data['ultimoNossoNumero'], 'Number');
+      if (data.hasOwnProperty('saldoPagamentos')) {
+        obj['saldoPagamentos'] = ApiClient.convertToType(data['saldoPagamentos'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoTarifas')) {
+        obj['saldoTarifas'] = ApiClient.convertToType(data['saldoTarifas'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoDebitos')) {
+        obj['saldoDebitos'] = ApiClient.convertToType(data['saldoDebitos'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoCreditos')) {
+        obj['saldoCreditos'] = ApiClient.convertToType(data['saldoCreditos'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoAtualFinal')) {
+        obj['saldoAtualFinal'] = ApiClient.convertToType(data['saldoAtualFinal'], 'Number');
+      }
+      if (data.hasOwnProperty('valorMinimoFatura')) {
+        obj['valorMinimoFatura'] = ApiClient.convertToType(data['valorMinimoFatura'], 'Number');
+      }
+      if (data.hasOwnProperty('flagEmiteFatura')) {
+        obj['flagEmiteFatura'] = ApiClient.convertToType(data['flagEmiteFatura'], 'Integer');
       }
     }
     return obj;
@@ -80,52 +104,88 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo de boleto.
+   * C\u00C3\u00B3digo identificador da fatura.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
-   * @member {String} descricao
+   * C\u00C3\u00B3digo identificador da conta.
+   * @member {Integer} idConta
    */
-  exports.prototype['descricao'] = undefined;
+  exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do banco.
-   * @member {Integer} banco
+   * C\u00C3\u00B3digo identificador do produto.
+   * @member {Integer} idProduto
    */
-  exports.prototype['banco'] = undefined;
+  exports.prototype['idProduto'] = undefined;
 
   /**
-   * Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
-   * @member {Integer} faixaNossoNumero
+   * Data de vencimento da fatura.
+   * @member {Date} dataVencimento
    */
-  exports.prototype['faixaNossoNumero'] = undefined;
+  exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
-   * @member {Number} minNossoNumero
+   * Saldo da fatura anterior.
+   * @member {Number} saldoFaturaAnterior
    */
-  exports.prototype['minNossoNumero'] = undefined;
+  exports.prototype['saldoFaturaAnterior'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
-   * @member {Number} maxNossoNumero
+   * Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
+   * @member {Number} saldoMulta
    */
-  exports.prototype['maxNossoNumero'] = undefined;
+  exports.prototype['saldoMulta'] = undefined;
 
   /**
-   * Tamanho do nosso n\u00C3\u00BAmero.
-   * @member {Integer} tamNossoNumero
+   * Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
+   * @member {Number} saldoCompras
    */
-  exports.prototype['tamNossoNumero'] = undefined;
+  exports.prototype['saldoCompras'] = undefined;
 
   /**
-   * \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
-   * @member {Number} ultimoNossoNumero
+   * Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
+   * @member {Number} saldoPagamentos
    */
-  exports.prototype['ultimoNossoNumero'] = undefined;
+  exports.prototype['saldoPagamentos'] = undefined;
+
+  /**
+   * Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
+   * @member {Number} saldoTarifas
+   */
+  exports.prototype['saldoTarifas'] = undefined;
+
+  /**
+   * Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
+   * @member {Number} saldoDebitos
+   */
+  exports.prototype['saldoDebitos'] = undefined;
+
+  /**
+   * Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
+   * @member {Number} saldoCreditos
+   */
+  exports.prototype['saldoCreditos'] = undefined;
+
+  /**
+   * Salto total devedor da fatura atual.
+   * @member {Number} saldoAtualFinal
+   */
+  exports.prototype['saldoAtualFinal'] = undefined;
+
+  /**
+   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   * @member {Number} valorMinimoFatura
+   */
+  exports.prototype['valorMinimoFatura'] = undefined;
+
+  /**
+   * Quando ativa, indica que fora emitida uma fatura.
+   * @member {Integer} flagEmiteFatura
+   */
+  exports.prototype['flagEmiteFatura'] = undefined;
 
 
 

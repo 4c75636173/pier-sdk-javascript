@@ -18,7 +18,7 @@
   /**
    * The AtendimentoCliente model module.
    * @module model/AtendimentoCliente
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -164,19 +164,19 @@
   exports.prototype['dataHoraFimAtendimento'] = undefined;
 
   /**
-   * Apresenta a data em que o Atendimento foi realizado.
+   * Apresenta a data e hora em que o Atendimento foi realizado.
    * @member {Date} dataAtendimento
    */
   exports.prototype['dataAtendimento'] = undefined;
 
   /**
-   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
    * @member {Date} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+   * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
    * @member {Date} dataProcessamento
    */
   exports.prototype['dataProcessamento'] = undefined;

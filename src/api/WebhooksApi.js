@@ -18,7 +18,7 @@
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT7 operation.
-     * @callback module:api/WebhooksApi~alterarUsingPUT7Callback
+     * Callback function to receive the result of the alterarUsingPUT10 operation.
+     * @callback module:api/WebhooksApi~alterarUsingPUT10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -46,25 +46,25 @@
      * @param {Integer} id C\u00C3\u00B3digo identificador do Webhook
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~alterarUsingPUT7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~alterarUsingPUT10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.alterarUsingPUT7 = function(id, tipoEvento, url, callback) {
+    this.alterarUsingPUT10 = function(id, tipoEvento, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT7";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT10";
       }
 
       // verify the required parameter 'tipoEvento' is set
       if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT7";
+        throw "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT10";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling alterarUsingPUT7";
+        throw "Missing the required parameter 'url' when calling alterarUsingPUT10";
       }
 
 
@@ -93,8 +93,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/WebhooksApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/WebhooksApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -104,15 +104,15 @@
      * Consultar Webhook
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-     * @param {module:api/WebhooksApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET23 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
       }
 
 
@@ -139,8 +139,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/WebhooksApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET22 operation.
+     * @callback module:api/WebhooksApi~listarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHooks} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -156,10 +156,10 @@
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHooks}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -192,8 +192,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST7 operation.
-     * @callback module:api/WebhooksApi~salvarUsingPOST7Callback
+     * Callback function to receive the result of the salvarUsingPOST9 operation.
+     * @callback module:api/WebhooksApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -204,20 +204,20 @@
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.salvarUsingPOST7 = function(tipoEvento, url, callback) {
+    this.salvarUsingPOST9 = function(tipoEvento, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'tipoEvento' is set
       if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST7";
+        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST9";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling salvarUsingPOST7";
+        throw "Missing the required parameter 'url' when calling salvarUsingPOST9";
       }
 
 

@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **numeroAgencia** | **Integer** | N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
 **valorRenda** | **Number** | Apresenta o valor da renda comprovada | [optional] 
 **numeroContaCorrente** | **String** | N\u00C3\u00BAmero da conta corrente. | [optional] 
+**formaEnvioFatura** | **String** | Forma de envio da fatura. | [optional] 
 
 

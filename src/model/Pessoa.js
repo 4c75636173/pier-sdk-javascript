@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Pessoa = factory(root.Pier.ApiClient);
+    root.Pier.Pessoa = factory(root.Pier.ApiClient, root.Pier.ModelDate);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ModelDate) {
   'use strict';
 
   /**
    * The Pessoa model module.
    * @module model/Pessoa
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -35,6 +35,10 @@
     this['id'] = id;
     this['nome'] = nome;
     this['tipo'] = tipo;
+
+
+
+
 
 
 
@@ -70,8 +74,20 @@
       if (data.hasOwnProperty('dataNascimento')) {
         obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'Date');
       }
+      if (data.hasOwnProperty('numeroIdentidade')) {
+        obj['numeroIdentidade'] = ApiClient.convertToType(data['numeroIdentidade'], 'String');
+      }
+      if (data.hasOwnProperty('orgaoExpedidorIdentidade')) {
+        obj['orgaoExpedidorIdentidade'] = ApiClient.convertToType(data['orgaoExpedidorIdentidade'], 'String');
+      }
       if (data.hasOwnProperty('sexo')) {
         obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
+      }
+      if (data.hasOwnProperty('unidadeFederativaIdentidade')) {
+        obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
+      }
+      if (data.hasOwnProperty('dataEmissaoIdentidade')) {
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], ModelDate);
       }
     }
     return obj;
@@ -115,10 +131,34 @@
   exports.prototype['dataNascimento'] = undefined;
 
   /**
+   * N\u00C3\u00BAmero da Identidade
+   * @member {String} numeroIdentidade
+   */
+  exports.prototype['numeroIdentidade'] = undefined;
+
+  /**
+   * Org\u00C3\u00A3o expedidor do RG.
+   * @member {String} orgaoExpedidorIdentidade
+   */
+  exports.prototype['orgaoExpedidorIdentidade'] = undefined;
+
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
+
+  /**
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * @member {String} unidadeFederativaIdentidade
+   */
+  exports.prototype['unidadeFederativaIdentidade'] = undefined;
+
+  /**
+   * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   * @member {module:model/ModelDate} dataEmissaoIdentidade
+   */
+  exports.prototype['dataEmissaoIdentidade'] = undefined;
 
 
 

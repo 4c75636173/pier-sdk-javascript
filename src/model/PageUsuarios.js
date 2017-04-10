@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Usuario'], factory);
+    define(['../ApiClient', './UsuarioResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Usuario'));
+    module.exports = factory(require('../ApiClient'), require('./UsuarioResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageUsuarios = factory(root.Pier.ApiClient, root.Pier.Usuario);
+    root.Pier.PageUsuarios = factory(root.Pier.ApiClient, root.Pier.UsuarioResponse);
   }
-}(this, function(ApiClient, Usuario) {
+}(this, function(ApiClient, UsuarioResponse) {
   'use strict';
 
   /**
    * The PageUsuarios model module.
    * @module model/PageUsuarios
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Usuario]);
+        obj['content'] = ApiClient.convertToType(data['content'], [UsuarioResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/Usuario>} content
+   * @member {Array.<module:model/UsuarioResponse>} content
    */
   exports.prototype['content'] = undefined;
 

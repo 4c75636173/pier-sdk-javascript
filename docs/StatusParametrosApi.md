@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametrosApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametrosApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET8**](StatusParametrosApi.md#consultarUsingGET8) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET9**](StatusParametrosApi.md#consultarUsingGET9) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET11**](StatusParametrosApi.md#consultarUsingGET11) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET12**](StatusParametrosApi.md#consultarUsingGET12) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametrosApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametrosApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listarUsingGET10**](StatusParametrosApi.md#listarUsingGET10) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-[**listarUsingGET9**](StatusParametrosApi.md#listarUsingGET9) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET12**](StatusParametrosApi.md#listarUsingGET12) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET13**](StatusParametrosApi.md#listarUsingGET13) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 <a name="consultarEstagioCartaoUsingGET"></a>
@@ -120,9 +120,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> StatusConta consultarUsingGET8(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> StatusConta consultarUsingGET11(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -151,7 +151,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET11(id, callback);
 ```
 
 ### Parameters
@@ -173,9 +173,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> StatusImpressao consultarUsingGET9(id)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> StatusImpressao consultarUsingGET12(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -204,7 +204,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -358,69 +358,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageStatusImpressao listarUsingGET10(opts)
-
-Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-
-Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.StatusParametrosApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'id': 789, // {Integer} Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-  'nome': "nome_example" // {String} Nome do status impress\u00C3\u00A3o
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET10(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
- **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
-
-### Return type
-
-[**PageStatusImpressao**](PageStatusImpressao.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageStatusContas listarUsingGET9(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageStatusContas listarUsingGET12(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -456,7 +396,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
@@ -474,6 +414,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageStatusContas**](PageStatusContas.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageStatusImpressao listarUsingGET13(opts)
+
+Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
+
+### Example
+```javascript
+var Pier = require('Pier');
+var defaultClient = Pier.ApiClient.default;
+
+// Configure API key authorization: access_token
+var access_token = defaultClient.authentications['access_token'];
+access_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//access_token.apiKeyPrefix['access_token'] = "Token"
+
+var apiInstance = new Pier.StatusParametrosApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'id': 789, // {Integer} Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+  'nome': "nome_example" // {String} Nome do status impress\u00C3\u00A3o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET13(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **id** | **Integer**| Id do est\u00C3\u00A1gio cart\u00C3\u00A3o | [optional] 
+ **nome** | **String**| Nome do status impress\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**PageStatusImpressao**](PageStatusImpressao.md)
 
 ### Authorization
 

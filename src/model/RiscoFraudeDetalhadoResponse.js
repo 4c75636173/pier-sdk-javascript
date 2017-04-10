@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './Telefone'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Telefone'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient);
+    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient, root.Pier.Telefone);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Telefone) {
   'use strict';
 
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -28,6 +28,10 @@
    * @class
    */
   var exports = function() {
+
+
+
+
 
 
 
@@ -133,6 +137,18 @@
       }
       if (data.hasOwnProperty('descricaoModoEntradaTerminal')) {
         obj['descricaoModoEntradaTerminal'] = ApiClient.convertToType(data['descricaoModoEntradaTerminal'], 'String');
+      }
+      if (data.hasOwnProperty('cpf')) {
+        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
+      }
+      if (data.hasOwnProperty('cnpj')) {
+        obj['cnpj'] = ApiClient.convertToType(data['cnpj'], 'String');
+      }
+      if (data.hasOwnProperty('email')) {
+        obj['email'] = ApiClient.convertToType(data['email'], 'String');
+      }
+      if (data.hasOwnProperty('tefefones')) {
+        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [Telefone]);
       }
     }
     return obj;
@@ -276,6 +292,30 @@
    * @member {String} descricaoModoEntradaTerminal
    */
   exports.prototype['descricaoModoEntradaTerminal'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+   * @member {String} cpf
+   */
+  exports.prototype['cpf'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+   * @member {String} cnpj
+   */
+  exports.prototype['cnpj'] = undefined;
+
+  /**
+   * Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+   * @member {String} email
+   */
+  exports.prototype['email'] = undefined;
+
+  /**
+   * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+   * @member {Array.<module:model/Telefone>} tefefones
+   */
+  exports.prototype['tefefones'] = undefined;
 
 
 

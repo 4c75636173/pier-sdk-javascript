@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Produto'], factory);
+    define(['../ApiClient', './ProdutoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Produto'));
+    module.exports = factory(require('../ApiClient'), require('./ProdutoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ListaProdutos = factory(root.Pier.ApiClient, root.Pier.Produto);
+    root.Pier.ListaProdutos = factory(root.Pier.ApiClient, root.Pier.ProdutoResponse);
   }
-}(this, function(ApiClient, Produto) {
+}(this, function(ApiClient, ProdutoResponse) {
   'use strict';
 
   /**
    * The ListaProdutos model module.
    * @module model/ListaProdutos
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Produto]);
+        obj['content'] = ApiClient.convertToType(data['content'], [ProdutoResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/Produto>} content
+   * @member {Array.<module:model/ProdutoResponse>} content
    */
   exports.prototype['content'] = undefined;
 

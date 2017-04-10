@@ -18,7 +18,7 @@
   /**
    * The Conta model module.
    * @module model/Conta
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -93,6 +94,9 @@
       }
       if (data.hasOwnProperty('numeroContaCorrente')) {
         obj['numeroContaCorrente'] = ApiClient.convertToType(data['numeroContaCorrente'], 'String');
+      }
+      if (data.hasOwnProperty('formaEnvioFatura')) {
+        obj['formaEnvioFatura'] = ApiClient.convertToType(data['formaEnvioFatura'], 'String');
       }
     }
     return obj;
@@ -176,6 +180,12 @@
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
+
+  /**
+   * Forma de envio da fatura.
+   * @member {String} formaEnvioFatura
+   */
+  exports.prototype['formaEnvioFatura'] = undefined;
 
 
 

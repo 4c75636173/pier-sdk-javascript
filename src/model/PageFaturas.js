@@ -18,7 +18,7 @@
   /**
    * The PageFaturas model module.
    * @module model/PageFaturas
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**

@@ -5,11 +5,11 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterarUsingPUT6**](UsuariosApi.md#alterarUsingPUT6) | **PUT** /api/usuarios/{id} | Alterar os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET16**](UsuariosApi.md#consultarUsingGET16) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**listarUsingGET16**](UsuariosApi.md#listarUsingGET16) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
+[**consultarUsingGET22**](UsuariosApi.md#consultarUsingGET22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+[**listarUsingGET21**](UsuariosApi.md#listarUsingGET21) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST6**](UsuariosApi.md#salvarUsingPOST6) | **POST** /api/usuarios | Cadastrar Usu\u00C3\u00A1rio
+[**salvarUsingPOST8**](UsuariosApi.md#salvarUsingPOST8) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT6"></a>
-# **alterarUsingPUT6**
-> Usuario alterarUsingPUT6(id, update)
+<a name="alterarUsingPUT9"></a>
+# **alterarUsingPUT9**
+> UsuarioResponse alterarUsingPUT9(id, update)
 
-Alterar os usu\u00C3\u00A1rios cadastrados
+Altera os usu\u00C3\u00A1rios cadastrados
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -95,7 +95,7 @@ var apiInstance = new Pier.UsuariosApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
 
-var update = new Pier.Usuario(); // {Usuario} update
+var update = new Pier.UsuarioUpdate(); // {UsuarioUpdate} update
 
 
 var callback = function(error, data, response) {
@@ -105,7 +105,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT6(id, update, callback);
+api.alterarUsingPUT9(id, update, callback);
 ```
 
 ### Parameters
@@ -113,11 +113,11 @@ api.alterarUsingPUT6(id, update, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
- **update** | [**Usuario**](Usuario.md)| update | 
+ **update** | [**UsuarioUpdate**](UsuarioUpdate.md)| update | 
 
 ### Return type
 
-[**Usuario**](Usuario.md)
+[**UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 
@@ -128,9 +128,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET16"></a>
-# **consultarUsingGET16**
-> Usuario consultarUsingGET16(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> UsuarioResponse consultarUsingGET22(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 
@@ -159,7 +159,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET16(id, callback);
+api.consultarUsingGET22(id, callback);
 ```
 
 ### Parameters
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Usuario**](Usuario.md)
+[**UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 
@@ -181,9 +181,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PageUsuarios listarUsingGET16(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageUsuarios listarUsingGET21(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -205,7 +205,6 @@ var apiInstance = new Pier.UsuariosApi()
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'id': 789, // {Integer} Id do Usuario
   'nome': "nome_example", // {String} Nome do Usuario
   'cpf': "cpf_example", // {String} CPF do Usuario
   'email': "email_example", // {String} Email do Usuario
@@ -219,7 +218,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -228,7 +227,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **id** | **Integer**| Id do Usuario | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
  **cpf** | **String**| CPF do Usuario | [optional] 
  **email** | **String**| Email do Usuario | [optional] 
@@ -300,11 +298,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST6"></a>
-# **salvarUsingPOST6**
-> Usuario salvarUsingPOST6(persist)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> UsuarioResponse salvarUsingPOST8(persist)
 
-Cadastrar Usu\u00C3\u00A1rio
+Cadastra Usu\u00C3\u00A1rio
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -321,7 +319,7 @@ access_token.apiKey = "YOUR API KEY"
 
 var apiInstance = new Pier.UsuariosApi()
 
-var persist = new Pier.Usuario(); // {Usuario} persist
+var persist = new Pier.UsuarioPersist(); // {UsuarioPersist} persist
 
 
 var callback = function(error, data, response) {
@@ -331,18 +329,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST6(persist, callback);
+api.salvarUsingPOST8(persist, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **persist** | [**Usuario**](Usuario.md)| persist | 
+ **persist** | [**UsuarioPersist**](UsuarioPersist.md)| persist | 
 
 ### Return type
 
-[**Usuario**](Usuario.md)
+[**UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 

@@ -10,29 +10,28 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Usuario = factory(root.Pier.ApiClient);
+    root.Pier.UsuarioResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The Usuario model module.
-   * @module model/Usuario
-   * @version 2.8.0
+   * The UsuarioResponse model module.
+   * @module model/UsuarioResponse
+   * @version 2.12.0
    */
 
   /**
-   * Constructs a new <code>Usuario</code>.
+   * Constructs a new <code>UsuarioResponse</code>.
    * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
-   * @alias module:model/Usuario
+   * @alias module:model/UsuarioResponse
    * @class
-   * @param id
    * @param login
    * @param email
    */
-  var exports = function(id, login, email) {
+  var exports = function(login, email) {
 
-    this['id'] = id;
+
 
     this['login'] = login;
 
@@ -42,15 +41,14 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>Usuario</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UsuarioResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Usuario} obj Optional instance to populate.
-   * @return {module:model/Usuario} The populated <code>Usuario</code> instance.
+   * @param {module:model/UsuarioResponse} obj Optional instance to populate.
+   * @return {module:model/UsuarioResponse} The populated <code>UsuarioResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -73,9 +71,6 @@
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('senha')) {
-        obj['senha'] = ApiClient.convertToType(data['senha'], 'String');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -131,14 +126,8 @@
   exports.prototype['email'] = undefined;
 
   /**
-   * Apresenta a senha do usu\u00C3\u00A1rio.
-   * @member {String} senha
-   */
-  exports.prototype['senha'] = undefined;
-
-  /**
    * Status do Usu\u00C3\u00A1rio
-   * @member {module:model/Usuario.StatusEnum} status
+   * @member {module:model/UsuarioResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 

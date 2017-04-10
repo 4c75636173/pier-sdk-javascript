@@ -18,7 +18,7 @@
   /**
    * RiscoFraude service.
    * @module api/RiscoFraudeApi
-   * @version 2.8.0
+   * @version 2.12.0
    */
 
   /**
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/RiscoFraudeApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET10 operation.
+     * @callback module:api/RiscoFraudeApi~consultarUsingGET10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -90,15 +90,15 @@
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      * Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-     * @param {module:api/RiscoFraudeApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeDetalhadoResponse}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET10 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
       }
 
 
@@ -183,7 +183,6 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.idAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
      * @param {Integer} opts.idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
      * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
@@ -201,7 +200,6 @@
       var queryParams = {
         'page': opts['page'],
         'limit': opts['limit'],
-        'idAtendimento': opts['idAtendimento'],
         'idTipoAtendimento': opts['idTipoAtendimento'],
         'idConta': opts['idConta'],
         'nomeAtendente': opts['nomeAtendente'],
@@ -225,8 +223,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/RiscoFraudeApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET11 operation.
+     * @callback module:api/RiscoFraudeApi~listarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeResponsePage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -240,21 +238,21 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/RiscoFraudeApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeResponsePage}
      */
-    this.listarUsingGET8 = function(idConta, confirmacaoFraude, opts, callback) {
+    this.listarUsingGET11 = function(idConta, confirmacaoFraude, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET8";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET11";
       }
 
       // verify the required parameter 'confirmacaoFraude' is set
       if (confirmacaoFraude == undefined || confirmacaoFraude == null) {
-        throw "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET8";
+        throw "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET11";
       }
 
 
@@ -390,10 +388,11 @@
      * @param {String} opts.conteudoAtendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
      * @param {String} opts.detalhesAtendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
      * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-     * @param {module:model/ModelDate} opts.dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-     * @param {module:model/ModelDate} opts.dataAgendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
-     * @param {Date} opts.dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-     * @param {Date} opts.dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+     * @param {Date} opts.dataAtendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+     * @param {Date} opts.dataAgendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+     * @param {Date} opts.dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+     * @param {Date} opts.dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+     * @param {Integer} opts.flagFilaFraude Flag fila fraude
      * @param {module:api/RiscoFraudeApi~salvarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AtendimentoCliente}
      */
@@ -412,7 +411,8 @@
         'dataAtendimento': opts['dataAtendimento'],
         'dataAgendamento': opts['dataAgendamento'],
         'dataHoraInicioAtendimento': opts['dataHoraInicioAtendimento'],
-        'dataHoraFimAtendimento': opts['dataHoraFimAtendimento']
+        'dataHoraFimAtendimento': opts['dataHoraFimAtendimento'],
+        'flagFilaFraude': opts['flagFilaFraude']
       };
       var headerParams = {
       };
