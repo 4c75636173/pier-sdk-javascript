@@ -47,6 +47,7 @@
 
 
 
+
   };
 
   /**
@@ -113,6 +114,9 @@
       }
       if (data.hasOwnProperty('codigoDesbloqueio')) {
         obj['codigoDesbloqueio'] = ApiClient.convertToType(data['codigoDesbloqueio'], 'String');
+      }
+      if (data.hasOwnProperty('sequencialCartao')) {
+        obj['sequencialCartao'] = ApiClient.convertToType(data['sequencialCartao'], 'Integer');
       }
     }
     return obj;
@@ -226,6 +230,12 @@
    * @member {String} codigoDesbloqueio
    */
   exports.prototype['codigoDesbloqueio'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+   * @member {Integer} sequencialCartao
+   */
+  exports.prototype['sequencialCartao'] = undefined;
 
 
 
