@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './ModelDate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransacoesCorrentes = factory(root.Pier.ApiClient);
+    root.Pier.TransacoesCorrentes = factory(root.Pier.ApiClient, root.Pier.ModelDate);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ModelDate) {
   'use strict';
 
   /**
    * The TransacoesCorrentes model module.
    * @module model/TransacoesCorrentes
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -101,13 +101,13 @@
         obj['nomePortador'] = ApiClient.convertToType(data['nomePortador'], 'String');
       }
       if (data.hasOwnProperty('dataTransacaoUTC')) {
-        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'String');
+        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'Date');
       }
       if (data.hasOwnProperty('dataFaturamento')) {
         obj['dataFaturamento'] = ApiClient.convertToType(data['dataFaturamento'], 'Date');
       }
       if (data.hasOwnProperty('dataVencimento')) {
-        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'String');
+        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], ModelDate);
       }
       if (data.hasOwnProperty('modoEntradaTransacao')) {
         obj['modoEntradaTransacao'] = ApiClient.convertToType(data['modoEntradaTransacao'], 'String');
@@ -121,11 +121,11 @@
       if (data.hasOwnProperty('valorBRL')) {
         obj['valorBRL'] = ApiClient.convertToType(data['valorBRL'], 'Number');
       }
-      if (data.hasOwnProperty('cotacaoUSD')) {
-        obj['cotacaoUSD'] = ApiClient.convertToType(data['cotacaoUSD'], 'Number');
-      }
       if (data.hasOwnProperty('valorUSD')) {
         obj['valorUSD'] = ApiClient.convertToType(data['valorUSD'], 'Number');
+      }
+      if (data.hasOwnProperty('cotacaoUSD')) {
+        obj['cotacaoUSD'] = ApiClient.convertToType(data['cotacaoUSD'], 'Number');
       }
       if (data.hasOwnProperty('dataCotacaoUSD')) {
         obj['dataCotacaoUSD'] = ApiClient.convertToType(data['dataCotacaoUSD'], 'Date');
@@ -233,7 +233,7 @@
 
   /**
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-   * @member {String} dataTransacaoUTC
+   * @member {Date} dataTransacaoUTC
    */
   exports.prototype['dataTransacaoUTC'] = undefined;
 
@@ -245,7 +245,7 @@
 
   /**
    * Data de Vencimento da Fatura.
-   * @member {String} dataVencimento
+   * @member {module:model/ModelDate} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
@@ -274,16 +274,16 @@
   exports.prototype['valorBRL'] = undefined;
 
   /**
-   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-   * @member {Number} cotacaoUSD
-   */
-  exports.prototype['cotacaoUSD'] = undefined;
-
-  /**
    * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
    * @member {Number} valorUSD
    */
   exports.prototype['valorUSD'] = undefined;
+
+  /**
+   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+   * @member {Number} cotacaoUSD
+   */
+  exports.prototype['cotacaoUSD'] = undefined;
 
   /**
    * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).

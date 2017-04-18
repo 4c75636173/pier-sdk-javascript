@@ -18,7 +18,7 @@
   /**
    * The Portador model module.
    * @module model/Portador
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**

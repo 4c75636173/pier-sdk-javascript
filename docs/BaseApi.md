@@ -4,12 +4,12 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearUsingPOST**](BaseApi.md#clearUsingPOST) | **POST** /api/bases/limpar | Limpar mapa de bases
+[**limparUsingPOST**](BaseApi.md#limparUsingPOST) | **POST** /api/bases/limpar | Limpar mapa de bases
 
 
-<a name="clearUsingPOST"></a>
-# **clearUsingPOST**
-> BodyAccessToken clearUsingPOST
+<a name="limparUsingPOST"></a>
+# **limparUsingPOST**
+> BodyAccessToken limparUsingPOST
 
 Limpar mapa de bases
 
@@ -33,7 +33,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.clearUsingPOST(callback);
+api.limparUsingPOST(callback);
 ```
 
 ### Parameters

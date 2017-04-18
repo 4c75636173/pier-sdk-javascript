@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AjusteResponse', '../model/LimiteDisponibilidade', '../model/Conta', '../model/BoletoDeFatura', '../model/ModelDate', '../model/DividaClienteResponse', '../model/FaturaConsignadaResponse', '../model/FaturaConsignadaDetalheResponse', '../model/DetalhesFaturaResponse', '../model/PageTransferencias', '../model/CartaoImpressao', '../model/PageFaturasConsignadas', '../model/PageFaturas', '../model/PageHistoricoEventos', '../model/LinkPageHistoricoAssessoriaResponse', '../model/PageHistoricoAtraso', '../model/PageTransacoesCorrentes', '../model/PageContas', '../model/PageTransacaoResponse'], factory);
+    define(['../ApiClient', '../model/AjusteResponse', '../model/LimiteDisponibilidade', '../model/Conta', '../model/BoletoDeFatura', '../model/ModelDate', '../model/DividaClienteResponse', '../model/DetalhesFaturaConsignadaResponse', '../model/FaturaConsignadaDetalheResponse', '../model/DetalhesFaturaResponse', '../model/LinkTransferenciaBancariaResponse', '../model/PageTransferencias', '../model/CartaoImpressao', '../model/PageFaturasConsignadas', '../model/PageFaturas', '../model/PageHistoricoEventos', '../model/LinkPageHistoricoAssessoriaResponse', '../model/PageHistoricoAtraso', '../model/PageTransacoesCorrentes', '../model/LinkPageTransferenciaBancariaResponse', '../model/PageContas', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AjusteResponse'), require('../model/LimiteDisponibilidade'), require('../model/Conta'), require('../model/BoletoDeFatura'), require('../model/ModelDate'), require('../model/DividaClienteResponse'), require('../model/FaturaConsignadaResponse'), require('../model/FaturaConsignadaDetalheResponse'), require('../model/DetalhesFaturaResponse'), require('../model/PageTransferencias'), require('../model/CartaoImpressao'), require('../model/PageFaturasConsignadas'), require('../model/PageFaturas'), require('../model/PageHistoricoEventos'), require('../model/LinkPageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtraso'), require('../model/PageTransacoesCorrentes'), require('../model/PageContas'), require('../model/PageTransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AjusteResponse'), require('../model/LimiteDisponibilidade'), require('../model/Conta'), require('../model/BoletoDeFatura'), require('../model/ModelDate'), require('../model/DividaClienteResponse'), require('../model/DetalhesFaturaConsignadaResponse'), require('../model/FaturaConsignadaDetalheResponse'), require('../model/DetalhesFaturaResponse'), require('../model/LinkTransferenciaBancariaResponse'), require('../model/PageTransferencias'), require('../model/CartaoImpressao'), require('../model/PageFaturasConsignadas'), require('../model/PageFaturas'), require('../model/PageHistoricoEventos'), require('../model/LinkPageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtraso'), require('../model/PageTransacoesCorrentes'), require('../model/LinkPageTransferenciaBancariaResponse'), require('../model/PageContas'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.AjusteResponse, root.Pier.LimiteDisponibilidade, root.Pier.Conta, root.Pier.BoletoDeFatura, root.Pier.ModelDate, root.Pier.DividaClienteResponse, root.Pier.FaturaConsignadaResponse, root.Pier.FaturaConsignadaDetalheResponse, root.Pier.DetalhesFaturaResponse, root.Pier.PageTransferencias, root.Pier.CartaoImpressao, root.Pier.PageFaturasConsignadas, root.Pier.PageFaturas, root.Pier.PageHistoricoEventos, root.Pier.LinkPageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtraso, root.Pier.PageTransacoesCorrentes, root.Pier.PageContas, root.Pier.PageTransacaoResponse);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.AjusteResponse, root.Pier.LimiteDisponibilidade, root.Pier.Conta, root.Pier.BoletoDeFatura, root.Pier.ModelDate, root.Pier.DividaClienteResponse, root.Pier.DetalhesFaturaConsignadaResponse, root.Pier.FaturaConsignadaDetalheResponse, root.Pier.DetalhesFaturaResponse, root.Pier.LinkTransferenciaBancariaResponse, root.Pier.PageTransferencias, root.Pier.CartaoImpressao, root.Pier.PageFaturasConsignadas, root.Pier.PageFaturas, root.Pier.PageHistoricoEventos, root.Pier.LinkPageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtraso, root.Pier.PageTransacoesCorrentes, root.Pier.LinkPageTransferenciaBancariaResponse, root.Pier.PageContas, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, AjusteResponse, LimiteDisponibilidade, Conta, BoletoDeFatura, ModelDate, DividaClienteResponse, FaturaConsignadaResponse, FaturaConsignadaDetalheResponse, DetalhesFaturaResponse, PageTransferencias, CartaoImpressao, PageFaturasConsignadas, PageFaturas, PageHistoricoEventos, LinkPageHistoricoAssessoriaResponse, PageHistoricoAtraso, PageTransacoesCorrentes, PageContas, PageTransacaoResponse) {
+}(this, function(ApiClient, AjusteResponse, LimiteDisponibilidade, Conta, BoletoDeFatura, ModelDate, DividaClienteResponse, DetalhesFaturaConsignadaResponse, FaturaConsignadaDetalheResponse, DetalhesFaturaResponse, LinkTransferenciaBancariaResponse, PageTransferencias, CartaoImpressao, PageFaturasConsignadas, PageFaturas, PageHistoricoEventos, LinkPageHistoricoAssessoriaResponse, PageHistoricoAtraso, PageTransacoesCorrentes, LinkPageTransferenciaBancariaResponse, PageContas, PageTransacaoResponse) {
   'use strict';
 
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -374,7 +374,7 @@
       var returnType = BoletoDeFatura;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/faturas/consultar-ficha-compensacao', 'GET',
+        '/api/contas/{id}/consultar-dados-pagamento-fatura', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -440,7 +440,7 @@
      * Callback function to receive the result of the consultarFaturaConsignadaAbertaUsingGET operation.
      * @callback module:api/ContaApi~consultarFaturaConsignadaAbertaUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/FaturaConsignadaResponse} data The data returned by the service call.
+     * @param {module:model/DetalhesFaturaConsignadaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -450,7 +450,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {module:model/ModelDate} dataVencimento Data Vencimento.
      * @param {module:api/ContaApi~consultarFaturaConsignadaAbertaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FaturaConsignadaResponse}
+     * data is of type: {module:model/DetalhesFaturaConsignadaResponse}
      */
     this.consultarFaturaConsignadaAbertaUsingGET = function(id, dataVencimento, callback) {
       var postBody = null;
@@ -480,10 +480,10 @@
       var authNames = ['access_token'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = FaturaConsignadaResponse;
+      var returnType = DetalhesFaturaConsignadaResponse;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/faturas-consignadas/consultar-fatura-aberta', 'GET',
+        '/api/contas/{id}/faturas-consignadas/consultar-aberta', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -554,11 +554,11 @@
      * Consultar Fatura da Conta
      * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Integer} idFatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+     * @param {module:model/ModelDate} dataVencimento Data Vencimento.
      * @param {module:api/ContaApi~consultarFaturaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DetalhesFaturaResponse}
      */
-    this.consultarFaturaUsingGET = function(id, idFatura, callback) {
+    this.consultarFaturaUsingGET = function(id, dataVencimento, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -566,17 +566,17 @@
         throw "Missing the required parameter 'id' when calling consultarFaturaUsingGET";
       }
 
-      // verify the required parameter 'idFatura' is set
-      if (idFatura == undefined || idFatura == null) {
-        throw "Missing the required parameter 'idFatura' when calling consultarFaturaUsingGET";
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling consultarFaturaUsingGET";
       }
 
 
       var pathParams = {
-        'id': id,
-        'id_fatura': idFatura
+        'id': id
       };
       var queryParams = {
+        'dataVencimento': dataVencimento
       };
       var headerParams = {
       };
@@ -589,7 +589,7 @@
       var returnType = DetalhesFaturaResponse;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/faturas/{id_fatura}', 'GET',
+        '/api/contas/{id}/faturas/consultar-fechada', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -607,11 +607,11 @@
      * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
      * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Integer} idFatura C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
+     * @param {module:model/ModelDate} dataVencimento Data Vencimento.
      * @param {module:api/ContaApi~consultarLancamentosFuturosFaturaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DetalhesFaturaResponse}
      */
-    this.consultarLancamentosFuturosFaturaUsingGET = function(id, idFatura, callback) {
+    this.consultarLancamentosFuturosFaturaUsingGET = function(id, dataVencimento, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -619,17 +619,17 @@
         throw "Missing the required parameter 'id' when calling consultarLancamentosFuturosFaturaUsingGET";
       }
 
-      // verify the required parameter 'idFatura' is set
-      if (idFatura == undefined || idFatura == null) {
-        throw "Missing the required parameter 'idFatura' when calling consultarLancamentosFuturosFaturaUsingGET";
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling consultarLancamentosFuturosFaturaUsingGET";
       }
 
 
       var pathParams = {
-        'id': id,
-        'id_fatura': idFatura
+        'id': id
       };
       var queryParams = {
+        'dataVencimento': dataVencimento
       };
       var headerParams = {
       };
@@ -642,7 +642,7 @@
       var returnType = DetalhesFaturaResponse;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/faturas/{id_fatura}/lancamentos-futuros', 'GET',
+        '/api/contas/{id}/faturas/consultar-aberta', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -689,6 +689,63 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/limites-disponibilidades', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET20 operation.
+     * @callback module:api/ContaApi~consultarUsingGET20Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LinkTransferenciaBancariaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+     * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+     * @param {Integer} id Id Conta
+     * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+     * @param {module:api/ContaApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LinkTransferenciaBancariaResponse}
+     */
+    this.consultarUsingGET20 = function(id, idTransferencia, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+      }
+
+      // verify the required parameter 'idTransferencia' is set
+      if (idTransferencia == undefined || idTransferencia == null) {
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET20";
+      }
+
+
+      var pathParams = {
+        'id': id,
+        'id_transferencia': idTransferencia
+      };
+      var queryParams = {
+        'id_conta_bancaria_destino': opts['idContaBancariaDestino']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LinkTransferenciaBancariaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1064,7 +1121,7 @@
       var returnType = PageFaturas;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/faturas', 'GET',
+        '/api/contas/{id}/listar-faturas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1266,7 +1323,7 @@
       var returnType = PageTransacoesCorrentes;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/transacoes/nao-processadas', 'GET',
+        '/api/contas/{id}/transacoes/listar-nao-processadas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1320,7 +1377,61 @@
       var returnType = PageTransacoesCorrentes;
 
       return this.apiClient.callApi(
-        '/api/contas/{id}/transacoes/processadas', 'GET',
+        '/api/contas/{id}/transacoes/listar-processadas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/ContaApi~listarUsingGET19Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LinkPageTransferenciaBancariaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+     * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+     * @param {Integer} id Id Conta
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {module:api/ContaApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LinkPageTransferenciaBancariaResponse}
+     */
+    this.listarUsingGET19 = function(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling listarUsingGET19";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'id_conta_bancaria_destino': opts['idContaBancariaDestino'],
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LinkPageTransferenciaBancariaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/transferencias-creditos-contas-bancarias', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1544,6 +1655,132 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/timeline', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the transferirUsingPOST operation.
+     * @callback module:api/ContaApi~transferirUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LinkTransferenciaBancariaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
+     * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+     * @param {Integer} id Id Conta
+     * @param {module:model/ModelDate} dataCompra Data da transfer\u00C3\u00AAncia
+     * @param {module:model/ModelDate} proximoVencimentoPadrao Dia do vencimento padr\u00C3\u00A3o da fatura
+     * @param {module:model/ModelDate} proximoVencimentoReal Data do vencimento real da fatura
+     * @param {Number} valorCompra Valor da transfer\u00C3\u00AAncia
+     * @param {String} nomeFavorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+     * @param {String} documentoFavorecido N\u00C3\u00BAmero do CPF ou CNPJ.
+     * @param {Integer} banco C\u00C3\u00B3digo do banco
+     * @param {String} numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+     * @param {String} numeroConta N\u00C3\u00BAmero da conta
+     * @param {Integer} flagContaPoupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {String} opts.digitoAgencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+     * @param {String} opts.digitoConta D\u00C3\u00ADgito da conta
+     * @param {module:api/ContaApi~transferirUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LinkTransferenciaBancariaResponse}
+     */
+    this.transferirUsingPOST = function(id, dataCompra, proximoVencimentoPadrao, proximoVencimentoReal, valorCompra, nomeFavorecido, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'dataCompra' is set
+      if (dataCompra == undefined || dataCompra == null) {
+        throw "Missing the required parameter 'dataCompra' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'proximoVencimentoPadrao' is set
+      if (proximoVencimentoPadrao == undefined || proximoVencimentoPadrao == null) {
+        throw "Missing the required parameter 'proximoVencimentoPadrao' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'proximoVencimentoReal' is set
+      if (proximoVencimentoReal == undefined || proximoVencimentoReal == null) {
+        throw "Missing the required parameter 'proximoVencimentoReal' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'valorCompra' is set
+      if (valorCompra == undefined || valorCompra == null) {
+        throw "Missing the required parameter 'valorCompra' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'nomeFavorecido' is set
+      if (nomeFavorecido == undefined || nomeFavorecido == null) {
+        throw "Missing the required parameter 'nomeFavorecido' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'documentoFavorecido' is set
+      if (documentoFavorecido == undefined || documentoFavorecido == null) {
+        throw "Missing the required parameter 'documentoFavorecido' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'banco' is set
+      if (banco == undefined || banco == null) {
+        throw "Missing the required parameter 'banco' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'numeroAgencia' is set
+      if (numeroAgencia == undefined || numeroAgencia == null) {
+        throw "Missing the required parameter 'numeroAgencia' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'numeroConta' is set
+      if (numeroConta == undefined || numeroConta == null) {
+        throw "Missing the required parameter 'numeroConta' when calling transferirUsingPOST";
+      }
+
+      // verify the required parameter 'flagContaPoupanca' is set
+      if (flagContaPoupanca == undefined || flagContaPoupanca == null) {
+        throw "Missing the required parameter 'flagContaPoupanca' when calling transferirUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'dataCompra': dataCompra,
+        'proximoVencimentoPadrao': proximoVencimentoPadrao,
+        'proximoVencimentoReal': proximoVencimentoReal,
+        'valorCompra': valorCompra,
+        'nomeFavorecido': nomeFavorecido,
+        'documentoFavorecido': documentoFavorecido,
+        'banco': banco,
+        'numeroAgencia': numeroAgencia,
+        'digitoAgencia': opts['digitoAgencia'],
+        'numeroConta': numeroConta,
+        'digitoConta': opts['digitoConta'],
+        'flagContaPoupanca': flagContaPoupanca
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['access_token'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LinkTransferenciaBancariaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/transferencias-creditos-contas-bancarias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -18,7 +18,7 @@
   /**
    * The PageOprtunidadeAUD model module.
    * @module model/PageOprtunidadeAUD
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**

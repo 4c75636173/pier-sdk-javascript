@@ -18,7 +18,7 @@
   /**
    * The NotificacaoPushResponse model module.
    * @module model/NotificacaoPushResponse
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -219,7 +219,13 @@
      * value: ERRO_RESPOSTA
      * @const
      */
-    ERRO_RESPOSTA: "ERRO_RESPOSTA"
+    ERRO_RESPOSTA: "ERRO_RESPOSTA",
+    
+    /**
+     * value: SUCESSO_RESPOSTA
+     * @const
+     */
+    SUCESSO_RESPOSTA: "SUCESSO_RESPOSTA"
   };  /**
    * Allowed values for the <code>plataforma</code> property.
    * @enum {String}

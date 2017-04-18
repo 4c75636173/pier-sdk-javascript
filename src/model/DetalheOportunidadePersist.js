@@ -18,7 +18,7 @@
   /**
    * The DetalheOportunidadePersist model module.
    * @module model/DetalheOportunidadePersist
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -26,13 +26,13 @@
    * Objeto DetalheOportunidade
    * @alias module:model/DetalheOportunidadePersist
    * @class
-   * @param conteudo
    * @param nomeCampo
+   * @param conteudo
    */
-  var exports = function(conteudo, nomeCampo) {
+  var exports = function(nomeCampo, conteudo) {
 
-    this['conteudo'] = conteudo;
     this['nomeCampo'] = nomeCampo;
+    this['conteudo'] = conteudo;
   };
 
   /**
@@ -46,11 +46,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('conteudo')) {
-        obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
-      }
       if (data.hasOwnProperty('nomeCampo')) {
         obj['nomeCampo'] = ApiClient.convertToType(data['nomeCampo'], 'String');
+      }
+      if (data.hasOwnProperty('conteudo')) {
+        obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
       }
     }
     return obj;
@@ -58,16 +58,16 @@
 
 
   /**
-   * Conte\u00C3\u00BAdo do detalhe
-   * @member {String} conteudo
-   */
-  exports.prototype['conteudo'] = undefined;
-
-  /**
    * Nome do conte\u00C3\u00BAdo
    * @member {String} nomeCampo
    */
   exports.prototype['nomeCampo'] = undefined;
+
+  /**
+   * Conte\u00C3\u00BAdo do detalhe
+   * @member {String} conteudo
+   */
+  exports.prototype['conteudo'] = undefined;
 
 
 

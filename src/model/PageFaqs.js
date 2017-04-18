@@ -18,7 +18,7 @@
   /**
    * The PageFaqs model module.
    * @module model/PageFaqs
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**

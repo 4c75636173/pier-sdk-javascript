@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/LinkTransferenciaBancariaResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/LinkPageTransferenciaBancariaResponse', '../model/PageCartoes', '../model/ValidaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/LinkTransferenciaBancariaResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/LinkPageTransferenciaBancariaResponse'), require('../model/PageCartoes'), require('../model/ValidaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.LinkTransferenciaBancariaResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.LinkPageTransferenciaBancariaResponse, root.Pier.PageCartoes, root.Pier.ValidaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, LinkTransferenciaBancariaResponse, PageLoteCartoesPrePagosResponse, ModelDate, LinkPageTransferenciaBancariaResponse, PageCartoes, ValidaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -489,63 +489,6 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET20Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LinkTransferenciaBancariaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-     * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
-     * @param {Integer} id Id Cart\u00C3\u00A3o
-     * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/CartaoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LinkTransferenciaBancariaResponse}
-     */
-    this.consultarUsingGET20 = function(id, idTransferencia, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
-      }
-
-      // verify the required parameter 'idTransferencia' is set
-      if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET20";
-      }
-
-
-      var pathParams = {
-        'id': id,
-        'id_transferencia': idTransferencia
-      };
-      var queryParams = {
-        'id_conta_bancaria_destino': opts['idContaBancariaDestino']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LinkTransferenciaBancariaResponse;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the desbloquearUsingPUT operation.
      * @callback module:api/CartaoApi~desbloquearUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -754,60 +697,6 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET19 operation.
-     * @callback module:api/CartaoApi~listarUsingGET19Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LinkPageTransferenciaBancariaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-     * @param {Integer} id Id Cart\u00C3\u00A3o
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/CartaoApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LinkPageTransferenciaBancariaResponse}
-     */
-    this.listarUsingGET19 = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET19";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'id_conta_bancaria_destino': opts['idContaBancariaDestino'],
-        'page': opts['page'],
-        'limit': opts['limit']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LinkPageTransferenciaBancariaResponse;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/{id}/transferencias-creditos-contas-bancarias', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the listarUsingGET2 operation.
      * @callback module:api/CartaoApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
@@ -883,132 +772,6 @@
 
       return this.apiClient.callApi(
         '/api/cartoes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the transferirUsingPOST operation.
-     * @callback module:api/CartaoApi~transferirUsingPOSTCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LinkTransferenciaBancariaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-     * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
-     * @param {Integer} id Id Cart\u00C3\u00A3o
-     * @param {module:model/ModelDate} dataCompra Data da transfer\u00C3\u00AAncia
-     * @param {module:model/ModelDate} proximoVencimentoPadrao Dia do vencimento padr\u00C3\u00A3o da fatura
-     * @param {module:model/ModelDate} proximoVencimentoReal Data do vencimento real da fatura
-     * @param {Number} valorCompra Valor da transfer\u00C3\u00AAncia
-     * @param {String} nomeFavorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-     * @param {String} documentoFavorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-     * @param {Integer} banco C\u00C3\u00B3digo do banco
-     * @param {String} numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-     * @param {String} numeroConta N\u00C3\u00BAmero da conta
-     * @param {Integer} flagContaPoupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {String} opts.digitoAgencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-     * @param {String} opts.digitoConta D\u00C3\u00ADgito da conta
-     * @param {module:api/CartaoApi~transferirUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LinkTransferenciaBancariaResponse}
-     */
-    this.transferirUsingPOST = function(id, dataCompra, proximoVencimentoPadrao, proximoVencimentoReal, valorCompra, nomeFavorecido, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'dataCompra' is set
-      if (dataCompra == undefined || dataCompra == null) {
-        throw "Missing the required parameter 'dataCompra' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'proximoVencimentoPadrao' is set
-      if (proximoVencimentoPadrao == undefined || proximoVencimentoPadrao == null) {
-        throw "Missing the required parameter 'proximoVencimentoPadrao' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'proximoVencimentoReal' is set
-      if (proximoVencimentoReal == undefined || proximoVencimentoReal == null) {
-        throw "Missing the required parameter 'proximoVencimentoReal' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'valorCompra' is set
-      if (valorCompra == undefined || valorCompra == null) {
-        throw "Missing the required parameter 'valorCompra' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'nomeFavorecido' is set
-      if (nomeFavorecido == undefined || nomeFavorecido == null) {
-        throw "Missing the required parameter 'nomeFavorecido' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'documentoFavorecido' is set
-      if (documentoFavorecido == undefined || documentoFavorecido == null) {
-        throw "Missing the required parameter 'documentoFavorecido' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'banco' is set
-      if (banco == undefined || banco == null) {
-        throw "Missing the required parameter 'banco' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'numeroAgencia' is set
-      if (numeroAgencia == undefined || numeroAgencia == null) {
-        throw "Missing the required parameter 'numeroAgencia' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'numeroConta' is set
-      if (numeroConta == undefined || numeroConta == null) {
-        throw "Missing the required parameter 'numeroConta' when calling transferirUsingPOST";
-      }
-
-      // verify the required parameter 'flagContaPoupanca' is set
-      if (flagContaPoupanca == undefined || flagContaPoupanca == null) {
-        throw "Missing the required parameter 'flagContaPoupanca' when calling transferirUsingPOST";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'dataCompra': dataCompra,
-        'proximoVencimentoPadrao': proximoVencimentoPadrao,
-        'proximoVencimentoReal': proximoVencimentoReal,
-        'valorCompra': valorCompra,
-        'nomeFavorecido': nomeFavorecido,
-        'documentoFavorecido': documentoFavorecido,
-        'banco': banco,
-        'numeroAgencia': numeroAgencia,
-        'digitoAgencia': opts['digitoAgencia'],
-        'numeroConta': numeroConta,
-        'digitoConta': opts['digitoConta'],
-        'flagContaPoupanca': flagContaPoupanca
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LinkTransferenciaBancariaResponse;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/{id}/transferencias-creditos-contas-bancarias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

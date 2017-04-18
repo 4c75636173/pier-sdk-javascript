@@ -18,7 +18,7 @@
   /**
    * The PageOrigensComerciais model module.
    * @module model/PageOrigensComerciais
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**

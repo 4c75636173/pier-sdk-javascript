@@ -18,7 +18,7 @@
   /**
    * The SMS model module.
    * @module model/SMS
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -287,7 +287,13 @@
      * value: ERRO_RESPOSTA
      * @const
      */
-    ERRO_RESPOSTA: "ERRO_RESPOSTA"
+    ERRO_RESPOSTA: "ERRO_RESPOSTA",
+    
+    /**
+     * value: SUCESSO_RESPOSTA
+     * @const
+     */
+    SUCESSO_RESPOSTA: "SUCESSO_RESPOSTA"
   };
 
   return exports;

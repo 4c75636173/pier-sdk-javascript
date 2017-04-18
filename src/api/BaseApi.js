@@ -18,7 +18,7 @@
   /**
    * Base service.
    * @module api/BaseApi
-   * @version 2.12.0
+   * @version 2.13.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the clearUsingPOST operation.
-     * @callback module:api/BaseApi~clearUsingPOSTCallback
+     * Callback function to receive the result of the limparUsingPOST operation.
+     * @callback module:api/BaseApi~limparUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/BodyAccessToken} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -42,10 +42,10 @@
 
     /**
      * Limpar mapa de bases
-     * @param {module:api/BaseApi~clearUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/BaseApi~limparUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BodyAccessToken}
      */
-    this.clearUsingPOST = function(callback) {
+    this.limparUsingPOST = function(callback) {
       var postBody = null;
 
 
