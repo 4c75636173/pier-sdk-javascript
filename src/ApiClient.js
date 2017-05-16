@@ -17,7 +17,7 @@
 
   /**
    * @module ApiClient
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -31,17 +31,15 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://localhost/
+     * @default http://localhost/
      */
-    this.basePath = 'https://localhost/'.replace(/\/+$/, '');
+    this.basePath = 'http://localhost/'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
     this.authentications = {
-      'access_token': {type: 'apiKey', 'in': 'header', name: 'access_token'},
-      'client_id': {type: 'apiKey', 'in': 'header', name: 'client_id'}
     };
 
     /**

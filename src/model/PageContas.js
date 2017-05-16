@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Conta'], factory);
+    define(['../ApiClient', './ContaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Conta'));
+    module.exports = factory(require('../ApiClient'), require('./ContaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageContas = factory(root.Pier.ApiClient, root.Pier.Conta);
+    root.Pier.PageContas = factory(root.Pier.ApiClient, root.Pier.ContaResponse);
   }
-}(this, function(ApiClient, Conta) {
+}(this, function(ApiClient, ContaResponse) {
   'use strict';
 
   /**
    * The PageContas model module.
    * @module model/PageContas
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Conta]);
+        obj['content'] = ApiClient.convertToType(data['content'], [ContaResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/Conta>} content
+   * @member {Array.<module:model/ContaResponse>} content
    */
   exports.prototype['content'] = undefined;
 

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/TransacaoOnUsResponse', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/TransacaoOnUsResponse'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.TransacaoOnUsResponse, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, TransacaoOnUsResponse, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -73,7 +73,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';
@@ -126,7 +126,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = HistoricoImpressaoCartao;
@@ -179,13 +179,13 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Cartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id}/atribuir-pessoa', 'PUT',
+        '/api/cartoes/{id}/atribuir-titular', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -239,7 +239,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Cartao;
@@ -292,13 +292,59 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/cadastrar-senha', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarDadosCartaoUsingGET operation.
+     * @callback module:api/CartaoApi~consultarDadosCartaoUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TransacaoOnUsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consultar Detalhes do Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+     * @param {Integer} id id
+     * @param {module:api/CartaoApi~consultarDadosCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TransacaoOnUsResponse}
+     */
+    this.consultarDadosCartaoUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarDadosCartaoUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TransacaoOnUsResponse;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/consultar-dados-reais', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -338,7 +384,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = LimiteDisponibilidade;
@@ -384,7 +430,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = LoteCartoesPrePagos;
@@ -430,7 +476,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Portador;
@@ -476,13 +522,59 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Cartao;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the desbloquearSenhaIncorretaUsingPOST operation.
+     * @callback module:api/CartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+     * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {module:api/CartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/Cartao}
+     */
+    this.desbloquearSenhaIncorretaUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling desbloquearSenhaIncorretaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Cartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/desbloquear-senha-incorreta', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -522,7 +614,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Cartao;
@@ -575,7 +667,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = LoteCartoesPrePagos;
@@ -621,7 +713,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Cartao;
@@ -684,7 +776,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageLoteCartoesPrePagosResponse;
@@ -697,8 +789,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET2 operation.
-     * @callback module:api/CartaoApi~listarUsingGET2Callback
+     * Callback function to receive the result of the listarUsingGET3 operation.
+     * @callback module:api/CartaoApi~listarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -728,10 +820,10 @@
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartoes}
      */
-    this.listarUsingGET2 = function(opts, callback) {
+    this.listarUsingGET3 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -765,7 +857,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageCartoes;
@@ -778,32 +870,166 @@
     }
 
     /**
-     * Callback function to receive the result of the validarCartaoChipBandeiradoUsingGET operation.
-     * @callback module:api/CartaoApi~validarCartaoChipBandeiradoUsingGETCallback
+     * Callback function to receive the result of the validarDadosImpressosBandeiradoUsingGET operation.
+     * @callback module:api/CartaoApi~validarDadosImpressosBandeiradoUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ValidaCartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+     * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-     * @param {String} criptograma Criptograma do cart\u00C3\u00A3o no formato de55
-     * @param {module:api/CartaoApi~validarCartaoChipBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
+     * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+     * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+     * @param {module:api/CartaoApi~validarDadosImpressosBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaCartao}
      */
-    this.validarCartaoChipBandeiradoUsingGET = function(numeroCartao, criptograma, callback) {
+    this.validarDadosImpressosBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
       var postBody = null;
 
       // verify the required parameter 'numeroCartao' is set
       if (numeroCartao == undefined || numeroCartao == null) {
-        throw "Missing the required parameter 'numeroCartao' when calling validarCartaoChipBandeiradoUsingGET";
+        throw "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'nomePortador' is set
+      if (nomePortador == undefined || nomePortador == null) {
+        throw "Missing the required parameter 'nomePortador' when calling validarDadosImpressosBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'dataValidade' is set
+      if (dataValidade == undefined || dataValidade == null) {
+        throw "Missing the required parameter 'dataValidade' when calling validarDadosImpressosBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'codigoSeguranca' is set
+      if (codigoSeguranca == undefined || codigoSeguranca == null) {
+        throw "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosBandeiradoUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'numero_cartao': numeroCartao,
+        'nome_portador': nomePortador,
+        'data_validade': dataValidade,
+        'codigo_seguranca': codigoSeguranca
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ValidaCartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/validar-dados-impressos-bandeirados', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarDadosImpressosNaoBandeiradoUsingGET operation.
+     * @callback module:api/CartaoApi~validarDadosImpressosNaoBandeiradoUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+     * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
+     * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+     * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+     * @param {module:api/CartaoApi~validarDadosImpressosNaoBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ValidaCartao}
+     */
+    this.validarDadosImpressosNaoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'numeroCartao' is set
+      if (numeroCartao == undefined || numeroCartao == null) {
+        throw "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosNaoBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'nomePortador' is set
+      if (nomePortador == undefined || nomePortador == null) {
+        throw "Missing the required parameter 'nomePortador' when calling validarDadosImpressosNaoBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'dataValidade' is set
+      if (dataValidade == undefined || dataValidade == null) {
+        throw "Missing the required parameter 'dataValidade' when calling validarDadosImpressosNaoBandeiradoUsingGET";
+      }
+
+      // verify the required parameter 'codigoSeguranca' is set
+      if (codigoSeguranca == undefined || codigoSeguranca == null) {
+        throw "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosNaoBandeiradoUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'numero_cartao': numeroCartao,
+        'nome_portador': nomePortador,
+        'data_validade': dataValidade,
+        'codigo_seguranca': codigoSeguranca
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ValidaCartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/validar-dados-impressos-nao-bandeirados', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarDe55CartaoMastercardUsingGET operation.
+     * @callback module:api/CartaoApi~validarDe55CartaoMastercardUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+     * @param {String} criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+     * @param {module:api/CartaoApi~validarDe55CartaoMastercardUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ValidaCartao}
+     */
+    this.validarDe55CartaoMastercardUsingGET = function(numeroCartao, criptograma, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'numeroCartao' is set
+      if (numeroCartao == undefined || numeroCartao == null) {
+        throw "Missing the required parameter 'numeroCartao' when calling validarDe55CartaoMastercardUsingGET";
       }
 
       // verify the required parameter 'criptograma' is set
       if (criptograma == undefined || criptograma == null) {
-        throw "Missing the required parameter 'criptograma' when calling validarCartaoChipBandeiradoUsingGET";
+        throw "Missing the required parameter 'criptograma' when calling validarDe55CartaoMastercardUsingGET";
       }
 
 
@@ -818,207 +1044,13 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ValidaCartao;
 
       return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar-chip', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the validarCartaoDigitadoBandeiradoUsingGET operation.
-     * @callback module:api/CartaoApi~validarCartaoDigitadoBandeiradoUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-     * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
-     * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-     * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-     * @param {module:api/CartaoApi~validarCartaoDigitadoBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
-     */
-    this.validarCartaoDigitadoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'numeroCartao' is set
-      if (numeroCartao == undefined || numeroCartao == null) {
-        throw "Missing the required parameter 'numeroCartao' when calling validarCartaoDigitadoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'nomePortador' is set
-      if (nomePortador == undefined || nomePortador == null) {
-        throw "Missing the required parameter 'nomePortador' when calling validarCartaoDigitadoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'dataValidade' is set
-      if (dataValidade == undefined || dataValidade == null) {
-        throw "Missing the required parameter 'dataValidade' when calling validarCartaoDigitadoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'codigoSeguranca' is set
-      if (codigoSeguranca == undefined || codigoSeguranca == null) {
-        throw "Missing the required parameter 'codigoSeguranca' when calling validarCartaoDigitadoBandeiradoUsingGET";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'numero_cartao': numeroCartao,
-        'nome_portador': nomePortador,
-        'data_validade': dataValidade,
-        'codigo_seguranca': codigoSeguranca
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ValidaCartao;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar-digitado', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the validarCartaoDigitadoNaoBandeiradoUsingGET operation.
-     * @callback module:api/CartaoApi~validarCartaoDigitadoNaoBandeiradoUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-     * @param {String} nomePortador Nome do portador do cart\u00C3\u00A3o
-     * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-     * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-     * @param {module:api/CartaoApi~validarCartaoDigitadoNaoBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
-     */
-    this.validarCartaoDigitadoNaoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'numeroCartao' is set
-      if (numeroCartao == undefined || numeroCartao == null) {
-        throw "Missing the required parameter 'numeroCartao' when calling validarCartaoDigitadoNaoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'nomePortador' is set
-      if (nomePortador == undefined || nomePortador == null) {
-        throw "Missing the required parameter 'nomePortador' when calling validarCartaoDigitadoNaoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'dataValidade' is set
-      if (dataValidade == undefined || dataValidade == null) {
-        throw "Missing the required parameter 'dataValidade' when calling validarCartaoDigitadoNaoBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'codigoSeguranca' is set
-      if (codigoSeguranca == undefined || codigoSeguranca == null) {
-        throw "Missing the required parameter 'codigoSeguranca' when calling validarCartaoDigitadoNaoBandeiradoUsingGET";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'numero_cartao': numeroCartao,
-        'nome_portador': nomePortador,
-        'data_validade': dataValidade,
-        'codigo_seguranca': codigoSeguranca
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ValidaCartao;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/nao-bandeirados/validar-digitado', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the validarCartaoTarjaBandeiradoUsingGET operation.
-     * @callback module:api/CartaoApi~validarCartaoTarjaBandeiradoUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-     * @param {String} trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-     * @param {String} trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-     * @param {module:api/CartaoApi~validarCartaoTarjaBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
-     */
-    this.validarCartaoTarjaBandeiradoUsingGET = function(numeroCartao, trilha1, trilha2, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'numeroCartao' is set
-      if (numeroCartao == undefined || numeroCartao == null) {
-        throw "Missing the required parameter 'numeroCartao' when calling validarCartaoTarjaBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'trilha1' is set
-      if (trilha1 == undefined || trilha1 == null) {
-        throw "Missing the required parameter 'trilha1' when calling validarCartaoTarjaBandeiradoUsingGET";
-      }
-
-      // verify the required parameter 'trilha2' is set
-      if (trilha2 == undefined || trilha2 == null) {
-        throw "Missing the required parameter 'trilha2' when calling validarCartaoTarjaBandeiradoUsingGET";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'numero_cartao': numeroCartao,
-        'trilha1': trilha1,
-        'trilha2': trilha2
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ValidaCartao;
-
-      return this.apiClient.callApi(
-        '/api/cartoes/bandeirados/validar-tarja', 'GET',
+        '/api/cartoes/validar-de55-mastercard', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1028,7 +1060,7 @@
      * Callback function to receive the result of the validarSenhaUsingGET operation.
      * @callback module:api/CartaoApi~validarSenhaUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
+     * @param {module:model/ValidaSenhaCartao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1038,7 +1070,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {String} senha Senha para ser validada.
      * @param {module:api/CartaoApi~validarSenhaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {'String'}
+     * data is of type: {module:model/ValidaSenhaCartao}
      */
     this.validarSenhaUsingGET = function(id, senha, callback) {
       var postBody = null;
@@ -1065,13 +1097,73 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = 'String';
+      var returnType = ValidaSenhaCartao;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/validar-senha', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarTarjaUsingGET operation.
+     * @callback module:api/CartaoApi~validarTarjaUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+     * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+     * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+     * @param {String} trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+     * @param {String} trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+     * @param {module:api/CartaoApi~validarTarjaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ValidaCartao}
+     */
+    this.validarTarjaUsingGET = function(numeroCartao, trilha1, trilha2, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'numeroCartao' is set
+      if (numeroCartao == undefined || numeroCartao == null) {
+        throw "Missing the required parameter 'numeroCartao' when calling validarTarjaUsingGET";
+      }
+
+      // verify the required parameter 'trilha1' is set
+      if (trilha1 == undefined || trilha1 == null) {
+        throw "Missing the required parameter 'trilha1' when calling validarTarjaUsingGET";
+      }
+
+      // verify the required parameter 'trilha2' is set
+      if (trilha2 == undefined || trilha2 == null) {
+        throw "Missing the required parameter 'trilha2' when calling validarTarjaUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'numero_cartao': numeroCartao,
+        'trilha1': trilha1,
+        'trilha2': trilha2
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ValidaCartao;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/validar-tarja', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

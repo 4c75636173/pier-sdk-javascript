@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './TransacaoResponse'], factory);
+    define(['../ApiClient', './TransacaoCorrenteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('./TransacaoCorrenteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageTransacaoResponse = factory(root.Pier.ApiClient, root.Pier.TransacaoResponse);
+    root.Pier.PageTransacaoResponse = factory(root.Pier.ApiClient, root.Pier.TransacaoCorrenteResponse);
   }
-}(this, function(ApiClient, TransacaoResponse) {
+}(this, function(ApiClient, TransacaoCorrenteResponse) {
   'use strict';
 
   /**
    * The PageTransacaoResponse model module.
    * @module model/PageTransacaoResponse
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [TransacaoResponse]);
+        obj['content'] = ApiClient.convertToType(data['content'], [TransacaoCorrenteResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/TransacaoResponse>} content
+   * @member {Array.<module:model/TransacaoCorrenteResponse>} content
    */
   exports.prototype['content'] = undefined;
 

@@ -18,7 +18,7 @@
   /**
    * Notificacoes service.
    * @module api/NotificacoesApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -71,7 +71,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = SMS;
@@ -126,7 +126,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PagePush;
@@ -157,6 +157,7 @@
      * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
      * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+     * @param {Integer} opts.nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:api/NotificacoesApi~listarSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageSMS}
      */
@@ -174,14 +175,15 @@
         'tipoEvento': opts['tipoEvento'],
         'status': opts['status'],
         'operadora': opts['operadora'],
-        'protocolo': opts['protocolo']
+        'protocolo': opts['protocolo'],
+        'nsu': opts['nsu']
       };
       var headerParams = {
       };
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageSMS;
@@ -228,7 +230,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = SMS;
@@ -273,7 +275,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = NotificacaoSMSResponse;
@@ -318,7 +320,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = NotificacaoSMSResponse;
@@ -363,7 +365,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = NotificacaoSMSResponse;
@@ -408,7 +410,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = NotificacaoSMSResponse;

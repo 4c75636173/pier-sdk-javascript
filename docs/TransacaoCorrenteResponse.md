@@ -1,4 +1,4 @@
-# Pier.TransacaoResponse
+# Pier.TransacaoCorrenteResponse
 
 ## Properties
 Name | Type | Description | Notes

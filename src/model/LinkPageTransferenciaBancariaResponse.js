@@ -18,7 +18,7 @@
   /**
    * The LinkPageTransferenciaBancariaResponse model module.
    * @module model/LinkPageTransferenciaBancariaResponse
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**

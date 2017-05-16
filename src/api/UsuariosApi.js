@@ -18,7 +18,7 @@
   /**
    * Usuarios service.
    * @module api/UsuariosApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -80,7 +80,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';
@@ -132,13 +132,59 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = UsuarioResponse;
 
       return this.apiClient.callApi(
         '/api/usuarios/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the ativarUsuarioUsingPOST operation.
+     * @callback module:api/UsuariosApi~ativarUsuarioUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Ativa os usu\u00C3\u00A1rios cadastrados
+     * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * @param {module:api/UsuariosApi~ativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
+     */
+    this.ativarUsuarioUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling ativarUsuarioUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = UsuarioResponse;
+
+      return this.apiClient.callApi(
+        '/api/usuarios/{id}/ativar-usuario', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -178,7 +224,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = UsuarioResponse;
@@ -191,8 +237,54 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/UsuariosApi~listarUsingGET21Callback
+     * Callback function to receive the result of the desativarUsuarioUsingPOST operation.
+     * @callback module:api/UsuariosApi~desativarUsuarioUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Desativa os usu\u00C3\u00A1rios cadastrados
+     * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * @param {module:api/UsuariosApi~desativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
+     */
+    this.desativarUsuarioUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling desativarUsuarioUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = UsuarioResponse;
+
+      return this.apiClient.callApi(
+        '/api/usuarios/{id}/desativar-usuario', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET24 operation.
+     * @callback module:api/UsuariosApi~listarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarios} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -208,10 +300,10 @@
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuariosApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuariosApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarios}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET24 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -231,7 +323,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageUsuarios;
@@ -277,7 +369,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';
@@ -290,8 +382,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/UsuariosApi~salvarUsingPOST8Callback
+     * Callback function to receive the result of the salvarUsingPOST12 operation.
+     * @callback module:api/UsuariosApi~salvarUsingPOST12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -301,15 +393,15 @@
      * Cadastra Usu\u00C3\u00A1rio
      * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
      * @param {module:model/UsuarioPersist} persist persist
-     * @param {module:api/UsuariosApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuariosApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.salvarUsingPOST8 = function(persist, callback) {
+    this.salvarUsingPOST12 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST12";
       }
 
 
@@ -322,7 +414,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = UsuarioResponse;
@@ -375,7 +467,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';

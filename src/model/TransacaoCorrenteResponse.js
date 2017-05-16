@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransacaoResponse = factory(root.Pier.ApiClient);
+    root.Pier.TransacaoCorrenteResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The TransacaoResponse model module.
-   * @module model/TransacaoResponse
-   * @version 2.13.0
+   * The TransacaoCorrenteResponse model module.
+   * @module model/TransacaoCorrenteResponse
+   * @version 2.15.0
    */
 
   /**
-   * Constructs a new <code>TransacaoResponse</code>.
+   * Constructs a new <code>TransacaoCorrenteResponse</code>.
    * Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
-   * @alias module:model/TransacaoResponse
+   * @alias module:model/TransacaoCorrenteResponse
    * @class
    */
   var exports = function() {
@@ -51,11 +51,11 @@
   };
 
   /**
-   * Constructs a <code>TransacaoResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TransacaoCorrenteResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/TransacaoResponse} obj Optional instance to populate.
-   * @return {module:model/TransacaoResponse} The populated <code>TransacaoResponse</code> instance.
+   * @param {module:model/TransacaoCorrenteResponse} obj Optional instance to populate.
+   * @return {module:model/TransacaoCorrenteResponse} The populated <code>TransacaoCorrenteResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

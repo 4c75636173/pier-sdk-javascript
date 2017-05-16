@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Endereco', '../model/PessoaDetalheResponse', '../model/ModelDate', '../model/Pessoa', '../model/Telefone', '../model/OrigemComercial', '../model/ProdutoDetalhesResponse', '../model/PageTipoAjuste', '../model/PageTipoBoleto', '../model/TipoEndereco', '../model/TipoTelefone', '../model/Estabelecimento', '../model/PageCampoCodificadoDescricao', '../model/HistoricoTelefone', '../model/PageOrigensComerciais', '../model/ListaProdutos', '../model/PagePortador', '../model/PageTelefones', '../model/PageTiposEndereco', '../model/PageTipoTelefones', '../model/PageEnderecos', '../model/PageEstabelecimentos', '../model/PagePessoas', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist'], factory);
+    define(['../ApiClient', '../model/Endereco', '../model/PessoaDetalheResponse', '../model/ModelDate', '../model/Pessoa', '../model/Telefone', '../model/OrigemComercial', '../model/ProdutoDetalhesResponse', '../model/PageTipoAjuste', '../model/PageTipoBoleto', '../model/TipoEndereco', '../model/TipoTelefone', '../model/Estabelecimento', '../model/PageContasDetalhe', '../model/PageCampoCodificadoDescricao', '../model/HistoricoTelefone', '../model/PageOrigensComerciais', '../model/ListaProdutos', '../model/PagePessoas', '../model/PagePortador', '../model/PageTelefones', '../model/PageTiposEndereco', '../model/PageTipoTelefones', '../model/PageEnderecos', '../model/PageEstabelecimentos', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/PessoaDetalheResponse'), require('../model/ModelDate'), require('../model/Pessoa'), require('../model/Telefone'), require('../model/OrigemComercial'), require('../model/ProdutoDetalhesResponse'), require('../model/PageTipoAjuste'), require('../model/PageTipoBoleto'), require('../model/TipoEndereco'), require('../model/TipoTelefone'), require('../model/Estabelecimento'), require('../model/PageCampoCodificadoDescricao'), require('../model/HistoricoTelefone'), require('../model/PageOrigensComerciais'), require('../model/ListaProdutos'), require('../model/PagePortador'), require('../model/PageTelefones'), require('../model/PageTiposEndereco'), require('../model/PageTipoTelefones'), require('../model/PageEnderecos'), require('../model/PageEstabelecimentos'), require('../model/PagePessoas'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/Endereco'), require('../model/PessoaDetalheResponse'), require('../model/ModelDate'), require('../model/Pessoa'), require('../model/Telefone'), require('../model/OrigemComercial'), require('../model/ProdutoDetalhesResponse'), require('../model/PageTipoAjuste'), require('../model/PageTipoBoleto'), require('../model/TipoEndereco'), require('../model/TipoTelefone'), require('../model/Estabelecimento'), require('../model/PageContasDetalhe'), require('../model/PageCampoCodificadoDescricao'), require('../model/HistoricoTelefone'), require('../model/PageOrigensComerciais'), require('../model/ListaProdutos'), require('../model/PagePessoas'), require('../model/PagePortador'), require('../model/PageTelefones'), require('../model/PageTiposEndereco'), require('../model/PageTipoTelefones'), require('../model/PageEnderecos'), require('../model/PageEstabelecimentos'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.PessoaDetalheResponse, root.Pier.ModelDate, root.Pier.Pessoa, root.Pier.Telefone, root.Pier.OrigemComercial, root.Pier.ProdutoDetalhesResponse, root.Pier.PageTipoAjuste, root.Pier.PageTipoBoleto, root.Pier.TipoEndereco, root.Pier.TipoTelefone, root.Pier.Estabelecimento, root.Pier.PageCampoCodificadoDescricao, root.Pier.HistoricoTelefone, root.Pier.PageOrigensComerciais, root.Pier.ListaProdutos, root.Pier.PagePortador, root.Pier.PageTelefones, root.Pier.PageTiposEndereco, root.Pier.PageTipoTelefones, root.Pier.PageEnderecos, root.Pier.PageEstabelecimentos, root.Pier.PagePessoas, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist);
+    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.Endereco, root.Pier.PessoaDetalheResponse, root.Pier.ModelDate, root.Pier.Pessoa, root.Pier.Telefone, root.Pier.OrigemComercial, root.Pier.ProdutoDetalhesResponse, root.Pier.PageTipoAjuste, root.Pier.PageTipoBoleto, root.Pier.TipoEndereco, root.Pier.TipoTelefone, root.Pier.Estabelecimento, root.Pier.PageContasDetalhe, root.Pier.PageCampoCodificadoDescricao, root.Pier.HistoricoTelefone, root.Pier.PageOrigensComerciais, root.Pier.ListaProdutos, root.Pier.PagePessoas, root.Pier.PagePortador, root.Pier.PageTelefones, root.Pier.PageTiposEndereco, root.Pier.PageTipoTelefones, root.Pier.PageEnderecos, root.Pier.PageEstabelecimentos, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist);
   }
-}(this, function(ApiClient, Endereco, PessoaDetalheResponse, ModelDate, Pessoa, Telefone, OrigemComercial, ProdutoDetalhesResponse, PageTipoAjuste, PageTipoBoleto, TipoEndereco, TipoTelefone, Estabelecimento, PageCampoCodificadoDescricao, HistoricoTelefone, PageOrigensComerciais, ListaProdutos, PagePortador, PageTelefones, PageTiposEndereco, PageTipoTelefones, PageEnderecos, PageEstabelecimentos, PagePessoas, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist) {
+}(this, function(ApiClient, Endereco, PessoaDetalheResponse, ModelDate, Pessoa, Telefone, OrigemComercial, ProdutoDetalhesResponse, PageTipoAjuste, PageTipoBoleto, TipoEndereco, TipoTelefone, Estabelecimento, PageContasDetalhe, PageCampoCodificadoDescricao, HistoricoTelefone, PageOrigensComerciais, ListaProdutos, PagePessoas, PagePortador, PageTelefones, PageTiposEndereco, PageTipoTelefones, PageEnderecos, PageEstabelecimentos, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist) {
   'use strict';
 
   /**
    * CadastrosGerais service.
    * @module api/CadastrosGeraisApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -90,7 +90,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Endereco;
@@ -112,7 +112,7 @@
 
     /**
      * Atualiza os detalhes de uma determinada Pessoa
-     * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor od detalhes de uma determinada Pessoa.
+     * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
      * @param {Integer} id ID da Pessoa
      * @param {Object} opts Optional parameters
      * @param {String} opts.nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
@@ -156,7 +156,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PessoaDetalheResponse;
@@ -234,7 +234,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Pessoa;
@@ -290,7 +290,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Telefone;
@@ -336,7 +336,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = OrigemComercial;
@@ -382,7 +382,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ProdutoDetalhesResponse;
@@ -428,7 +428,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Telefone;
@@ -477,7 +477,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTipoAjuste;
@@ -528,7 +528,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTipoBoleto;
@@ -574,7 +574,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = TipoEndereco;
@@ -620,7 +620,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = TipoTelefone;
@@ -666,7 +666,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Endereco;
@@ -712,7 +712,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Estabelecimento;
@@ -758,7 +758,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PessoaDetalheResponse;
@@ -804,13 +804,65 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Pessoa;
 
       return this.apiClient.callApi(
         '/api/pessoas/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarContasPorPessoaUsingGET operation.
+     * @callback module:api/CadastrosGeraisApi~listarContasPorPessoaUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageContasDetalhe} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista as contas da pessoa
+     * Permite listar as contas de um pessoa a partir do seu numero na receita federal.
+     * @param {String} numeroReceitaFederal Id Conta
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {module:api/CadastrosGeraisApi~listarContasPorPessoaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageContasDetalhe}
+     */
+    this.listarContasPorPessoaUsingGET = function(numeroReceitaFederal, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'numeroReceitaFederal' is set
+      if (numeroReceitaFederal == undefined || numeroReceitaFederal == null) {
+        throw "Missing the required parameter 'numeroReceitaFederal' when calling listarContasPorPessoaUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'numeroReceitaFederal': numeroReceitaFederal,
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageContasDetalhe;
+
+      return this.apiClient.callApi(
+        '/api/pessoas/listar-contas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -849,7 +901,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageCampoCodificadoDescricao;
@@ -895,13 +947,58 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = HistoricoTelefone;
 
       return this.apiClient.callApi(
         '/api/pessoas/{id}/historico-telefones', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarNacionalidadesUsingGET operation.
+     * @callback module:api/CadastrosGeraisApi~listarNacionalidadesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageCampoCodificadoDescricao} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista nacionalidades
+     * Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {module:api/CadastrosGeraisApi~listarNacionalidadesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCampoCodificadoDescricao}
+     */
+    this.listarNacionalidadesUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageCampoCodificadoDescricao;
+
+      return this.apiClient.callApi(
+        '/api/nacionalidades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -940,7 +1037,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageCampoCodificadoDescricao;
@@ -991,7 +1088,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageOrigensComerciais;
@@ -1044,7 +1141,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ListaProdutos;
@@ -1089,7 +1186,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageCampoCodificadoDescricao;
@@ -1104,6 +1201,138 @@
     /**
      * Callback function to receive the result of the listarUsingGET10 operation.
      * @callback module:api/CadastrosGeraisApi~listarUsingGET10Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os Detalhes das Pessoas cadastradas no Emissor
+     * Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo identificador da pessoa
+     * @param {String} opts.nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+     * @param {Integer} opts.idEstadoCivil Id Estado civil da pessoa fisica
+     * @param {String} opts.profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+     * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+     * @param {String} opts.email Email da pessoa fisica
+     * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PessoaDetalheResponse}
+     */
+    this.listarUsingGET10 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idPessoa': opts['idPessoa'],
+        'nomeMae': opts['nomeMae'],
+        'idEstadoCivil': opts['idEstadoCivil'],
+        'profissao': opts['profissao'],
+        'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
+        'idNacionalidade': opts['idNacionalidade'],
+        'numeroAgencia': opts['numeroAgencia'],
+        'numeroContaCorrente': opts['numeroContaCorrente'],
+        'email': opts['email'],
+        'nomeEmpresa': opts['nomeEmpresa']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PessoaDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/pessoas-detalhes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET11 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET11Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PagePessoas} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista as Pessoas cadastradas no Emissor
+     * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+     * @param {String} opts.nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+     * @param {String} opts.tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+     * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+     * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+     * @param {String} opts.numeroIdentidade N\u00C3\u00BAmero da Identidade
+     * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
+     * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @param {module:model/ModelDate} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PagePessoas}
+     */
+    this.listarUsingGET11 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome'],
+        'tipo': opts['tipo'],
+        'cpf': opts['cpf'],
+        'cnpj': opts['cnpj'],
+        'dataNascimento': opts['dataNascimento'],
+        'sexo': opts['sexo'],
+        'numeroIdentidade': opts['numeroIdentidade'],
+        'orgaoExpedidorIdentidade': opts['orgaoExpedidorIdentidade'],
+        'unidadeFederativaIdentidade': opts['unidadeFederativaIdentidade'],
+        'dataEmissaoIdentidade': opts['dataEmissaoIdentidade']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PagePessoas;
+
+      return this.apiClient.callApi(
+        '/api/pessoas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET13 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortador} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1125,10 +1354,10 @@
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:model/ModelDate} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortador}
      */
-    this.listarUsingGET10 = function(opts, callback) {
+    this.listarUsingGET13 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1154,7 +1383,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PagePortador;
@@ -1167,8 +1396,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET14 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET14Callback
+     * Callback function to receive the result of the listarUsingGET17 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefones} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1187,10 +1416,10 @@
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
      * @param {Integer} opts.status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefones}
      */
-    this.listarUsingGET14 = function(opts, callback) {
+    this.listarUsingGET17 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1213,7 +1442,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTelefones;
@@ -1226,8 +1455,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET15 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET15Callback
+     * Callback function to receive the result of the listarUsingGET18 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTiposEndereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1241,10 +1470,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
      * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTiposEndereco}
      */
-    this.listarUsingGET15 = function(opts, callback) {
+    this.listarUsingGET18 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1262,7 +1491,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTiposEndereco;
@@ -1275,8 +1504,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTelefones} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1290,10 +1519,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
      * @param {String} opts.nome Nome do Tipo do Telefone
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefones}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1311,7 +1540,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTipoTelefones;
@@ -1324,8 +1553,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET4 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET4Callback
+     * Callback function to receive the result of the listarUsingGET6 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEnderecos} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1351,10 +1580,10 @@
      * @param {String} opts.pais Apresenta nome do Pais
      * @param {module:model/ModelDate} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @param {module:model/ModelDate} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecos}
      */
-    this.listarUsingGET4 = function(opts, callback) {
+    this.listarUsingGET6 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1384,7 +1613,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageEnderecos;
@@ -1397,8 +1626,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentos} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1429,10 +1658,10 @@
      * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
      * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
      * @param {Integer} opts.inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentos}
      */
-    this.listarUsingGET5 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1467,145 +1696,13 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageEstabelecimentos;
 
       return this.apiClient.callApi(
         '/api/estabelecimentos', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET8Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista os Detalhes das Pessoas cadastradas no Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo identificador da pessoa
-     * @param {String} opts.nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-     * @param {Integer} opts.idEstadoCivil Id Estado civil da pessoa fisica
-     * @param {String} opts.profissao Profiss\u00C3\u00A3o da pessoa fisica
-     * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-     * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
-     * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-     * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
-     * @param {String} opts.email Email da pessoa fisica
-     * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PessoaDetalheResponse}
-     */
-    this.listarUsingGET8 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'idPessoa': opts['idPessoa'],
-        'nomeMae': opts['nomeMae'],
-        'idEstadoCivil': opts['idEstadoCivil'],
-        'profissao': opts['profissao'],
-        'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
-        'idNacionalidade': opts['idNacionalidade'],
-        'numeroAgencia': opts['numeroAgencia'],
-        'numeroContaCorrente': opts['numeroContaCorrente'],
-        'email': opts['email'],
-        'nomeEmpresa': opts['nomeEmpresa']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PessoaDetalheResponse;
-
-      return this.apiClient.callApi(
-        '/api/pessoas-detalhes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET9Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PagePessoas} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista as Pessoas cadastradas no Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-     * @param {String} opts.nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-     * @param {String} opts.tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-     * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
-     * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @param {module:model/ModelDate} opts.dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-     * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-     * @param {String} opts.numeroIdentidade N\u00C3\u00BAmero da Identidade
-     * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
-     * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-     * @param {module:model/ModelDate} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PagePessoas}
-     */
-    this.listarUsingGET9 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'id': opts['id'],
-        'nome': opts['nome'],
-        'tipo': opts['tipo'],
-        'cpf': opts['cpf'],
-        'cnpj': opts['cnpj'],
-        'dataNascimento': opts['dataNascimento'],
-        'sexo': opts['sexo'],
-        'numeroIdentidade': opts['numeroIdentidade'],
-        'orgaoExpedidorIdentidade': opts['orgaoExpedidorIdentidade'],
-        'unidadeFederativaIdentidade': opts['unidadeFederativaIdentidade'],
-        'dataEmissaoIdentidade': opts['dataEmissaoIdentidade']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PagePessoas;
-
-      return this.apiClient.callApi(
-        '/api/pessoas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1644,13 +1741,13 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PessoaFisicaAprovadaResponse;
 
       return this.apiClient.callApi(
-        '/api/contas-pessoas/fisicas', 'POST',
+        '/api/clientes-pessoas-fisicas', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1689,21 +1786,21 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PessoaJuridicaAprovadaResponse;
 
       return this.apiClient.callApi(
-        '/api/contas-pessoas/juridicas', 'POST',
+        '/api/clientes-pessoas-juridicas', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST2 operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST2Callback
+     * Callback function to receive the result of the salvarUsingPOST4 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Endereco} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1724,10 +1821,10 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Endereco}
      */
-    this.salvarUsingPOST2 = function(opts, callback) {
+    this.salvarUsingPOST4 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1752,7 +1849,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Endereco;
@@ -1765,8 +1862,69 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST4 operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST4Callback
+     * Callback function to receive the result of the salvarUsingPOST6 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST6Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Salvar os detalhes de uma determinada Pessoa
+     * Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idPessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
+     * @param {String} opts.nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+     * @param {Integer} opts.idEstadoCivil Id Estado civil da pessoa fisica
+     * @param {String} opts.profissao Profiss\u00C3\u00A3o da pessoa fisica
+     * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+     * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+     * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+     * @param {String} opts.email Email da pessoa fisica
+     * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PessoaDetalheResponse}
+     */
+    this.salvarUsingPOST6 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idPessoa': opts['idPessoa'],
+        'nomeMae': opts['nomeMae'],
+        'idEstadoCivil': opts['idEstadoCivil'],
+        'profissao': opts['profissao'],
+        'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
+        'idNacionalidade': opts['idNacionalidade'],
+        'numeroAgencia': opts['numeroAgencia'],
+        'numeroContaCorrente': opts['numeroContaCorrente'],
+        'email': opts['email'],
+        'nomeEmpresa': opts['nomeEmpresa']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PessoaDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/pessoas-detalhes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST7 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Pessoa} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1786,21 +1944,21 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {module:model/ModelDate} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Pessoa}
      */
-    this.salvarUsingPOST4 = function(nome, tipo, opts, callback) {
+    this.salvarUsingPOST7 = function(nome, tipo, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'nome' is set
       if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling salvarUsingPOST4";
+        throw "Missing the required parameter 'nome' when calling salvarUsingPOST7";
       }
 
       // verify the required parameter 'tipo' is set
       if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST4";
+        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST7";
       }
 
 
@@ -1823,7 +1981,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Pessoa;
@@ -1836,8 +1994,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST5 operation.
-     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST5Callback
+     * Callback function to receive the result of the salvarUsingPOST9 operation.
+     * @callback module:api/CadastrosGeraisApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/Telefone} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1852,10 +2010,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/Telefone}
      */
-    this.salvarUsingPOST5 = function(opts, callback) {
+    this.salvarUsingPOST9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1874,7 +2032,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Telefone;

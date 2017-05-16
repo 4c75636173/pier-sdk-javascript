@@ -18,7 +18,7 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -132,13 +132,13 @@
   exports.prototype['status'] = undefined;
 
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    * @member {Date} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    * @member {Date} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;

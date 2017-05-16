@@ -18,7 +18,7 @@
   /**
    * RiscoFraude service.
    * @module api/RiscoFraudeApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -66,7 +66,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = AtendimentoCliente;
@@ -112,7 +112,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = RiscoFraudeDetalhadoResponse;
@@ -157,7 +157,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = 'String';
@@ -170,8 +170,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET operation.
-     * @callback module:api/RiscoFraudeApi~listarUsingGETCallback
+     * Callback function to receive the result of the listarUsingGET1 operation.
+     * @callback module:api/RiscoFraudeApi~listarUsingGET1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAtendimentoClientes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -187,10 +187,10 @@
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
      * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
      * @param {module:model/ModelDate} opts.dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-     * @param {module:api/RiscoFraudeApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAtendimentoClientes}
      */
-    this.listarUsingGET = function(opts, callback) {
+    this.listarUsingGET1 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -210,7 +210,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageAtendimentoClientes;
@@ -223,8 +223,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/RiscoFraudeApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/RiscoFraudeApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeResponsePage} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -238,21 +238,21 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:api/RiscoFraudeApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeResponsePage}
      */
-    this.listarUsingGET11 = function(idConta, confirmacaoFraude, opts, callback) {
+    this.listarUsingGET14 = function(idConta, confirmacaoFraude, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET11";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET14";
       }
 
       // verify the required parameter 'confirmacaoFraude' is set
       if (confirmacaoFraude == undefined || confirmacaoFraude == null) {
-        throw "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET11";
+        throw "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET14";
       }
 
 
@@ -269,7 +269,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = RiscoFraudeResponsePage;
@@ -282,8 +282,8 @@
     }
 
     /**
-     * Callback function to receive the result of the negarUsingGET operation.
-     * @callback module:api/RiscoFraudeApi~negarUsingGETCallback
+     * Callback function to receive the result of the negarUsingPOST operation.
+     * @callback module:api/RiscoFraudeApi~negarUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -293,15 +293,15 @@
      * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      * Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-     * @param {module:api/RiscoFraudeApi~negarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~negarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeDetalhadoResponse}
      */
-    this.negarUsingGET = function(id, callback) {
+    this.negarUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling negarUsingGET";
+        throw "Missing the required parameter 'id' when calling negarUsingPOST";
       }
 
 
@@ -315,21 +315,21 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = RiscoFraudeDetalhadoResponse;
 
       return this.apiClient.callApi(
-        '/api/riscos-fraudes/{id}/negar', 'GET',
+        '/api/riscos-fraudes/{id}/negar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the reconhecerUsingGET operation.
-     * @callback module:api/RiscoFraudeApi~reconhecerUsingGETCallback
+     * Callback function to receive the result of the reconhecerUsingPOST operation.
+     * @callback module:api/RiscoFraudeApi~reconhecerUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -339,15 +339,15 @@
      * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
      * Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-     * @param {module:api/RiscoFraudeApi~reconhecerUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~reconhecerUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeDetalhadoResponse}
      */
-    this.reconhecerUsingGET = function(id, callback) {
+    this.reconhecerUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling reconhecerUsingGET";
+        throw "Missing the required parameter 'id' when calling reconhecerUsingPOST";
       }
 
 
@@ -361,21 +361,21 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = RiscoFraudeDetalhadoResponse;
 
       return this.apiClient.callApi(
-        '/api/riscos-fraudes/{id}/reconhecer', 'GET',
+        '/api/riscos-fraudes/{id}/reconhecer', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST operation.
-     * @callback module:api/RiscoFraudeApi~salvarUsingPOSTCallback
+     * Callback function to receive the result of the salvarUsingPOST1 operation.
+     * @callback module:api/RiscoFraudeApi~salvarUsingPOST1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AtendimentoCliente} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -393,10 +393,10 @@
      * @param {Date} opts.dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
      * @param {Date} opts.dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
      * @param {Integer} opts.flagFilaFraude Flag fila fraude
-     * @param {module:api/RiscoFraudeApi~salvarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~salvarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AtendimentoCliente}
      */
-    this.salvarUsingPOST = function(opts, callback) {
+    this.salvarUsingPOST1 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -419,7 +419,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = AtendimentoCliente;

@@ -1,15 +1,17 @@
 # Pier.UsuariosApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
 [**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
+[**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
 [**consultarUsingGET22**](UsuariosApi.md#consultarUsingGET22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**listarUsingGET21**](UsuariosApi.md#listarUsingGET21) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
+[**listarUsingGET24**](UsuariosApi.md#listarUsingGET24) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST8**](UsuariosApi.md#salvarUsingPOST8) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
+[**salvarUsingPOST12**](UsuariosApi.md#salvarUsingPOST12) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -24,13 +26,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -65,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -83,13 +78,6 @@ Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -121,7 +109,53 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="ativarUsuarioUsingPOST"></a>
+# **ativarUsuarioUsingPOST**
+> UsuarioResponse ativarUsuarioUsingPOST(id)
+
+Ativa os usu\u00C3\u00A1rios cadastrados
+
+Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.UsuariosApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.ativarUsuarioUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+
+### Return type
+
+[**UsuarioResponse**](UsuarioResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -139,13 +173,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -174,16 +201,62 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PageUsuarios listarUsingGET21(opts)
+<a name="desativarUsuarioUsingPOST"></a>
+# **desativarUsuarioUsingPOST**
+> UsuarioResponse desativarUsuarioUsingPOST(id)
+
+Desativa os usu\u00C3\u00A1rios cadastrados
+
+Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.UsuariosApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.desativarUsuarioUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+
+### Return type
+
+[**UsuarioResponse**](UsuarioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PageUsuarios listarUsingGET24(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -192,13 +265,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existen
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -218,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET24(opts, callback);
 ```
 
 ### Parameters
@@ -238,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -256,13 +322,6 @@ Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -291,16 +350,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST8"></a>
-# **salvarUsingPOST8**
-> UsuarioResponse salvarUsingPOST8(persist)
+<a name="salvarUsingPOST12"></a>
+# **salvarUsingPOST12**
+> UsuarioResponse salvarUsingPOST12(persist)
 
 Cadastra Usu\u00C3\u00A1rio
 
@@ -309,13 +368,6 @@ Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -329,7 +381,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST8(persist, callback);
+api.salvarUsingPOST12(persist, callback);
 ```
 
 ### Parameters
@@ -344,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -362,13 +414,6 @@ Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.UsuariosApi()
 
@@ -400,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

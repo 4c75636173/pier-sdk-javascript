@@ -1,6 +1,6 @@
 # Pier.NotificacoesApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,13 +25,6 @@ Esse recurso permite atualizar o status do SMS do emissor
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -69,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -87,13 +80,6 @@ Esse recurso permite listar os Pushes do emissor
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -135,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -153,13 +139,6 @@ Esse recurso permite listar os SMS do emissor
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -170,7 +149,8 @@ var opts = {
   'tipoEvento': "tipoEvento_example", // {String} Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
   'status': "status_example", // {String} Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
   'operadora': "operadora_example", // {String} Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
-  'protocolo': "protocolo_example" // {String} N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+  'protocolo': "protocolo_example", // {String} N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+  'nsu': 789 // {Integer} Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
 };
 
 var callback = function(error, data, response) {
@@ -194,6 +174,7 @@ Name | Type | Description  | Notes
  **status** | **String**| Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **operadora** | **String**| Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada. | [optional] 
  **protocolo** | **String**| N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
+ **nsu** | **Integer**| Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 
 ### Return type
 
@@ -201,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -219,13 +200,6 @@ Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -259,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -277,13 +251,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -312,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -330,13 +297,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -365,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -383,13 +343,6 @@ Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -418,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -436,13 +389,6 @@ Esse recurso permite enviar uma lista de SMS.
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.NotificacoesApi()
 
@@ -471,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

@@ -18,7 +18,7 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -27,8 +27,10 @@
    * @alias module:model/FaturaResponse
    * @class
    * @param totalServicos
+   * @param totalParceladoNacionais
+   * @param totalParceladoInternacionais
    */
-  var exports = function(totalServicos) {
+  var exports = function(totalServicos, totalParceladoNacionais, totalParceladoInternacionais) {
 
 
 
@@ -56,6 +58,8 @@
 
 
     this['totalServicos'] = totalServicos;
+    this['totalParceladoNacionais'] = totalParceladoNacionais;
+    this['totalParceladoInternacionais'] = totalParceladoInternacionais;
   };
 
   /**
@@ -146,6 +150,12 @@
       }
       if (data.hasOwnProperty('totalServicos')) {
         obj['totalServicos'] = ApiClient.convertToType(data['totalServicos'], 'Number');
+      }
+      if (data.hasOwnProperty('totalParceladoNacionais')) {
+        obj['totalParceladoNacionais'] = ApiClient.convertToType(data['totalParceladoNacionais'], 'Number');
+      }
+      if (data.hasOwnProperty('totalParceladoInternacionais')) {
+        obj['totalParceladoInternacionais'] = ApiClient.convertToType(data['totalParceladoInternacionais'], 'Number');
       }
     }
     return obj;
@@ -307,6 +317,18 @@
    * @member {Number} totalServicos
    */
   exports.prototype['totalServicos'] = undefined;
+
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras nacionais.
+   * @member {Number} totalParceladoNacionais
+   */
+  exports.prototype['totalParceladoNacionais'] = undefined;
+
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras internacionais.
+   * @member {Number} totalParceladoInternacionais
+   */
+  exports.prototype['totalParceladoInternacionais'] = undefined;
 
 
 

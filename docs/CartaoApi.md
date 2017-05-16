@@ -1,28 +1,30 @@
 # Pier.CartaoApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarAlterarSenhaUsingPUT**](CartaoApi.md#alterarAlterarSenhaUsingPUT) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**alterarStatusImpressaoUsingPUT**](CartaoApi.md#alterarStatusImpressaoUsingPUT) | **PUT** /api/cartoes/{id}/alterar-status-impressao | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
-[**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id}/atribuir-pessoa | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+[**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id}/atribuir-titular | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
 [**bloquearUsingPUT**](CartaoApi.md#bloquearUsingPUT) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrarAlterarSenhaUsingPOST**](CartaoApi.md#cadastrarAlterarSenhaUsingPOST) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+[**consultarDadosCartaoUsingGET**](CartaoApi.md#consultarDadosCartaoUsingGET) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
 [**consultarUsingGET2**](CartaoApi.md#consultarUsingGET2) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET2**](CartaoApi.md#listarUsingGET2) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
-[**validarCartaoChipBandeiradoUsingGET**](CartaoApi.md#validarCartaoChipBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-chip | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-[**validarCartaoDigitadoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-[**validarCartaoDigitadoNaoBandeiradoUsingGET**](CartaoApi.md#validarCartaoDigitadoNaoBandeiradoUsingGET) | **GET** /api/cartoes/nao-bandeirados/validar-digitado | Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-[**validarCartaoTarjaBandeiradoUsingGET**](CartaoApi.md#validarCartaoTarjaBandeiradoUsingGET) | **GET** /api/cartoes/bandeirados/validar-tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+[**listarUsingGET3**](CartaoApi.md#listarUsingGET3) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+[**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+[**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
 [**validarSenhaUsingGET**](CartaoApi.md#validarSenhaUsingGET) | **GET** /api/cartoes/{id}/validar-senha | Permite validar a senha de um Cart\u00C3\u00A3o
+[**validarTarjaUsingGET**](CartaoApi.md#validarTarjaUsingGET) | **GET** /api/cartoes/validar-tarja | Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 
 
 <a name="alterarAlterarSenhaUsingPUT"></a>
@@ -36,13 +38,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -74,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -92,13 +87,6 @@ Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que reali
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -130,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -148,13 +136,6 @@ Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impr
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -186,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -204,13 +185,6 @@ Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (t
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -245,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -263,13 +237,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -301,7 +268,53 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarDadosCartaoUsingGET"></a>
+# **consultarDadosCartaoUsingGET**
+> TransacaoOnUsResponse consultarDadosCartaoUsingGET(id)
+
+Consultar Detalhes do Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var id = 789; // {Integer} id
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarDadosCartaoUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| id | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -319,13 +332,6 @@ Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -354,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -372,13 +378,6 @@ Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pa
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -407,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -425,13 +424,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -460,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -478,13 +470,6 @@ Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -513,7 +498,53 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="desbloquearSenhaIncorretaUsingPOST"></a>
+# **desbloquearSenhaIncorretaUsingPOST**
+> Cartao desbloquearSenhaIncorretaUsingPOST(id)
+
+Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+
+Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.desbloquearSenhaIncorretaUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**Cartao**](Cartao.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -531,13 +562,6 @@ Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -566,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -584,13 +608,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -630,7 +647,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -648,13 +665,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores 
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -683,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -701,13 +711,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -757,16 +760,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET2"></a>
-# **listarUsingGET2**
-> PageCartoes listarUsingGET2(opts)
+<a name="listarUsingGET3"></a>
+# **listarUsingGET3**
+> PageCartoes listarUsingGET3(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -775,13 +778,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existent
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -815,7 +811,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET2(opts, callback);
+api.listarUsingGET3(opts, callback);
 ```
 
 ### Parameters
@@ -849,31 +845,134 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="validarCartaoChipBandeiradoUsingGET"></a>
-# **validarCartaoChipBandeiradoUsingGET**
-> ValidaCartao validarCartaoChipBandeiradoUsingGET(numeroCartao, criptograma)
+<a name="validarDadosImpressosBandeiradoUsingGET"></a>
+# **validarDadosImpressosBandeiradoUsingGET**
+> ValidaCartao validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
 
-Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
 
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
 
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
+var apiInstance = new Pier.CartaoApi()
+
+var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+var nomePortador = "nomePortador_example"; // {String} Nome do portador do cart\u00C3\u00A3o
+
+var dataValidade = "dataValidade_example"; // {String} Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+
+var codigoSeguranca = "codigoSeguranca_example"; // {String} C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nomePortador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
+ **dataValidade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigoSeguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarDadosImpressosNaoBandeiradoUsingGET"></a>
+# **validarDadosImpressosNaoBandeiradoUsingGET**
+> ValidaCartao validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
+
+Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+var nomePortador = "nomePortador_example"; // {String} Nome do portador do cart\u00C3\u00A3o
+
+var dataValidade = "dataValidade_example"; // {String} Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+
+var codigoSeguranca = "codigoSeguranca_example"; // {String} C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **nomePortador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
+ **dataValidade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
+ **codigoSeguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarDe55CartaoMastercardUsingGET"></a>
+# **validarDe55CartaoMastercardUsingGET**
+> ValidaCartao validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma)
+
+Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+
+### Example
+```javascript
+var Pier = require('Pier');
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -889,7 +988,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarCartaoChipBandeiradoUsingGET(numeroCartao, criptograma, callback);
+api.validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma, callback);
 ```
 
 ### Parameters
@@ -905,190 +1004,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="validarCartaoDigitadoBandeiradoUsingGET"></a>
-# **validarCartaoDigitadoBandeiradoUsingGET**
-> ValidaCartao validarCartaoDigitadoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
-
-Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-
-var nomePortador = "nomePortador_example"; // {String} Nome do portador do cart\u00C3\u00A3o
-
-var dataValidade = "dataValidade_example"; // {String} Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-
-var codigoSeguranca = "codigoSeguranca_example"; // {String} C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.validarCartaoDigitadoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
- **nomePortador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
- **dataValidade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
- **codigoSeguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
-
-### Return type
-
-[**ValidaCartao**](ValidaCartao.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="validarCartaoDigitadoNaoBandeiradoUsingGET"></a>
-# **validarCartaoDigitadoNaoBandeiradoUsingGET**
-> ValidaCartao validarCartaoDigitadoNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
-
-Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-
-var nomePortador = "nomePortador_example"; // {String} Nome do portador do cart\u00C3\u00A3o
-
-var dataValidade = "dataValidade_example"; // {String} Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-
-var codigoSeguranca = "codigoSeguranca_example"; // {String} C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.validarCartaoDigitadoNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
- **nomePortador** | **String**| Nome do portador do cart\u00C3\u00A3o | 
- **dataValidade** | **String**| Data de validade do cart\u00C3\u00A3o no formato yyyy-MM | 
- **codigoSeguranca** | **String**| C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros | 
-
-### Return type
-
-[**ValidaCartao**](ValidaCartao.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="validarCartaoTarjaBandeiradoUsingGET"></a>
-# **validarCartaoTarjaBandeiradoUsingGET**
-> ValidaCartao validarCartaoTarjaBandeiradoUsingGET(numeroCartao, trilha1, trilha2)
-
-Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-
-### Example
-```javascript
-var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
-
-var apiInstance = new Pier.CartaoApi()
-
-var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-
-var trilha1 = "trilha1_example"; // {String} Trilha 1 do cart\u00C3\u00A3o a ser validado
-
-var trilha2 = "trilha2_example"; // {String} Trilha 2 do cart\u00C3\u00A3o a ser validado
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.validarCartaoTarjaBandeiradoUsingGET(numeroCartao, trilha1, trilha2, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
- **trilha1** | **String**| Trilha 1 do cart\u00C3\u00A3o a ser validado | 
- **trilha2** | **String**| Trilha 2 do cart\u00C3\u00A3o a ser validado | 
-
-### Return type
-
-[**ValidaCartao**](ValidaCartao.md)
-
-### Authorization
-
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -1097,7 +1013,7 @@ Name | Type | Description  | Notes
 
 <a name="validarSenhaUsingGET"></a>
 # **validarSenhaUsingGET**
-> &#39;String&#39; validarSenhaUsingGET(id, senha)
+> ValidaSenhaCartao validarSenhaUsingGET(id, senha)
 
 Permite validar a senha de um Cart\u00C3\u00A3o
 
@@ -1106,13 +1022,6 @@ Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a sen
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.CartaoApi()
 
@@ -1140,11 +1049,63 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;String&#39;**
+[**ValidaSenhaCartao**](ValidaSenhaCartao.md)
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarTarjaUsingGET"></a>
+# **validarTarjaUsingGET**
+> ValidaCartao validarTarjaUsingGET(numeroCartao, trilha1, trilha2)
+
+Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var numeroCartao = "numeroCartao_example"; // {String} N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+
+var trilha1 = "trilha1_example"; // {String} Trilha 1 do cart\u00C3\u00A3o a ser validado
+
+var trilha2 = "trilha2_example"; // {String} Trilha 2 do cart\u00C3\u00A3o a ser validado
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarTarjaUsingGET(numeroCartao, trilha1, trilha2, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **numeroCartao** | **String**| N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado. | 
+ **trilha1** | **String**| Trilha 1 do cart\u00C3\u00A3o a ser validado | 
+ **trilha2** | **String**| Trilha 2 do cart\u00C3\u00A3o a ser validado | 
+
+### Return type
+
+[**ValidaCartao**](ValidaCartao.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP reuqest headers
 

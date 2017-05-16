@@ -18,7 +18,7 @@
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -80,7 +80,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = WebHook;
@@ -126,7 +126,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = WebHook;
@@ -139,8 +139,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/WebhooksApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET25 operation.
+     * @callback module:api/WebhooksApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHooks} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -156,10 +156,10 @@
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHooks}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET25 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -179,7 +179,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageWebHooks;
@@ -192,8 +192,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST9 operation.
-     * @callback module:api/WebhooksApi~salvarUsingPOST9Callback
+     * Callback function to receive the result of the salvarUsingPOST13 operation.
+     * @callback module:api/WebhooksApi~salvarUsingPOST13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHook} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -204,20 +204,20 @@
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHook}
      */
-    this.salvarUsingPOST9 = function(tipoEvento, url, callback) {
+    this.salvarUsingPOST13 = function(tipoEvento, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'tipoEvento' is set
       if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST9";
+        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST13";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling salvarUsingPOST9";
+        throw "Missing the required parameter 'url' when calling salvarUsingPOST13";
       }
 
 
@@ -232,7 +232,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = WebHook;

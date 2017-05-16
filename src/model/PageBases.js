@@ -18,7 +18,7 @@
   /**
    * The PageBases model module.
    * @module model/PageBases
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**

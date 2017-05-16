@@ -18,7 +18,7 @@
   /**
    * Oportunidades service.
    * @module api/OportunidadesApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -79,7 +79,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = StatusOportunidadeResponse;
@@ -131,7 +131,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = OportunidadeResponse;
@@ -183,7 +183,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = TipoOportunidadeResponse;
@@ -236,7 +236,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = StatusOportunidadeResponse;
@@ -282,7 +282,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = TipoOportunidadeResponse;
@@ -328,7 +328,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = OportunidadeResponse;
@@ -358,8 +358,10 @@
      * @param {Date} opts.revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do status oportunidade
      * @param {Integer} opts.idTipoOportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+     * @param {String} opts.nome Nome do status oportunidade
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+     * @param {Date} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusOprtunidadesAUD}
      */
@@ -377,15 +379,17 @@
         'revDate': opts['revDate'],
         'id': opts['id'],
         'idTipoOportunidade': opts['idTipoOportunidade'],
+        'nome': opts['nome'],
         'descricao': opts['descricao'],
-        'flagAtivo': opts['flagAtivo']
+        'flagAtivo': opts['flagAtivo'],
+        'revUser': opts['revUser']
       };
       var headerParams = {
       };
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageStatusOprtunidadesAUD;
@@ -420,6 +424,7 @@
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
      * @param {Date} opts.revDate Data da auditoria
      * @param {Date} opts.revType Tipo da auditoria
+     * @param {Date} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOprtunidadeAUD}
      */
@@ -441,14 +446,15 @@
         'datatFimVigencia': opts['datatFimVigencia'],
         'flagAtivo': opts['flagAtivo'],
         'revDate': opts['revDate'],
-        'revType': opts['revType']
+        'revType': opts['revType'],
+        'revUser': opts['revUser']
       };
       var headerParams = {
       };
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageOprtunidadeAUD;
@@ -479,6 +485,7 @@
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
      * @param {Boolean} opts.flagAtivo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+     * @param {Date} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOprtunidadesAUD}
      */
@@ -496,14 +503,15 @@
         'revDate': opts['revDate'],
         'id': opts['id'],
         'descricao': opts['descricao'],
-        'flagAtivo': opts['flagAtivo']
+        'flagAtivo': opts['flagAtivo'],
+        'revUser': opts['revUser']
       };
       var headerParams = {
       };
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTipoOprtunidadesAUD;
@@ -530,6 +538,7 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {String} opts.nome Nome do status oportunidade
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
      * @param {module:api/OportunidadesApi~listarStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -551,6 +560,7 @@
       var queryParams = {
         'page': opts['page'],
         'limit': opts['limit'],
+        'nome': opts['nome'],
         'descricao': opts['descricao'],
         'flagAtivo': opts['flagAtivo']
       };
@@ -559,7 +569,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageStatusOprtunidades;
@@ -572,8 +582,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoOprtunidades} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -587,10 +597,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {module:api/OportunidadesApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOprtunidades}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -608,7 +618,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageTipoOprtunidades;
@@ -621,8 +631,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET7 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET7Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOprtunidadesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -641,10 +651,10 @@
      * @param {Date} opts.dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @param {Date} opts.dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-     * @param {module:api/OportunidadesApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOprtunidadesResponse}
      */
-    this.listarUsingGET7 = function(opts, callback) {
+    this.listarUsingGET9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -667,7 +677,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageOprtunidadesResponse;
@@ -719,7 +729,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = StatusOportunidadeResponse;
@@ -732,53 +742,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST3 operation.
-     * @callback module:api/OportunidadesApi~salvarUsingPOST3Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/OportunidadeResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Cadastra as oportunidade
-     * Esse recurso permite cadastrar oportunidades.
-     * @param {module:model/OportunidadePersist} persist persist
-     * @param {module:api/OportunidadesApi~salvarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/OportunidadeResponse}
-     */
-    this.salvarUsingPOST3 = function(persist, callback) {
-      var postBody = persist;
-
-      // verify the required parameter 'persist' is set
-      if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST3";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['access_token'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = OportunidadeResponse;
-
-      return this.apiClient.callApi(
-        '/api/oportunidades', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST6 operation.
-     * @callback module:api/OportunidadesApi~salvarUsingPOST6Callback
+     * Callback function to receive the result of the salvarUsingPOST10 operation.
+     * @callback module:api/OportunidadesApi~salvarUsingPOST10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -788,15 +753,15 @@
      * Cadastra tipos oportunidades
      * Esse recurso permite cadastrar tipos oportunidades.
      * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadesApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.salvarUsingPOST6 = function(persist, callback) {
+    this.salvarUsingPOST10 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST6";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST10";
       }
 
 
@@ -809,13 +774,58 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = TipoOportunidadeResponse;
 
       return this.apiClient.callApi(
         '/api/tipos-oportunidades', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST5 operation.
+     * @callback module:api/OportunidadesApi~salvarUsingPOST5Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OportunidadeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cadastra as oportunidade
+     * Esse recurso permite cadastrar oportunidades.
+     * @param {module:model/OportunidadePersist} persist persist
+     * @param {module:api/OportunidadesApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/OportunidadeResponse}
+     */
+    this.salvarUsingPOST5 = function(persist, callback) {
+      var postBody = persist;
+
+      // verify the required parameter 'persist' is set
+      if (persist == undefined || persist == null) {
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST5";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OportunidadeResponse;
+
+      return this.apiClient.callApi(
+        '/api/oportunidades', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -18,7 +18,7 @@
   /**
    * The StatusOportunidade model module.
    * @module model/StatusOportunidade
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -30,6 +30,7 @@
    * @param flagAtivo
    */
   var exports = function(descricao, flagAtivo) {
+
 
     this['descricao'] = descricao;
     this['flagAtivo'] = flagAtivo;
@@ -46,6 +47,9 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
       if (data.hasOwnProperty('descricao')) {
         obj['descricao'] = ApiClient.convertToType(data['descricao'], 'String');
       }
@@ -56,6 +60,12 @@
     return obj;
   }
 
+
+  /**
+   * Nome do status oportunidade
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade

@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Conta = factory(root.Pier.ApiClient);
+    root.Pier.ContaResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The Conta model module.
-   * @module model/Conta
-   * @version 2.13.0
+   * The ContaResponse model module.
+   * @module model/ContaResponse
+   * @version 2.15.0
    */
 
   /**
-   * Constructs a new <code>Conta</code>.
+   * Constructs a new <code>ContaResponse</code>.
    * Objeto conta
-   * @alias module:model/Conta
+   * @alias module:model/ContaResponse
    * @class
    */
   var exports = function() {
@@ -40,17 +40,14 @@
 
 
 
-
-
-
   };
 
   /**
-   * Constructs a <code>Conta</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ContaResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Conta} obj Optional instance to populate.
-   * @return {module:model/Conta} The populated <code>Conta</code> instance.
+   * @param {module:model/ContaResponse} obj Optional instance to populate.
+   * @return {module:model/ContaResponse} The populated <code>ContaResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -86,17 +83,8 @@
       if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
         obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
       }
-      if (data.hasOwnProperty('numeroAgencia')) {
-        obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
-      }
       if (data.hasOwnProperty('valorRenda')) {
         obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
-      }
-      if (data.hasOwnProperty('numeroContaCorrente')) {
-        obj['numeroContaCorrente'] = ApiClient.convertToType(data['numeroContaCorrente'], 'String');
-      }
-      if (data.hasOwnProperty('formaEnvioFatura')) {
-        obj['formaEnvioFatura'] = ApiClient.convertToType(data['formaEnvioFatura'], 'String');
       }
     }
     return obj;
@@ -164,28 +152,10 @@
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   * @member {Integer} numeroAgencia
-   */
-  exports.prototype['numeroAgencia'] = undefined;
-
-  /**
    * Apresenta o valor da renda comprovada
    * @member {Number} valorRenda
    */
   exports.prototype['valorRenda'] = undefined;
-
-  /**
-   * N\u00C3\u00BAmero da conta corrente.
-   * @member {String} numeroContaCorrente
-   */
-  exports.prototype['numeroContaCorrente'] = undefined;
-
-  /**
-   * Forma de envio da fatura.
-   * @member {String} formaEnvioFatura
-   */
-  exports.prototype['formaEnvioFatura'] = undefined;
 
 
 

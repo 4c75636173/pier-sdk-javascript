@@ -18,7 +18,7 @@
   /**
    * The Transferencia model module.
    * @module model/Transferencia
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**

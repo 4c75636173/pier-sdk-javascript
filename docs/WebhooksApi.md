@@ -1,13 +1,13 @@
 # Pier.WebhooksApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET23**](WebhooksApi.md#consultarUsingGET23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET22**](WebhooksApi.md#listarUsingGET22) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST9**](WebhooksApi.md#salvarUsingPOST9) | **POST** /api/webhooks | Salvar Webhook
+[**listarUsingGET25**](WebhooksApi.md#listarUsingGET25) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST13**](WebhooksApi.md#salvarUsingPOST13) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT10"></a>
@@ -21,13 +21,6 @@ Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cad
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.WebhooksApi()
 
@@ -62,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -80,13 +73,6 @@ Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.WebhooksApi()
 
@@ -115,16 +101,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageWebHooks listarUsingGET22(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageWebHooks listarUsingGET25(opts)
 
 Lista os Webhooks
 
@@ -133,13 +119,6 @@ Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.WebhooksApi()
 
@@ -159,7 +138,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -179,16 +158,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST9"></a>
-# **salvarUsingPOST9**
-> WebHook salvarUsingPOST9(tipoEvento, url)
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> WebHook salvarUsingPOST13(tipoEvento, url)
 
 Salvar Webhook
 
@@ -197,13 +176,6 @@ Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.WebhooksApi()
 
@@ -219,7 +191,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST9(tipoEvento, url, callback);
+api.salvarUsingPOST13(tipoEvento, url, callback);
 ```
 
 ### Parameters
@@ -235,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 

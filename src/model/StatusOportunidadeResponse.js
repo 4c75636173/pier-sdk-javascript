@@ -18,7 +18,7 @@
   /**
    * The StatusOportunidadeResponse model module.
    * @module model/StatusOportunidadeResponse
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -52,6 +53,9 @@
       if (data.hasOwnProperty('idTipoOportunidade')) {
         obj['idTipoOportunidade'] = ApiClient.convertToType(data['idTipoOportunidade'], 'Integer');
       }
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
       if (data.hasOwnProperty('descricao')) {
         obj['descricao'] = ApiClient.convertToType(data['descricao'], 'String');
       }
@@ -74,6 +78,12 @@
    * @member {Integer} idTipoOportunidade
    */
   exports.prototype['idTipoOportunidade'] = undefined;
+
+  /**
+   * Nome do status oportunidade
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
 
   /**
    * Descricao do StatusOportunidade

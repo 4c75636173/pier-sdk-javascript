@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.13.0
+   * @version 2.15.0
    */
 
   /**
@@ -83,7 +83,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = FAQ;
@@ -153,7 +153,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = FAQ;
@@ -199,7 +199,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = FAQ;
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/FAQApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET8 operation.
+     * @callback module:api/FAQApi~listarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqs} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -232,10 +232,10 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqs}
      */
-    this.listarUsingGET6 = function(opts, callback) {
+    this.listarUsingGET8 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -258,7 +258,7 @@
       var formParams = {
       };
 
-      var authNames = ['access_token'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = PageFaqs;

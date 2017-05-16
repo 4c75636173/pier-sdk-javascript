@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[TransacaoResponse]**](TransacaoResponse.md) |  | [optional] 
+**content** | [**[TransacaoCorrenteResponse]**](TransacaoCorrenteResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

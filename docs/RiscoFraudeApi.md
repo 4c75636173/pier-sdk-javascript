@@ -1,17 +1,17 @@
 # Pier.RiscoFraudeApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET**](RiscoFraudeApi.md#consultarUsingGET) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultarUsingGET10**](RiscoFraudeApi.md#consultarUsingGET10) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**informarRiscoFraudeUsingPOST**](RiscoFraudeApi.md#informarRiscoFraudeUsingPOST) | **POST** /api/riscos-fraudes | Receber Risco Fraude
-[**listarUsingGET**](RiscoFraudeApi.md#listarUsingGET) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET11**](RiscoFraudeApi.md#listarUsingGET11) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-[**negarUsingGET**](RiscoFraudeApi.md#negarUsingGET) | **GET** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**reconhecerUsingGET**](RiscoFraudeApi.md#reconhecerUsingGET) | **GET** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-[**salvarUsingPOST**](RiscoFraudeApi.md#salvarUsingPOST) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+[**listarUsingGET1**](RiscoFraudeApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET14**](RiscoFraudeApi.md#listarUsingGET14) | **GET** /api/riscos-fraudes | Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
+[**negarUsingPOST**](RiscoFraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**reconhecerUsingPOST**](RiscoFraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
+[**salvarUsingPOST1**](RiscoFraudeApi.md#salvarUsingPOST1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
 <a name="consultarUsingGET"></a>
@@ -25,13 +25,6 @@ Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determin
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -60,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -78,13 +71,6 @@ Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -113,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
@@ -131,13 +117,6 @@ Receber risco fraude
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -166,16 +145,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET"></a>
-# **listarUsingGET**
-> PageAtendimentoClientes listarUsingGET(opts)
+<a name="listarUsingGET1"></a>
+# **listarUsingGET1**
+> PageAtendimentoClientes listarUsingGET1(opts)
 
 Lista todos os atendimentos
 
@@ -184,13 +163,6 @@ Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimen
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -210,7 +182,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET(opts, callback);
+api.listarUsingGET1(opts, callback);
 ```
 
 ### Parameters
@@ -230,16 +202,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> RiscoFraudeResponsePage listarUsingGET11(idConta, confirmacaoFraude, opts)
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> RiscoFraudeResponsePage listarUsingGET14(idConta, confirmacaoFraude, opts)
 
 Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
 
@@ -248,13 +220,6 @@ Este recurso permite que sejam listados os riscos de fraudes existentes
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -274,7 +239,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(idConta, confirmacaoFraude, opts, callback);
+api.listarUsingGET14(idConta, confirmacaoFraude, opts, callback);
 ```
 
 ### Parameters
@@ -292,16 +257,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="negarUsingGET"></a>
-# **negarUsingGET**
-> RiscoFraudeDetalhadoResponse negarUsingGET(id)
+<a name="negarUsingPOST"></a>
+# **negarUsingPOST**
+> RiscoFraudeDetalhadoResponse negarUsingPOST(id)
 
 Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -310,13 +275,6 @@ Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o class
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -330,7 +288,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.negarUsingGET(id, callback);
+api.negarUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -345,16 +303,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="reconhecerUsingGET"></a>
-# **reconhecerUsingGET**
-> RiscoFraudeDetalhadoResponse reconhecerUsingGET(id)
+<a name="reconhecerUsingPOST"></a>
+# **reconhecerUsingPOST**
+> RiscoFraudeDetalhadoResponse reconhecerUsingPOST(id)
 
 Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
 
@@ -363,13 +321,6 @@ Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com ris
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -383,7 +334,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.reconhecerUsingGET(id, callback);
+api.reconhecerUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -398,29 +349,22 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST"></a>
-# **salvarUsingPOST**
-> AtendimentoCliente salvarUsingPOST(opts)
+<a name="salvarUsingPOST1"></a>
+# **salvarUsingPOST1**
+> AtendimentoCliente salvarUsingPOST1(opts)
 
 Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 ### Example
 ```javascript
 var Pier = require('Pier');
-var defaultClient = Pier.ApiClient.default;
-
-// Configure API key authorization: access_token
-var access_token = defaultClient.authentications['access_token'];
-access_token.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//access_token.apiKeyPrefix['access_token'] = "Token"
 
 var apiInstance = new Pier.RiscoFraudeApi()
 
@@ -443,7 +387,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST(opts, callback);
+api.salvarUsingPOST1(opts, callback);
 ```
 
 ### Parameters
@@ -466,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token)
+No authorization required
 
 ### HTTP reuqest headers
 
