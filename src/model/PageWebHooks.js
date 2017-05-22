@@ -18,7 +18,7 @@
   /**
    * The PageWebHooks model module.
    * @module model/PageWebHooks
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

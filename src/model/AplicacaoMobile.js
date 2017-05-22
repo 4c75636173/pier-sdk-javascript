@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobile model module.
    * @module model/AplicacaoMobile
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

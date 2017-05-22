@@ -18,7 +18,7 @@
   /**
    * The PageStatusContas model module.
    * @module model/PageStatusContas
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

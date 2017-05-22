@@ -18,7 +18,7 @@
   /**
    * The TipoTelefone model module.
    * @module model/TipoTelefone
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

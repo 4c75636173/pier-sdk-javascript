@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/TransacaoOnUsResponse', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/DadosCarto', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/TransacaoOnUsResponse'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/DadosCarto'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.TransacaoOnUsResponse, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.DadosCarto, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, TransacaoOnUsResponse, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, DadosCarto, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**
@@ -308,7 +308,7 @@
      * Callback function to receive the result of the consultarDadosCartaoUsingGET operation.
      * @callback module:api/CartaoApi~consultarDadosCartaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TransacaoOnUsResponse} data The data returned by the service call.
+     * @param {module:model/DadosCarto} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -317,7 +317,7 @@
      * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} id id
      * @param {module:api/CartaoApi~consultarDadosCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TransacaoOnUsResponse}
+     * data is of type: {module:model/DadosCarto}
      */
     this.consultarDadosCartaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -341,7 +341,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = TransacaoOnUsResponse;
+      var returnType = DadosCarto;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/consultar-dados-reais', 'GET',

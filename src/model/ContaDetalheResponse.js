@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**
@@ -150,8 +150,8 @@
       if (data.hasOwnProperty('saldoDisponivelSaque')) {
         obj['saldoDisponivelSaque'] = ApiClient.convertToType(data['saldoDisponivelSaque'], 'Number');
       }
-      if (data.hasOwnProperty('dataInicioAtraso')) {
-        obj['dataInicioAtraso'] = ApiClient.convertToType(data['dataInicioAtraso'], 'Date');
+      if (data.hasOwnProperty('diasAtraso')) {
+        obj['diasAtraso'] = ApiClient.convertToType(data['diasAtraso'], 'Integer');
       }
     }
     return obj;
@@ -309,10 +309,10 @@
   exports.prototype['saldoDisponivelSaque'] = undefined;
 
   /**
-   * Apresenta a data da ultima cobran\u00C3\u00A7a.
-   * @member {Date} dataInicioAtraso
+   * Apresenta a quantidade de dias que a conta esta em atraso
+   * @member {Integer} diasAtraso
    */
-  exports.prototype['dataInicioAtraso'] = undefined;
+  exports.prototype['diasAtraso'] = undefined;
 
 
 

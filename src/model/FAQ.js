@@ -18,7 +18,7 @@
   /**
    * The FAQ model module.
    * @module model/FAQ
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

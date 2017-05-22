@@ -841,7 +841,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.CadastrosGeraisApi()
 
-var numeroReceitaFederal = "numeroReceitaFederal_example"; // {String} Id Conta
+var numeroReceitaFederal = "numeroReceitaFederal_example"; // {String} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
@@ -862,7 +862,7 @@ api.listarContasPorPessoaUsingGET(numeroReceitaFederal, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **numeroReceitaFederal** | **String**| Id Conta | 
+ **numeroReceitaFederal** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
 

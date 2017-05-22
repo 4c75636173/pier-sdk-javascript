@@ -18,7 +18,7 @@
   /**
    * The PageHistoricoAtraso model module.
    * @module model/PageHistoricoAtraso
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * Usuarios service.
    * @module api/UsuariosApi
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

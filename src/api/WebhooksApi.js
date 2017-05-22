@@ -18,7 +18,7 @@
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

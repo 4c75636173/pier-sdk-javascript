@@ -18,7 +18,7 @@
   /**
    * CadastrosGerais service.
    * @module api/CadastrosGeraisApi
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**
@@ -827,7 +827,7 @@
     /**
      * Lista as contas da pessoa
      * Permite listar as contas de um pessoa a partir do seu numero na receita federal.
-     * @param {String} numeroReceitaFederal Id Conta
+     * @param {String} numeroReceitaFederal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)

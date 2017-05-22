@@ -18,7 +18,7 @@
   /**
    * The PageStatusCartoes model module.
    * @module model/PageStatusCartoes
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

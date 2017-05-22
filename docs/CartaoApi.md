@@ -277,7 +277,7 @@ No authorization required
 
 <a name="consultarDadosCartaoUsingGET"></a>
 # **consultarDadosCartaoUsingGET**
-> TransacaoOnUsResponse consultarDadosCartaoUsingGET(id)
+> DadosCarto consultarDadosCartaoUsingGET(id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+[**DadosCarto**](DadosCarto.md)
 
 ### Authorization
 

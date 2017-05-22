@@ -18,7 +18,7 @@
   /**
    * The HistoricoEventos model module.
    * @module model/HistoricoEventos
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageTipoOprtunidades model module.
    * @module model/PageTipoOprtunidades
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

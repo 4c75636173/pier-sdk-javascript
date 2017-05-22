@@ -18,7 +18,7 @@
   /**
    * The ValidaCartao model module.
    * @module model/ValidaCartao
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageSMS model module.
    * @module model/PageSMS
-   * @version 2.15.0
+   * @version 2.15.5
    */
 
   /**
