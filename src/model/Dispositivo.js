@@ -18,7 +18,7 @@
   /**
    * The Dispositivo model module.
    * @module model/Dispositivo
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**

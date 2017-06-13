@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/FAQApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/FAQApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FAQ} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * Consultar FAQ por id
      * Consulta os detalhes de uma determinada FAQ
      * @param {Integer} id Id
-     * @param {module:api/FAQApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FAQ}
      */
-    this.consultarUsingGET6 = function(id, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/FAQApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/FAQApi~listarUsingGET10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqs} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -224,7 +224,7 @@
      * Lista todas as FAQs
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
      * @param {String} opts.pergunta Conte\u00C3\u00BAdo da pergunta.
      * @param {String} opts.resposta Conte\u00C3\u00BAdo da resposta.
@@ -232,10 +232,10 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqs}
      */
-    this.listarUsingGET8 = function(opts, callback) {
+    this.listarUsingGET10 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

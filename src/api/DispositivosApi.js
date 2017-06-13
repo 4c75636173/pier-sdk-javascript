@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Dispositivo', '../model/PageDispositivos', '../model/ModelDate', '../model/DispositivoPersist'], factory);
+    define(['../ApiClient', '../model/Dispositivo', '../model/PageDispositivos', '../model/DispositivoPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Dispositivo'), require('../model/PageDispositivos'), require('../model/ModelDate'), require('../model/DispositivoPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/Dispositivo'), require('../model/PageDispositivos'), require('../model/DispositivoPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DispositivosApi = factory(root.Pier.ApiClient, root.Pier.Dispositivo, root.Pier.PageDispositivos, root.Pier.ModelDate, root.Pier.DispositivoPersist);
+    root.Pier.DispositivosApi = factory(root.Pier.ApiClient, root.Pier.Dispositivo, root.Pier.PageDispositivos, root.Pier.DispositivoPersist);
   }
-}(this, function(ApiClient, Dispositivo, PageDispositivos, ModelDate, DispositivoPersist) {
+}(this, function(ApiClient, Dispositivo, PageDispositivos, DispositivoPersist) {
   'use strict';
 
   /**
    * Dispositivos service.
    * @module api/DispositivosApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/DispositivosApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/DispositivosApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDispositivos} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -137,16 +137,16 @@
      * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.token Token do Dispositivo
      * @param {Integer} opts.idUsuario Identificador do Usu\u00C3\u00A1rio
      * @param {Integer} opts.idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-     * @param {module:model/ModelDate} opts.dataCriacao Apresenta a data e em que o registro foi criado.
-     * @param {module:model/ModelDate} opts.dataDesativacao Apresenta a data e em que o registro foi desativado.
-     * @param {module:api/DispositivosApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {String} opts.dataCriacao Apresenta a data e em que o registro foi criado.
+     * @param {String} opts.dataDesativacao Apresenta a data e em que o registro foi desativado.
+     * @param {module:api/DispositivosApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDispositivos}
      */
-    this.listarUsingGET5 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

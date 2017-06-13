@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET5**](DispositivosApi.md#listarUsingGET5) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET7**](DispositivosApi.md#listarUsingGET7) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST3**](DispositivosApi.md#salvarUsingPOST3) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET5"></a>
-# **listarUsingGET5**
-> PageDispositivos listarUsingGET5(opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PageDispositivos listarUsingGET7(opts)
 
 Lista os dispositivos cadastrados
 
@@ -118,12 +118,12 @@ var apiInstance = new Pier.DispositivosApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'token': "token_example", // {String} Token do Dispositivo
   'idUsuario': 789, // {Integer} Identificador do Usu\u00C3\u00A1rio
   'idAplicacaoMobile': 789, // {Integer} Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-  'dataCriacao': new Pier.ModelDate(), // {ModelDate} Apresenta a data e em que o registro foi criado.
-  'dataDesativacao': new Pier.ModelDate() // {ModelDate} Apresenta a data e em que o registro foi desativado.
+  'dataCriacao': "dataCriacao_example", // {String} Apresenta a data e em que o registro foi criado.
+  'dataDesativacao': "dataDesativacao_example" // {String} Apresenta a data e em que o registro foi desativado.
 };
 
 var callback = function(error, data, response) {
@@ -133,7 +133,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET5(opts, callback);
+api.listarUsingGET7(opts, callback);
 ```
 
 ### Parameters
@@ -141,12 +141,12 @@ api.listarUsingGET5(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **token** | **String**| Token do Dispositivo | [optional] 
  **idUsuario** | **Integer**| Identificador do Usu\u00C3\u00A1rio | [optional] 
  **idAplicacaoMobile** | **Integer**| Identificador da aplica\u00C3\u00A7\u00C3\u00A3o | [optional] 
- **dataCriacao** | **ModelDate**| Apresenta a data e em que o registro foi criado. | [optional] 
- **dataDesativacao** | **ModelDate**| Apresenta a data e em que o registro foi desativado. | [optional] 
+ **dataCriacao** | **String**| Apresenta a data e em que o registro foi criado. | [optional] 
+ **dataDesativacao** | **String**| Apresenta a data e em que o registro foi desativado. | [optional] 
 
 ### Return type
 

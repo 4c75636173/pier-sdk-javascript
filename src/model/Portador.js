@@ -18,7 +18,7 @@
   /**
    * The Portador model module.
    * @module model/Portador
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -77,10 +77,10 @@
         obj['flagAtivo'] = ApiClient.convertToType(data['flagAtivo'], 'Integer');
       }
       if (data.hasOwnProperty('dataCadastroPortador')) {
-        obj['dataCadastroPortador'] = ApiClient.convertToType(data['dataCadastroPortador'], 'Date');
+        obj['dataCadastroPortador'] = ApiClient.convertToType(data['dataCadastroPortador'], 'String');
       }
       if (data.hasOwnProperty('dataCancelamentoPortador')) {
-        obj['dataCancelamentoPortador'] = ApiClient.convertToType(data['dataCancelamentoPortador'], 'Date');
+        obj['dataCancelamentoPortador'] = ApiClient.convertToType(data['dataCancelamentoPortador'], 'String');
       }
     }
     return obj;
@@ -137,13 +137,13 @@
 
   /**
    * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {Date} dataCadastroPortador
+   * @member {String} dataCadastroPortador
    */
   exports.prototype['dataCadastroPortador'] = undefined;
 
   /**
    * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {Date} dataCancelamentoPortador
+   * @member {String} dataCancelamentoPortador
    */
   exports.prototype['dataCancelamentoPortador'] = undefined;
 

@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
 [**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
 [**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET22**](UsuariosApi.md#consultarUsingGET22) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+[**consultarUsingGET25**](UsuariosApi.md#consultarUsingGET25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 [**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listarUsingGET24**](UsuariosApi.md#listarUsingGET24) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**listarUsingGET29**](UsuariosApi.md#listarUsingGET29) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST12**](UsuariosApi.md#salvarUsingPOST12) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
+[**salvarUsingPOST13**](UsuariosApi.md#salvarUsingPOST13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
 
 
@@ -162,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> UsuarioResponse consultarUsingGET22(id)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> UsuarioResponse consultarUsingGET25(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(id, callback);
+api.consultarUsingGET25(id, callback);
 ```
 
 ### Parameters
@@ -254,9 +254,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageUsuarios listarUsingGET24(opts)
+<a name="listarUsingGET29"></a>
+# **listarUsingGET29**
+> PageUsuarios listarUsingGET29(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -270,7 +270,7 @@ var apiInstance = new Pier.UsuariosApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'nome': "nome_example", // {String} Nome do Usuario
   'cpf': "cpf_example", // {String} CPF do Usuario
   'email': "email_example", // {String} Email do Usuario
@@ -284,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET29(opts, callback);
 ```
 
 ### Parameters
@@ -292,7 +292,7 @@ api.listarUsingGET24(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
  **cpf** | **String**| CPF do Usuario | [optional] 
  **email** | **String**| Email do Usuario | [optional] 
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST12"></a>
-# **salvarUsingPOST12**
-> UsuarioResponse salvarUsingPOST12(persist)
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> UsuarioResponse salvarUsingPOST13(persist)
 
 Cadastra Usu\u00C3\u00A1rio
 
@@ -381,7 +381,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST12(persist, callback);
+api.salvarUsingPOST13(persist, callback);
 ```
 
 ### Parameters

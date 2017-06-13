@@ -18,7 +18,7 @@
   /**
    * The CdtDetalheOportunidadeAUD model module.
    * @module model/CdtDetalheOportunidadeAUD
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -66,7 +66,7 @@
         obj['rev'] = ApiClient.convertToType(data['rev'], 'Integer');
       }
       if (data.hasOwnProperty('revDate')) {
-        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'Date');
+        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'String');
       }
       if (data.hasOwnProperty('revOportunidade')) {
         obj['revOportunidade'] = ApiClient.convertToType(data['revOportunidade'], 'Integer');
@@ -108,7 +108,7 @@
   exports.prototype['rev'] = undefined;
 
   /**
-   * @member {Date} revDate
+   * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 

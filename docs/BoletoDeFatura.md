@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dataProcessamento** | **Date** | Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto | [optional] 
-**dataDocumento** | **Date** | Data do documento (impress\u00C3\u00A3o) | [optional] 
-**dataVencimento** | [**ModelDate**](ModelDate.md) | Data do vencimento | [optional] 
-**valorBoleto** | **Number** |  | [optional] 
+**dataProcessamento** | **String** | Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto | [optional] 
+**dataDocumento** | **String** | Data do documento (impress\u00C3\u00A3o) | [optional] 
+**dataVencimento** | **String** | Data do vencimento | [optional] 
+**valorBoleto** | **Number** | Valor do Boleto. | [optional] 
 **numeroDoDocumento** | **String** | N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente | [optional] 
 **nomeBeneficiario** | **String** | Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto | [optional] 
-**agencia** | **String** | Ag\u00C3\u00AAncia | [optional] 
+**agencia** | **String** | Ag\u00C3\u00AAncia. | [optional] 
 **codigoBeneficiario** | **String** | C\u00C3\u00B3digo do benefici\u00C3\u00A1rio | [optional] 
 **digitoCodigoBeneficiario** | **String** | D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio | [optional] 
 **numeroConvenio** | **String** | N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos. | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **instrucoes** | **[String]** | Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio | [optional] 
 **locaisDePagamento** | **[String]** | Locais de pagamento | [optional] 
 **nomePagador** | **String** | Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto | [optional] 
-**documentoBeneficiario** | **String** |  | [optional] 
+**documentoBeneficiario** | **String** | Documento do Beneficiario. | [optional] 
 **documentoPagador** | **String** | Documento do pagador (CPF ou CNPJ) | [optional] 
 **logradouroPagador** | **String** | Logradouro do pagador | [optional] 
 **bairroPagador** | **String** | Bairro do pagador | [optional] 

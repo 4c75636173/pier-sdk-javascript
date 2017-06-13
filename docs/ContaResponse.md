@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **idStatusConta** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
 **diaVencimento** | **Integer** | Apresenta o dia de vencimento. | [optional] 
 **melhorDiaCompra** | **Integer** | Apresenta o melhor dia de compra. | [optional] 
-**dataStatusConta** | **Date** | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
-**dataCadastro** | **Date** | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
-**dataUltimaAlteracaoVencimento** | **Date** | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+**dataStatusConta** | **String** | Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
+**dataCadastro** | **String** | Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+**dataUltimaAlteracaoVencimento** | **String** | Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
 **valorRenda** | **Number** | Apresenta o valor da renda comprovada | [optional] 
 
 

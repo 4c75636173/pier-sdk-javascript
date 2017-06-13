@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoPersist', './ModelDate', './TelefonePessoaAprovadaPersist'], factory);
+    define(['../ApiClient', './EnderecoAprovadoPersist', './TelefonePessoaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./ModelDate'), require('./TelefonePessoaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./TelefonePessoaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaFisicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.ModelDate, root.Pier.TelefonePessoaAprovadaPersist);
+    root.Pier.PessoaFisicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.TelefonePessoaAprovadaPersist);
   }
-}(this, function(ApiClient, EnderecoAprovadoPersist, ModelDate, TelefonePessoaAprovadaPersist) {
+}(this, function(ApiClient, EnderecoAprovadoPersist, TelefonePessoaAprovadaPersist) {
   'use strict';
 
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -78,7 +78,7 @@
         obj['nomeMae'] = ApiClient.convertToType(data['nomeMae'], 'String');
       }
       if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], ModelDate);
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
       }
       if (data.hasOwnProperty('sexo')) {
         obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
@@ -96,7 +96,7 @@
         obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
       }
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], ModelDate);
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
       if (data.hasOwnProperty('idEstadoCivil')) {
         obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
@@ -159,7 +159,7 @@
 
   /**
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @member {module:model/ModelDate} dataNascimento
+   * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
@@ -195,7 +195,7 @@
 
   /**
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-   * @member {module:model/ModelDate} dataEmissaoIdentidade
+   * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 

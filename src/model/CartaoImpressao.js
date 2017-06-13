@@ -18,7 +18,7 @@
   /**
    * The CartaoImpressao model module.
    * @module model/CartaoImpressao
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -64,6 +65,9 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('flagVirtual')) {
+        obj['flagVirtual'] = ApiClient.convertToType(data['flagVirtual'], 'Integer');
+      }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
@@ -89,10 +93,10 @@
         obj['cvv2'] = ApiClient.convertToType(data['cvv2'], 'String');
       }
       if (data.hasOwnProperty('dataGeracao')) {
-        obj['dataGeracao'] = ApiClient.convertToType(data['dataGeracao'], 'Date');
+        obj['dataGeracao'] = ApiClient.convertToType(data['dataGeracao'], 'String');
       }
       if (data.hasOwnProperty('dataValidade')) {
-        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
+        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'String');
       }
       if (data.hasOwnProperty('nomeOrigemComercial')) {
         obj['nomeOrigemComercial'] = ApiClient.convertToType(data['nomeOrigemComercial'], 'String');
@@ -134,6 +138,11 @@
     return obj;
   }
 
+
+  /**
+   * @member {Integer} flagVirtual
+   */
+  exports.prototype['flagVirtual'] = undefined;
 
   /**
    * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
@@ -185,13 +194,13 @@
 
   /**
    * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
-   * @member {Date} dataGeracao
+   * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
    * Apresenta a data de Validade do Cart\u00C3\u00A3o.
-   * @member {Date} dataValidade
+   * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 

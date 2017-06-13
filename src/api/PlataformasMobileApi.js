@@ -18,7 +18,7 @@
   /**
    * PlataformasMobile service.
    * @module api/PlataformasMobileApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET12 operation.
-     * @callback module:api/PlataformasMobileApi~listarUsingGET12Callback
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/PlataformasMobileApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePlataformasMobile} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -97,12 +97,12 @@
      * Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome da Plataforma Mobile
-     * @param {module:api/PlataformasMobileApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformasMobileApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePlataformasMobile}
      */
-    this.listarUsingGET12 = function(opts, callback) {
+    this.listarUsingGET15 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -132,8 +132,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/PlataformasMobileApi~salvarUsingPOST8Callback
+     * Callback function to receive the result of the salvarUsingPOST9 operation.
+     * @callback module:api/PlataformasMobileApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PlataformaMobile} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -143,15 +143,15 @@
      * Cadastra Plataforma Mobile
      * Esse recurso permite cadastrar plataformas mobile.
      * @param {module:model/PlataformaMobilePersist} persist persist
-     * @param {module:api/PlataformasMobileApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformasMobileApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlataformaMobile}
      */
-    this.salvarUsingPOST8 = function(persist, callback) {
+    this.salvarUsingPOST9 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST9";
       }
 
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **idCartao** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) | [optional] 
 **idProduto** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id) | [optional] 
 **idTransacao** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id) | [optional] 
-**dataTransacao** | **Date** | Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada | [optional] 
+**dataTransacao** | **String** | Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada | [optional] 
 **valorTransacao** | **Number** | Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude | [optional] 
 **codigoMoedaOrigem** | **String** | C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **valorOrigem** | **Number** | Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem | [optional] 

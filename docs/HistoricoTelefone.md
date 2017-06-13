@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **telefone** | **String** | Apresenta o N\u00C3\u00BAmero do telefone. | [optional] 
 **idTipoTelefone** | **Integer** | Apresenta o id do tipo do telefone. | [optional] 
 **tipoTelefone** | **String** | Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone. | [optional] 
-**dataModificacao** | **Date** | Apresenta a data que o telefone fora alterado. | [optional] 
+**dataModificacao** | **String** | Apresenta a data que o telefone fora alterado. | [optional] 
 
 

@@ -18,7 +18,7 @@
   /**
    * The TransacaoOnUsRequest model module.
    * @module model/TransacaoOnUsRequest
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -26,17 +26,25 @@
    * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Transa\u00C3\u00A7\u00C3\u00A3o On Us
    * @alias module:model/TransacaoOnUsRequest
    * @class
+   * @param nsuOrigem
+   * @param codigoProcessamento
+   * @param valorTransacao
+   * @param numeroRealCartao
+   * @param dataValidadeCartao
+   * @param numeroEstabelecimento
+   * @param dataHoraTerminal
+   * @param terminalRequisitante
    */
-  var exports = function() {
+  var exports = function(nsuOrigem, codigoProcessamento, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
 
-
-
-
-
-
-
-
-
+    this['nsuOrigem'] = nsuOrigem;
+    this['codigoProcessamento'] = codigoProcessamento;
+    this['valorTransacao'] = valorTransacao;
+    this['numeroRealCartao'] = numeroRealCartao;
+    this['dataValidadeCartao'] = dataValidadeCartao;
+    this['numeroEstabelecimento'] = numeroEstabelecimento;
+    this['dataHoraTerminal'] = dataHoraTerminal;
+    this['terminalRequisitante'] = terminalRequisitante;
   };
 
   /**
@@ -69,7 +77,7 @@
         obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'Integer');
       }
       if (data.hasOwnProperty('dataHoraTerminal')) {
-        obj['dataHoraTerminal'] = ApiClient.convertToType(data['dataHoraTerminal'], 'Date');
+        obj['dataHoraTerminal'] = ApiClient.convertToType(data['dataHoraTerminal'], 'String');
       }
       if (data.hasOwnProperty('terminalRequisitante')) {
         obj['terminalRequisitante'] = ApiClient.convertToType(data['terminalRequisitante'], 'String');
@@ -117,7 +125,7 @@
 
   /**
    * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-   * @member {Date} dataHoraTerminal
+   * @member {String} dataHoraTerminal
    */
   exports.prototype['dataHoraTerminal'] = undefined;
 

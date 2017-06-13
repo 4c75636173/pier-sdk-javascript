@@ -18,7 +18,7 @@
   /**
    * The NotificacaoPushResponse model module.
    * @module model/NotificacaoPushResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -58,7 +58,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('dataEnvio')) {
-        obj['dataEnvio'] = ApiClient.convertToType(data['dataEnvio'], 'Date');
+        obj['dataEnvio'] = ApiClient.convertToType(data['dataEnvio'], 'String');
       }
       if (data.hasOwnProperty('idEmissor')) {
         obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
@@ -97,7 +97,7 @@
 
   /**
    * Apresenta a data e em que o registro foi enviado para o dispositivo.
-   * @member {Date} dataEnvio
+   * @member {String} dataEnvio
    */
   exports.prototype['dataEnvio'] = undefined;
 

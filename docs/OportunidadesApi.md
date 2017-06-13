@@ -8,17 +8,17 @@ Method | HTTP request | Description
 [**alterarUsingPUT3**](OportunidadesApi.md#alterarUsingPUT3) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**alterarUsingPUT7**](OportunidadesApi.md#alterarUsingPUT7) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultarStatusUsingGET**](OportunidadesApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultarUsingGET17**](OportunidadesApi.md#consultarUsingGET17) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
-[**consultarUsingGET7**](OportunidadesApi.md#consultarUsingGET7) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultarUsingGET20**](OportunidadesApi.md#consultarUsingGET20) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultarUsingGET8**](OportunidadesApi.md#consultarUsingGET8) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
 [**listarAuditoriasStatusUsingGET**](OportunidadesApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listarAuditoriasUsingGET**](OportunidadesApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadesApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadesApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET19**](OportunidadesApi.md#listarUsingGET19) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
-[**listarUsingGET9**](OportunidadesApi.md#listarUsingGET9) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET12**](OportunidadesApi.md#listarUsingGET12) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET24**](OportunidadesApi.md#listarUsingGET24) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadesApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvarUsingPOST10**](OportunidadesApi.md#salvarUsingPOST10) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvarUsingPOST5**](OportunidadesApi.md#salvarUsingPOST5) | **POST** /api/oportunidades | Cadastra as oportunidade
+[**salvarUsingPOST11**](OportunidadesApi.md#salvarUsingPOST11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvarUsingPOST6**](OportunidadesApi.md#salvarUsingPOST6) | **POST** /api/oportunidades | Cadastra as oportunidade
 
 
 <a name="alterarStatusUsingPUT"></a>
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> TipoOportunidadeResponse consultarUsingGET17(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> TipoOportunidadeResponse consultarUsingGET20(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET7"></a>
-# **consultarUsingGET7**
-> OportunidadeResponse consultarUsingGET7(id)
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> OportunidadeResponse consultarUsingGET8(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET7(id, callback);
+api.consultarUsingGET8(id, callback);
 ```
 
 ### Parameters
@@ -328,15 +328,15 @@ var apiInstance = new Pier.OportunidadesApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'revType': 789, // {Integer} C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  'revDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+  'revDate': "revDate_example", // {String} Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
   'id': 789, // {Integer} C\u00C3\u00B3digo identificador do status oportunidade
   'idTipoOportunidade': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo oportunidade
   'nome': "nome_example", // {String} Nome do status oportunidade
   'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
   'flagAtivo': true, // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-  'revUser': new Date("2013-10-20T19:20:30+01:00") // {Date} Usu\u00C3\u00A1rio da auditoria
+  'revUser': "revUser_example" // {String} Usu\u00C3\u00A1rio da auditoria
 };
 
 var callback = function(error, data, response) {
@@ -354,15 +354,15 @@ api.listarAuditoriasStatusUsingGET(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **revType** | **Integer**| C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
- **revDate** | **Date**| Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
+ **revDate** | **String**| Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
  **idTipoOportunidade** | **Integer**| C\u00C3\u00B3digo identificador do tipo oportunidade | [optional] 
  **nome** | **String**| Nome do status oportunidade | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade | [optional] 
  **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
- **revUser** | **Date**| Usu\u00C3\u00A1rio da auditoria | [optional] 
+ **revUser** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 ### Return type
 
@@ -393,17 +393,17 @@ var apiInstance = new Pier.OportunidadesApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idStatusOportunidade': 789, // {Integer} C\u00C3\u00B3digo identificador do status oportunidade
-  'dataCadastro': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data do cadastro da oportunidade
-  'dataAtualizacao': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+  'dataCadastro': "dataCadastro_example", // {String} Data do cadastro da oportunidade
+  'dataAtualizacao': "dataAtualizacao_example", // {String} Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   'numeroReceitaFederal': "numeroReceitaFederal_example", // {String} N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  'dataInicioVigencia': new Date("2013-10-20T19:20:30+01:00"), // {Date} In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-  'datatFimVigencia': new Date("2013-10-20T19:20:30+01:00"), // {Date} Fim da vig\u00C3\u00AAncia da oportunidade
+  'dataInicioVigencia': "dataInicioVigencia_example", // {String} In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+  'datatFimVigencia': "datatFimVigencia_example", // {String} Fim da vig\u00C3\u00AAncia da oportunidade
   'flagAtivo': true, // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-  'revDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data da auditoria
-  'revType': new Date("2013-10-20T19:20:30+01:00"), // {Date} Tipo da auditoria
-  'revUser': new Date("2013-10-20T19:20:30+01:00") // {Date} Usu\u00C3\u00A1rio da auditoria
+  'revDate': "revDate_example", // {String} Data da auditoria
+  'revType': "revType_example", // {String} Tipo da auditoria
+  'revUser': "revUser_example" // {String} Usu\u00C3\u00A1rio da auditoria
 };
 
 var callback = function(error, data, response) {
@@ -421,17 +421,17 @@ api.listarAuditoriasUsingGET(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idStatusOportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
- **dataCadastro** | **Date**| Data do cadastro da oportunidade | [optional] 
- **dataAtualizacao** | **Date**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
+ **dataCadastro** | **String**| Data do cadastro da oportunidade | [optional] 
+ **dataAtualizacao** | **String**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
  **numeroReceitaFederal** | **String**| N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade | [optional] 
- **dataInicioVigencia** | **Date**| In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
- **datatFimVigencia** | **Date**| Fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
+ **dataInicioVigencia** | **String**| In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
+ **datatFimVigencia** | **String**| Fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
- **revDate** | **Date**| Data da auditoria | [optional] 
- **revType** | **Date**| Tipo da auditoria | [optional] 
- **revUser** | **Date**| Usu\u00C3\u00A1rio da auditoria | [optional] 
+ **revDate** | **String**| Data da auditoria | [optional] 
+ **revType** | **String**| Tipo da auditoria | [optional] 
+ **revUser** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 ### Return type
 
@@ -462,13 +462,13 @@ var apiInstance = new Pier.OportunidadesApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'revType': 789, // {Integer} C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-  'revDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+  'revDate': "revDate_example", // {String} Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
   'id': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
   'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
   'flagAtivo': true, // {Boolean} Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-  'revUser': new Date("2013-10-20T19:20:30+01:00") // {Date} Usu\u00C3\u00A1rio da auditoria
+  'revUser': "revUser_example" // {String} Usu\u00C3\u00A1rio da auditoria
 };
 
 var callback = function(error, data, response) {
@@ -486,13 +486,13 @@ api.listarAuditoriasUsingGET1(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **revType** | **Integer**| C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
- **revDate** | **Date**| Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
+ **revDate** | **String**| Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o | [optional] 
  **flagAtivo** | **Boolean**| Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
- **revUser** | **Date**| Usu\u00C3\u00A1rio da auditoria | [optional] 
+ **revUser** | **String**| Usu\u00C3\u00A1rio da auditoria | [optional] 
 
 ### Return type
 
@@ -525,7 +525,7 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'nome': "nome_example", // {String} Nome do status oportunidade
   'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
   'flagAtivo': true // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do status oportunidade | [optional] 
  **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade | [optional] 
  **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo | [optional] 
@@ -565,62 +565,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PageTipoOprtunidades listarUsingGET19(opts)
-
-Lista os tipos oportunidades
-
-Este recurso permite listar os tipos oportunidades.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.OportunidadesApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-  'flagAtivo': true // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET19(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade | [optional] 
- **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
-
-### Return type
-
-[**PageTipoOprtunidades**](PageTipoOprtunidades.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageOprtunidadesResponse listarUsingGET9(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageOprtunidadesResponse listarUsingGET12(opts)
 
 Lista as oportunidades
 
@@ -634,13 +581,13 @@ var apiInstance = new Pier.OportunidadesApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idStatusOportunidade': 789, // {Integer} C\u00C3\u00B3digo identificador do status oportunidade
-  'dataCadastro': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data do cadastro da oportunidade
-  'dataAtualizacao': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
+  'dataCadastro': "dataCadastro_example", // {String} Data do cadastro da oportunidade
+  'dataAtualizacao': "dataAtualizacao_example", // {String} Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   'numeroReceitaFederal': "numeroReceitaFederal_example", // {String} N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  'dataInicioVigencia': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-  'dataFimVigencia': new Date("2013-10-20T19:20:30+01:00"), // {Date} Data do fim da vig\u00C3\u00AAncia da oportunidade
+  'dataInicioVigencia': "dataInicioVigencia_example", // {String} Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+  'dataFimVigencia': "dataFimVigencia_example", // {String} Data do fim da vig\u00C3\u00AAncia da oportunidade
   'flagAtivo': true // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 };
 
@@ -651,7 +598,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
@@ -659,18 +606,71 @@ api.listarUsingGET9(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idStatusOportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
- **dataCadastro** | **Date**| Data do cadastro da oportunidade | [optional] 
- **dataAtualizacao** | **Date**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
+ **dataCadastro** | **String**| Data do cadastro da oportunidade | [optional] 
+ **dataAtualizacao** | **String**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
  **numeroReceitaFederal** | **String**| N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade | [optional] 
- **dataInicioVigencia** | **Date**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
- **dataFimVigencia** | **Date**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
+ **dataInicioVigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
+ **dataFimVigencia** | **String**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
 
 ### Return type
 
 [**PageOprtunidadesResponse**](PageOprtunidadesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PageTipoOprtunidades listarUsingGET24(opts)
+
+Lista os tipos oportunidades
+
+Este recurso permite listar os tipos oportunidades.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.OportunidadesApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+  'flagAtivo': true // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET24(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade | [optional] 
+ **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo | [optional] 
+
+### Return type
+
+[**PageTipoOprtunidades**](PageTipoOprtunidades.md)
 
 ### Authorization
 
@@ -730,9 +730,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST10"></a>
-# **salvarUsingPOST10**
-> TipoOportunidadeResponse salvarUsingPOST10(persist)
+<a name="salvarUsingPOST11"></a>
+# **salvarUsingPOST11**
+> TipoOportunidadeResponse salvarUsingPOST11(persist)
 
 Cadastra tipos oportunidades
 
@@ -754,7 +754,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST10(persist, callback);
+api.salvarUsingPOST11(persist, callback);
 ```
 
 ### Parameters
@@ -776,9 +776,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST5"></a>
-# **salvarUsingPOST5**
-> OportunidadeResponse salvarUsingPOST5(persist)
+<a name="salvarUsingPOST6"></a>
+# **salvarUsingPOST6**
+> OportunidadeResponse salvarUsingPOST6(persist)
 
 Cadastra as oportunidade
 
@@ -800,7 +800,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST5(persist, callback);
+api.salvarUsingPOST6(persist, callback);
 ```
 
 ### Parameters

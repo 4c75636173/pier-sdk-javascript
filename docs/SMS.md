@@ -15,10 +15,10 @@ Name | Type | Description | Notes
 **operadora** | **String** | Apresenta a operadora do celular a ser eviado o SMS | 
 **conteudo** | **String** | Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado | 
 **resposta** | **String** | Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada | 
-**dataAgendamento** | **Date** | Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o | 
+**dataAgendamento** | **String** | Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o | 
 **quantidadeTentativasEnvio** | **Integer** | Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o | 
-**dataInclusao** | **Date** | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | 
-**dataAlteracaoStatus** | **Date** | Apresenta a data e em que o Stattjus do registro foi modificado | 
+**dataInclusao** | **String** | Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado | 
+**dataAlteracaoStatus** | **String** | Apresenta a data e em que o Stattjus do registro foi modificado | 
 **protocolo** | **String** | N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es | [optional] 
 
 

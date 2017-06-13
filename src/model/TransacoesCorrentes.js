@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelDate'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransacoesCorrentes = factory(root.Pier.ApiClient, root.Pier.ModelDate);
+    root.Pier.TransacoesCorrentes = factory(root.Pier.ApiClient);
   }
-}(this, function(ApiClient, ModelDate) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The TransacoesCorrentes model module.
    * @module model/TransacoesCorrentes
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -28,6 +28,8 @@
    * @class
    */
   var exports = function() {
+
+
 
 
 
@@ -101,13 +103,13 @@
         obj['nomePortador'] = ApiClient.convertToType(data['nomePortador'], 'String');
       }
       if (data.hasOwnProperty('dataTransacaoUTC')) {
-        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'Date');
+        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'String');
       }
       if (data.hasOwnProperty('dataFaturamento')) {
-        obj['dataFaturamento'] = ApiClient.convertToType(data['dataFaturamento'], 'Date');
+        obj['dataFaturamento'] = ApiClient.convertToType(data['dataFaturamento'], 'String');
       }
       if (data.hasOwnProperty('dataVencimento')) {
-        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], ModelDate);
+        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'String');
       }
       if (data.hasOwnProperty('modoEntradaTransacao')) {
         obj['modoEntradaTransacao'] = ApiClient.convertToType(data['modoEntradaTransacao'], 'String');
@@ -128,7 +130,7 @@
         obj['cotacaoUSD'] = ApiClient.convertToType(data['cotacaoUSD'], 'Number');
       }
       if (data.hasOwnProperty('dataCotacaoUSD')) {
-        obj['dataCotacaoUSD'] = ApiClient.convertToType(data['dataCotacaoUSD'], 'Date');
+        obj['dataCotacaoUSD'] = ApiClient.convertToType(data['dataCotacaoUSD'], 'String');
       }
       if (data.hasOwnProperty('codigoMoedaOrigem')) {
         obj['codigoMoedaOrigem'] = ApiClient.convertToType(data['codigoMoedaOrigem'], 'String');
@@ -147,6 +149,12 @@
       }
       if (data.hasOwnProperty('codigoMCC')) {
         obj['codigoMCC'] = ApiClient.convertToType(data['codigoMCC'], 'Integer');
+      }
+      if (data.hasOwnProperty('grupoMCC')) {
+        obj['grupoMCC'] = ApiClient.convertToType(data['grupoMCC'], 'Integer');
+      }
+      if (data.hasOwnProperty('grupoDescricaoMCC')) {
+        obj['grupoDescricaoMCC'] = ApiClient.convertToType(data['grupoDescricaoMCC'], 'String');
       }
       if (data.hasOwnProperty('idEstabelecimento')) {
         obj['idEstabelecimento'] = ApiClient.convertToType(data['idEstabelecimento'], 'Integer');
@@ -233,19 +241,19 @@
 
   /**
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-   * @member {Date} dataTransacaoUTC
+   * @member {String} dataTransacaoUTC
    */
   exports.prototype['dataTransacaoUTC'] = undefined;
 
   /**
    * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {Date} dataFaturamento
+   * @member {String} dataFaturamento
    */
   exports.prototype['dataFaturamento'] = undefined;
 
   /**
    * Data de Vencimento da Fatura.
-   * @member {module:model/ModelDate} dataVencimento
+   * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
@@ -287,7 +295,7 @@
 
   /**
    * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
-   * @member {Date} dataCotacaoUSD
+   * @member {String} dataCotacaoUSD
    */
   exports.prototype['dataCotacaoUSD'] = undefined;
 
@@ -326,6 +334,18 @@
    * @member {Integer} codigoMCC
    */
   exports.prototype['codigoMCC'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * @member {Integer} grupoMCC
+   */
+  exports.prototype['grupoMCC'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * @member {String} grupoDescricaoMCC
+   */
+  exports.prototype['grupoDescricaoMCC'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).

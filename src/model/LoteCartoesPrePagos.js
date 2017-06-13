@@ -18,7 +18,7 @@
   /**
    * The LoteCartoesPrePagos model module.
    * @module model/LoteCartoesPrePagos
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -84,7 +84,7 @@
         obj['quantidade'] = ApiClient.convertToType(data['quantidade'], 'Integer');
       }
       if (data.hasOwnProperty('dataCadastro')) {
-        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
+        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'String');
       }
       if (data.hasOwnProperty('usuarioCadastro')) {
         obj['usuarioCadastro'] = ApiClient.convertToType(data['usuarioCadastro'], 'String');
@@ -141,7 +141,7 @@
 
   /**
    * Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
-   * @member {Date} dataCadastro
+   * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 

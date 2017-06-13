@@ -74,10 +74,9 @@ var apiInstance = new Pier.AplicacoesMobileApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': "id_example", // {String} Identificador da Aplicacao Mobile
-  'idPlataformaMobile': 789, // {Integer} Identificador da Plataforma Mobile
-  'idEmissor': 789 // {Integer} Identificador do Emissor
+  'idPlataformaMobile': 789 // {Integer} Identificador da Plataforma Mobile
 };
 
 var callback = function(error, data, response) {
@@ -95,10 +94,9 @@ api.listarUsingGET(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **String**| Identificador da Aplicacao Mobile | [optional] 
  **idPlataformaMobile** | **Integer**| Identificador da Plataforma Mobile | [optional] 
- **idEmissor** | **Integer**| Identificador do Emissor | [optional] 
 
 ### Return type
 

@@ -18,7 +18,7 @@
   /**
    * The PageHistoricoEventos model module.
    * @module model/PageHistoricoEventos
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**

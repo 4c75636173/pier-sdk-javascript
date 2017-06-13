@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET6**](FAQApi.md#consultarUsingGET6) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET8**](FAQApi.md#listarUsingGET8) | **GET** /api/faqs | Lista FAQs
+[**consultarUsingGET7**](FAQApi.md#consultarUsingGET7) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET10**](FAQApi.md#listarUsingGET10) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
@@ -131,9 +131,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> FAQ consultarUsingGET6(id)
+<a name="consultarUsingGET7"></a>
+# **consultarUsingGET7**
+> FAQ consultarUsingGET7(id)
 
 Consultar FAQ por id
 
@@ -155,7 +155,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(id, callback);
+api.consultarUsingGET7(id, callback);
 ```
 
 ### Parameters
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageFaqs listarUsingGET8(opts)
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageFaqs listarUsingGET10(opts)
 
 Lista FAQs
 
@@ -193,7 +193,7 @@ var apiInstance = new Pier.FAQApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idFaq': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
   'pergunta': "pergunta_example", // {String} Conte\u00C3\u00BAdo da pergunta.
   'resposta': "resposta_example", // {String} Conte\u00C3\u00BAdo da resposta.
@@ -210,7 +210,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET10(opts, callback);
 ```
 
 ### Parameters
@@ -218,7 +218,7 @@ api.listarUsingGET8(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idFaq** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). | [optional] 
  **pergunta** | **String**| Conte\u00C3\u00BAdo da pergunta. | [optional] 
  **resposta** | **String**| Conte\u00C3\u00BAdo da resposta. | [optional] 

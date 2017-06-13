@@ -18,7 +18,7 @@
   /**
    * The DadosCarto model module.
    * @module model/DadosCarto
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -28,6 +28,10 @@
    * @class
    */
   var exports = function() {
+
+
+
+
 
 
 
@@ -51,11 +55,14 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('flagVirtual')) {
+        obj['flagVirtual'] = ApiClient.convertToType(data['flagVirtual'], 'Integer');
+      }
       if (data.hasOwnProperty('numeroCartao')) {
         obj['numeroCartao'] = ApiClient.convertToType(data['numeroCartao'], 'String');
       }
       if (data.hasOwnProperty('dataValidade')) {
-        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
+        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'String');
       }
       if (data.hasOwnProperty('cvv2')) {
         obj['cvv2'] = ApiClient.convertToType(data['cvv2'], 'String');
@@ -69,19 +76,33 @@
       if (data.hasOwnProperty('idCartao')) {
         obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      if (data.hasOwnProperty('numeroAgencia')) {
+        obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
       }
-      if (data.hasOwnProperty('statusDescricao')) {
-        obj['statusDescricao'] = ApiClient.convertToType(data['statusDescricao'], 'String');
+      if (data.hasOwnProperty('numeroContaCorente')) {
+        obj['numeroContaCorente'] = ApiClient.convertToType(data['numeroContaCorente'], 'String');
       }
-      if (data.hasOwnProperty('flagProvisorio')) {
-        obj['flagProvisorio'] = ApiClient.convertToType(data['flagProvisorio'], 'Integer');
+      if (data.hasOwnProperty('idStatusConta')) {
+        obj['idStatusConta'] = ApiClient.convertToType(data['idStatusConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('statusConta')) {
+        obj['statusConta'] = ApiClient.convertToType(data['statusConta'], 'String');
+      }
+      if (data.hasOwnProperty('idStatusCartao')) {
+        obj['idStatusCartao'] = ApiClient.convertToType(data['idStatusCartao'], 'Integer');
+      }
+      if (data.hasOwnProperty('statusCartao')) {
+        obj['statusCartao'] = ApiClient.convertToType(data['statusCartao'], 'String');
       }
     }
     return obj;
   }
 
+
+  /**
+   * @member {Integer} flagVirtual
+   */
+  exports.prototype['flagVirtual'] = undefined;
 
   /**
    * N\u00C3\u00BAmero do cart\u00C3\u00A3o.
@@ -91,7 +112,7 @@
 
   /**
    * Data de validade.
-   * @member {Date} dataValidade
+   * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
@@ -120,22 +141,40 @@
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Status da conta do portador.
-   * @member {Integer} status
+   * Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * @member {Integer} numeroAgencia
    */
-  exports.prototype['status'] = undefined;
+  exports.prototype['numeroAgencia'] = undefined;
+
+  /**
+   * Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * @member {String} numeroContaCorente
+   */
+  exports.prototype['numeroContaCorente'] = undefined;
+
+  /**
+   * Status da conta do portador.
+   * @member {Integer} idStatusConta
+   */
+  exports.prototype['idStatusConta'] = undefined;
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
-   * @member {String} statusDescricao
+   * @member {String} statusConta
    */
-  exports.prototype['statusDescricao'] = undefined;
+  exports.prototype['statusConta'] = undefined;
 
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
-   * @member {Integer} flagProvisorio
+   * Status do cart\u00C3\u00A3o.
+   * @member {Integer} idStatusCartao
    */
-  exports.prototype['flagProvisorio'] = undefined;
+  exports.prototype['idStatusCartao'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+   * @member {String} statusCartao
+   */
+  exports.prototype['statusCartao'] = undefined;
 
 
 

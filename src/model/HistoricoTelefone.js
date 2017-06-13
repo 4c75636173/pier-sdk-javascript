@@ -18,7 +18,7 @@
   /**
    * The HistoricoTelefone model module.
    * @module model/HistoricoTelefone
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -60,7 +60,7 @@
         obj['tipoTelefone'] = ApiClient.convertToType(data['tipoTelefone'], 'String');
       }
       if (data.hasOwnProperty('dataModificacao')) {
-        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'Date');
+        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'String');
       }
     }
     return obj;
@@ -93,7 +93,7 @@
 
   /**
    * Apresenta a data que o telefone fora alterado.
-   * @member {Date} dataModificacao
+   * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;
 

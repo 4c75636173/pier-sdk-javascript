@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelDate'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransferenciaBancariaPersist = factory(root.Pier.ApiClient, root.Pier.ModelDate);
+    root.Pier.TransferenciaBancariaPersist = factory(root.Pier.ApiClient);
   }
-}(this, function(ApiClient, ModelDate) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The TransferenciaBancariaPersist model module.
    * @module model/TransferenciaBancariaPersist
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -65,13 +65,13 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('dataCompra')) {
-        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], ModelDate);
+        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], 'String');
       }
       if (data.hasOwnProperty('proximoVencimentoPadrao')) {
-        obj['proximoVencimentoPadrao'] = ApiClient.convertToType(data['proximoVencimentoPadrao'], ModelDate);
+        obj['proximoVencimentoPadrao'] = ApiClient.convertToType(data['proximoVencimentoPadrao'], 'String');
       }
       if (data.hasOwnProperty('proximoVencimentoReal')) {
-        obj['proximoVencimentoReal'] = ApiClient.convertToType(data['proximoVencimentoReal'], ModelDate);
+        obj['proximoVencimentoReal'] = ApiClient.convertToType(data['proximoVencimentoReal'], 'String');
       }
       if (data.hasOwnProperty('valorCompra')) {
         obj['valorCompra'] = ApiClient.convertToType(data['valorCompra'], 'Number');
@@ -107,19 +107,19 @@
 
   /**
    * Data da transfer\u00C3\u00AAncia
-   * @member {module:model/ModelDate} dataCompra
+   * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
    * Dia do vencimento padr\u00C3\u00A3o da fatura
-   * @member {module:model/ModelDate} proximoVencimentoPadrao
+   * @member {String} proximoVencimentoPadrao
    */
   exports.prototype['proximoVencimentoPadrao'] = undefined;
 
   /**
    * Data do vencimento real da fatura
-   * @member {module:model/ModelDate} proximoVencimentoReal
+   * @member {String} proximoVencimentoReal
    */
   exports.prototype['proximoVencimentoReal'] = undefined;
 

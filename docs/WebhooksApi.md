@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET23**](WebhooksApi.md#consultarUsingGET23) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET25**](WebhooksApi.md#listarUsingGET25) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST13**](WebhooksApi.md#salvarUsingPOST13) | **POST** /api/webhooks | Salvar Webhook
+[**consultarUsingGET26**](WebhooksApi.md#consultarUsingGET26) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET30**](WebhooksApi.md#listarUsingGET30) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST14**](WebhooksApi.md#salvarUsingPOST14) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT10"></a>
@@ -62,9 +62,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> WebHook consultarUsingGET23(id)
+<a name="consultarUsingGET26"></a>
+# **consultarUsingGET26**
+> WebHook consultarUsingGET26(id)
 
 Consultar Webhook
 
@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(id, callback);
+api.consultarUsingGET26(id, callback);
 ```
 
 ### Parameters
@@ -108,9 +108,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageWebHooks listarUsingGET25(opts)
+<a name="listarUsingGET30"></a>
+# **listarUsingGET30**
+> PageWebHooks listarUsingGET30(opts)
 
 Lista os Webhooks
 
@@ -124,7 +124,7 @@ var apiInstance = new Pier.WebhooksApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} Id do WebHook
   'tipoEvento': "tipoEvento_example", // {String} TipoEvento a ser chamado pelo WebHook
   'metodo': "metodo_example", // {String} M\u00C3\u00A9todo que a ser chamado pelo WebHook
@@ -138,7 +138,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET30(opts, callback);
 ```
 
 ### Parameters
@@ -146,7 +146,7 @@ api.listarUsingGET25(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id do WebHook | [optional] 
  **tipoEvento** | **String**| TipoEvento a ser chamado pelo WebHook | [optional] 
  **metodo** | **String**| M\u00C3\u00A9todo que a ser chamado pelo WebHook | [optional] 
@@ -165,9 +165,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> WebHook salvarUsingPOST13(tipoEvento, url)
+<a name="salvarUsingPOST14"></a>
+# **salvarUsingPOST14**
+> WebHook salvarUsingPOST14(tipoEvento, url)
 
 Salvar Webhook
 
@@ -191,7 +191,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(tipoEvento, url, callback);
+api.salvarUsingPOST14(tipoEvento, url, callback);
 ```
 
 ### Parameters

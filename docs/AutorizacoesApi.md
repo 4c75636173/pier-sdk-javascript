@@ -4,17 +4,63 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelarUsingPOST**](AutorizacoesApi.md#cancelarUsingPOST) | **POST** /api/cancelar-transacao | Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**desfazerUsingPOST**](AutorizacoesApi.md#desfazerUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**desfazerUsingPOST1**](AutorizacoesApi.md#desfazerUsingPOST1) | **POST** /api/desfazer-transacao | Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula Compra Parcelada
+[**autorizarUsingPOST**](AutorizacoesApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**cancelarUsingPOST**](AutorizacoesApi.md#cancelarUsingPOST) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacoesApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de pagamento
 
+
+<a name="autorizarUsingPOST"></a>
+# **autorizarUsingPOST**
+> TransacaoOnUsResponse autorizarUsingPOST(autorizacaoOnUsRequest)
+
+Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+
+Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.AutorizacoesApi()
+
+var autorizacaoOnUsRequest = new Pier.AutorizacaoOnUsRequest(); // {AutorizacaoOnUsRequest} autorizacaoOnUsRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.autorizarUsingPOST(autorizacaoOnUsRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autorizacaoOnUsRequest** | [**AutorizacaoOnUsRequest**](AutorizacaoOnUsRequest.md)| autorizacaoOnUsRequest | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="cancelarUsingPOST"></a>
 # **cancelarUsingPOST**
 > TransacaoOnUsResponse cancelarUsingPOST(cancelamentoRequest)
 
-Cancela Transa\u00C3\u00A7\u00C3\u00A3o financeira
+Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 
 Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
 
@@ -56,22 +102,19 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="desfazerUsingPOST"></a>
-# **desfazerUsingPOST**
-> TransacaoOnUsResponse desfazerUsingPOST(autorizacaoOnUsRequest)
+<a name="listarCodigosProcessamentoAutorizacaoUsingGET"></a>
+# **listarCodigosProcessamentoAutorizacaoUsingGET**
+> [Object] listarCodigosProcessamentoAutorizacaoUsingGET
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
 
 ### Example
 ```javascript
 var Pier = require('Pier');
 
 var apiInstance = new Pier.AutorizacoesApi()
-
-var autorizacaoOnUsRequest = new Pier.AutorizacaoOnUsRequest(); // {AutorizacaoOnUsRequest} autorizacaoOnUsRequest
-
 
 var callback = function(error, data, response) {
   if (error) {
@@ -80,64 +123,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desfazerUsingPOST(autorizacaoOnUsRequest, callback);
+api.listarCodigosProcessamentoAutorizacaoUsingGET(callback);
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **autorizacaoOnUsRequest** | [**AutorizacaoOnUsRequest**](AutorizacaoOnUsRequest.md)| autorizacaoOnUsRequest | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="desfazerUsingPOST1"></a>
-# **desfazerUsingPOST1**
-> TransacaoOnUsResponse desfazerUsingPOST1(desfazimentoRequest)
-
-Desfazimento de Transa\u00C3\u00A7\u00C3\u00A3o
-
-Este m\u00C3\u00A9todo permite que seja desfeita uma transa\u00C3\u00A7\u00C3\u00A3o.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.AutorizacoesApi()
-
-var desfazimentoRequest = new Pier.DesfazimentoTransacaoOnURequest(); // {DesfazimentoTransacaoOnURequest} desfazimentoRequest
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.desfazerUsingPOST1(desfazimentoRequest, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **desfazimentoRequest** | [**DesfazimentoTransacaoOnURequest**](DesfazimentoTransacaoOnURequest.md)| desfazimentoRequest | 
-
-### Return type
-
-[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+**[Object]**
 
 ### Authorization
 
@@ -152,9 +146,9 @@ No authorization required
 # **simularUsingPOST**
 > TransacaoOnUsResponse simularUsingPOST(transacoesRequest)
 
-Simula Compra Parcelada
+Simula planos de pagamento
 
-Este m\u00C3\u00A9todo permite que seja simulada uma compra parcelada.
+Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
 
 ### Example
 ```javascript

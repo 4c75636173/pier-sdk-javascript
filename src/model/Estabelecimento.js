@@ -18,7 +18,7 @@
   /**
    * The Estabelecimento model module.
    * @module model/Estabelecimento
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -106,7 +106,7 @@
         obj['pais'] = ApiClient.convertToType(data['pais'], 'String');
       }
       if (data.hasOwnProperty('dataCadastramento')) {
-        obj['dataCadastramento'] = ApiClient.convertToType(data['dataCadastramento'], 'Date');
+        obj['dataCadastramento'] = ApiClient.convertToType(data['dataCadastramento'], 'String');
       }
       if (data.hasOwnProperty('obs')) {
         obj['obs'] = ApiClient.convertToType(data['obs'], 'String');
@@ -138,7 +138,7 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
    * @member {String} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
@@ -217,7 +217,7 @@
 
   /**
    * Data de Cadastro do Estabelecimento.
-   * @member {Date} dataCadastramento
+   * @member {String} dataCadastramento
    */
   exports.prototype['dataCadastramento'] = undefined;
 

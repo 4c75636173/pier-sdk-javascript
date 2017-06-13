@@ -18,7 +18,7 @@
   /**
    * The StatusOportunidadeAUDResponse model module.
    * @module model/StatusOportunidadeAUDResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -57,7 +57,7 @@
         obj['revType'] = ApiClient.convertToType(data['revType'], 'Integer');
       }
       if (data.hasOwnProperty('revDate')) {
-        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'Date');
+        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'String');
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
@@ -93,7 +93,7 @@
 
   /**
    * Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-   * @member {Date} revDate
+   * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 

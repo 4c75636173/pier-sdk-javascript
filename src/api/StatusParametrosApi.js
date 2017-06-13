@@ -18,7 +18,7 @@
   /**
    * StatusParametros service.
    * @module api/StatusParametrosApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusConta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusConta}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET12 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET12Callback
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressao}
      */
-    this.consultarUsingGET12 = function(id, callback) {
+    this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -229,7 +229,7 @@
      * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {String} opts.nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {module:api/StatusParametrosApi~listarEstagiosCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -278,7 +278,7 @@
      * Este m\u00C3\u00A9todo permite que sejam listadas as possibilidades de Status que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
      * @param {String} opts.nome Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
      * @param {Integer} opts.flagCancelaCartao Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
@@ -327,8 +327,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET15 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET15Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContas} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -339,16 +339,16 @@
      * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
      * @param {String} opts.nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
      * @param {Integer} opts.flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-     * @param {module:api/StatusParametrosApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContas}
      */
-    this.listarUsingGET15 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -382,8 +382,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusImpressao} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -394,13 +394,13 @@
      * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
-     * @param {module:api/StatusParametrosApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressao}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

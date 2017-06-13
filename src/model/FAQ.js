@@ -18,7 +18,7 @@
   /**
    * The FAQ model module.
    * @module model/FAQ
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -52,9 +51,6 @@
 
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
-      if (data.hasOwnProperty('idEmissor')) {
-        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
       }
       if (data.hasOwnProperty('pergunta')) {
         obj['pergunta'] = ApiClient.convertToType(data['pergunta'], 'String');
@@ -84,12 +80,6 @@
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-   * @member {Integer} idEmissor
-   */
-  exports.prototype['idEmissor'] = undefined;
 
   /**
    * Conte\u00C3\u00BAdo da pergunta.

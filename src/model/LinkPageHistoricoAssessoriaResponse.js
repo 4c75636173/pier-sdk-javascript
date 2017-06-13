@@ -18,7 +18,7 @@
   /**
    * The LinkPageHistoricoAssessoriaResponse model module.
    * @module model/LinkPageHistoricoAssessoriaResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**

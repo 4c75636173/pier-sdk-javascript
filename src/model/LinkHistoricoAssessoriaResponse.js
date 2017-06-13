@@ -18,7 +18,7 @@
   /**
    * The LinkHistoricoAssessoriaResponse model module.
    * @module model/LinkHistoricoAssessoriaResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -46,7 +46,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('dataHoraHistorico')) {
-        obj['dataHoraHistorico'] = ApiClient.convertToType(data['dataHoraHistorico'], 'Date');
+        obj['dataHoraHistorico'] = ApiClient.convertToType(data['dataHoraHistorico'], 'String');
       }
       if (data.hasOwnProperty('tipoHistorico')) {
         obj['tipoHistorico'] = ApiClient.convertToType(data['tipoHistorico'], 'String');
@@ -61,7 +61,7 @@
 
   /**
    * Apresenta a data e hora do hist\u00C3\u00B3rico
-   * @member {Date} dataHoraHistorico
+   * @member {String} dataHoraHistorico
    */
   exports.prototype['dataHoraHistorico'] = undefined;
 

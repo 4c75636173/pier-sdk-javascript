@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/DadosCarto', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/PageLoteCartoesPrePagosResponse', '../model/ModelDate', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/DadosCarto', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/CartaoDetalhado', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/DadosCarto'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/ModelDate'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/DadosCarto'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/CartaoDetalhado'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.DadosCarto, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.ModelDate, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.DadosCarto, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.CartaoDetalhado, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, DadosCarto, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, PageLoteCartoesPrePagosResponse, ModelDate, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, DadosCarto, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, CartaoDetalhado, PageLoteCartoesPrePagosResponse, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -305,8 +305,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarDadosCartaoUsingGET operation.
-     * @callback module:api/CartaoApi~consultarDadosCartaoUsingGETCallback
+     * Callback function to receive the result of the consultarDadosReaisCartaoUsingGET operation.
+     * @callback module:api/CartaoApi~consultarDadosReaisCartaoUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/DadosCarto} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -316,15 +316,15 @@
      * Consultar Detalhes do Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} id id
-     * @param {module:api/CartaoApi~consultarDadosCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarDadosReaisCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DadosCarto}
      */
-    this.consultarDadosCartaoUsingGET = function(id, callback) {
+    this.consultarDadosReaisCartaoUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarDadosCartaoUsingGET";
+        throw "Missing the required parameter 'id' when calling consultarDadosReaisCartaoUsingGET";
       }
 
 
@@ -489,10 +489,10 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET2 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET2Callback
+     * Callback function to receive the result of the consultarUsingGET3 operation.
+     * @callback module:api/CartaoApi~consultarUsingGET3Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoDetalhado} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -500,15 +500,15 @@
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * @param {module:api/CartaoApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CartaoDetalhado}
      */
-    this.consultarUsingGET2 = function(id, callback) {
+    this.consultarUsingGET3 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
       }
 
 
@@ -525,7 +525,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoDetalhado;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}', 'GET',
@@ -738,14 +738,14 @@
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
      * @param {Integer} opts.idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
      * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-     * @param {module:model/ModelDate} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+     * @param {String} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
      * @param {String} opts.usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
      * @param {Integer} opts.statusProcessamento Indica o Status de Processamento do Lote.
      * @param {module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -789,8 +789,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET3 operation.
-     * @callback module:api/CartaoApi~listarUsingGET3Callback
+     * Callback function to receive the result of the listarUsingGET4 operation.
+     * @callback module:api/CartaoApi~listarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartoes} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -801,7 +801,7 @@
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -810,20 +810,20 @@
      * @param {String} opts.tipoPortador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
      * @param {String} opts.numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
      * @param {String} opts.nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
-     * @param {module:model/ModelDate} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-     * @param {module:model/ModelDate} opts.dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-     * @param {module:model/ModelDate} opts.dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {String} opts.dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+     * @param {String} opts.dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+     * @param {String} opts.dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
      * @param {String} opts.dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
-     * @param {module:model/ModelDate} opts.dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+     * @param {String} opts.dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
      * @param {String} opts.arquivoImpressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
      * @param {Integer} opts.flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartoes}
      */
-    this.listarUsingGET3 = function(opts, callback) {
+    this.listarUsingGET4 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformasMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET12**](PlataformasMobileApi.md#listarUsingGET12) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvarUsingPOST8**](PlataformasMobileApi.md#salvarUsingPOST8) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listarUsingGET15**](PlataformasMobileApi.md#listarUsingGET15) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvarUsingPOST9**](PlataformasMobileApi.md#salvarUsingPOST9) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 <a name="atualizarUsingPUT1"></a>
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PagePlataformasMobile listarUsingGET12(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PagePlataformasMobile listarUsingGET15(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -74,7 +74,7 @@ var apiInstance = new Pier.PlataformasMobileApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'nome': "nome_example" // {String} Nome da Plataforma Mobile
 };
 
@@ -85,7 +85,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -93,7 +93,7 @@ api.listarUsingGET12(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome da Plataforma Mobile | [optional] 
 
 ### Return type
@@ -109,9 +109,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST8"></a>
-# **salvarUsingPOST8**
-> PlataformaMobile salvarUsingPOST8(persist)
+<a name="salvarUsingPOST9"></a>
+# **salvarUsingPOST9**
+> PlataformaMobile salvarUsingPOST9(persist)
 
 Cadastra Plataforma Mobile
 
@@ -133,7 +133,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST8(persist, callback);
+api.salvarUsingPOST9(persist, callback);
 ```
 
 ### Parameters

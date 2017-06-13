@@ -18,7 +18,7 @@
   /**
    * The AtendimentoCliente model module.
    * @module model/AtendimentoCliente
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -81,19 +81,19 @@
         obj['nomeSistema'] = ApiClient.convertToType(data['nomeSistema'], 'String');
       }
       if (data.hasOwnProperty('dataHoraInicioAtendimento')) {
-        obj['dataHoraInicioAtendimento'] = ApiClient.convertToType(data['dataHoraInicioAtendimento'], 'Date');
+        obj['dataHoraInicioAtendimento'] = ApiClient.convertToType(data['dataHoraInicioAtendimento'], 'String');
       }
       if (data.hasOwnProperty('dataHoraFimAtendimento')) {
-        obj['dataHoraFimAtendimento'] = ApiClient.convertToType(data['dataHoraFimAtendimento'], 'Date');
+        obj['dataHoraFimAtendimento'] = ApiClient.convertToType(data['dataHoraFimAtendimento'], 'String');
       }
       if (data.hasOwnProperty('dataAtendimento')) {
-        obj['dataAtendimento'] = ApiClient.convertToType(data['dataAtendimento'], 'Date');
+        obj['dataAtendimento'] = ApiClient.convertToType(data['dataAtendimento'], 'String');
       }
       if (data.hasOwnProperty('dataAgendamento')) {
-        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'Date');
+        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'String');
       }
       if (data.hasOwnProperty('dataProcessamento')) {
-        obj['dataProcessamento'] = ApiClient.convertToType(data['dataProcessamento'], 'Date');
+        obj['dataProcessamento'] = ApiClient.convertToType(data['dataProcessamento'], 'String');
       }
       if (data.hasOwnProperty('flagProcessamento')) {
         obj['flagProcessamento'] = ApiClient.convertToType(data['flagProcessamento'], 'Integer');
@@ -153,31 +153,31 @@
 
   /**
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-   * @member {Date} dataHoraInicioAtendimento
+   * @member {String} dataHoraInicioAtendimento
    */
   exports.prototype['dataHoraInicioAtendimento'] = undefined;
 
   /**
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-   * @member {Date} dataHoraFimAtendimento
+   * @member {String} dataHoraFimAtendimento
    */
   exports.prototype['dataHoraFimAtendimento'] = undefined;
 
   /**
    * Apresenta a data e hora em que o Atendimento foi realizado.
-   * @member {Date} dataAtendimento
+   * @member {String} dataAtendimento
    */
   exports.prototype['dataAtendimento'] = undefined;
 
   /**
    * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
-   * @member {Date} dataAgendamento
+   * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
    * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
-   * @member {Date} dataProcessamento
+   * @member {String} dataProcessamento
    */
   exports.prototype['dataProcessamento'] = undefined;
 

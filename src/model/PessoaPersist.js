@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelDate', './TelefonePessoaAprovadaPersist'], factory);
+    define(['../ApiClient', './TelefonePessoaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelDate'), require('./TelefonePessoaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('./TelefonePessoaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaPersist = factory(root.Pier.ApiClient, root.Pier.ModelDate, root.Pier.TelefonePessoaAprovadaPersist);
+    root.Pier.PessoaPersist = factory(root.Pier.ApiClient, root.Pier.TelefonePessoaAprovadaPersist);
   }
-}(this, function(ApiClient, ModelDate, TelefonePessoaAprovadaPersist) {
+}(this, function(ApiClient, TelefonePessoaAprovadaPersist) {
   'use strict';
 
   /**
    * The PessoaPersist model module.
    * @module model/PessoaPersist
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -60,10 +60,10 @@
         obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
       }
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], ModelDate);
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
       if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], ModelDate);
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -108,13 +108,13 @@
 
   /**
    * Data emiss\u00C3\u00A3o da Identidade
-   * @member {module:model/ModelDate} dataEmissaoIdentidade
+   * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @member {module:model/ModelDate} dataNascimento
+   * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelDate'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.Pessoa = factory(root.Pier.ApiClient, root.Pier.ModelDate);
+    root.Pier.Pessoa = factory(root.Pier.ApiClient);
   }
-}(this, function(ApiClient, ModelDate) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The Pessoa model module.
    * @module model/Pessoa
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -72,7 +72,7 @@
         obj['cnpj'] = ApiClient.convertToType(data['cnpj'], 'String');
       }
       if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'Date');
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
       }
       if (data.hasOwnProperty('numeroIdentidade')) {
         obj['numeroIdentidade'] = ApiClient.convertToType(data['numeroIdentidade'], 'String');
@@ -87,7 +87,7 @@
         obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
       }
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], ModelDate);
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
     }
     return obj;
@@ -126,7 +126,7 @@
 
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-   * @member {Date} dataNascimento
+   * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
@@ -156,7 +156,7 @@
 
   /**
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-   * @member {module:model/ModelDate} dataEmissaoIdentidade
+   * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 

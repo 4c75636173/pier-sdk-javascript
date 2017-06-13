@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './FaturaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./FaturaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageTipoBoleto = factory(root.Pier.ApiClient);
+    root.Pier.PageTipoBoleto = factory(root.Pier.ApiClient, root.Pier.FaturaResponse);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, FaturaResponse) {
   'use strict';
 
   /**
    * The PageTipoBoleto model module.
    * @module model/PageTipoBoleto
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [Object]);
+        obj['content'] = ApiClient.convertToType(data['content'], [FaturaResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<Object>} content
+   * @member {Array.<module:model/FaturaResponse>} content
    */
   exports.prototype['content'] = undefined;
 

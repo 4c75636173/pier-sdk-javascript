@@ -18,7 +18,7 @@
   /**
    * The Endereco model module.
    * @module model/Endereco
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -93,10 +93,10 @@
         obj['pais'] = ApiClient.convertToType(data['pais'], 'String');
       }
       if (data.hasOwnProperty('dataInclusao')) {
-        obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'Date');
+        obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'String');
       }
       if (data.hasOwnProperty('dataUltimaAtualizacao')) {
-        obj['dataUltimaAtualizacao'] = ApiClient.convertToType(data['dataUltimaAtualizacao'], 'Date');
+        obj['dataUltimaAtualizacao'] = ApiClient.convertToType(data['dataUltimaAtualizacao'], 'String');
       }
     }
     return obj;
@@ -177,13 +177,13 @@
 
   /**
    * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-   * @member {Date} dataInclusao
+   * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
    * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-   * @member {Date} dataUltimaAtualizacao
+   * @member {String} dataUltimaAtualizacao
    */
   exports.prototype['dataUltimaAtualizacao'] = undefined;
 

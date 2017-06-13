@@ -18,7 +18,7 @@
   /**
    * The OportunidadeAUDResponse model module.
    * @module model/OportunidadeAUDResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -64,19 +64,19 @@
         obj['idStatusOportunidade'] = ApiClient.convertToType(data['idStatusOportunidade'], 'Integer');
       }
       if (data.hasOwnProperty('dataCadastro')) {
-        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
+        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'String');
       }
       if (data.hasOwnProperty('dataAtualizacao')) {
-        obj['dataAtualizacao'] = ApiClient.convertToType(data['dataAtualizacao'], 'Date');
+        obj['dataAtualizacao'] = ApiClient.convertToType(data['dataAtualizacao'], 'String');
       }
       if (data.hasOwnProperty('numeroReceitaFederal')) {
         obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'String');
       }
       if (data.hasOwnProperty('dataInicioVigencia')) {
-        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'Date');
+        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'String');
       }
       if (data.hasOwnProperty('dataFimVigencia')) {
-        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'Date');
+        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'String');
       }
       if (data.hasOwnProperty('flagAtivo')) {
         obj['flagAtivo'] = ApiClient.convertToType(data['flagAtivo'], 'Boolean');
@@ -85,7 +85,7 @@
         obj['detalhes'] = ApiClient.convertToType(data['detalhes'], [CdtDetalheOportunidadeAUD]);
       }
       if (data.hasOwnProperty('revDate')) {
-        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'Date');
+        obj['revDate'] = ApiClient.convertToType(data['revDate'], 'String');
       }
       if (data.hasOwnProperty('revType')) {
         obj['revType'] = ApiClient.convertToType(data['revType'], 'Integer');
@@ -115,13 +115,13 @@
 
   /**
    * Data cadastro da oportunidade.
-   * @member {Date} dataCadastro
+   * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
    * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
-   * @member {Date} dataAtualizacao
+   * @member {String} dataAtualizacao
    */
   exports.prototype['dataAtualizacao'] = undefined;
 
@@ -133,13 +133,13 @@
 
   /**
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataInicioVigencia
+   * @member {String} dataInicioVigencia
    */
   exports.prototype['dataInicioVigencia'] = undefined;
 
   /**
    * fim da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataFimVigencia
+   * @member {String} dataFimVigencia
    */
   exports.prototype['dataFimVigencia'] = undefined;
 
@@ -157,7 +157,7 @@
 
   /**
    * Data da auditoria
-   * @member {Date} revDate
+   * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 

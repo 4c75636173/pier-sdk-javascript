@@ -18,7 +18,7 @@
   /**
    * The SMS model module.
    * @module model/SMS
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -108,16 +108,16 @@
         obj['resposta'] = ApiClient.convertToType(data['resposta'], 'String');
       }
       if (data.hasOwnProperty('dataAgendamento')) {
-        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'Date');
+        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'String');
       }
       if (data.hasOwnProperty('quantidadeTentativasEnvio')) {
         obj['quantidadeTentativasEnvio'] = ApiClient.convertToType(data['quantidadeTentativasEnvio'], 'Integer');
       }
       if (data.hasOwnProperty('dataInclusao')) {
-        obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'Date');
+        obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'String');
       }
       if (data.hasOwnProperty('dataAlteracaoStatus')) {
-        obj['dataAlteracaoStatus'] = ApiClient.convertToType(data['dataAlteracaoStatus'], 'Date');
+        obj['dataAlteracaoStatus'] = ApiClient.convertToType(data['dataAlteracaoStatus'], 'String');
       }
       if (data.hasOwnProperty('protocolo')) {
         obj['protocolo'] = ApiClient.convertToType(data['protocolo'], 'String');
@@ -201,7 +201,7 @@
 
   /**
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
-   * @member {Date} dataAgendamento
+   * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
@@ -213,13 +213,13 @@
 
   /**
    * Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-   * @member {Date} dataInclusao
+   * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
    * Apresenta a data e em que o Stattjus do registro foi modificado
-   * @member {Date} dataAlteracaoStatus
+   * @member {String} dataAlteracaoStatus
    */
   exports.prototype['dataAlteracaoStatus'] = undefined;
 

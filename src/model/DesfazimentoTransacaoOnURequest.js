@@ -18,7 +18,7 @@
   /**
    * The DesfazimentoTransacaoOnURequest model module.
    * @module model/DesfazimentoTransacaoOnURequest
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -26,20 +26,29 @@
    * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Desfazimento de transa\u00C3\u00A7\u00C3\u00A3o
    * @alias module:model/DesfazimentoTransacaoOnURequest
    * @class
+   * @param nsuOrigem
+   * @param nsuOrigemTransacaoCancelada
+   * @param codigoProcessamento
+   * @param dataHoraTransacaoCancelada
+   * @param valorTransacao
+   * @param numeroRealCartao
+   * @param dataValidadeCartao
+   * @param numeroEstabelecimento
+   * @param dataHoraTerminal
+   * @param terminalRequisitante
    */
-  var exports = function() {
+  var exports = function(nsuOrigem, nsuOrigemTransacaoCancelada, codigoProcessamento, dataHoraTransacaoCancelada, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
 
-
-
-
-
-
-
-
-
-
-
-
+    this['nsuOrigem'] = nsuOrigem;
+    this['nsuOrigemTransacaoCancelada'] = nsuOrigemTransacaoCancelada;
+    this['codigoProcessamento'] = codigoProcessamento;
+    this['dataHoraTransacaoCancelada'] = dataHoraTransacaoCancelada;
+    this['valorTransacao'] = valorTransacao;
+    this['numeroRealCartao'] = numeroRealCartao;
+    this['dataValidadeCartao'] = dataValidadeCartao;
+    this['numeroEstabelecimento'] = numeroEstabelecimento;
+    this['dataHoraTerminal'] = dataHoraTerminal;
+    this['terminalRequisitante'] = terminalRequisitante;
   };
 
   /**
@@ -56,8 +65,14 @@
       if (data.hasOwnProperty('nsuOrigem')) {
         obj['nsuOrigem'] = ApiClient.convertToType(data['nsuOrigem'], 'String');
       }
+      if (data.hasOwnProperty('nsuOrigemTransacaoCancelada')) {
+        obj['nsuOrigemTransacaoCancelada'] = ApiClient.convertToType(data['nsuOrigemTransacaoCancelada'], 'String');
+      }
       if (data.hasOwnProperty('codigoProcessamento')) {
         obj['codigoProcessamento'] = ApiClient.convertToType(data['codigoProcessamento'], 'String');
+      }
+      if (data.hasOwnProperty('dataHoraTransacaoCancelada')) {
+        obj['dataHoraTransacaoCancelada'] = ApiClient.convertToType(data['dataHoraTransacaoCancelada'], 'String');
       }
       if (data.hasOwnProperty('valorTransacao')) {
         obj['valorTransacao'] = ApiClient.convertToType(data['valorTransacao'], 'Number');
@@ -72,19 +87,10 @@
         obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'Integer');
       }
       if (data.hasOwnProperty('dataHoraTerminal')) {
-        obj['dataHoraTerminal'] = ApiClient.convertToType(data['dataHoraTerminal'], 'Date');
+        obj['dataHoraTerminal'] = ApiClient.convertToType(data['dataHoraTerminal'], 'String');
       }
       if (data.hasOwnProperty('terminalRequisitante')) {
         obj['terminalRequisitante'] = ApiClient.convertToType(data['terminalRequisitante'], 'String');
-      }
-      if (data.hasOwnProperty('nsuOrigemTransacaoCancelada')) {
-        obj['nsuOrigemTransacaoCancelada'] = ApiClient.convertToType(data['nsuOrigemTransacaoCancelada'], 'String');
-      }
-      if (data.hasOwnProperty('dataHoraTransacaoCancelada')) {
-        obj['dataHoraTransacaoCancelada'] = ApiClient.convertToType(data['dataHoraTransacaoCancelada'], 'Date');
-      }
-      if (data.hasOwnProperty('codigoTransacaoCancelada')) {
-        obj['codigoTransacaoCancelada'] = ApiClient.convertToType(data['codigoTransacaoCancelada'], 'String');
       }
     }
     return obj;
@@ -98,10 +104,22 @@
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
+   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+   * @member {String} nsuOrigemTransacaoCancelada
+   */
+  exports.prototype['nsuOrigemTransacaoCancelada'] = undefined;
+
+  /**
    * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
+
+  /**
+   * Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * @member {String} dataHoraTransacaoCancelada
+   */
+  exports.prototype['dataHoraTransacaoCancelada'] = undefined;
 
   /**
    * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
@@ -129,7 +147,7 @@
 
   /**
    * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-   * @member {Date} dataHoraTerminal
+   * @member {String} dataHoraTerminal
    */
   exports.prototype['dataHoraTerminal'] = undefined;
 
@@ -138,24 +156,6 @@
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;
-
-  /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
-   * @member {String} nsuOrigemTransacaoCancelada
-   */
-  exports.prototype['nsuOrigemTransacaoCancelada'] = undefined;
-
-  /**
-   * Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
-   * @member {Date} dataHoraTransacaoCancelada
-   */
-  exports.prototype['dataHoraTransacaoCancelada'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de Processamento da transa\u00C3\u00A7\u00C3\u00A3o cancelada.
-   * @member {String} codigoTransacaoCancelada
-   */
-  exports.prototype['codigoTransacaoCancelada'] = undefined;
 
 
 

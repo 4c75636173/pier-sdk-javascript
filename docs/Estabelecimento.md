@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
-**numeroEstabelecimento** | **String** | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos. | [optional] 
+**numeroEstabelecimento** | **String** | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. | [optional] 
 **numeroReceitaFederal** | **Integer** | Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal. | [optional] 
 **nome** | **String** | Nome do Estabelecimento. | [optional] 
 **descricao** | **String** | Raz\u00C3\u00A3o Social do Estabelecimento. | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **cidade** | **String** | Nome da cidade do endere\u00C3\u00A7o. | [optional] 
 **uf** | **String** | Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o. | [optional] 
 **pais** | **String** | Nome do pa\u00C3\u00ADs. | [optional] 
-**dataCadastramento** | **Date** | Data de Cadastro do Estabelecimento. | [optional] 
+**dataCadastramento** | **String** | Data de Cadastro do Estabelecimento. | [optional] 
 **obs** | **String** | Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento. | [optional] 
 **contato** | **String** | Nome da pessoa para contato com o Estabelecimento. | [optional] 
 **email** | **String** | E-mail da pessoa para contato com o Estabelecimento. | [optional] 

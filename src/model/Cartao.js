@@ -18,7 +18,7 @@
   /**
    * The Cartao model module.
    * @module model/Cartao
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -89,19 +89,19 @@
         obj['nomeImpresso'] = ApiClient.convertToType(data['nomeImpresso'], 'String');
       }
       if (data.hasOwnProperty('dataGeracao')) {
-        obj['dataGeracao'] = ApiClient.convertToType(data['dataGeracao'], 'Date');
+        obj['dataGeracao'] = ApiClient.convertToType(data['dataGeracao'], 'String');
       }
       if (data.hasOwnProperty('dataStatusCartao')) {
-        obj['dataStatusCartao'] = ApiClient.convertToType(data['dataStatusCartao'], 'Date');
+        obj['dataStatusCartao'] = ApiClient.convertToType(data['dataStatusCartao'], 'String');
       }
       if (data.hasOwnProperty('dataEstagioCartao')) {
-        obj['dataEstagioCartao'] = ApiClient.convertToType(data['dataEstagioCartao'], 'Date');
+        obj['dataEstagioCartao'] = ApiClient.convertToType(data['dataEstagioCartao'], 'String');
       }
       if (data.hasOwnProperty('dataValidade')) {
-        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'Date');
+        obj['dataValidade'] = ApiClient.convertToType(data['dataValidade'], 'String');
       }
       if (data.hasOwnProperty('dataImpressao')) {
-        obj['dataImpressao'] = ApiClient.convertToType(data['dataImpressao'], 'Date');
+        obj['dataImpressao'] = ApiClient.convertToType(data['dataImpressao'], 'String');
       }
       if (data.hasOwnProperty('arquivoImpressao')) {
         obj['arquivoImpressao'] = ApiClient.convertToType(data['arquivoImpressao'], 'String');
@@ -109,8 +109,8 @@
       if (data.hasOwnProperty('flagImpressaoOrigemComercial')) {
         obj['flagImpressaoOrigemComercial'] = ApiClient.convertToType(data['flagImpressaoOrigemComercial'], 'Integer');
       }
-      if (data.hasOwnProperty('flagProvisorio')) {
-        obj['flagProvisorio'] = ApiClient.convertToType(data['flagProvisorio'], 'Integer');
+      if (data.hasOwnProperty('flagVirtual')) {
+        obj['flagVirtual'] = ApiClient.convertToType(data['flagVirtual'], 'Integer');
       }
       if (data.hasOwnProperty('codigoDesbloqueio')) {
         obj['codigoDesbloqueio'] = ApiClient.convertToType(data['codigoDesbloqueio'], 'String');
@@ -179,31 +179,31 @@
 
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   * @member {Date} dataGeracao
+   * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
    * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-   * @member {Date} dataStatusCartao
+   * @member {String} dataStatusCartao
    */
   exports.prototype['dataStatusCartao'] = undefined;
 
   /**
    * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-   * @member {Date} dataEstagioCartao
+   * @member {String} dataEstagioCartao
    */
   exports.prototype['dataEstagioCartao'] = undefined;
 
   /**
    * Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
-   * @member {Date} dataValidade
+   * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
-   * @member {Date} dataImpressao
+   * @member {String} dataImpressao
    */
   exports.prototype['dataImpressao'] = undefined;
 
@@ -220,10 +220,10 @@
   exports.prototype['flagImpressaoOrigemComercial'] = undefined;
 
   /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
-   * @member {Integer} flagProvisorio
+   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
+   * @member {Integer} flagVirtual
    */
-  exports.prototype['flagProvisorio'] = undefined;
+  exports.prototype['flagVirtual'] = undefined;
 
   /**
    * Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.

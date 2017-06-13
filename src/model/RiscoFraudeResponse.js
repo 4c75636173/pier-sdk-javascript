@@ -18,7 +18,7 @@
   /**
    * The RiscoFraudeResponse model module.
    * @module model/RiscoFraudeResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -74,7 +74,7 @@
         obj['idTransacao'] = ApiClient.convertToType(data['idTransacao'], 'Integer');
       }
       if (data.hasOwnProperty('dataTransacao')) {
-        obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'Date');
+        obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'String');
       }
       if (data.hasOwnProperty('valorTransacao')) {
         obj['valorTransacao'] = ApiClient.convertToType(data['valorTransacao'], 'Number');
@@ -131,7 +131,7 @@
 
   /**
    * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
-   * @member {Date} dataTransacao
+   * @member {String} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
 

@@ -18,7 +18,7 @@
   /**
    * The HistoricoImpressaoCartao model module.
    * @module model/HistoricoImpressaoCartao
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -63,7 +63,7 @@
         obj['mensagemHistorico'] = ApiClient.convertToType(data['mensagemHistorico'], 'String');
       }
       if (data.hasOwnProperty('dataHistorico')) {
-        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'Date');
+        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'String');
       }
     }
     return obj;
@@ -96,7 +96,7 @@
 
   /**
    * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-   * @member {Date} dataHistorico
+   * @member {String} dataHistorico
    */
   exports.prototype['dataHistorico'] = undefined;
 

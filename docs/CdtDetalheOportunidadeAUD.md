@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **idOportunidade** | **Integer** |  | [optional] 
 **nomeCampo** | **String** |  | [optional] 
 **rev** | **Integer** |  | [optional] 
-**revDate** | **Date** |  | [optional] 
+**revDate** | **String** |  | [optional] 
 **revOportunidade** | **Integer** |  | [optional] 
 **revType** | **Integer** |  | [optional] 
 **revUser** | **String** |  | [optional] 

@@ -18,7 +18,7 @@
   /**
    * The Transferencia model module.
    * @module model/Transferencia
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -54,7 +54,7 @@
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('dataTransferencia')) {
-        obj['dataTransferencia'] = ApiClient.convertToType(data['dataTransferencia'], 'Date');
+        obj['dataTransferencia'] = ApiClient.convertToType(data['dataTransferencia'], 'String');
       }
       if (data.hasOwnProperty('idContaOrigem')) {
         obj['idContaOrigem'] = ApiClient.convertToType(data['idContaOrigem'], 'Integer');
@@ -87,7 +87,7 @@
 
   /**
    * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-   * @member {Date} dataTransferencia
+   * @member {String} dataTransferencia
    */
   exports.prototype['dataTransferencia'] = undefined;
 

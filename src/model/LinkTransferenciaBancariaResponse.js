@@ -18,7 +18,7 @@
   /**
    * The LinkTransferenciaBancariaResponse model module.
    * @module model/LinkTransferenciaBancariaResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -81,7 +81,7 @@
         obj['codigoAutorizacao'] = ApiClient.convertToType(data['codigoAutorizacao'], 'String');
       }
       if (data.hasOwnProperty('dataAutorizacao')) {
-        obj['dataAutorizacao'] = ApiClient.convertToType(data['dataAutorizacao'], 'Date');
+        obj['dataAutorizacao'] = ApiClient.convertToType(data['dataAutorizacao'], 'String');
       }
       if (data.hasOwnProperty('origem')) {
         obj['origem'] = ApiClient.convertToType(data['origem'], 'String');
@@ -99,7 +99,7 @@
         obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
       }
       if (data.hasOwnProperty('dataCompra')) {
-        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], 'Date');
+        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], 'String');
       }
       if (data.hasOwnProperty('valorCompra')) {
         obj['valorCompra'] = ApiClient.convertToType(data['valorCompra'], 'Number');
@@ -114,7 +114,7 @@
         obj['idEstabelecimento'] = ApiClient.convertToType(data['idEstabelecimento'], 'Integer');
       }
       if (data.hasOwnProperty('dataMovimento')) {
-        obj['dataMovimento'] = ApiClient.convertToType(data['dataMovimento'], 'Date');
+        obj['dataMovimento'] = ApiClient.convertToType(data['dataMovimento'], 'String');
       }
       if (data.hasOwnProperty('valorContrato')) {
         obj['valorContrato'] = ApiClient.convertToType(data['valorContrato'], 'Number');
@@ -135,7 +135,7 @@
         obj['valorEntrada'] = ApiClient.convertToType(data['valorEntrada'], 'Number');
       }
       if (data.hasOwnProperty('dataVencimentoReal')) {
-        obj['dataVencimentoReal'] = ApiClient.convertToType(data['dataVencimentoReal'], 'Date');
+        obj['dataVencimentoReal'] = ApiClient.convertToType(data['dataVencimentoReal'], 'String');
       }
       if (data.hasOwnProperty('dataVencimentoPadrao')) {
         obj['dataVencimentoPadrao'] = ApiClient.convertToType(data['dataVencimentoPadrao'], 'String');
@@ -176,7 +176,7 @@
 
   /**
    * Data da autoriza\u00C3\u00A7\u00C3\u00A3o
-   * @member {Date} dataAutorizacao
+   * @member {String} dataAutorizacao
    */
   exports.prototype['dataAutorizacao'] = undefined;
 
@@ -212,7 +212,7 @@
 
   /**
    * Data da transfer\u00C3\u00AAncia
-   * @member {Date} dataCompra
+   * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
@@ -242,7 +242,7 @@
 
   /**
    * Data do movimento
-   * @member {Date} dataMovimento
+   * @member {String} dataMovimento
    */
   exports.prototype['dataMovimento'] = undefined;
 
@@ -284,7 +284,7 @@
 
   /**
    * Data do vencimento real da fatura
-   * @member {Date} dataVencimentoReal
+   * @member {String} dataVencimentoReal
    */
   exports.prototype['dataVencimentoReal'] = undefined;
 
@@ -301,6 +301,7 @@
   exports.prototype['idContaPortador'] = undefined;
 
   /**
+   * Atributo que representa o numero do estabelecimento.
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;

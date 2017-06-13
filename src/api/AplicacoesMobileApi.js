@@ -18,7 +18,7 @@
   /**
    * AplicacoesMobile service.
    * @module api/AplicacoesMobileApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -97,10 +97,9 @@
      * Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.id Identificador da Aplicacao Mobile
      * @param {Integer} opts.idPlataformaMobile Identificador da Plataforma Mobile
-     * @param {Integer} opts.idEmissor Identificador do Emissor
      * @param {module:api/AplicacoesMobileApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAplicacoesMobile}
      */
@@ -115,8 +114,7 @@
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
-        'idPlataformaMobile': opts['idPlataformaMobile'],
-        'idEmissor': opts['idEmissor']
+        'idPlataformaMobile': opts['idPlataformaMobile']
       };
       var headerParams = {
       };

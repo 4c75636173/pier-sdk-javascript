@@ -18,7 +18,7 @@
   /**
    * The HistoricoAtrasoFaturaResponse model module.
    * @module model/HistoricoAtrasoFaturaResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -45,7 +45,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('dataVencimento')) {
-        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'Date');
+        obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'String');
       }
       if (data.hasOwnProperty('diasPagamentoAposVencimento')) {
         obj['diasPagamentoAposVencimento'] = ApiClient.convertToType(data['diasPagamentoAposVencimento'], 'Integer');
@@ -57,7 +57,7 @@
 
   /**
    * Data vencimento fatura.
-   * @member {Date} dataVencimento
+   * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 

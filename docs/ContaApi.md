@@ -16,12 +16,14 @@ Method | HTTP request | Description
 [**consultarFaturaUsingGET**](ContaApi.md#consultarFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-fechada | Consultar Fatura da Conta
 [**consultarLancamentosFuturosFaturaUsingGET**](ContaApi.md#consultarLancamentosFuturosFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
-[**consultarUsingGET20**](ContaApi.md#consultarUsingGET20) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultarUsingGET21**](ContaApi.md#consultarUsingGET21) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultarUsingGET3**](ContaApi.md#consultarUsingGET3) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
+[**consultarUsingGET23**](ContaApi.md#consultarUsingGET23) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultarUsingGET24**](ContaApi.md#consultarUsingGET24) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET4**](ContaApi.md#consultarUsingGET4) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+[**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
 [**listarFaturasConsignadasUsingGET**](ContaApi.md#listarFaturasConsignadasUsingGET) | **GET** /api/contas/{id}/faturas-consignadas | Lista as faturas consignadas da conta
 [**listarFaturasUsingGET**](ContaApi.md#listarFaturasUsingGET) | **GET** /api/contas/{id}/faturas | Lista as faturas da conta
 [**listarHistoricoAlteracoesLimitesUsingGET**](ContaApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
@@ -29,9 +31,9 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET22**](ContaApi.md#listarUsingGET22) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listarUsingGET23**](ContaApi.md#listarUsingGET23) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**listarUsingGET4**](ContaApi.md#listarUsingGET4) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET27**](ContaApi.md#listarUsingGET27) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listarUsingGET28**](ContaApi.md#listarUsingGET28) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listarUsingGET6**](ContaApi.md#listarUsingGET6) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**reativarUsingPOST**](ContaApi.md#reativarUsingPOST) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferirUsingPOST**](ContaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
@@ -56,7 +58,7 @@ var id = 789; // {Integer} Id Conta
 
 var idTipoAjuste = 789; // {Integer} C\u00C3\u00B3digo identificador do tipo de ajuste.
 
-var dataAjuste = new Date("2013-10-20T19:20:30+01:00"); // {Date} Data do ajuste.
+var dataAjuste = "dataAjuste_example"; // {String} Data do ajuste.
 
 var valorAjuste = 3.4; // {Number} Valor do ajuste
 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
  **idTipoAjuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
- **dataAjuste** | **Date**| Data do ajuste. | 
+ **dataAjuste** | **String**| Data do ajuste. | 
  **valorAjuste** | [**Number**](.md)| Valor do ajuste | 
 
 ### Return type
@@ -383,8 +385,8 @@ var id = 789; // {Integer} Id Conta
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'dataVencimento': new Pier.ModelDate(), // {ModelDate} Data do vencimento
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataVencimento': "dataVencimento_example", // {String} Data do vencimento
   'idEscritorioCobranca': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
 };
 
@@ -404,8 +406,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **dataVencimento** | **ModelDate**| Data do vencimento | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataVencimento** | **String**| Data do vencimento | [optional] 
  **idEscritorioCobranca** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a | [optional] 
 
 ### Return type
@@ -438,7 +440,7 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 var opts = { 
-  'dataVencimento': new Pier.ModelDate() // {ModelDate} Data Vencimento
+  'dataVencimento': "dataVencimento_example" // {String} Data Vencimento
 };
 
 var callback = function(error, data, response) {
@@ -456,7 +458,7 @@ api.consultarFaturaConsignadaAbertaUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimento** | **ModelDate**| Data Vencimento | [optional] 
+ **dataVencimento** | **String**| Data Vencimento | [optional] 
 
 ### Return type
 
@@ -536,7 +538,7 @@ var apiInstance = new Pier.ContaApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-var dataVencimento = new Pier.ModelDate(); // {ModelDate} Data Vencimento.
+var dataVencimento = "dataVencimento_example"; // {String} Data Vencimento.
 
 
 var callback = function(error, data, response) {
@@ -554,7 +556,7 @@ api.consultarFaturaUsingGET(id, dataVencimento, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimento** | **ModelDate**| Data Vencimento. | 
+ **dataVencimento** | **String**| Data Vencimento. | 
 
 ### Return type
 
@@ -586,7 +588,7 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
 var opts = { 
-  'dataVencimento': new Pier.ModelDate() // {ModelDate} Data Vencimento
+  'dataVencimento': "dataVencimento_example" // {String} Data Vencimento
 };
 
 var callback = function(error, data, response) {
@@ -604,7 +606,7 @@ api.consultarLancamentosFuturosFaturaUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimento** | **ModelDate**| Data Vencimento | [optional] 
+ **dataVencimento** | **String**| Data Vencimento | [optional] 
 
 ### Return type
 
@@ -665,9 +667,61 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> LinkTransferenciaBancariaResponse consultarUsingGET20(id, idTransferencia, opts)
+<a name="consultarTaxasTarifasUsingGET"></a>
+# **consultarTaxasTarifasUsingGET**
+> PageTaxasRefinanciamento consultarTaxasTarifasUsingGET(id, opts)
+
+Permite consultar a partir do ID da conta as taxas e tarifas
+
+Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} ID da conta a ser consultada.
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarTaxasTarifasUsingGET(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da conta a ser consultada. | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageTaxasRefinanciamento**](PageTaxasRefinanciamento.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> LinkTransferenciaBancariaResponse consultarUsingGET23(id, idTransferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -694,7 +748,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, idTransferencia, opts, callback);
+api.consultarUsingGET23(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -718,9 +772,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> PageTransferencias consultarUsingGET21(id, idTransferencia)
+<a name="consultarUsingGET24"></a>
+# **consultarUsingGET24**
+> PageTransferencias consultarUsingGET24(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -744,7 +798,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(id, idTransferencia, callback);
+api.consultarUsingGET24(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -767,9 +821,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET3"></a>
-# **consultarUsingGET3**
-> ContaDetalheResponse consultarUsingGET3(id)
+<a name="consultarUsingGET4"></a>
+# **consultarUsingGET4**
+> ContaDetalheResponse consultarUsingGET4(id)
 
 Apresenta dados de uma determinada conta
 
@@ -791,7 +845,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET3(id, callback);
+api.consultarUsingGET4(id, callback);
 ```
 
 ### Parameters
@@ -861,7 +915,7 @@ No authorization required
 
 <a name="gerarBoletoRecargaUsingPOST"></a>
 # **gerarBoletoRecargaUsingPOST**
-> BoletoDeFatura gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, opts)
+> BoletoDeFatura gerarBoletoRecargaUsingPOST(id, valor, dataVencimento)
 
 Gera um boleto de recarga
 
@@ -875,14 +929,10 @@ var apiInstance = new Pier.ContaApi()
 
 var id = 789; // {Integer} Id Conta
 
-var valor = 3.4; // {Number} 
+var valor = 3.4; // {Number} Atributo que representa o valor do Boleto Emitido
 
-var dataVencimento = new Pier.ModelDate(); // {ModelDate} 
+var dataVencimento = "dataVencimento_example"; // {String} Atributo que representa a data de vencimento do boleto
 
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -891,7 +941,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, opts, callback);
+api.gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, callback);
 ```
 
 ### Parameters
@@ -899,10 +949,8 @@ api.gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **valor** | [**Number**](.md)|  | 
- **dataVencimento** | **ModelDate**|  | 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **valor** | [**Number**](.md)| Atributo que representa o valor do Boleto Emitido | 
+ **dataVencimento** | **String**| Atributo que representa a data de vencimento do boleto | 
 
 ### Return type
 
@@ -970,6 +1018,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="gerarCartaoVirtualUsingPOST"></a>
+# **gerarCartaoVirtualUsingPOST**
+> CartaoImpressao gerarCartaoVirtualUsingPOST(id, dataValidade)
+
+Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+
+Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var dataValidade = "dataValidade_example"; // {String} Data de Validade
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.gerarCartaoVirtualUsingPOST(id, dataValidade, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **dataValidade** | **String**| Data de Validade | 
+
+### Return type
+
+[**CartaoImpressao**](CartaoImpressao.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="listarFaturasConsignadasUsingGET"></a>
 # **listarFaturasConsignadasUsingGET**
 > PageFaturasConsignadas listarFaturasConsignadasUsingGET(id, opts)
@@ -988,8 +1085,8 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'dataVencimento': new Pier.ModelDate() // {ModelDate} Apresenta a data de vencimento da fatura.
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataVencimento': "dataVencimento_example" // {String} Apresenta a data de vencimento da fatura.
 };
 
 var callback = function(error, data, response) {
@@ -1008,8 +1105,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **dataVencimento** | **ModelDate**| Apresenta a data de vencimento da fatura. | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataVencimento** | **String**| Apresenta a data de vencimento da fatura. | [optional] 
 
 ### Return type
 
@@ -1042,8 +1139,8 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'dataVencimento': new Pier.ModelDate() // {ModelDate} Data de Vencimento da Fatura.
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataVencimento': "dataVencimento_example" // {String} Data de Vencimento da Fatura.
 };
 
 var callback = function(error, data, response) {
@@ -1062,8 +1159,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **dataVencimento** | **ModelDate**| Data de Vencimento da Fatura. | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataVencimento** | **String**| Data de Vencimento da Fatura. | [optional] 
 
 ### Return type
 
@@ -1096,7 +1193,7 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1115,7 +1212,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1148,7 +1245,7 @@ var id = 789; // {Integer} Id Conta
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1167,7 +1264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1246,7 +1343,9 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataInicio': "dataInicio_example", // {String} Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
+  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
 };
 
 var callback = function(error, data, response) {
@@ -1265,7 +1364,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataInicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). | [optional] 
+ **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). | [optional] 
 
 ### Return type
 
@@ -1298,8 +1399,10 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-  'dataVencimento': new Pier.ModelDate() // {ModelDate} Data de vencimento do extrato no formato yyyy-MM-dd.
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataVencimento': "dataVencimento_example", // {String} Data de vencimento do extrato no formato yyyy-MM-dd.
+  'dataInicio': "dataInicio_example", // {String} Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
 };
 
 var callback = function(error, data, response) {
@@ -1318,8 +1421,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
- **dataVencimento** | **ModelDate**| Data de vencimento do extrato no formato yyyy-MM-dd. | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataVencimento** | **String**| Data de vencimento do extrato no formato yyyy-MM-dd. | [optional] 
+ **dataInicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
+ **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
 
 ### Return type
 
@@ -1334,9 +1439,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> LinkPageTransferenciaBancariaResponse listarUsingGET22(id, opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> LinkPageTransferenciaBancariaResponse listarUsingGET27(id, opts)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -1353,7 +1458,7 @@ var id = 789; // {Integer} Id Conta
 var opts = { 
   'idContaBancariaDestino': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1363,7 +1468,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(id, opts, callback);
+api.listarUsingGET27(id, opts, callback);
 ```
 
 ### Parameters
@@ -1373,7 +1478,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| Id Conta | 
  **idContaBancariaDestino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1388,9 +1493,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PageTransferencias listarUsingGET23(id, opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PageTransferencias listarUsingGET28(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1406,12 +1511,12 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idTransferencia': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
   'idContaOrigem': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
   'idContaDestino': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
   'valorTransferencia': 3.4, // {Number} Valor estabelecido para ser transferido.
-  'dataTransferencia': new Pier.ModelDate() // {ModelDate} Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+  'dataTransferencia': "dataTransferencia_example" // {String} Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
 };
 
 var callback = function(error, data, response) {
@@ -1421,7 +1526,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(id, opts, callback);
+api.listarUsingGET28(id, opts, callback);
 ```
 
 ### Parameters
@@ -1430,12 +1535,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idTransferencia** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
  **idContaOrigem** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
  **idContaDestino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
  **valorTransferencia** | [**Number**](.md)| Valor estabelecido para ser transferido. | [optional] 
- **dataTransferencia** | **ModelDate**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
+ **dataTransferencia** | **String**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
 
 ### Return type
 
@@ -1450,9 +1555,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET4"></a>
-# **listarUsingGET4**
-> PageContas listarUsingGET4(opts)
+<a name="listarUsingGET6"></a>
+# **listarUsingGET6**
+> PageContas listarUsingGET6(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1466,16 +1571,16 @@ var apiInstance = new Pier.ContaApi()
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idProduto': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
   'idOrigemComercial': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
   'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
   'idStatusConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
   'diaVencimento': 56, // {Integer} Apresenta o dia de vencimento.
   'melhorDiaCompra': 56, // {Integer} Apresenta o melhor dia de compra.
-  'dataStatusConta': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-  'dataCadastro': new Pier.ModelDate(), // {ModelDate} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-  'dataUltimaAlteracaoVencimento': new Pier.ModelDate() // {ModelDate} Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+  'dataStatusConta': "dataStatusConta_example", // {String} Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+  'dataCadastro': "dataCadastro_example", // {String} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+  'dataUltimaAlteracaoVencimento': "dataUltimaAlteracaoVencimento_example" // {String} Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
 };
 
 var callback = function(error, data, response) {
@@ -1485,7 +1590,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET4(opts, callback);
+api.listarUsingGET6(opts, callback);
 ```
 
 ### Parameters
@@ -1493,16 +1598,16 @@ api.listarUsingGET4(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idProduto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). | [optional] 
  **idOrigemComercial** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
  **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). | [optional] 
  **idStatusConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id). | [optional] 
  **diaVencimento** | **Integer**| Apresenta o dia de vencimento. | [optional] 
  **melhorDiaCompra** | **Integer**| Apresenta o melhor dia de compra. | [optional] 
- **dataStatusConta** | **ModelDate**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
- **dataCadastro** | **ModelDate**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
- **dataUltimaAlteracaoVencimento** | **ModelDate**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+ **dataStatusConta** | **String**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
+ **dataCadastro** | **String**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
+ **dataUltimaAlteracaoVencimento** | **String**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
 
 ### Return type
 
@@ -1581,7 +1686,7 @@ var id = 789; // {Integer} Id Conta
 
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1600,7 +1705,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

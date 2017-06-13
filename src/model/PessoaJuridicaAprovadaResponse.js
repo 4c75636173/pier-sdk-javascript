@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoResponse', './ModelDate', './SocioAprovadoResponse', './TelefonePessoaAprovadaResponse'], factory);
+    define(['../ApiClient', './EnderecoAprovadoResponse', './SocioAprovadoResponse', './TelefonePessoaAprovadaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoResponse'), require('./ModelDate'), require('./SocioAprovadoResponse'), require('./TelefonePessoaAprovadaResponse'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoResponse'), require('./SocioAprovadoResponse'), require('./TelefonePessoaAprovadaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaJuridicaAprovadaResponse = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoResponse, root.Pier.ModelDate, root.Pier.SocioAprovadoResponse, root.Pier.TelefonePessoaAprovadaResponse);
+    root.Pier.PessoaJuridicaAprovadaResponse = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoResponse, root.Pier.SocioAprovadoResponse, root.Pier.TelefonePessoaAprovadaResponse);
   }
-}(this, function(ApiClient, EnderecoAprovadoResponse, ModelDate, SocioAprovadoResponse, TelefonePessoaAprovadaResponse) {
+}(this, function(ApiClient, EnderecoAprovadoResponse, SocioAprovadoResponse, TelefonePessoaAprovadaResponse) {
   'use strict';
 
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -74,7 +74,7 @@
         obj['inscricaoEstadual'] = ApiClient.convertToType(data['inscricaoEstadual'], 'String');
       }
       if (data.hasOwnProperty('dataAberturaEmpresa')) {
-        obj['dataAberturaEmpresa'] = ApiClient.convertToType(data['dataAberturaEmpresa'], ModelDate);
+        obj['dataAberturaEmpresa'] = ApiClient.convertToType(data['dataAberturaEmpresa'], 'String');
       }
       if (data.hasOwnProperty('idOrigemComercial')) {
         obj['idOrigemComercial'] = ApiClient.convertToType(data['idOrigemComercial'], 'Integer');
@@ -143,7 +143,7 @@
 
   /**
    * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
-   * @member {module:model/ModelDate} dataAberturaEmpresa
+   * @member {String} dataAberturaEmpresa
    */
   exports.prototype['dataAberturaEmpresa'] = undefined;
 

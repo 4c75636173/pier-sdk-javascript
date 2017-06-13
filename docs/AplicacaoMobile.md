@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | Apresenta o identificador da aplicacao. | [optional] 
 **idPlataformaMobile** | **Integer** | Apresenta o identificador da plataforma. | [optional] 
-**idEmissor** | **Integer** | Apresenta o identificador do emissor. | [optional] 
 **token** | **String** | Apresenta o token da aplicacao. | [optional] 
 **cor** | **String** | Apresenta a cor da mensagem da aplicacao. | [optional] 
 **som** | **String** | Apresenta o som da mensagem da aplicacao | [optional] 

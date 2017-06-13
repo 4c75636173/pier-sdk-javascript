@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/SMS', '../model/ModelDate', '../model/PagePush', '../model/PageSMS', '../model/NotificacaoSMSResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody'], factory);
+    define(['../ApiClient', '../model/SMS', '../model/PagePush', '../model/PageSMS', '../model/NotificacaoSMSResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SMS'), require('../model/ModelDate'), require('../model/PagePush'), require('../model/PageSMS'), require('../model/NotificacaoSMSResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'));
+    module.exports = factory(require('../ApiClient'), require('../model/SMS'), require('../model/PagePush'), require('../model/PageSMS'), require('../model/NotificacaoSMSResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacoesApi = factory(root.Pier.ApiClient, root.Pier.SMS, root.Pier.ModelDate, root.Pier.PagePush, root.Pier.PageSMS, root.Pier.NotificacaoSMSResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody);
+    root.Pier.NotificacoesApi = factory(root.Pier.ApiClient, root.Pier.SMS, root.Pier.PagePush, root.Pier.PageSMS, root.Pier.NotificacaoSMSResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody);
   }
-}(this, function(ApiClient, SMS, ModelDate, PagePush, PageSMS, NotificacaoSMSResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody) {
+}(this, function(ApiClient, SMS, PagePush, PageSMS, NotificacaoSMSResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody) {
   'use strict';
 
   /**
    * Notificacoes service.
    * @module api/NotificacoesApi
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -96,8 +96,8 @@
      * Esse recurso permite listar os Pushes do emissor
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {module:model/ModelDate} opts.dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {String} opts.dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
      * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.plataforma Plataforma de Push notifications.
@@ -151,8 +151,8 @@
      * Esse recurso permite listar os SMS do emissor
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-     * @param {Date} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {String} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
      * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.

@@ -18,7 +18,7 @@
   /**
    * The HistoricoEventos model module.
    * @module model/HistoricoEventos
-   * @version 2.15.5
+   * @version 2.16.2
    */
 
   /**
@@ -55,7 +55,7 @@
         obj['idHistorico'] = ApiClient.convertToType(data['idHistorico'], 'Integer');
       }
       if (data.hasOwnProperty('dataHistorico')) {
-        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'Date');
+        obj['dataHistorico'] = ApiClient.convertToType(data['dataHistorico'], 'String');
       }
       if (data.hasOwnProperty('tipoHistorico')) {
         obj['tipoHistorico'] = ApiClient.convertToType(data['tipoHistorico'], 'String');
@@ -79,7 +79,7 @@
 
   /**
    * Data do evento
-   * @member {Date} dataHistorico
+   * @member {String} dataHistorico
    */
   exports.prototype['dataHistorico'] = undefined;
 
