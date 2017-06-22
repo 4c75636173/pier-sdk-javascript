@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AntecipacaoResponse', '../model/PageCompras', '../model/AntecipacaoSimuladaResponse'], factory);
+    define(['../ApiClient', '../model/AntecipacaoResponse', '../model/PageCompraResponse', '../model/AntecipacaoSimuladaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AntecipacaoResponse'), require('../model/PageCompras'), require('../model/AntecipacaoSimuladaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AntecipacaoResponse'), require('../model/PageCompraResponse'), require('../model/AntecipacaoSimuladaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CompraApi = factory(root.Pier.ApiClient, root.Pier.AntecipacaoResponse, root.Pier.PageCompras, root.Pier.AntecipacaoSimuladaResponse);
+    root.Pier.CompraApi = factory(root.Pier.ApiClient, root.Pier.AntecipacaoResponse, root.Pier.PageCompraResponse, root.Pier.AntecipacaoSimuladaResponse);
   }
-}(this, function(ApiClient, AntecipacaoResponse, PageCompras, AntecipacaoSimuladaResponse) {
+}(this, function(ApiClient, AntecipacaoResponse, PageCompraResponse, AntecipacaoSimuladaResponse) {
   'use strict';
 
   /**
    * Compra service.
    * @module api/CompraApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -44,8 +44,8 @@
      * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
      * Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-     * @param {Integer} quantidadeParcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+     * @param {Integer} quantidadeParcelas Quantidade de parcelas para serem antecipadas.
      * @param {module:api/CompraApi~efetivarAntecipacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoResponse}
      */
@@ -93,10 +93,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/CompraApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET6 operation.
+     * @callback module:api/CompraApi~listarUsingGET6Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageCompras} data The data returned by the service call.
+     * @param {module:model/PageCompraResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -110,17 +110,17 @@
      * @param {Integer} opts.idCompra C\u00C3\u00B3digo identificador da Compra.
      * @param {Boolean} opts.parcelada Indica se a compra \u00C3\u00A9 parcelada.
      * @param {Boolean} opts.juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-     * @param {module:model/String} opts.tipoTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-     * @param {module:api/CompraApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageCompras}
+     * @param {module:model/String} opts.tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+     * @param {module:api/CompraApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCompraResponse}
      */
-    this.listarUsingGET5 = function(idConta, opts, callback) {
+    this.listarUsingGET6 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET5";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET6";
       }
 
 
@@ -133,7 +133,7 @@
         'idConta': idConta,
         'parcelada': opts['parcelada'],
         'juros': opts['juros'],
-        'tipoTransacao': opts['tipoTransacao']
+        'tipoOrigemTransacao': opts['tipoOrigemTransacao']
       };
       var headerParams = {
       };
@@ -143,7 +143,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageCompras;
+      var returnType = PageCompraResponse;
 
       return this.apiClient.callApi(
         '/api/compras', 'GET',
@@ -162,9 +162,9 @@
 
     /**
      * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-     * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+     * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
      * @param {module:api/CompraApi~simularAntecipacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoSimuladaResponse}
      */

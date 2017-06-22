@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Job', '../model/PageJob'], factory);
+    define(['../ApiClient', '../model/JobResponse', '../model/PageJobResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Job'), require('../model/PageJob'));
+    module.exports = factory(require('../ApiClient'), require('../model/JobResponse'), require('../model/PageJobResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.JobsApi = factory(root.Pier.ApiClient, root.Pier.Job, root.Pier.PageJob);
+    root.Pier.JobsApi = factory(root.Pier.ApiClient, root.Pier.JobResponse, root.Pier.PageJobResponse);
   }
-}(this, function(ApiClient, Job, PageJob) {
+}(this, function(ApiClient, JobResponse, PageJobResponse) {
   'use strict';
 
   /**
    * Jobs service.
    * @module api/JobsApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the ativarJobUsingPOST operation.
      * @callback module:api/JobsApi~ativarJobUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Job} data The data returned by the service call.
+     * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,7 +45,7 @@
      * Este recurso adiciona o job ao agendador de tarefas.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
      * @param {module:api/JobsApi~ativarJobUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Job}
+     * data is of type: {module:model/JobResponse}
      */
     this.ativarJobUsingPOST = function(id, callback) {
       var postBody = null;
@@ -69,7 +69,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Job;
+      var returnType = JobResponse;
 
       return this.apiClient.callApi(
         '/api/jobs/{id}/ativar-job', 'POST',
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the atualizarUsingPUT operation.
      * @callback module:api/JobsApi~atualizarUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Job} data The data returned by the service call.
+     * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,7 +94,7 @@
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
      * @param {module:api/JobsApi~atualizarUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Job}
+     * data is of type: {module:model/JobResponse}
      */
     this.atualizarUsingPUT = function(id, descricao, cron, groovy, callback) {
       var postBody = groovy;
@@ -135,7 +135,7 @@
       var authNames = [];
       var contentTypes = ['text/plain'];
       var accepts = ['application/json'];
-      var returnType = Job;
+      var returnType = JobResponse;
 
       return this.apiClient.callApi(
         '/api/jobs/{id}', 'PUT',
@@ -148,7 +148,7 @@
      * Callback function to receive the result of the desativarJobUsingPOST operation.
      * @callback module:api/JobsApi~desativarJobUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Job} data The data returned by the service call.
+     * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -157,7 +157,7 @@
      * Este recurso retira o job do agendador de tarefas.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
      * @param {module:api/JobsApi~desativarJobUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Job}
+     * data is of type: {module:model/JobResponse}
      */
     this.desativarJobUsingPOST = function(id, callback) {
       var postBody = null;
@@ -181,7 +181,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Job;
+      var returnType = JobResponse;
 
       return this.apiClient.callApi(
         '/api/jobs/{id}/desativar-job', 'POST',
@@ -191,10 +191,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/JobsApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/JobsApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageJob} data The data returned by the service call.
+     * @param {module:model/PageJobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -208,10 +208,10 @@
      * @param {module:model/String} opts.status Status do Job
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/JobsApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageJob}
+     * @param {module:api/JobsApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageJobResponse}
      */
-    this.listarUsingGET11 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -234,7 +234,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageJob;
+      var returnType = PageJobResponse;
 
       return this.apiClient.callApi(
         '/api/jobs', 'GET',
@@ -247,7 +247,7 @@
      * Callback function to receive the result of the salvarUsingPOST5 operation.
      * @callback module:api/JobsApi~salvarUsingPOST5Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Job} data The data returned by the service call.
+     * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -258,7 +258,7 @@
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
      * @param {module:api/JobsApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Job}
+     * data is of type: {module:model/JobResponse}
      */
     this.salvarUsingPOST5 = function(descricao, cron, groovy, callback) {
       var postBody = groovy;
@@ -293,7 +293,7 @@
       var authNames = [];
       var contentTypes = ['text/plain'];
       var accepts = ['application/json'];
-      var returnType = Job;
+      var returnType = JobResponse;
 
       return this.apiClient.callApi(
         '/api/jobs', 'POST',

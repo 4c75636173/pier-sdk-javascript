@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET7**](DispositivosApi.md#listarUsingGET7) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET8**](DispositivosApi.md#listarUsingGET8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST3**](DispositivosApi.md#salvarUsingPOST3) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 <a name="ativarUsingPOST"></a>
 # **ativarUsingPOST**
-> Dispositivo ativarUsingPOST(id)
+> DispositivoResponse ativarUsingPOST(id)
 
 Ativa Dispositivo
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="desativarUsingPOST"></a>
 # **desativarUsingPOST**
-> Dispositivo desativarUsingPOST(id)
+> DispositivoResponse desativarUsingPOST(id)
 
 Desativa Dispositivo
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET7"></a>
-# **listarUsingGET7**
-> PageDispositivos listarUsingGET7(opts)
+<a name="listarUsingGET8"></a>
+# **listarUsingGET8**
+> PageDispositivoResponse listarUsingGET8(opts)
 
 Lista os dispositivos cadastrados
 
@@ -133,7 +133,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET7(opts, callback);
+api.listarUsingGET8(opts, callback);
 ```
 
 ### Parameters
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageDispositivos**](PageDispositivos.md)
+[**PageDispositivoResponse**](PageDispositivoResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ No authorization required
 
 <a name="salvarUsingPOST3"></a>
 # **salvarUsingPOST3**
-> Dispositivo salvarUsingPOST3(persist)
+> DispositivoResponse salvarUsingPOST3(persist)
 
 Cadastra Dispositivo
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dispositivo**](Dispositivo.md)
+[**DispositivoResponse**](DispositivoResponse.md)
 
 ### Authorization
 

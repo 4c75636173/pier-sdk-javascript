@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoSimuladaResponse model module.
    * @module model/AntecipacaoSimuladaResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -28,6 +28,10 @@
    * @class
    */
   var exports = function() {
+
+
+
+
 
 
 
@@ -47,17 +51,29 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idSimulacao')) {
-        obj['idSimulacao'] = ApiClient.convertToType(data['idSimulacao'], 'Integer');
-      }
-      if (data.hasOwnProperty('idCompra')) {
-        obj['idCompra'] = ApiClient.convertToType(data['idCompra'], 'Integer');
+      if (data.hasOwnProperty('idAntecipacaoSimulada')) {
+        obj['idAntecipacaoSimulada'] = ApiClient.convertToType(data['idAntecipacaoSimulada'], 'Integer');
       }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
+      if (data.hasOwnProperty('idEventoExterno')) {
+        obj['idEventoExterno'] = ApiClient.convertToType(data['idEventoExterno'], 'Integer');
+      }
+      if (data.hasOwnProperty('idTipoTransacao')) {
+        obj['idTipoTransacao'] = ApiClient.convertToType(data['idTipoTransacao'], 'Integer');
+      }
+      if (data.hasOwnProperty('qtdeParcelasAntecipaveis')) {
+        obj['qtdeParcelasAntecipaveis'] = ApiClient.convertToType(data['qtdeParcelasAntecipaveis'], 'Integer');
+      }
+      if (data.hasOwnProperty('valorParcela')) {
+        obj['valorParcela'] = ApiClient.convertToType(data['valorParcela'], 'Number');
+      }
       if (data.hasOwnProperty('dataHoraSimulacao')) {
         obj['dataHoraSimulacao'] = ApiClient.convertToType(data['dataHoraSimulacao'], 'String');
+      }
+      if (data.hasOwnProperty('taxaAntecipacaoAno')) {
+        obj['taxaAntecipacaoAno'] = ApiClient.convertToType(data['taxaAntecipacaoAno'], 'Number');
       }
       if (data.hasOwnProperty('detalhes')) {
         obj['detalhes'] = ApiClient.convertToType(data['detalhes'], [AntecipacaoSimuladaDetalhesResponse]);
@@ -69,15 +85,9 @@
 
   /**
    * C\u00C3\u00B3digo identificador da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {Integer} idSimulacao
+   * @member {Integer} idAntecipacaoSimulada
    */
-  exports.prototype['idSimulacao'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo identificador da compra.
-   * @member {Integer} idCompra
-   */
-  exports.prototype['idCompra'] = undefined;
+  exports.prototype['idAntecipacaoSimulada'] = undefined;
 
   /**
    * C\u00C3\u00B3digo identificador da conta.
@@ -86,10 +96,40 @@
   exports.prototype['idConta'] = undefined;
 
   /**
+   * C\u00C3\u00B3digo identificador do evento.
+   * @member {Integer} idEventoExterno
+   */
+  exports.prototype['idEventoExterno'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo identificador do tipo do evento.
+   * @member {Integer} idTipoTransacao
+   */
+  exports.prototype['idTipoTransacao'] = undefined;
+
+  /**
+   * Quantidade de parcelas antecip\u00C3\u00A1veis.
+   * @member {Integer} qtdeParcelasAntecipaveis
+   */
+  exports.prototype['qtdeParcelasAntecipaveis'] = undefined;
+
+  /**
+   * Valor da parcela.
+   * @member {Number} valorParcela
+   */
+  exports.prototype['valorParcela'] = undefined;
+
+  /**
    * Data e hora em que a simula\u00C3\u00A7\u00C3\u00A3o foi feita.
    * @member {String} dataHoraSimulacao
    */
   exports.prototype['dataHoraSimulacao'] = undefined;
+
+  /**
+   * Taxa de antecipa\u00C3\u00A7\u00C3\u00A3o aplicada (ao ano).
+   * @member {Number} taxaAntecipacaoAno
+   */
+  exports.prototype['taxaAntecipacaoAno'] = undefined;
 
   /**
    * Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.

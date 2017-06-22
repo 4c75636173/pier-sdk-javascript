@@ -18,7 +18,7 @@
   /**
    * The PessoaPersist model module.
    * @module model/PessoaPersist
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

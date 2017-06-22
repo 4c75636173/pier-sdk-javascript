@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/UsuarioUpdate', '../model/UsuarioResponse', '../model/PageUsuarios', '../model/UsuarioPersist'], factory);
+    define(['../ApiClient', '../model/UsuarioUpdate', '../model/UsuarioResponse', '../model/PageUsuarioResponse', '../model/UsuarioPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/UsuarioUpdate'), require('../model/UsuarioResponse'), require('../model/PageUsuarios'), require('../model/UsuarioPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/UsuarioUpdate'), require('../model/UsuarioResponse'), require('../model/PageUsuarioResponse'), require('../model/UsuarioPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.UsuariosApi = factory(root.Pier.ApiClient, root.Pier.UsuarioUpdate, root.Pier.UsuarioResponse, root.Pier.PageUsuarios, root.Pier.UsuarioPersist);
+    root.Pier.UsuariosApi = factory(root.Pier.ApiClient, root.Pier.UsuarioUpdate, root.Pier.UsuarioResponse, root.Pier.PageUsuarioResponse, root.Pier.UsuarioPersist);
   }
-}(this, function(ApiClient, UsuarioUpdate, UsuarioResponse, PageUsuarios, UsuarioPersist) {
+}(this, function(ApiClient, UsuarioUpdate, UsuarioResponse, PageUsuarioResponse, UsuarioPersist) {
   'use strict';
 
   /**
    * Usuarios service.
    * @module api/UsuariosApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -283,10 +283,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET29 operation.
-     * @callback module:api/UsuariosApi~listarUsingGET29Callback
+     * Callback function to receive the result of the listarUsingGET30 operation.
+     * @callback module:api/UsuariosApi~listarUsingGET30Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageUsuarios} data The data returned by the service call.
+     * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -300,10 +300,10 @@
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuariosApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageUsuarios}
+     * @param {module:api/UsuariosApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET29 = function(opts, callback) {
+    this.listarUsingGET30 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -326,7 +326,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageUsuarios;
+      var returnType = PageUsuarioResponse;
 
       return this.apiClient.callApi(
         '/api/usuarios', 'GET',

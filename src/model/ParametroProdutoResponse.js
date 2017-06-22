@@ -18,7 +18,7 @@
   /**
    * The ParametroProdutoResponse model module.
    * @module model/ParametroProdutoResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -27,15 +27,15 @@
    * @alias module:model/ParametroProdutoResponse
    * @class
    * @param idProduto
-   * @param tipoTransacao
+   * @param tipoOrigemTransacao
    * @param descricao
    * @param valorParametro
    * @param dataValidade
    */
-  var exports = function(idProduto, tipoTransacao, descricao, valorParametro, dataValidade) {
+  var exports = function(idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade) {
 
     this['idProduto'] = idProduto;
-    this['tipoTransacao'] = tipoTransacao;
+    this['tipoOrigemTransacao'] = tipoOrigemTransacao;
     this['descricao'] = descricao;
     this['valorParametro'] = valorParametro;
     this['dataValidade'] = dataValidade;
@@ -55,8 +55,8 @@
       if (data.hasOwnProperty('idProduto')) {
         obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
-      if (data.hasOwnProperty('tipoTransacao')) {
-        obj['tipoTransacao'] = ApiClient.convertToType(data['tipoTransacao'], 'String');
+      if (data.hasOwnProperty('tipoOrigemTransacao')) {
+        obj['tipoOrigemTransacao'] = ApiClient.convertToType(data['tipoOrigemTransacao'], 'String');
       }
       if (data.hasOwnProperty('descricao')) {
         obj['descricao'] = ApiClient.convertToType(data['descricao'], 'String');
@@ -80,9 +80,9 @@
 
   /**
    * Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
-   * @member {module:model/ParametroProdutoResponse.TipoTransacaoEnum} tipoTransacao
+   * @member {module:model/ParametroProdutoResponse.TipoOrigemTransacaoEnum} tipoOrigemTransacao
    */
-  exports.prototype['tipoTransacao'] = undefined;
+  exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
@@ -104,11 +104,11 @@
 
 
   /**
-   * Allowed values for the <code>tipoTransacao</code> property.
+   * Allowed values for the <code>tipoOrigemTransacao</code> property.
    * @enum {String}
    * @readonly
    */
-  exports.TipoTransacaoEnum = { 
+  exports.TipoOrigemTransacaoEnum = { 
     /**
      * value: ON_US
      * @const

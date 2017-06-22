@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listarAuditoriasUsingGET**](OportunidadesApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadesApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadesApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET12**](OportunidadesApi.md#listarUsingGET12) | **GET** /api/oportunidades | Lista as oportunidades
-[**listarUsingGET24**](OportunidadesApi.md#listarUsingGET24) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listarUsingGET13**](OportunidadesApi.md#listarUsingGET13) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET25**](OportunidadesApi.md#listarUsingGET25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadesApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvarUsingPOST11**](OportunidadesApi.md#salvarUsingPOST11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 [**salvarUsingPOST6**](OportunidadesApi.md#salvarUsingPOST6) | **POST** /api/oportunidades | Cadastra as oportunidade
@@ -314,7 +314,7 @@ No authorization required
 
 <a name="listarAuditoriasStatusUsingGET"></a>
 # **listarAuditoriasStatusUsingGET**
-> PageStatusOprtunidadesAUD listarAuditoriasStatusUsingGET(opts)
+> PageStatusOportunidadeAUDResponse listarAuditoriasStatusUsingGET(opts)
 
 Lista as auditorias dos status oportunidades
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusOprtunidadesAUD**](PageStatusOprtunidadesAUD.md)
+[**PageStatusOportunidadeAUDResponse**](PageStatusOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a name="listarAuditoriasUsingGET"></a>
 # **listarAuditoriasUsingGET**
-> PageOprtunidadeAUD listarAuditoriasUsingGET(opts)
+> PageOportunidadeAUDResponse listarAuditoriasUsingGET(opts)
 
 Lista as auditorias das oportunidades
 
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOprtunidadeAUD**](PageOprtunidadeAUD.md)
+[**PageOportunidadeAUDResponse**](PageOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -448,7 +448,7 @@ No authorization required
 
 <a name="listarAuditoriasUsingGET1"></a>
 # **listarAuditoriasUsingGET1**
-> PageTipoOprtunidadesAUD listarAuditoriasUsingGET1(opts)
+> PageTipoOportunidadeAUDResponse listarAuditoriasUsingGET1(opts)
 
 Lista as auditorias dos tipos oportunidades
 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoOprtunidadesAUD**](PageTipoOprtunidadesAUD.md)
+[**PageTipoOportunidadeAUDResponse**](PageTipoOportunidadeAUDResponse.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ No authorization required
 
 <a name="listarStatusUsingGET"></a>
 # **listarStatusUsingGET**
-> PageStatusOprtunidades listarStatusUsingGET(id, opts)
+> PageStatusOportunidadeResponse listarStatusUsingGET(id, opts)
 
 Lista os status do tipo oportunidades
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusOprtunidades**](PageStatusOprtunidades.md)
+[**PageStatusOportunidadeResponse**](PageStatusOportunidadeResponse.md)
 
 ### Authorization
 
@@ -565,9 +565,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageOprtunidadesResponse listarUsingGET12(opts)
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageOportunidadeResponse listarUsingGET13(opts)
 
 Lista as oportunidades
 
@@ -598,7 +598,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET13(opts, callback);
 ```
 
 ### Parameters
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOprtunidadesResponse**](PageOprtunidadesResponse.md)
+[**PageOportunidadeResponse**](PageOportunidadeResponse.md)
 
 ### Authorization
 
@@ -628,9 +628,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageTipoOprtunidades listarUsingGET24(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageTipoOportunidadeResponse listarUsingGET25(opts)
 
 Lista os tipos oportunidades
 
@@ -656,7 +656,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoOprtunidades**](PageTipoOprtunidades.md)
+[**PageTipoOportunidadeResponse**](PageTipoOportunidadeResponse.md)
 
 ### Authorization
 

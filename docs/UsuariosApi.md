@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
 [**consultarUsingGET25**](UsuariosApi.md#consultarUsingGET25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
 [**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listarUsingGET29**](UsuariosApi.md#listarUsingGET29) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
+[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
 [**salvarUsingPOST13**](UsuariosApi.md#salvarUsingPOST13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
@@ -254,9 +254,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET29"></a>
-# **listarUsingGET29**
-> PageUsuarios listarUsingGET29(opts)
+<a name="listarUsingGET30"></a>
+# **listarUsingGET30**
+> PageUsuarioResponse listarUsingGET30(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados
 
@@ -284,7 +284,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET29(opts, callback);
+api.listarUsingGET30(opts, callback);
 ```
 
 ### Parameters
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageUsuarios**](PageUsuarios.md)
+[**PageUsuarioResponse**](PageUsuarioResponse.md)
 
 ### Authorization
 

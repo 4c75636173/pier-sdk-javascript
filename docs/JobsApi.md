@@ -7,13 +7,13 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobsApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT**](JobsApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobsApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET11**](JobsApi.md#listarUsingGET11) | **GET** /api/jobs | Listar Jobs
+[**listarUsingGET12**](JobsApi.md#listarUsingGET12) | **GET** /api/jobs | Listar Jobs
 [**salvarUsingPOST5**](JobsApi.md#salvarUsingPOST5) | **POST** /api/jobs | Cadastrar Job
 
 
 <a name="ativarJobUsingPOST"></a>
 # **ativarJobUsingPOST**
-> Job ativarJobUsingPOST(id)
+> JobResponse ativarJobUsingPOST(id)
 
 Ativar Job
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 <a name="atualizarUsingPUT"></a>
 # **atualizarUsingPUT**
-> Job atualizarUsingPUT(id, descricao, cron, groovy)
+> JobResponse atualizarUsingPUT(id, descricao, cron, groovy)
 
 Atualizar Job
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ No authorization required
 
 <a name="desativarJobUsingPOST"></a>
 # **desativarJobUsingPOST**
-> Job desativarJobUsingPOST(id)
+> JobResponse desativarJobUsingPOST(id)
 
 Desativar Job
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
@@ -158,9 +158,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageJob listarUsingGET11(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageJobResponse listarUsingGET12(opts)
 
 Listar Jobs
 
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageJob**](PageJob.md)
+[**PageJobResponse**](PageJobResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ No authorization required
 
 <a name="salvarUsingPOST5"></a>
 # **salvarUsingPOST5**
-> Job salvarUsingPOST5(descricao, cron, groovy)
+> JobResponse salvarUsingPOST5(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 

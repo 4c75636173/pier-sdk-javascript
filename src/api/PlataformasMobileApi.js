@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/PlataformaMobileUpdate', '../model/PlataformaMobile', '../model/PagePlataformasMobile', '../model/PlataformaMobilePersist'], factory);
+    define(['../ApiClient', '../model/PlataformaMobileUpdate', '../model/PlataformaMobileResponse', '../model/PagePlataformaMobileResponse', '../model/PlataformaMobilePersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PlataformaMobileUpdate'), require('../model/PlataformaMobile'), require('../model/PagePlataformasMobile'), require('../model/PlataformaMobilePersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/PlataformaMobileUpdate'), require('../model/PlataformaMobileResponse'), require('../model/PagePlataformaMobileResponse'), require('../model/PlataformaMobilePersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PlataformasMobileApi = factory(root.Pier.ApiClient, root.Pier.PlataformaMobileUpdate, root.Pier.PlataformaMobile, root.Pier.PagePlataformasMobile, root.Pier.PlataformaMobilePersist);
+    root.Pier.PlataformasMobileApi = factory(root.Pier.ApiClient, root.Pier.PlataformaMobileUpdate, root.Pier.PlataformaMobileResponse, root.Pier.PagePlataformaMobileResponse, root.Pier.PlataformaMobilePersist);
   }
-}(this, function(ApiClient, PlataformaMobileUpdate, PlataformaMobile, PagePlataformasMobile, PlataformaMobilePersist) {
+}(this, function(ApiClient, PlataformaMobileUpdate, PlataformaMobileResponse, PagePlataformaMobileResponse, PlataformaMobilePersist) {
   'use strict';
 
   /**
    * PlataformasMobile service.
    * @module api/PlataformasMobileApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the atualizarUsingPUT1 operation.
      * @callback module:api/PlataformasMobileApi~atualizarUsingPUT1Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PlataformaMobile} data The data returned by the service call.
+     * @param {module:model/PlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -46,7 +46,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
      * @param {module:model/PlataformaMobileUpdate} update update
      * @param {module:api/PlataformasMobileApi~atualizarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PlataformaMobile}
+     * data is of type: {module:model/PlataformaMobileResponse}
      */
     this.atualizarUsingPUT1 = function(id, update, callback) {
       var postBody = update;
@@ -75,7 +75,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PlataformaMobile;
+      var returnType = PlataformaMobileResponse;
 
       return this.apiClient.callApi(
         '/api/plataformas-mobile/{id}', 'PUT',
@@ -85,10 +85,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET15 operation.
-     * @callback module:api/PlataformasMobileApi~listarUsingGET15Callback
+     * Callback function to receive the result of the listarUsingGET16 operation.
+     * @callback module:api/PlataformasMobileApi~listarUsingGET16Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PagePlataformasMobile} data The data returned by the service call.
+     * @param {module:model/PagePlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -99,10 +99,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome da Plataforma Mobile
-     * @param {module:api/PlataformasMobileApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PagePlataformasMobile}
+     * @param {module:api/PlataformasMobileApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PagePlataformaMobileResponse}
      */
-    this.listarUsingGET15 = function(opts, callback) {
+    this.listarUsingGET16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -122,7 +122,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PagePlataformasMobile;
+      var returnType = PagePlataformaMobileResponse;
 
       return this.apiClient.callApi(
         '/api/plataformas-mobile', 'GET',
@@ -135,7 +135,7 @@
      * Callback function to receive the result of the salvarUsingPOST9 operation.
      * @callback module:api/PlataformasMobileApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PlataformaMobile} data The data returned by the service call.
+     * @param {module:model/PlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -144,7 +144,7 @@
      * Esse recurso permite cadastrar plataformas mobile.
      * @param {module:model/PlataformaMobilePersist} persist persist
      * @param {module:api/PlataformasMobileApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PlataformaMobile}
+     * data is of type: {module:model/PlataformaMobileResponse}
      */
     this.salvarUsingPOST9 = function(persist, callback) {
       var postBody = persist;
@@ -167,7 +167,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PlataformaMobile;
+      var returnType = PlataformaMobileResponse;
 
       return this.apiClient.callApi(
         '/api/plataformas-mobile', 'POST',

@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET26**](WebhooksApi.md#consultarUsingGET26) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET30**](WebhooksApi.md#listarUsingGET30) | **GET** /api/webhooks | Lista os Webhooks
+[**listarUsingGET31**](WebhooksApi.md#listarUsingGET31) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST14**](WebhooksApi.md#salvarUsingPOST14) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT10"></a>
 # **alterarUsingPUT10**
-> WebHook alterarUsingPUT10(id, tipoEvento, url)
+> WebHookResponse alterarUsingPUT10(id, tipoEvento, url)
 
 Alterar Webhook
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 
 <a name="consultarUsingGET26"></a>
 # **consultarUsingGET26**
-> WebHook consultarUsingGET26(id)
+> WebHookResponse consultarUsingGET26(id)
 
 Consultar Webhook
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 
@@ -108,9 +108,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET30"></a>
-# **listarUsingGET30**
-> PageWebHooks listarUsingGET30(opts)
+<a name="listarUsingGET31"></a>
+# **listarUsingGET31**
+> PageWebHookResponse listarUsingGET31(opts)
 
 Lista os Webhooks
 
@@ -138,7 +138,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET30(opts, callback);
+api.listarUsingGET31(opts, callback);
 ```
 
 ### Parameters
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageWebHooks**](PageWebHooks.md)
+[**PageWebHookResponse**](PageWebHookResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ No authorization required
 
 <a name="salvarUsingPOST14"></a>
 # **salvarUsingPOST14**
-> WebHook salvarUsingPOST14(tipoEvento, url)
+> WebHookResponse salvarUsingPOST14(tipoEvento, url)
 
 Salvar Webhook
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebHook**](WebHook.md)
+[**WebHookResponse**](WebHookResponse.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

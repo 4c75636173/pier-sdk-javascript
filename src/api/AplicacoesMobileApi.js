@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AplicacaoMobileUpdate', '../model/AplicacaoMobile', '../model/PageAplicacoesMobile', '../model/AplicacaoMobilePersist'], factory);
+    define(['../ApiClient', '../model/AplicacaoMobileUpdate', '../model/AplicacaoMobileResponse', '../model/PageAplicacaoMobileResponse', '../model/AplicacaoMobilePersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AplicacaoMobileUpdate'), require('../model/AplicacaoMobile'), require('../model/PageAplicacoesMobile'), require('../model/AplicacaoMobilePersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/AplicacaoMobileUpdate'), require('../model/AplicacaoMobileResponse'), require('../model/PageAplicacaoMobileResponse'), require('../model/AplicacaoMobilePersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AplicacoesMobileApi = factory(root.Pier.ApiClient, root.Pier.AplicacaoMobileUpdate, root.Pier.AplicacaoMobile, root.Pier.PageAplicacoesMobile, root.Pier.AplicacaoMobilePersist);
+    root.Pier.AplicacoesMobileApi = factory(root.Pier.ApiClient, root.Pier.AplicacaoMobileUpdate, root.Pier.AplicacaoMobileResponse, root.Pier.PageAplicacaoMobileResponse, root.Pier.AplicacaoMobilePersist);
   }
-}(this, function(ApiClient, AplicacaoMobileUpdate, AplicacaoMobile, PageAplicacoesMobile, AplicacaoMobilePersist) {
+}(this, function(ApiClient, AplicacaoMobileUpdate, AplicacaoMobileResponse, PageAplicacaoMobileResponse, AplicacaoMobilePersist) {
   'use strict';
 
   /**
    * AplicacoesMobile service.
    * @module api/AplicacoesMobileApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the atualizarUsingPUT operation.
      * @callback module:api/AplicacoesMobileApi~atualizarUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AplicacaoMobile} data The data returned by the service call.
+     * @param {module:model/AplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -46,7 +46,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
      * @param {module:model/AplicacaoMobileUpdate} update update
      * @param {module:api/AplicacoesMobileApi~atualizarUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/AplicacaoMobile}
+     * data is of type: {module:model/AplicacaoMobileResponse}
      */
     this.atualizarUsingPUT = function(id, update, callback) {
       var postBody = update;
@@ -75,7 +75,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = AplicacaoMobile;
+      var returnType = AplicacaoMobileResponse;
 
       return this.apiClient.callApi(
         '/api/aplicacoes-mobile/{id}', 'PUT',
@@ -88,7 +88,7 @@
      * Callback function to receive the result of the listarUsingGET operation.
      * @callback module:api/AplicacoesMobileApi~listarUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageAplicacoesMobile} data The data returned by the service call.
+     * @param {module:model/PageAplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -101,7 +101,7 @@
      * @param {String} opts.id Identificador da Aplicacao Mobile
      * @param {Integer} opts.idPlataformaMobile Identificador da Plataforma Mobile
      * @param {module:api/AplicacoesMobileApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageAplicacoesMobile}
+     * data is of type: {module:model/PageAplicacaoMobileResponse}
      */
     this.listarUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -124,7 +124,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageAplicacoesMobile;
+      var returnType = PageAplicacaoMobileResponse;
 
       return this.apiClient.callApi(
         '/api/aplicacoes-mobile', 'GET',
@@ -137,7 +137,7 @@
      * Callback function to receive the result of the salvarUsingPOST operation.
      * @callback module:api/AplicacoesMobileApi~salvarUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AplicacaoMobile} data The data returned by the service call.
+     * @param {module:model/AplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -146,7 +146,7 @@
      * Esse recurso permite cadastrar aplicacoes mobile.
      * @param {module:model/AplicacaoMobilePersist} persist persist
      * @param {module:api/AplicacoesMobileApi~salvarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/AplicacaoMobile}
+     * data is of type: {module:model/AplicacaoMobileResponse}
      */
     this.salvarUsingPOST = function(persist, callback) {
       var postBody = persist;
@@ -169,7 +169,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = AplicacaoMobile;
+      var returnType = AplicacaoMobileResponse;
 
       return this.apiClient.callApi(
         '/api/aplicacoes-mobile', 'POST',

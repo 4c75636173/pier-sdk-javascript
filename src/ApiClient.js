@@ -17,7 +17,7 @@
 
   /**
    * @module ApiClient
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="atualizarSMSUsingPOST"></a>
 # **atualizarSMSUsingPOST**
-> SMS atualizarSMSUsingPOST(opts)
+> NotificacaoSMSResponse atualizarSMSUsingPOST(opts)
 
 Atualizar SMS
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SMS**](SMS.md)
+[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 <a name="listarPushUsingGET"></a>
 # **listarPushUsingGET**
-> PagePush listarPushUsingGET(opts)
+> PagePushResponse listarPushUsingGET(opts)
 
 Listar Push
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePush**](PagePush.md)
+[**PagePushResponse**](PagePushResponse.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="listarSMSUsingGET"></a>
 # **listarSMSUsingGET**
-> PageSMS listarSMSUsingGET(opts)
+> PageSMSResponse listarSMSUsingGET(opts)
 
 Listar SMS
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageSMS**](PageSMS.md)
+[**PageSMSResponse**](PageSMSResponse.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a name="responderSMSUsingPOST"></a>
 # **responderSMSUsingPOST**
-> SMS responderSMSUsingPOST(opts)
+> NotificacaoSMSResponse responderSMSUsingPOST(opts)
 
 Responder SMS
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SMS**](SMS.md)
+[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 
 <a name="salvarPushFCMUsingPOST"></a>
 # **salvarPushFCMUsingPOST**
-> NotificacaoSMSResponse salvarPushFCMUsingPOST(pushPersists)
+> NotificacaoResponse salvarPushFCMUsingPOST(pushPersists)
 
 Enviar Push FCM
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ No authorization required
 
 <a name="salvarPushGCMUsingPOST"></a>
 # **salvarPushGCMUsingPOST**
-> NotificacaoSMSResponse salvarPushGCMUsingPOST(pushPersists)
+> NotificacaoResponse salvarPushGCMUsingPOST(pushPersists)
 
 Enviar Push GCM
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ No authorization required
 
 <a name="salvarPushUsingPOST"></a>
 # **salvarPushUsingPOST**
-> NotificacaoSMSResponse salvarPushUsingPOST(pushPersists)
+> NotificacaoResponse salvarPushUsingPOST(pushPersists)
 
 Enviar Push APNS
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ No authorization required
 
 <a name="salvarSMSUsingPOST"></a>
 # **salvarSMSUsingPOST**
-> NotificacaoSMSResponse salvarSMSUsingPOST(listaSMS)
+> NotificacaoResponse salvarSMSUsingPOST(listaSMS)
 
 Enviar SMS
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoSMSResponse**](NotificacaoSMSResponse.md)
+[**NotificacaoResponse**](NotificacaoResponse.md)
 
 ### Authorization
 

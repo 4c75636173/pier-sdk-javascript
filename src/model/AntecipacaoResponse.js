@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoResponse model module.
    * @module model/AntecipacaoResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -27,6 +27,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -62,8 +65,17 @@
       if (data.hasOwnProperty('quantidadeParcelasAntecipadas')) {
         obj['quantidadeParcelasAntecipadas'] = ApiClient.convertToType(data['quantidadeParcelasAntecipadas'], 'Integer');
       }
-      if (data.hasOwnProperty('valorParcelas')) {
-        obj['valorParcelas'] = ApiClient.convertToType(data['valorParcelas'], 'Number');
+      if (data.hasOwnProperty('valorParcela')) {
+        obj['valorParcela'] = ApiClient.convertToType(data['valorParcela'], 'Number');
+      }
+      if (data.hasOwnProperty('valorDescontoTotal')) {
+        obj['valorDescontoTotal'] = ApiClient.convertToType(data['valorDescontoTotal'], 'Number');
+      }
+      if (data.hasOwnProperty('valorTotalComDesconto')) {
+        obj['valorTotalComDesconto'] = ApiClient.convertToType(data['valorTotalComDesconto'], 'Number');
+      }
+      if (data.hasOwnProperty('taxaDesconto')) {
+        obj['taxaDesconto'] = ApiClient.convertToType(data['taxaDesconto'], 'Number');
       }
     }
     return obj;
@@ -89,7 +101,7 @@
   exports.prototype['idCompra'] = undefined;
 
   /**
-   * Apresenta o numero total de parcelas da comprae
+   * Apresenta o numero total de parcelas da compra
    * @member {Integer} quantidadeParcelasTotal
    */
   exports.prototype['quantidadeParcelasTotal'] = undefined;
@@ -101,10 +113,28 @@
   exports.prototype['quantidadeParcelasAntecipadas'] = undefined;
 
   /**
-   * Apresenta o valor das parcelas efetivadas
-   * @member {Number} valorParcelas
+   * Apresenta o valor de cada parcela antecipadas
+   * @member {Number} valorParcela
    */
-  exports.prototype['valorParcelas'] = undefined;
+  exports.prototype['valorParcela'] = undefined;
+
+  /**
+   * Apresenta o valor total do desconto
+   * @member {Number} valorDescontoTotal
+   */
+  exports.prototype['valorDescontoTotal'] = undefined;
+
+  /**
+   * Apresenta o valor total com desconto
+   * @member {Number} valorTotalComDesconto
+   */
+  exports.prototype['valorTotalComDesconto'] = undefined;
+
+  /**
+   * Apresenta a taxa de desconto
+   * @member {Number} taxaDesconto
+   */
+  exports.prototype['taxaDesconto'] = undefined;
 
 
 

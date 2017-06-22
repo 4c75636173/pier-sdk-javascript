@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/FAQ', '../model/PageFaqs'], factory);
+    define(['../ApiClient', '../model/FaqResponse', '../model/PageFaqResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/FAQ'), require('../model/PageFaqs'));
+    module.exports = factory(require('../ApiClient'), require('../model/FaqResponse'), require('../model/PageFaqResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.FAQApi = factory(root.Pier.ApiClient, root.Pier.FAQ, root.Pier.PageFaqs);
+    root.Pier.FAQApi = factory(root.Pier.ApiClient, root.Pier.FaqResponse, root.Pier.PageFaqResponse);
   }
-}(this, function(ApiClient, FAQ, PageFaqs) {
+}(this, function(ApiClient, FaqResponse, PageFaqResponse) {
   'use strict';
 
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the adicionarUsingPOST operation.
      * @callback module:api/FAQApi~adicionarUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/FAQ} data The data returned by the service call.
+     * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +51,7 @@
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
      * @param {module:api/FAQApi~adicionarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FAQ}
+     * data is of type: {module:model/FaqResponse}
      */
     this.adicionarUsingPOST = function(pergunta, resposta, opts, callback) {
       opts = opts || {};
@@ -86,7 +86,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = FAQ;
+      var returnType = FaqResponse;
 
       return this.apiClient.callApi(
         '/api/faqs', 'POST',
@@ -99,7 +99,7 @@
      * Callback function to receive the result of the alterarUsingPUT2 operation.
      * @callback module:api/FAQApi~alterarUsingPUT2Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/FAQ} data The data returned by the service call.
+     * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -115,7 +115,7 @@
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
      * @param {module:api/FAQApi~alterarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FAQ}
+     * data is of type: {module:model/FaqResponse}
      */
     this.alterarUsingPUT2 = function(id, pergunta, resposta, opts, callback) {
       opts = opts || {};
@@ -156,7 +156,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = FAQ;
+      var returnType = FaqResponse;
 
       return this.apiClient.callApi(
         '/api/faqs/{id}', 'PUT',
@@ -169,7 +169,7 @@
      * Callback function to receive the result of the consultarUsingGET7 operation.
      * @callback module:api/FAQApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/FAQ} data The data returned by the service call.
+     * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -178,7 +178,7 @@
      * Consulta os detalhes de uma determinada FAQ
      * @param {Integer} id Id
      * @param {module:api/FAQApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FAQ}
+     * data is of type: {module:model/FaqResponse}
      */
     this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
@@ -202,7 +202,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = FAQ;
+      var returnType = FaqResponse;
 
       return this.apiClient.callApi(
         '/api/faqs/{id}', 'GET',
@@ -212,10 +212,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET10 operation.
-     * @callback module:api/FAQApi~listarUsingGET10Callback
+     * Callback function to receive the result of the listarUsingGET11 operation.
+     * @callback module:api/FAQApi~listarUsingGET11Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageFaqs} data The data returned by the service call.
+     * @param {module:model/PageFaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -232,10 +232,10 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageFaqs}
+     * @param {module:api/FAQApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageFaqResponse}
      */
-    this.listarUsingGET10 = function(opts, callback) {
+    this.listarUsingGET11 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -261,7 +261,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageFaqs;
+      var returnType = PageFaqResponse;
 
       return this.apiClient.callApi(
         '/api/faqs', 'GET',

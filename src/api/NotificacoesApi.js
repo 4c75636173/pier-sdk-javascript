@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/SMS', '../model/PagePush', '../model/PageSMS', '../model/NotificacaoSMSResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody'], factory);
+    define(['../ApiClient', '../model/NotificacaoSMSResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SMS'), require('../model/PagePush'), require('../model/PageSMS'), require('../model/NotificacaoSMSResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'));
+    module.exports = factory(require('../ApiClient'), require('../model/NotificacaoSMSResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacoesApi = factory(root.Pier.ApiClient, root.Pier.SMS, root.Pier.PagePush, root.Pier.PageSMS, root.Pier.NotificacaoSMSResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody);
+    root.Pier.NotificacoesApi = factory(root.Pier.ApiClient, root.Pier.NotificacaoSMSResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody);
   }
-}(this, function(ApiClient, SMS, PagePush, PageSMS, NotificacaoSMSResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody) {
+}(this, function(ApiClient, NotificacaoSMSResponse, PagePushResponse, PageSMSResponse, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody) {
   'use strict';
 
   /**
    * Notificacoes service.
    * @module api/NotificacoesApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the atualizarSMSUsingPOST operation.
      * @callback module:api/NotificacoesApi~atualizarSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SMS} data The data returned by the service call.
+     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@
      * @param {String} opts.textoStatus TextoStatus
      * @param {String} opts.operadora Operadora
      * @param {module:api/NotificacoesApi~atualizarSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/SMS}
+     * data is of type: {module:model/NotificacaoSMSResponse}
      */
     this.atualizarSMSUsingPOST = function(opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = SMS;
+      var returnType = NotificacaoSMSResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/sms/atualizar-status', 'POST',
@@ -87,7 +87,7 @@
      * Callback function to receive the result of the listarPushUsingGET operation.
      * @callback module:api/NotificacoesApi~listarPushUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PagePush} data The data returned by the service call.
+     * @param {module:model/PagePushResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -103,7 +103,7 @@
      * @param {module:model/String} opts.plataforma Plataforma de Push notifications.
      * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
      * @param {module:api/NotificacoesApi~listarPushUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PagePush}
+     * data is of type: {module:model/PagePushResponse}
      */
     this.listarPushUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -129,7 +129,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PagePush;
+      var returnType = PagePushResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/push', 'GET',
@@ -142,7 +142,7 @@
      * Callback function to receive the result of the listarSMSUsingGET operation.
      * @callback module:api/NotificacoesApi~listarSMSUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageSMS} data The data returned by the service call.
+     * @param {module:model/PageSMSResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -159,7 +159,7 @@
      * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
      * @param {Integer} opts.nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
      * @param {module:api/NotificacoesApi~listarSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageSMS}
+     * data is of type: {module:model/PageSMSResponse}
      */
     this.listarSMSUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -186,7 +186,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageSMS;
+      var returnType = PageSMSResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/sms', 'GET',
@@ -199,7 +199,7 @@
      * Callback function to receive the result of the responderSMSUsingPOST operation.
      * @callback module:api/NotificacoesApi~responderSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SMS} data The data returned by the service call.
+     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -211,7 +211,7 @@
      * @param {String} opts.data Data
      * @param {String} opts.resposta TextoStatus
      * @param {module:api/NotificacoesApi~responderSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/SMS}
+     * data is of type: {module:model/NotificacaoSMSResponse}
      */
     this.responderSMSUsingPOST = function(opts, callback) {
       opts = opts || {};
@@ -233,7 +233,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = SMS;
+      var returnType = NotificacaoSMSResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/sms/responder', 'POST',
@@ -246,7 +246,7 @@
      * Callback function to receive the result of the salvarPushFCMUsingPOST operation.
      * @callback module:api/NotificacoesApi~salvarPushFCMUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
+     * @param {module:model/NotificacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -255,7 +255,7 @@
      * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
      * @param {Array.<module:model/PushFCMEGCM>} pushPersists pushPersists
      * @param {module:api/NotificacoesApi~salvarPushFCMUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NotificacaoSMSResponse}
+     * data is of type: {module:model/NotificacaoResponse}
      */
     this.salvarPushFCMUsingPOST = function(pushPersists, callback) {
       var postBody = pushPersists;
@@ -278,7 +278,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = NotificacaoSMSResponse;
+      var returnType = NotificacaoResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/push/fcm', 'POST',
@@ -291,7 +291,7 @@
      * Callback function to receive the result of the salvarPushGCMUsingPOST operation.
      * @callback module:api/NotificacoesApi~salvarPushGCMUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
+     * @param {module:model/NotificacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -300,7 +300,7 @@
      * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
      * @param {Array.<module:model/PushFCMEGCM>} pushPersists pushPersists
      * @param {module:api/NotificacoesApi~salvarPushGCMUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NotificacaoSMSResponse}
+     * data is of type: {module:model/NotificacaoResponse}
      */
     this.salvarPushGCMUsingPOST = function(pushPersists, callback) {
       var postBody = pushPersists;
@@ -323,7 +323,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = NotificacaoSMSResponse;
+      var returnType = NotificacaoResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/push/gcm', 'POST',
@@ -336,7 +336,7 @@
      * Callback function to receive the result of the salvarPushUsingPOST operation.
      * @callback module:api/NotificacoesApi~salvarPushUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
+     * @param {module:model/NotificacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -345,7 +345,7 @@
      * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
      * @param {Array.<module:model/PushAPNS>} pushPersists pushPersists
      * @param {module:api/NotificacoesApi~salvarPushUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NotificacaoSMSResponse}
+     * data is of type: {module:model/NotificacaoResponse}
      */
     this.salvarPushUsingPOST = function(pushPersists, callback) {
       var postBody = pushPersists;
@@ -368,7 +368,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = NotificacaoSMSResponse;
+      var returnType = NotificacaoResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/push/apns', 'POST',
@@ -381,7 +381,7 @@
      * Callback function to receive the result of the salvarSMSUsingPOST operation.
      * @callback module:api/NotificacoesApi~salvarSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
+     * @param {module:model/NotificacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -390,7 +390,7 @@
      * Esse recurso permite enviar uma lista de SMS.
      * @param {Array.<module:model/NotificacaoSMSBody>} listaSMS listaSMS
      * @param {module:api/NotificacoesApi~salvarSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NotificacaoSMSResponse}
+     * data is of type: {module:model/NotificacaoResponse}
      */
     this.salvarSMSUsingPOST = function(listaSMS, callback) {
       var postBody = listaSMS;
@@ -413,7 +413,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = NotificacaoSMSResponse;
+      var returnType = NotificacaoResponse;
 
       return this.apiClient.callApi(
         '/api/notificacoes/sms', 'POST',

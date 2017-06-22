@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET16**](EstabelecimentosApi.md#consultarUsingGET16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultarUsingGET6**](EstabelecimentosApi.md#consultarUsingGET6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET22**](EstabelecimentosApi.md#listarUsingGET22) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listarUsingGET9**](EstabelecimentosApi.md#listarUsingGET9) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 <a name="consultarUsingGET16"></a>
 # **consultarUsingGET16**
-> Terminal consultarUsingGET16(id)
+> TerminalResponse consultarUsingGET16(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Terminal**](Terminal.md)
+[**TerminalResponse**](TerminalResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="consultarUsingGET6"></a>
 # **consultarUsingGET6**
-> Estabelecimento consultarUsingGET6(id)
+> EstabelecimentoResponse consultarUsingGET6(id)
 
 Consultar estabelecimento por id
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Estabelecimento**](Estabelecimento.md)
+[**EstabelecimentoResponse**](EstabelecimentoResponse.md)
 
 ### Authorization
 
@@ -102,66 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageTerminal listarUsingGET22(opts)
-
-Lista os Terminais cadastrados no Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.EstabelecimentosApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-  'terminal': "terminal_example", // {String} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-  'numeroEstabelecimento': 789, // {Integer} N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-  'idEstabelecimento': 789 // {Integer} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET22(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
- **terminal** | **String**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
- **numeroEstabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
- **idEstabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
-
-### Return type
-
-[**PageTerminal**](PageTerminal.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageEstabelecimentos listarUsingGET9(opts)
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageEstabelecimentoResponse listarUsingGET10(opts)
 
 Lista Estabelecimentos
 
@@ -204,7 +147,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(opts, callback);
+api.listarUsingGET10(opts, callback);
 ```
 
 ### Parameters
@@ -235,7 +178,64 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEstabelecimentos**](PageEstabelecimentos.md)
+[**PageEstabelecimentoResponse**](PageEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET23"></a>
+# **listarUsingGET23**
+> PageTerminalResponse listarUsingGET23(opts)
+
+Lista os Terminais cadastrados no Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentosApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+  'terminal': "terminal_example", // {String} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+  'numeroEstabelecimento': 789, // {Integer} N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+  'idEstabelecimento': 789 // {Integer} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET23(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 
+ **terminal** | **String**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal. | [optional] 
+ **numeroEstabelecimento** | **Integer**| N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence. | [optional] 
+ **idEstabelecimento** | **Integer**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence. | [optional] 
+
+### Return type
+
+[**PageTerminalResponse**](PageTerminalResponse.md)
 
 ### Authorization
 

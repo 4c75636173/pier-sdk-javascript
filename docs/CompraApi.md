@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**efetivarAntecipacaoUsingPOST**](CompraApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET5**](CompraApi.md#listarUsingGET5) | **GET** /api/compras | Listar compras
+[**listarUsingGET6**](CompraApi.md#listarUsingGET6) | **GET** /api/compras | Listar compras
 [**simularAntecipacaoUsingGET**](CompraApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -25,9 +25,9 @@ var apiInstance = new Pier.CompraApi()
 
 var idConta = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
 
-var quantidadeParcelas = 789; // {Integer} Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+var quantidadeParcelas = 789; // {Integer} Quantidade de parcelas para serem antecipadas.
 
 
 var callback = function(error, data, response) {
@@ -45,8 +45,8 @@ api.efetivarAntecipacaoUsingPOST(idConta, id, quantidadeParcelas, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta. | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
- **quantidadeParcelas** | **Integer**| Quantidade de parcelas para serem antecipadas (quantidadeParcelas). | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
+ **quantidadeParcelas** | **Integer**| Quantidade de parcelas para serem antecipadas. | 
 
 ### Return type
 
@@ -61,9 +61,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET5"></a>
-# **listarUsingGET5**
-> PageCompras listarUsingGET5(idConta, opts)
+<a name="listarUsingGET6"></a>
+# **listarUsingGET6**
+> PageCompraResponse listarUsingGET6(idConta, opts)
 
 Listar compras
 
@@ -83,7 +83,7 @@ var opts = {
   'idCompra': 789, // {Integer} C\u00C3\u00B3digo identificador da Compra.
   'parcelada': true, // {Boolean} Indica se a compra \u00C3\u00A9 parcelada.
   'juros': true, // {Boolean} Indica se a compra \u00C3\u00A9 com ou sem juros.
-  'tipoTransacao': "tipoTransacao_example" // {String} Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+  'tipoOrigemTransacao': "tipoOrigemTransacao_example" // {String} Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
 };
 
 var callback = function(error, data, response) {
@@ -93,7 +93,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET5(idConta, opts, callback);
+api.listarUsingGET6(idConta, opts, callback);
 ```
 
 ### Parameters
@@ -106,11 +106,11 @@ Name | Type | Description  | Notes
  **idCompra** | **Integer**| C\u00C3\u00B3digo identificador da Compra. | [optional] 
  **parcelada** | **Boolean**| Indica se a compra \u00C3\u00A9 parcelada. | [optional] 
  **juros** | **Boolean**| Indica se a compra \u00C3\u00A9 com ou sem juros. | [optional] 
- **tipoTransacao** | **String**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
+ **tipoOrigemTransacao** | **String**| Indica se a compra \u00C3\u00A9 ON-US ou OFF-US | [optional] 
 
 ### Return type
 
-[**PageCompras**](PageCompras.md)
+[**PageCompraResponse**](PageCompraResponse.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 
 Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
-Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
 
 ### Example
 ```javascript
@@ -135,9 +135,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.CompraApi()
 
-var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
 
 
 var callback = function(error, data, response) {
@@ -154,8 +154,8 @@ api.simularAntecipacaoUsingGET(idConta, id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra. | 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta. | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento. | 
 
 ### Return type
 

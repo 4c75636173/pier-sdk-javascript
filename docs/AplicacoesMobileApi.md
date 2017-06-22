@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="atualizarUsingPUT"></a>
 # **atualizarUsingPUT**
-> AplicacaoMobile atualizarUsingPUT(id, update)
+> AplicacaoMobileResponse atualizarUsingPUT(id, update)
 
 Atualiza Aplicacao Mobile
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AplicacaoMobile**](AplicacaoMobile.md)
+[**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 
 <a name="listarUsingGET"></a>
 # **listarUsingGET**
-> PageAplicacoesMobile listarUsingGET(opts)
+> PageAplicacaoMobileResponse listarUsingGET(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageAplicacoesMobile**](PageAplicacoesMobile.md)
+[**PageAplicacaoMobileResponse**](PageAplicacaoMobileResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 
 <a name="salvarUsingPOST"></a>
 # **salvarUsingPOST**
-> AplicacaoMobile salvarUsingPOST(persist)
+> AplicacaoMobileResponse salvarUsingPOST(persist)
 
 Cadastra Aplicacao Mobile
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AplicacaoMobile**](AplicacaoMobile.md)
+[**AplicacaoMobileResponse**](AplicacaoMobileResponse.md)
 
 ### Authorization
 

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/StatusOportunidadeResponse', '../model/StatusOportunidade', '../model/OportunidadeResponse', '../model/OportunidadeUpdate', '../model/TipoOportunidade', '../model/TipoOportunidadeResponse', '../model/PageStatusOprtunidadesAUD', '../model/PageOprtunidadeAUD', '../model/PageTipoOprtunidadesAUD', '../model/PageStatusOprtunidades', '../model/PageOprtunidadesResponse', '../model/PageTipoOprtunidades', '../model/OportunidadePersist'], factory);
+    define(['../ApiClient', '../model/StatusOportunidadeResponse', '../model/StatusOportunidade', '../model/OportunidadeResponse', '../model/OportunidadeUpdate', '../model/TipoOportunidade', '../model/TipoOportunidadeResponse', '../model/PageStatusOportunidadeAUDResponse', '../model/PageOportunidadeAUDResponse', '../model/PageTipoOportunidadeAUDResponse', '../model/PageStatusOportunidadeResponse', '../model/PageOportunidadeResponse', '../model/PageTipoOportunidadeResponse', '../model/OportunidadePersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/StatusOportunidadeResponse'), require('../model/StatusOportunidade'), require('../model/OportunidadeResponse'), require('../model/OportunidadeUpdate'), require('../model/TipoOportunidade'), require('../model/TipoOportunidadeResponse'), require('../model/PageStatusOprtunidadesAUD'), require('../model/PageOprtunidadeAUD'), require('../model/PageTipoOprtunidadesAUD'), require('../model/PageStatusOprtunidades'), require('../model/PageOprtunidadesResponse'), require('../model/PageTipoOprtunidades'), require('../model/OportunidadePersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/StatusOportunidadeResponse'), require('../model/StatusOportunidade'), require('../model/OportunidadeResponse'), require('../model/OportunidadeUpdate'), require('../model/TipoOportunidade'), require('../model/TipoOportunidadeResponse'), require('../model/PageStatusOportunidadeAUDResponse'), require('../model/PageOportunidadeAUDResponse'), require('../model/PageTipoOportunidadeAUDResponse'), require('../model/PageStatusOportunidadeResponse'), require('../model/PageOportunidadeResponse'), require('../model/PageTipoOportunidadeResponse'), require('../model/OportunidadePersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.OportunidadesApi = factory(root.Pier.ApiClient, root.Pier.StatusOportunidadeResponse, root.Pier.StatusOportunidade, root.Pier.OportunidadeResponse, root.Pier.OportunidadeUpdate, root.Pier.TipoOportunidade, root.Pier.TipoOportunidadeResponse, root.Pier.PageStatusOprtunidadesAUD, root.Pier.PageOprtunidadeAUD, root.Pier.PageTipoOprtunidadesAUD, root.Pier.PageStatusOprtunidades, root.Pier.PageOprtunidadesResponse, root.Pier.PageTipoOprtunidades, root.Pier.OportunidadePersist);
+    root.Pier.OportunidadesApi = factory(root.Pier.ApiClient, root.Pier.StatusOportunidadeResponse, root.Pier.StatusOportunidade, root.Pier.OportunidadeResponse, root.Pier.OportunidadeUpdate, root.Pier.TipoOportunidade, root.Pier.TipoOportunidadeResponse, root.Pier.PageStatusOportunidadeAUDResponse, root.Pier.PageOportunidadeAUDResponse, root.Pier.PageTipoOportunidadeAUDResponse, root.Pier.PageStatusOportunidadeResponse, root.Pier.PageOportunidadeResponse, root.Pier.PageTipoOportunidadeResponse, root.Pier.OportunidadePersist);
   }
-}(this, function(ApiClient, StatusOportunidadeResponse, StatusOportunidade, OportunidadeResponse, OportunidadeUpdate, TipoOportunidade, TipoOportunidadeResponse, PageStatusOprtunidadesAUD, PageOprtunidadeAUD, PageTipoOprtunidadesAUD, PageStatusOprtunidades, PageOprtunidadesResponse, PageTipoOprtunidades, OportunidadePersist) {
+}(this, function(ApiClient, StatusOportunidadeResponse, StatusOportunidade, OportunidadeResponse, OportunidadeUpdate, TipoOportunidade, TipoOportunidadeResponse, PageStatusOportunidadeAUDResponse, PageOportunidadeAUDResponse, PageTipoOportunidadeAUDResponse, PageStatusOportunidadeResponse, PageOportunidadeResponse, PageTipoOportunidadeResponse, OportunidadePersist) {
   'use strict';
 
   /**
    * Oportunidades service.
    * @module api/OportunidadesApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -344,7 +344,7 @@
      * Callback function to receive the result of the listarAuditoriasStatusUsingGET operation.
      * @callback module:api/OportunidadesApi~listarAuditoriasStatusUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusOprtunidadesAUD} data The data returned by the service call.
+     * @param {module:model/PageStatusOportunidadeAUDResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -363,7 +363,7 @@
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
      * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusOprtunidadesAUD}
+     * data is of type: {module:model/PageStatusOportunidadeAUDResponse}
      */
     this.listarAuditoriasStatusUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -392,7 +392,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageStatusOprtunidadesAUD;
+      var returnType = PageStatusOportunidadeAUDResponse;
 
       return this.apiClient.callApi(
         '/api/auditorias-status-oportunidades', 'GET',
@@ -405,7 +405,7 @@
      * Callback function to receive the result of the listarAuditoriasUsingGET operation.
      * @callback module:api/OportunidadesApi~listarAuditoriasUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageOprtunidadeAUD} data The data returned by the service call.
+     * @param {module:model/PageOportunidadeAUDResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -426,7 +426,7 @@
      * @param {String} opts.revType Tipo da auditoria
      * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageOprtunidadeAUD}
+     * data is of type: {module:model/PageOportunidadeAUDResponse}
      */
     this.listarAuditoriasUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -457,7 +457,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageOprtunidadeAUD;
+      var returnType = PageOportunidadeAUDResponse;
 
       return this.apiClient.callApi(
         '/api/auditorias-oportunidades', 'GET',
@@ -470,7 +470,7 @@
      * Callback function to receive the result of the listarAuditoriasUsingGET1 operation.
      * @callback module:api/OportunidadesApi~listarAuditoriasUsingGET1Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageTipoOprtunidadesAUD} data The data returned by the service call.
+     * @param {module:model/PageTipoOportunidadeAUDResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -487,7 +487,7 @@
      * @param {Boolean} opts.flagAtivo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
      * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
      * @param {module:api/OportunidadesApi~listarAuditoriasUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageTipoOprtunidadesAUD}
+     * data is of type: {module:model/PageTipoOportunidadeAUDResponse}
      */
     this.listarAuditoriasUsingGET1 = function(opts, callback) {
       opts = opts || {};
@@ -514,7 +514,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageTipoOprtunidadesAUD;
+      var returnType = PageTipoOportunidadeAUDResponse;
 
       return this.apiClient.callApi(
         '/api/auditorias-tipos-oportunidades', 'GET',
@@ -527,7 +527,7 @@
      * Callback function to receive the result of the listarStatusUsingGET operation.
      * @callback module:api/OportunidadesApi~listarStatusUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusOprtunidades} data The data returned by the service call.
+     * @param {module:model/PageStatusOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -542,7 +542,7 @@
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
      * @param {module:api/OportunidadesApi~listarStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusOprtunidades}
+     * data is of type: {module:model/PageStatusOportunidadeResponse}
      */
     this.listarStatusUsingGET = function(id, opts, callback) {
       opts = opts || {};
@@ -572,7 +572,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageStatusOprtunidades;
+      var returnType = PageStatusOportunidadeResponse;
 
       return this.apiClient.callApi(
         '/api/tipos-oportunidades/{id}/status', 'GET',
@@ -582,10 +582,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET12 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET12Callback
+     * Callback function to receive the result of the listarUsingGET13 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET13Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageOprtunidadesResponse} data The data returned by the service call.
+     * @param {module:model/PageOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -602,10 +602,10 @@
      * @param {String} opts.dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @param {String} opts.dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-     * @param {module:api/OportunidadesApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageOprtunidadesResponse}
+     * @param {module:api/OportunidadesApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageOportunidadeResponse}
      */
-    this.listarUsingGET12 = function(opts, callback) {
+    this.listarUsingGET13 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -631,7 +631,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageOprtunidadesResponse;
+      var returnType = PageOportunidadeResponse;
 
       return this.apiClient.callApi(
         '/api/oportunidades', 'GET',
@@ -641,10 +641,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET24 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET24Callback
+     * Callback function to receive the result of the listarUsingGET25 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageTipoOprtunidades} data The data returned by the service call.
+     * @param {module:model/PageTipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -656,10 +656,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {module:api/OportunidadesApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageTipoOprtunidades}
+     * @param {module:api/OportunidadesApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoOportunidadeResponse}
      */
-    this.listarUsingGET24 = function(opts, callback) {
+    this.listarUsingGET25 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -680,7 +680,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageTipoOprtunidades;
+      var returnType = PageTipoOportunidadeResponse;
 
       return this.apiClient.callApi(
         '/api/tipos-oportunidades', 'GET',

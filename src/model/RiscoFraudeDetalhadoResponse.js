@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Telefone'], factory);
+    define(['../ApiClient', './TelefoneResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Telefone'));
+    module.exports = factory(require('../ApiClient'), require('./TelefoneResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient, root.Pier.Telefone);
+    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient, root.Pier.TelefoneResponse);
   }
-}(this, function(ApiClient, Telefone) {
+}(this, function(ApiClient, TelefoneResponse) {
   'use strict';
 
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -148,7 +148,7 @@
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('tefefones')) {
-        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [Telefone]);
+        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [TelefoneResponse]);
       }
     }
     return obj;
@@ -313,7 +313,7 @@
 
   /**
    * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
-   * @member {Array.<module:model/Telefone>} tefefones
+   * @member {Array.<module:model/TelefoneResponse>} tefefones
    */
   exports.prototype['tefefones'] = undefined;
 

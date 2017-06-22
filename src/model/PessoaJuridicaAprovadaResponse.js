@@ -18,7 +18,7 @@
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

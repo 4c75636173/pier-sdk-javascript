@@ -31,10 +31,10 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET27**](ContaApi.md#listarUsingGET27) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listarUsingGET28**](ContaApi.md#listarUsingGET28) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**listarUsingGET6**](ContaApi.md#listarUsingGET6) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**reativarUsingPOST**](ContaApi.md#reativarUsingPOST) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+[**listarUsingGET28**](ContaApi.md#listarUsingGET28) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listarUsingGET29**](ContaApi.md#listarUsingGET29) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listarUsingGET7**](ContaApi.md#listarUsingGET7) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**reativarUsingPOST**](ContaApi.md#reativarUsingPOST) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferirUsingPOST**](ContaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -97,7 +97,7 @@ No authorization required
 
 <a name="alterarLimiteUsingPUT"></a>
 # **alterarLimiteUsingPUT**
-> LimiteDisponibilidade alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo)
+> LimiteDisponibilidadeResponse alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LimiteDisponibilidade**](LimiteDisponibilidade.md)
+[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ No authorization required
 
 <a name="consultarBoletoEmitidoUsingGET"></a>
 # **consultarBoletoEmitidoUsingGET**
-> BoletoDeFatura consultarBoletoEmitidoUsingGET(id)
+> BoletoResponse consultarBoletoEmitidoUsingGET(id)
 
 Consulta os dados de um determinado boleto da fatura
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BoletoDeFatura**](BoletoDeFatura.md)
+[**BoletoResponse**](BoletoResponse.md)
 
 ### Authorization
 
@@ -623,7 +623,7 @@ No authorization required
 
 <a name="consultarLimiteDisponibilidadeUsingGET1"></a>
 # **consultarLimiteDisponibilidadeUsingGET1**
-> LimiteDisponibilidade consultarLimiteDisponibilidadeUsingGET1(id)
+> LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET1(id)
 
 Apresenta os limites da conta
 
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LimiteDisponibilidade**](LimiteDisponibilidade.md)
+[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
 
 ### Authorization
 
@@ -669,7 +669,7 @@ No authorization required
 
 <a name="consultarTaxasTarifasUsingGET"></a>
 # **consultarTaxasTarifasUsingGET**
-> PageTaxasRefinanciamento consultarTaxasTarifasUsingGET(id, opts)
+> PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET(id, opts)
 
 Permite consultar a partir do ID da conta as taxas e tarifas
 
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTaxasRefinanciamento**](PageTaxasRefinanciamento.md)
+[**PageTaxasRefinanciamentoResponse**](PageTaxasRefinanciamentoResponse.md)
 
 ### Authorization
 
@@ -721,7 +721,7 @@ No authorization required
 
 <a name="consultarUsingGET23"></a>
 # **consultarUsingGET23**
-> LinkTransferenciaBancariaResponse consultarUsingGET23(id, idTransferencia, opts)
+> TransferenciaBancariaResponse consultarUsingGET23(id, idTransferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -761,7 +761,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LinkTransferenciaBancariaResponse**](LinkTransferenciaBancariaResponse.md)
+[**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
 
 ### Authorization
 
@@ -774,7 +774,7 @@ No authorization required
 
 <a name="consultarUsingGET24"></a>
 # **consultarUsingGET24**
-> PageTransferencias consultarUsingGET24(id, idTransferencia)
+> PageTransferenciaResponse consultarUsingGET24(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransferencias**](PageTransferencias.md)
+[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
 
 ### Authorization
 
@@ -915,7 +915,7 @@ No authorization required
 
 <a name="gerarBoletoRecargaUsingPOST"></a>
 # **gerarBoletoRecargaUsingPOST**
-> BoletoDeFatura gerarBoletoRecargaUsingPOST(id, valor, dataVencimento)
+> BoletoResponse gerarBoletoRecargaUsingPOST(id, valor, dataVencimento)
 
 Gera um boleto de recarga
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BoletoDeFatura**](BoletoDeFatura.md)
+[**BoletoResponse**](BoletoResponse.md)
 
 ### Authorization
 
@@ -967,7 +967,7 @@ No authorization required
 
 <a name="gerarCartaoUsingPOST"></a>
 # **gerarCartaoUsingPOST**
-> CartaoImpressao gerarCartaoUsingPOST(id, idPessoa, opts)
+> CartaoImpressaoResponse gerarCartaoUsingPOST(id, idPessoa, opts)
 
 Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 
@@ -1007,7 +1007,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartaoImpressao**](CartaoImpressao.md)
+[**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
 
 ### Authorization
 
@@ -1020,7 +1020,7 @@ No authorization required
 
 <a name="gerarCartaoVirtualUsingPOST"></a>
 # **gerarCartaoVirtualUsingPOST**
-> CartaoImpressao gerarCartaoVirtualUsingPOST(id, dataValidade)
+> CartaoImpressaoResponse gerarCartaoVirtualUsingPOST(id, dataValidade)
 
 Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
 
@@ -1056,7 +1056,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartaoImpressao**](CartaoImpressao.md)
+[**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
 
 ### Authorization
 
@@ -1069,7 +1069,7 @@ No authorization required
 
 <a name="listarFaturasConsignadasUsingGET"></a>
 # **listarFaturasConsignadasUsingGET**
-> PageFaturasConsignadas listarFaturasConsignadasUsingGET(id, opts)
+> PageFaturaConsignadaResponse listarFaturasConsignadasUsingGET(id, opts)
 
 Lista as faturas consignadas da conta
 
@@ -1110,7 +1110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageFaturasConsignadas**](PageFaturasConsignadas.md)
+[**PageFaturaConsignadaResponse**](PageFaturaConsignadaResponse.md)
 
 ### Authorization
 
@@ -1123,7 +1123,7 @@ No authorization required
 
 <a name="listarFaturasUsingGET"></a>
 # **listarFaturasUsingGET**
-> PageFaturas listarFaturasUsingGET(id, opts)
+> PageFaturaResponse listarFaturasUsingGET(id, opts)
 
 Lista as faturas da conta
 
@@ -1164,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageFaturas**](PageFaturas.md)
+[**PageFaturaResponse**](PageFaturaResponse.md)
 
 ### Authorization
 
@@ -1177,7 +1177,7 @@ No authorization required
 
 <a name="listarHistoricoAlteracoesLimitesUsingGET"></a>
 # **listarHistoricoAlteracoesLimitesUsingGET**
-> PageHistoricoEventos listarHistoricoAlteracoesLimitesUsingGET(id, opts)
+> PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(id, opts)
 
 Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
 
@@ -1216,7 +1216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageHistoricoEventos**](PageHistoricoEventos.md)
+[**PageHistoricoEventosResponse**](PageHistoricoEventosResponse.md)
 
 ### Authorization
 
@@ -1229,7 +1229,7 @@ No authorization required
 
 <a name="listarHistoricoAssessoriaUsingGET"></a>
 # **listarHistoricoAssessoriaUsingGET**
-> LinkPageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(id, opts)
+> PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(id, opts)
 
 Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
 
@@ -1268,7 +1268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LinkPageHistoricoAssessoriaResponse**](LinkPageHistoricoAssessoriaResponse.md)
+[**PageHistoricoAssessoriaResponse**](PageHistoricoAssessoriaResponse.md)
 
 ### Authorization
 
@@ -1281,7 +1281,7 @@ No authorization required
 
 <a name="listarHistoricoAtrasosFaturasUsingGET"></a>
 # **listarHistoricoAtrasosFaturasUsingGET**
-> PageHistoricoAtraso listarHistoricoAtrasosFaturasUsingGET(id)
+> PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET(id)
 
 Lista o historico de atrasos das faturas
 
@@ -1314,7 +1314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageHistoricoAtraso**](PageHistoricoAtraso.md)
+[**PageHistoricoAtrasoFaturaResponse**](PageHistoricoAtrasoFaturaResponse.md)
 
 ### Authorization
 
@@ -1327,7 +1327,7 @@ No authorization required
 
 <a name="listarNaoProcessadasUsingGET"></a>
 # **listarNaoProcessadasUsingGET**
-> PageTransacoesCorrentes listarNaoProcessadasUsingGET(id, opts)
+> PageTransacoesCorrentesResponse listarNaoProcessadasUsingGET(id, opts)
 
 Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 
@@ -1370,7 +1370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransacoesCorrentes**](PageTransacoesCorrentes.md)
+[**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
 
 ### Authorization
 
@@ -1383,7 +1383,7 @@ No authorization required
 
 <a name="listarProcessadasUsingGET"></a>
 # **listarProcessadasUsingGET**
-> PageTransacoesCorrentes listarProcessadasUsingGET(id, opts)
+> PageTransacoesCorrentesResponse listarProcessadasUsingGET(id, opts)
 
 Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
 
@@ -1428,7 +1428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransacoesCorrentes**](PageTransacoesCorrentes.md)
+[**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
 
 ### Authorization
 
@@ -1439,9 +1439,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET27"></a>
-# **listarUsingGET27**
-> LinkPageTransferenciaBancariaResponse listarUsingGET27(id, opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PageTransferenciaBancariaResponse listarUsingGET28(id, opts)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -1468,7 +1468,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET27(id, opts, callback);
+api.listarUsingGET28(id, opts, callback);
 ```
 
 ### Parameters
@@ -1482,7 +1482,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LinkPageTransferenciaBancariaResponse**](LinkPageTransferenciaBancariaResponse.md)
+[**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
 
 ### Authorization
 
@@ -1493,9 +1493,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET28"></a>
-# **listarUsingGET28**
-> PageTransferencias listarUsingGET28(id, opts)
+<a name="listarUsingGET29"></a>
+# **listarUsingGET29**
+> PageTransferenciaResponse listarUsingGET29(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1526,7 +1526,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET28(id, opts, callback);
+api.listarUsingGET29(id, opts, callback);
 ```
 
 ### Parameters
@@ -1544,7 +1544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransferencias**](PageTransferencias.md)
+[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
 
 ### Authorization
 
@@ -1555,9 +1555,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PageContas listarUsingGET6(opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PageContaResponse listarUsingGET7(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1590,7 +1590,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(opts, callback);
+api.listarUsingGET7(opts, callback);
 ```
 
 ### Parameters
@@ -1611,7 +1611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageContas**](PageContas.md)
+[**PageContaResponse**](PageContaResponse.md)
 
 ### Authorization
 
@@ -1626,9 +1626,9 @@ No authorization required
 # **reativarUsingPOST**
 > Object reativarUsingPOST(id)
 
-Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
+Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 
-Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u00AAncia. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
 
 ### Example
 ```javascript
@@ -1722,7 +1722,7 @@ No authorization required
 
 <a name="transferirUsingPOST"></a>
 # **transferirUsingPOST**
-> LinkTransferenciaBancariaResponse transferirUsingPOST(id, transferenciaBancariaPersist)
+> TransferenciaBancariaResponse transferirUsingPOST(id, transferenciaBancariaPersist)
 
 Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 
@@ -1758,7 +1758,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LinkTransferenciaBancariaResponse**](LinkTransferenciaBancariaResponse.md)
+[**TransferenciaBancariaResponse**](TransferenciaBancariaResponse.md)
 
 ### Authorization
 
@@ -1771,7 +1771,7 @@ No authorization required
 
 <a name="transferirUsingPOST1"></a>
 # **transferirUsingPOST1**
-> PageTransferencias transferirUsingPOST1(id, idContaDestino, valorTransferencia)
+> PageTransferenciaResponse transferirUsingPOST1(id, idContaDestino, valorTransferencia)
 
 Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
@@ -1810,7 +1810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransferencias**](PageTransferencias.md)
+[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
 
 ### Authorization
 

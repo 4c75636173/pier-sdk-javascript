@@ -18,7 +18,7 @@
   /**
    * The CancelamentoTransacaoOnUsRequest model module.
    * @module model/CancelamentoTransacaoOnUsRequest
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](CadastrosGeraisApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarOrigemComercialUsingGET**](CadastrosGeraisApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarTaxaAntecipacaoUsingGET**](CadastrosGeraisApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**consultarUsingGET**](CadastrosGeraisApi.md#consultarUsingGET) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
 [**consultarUsingGET1**](CadastrosGeraisApi.md#consultarUsingGET1) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultarUsingGET10**](CadastrosGeraisApi.md#consultarUsingGET10) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
 [**consultarUsingGET11**](CadastrosGeraisApi.md#consultarUsingGET11) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
@@ -30,17 +31,19 @@ Method | HTTP request | Description
 [**listarNaturezasOcupacoesUsingGET**](CadastrosGeraisApi.md#listarNaturezasOcupacoesUsingGET) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarProfissoesUsingGET**](CadastrosGeraisApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listarUsingGET13**](CadastrosGeraisApi.md#listarUsingGET13) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET16**](CadastrosGeraisApi.md#listarUsingGET16) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET1**](CadastrosGeraisApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET14**](CadastrosGeraisApi.md#listarUsingGET14) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET15**](CadastrosGeraisApi.md#listarUsingGET15) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET18**](CadastrosGeraisApi.md#listarUsingGET18) | **GET** /api/produtos | Lista os Produtos do Emissor
 [**listarUsingGET2**](CadastrosGeraisApi.md#listarUsingGET2) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET21**](CadastrosGeraisApi.md#listarUsingGET21) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
-[**listarUsingGET23**](CadastrosGeraisApi.md#listarUsingGET23) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET25**](CadastrosGeraisApi.md#listarUsingGET25) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET8**](CadastrosGeraisApi.md#listarUsingGET8) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET22**](CadastrosGeraisApi.md#listarUsingGET22) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET24**](CadastrosGeraisApi.md#listarUsingGET24) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET26**](CadastrosGeraisApi.md#listarUsingGET26) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET9**](CadastrosGeraisApi.md#listarUsingGET9) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastrosGeraisApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
+[**salvarUsingPOST1**](CadastrosGeraisApi.md#salvarUsingPOST1) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 [**salvarUsingPOST10**](CadastrosGeraisApi.md#salvarUsingPOST10) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 [**salvarUsingPOST4**](CadastrosGeraisApi.md#salvarUsingPOST4) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 [**salvarUsingPOST7**](CadastrosGeraisApi.md#salvarUsingPOST7) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
@@ -49,7 +52,7 @@ Method | HTTP request | Description
 
 <a name="alterarUsingPUT1"></a>
 # **alterarUsingPUT1**
-> Endereco alterarUsingPUT1(id, opts)
+> EnderecoResponse alterarUsingPUT1(id, opts)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -106,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -185,7 +188,7 @@ No authorization required
 
 <a name="alterarUsingPUT5"></a>
 # **alterarUsingPUT5**
-> Pessoa alterarUsingPUT5(id, nome, tipo, opts)
+> PessoaResponse alterarUsingPUT5(id, nome, tipo, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -242,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -255,7 +258,7 @@ No authorization required
 
 <a name="alterarUsingPUT6"></a>
 # **alterarUsingPUT6**
-> Telefone alterarUsingPUT6(id, opts)
+> TelefoneResponse alterarUsingPUT6(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -298,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -406,7 +409,7 @@ No authorization required
 
 <a name="consultarOrigemComercialUsingGET"></a>
 # **consultarOrigemComercialUsingGET**
-> OrigemComercial consultarOrigemComercialUsingGET(id)
+> OrigemComercialResponse consultarOrigemComercialUsingGET(id)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 
@@ -439,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrigemComercial**](OrigemComercial.md)
+[**OrigemComercialResponse**](OrigemComercialResponse.md)
 
 ### Authorization
 
@@ -499,9 +502,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="consultarUsingGET"></a>
+# **consultarUsingGET**
+> AtendimentoClienteResponse consultarUsingGET(id)
+
+Apresenta os dados de um determinado Atendimento
+
+Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id). | 
+
+### Return type
+
+[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="consultarUsingGET1"></a>
 # **consultarUsingGET1**
-> Banco consultarUsingGET1(id)
+> BancoResponse consultarUsingGET1(id)
 
 Apresenta os dados de um determinado Banco
 
@@ -534,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Banco**](Banco.md)
+[**BancoResponse**](BancoResponse.md)
 
 ### Authorization
 
@@ -547,7 +596,7 @@ No authorization required
 
 <a name="consultarUsingGET10"></a>
 # **consultarUsingGET10**
-> Pessoa consultarUsingGET10(id)
+> PessoaResponse consultarUsingGET10(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -580,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 
@@ -639,7 +688,7 @@ No authorization required
 
 <a name="consultarUsingGET15"></a>
 # **consultarUsingGET15**
-> Telefone consultarUsingGET15(id)
+> TelefoneResponse consultarUsingGET15(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -672,7 +721,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -685,7 +734,7 @@ No authorization required
 
 <a name="consultarUsingGET17"></a>
 # **consultarUsingGET17**
-> PageTipoAjuste consultarUsingGET17(opts)
+> PageTipoAjusteResponse consultarUsingGET17(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -725,7 +774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoAjuste**](PageTipoAjuste.md)
+[**PageTipoAjusteResponse**](PageTipoAjusteResponse.md)
 
 ### Authorization
 
@@ -738,7 +787,7 @@ No authorization required
 
 <a name="consultarUsingGET18"></a>
 # **consultarUsingGET18**
-> PageTipoBoleto consultarUsingGET18(opts)
+> PageTipoBoletoResponse consultarUsingGET18(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -780,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoBoleto**](PageTipoBoleto.md)
+[**PageTipoBoletoResponse**](PageTipoBoletoResponse.md)
 
 ### Authorization
 
@@ -793,7 +842,7 @@ No authorization required
 
 <a name="consultarUsingGET19"></a>
 # **consultarUsingGET19**
-> TipoEndereco consultarUsingGET19(id)
+> TipoEnderecoResponse consultarUsingGET19(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -826,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TipoEndereco**](TipoEndereco.md)
+[**TipoEnderecoResponse**](TipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -839,7 +888,7 @@ No authorization required
 
 <a name="consultarUsingGET21"></a>
 # **consultarUsingGET21**
-> TipoTelefone consultarUsingGET21(id)
+> TipoTelefoneResponse consultarUsingGET21(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -872,7 +921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TipoTelefone**](TipoTelefone.md)
+[**TipoTelefoneResponse**](TipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -885,7 +934,7 @@ No authorization required
 
 <a name="consultarUsingGET5"></a>
 # **consultarUsingGET5**
-> Endereco consultarUsingGET5(id)
+> EnderecoResponse consultarUsingGET5(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -918,7 +967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -1023,7 +1072,7 @@ No authorization required
 
 <a name="listarContasPorPessoaUsingGET"></a>
 # **listarContasPorPessoaUsingGET**
-> PageContasDetalhe listarContasPorPessoaUsingGET(numeroReceitaFederal, opts)
+> PageContaDetalheResponse listarContasPorPessoaUsingGET(numeroReceitaFederal, opts)
 
 Lista as contas da pessoa
 
@@ -1062,7 +1111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageContasDetalhe**](PageContasDetalhe.md)
+[**PageContaDetalheResponse**](PageContaDetalheResponse.md)
 
 ### Authorization
 
@@ -1075,7 +1124,7 @@ No authorization required
 
 <a name="listarEstadosCivisUsingGET"></a>
 # **listarEstadosCivisUsingGET**
-> PageCampoCodificadoDescricao listarEstadosCivisUsingGET(opts)
+> PageCampoCodificadoDescricaoResponse listarEstadosCivisUsingGET(opts)
 
 Lista os Estados C\u00C3\u00ADvis
 
@@ -1111,7 +1160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1124,7 +1173,7 @@ No authorization required
 
 <a name="listarHistoricoTelefonesUsingGET"></a>
 # **listarHistoricoTelefonesUsingGET**
-> HistoricoTelefone listarHistoricoTelefonesUsingGET(id)
+> HistoricoTelefoneResponse listarHistoricoTelefonesUsingGET(id)
 
 Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 
@@ -1157,7 +1206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HistoricoTelefone**](HistoricoTelefone.md)
+[**HistoricoTelefoneResponse**](HistoricoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1170,7 +1219,7 @@ No authorization required
 
 <a name="listarNacionalidadesUsingGET"></a>
 # **listarNacionalidadesUsingGET**
-> PageCampoCodificadoDescricao listarNacionalidadesUsingGET(opts)
+> PageCampoCodificadoDescricaoResponse listarNacionalidadesUsingGET(opts)
 
 Lista nacionalidades
 
@@ -1206,7 +1255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1219,7 +1268,7 @@ No authorization required
 
 <a name="listarNaturezasOcupacoesUsingGET"></a>
 # **listarNaturezasOcupacoesUsingGET**
-> PageCampoCodificadoDescricao listarNaturezasOcupacoesUsingGET(opts)
+> PageCampoCodificadoDescricaoResponse listarNaturezasOcupacoesUsingGET(opts)
 
 Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 
@@ -1255,7 +1304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1268,7 +1317,7 @@ No authorization required
 
 <a name="listarOrigensComerciaisUsingGET"></a>
 # **listarOrigensComerciaisUsingGET**
-> PageOrigensComerciais listarOrigensComerciaisUsingGET(opts)
+> PageOrigemComercialResponse listarOrigensComerciaisUsingGET(opts)
 
 Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 
@@ -1310,7 +1359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageOrigensComerciais**](PageOrigensComerciais.md)
+[**PageOrigemComercialResponse**](PageOrigemComercialResponse.md)
 
 ### Authorization
 
@@ -1323,7 +1372,7 @@ No authorization required
 
 <a name="listarProfissoesUsingGET"></a>
 # **listarProfissoesUsingGET**
-> PageCampoCodificadoDescricao listarProfissoesUsingGET(opts)
+> PageCampoCodificadoDescricaoResponse listarProfissoesUsingGET(opts)
 
 Lista profiss\u00C3\u00B5es
 
@@ -1359,7 +1408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCampoCodificadoDescricao**](PageCampoCodificadoDescricao.md)
+[**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
 
 ### Authorization
 
@@ -1370,9 +1419,66 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET13"></a>
-# **listarUsingGET13**
-> PessoaDetalheResponse listarUsingGET13(opts)
+<a name="listarUsingGET1"></a>
+# **listarUsingGET1**
+> PageAtendimentoClienteResponse listarUsingGET1(opts)
+
+Lista todos os atendimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idTipoAtendimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
+  'dataAtendimento': "dataAtendimento_example" // {String} Apresenta a data em que o Atendimento foi realizado.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET1(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idTipoAtendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **dataAtendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
+
+### Return type
+
+[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> PagePessoaDetalheResponse listarUsingGET14(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1406,7 +1512,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET13(opts, callback);
+api.listarUsingGET14(opts, callback);
 ```
 
 ### Parameters
@@ -1428,7 +1534,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+[**PagePessoaDetalheResponse**](PagePessoaDetalheResponse.md)
 
 ### Authorization
 
@@ -1439,9 +1545,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET14"></a>
-# **listarUsingGET14**
-> PagePessoas listarUsingGET14(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PagePessoaResponse listarUsingGET15(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1476,7 +1582,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET14(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -1499,7 +1605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePessoas**](PagePessoas.md)
+[**PagePessoaResponse**](PagePessoaResponse.md)
 
 ### Authorization
 
@@ -1510,9 +1616,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PagePortador listarUsingGET16(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PagePortadorResponse listarUsingGET17(opts)
 
 Lista os Portadores existentes
 
@@ -1546,7 +1652,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -1568,7 +1674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePortador**](PagePortador.md)
+[**PagePortadorResponse**](PagePortadorResponse.md)
 
 ### Authorization
 
@@ -1579,9 +1685,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> ListaProdutos listarUsingGET17(opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PageProdutoResponse listarUsingGET18(opts)
 
 Lista os Produtos do Emissor
 
@@ -1608,7 +1714,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET18(opts, callback);
 ```
 
 ### Parameters
@@ -1623,7 +1729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListaProdutos**](ListaProdutos.md)
+[**PageProdutoResponse**](PageProdutoResponse.md)
 
 ### Authorization
 
@@ -1636,7 +1742,7 @@ No authorization required
 
 <a name="listarUsingGET2"></a>
 # **listarUsingGET2**
-> PageBancos listarUsingGET2(opts)
+> PageBancoResponse listarUsingGET2(opts)
 
 Lista os Bancos cadastrados para o Emissor
 
@@ -1672,7 +1778,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageBancos**](PageBancos.md)
+[**PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 
@@ -1683,9 +1789,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PageTelefones listarUsingGET21(opts)
+<a name="listarUsingGET22"></a>
+# **listarUsingGET22**
+> PageTelefoneResponse listarUsingGET22(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1716,7 +1822,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET22(opts, callback);
 ```
 
 ### Parameters
@@ -1735,7 +1841,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTelefones**](PageTelefones.md)
+[**PageTelefoneResponse**](PageTelefoneResponse.md)
 
 ### Authorization
 
@@ -1746,9 +1852,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PageTiposEndereco listarUsingGET23(opts)
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PageTipoEnderecoResponse listarUsingGET24(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1774,7 +1880,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET24(opts, callback);
 ```
 
 ### Parameters
@@ -1788,7 +1894,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTiposEndereco**](PageTiposEndereco.md)
+[**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -1799,9 +1905,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageTipoTelefones listarUsingGET25(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageTipoTelefoneResponse listarUsingGET26(opts)
 
 Lista os Tipos de Telefones
 
@@ -1827,7 +1933,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -1841,7 +1947,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTipoTelefones**](PageTipoTelefones.md)
+[**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -1852,9 +1958,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageEnderecos listarUsingGET8(opts)
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PageEnderecoResponse listarUsingGET9(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -1892,7 +1998,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters
@@ -1918,7 +2024,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEnderecos**](PageEnderecos.md)
+[**PageEnderecoResponse**](PageEnderecoResponse.md)
 
 ### Authorization
 
@@ -2021,9 +2127,70 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="salvarUsingPOST1"></a>
+# **salvarUsingPOST1**
+> AtendimentoClienteResponse salvarUsingPOST1(opts)
+
+Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+  'conteudoAtendimento': "conteudoAtendimento_example", // {String} Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+  'detalhesAtendimento': "detalhesAtendimento_example", // {String} Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
+  'dataAtendimento': "dataAtendimento_example", // {String} Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'dataAgendamento': "dataAgendamento_example", // {String} Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'dataHoraInicioAtendimento': "dataHoraInicioAtendimento_example", // {String} Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'dataHoraFimAtendimento': "dataHoraFimAtendimento_example", // {String} Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'flagFilaFraude': 56 // {Integer} Flag fila fraude
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST1(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado | [optional] 
+ **conteudoAtendimento** | **String**| Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento. | [optional] 
+ **detalhesAtendimento** | **String**| Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento. | [optional] 
+ **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **dataAtendimento** | **String**| Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **dataAgendamento** | **String**| Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **dataHoraInicioAtendimento** | **String**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **dataHoraFimAtendimento** | **String**| Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **flagFilaFraude** | **Integer**| Flag fila fraude | [optional] 
+
+### Return type
+
+[**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="salvarUsingPOST10"></a>
 # **salvarUsingPOST10**
-> Telefone salvarUsingPOST10(opts)
+> TelefoneResponse salvarUsingPOST10(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -2065,7 +2232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Telefone**](Telefone.md)
+[**TelefoneResponse**](TelefoneResponse.md)
 
 ### Authorization
 
@@ -2078,7 +2245,7 @@ No authorization required
 
 <a name="salvarUsingPOST4"></a>
 # **salvarUsingPOST4**
-> Endereco salvarUsingPOST4(opts)
+> EnderecoResponse salvarUsingPOST4(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -2132,7 +2299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Endereco**](Endereco.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -2210,7 +2377,7 @@ No authorization required
 
 <a name="salvarUsingPOST8"></a>
 # **salvarUsingPOST8**
-> Pessoa salvarUsingPOST8(nome, tipo, opts)
+> PessoaResponse salvarUsingPOST8(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -2264,7 +2431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pessoa**](Pessoa.md)
+[**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
 

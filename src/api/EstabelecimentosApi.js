@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Terminal', '../model/Estabelecimento', '../model/PageTerminal', '../model/PageEstabelecimentos'], factory);
+    define(['../ApiClient', '../model/TerminalResponse', '../model/EstabelecimentoResponse', '../model/PageEstabelecimentoResponse', '../model/PageTerminalResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Terminal'), require('../model/Estabelecimento'), require('../model/PageTerminal'), require('../model/PageEstabelecimentos'));
+    module.exports = factory(require('../ApiClient'), require('../model/TerminalResponse'), require('../model/EstabelecimentoResponse'), require('../model/PageEstabelecimentoResponse'), require('../model/PageTerminalResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EstabelecimentosApi = factory(root.Pier.ApiClient, root.Pier.Terminal, root.Pier.Estabelecimento, root.Pier.PageTerminal, root.Pier.PageEstabelecimentos);
+    root.Pier.EstabelecimentosApi = factory(root.Pier.ApiClient, root.Pier.TerminalResponse, root.Pier.EstabelecimentoResponse, root.Pier.PageEstabelecimentoResponse, root.Pier.PageTerminalResponse);
   }
-}(this, function(ApiClient, Terminal, Estabelecimento, PageTerminal, PageEstabelecimentos) {
+}(this, function(ApiClient, TerminalResponse, EstabelecimentoResponse, PageEstabelecimentoResponse, PageTerminalResponse) {
   'use strict';
 
   /**
    * Estabelecimentos service.
    * @module api/EstabelecimentosApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the consultarUsingGET16 operation.
      * @callback module:api/EstabelecimentosApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Terminal} data The data returned by the service call.
+     * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,7 +45,7 @@
      * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
      * @param {module:api/EstabelecimentosApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Terminal}
+     * data is of type: {module:model/TerminalResponse}
      */
     this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
@@ -69,7 +69,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Terminal;
+      var returnType = TerminalResponse;
 
       return this.apiClient.callApi(
         '/api/terminais/{id}', 'GET',
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the consultarUsingGET6 operation.
      * @callback module:api/EstabelecimentosApi~consultarUsingGET6Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/Estabelecimento} data The data returned by the service call.
+     * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -91,7 +91,7 @@
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
      * @param {module:api/EstabelecimentosApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Estabelecimento}
+     * data is of type: {module:model/EstabelecimentoResponse}
      */
     this.consultarUsingGET6 = function(id, callback) {
       var postBody = null;
@@ -115,7 +115,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Estabelecimento;
+      var returnType = EstabelecimentoResponse;
 
       return this.apiClient.callApi(
         '/api/estabelecimentos/{id}', 'GET',
@@ -125,63 +125,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/EstabelecimentosApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/EstabelecimentosApi~listarUsingGET10Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageTerminal} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista os Terminais cadastrados no Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-     * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-     * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentosApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageTerminal}
-     */
-    this.listarUsingGET22 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'id': opts['id'],
-        'terminal': opts['terminal'],
-        'numeroEstabelecimento': opts['numeroEstabelecimento'],
-        'idEstabelecimento': opts['idEstabelecimento']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageTerminal;
-
-      return this.apiClient.callApi(
-        '/api/terminais', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/EstabelecimentosApi~listarUsingGET9Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageEstabelecimentos} data The data returned by the service call.
+     * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -210,10 +157,10 @@
      * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
      * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
      * @param {Integer} opts.inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-     * @param {module:api/EstabelecimentosApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageEstabelecimentos}
+     * @param {module:api/EstabelecimentosApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET9 = function(opts, callback) {
+    this.listarUsingGET10 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -251,10 +198,63 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageEstabelecimentos;
+      var returnType = PageEstabelecimentoResponse;
 
       return this.apiClient.callApi(
         '/api/estabelecimentos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/EstabelecimentosApi~listarUsingGET23Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTerminalResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os Terminais cadastrados no Emissor
+     * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+     * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+     * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+     * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+     * @param {module:api/EstabelecimentosApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTerminalResponse}
+     */
+    this.listarUsingGET23 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'terminal': opts['terminal'],
+        'numeroEstabelecimento': opts['numeroEstabelecimento'],
+        'idEstabelecimento': opts['idEstabelecimento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTerminalResponse;
+
+      return this.apiClient.callApi(
+        '/api/terminais', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformasMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET15**](PlataformasMobileApi.md#listarUsingGET15) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**listarUsingGET16**](PlataformasMobileApi.md#listarUsingGET16) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
 [**salvarUsingPOST9**](PlataformasMobileApi.md#salvarUsingPOST9) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 <a name="atualizarUsingPUT1"></a>
 # **atualizarUsingPUT1**
-> PlataformaMobile atualizarUsingPUT1(id, update)
+> PlataformaMobileResponse atualizarUsingPUT1(id, update)
 
 Atualiza Plataforma Mobile
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PlataformaMobile**](PlataformaMobile.md)
+[**PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET15"></a>
-# **listarUsingGET15**
-> PagePlataformasMobile listarUsingGET15(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PagePlataformaMobileResponse listarUsingGET16(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -85,7 +85,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET15(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PagePlataformasMobile**](PagePlataformasMobile.md)
+[**PagePlataformaMobileResponse**](PagePlataformaMobileResponse.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 
 <a name="salvarUsingPOST9"></a>
 # **salvarUsingPOST9**
-> PlataformaMobile salvarUsingPOST9(persist)
+> PlataformaMobileResponse salvarUsingPOST9(persist)
 
 Cadastra Plataforma Mobile
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PlataformaMobile**](PlataformaMobile.md)
+[**PlataformaMobileResponse**](PlataformaMobileResponse.md)
 
 ### Authorization
 

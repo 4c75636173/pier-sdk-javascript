@@ -10,13 +10,13 @@ Method | HTTP request | Description
 [**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametrosApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametrosApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listarUsingGET19**](StatusParametrosApi.md#listarUsingGET19) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET20**](StatusParametrosApi.md#listarUsingGET20) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET20**](StatusParametrosApi.md#listarUsingGET20) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET21**](StatusParametrosApi.md#listarUsingGET21) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 <a name="consultarEstagioCartaoUsingGET"></a>
 # **consultarEstagioCartaoUsingGET**
-> EstagioCartao consultarEstagioCartaoUsingGET(id)
+> EstagioCartaoResponse consultarEstagioCartaoUsingGET(id)
 
 Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EstagioCartao**](EstagioCartao.md)
+[**EstagioCartaoResponse**](EstagioCartaoResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 
 <a name="consultarStatusCartaoUsingGET"></a>
 # **consultarStatusCartaoUsingGET**
-> StatusCartao consultarStatusCartaoUsingGET(id)
+> StatusCartaoResponse consultarStatusCartaoUsingGET(id)
 
 Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusCartao**](StatusCartao.md)
+[**StatusCartaoResponse**](StatusCartaoResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 
 <a name="consultarUsingGET13"></a>
 # **consultarUsingGET13**
-> StatusConta consultarUsingGET13(id)
+> StatusContaResponse consultarUsingGET13(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusConta**](StatusConta.md)
+[**StatusContaResponse**](StatusContaResponse.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
 
 <a name="consultarUsingGET14"></a>
 # **consultarUsingGET14**
-> StatusImpressao consultarUsingGET14(id)
+> StatusImpressaoResponse consultarUsingGET14(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusImpressao**](StatusImpressao.md)
+[**StatusImpressaoResponse**](StatusImpressaoResponse.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ No authorization required
 
 <a name="listarEstagiosCartoesUsingGET"></a>
 # **listarEstagiosCartoesUsingGET**
-> PageEstagiosCartoes listarEstagiosCartoesUsingGET(opts)
+> PageEstagioCartaoResponse listarEstagiosCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageEstagiosCartoes**](PageEstagiosCartoes.md)
+[**PageEstagioCartaoResponse**](PageEstagioCartaoResponse.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ No authorization required
 
 <a name="listarStatusCartoesUsingGET"></a>
 # **listarStatusCartoesUsingGET**
-> PageStatusCartoes listarStatusCartoesUsingGET(opts)
+> PageStatusCartaoResponse listarStatusCartoesUsingGET(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 
@@ -275,7 +275,8 @@ var opts = {
   'idStatusDestinoDesbloqueio': 789, // {Integer} Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
   'idStatusDestinoConta': 789, // {Integer} Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
   'flagCobraTarifa': 56, // {Integer} Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-  'flagPermiteNovaViaCartao': 56 // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteNovaViaCartao': 56, // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteDesbloqueio': 56 // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
 };
 
 var callback = function(error, data, response) {
@@ -302,10 +303,11 @@ Name | Type | Description  | Notes
  **idStatusDestinoConta** | **Integer**| Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica. | [optional] 
  **flagCobraTarifa** | **Integer**| Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. | [optional] 
  **flagPermiteNovaViaCartao** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagPermiteDesbloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 
-[**PageStatusCartoes**](PageStatusCartoes.md)
+[**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
 
 ### Authorization
 
@@ -316,9 +318,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PageStatusContas listarUsingGET19(opts)
+<a name="listarUsingGET20"></a>
+# **listarUsingGET20**
+> PageStatusContaResponse listarUsingGET20(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -337,7 +339,9 @@ var opts = {
   'nome': "nome_example", // {String} Nome atribu\u00C3\u00ADdo ao Status da Conta.
   'flagAlteraLimite': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
   'mensagemConsultaNegada': "mensagemConsultaNegada_example", // {String} Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-  'flagPermiteNovaViaCartao': 56 // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteNovaViaCartao': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+  'flagFazTransferencia': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+  'flagRecebeTransferencia': 56 // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
 };
 
 var callback = function(error, data, response) {
@@ -347,7 +351,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET19(opts, callback);
+api.listarUsingGET20(opts, callback);
 ```
 
 ### Parameters
@@ -361,10 +365,12 @@ Name | Type | Description  | Notes
  **flagAlteraLimite** | **Integer**| Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **mensagemConsultaNegada** | **String**| Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades. | [optional] 
  **flagPermiteNovaViaCartao** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagFazTransferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagRecebeTransferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 
-[**PageStatusContas**](PageStatusContas.md)
+[**PageStatusContaResponse**](PageStatusContaResponse.md)
 
 ### Authorization
 
@@ -375,9 +381,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET20"></a>
-# **listarUsingGET20**
-> PageStatusImpressao listarUsingGET20(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageStatusImpressaoResponse listarUsingGET21(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -403,7 +409,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET20(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -417,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageStatusImpressao**](PageStatusImpressao.md)
+[**PageStatusImpressaoResponse**](PageStatusImpressaoResponse.md)
 
 ### Authorization
 

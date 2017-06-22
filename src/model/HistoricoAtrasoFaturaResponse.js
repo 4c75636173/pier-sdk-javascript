@@ -18,7 +18,7 @@
   /**
    * The HistoricoAtrasoFaturaResponse model module.
    * @module model/HistoricoAtrasoFaturaResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

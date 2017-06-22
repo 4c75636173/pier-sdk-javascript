@@ -7,12 +7,12 @@ Method | HTTP request | Description
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultarUsingGET7**](FAQApi.md#consultarUsingGET7) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET10**](FAQApi.md#listarUsingGET10) | **GET** /api/faqs | Lista FAQs
+[**listarUsingGET11**](FAQApi.md#listarUsingGET11) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
 # **adicionarUsingPOST**
-> FAQ adicionarUsingPOST(pergunta, resposta, opts)
+> FaqResponse adicionarUsingPOST(pergunta, resposta, opts)
 
 Adiciona uma nova FAQ
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 <a name="alterarUsingPUT2"></a>
 # **alterarUsingPUT2**
-> FAQ alterarUsingPUT2(id, pergunta, resposta, opts)
+> FaqResponse alterarUsingPUT2(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 
 <a name="consultarUsingGET7"></a>
 # **consultarUsingGET7**
-> FAQ consultarUsingGET7(id)
+> FaqResponse consultarUsingGET7(id)
 
 Consultar FAQ por id
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageFaqs listarUsingGET10(opts)
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageFaqResponse listarUsingGET11(opts)
 
 Lista FAQs
 
@@ -210,7 +210,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET11(opts, callback);
 ```
 
 ### Parameters
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageFaqs**](PageFaqs.md)
+[**PageFaqResponse**](PageFaqResponse.md)
 
 ### Authorization
 

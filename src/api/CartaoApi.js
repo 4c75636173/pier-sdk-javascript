@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartao', '../model/Cartao', '../model/DadosCarto', '../model/LimiteDisponibilidade', '../model/LoteCartoesPrePagos', '../model/Portador', '../model/CartaoDetalhado', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartoes', '../model/ValidaCartao', '../model/ValidaSenhaCartao'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartaoResponse', '../model/CartaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartao'), require('../model/Cartao'), require('../model/DadosCarto'), require('../model/LimiteDisponibilidade'), require('../model/LoteCartoesPrePagos'), require('../model/Portador'), require('../model/CartaoDetalhado'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartoes'), require('../model/ValidaCartao'), require('../model/ValidaSenhaCartao'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/CartaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartao, root.Pier.Cartao, root.Pier.DadosCarto, root.Pier.LimiteDisponibilidade, root.Pier.LoteCartoesPrePagos, root.Pier.Portador, root.Pier.CartaoDetalhado, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartoes, root.Pier.ValidaCartao, root.Pier.ValidaSenhaCartao);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.CartaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartao, Cartao, DadosCarto, LimiteDisponibilidade, LoteCartoesPrePagos, Portador, CartaoDetalhado, PageLoteCartoesPrePagosResponse, PageCartoes, ValidaCartao, ValidaSenhaCartao) {
+}(this, function(ApiClient, HistoricoImpressaoCartaoResponse, CartaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -89,7 +89,7 @@
      * Callback function to receive the result of the alterarStatusImpressaoUsingPUT operation.
      * @callback module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HistoricoImpressaoCartao} data The data returned by the service call.
+     * @param {module:model/HistoricoImpressaoCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -99,7 +99,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
      * @param {module:api/CartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/HistoricoImpressaoCartao}
+     * data is of type: {module:model/HistoricoImpressaoCartaoResponse}
      */
     this.alterarStatusImpressaoUsingPUT = function(id, idStatusImpressao, callback) {
       var postBody = null;
@@ -129,7 +129,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = HistoricoImpressaoCartao;
+      var returnType = HistoricoImpressaoCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/alterar-status-impressao', 'PUT',
@@ -142,7 +142,7 @@
      * Callback function to receive the result of the atribuirPessoaUsingPUT operation.
      * @callback module:api/CartaoApi~atribuirPessoaUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -152,7 +152,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
      * @param {Integer} idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
      * @param {module:api/CartaoApi~atribuirPessoaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * data is of type: {module:model/CartaoResponse}
      */
     this.atribuirPessoaUsingPUT = function(id, idPessoa, callback) {
       var postBody = null;
@@ -182,7 +182,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/atribuir-titular', 'PUT',
@@ -195,7 +195,7 @@
      * Callback function to receive the result of the bloquearUsingPUT operation.
      * @callback module:api/CartaoApi~bloquearUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -206,7 +206,7 @@
      * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
      * @param {String} observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
      * @param {module:api/CartaoApi~bloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * data is of type: {module:model/CartaoResponse}
      */
     this.bloquearUsingPUT = function(id, idStatus, observacao, callback) {
       var postBody = null;
@@ -242,7 +242,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/bloquear', 'PUT',
@@ -308,7 +308,7 @@
      * Callback function to receive the result of the consultarDadosReaisCartaoUsingGET operation.
      * @callback module:api/CartaoApi~consultarDadosReaisCartaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DadosCarto} data The data returned by the service call.
+     * @param {module:model/DadosCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -317,7 +317,7 @@
      * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} id id
      * @param {module:api/CartaoApi~consultarDadosReaisCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/DadosCarto}
+     * data is of type: {module:model/DadosCartaoResponse}
      */
     this.consultarDadosReaisCartaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -341,7 +341,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = DadosCarto;
+      var returnType = DadosCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/consultar-dados-reais', 'GET',
@@ -354,7 +354,7 @@
      * Callback function to receive the result of the consultarLimiteDisponibilidadeUsingGET operation.
      * @callback module:api/CartaoApi~consultarLimiteDisponibilidadeUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LimiteDisponibilidade} data The data returned by the service call.
+     * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -363,7 +363,7 @@
      * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarLimiteDisponibilidadeUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LimiteDisponibilidade}
+     * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
     this.consultarLimiteDisponibilidadeUsingGET = function(id, callback) {
       var postBody = null;
@@ -387,7 +387,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = LimiteDisponibilidade;
+      var returnType = LimiteDisponibilidadeResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/limites-disponibilidades', 'GET',
@@ -400,7 +400,7 @@
      * Callback function to receive the result of the consultarLotesCartoesPrePagosUsingGET operation.
      * @callback module:api/CartaoApi~consultarLotesCartoesPrePagosUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LoteCartoesPrePagos} data The data returned by the service call.
+     * @param {module:model/LoteCartoesPrePagosResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -409,7 +409,7 @@
      * Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
      * @param {module:api/CartaoApi~consultarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LoteCartoesPrePagos}
+     * data is of type: {module:model/LoteCartoesPrePagosResponse}
      */
     this.consultarLotesCartoesPrePagosUsingGET = function(id, callback) {
       var postBody = null;
@@ -433,7 +433,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = LoteCartoesPrePagos;
+      var returnType = LoteCartoesPrePagosResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/lotes-cartoes-pre-pagos/{id}', 'GET',
@@ -446,7 +446,7 @@
      * Callback function to receive the result of the consultarPortadorUsingGET operation.
      * @callback module:api/CartaoApi~consultarPortadorUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Portador} data The data returned by the service call.
+     * @param {module:model/PortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -455,7 +455,7 @@
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarPortadorUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Portador}
+     * data is of type: {module:model/PortadorResponse}
      */
     this.consultarPortadorUsingGET = function(id, callback) {
       var postBody = null;
@@ -479,7 +479,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Portador;
+      var returnType = PortadorResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/portadores', 'GET',
@@ -492,7 +492,7 @@
      * Callback function to receive the result of the consultarUsingGET3 operation.
      * @callback module:api/CartaoApi~consultarUsingGET3Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/CartaoDetalhado} data The data returned by the service call.
+     * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -501,7 +501,7 @@
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/CartaoDetalhado}
+     * data is of type: {module:model/CartaoDetalheResponse}
      */
     this.consultarUsingGET3 = function(id, callback) {
       var postBody = null;
@@ -525,7 +525,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CartaoDetalhado;
+      var returnType = CartaoDetalheResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}', 'GET',
@@ -538,7 +538,7 @@
      * Callback function to receive the result of the desbloquearSenhaIncorretaUsingPOST operation.
      * @callback module:api/CartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -547,7 +547,7 @@
      * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * data is of type: {module:model/CartaoResponse}
      */
     this.desbloquearSenhaIncorretaUsingPOST = function(id, callback) {
       var postBody = null;
@@ -571,7 +571,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/desbloquear-senha-incorreta', 'POST',
@@ -584,7 +584,7 @@
      * Callback function to receive the result of the desbloquearUsingPUT operation.
      * @callback module:api/CartaoApi~desbloquearUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -593,7 +593,7 @@
      * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~desbloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * data is of type: {module:model/CartaoResponse}
      */
     this.desbloquearUsingPUT = function(id, callback) {
       var postBody = null;
@@ -617,7 +617,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/desbloquear', 'PUT',
@@ -630,7 +630,7 @@
      * Callback function to receive the result of the gerarLotesCartoesPrePagosUsingPOST operation.
      * @callback module:api/CartaoApi~gerarLotesCartoesPrePagosUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LoteCartoesPrePagos} data The data returned by the service call.
+     * @param {module:model/LoteCartoesPrePagosResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -645,7 +645,7 @@
      * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
      * @param {module:api/CartaoApi~gerarLotesCartoesPrePagosUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/LoteCartoesPrePagos}
+     * data is of type: {module:model/LoteCartoesPrePagosResponse}
      */
     this.gerarLotesCartoesPrePagosUsingPOST = function(opts, callback) {
       opts = opts || {};
@@ -670,7 +670,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = LoteCartoesPrePagos;
+      var returnType = LoteCartoesPrePagosResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/lotes-cartoes-pre-pagos', 'POST',
@@ -683,7 +683,7 @@
      * Callback function to receive the result of the gerarNovaViaUsingPOST operation.
      * @callback module:api/CartaoApi~gerarNovaViaUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Cartao} data The data returned by the service call.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -692,7 +692,7 @@
      * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
      * @param {module:api/CartaoApi~gerarNovaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/Cartao}
+     * data is of type: {module:model/CartaoResponse}
      */
     this.gerarNovaViaUsingPOST = function(id, callback) {
       var postBody = null;
@@ -716,7 +716,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Cartao;
+      var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/gerar-nova-via', 'POST',
@@ -789,10 +789,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET4 operation.
-     * @callback module:api/CartaoApi~listarUsingGET4Callback
+     * Callback function to receive the result of the listarUsingGET5 operation.
+     * @callback module:api/CartaoApi~listarUsingGET5Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageCartoes} data The data returned by the service call.
+     * @param {module:model/PageCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -820,10 +820,10 @@
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageCartoes}
+     * @param {module:api/CartaoApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCartaoResponse}
      */
-    this.listarUsingGET4 = function(opts, callback) {
+    this.listarUsingGET5 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -860,7 +860,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageCartoes;
+      var returnType = PageCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes', 'GET',
@@ -873,7 +873,7 @@
      * Callback function to receive the result of the validarDadosImpressosBandeiradoUsingGET operation.
      * @callback module:api/CartaoApi~validarDadosImpressosBandeiradoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {module:model/ValidaCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -885,7 +885,7 @@
      * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
      * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
      * @param {module:api/CartaoApi~validarDadosImpressosBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
+     * data is of type: {module:model/ValidaCartaoResponse}
      */
     this.validarDadosImpressosBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
       var postBody = null;
@@ -927,7 +927,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ValidaCartao;
+      var returnType = ValidaCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/validar-dados-impressos-bandeirados', 'GET',
@@ -940,7 +940,7 @@
      * Callback function to receive the result of the validarDadosImpressosNaoBandeiradoUsingGET operation.
      * @callback module:api/CartaoApi~validarDadosImpressosNaoBandeiradoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {module:model/ValidaCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -952,7 +952,7 @@
      * @param {String} dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
      * @param {String} codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
      * @param {module:api/CartaoApi~validarDadosImpressosNaoBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
+     * data is of type: {module:model/ValidaCartaoResponse}
      */
     this.validarDadosImpressosNaoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
       var postBody = null;
@@ -994,7 +994,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ValidaCartao;
+      var returnType = ValidaCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/validar-dados-impressos-nao-bandeirados', 'GET',
@@ -1007,7 +1007,7 @@
      * Callback function to receive the result of the validarDe55CartaoMastercardUsingGET operation.
      * @callback module:api/CartaoApi~validarDe55CartaoMastercardUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {module:model/ValidaCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1017,7 +1017,7 @@
      * @param {String} numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
      * @param {String} criptograma Criptograma do cart\u00C3\u00A3o no formato de55
      * @param {module:api/CartaoApi~validarDe55CartaoMastercardUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
+     * data is of type: {module:model/ValidaCartaoResponse}
      */
     this.validarDe55CartaoMastercardUsingGET = function(numeroCartao, criptograma, callback) {
       var postBody = null;
@@ -1047,7 +1047,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ValidaCartao;
+      var returnType = ValidaCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/validar-de55-mastercard', 'GET',
@@ -1060,7 +1060,7 @@
      * Callback function to receive the result of the validarSenhaUsingGET operation.
      * @callback module:api/CartaoApi~validarSenhaUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ValidaSenhaCartao} data The data returned by the service call.
+     * @param {module:model/ValidaSenhaCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1070,7 +1070,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {String} senha Senha para ser validada.
      * @param {module:api/CartaoApi~validarSenhaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaSenhaCartao}
+     * data is of type: {module:model/ValidaSenhaCartaoResponse}
      */
     this.validarSenhaUsingGET = function(id, senha, callback) {
       var postBody = null;
@@ -1100,7 +1100,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ValidaSenhaCartao;
+      var returnType = ValidaSenhaCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/validar-senha', 'GET',
@@ -1113,7 +1113,7 @@
      * Callback function to receive the result of the validarTarjaUsingGET operation.
      * @callback module:api/CartaoApi~validarTarjaUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ValidaCartao} data The data returned by the service call.
+     * @param {module:model/ValidaCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1124,7 +1124,7 @@
      * @param {String} trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
      * @param {String} trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
      * @param {module:api/CartaoApi~validarTarjaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ValidaCartao}
+     * data is of type: {module:model/ValidaCartaoResponse}
      */
     this.validarTarjaUsingGET = function(numeroCartao, trilha1, trilha2, callback) {
       var postBody = null;
@@ -1160,7 +1160,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ValidaCartao;
+      var returnType = ValidaCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/validar-tarja', 'GET',

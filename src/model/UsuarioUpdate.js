@@ -18,7 +18,7 @@
   /**
    * The UsuarioUpdate model module.
    * @module model/UsuarioUpdate
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/WebHook', '../model/PageWebHooks'], factory);
+    define(['../ApiClient', '../model/WebHookResponse', '../model/PageWebHookResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/WebHook'), require('../model/PageWebHooks'));
+    module.exports = factory(require('../ApiClient'), require('../model/WebHookResponse'), require('../model/PageWebHookResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.WebhooksApi = factory(root.Pier.ApiClient, root.Pier.WebHook, root.Pier.PageWebHooks);
+    root.Pier.WebhooksApi = factory(root.Pier.ApiClient, root.Pier.WebHookResponse, root.Pier.PageWebHookResponse);
   }
-}(this, function(ApiClient, WebHook, PageWebHooks) {
+}(this, function(ApiClient, WebHookResponse, PageWebHookResponse) {
   'use strict';
 
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the alterarUsingPUT10 operation.
      * @callback module:api/WebhooksApi~alterarUsingPUT10Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/WebHook} data The data returned by the service call.
+     * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +47,7 @@
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
      * @param {module:api/WebhooksApi~alterarUsingPUT10Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/WebHook}
+     * data is of type: {module:model/WebHookResponse}
      */
     this.alterarUsingPUT10 = function(id, tipoEvento, url, callback) {
       var postBody = null;
@@ -83,7 +83,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = WebHook;
+      var returnType = WebHookResponse;
 
       return this.apiClient.callApi(
         '/api/webhooks/{id}', 'PUT',
@@ -96,7 +96,7 @@
      * Callback function to receive the result of the consultarUsingGET26 operation.
      * @callback module:api/WebhooksApi~consultarUsingGET26Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/WebHook} data The data returned by the service call.
+     * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -105,7 +105,7 @@
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
      * @param {module:api/WebhooksApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/WebHook}
+     * data is of type: {module:model/WebHookResponse}
      */
     this.consultarUsingGET26 = function(id, callback) {
       var postBody = null;
@@ -129,7 +129,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = WebHook;
+      var returnType = WebHookResponse;
 
       return this.apiClient.callApi(
         '/api/webhooks/{id}', 'GET',
@@ -139,10 +139,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET30 operation.
-     * @callback module:api/WebhooksApi~listarUsingGET30Callback
+     * Callback function to receive the result of the listarUsingGET31 operation.
+     * @callback module:api/WebhooksApi~listarUsingGET31Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageWebHooks} data The data returned by the service call.
+     * @param {module:model/PageWebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,10 +156,10 @@
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageWebHooks}
+     * @param {module:api/WebhooksApi~listarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageWebHookResponse}
      */
-    this.listarUsingGET30 = function(opts, callback) {
+    this.listarUsingGET31 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -182,7 +182,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageWebHooks;
+      var returnType = PageWebHookResponse;
 
       return this.apiClient.callApi(
         '/api/webhooks', 'GET',
@@ -195,7 +195,7 @@
      * Callback function to receive the result of the salvarUsingPOST14 operation.
      * @callback module:api/WebhooksApi~salvarUsingPOST14Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/WebHook} data The data returned by the service call.
+     * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -205,7 +205,7 @@
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
      * @param {module:api/WebhooksApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/WebHook}
+     * data is of type: {module:model/WebHookResponse}
      */
     this.salvarUsingPOST14 = function(tipoEvento, url, callback) {
       var postBody = null;
@@ -235,7 +235,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = WebHook;
+      var returnType = WebHookResponse;
 
       return this.apiClient.callApi(
         '/api/webhooks', 'POST',

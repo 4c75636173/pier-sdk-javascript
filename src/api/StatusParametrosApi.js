@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/EstagioCartao', '../model/StatusCartao', '../model/StatusConta', '../model/StatusImpressao', '../model/PageEstagiosCartoes', '../model/PageStatusCartoes', '../model/PageStatusContas', '../model/PageStatusImpressao'], factory);
+    define(['../ApiClient', '../model/EstagioCartaoResponse', '../model/StatusCartaoResponse', '../model/StatusContaResponse', '../model/StatusImpressaoResponse', '../model/PageEstagioCartaoResponse', '../model/PageStatusCartaoResponse', '../model/PageStatusContaResponse', '../model/PageStatusImpressaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartao'), require('../model/StatusCartao'), require('../model/StatusConta'), require('../model/StatusImpressao'), require('../model/PageEstagiosCartoes'), require('../model/PageStatusCartoes'), require('../model/PageStatusContas'), require('../model/PageStatusImpressao'));
+    module.exports = factory(require('../ApiClient'), require('../model/EstagioCartaoResponse'), require('../model/StatusCartaoResponse'), require('../model/StatusContaResponse'), require('../model/StatusImpressaoResponse'), require('../model/PageEstagioCartaoResponse'), require('../model/PageStatusCartaoResponse'), require('../model/PageStatusContaResponse'), require('../model/PageStatusImpressaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.StatusParametrosApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartao, root.Pier.StatusCartao, root.Pier.StatusConta, root.Pier.StatusImpressao, root.Pier.PageEstagiosCartoes, root.Pier.PageStatusCartoes, root.Pier.PageStatusContas, root.Pier.PageStatusImpressao);
+    root.Pier.StatusParametrosApi = factory(root.Pier.ApiClient, root.Pier.EstagioCartaoResponse, root.Pier.StatusCartaoResponse, root.Pier.StatusContaResponse, root.Pier.StatusImpressaoResponse, root.Pier.PageEstagioCartaoResponse, root.Pier.PageStatusCartaoResponse, root.Pier.PageStatusContaResponse, root.Pier.PageStatusImpressaoResponse);
   }
-}(this, function(ApiClient, EstagioCartao, StatusCartao, StatusConta, StatusImpressao, PageEstagiosCartoes, PageStatusCartoes, PageStatusContas, PageStatusImpressao) {
+}(this, function(ApiClient, EstagioCartaoResponse, StatusCartaoResponse, StatusContaResponse, StatusImpressaoResponse, PageEstagioCartaoResponse, PageStatusCartaoResponse, PageStatusContaResponse, PageStatusImpressaoResponse) {
   'use strict';
 
   /**
    * StatusParametros service.
    * @module api/StatusParametrosApi
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -36,7 +36,7 @@
      * Callback function to receive the result of the consultarEstagioCartaoUsingGET operation.
      * @callback module:api/StatusParametrosApi~consultarEstagioCartaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EstagioCartao} data The data returned by the service call.
+     * @param {module:model/EstagioCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,7 +45,7 @@
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarEstagioCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/EstagioCartao}
+     * data is of type: {module:model/EstagioCartaoResponse}
      */
     this.consultarEstagioCartaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -69,7 +69,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EstagioCartao;
+      var returnType = EstagioCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/estagios-cartoes/{id}', 'GET',
@@ -82,7 +82,7 @@
      * Callback function to receive the result of the consultarStatusCartaoUsingGET operation.
      * @callback module:api/StatusParametrosApi~consultarStatusCartaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/StatusCartao} data The data returned by the service call.
+     * @param {module:model/StatusCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -91,7 +91,7 @@
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarStatusCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/StatusCartao}
+     * data is of type: {module:model/StatusCartaoResponse}
      */
     this.consultarStatusCartaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -115,7 +115,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = StatusCartao;
+      var returnType = StatusCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/status-cartoes/{id}', 'GET',
@@ -128,7 +128,7 @@
      * Callback function to receive the result of the consultarUsingGET13 operation.
      * @callback module:api/StatusParametrosApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/StatusConta} data The data returned by the service call.
+     * @param {module:model/StatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -137,7 +137,7 @@
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
      * @param {module:api/StatusParametrosApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/StatusConta}
+     * data is of type: {module:model/StatusContaResponse}
      */
     this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
@@ -161,7 +161,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = StatusConta;
+      var returnType = StatusContaResponse;
 
       return this.apiClient.callApi(
         '/api/status-contas/{id}', 'GET',
@@ -174,7 +174,7 @@
      * Callback function to receive the result of the consultarUsingGET14 operation.
      * @callback module:api/StatusParametrosApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/StatusImpressao} data The data returned by the service call.
+     * @param {module:model/StatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -183,7 +183,7 @@
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {module:api/StatusParametrosApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/StatusImpressao}
+     * data is of type: {module:model/StatusImpressaoResponse}
      */
     this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
@@ -207,7 +207,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = StatusImpressao;
+      var returnType = StatusImpressaoResponse;
 
       return this.apiClient.callApi(
         '/api/status-impressoes/{id}', 'GET',
@@ -220,7 +220,7 @@
      * Callback function to receive the result of the listarEstagiosCartoesUsingGET operation.
      * @callback module:api/StatusParametrosApi~listarEstagiosCartoesUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageEstagiosCartoes} data The data returned by the service call.
+     * @param {module:model/PageEstagioCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -233,7 +233,7 @@
      * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {String} opts.nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {module:api/StatusParametrosApi~listarEstagiosCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageEstagiosCartoes}
+     * data is of type: {module:model/PageEstagioCartaoResponse}
      */
     this.listarEstagiosCartoesUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -256,7 +256,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageEstagiosCartoes;
+      var returnType = PageEstagioCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/estagios-cartoes', 'GET',
@@ -269,7 +269,7 @@
      * Callback function to receive the result of the listarStatusCartoesUsingGET operation.
      * @callback module:api/StatusParametrosApi~listarStatusCartoesUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusCartoes} data The data returned by the service call.
+     * @param {module:model/PageStatusCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -287,8 +287,9 @@
      * @param {Integer} opts.idStatusDestinoConta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
      * @param {Integer} opts.flagCobraTarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
      * @param {module:api/StatusParametrosApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusCartoes}
+     * data is of type: {module:model/PageStatusCartaoResponse}
      */
     this.listarStatusCartoesUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -307,7 +308,8 @@
         'idStatusDestinoDesbloqueio': opts['idStatusDestinoDesbloqueio'],
         'idStatusDestinoConta': opts['idStatusDestinoConta'],
         'flagCobraTarifa': opts['flagCobraTarifa'],
-        'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao']
+        'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao'],
+        'flagPermiteDesbloqueio': opts['flagPermiteDesbloqueio']
       };
       var headerParams = {
       };
@@ -317,7 +319,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageStatusCartoes;
+      var returnType = PageStatusCartaoResponse;
 
       return this.apiClient.callApi(
         '/api/status-cartoes', 'GET',
@@ -327,10 +329,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET19 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET19Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusContas} data The data returned by the service call.
+     * @param {module:model/PageStatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -345,10 +347,12 @@
      * @param {Integer} opts.flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
      * @param {String} opts.mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-     * @param {module:api/StatusParametrosApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusContas}
+     * @param {Integer} opts.flagFazTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagRecebeTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+     * @param {module:api/StatusParametrosApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageStatusContaResponse}
      */
-    this.listarUsingGET19 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -362,7 +366,9 @@
         'nome': opts['nome'],
         'flagAlteraLimite': opts['flagAlteraLimite'],
         'mensagemConsultaNegada': opts['mensagemConsultaNegada'],
-        'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao']
+        'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao'],
+        'flagFazTransferencia': opts['flagFazTransferencia'],
+        'flagRecebeTransferencia': opts['flagRecebeTransferencia']
       };
       var headerParams = {
       };
@@ -372,7 +378,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageStatusContas;
+      var returnType = PageStatusContaResponse;
 
       return this.apiClient.callApi(
         '/api/status-contas', 'GET',
@@ -382,10 +388,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/StatusParametrosApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/StatusParametrosApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageStatusImpressao} data The data returned by the service call.
+     * @param {module:model/PageStatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -397,10 +403,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
-     * @param {module:api/StatusParametrosApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageStatusImpressao}
+     * @param {module:api/StatusParametrosApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageStatusImpressaoResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -421,7 +427,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageStatusImpressao;
+      var returnType = PageStatusImpressaoResponse;
 
       return this.apiClient.callApi(
         '/api/status-impressoes', 'GET',

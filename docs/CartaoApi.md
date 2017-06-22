@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET4**](CartaoApi.md#listarUsingGET4) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listarUsingGET5**](CartaoApi.md#listarUsingGET5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -78,7 +78,7 @@ No authorization required
 
 <a name="alterarStatusImpressaoUsingPUT"></a>
 # **alterarStatusImpressaoUsingPUT**
-> HistoricoImpressaoCartao alterarStatusImpressaoUsingPUT(id, idStatusImpressao)
+> HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT(id, idStatusImpressao)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HistoricoImpressaoCartao**](HistoricoImpressaoCartao.md)
+[**HistoricoImpressaoCartaoResponse**](HistoricoImpressaoCartaoResponse.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 
 <a name="atribuirPessoaUsingPUT"></a>
 # **atribuirPessoaUsingPUT**
-> Cartao atribuirPessoaUsingPUT(id, idPessoa)
+> CartaoResponse atribuirPessoaUsingPUT(id, idPessoa)
 
 Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cartao**](Cartao.md)
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ No authorization required
 
 <a name="bloquearUsingPUT"></a>
 # **bloquearUsingPUT**
-> Cartao bloquearUsingPUT(id, idStatus, observacao)
+> CartaoResponse bloquearUsingPUT(id, idStatus, observacao)
 
 Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cartao**](Cartao.md)
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ No authorization required
 
 <a name="consultarDadosReaisCartaoUsingGET"></a>
 # **consultarDadosReaisCartaoUsingGET**
-> DadosCarto consultarDadosReaisCartaoUsingGET(id)
+> DadosCartaoResponse consultarDadosReaisCartaoUsingGET(id)
 
 Consultar Detalhes do Cart\u00C3\u00A3o
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DadosCarto**](DadosCarto.md)
+[**DadosCartaoResponse**](DadosCartaoResponse.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ No authorization required
 
 <a name="consultarLimiteDisponibilidadeUsingGET"></a>
 # **consultarLimiteDisponibilidadeUsingGET**
-> LimiteDisponibilidade consultarLimiteDisponibilidadeUsingGET(id)
+> LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET(id)
 
 Apresenta os limites do Portador do Cart\u00C3\u00A3o
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LimiteDisponibilidade**](LimiteDisponibilidade.md)
+[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 
 <a name="consultarLotesCartoesPrePagosUsingGET"></a>
 # **consultarLotesCartoesPrePagosUsingGET**
-> LoteCartoesPrePagos consultarLotesCartoesPrePagosUsingGET(id)
+> LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET(id)
 
 Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+[**LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ No authorization required
 
 <a name="consultarPortadorUsingGET"></a>
 # **consultarPortadorUsingGET**
-> Portador consultarPortadorUsingGET(id)
+> PortadorResponse consultarPortadorUsingGET(id)
 
 Apresenta os dados do Portador do Cart\u00C3\u00A3o
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Portador**](Portador.md)
+[**PortadorResponse**](PortadorResponse.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ No authorization required
 
 <a name="consultarUsingGET3"></a>
 # **consultarUsingGET3**
-> CartaoDetalhado consultarUsingGET3(id)
+> CartaoDetalheResponse consultarUsingGET3(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartaoDetalhado**](CartaoDetalhado.md)
+[**CartaoDetalheResponse**](CartaoDetalheResponse.md)
 
 ### Authorization
 
@@ -507,7 +507,7 @@ No authorization required
 
 <a name="desbloquearSenhaIncorretaUsingPOST"></a>
 # **desbloquearSenhaIncorretaUsingPOST**
-> Cartao desbloquearSenhaIncorretaUsingPOST(id)
+> CartaoResponse desbloquearSenhaIncorretaUsingPOST(id)
 
 Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cartao**](Cartao.md)
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -553,7 +553,7 @@ No authorization required
 
 <a name="desbloquearUsingPUT"></a>
 # **desbloquearUsingPUT**
-> Cartao desbloquearUsingPUT(id)
+> CartaoResponse desbloquearUsingPUT(id)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -586,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cartao**](Cartao.md)
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -599,7 +599,7 @@ No authorization required
 
 <a name="gerarLotesCartoesPrePagosUsingPOST"></a>
 # **gerarLotesCartoesPrePagosUsingPOST**
-> LoteCartoesPrePagos gerarLotesCartoesPrePagosUsingPOST(opts)
+> LoteCartoesPrePagosResponse gerarLotesCartoesPrePagosUsingPOST(opts)
 
 Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LoteCartoesPrePagos**](LoteCartoesPrePagos.md)
+[**LoteCartoesPrePagosResponse**](LoteCartoesPrePagosResponse.md)
 
 ### Authorization
 
@@ -656,7 +656,7 @@ No authorization required
 
 <a name="gerarNovaViaUsingPOST"></a>
 # **gerarNovaViaUsingPOST**
-> Cartao gerarNovaViaUsingPOST(id)
+> CartaoResponse gerarNovaViaUsingPOST(id)
 
 Gerar uma nova via de Cart\u00C3\u00A3o
 
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cartao**](Cartao.md)
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -767,9 +767,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET4"></a>
-# **listarUsingGET4**
-> PageCartoes listarUsingGET4(opts)
+<a name="listarUsingGET5"></a>
+# **listarUsingGET5**
+> PageCartaoResponse listarUsingGET5(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -811,7 +811,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET4(opts, callback);
+api.listarUsingGET5(opts, callback);
 ```
 
 ### Parameters
@@ -841,7 +841,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageCartoes**](PageCartoes.md)
+[**PageCartaoResponse**](PageCartaoResponse.md)
 
 ### Authorization
 
@@ -854,7 +854,7 @@ No authorization required
 
 <a name="validarDadosImpressosBandeiradoUsingGET"></a>
 # **validarDadosImpressosBandeiradoUsingGET**
-> ValidaCartao validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
+> ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
 
 Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 
@@ -896,7 +896,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidaCartao**](ValidaCartao.md)
+[**ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ No authorization required
 
 <a name="validarDadosImpressosNaoBandeiradoUsingGET"></a>
 # **validarDadosImpressosNaoBandeiradoUsingGET**
-> ValidaCartao validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
+> ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
 
 Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 
@@ -951,7 +951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidaCartao**](ValidaCartao.md)
+[**ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -964,7 +964,7 @@ No authorization required
 
 <a name="validarDe55CartaoMastercardUsingGET"></a>
 # **validarDe55CartaoMastercardUsingGET**
-> ValidaCartao validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma)
+> ValidaCartaoResponse validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma)
 
 Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
 
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidaCartao**](ValidaCartao.md)
+[**ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 
@@ -1013,7 +1013,7 @@ No authorization required
 
 <a name="validarSenhaUsingGET"></a>
 # **validarSenhaUsingGET**
-> ValidaSenhaCartao validarSenhaUsingGET(id, senha)
+> ValidaSenhaCartaoResponse validarSenhaUsingGET(id, senha)
 
 Permite validar a senha de um Cart\u00C3\u00A3o
 
@@ -1049,7 +1049,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidaSenhaCartao**](ValidaSenhaCartao.md)
+[**ValidaSenhaCartaoResponse**](ValidaSenhaCartaoResponse.md)
 
 ### Authorization
 
@@ -1062,7 +1062,7 @@ No authorization required
 
 <a name="validarTarjaUsingGET"></a>
 # **validarTarjaUsingGET**
-> ValidaCartao validarTarjaUsingGET(numeroCartao, trilha1, trilha2)
+> ValidaCartaoResponse validarTarjaUsingGET(numeroCartao, trilha1, trilha2)
 
 Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
 
@@ -1101,7 +1101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ValidaCartao**](ValidaCartao.md)
+[**ValidaCartaoResponse**](ValidaCartaoResponse.md)
 
 ### Authorization
 

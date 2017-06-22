@@ -18,17 +18,16 @@
   /**
    * The AntecipacaoSimuladaDetalhesResponse model module.
    * @module model/AntecipacaoSimuladaDetalhesResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
    * Constructs a new <code>AntecipacaoSimuladaDetalhesResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
    * @alias module:model/AntecipacaoSimuladaDetalhesResponse
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -47,9 +46,6 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idSimulacaoDetalhe')) {
-        obj['idSimulacaoDetalhe'] = ApiClient.convertToType(data['idSimulacaoDetalhe'], 'Integer');
-      }
       if (data.hasOwnProperty('quantidadeParcelas')) {
         obj['quantidadeParcelas'] = ApiClient.convertToType(data['quantidadeParcelas'], 'Integer');
       }
@@ -66,12 +62,6 @@
     return obj;
   }
 
-
-  /**
-   * C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {Integer} idSimulacaoDetalhe
-   */
-  exports.prototype['idSimulacaoDetalhe'] = undefined;
 
   /**
    * Quantidade de parcelas do plano de parcelamento simulado.

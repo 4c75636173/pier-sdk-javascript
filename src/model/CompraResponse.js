@@ -18,7 +18,7 @@
   /**
    * The CompraResponse model module.
    * @module model/CompraResponse
-   * @version 2.16.2
+   * @version 2.16.6
    */
 
   /**
@@ -98,8 +98,8 @@
       if (data.hasOwnProperty('nomeEstabelecimento')) {
         obj['nomeEstabelecimento'] = ApiClient.convertToType(data['nomeEstabelecimento'], 'String');
       }
-      if (data.hasOwnProperty('tipoTransacao')) {
-        obj['tipoTransacao'] = ApiClient.convertToType(data['tipoTransacao'], 'String');
+      if (data.hasOwnProperty('tipoOrigemTransacao')) {
+        obj['tipoOrigemTransacao'] = ApiClient.convertToType(data['tipoOrigemTransacao'], 'String');
       }
       if (data.hasOwnProperty('cidade')) {
         obj['cidade'] = ApiClient.convertToType(data['cidade'], 'String');
@@ -205,9 +205,9 @@
 
   /**
    * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
-   * @member {String} tipoTransacao
+   * @member {String} tipoOrigemTransacao
    */
-  exports.prototype['tipoTransacao'] = undefined;
+  exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
    * Cidade onde a compra foi realizada.
