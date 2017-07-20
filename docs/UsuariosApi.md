@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio
-[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados
-[**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados
-[**consultarUsingGET25**](UsuariosApi.md#consultarUsingGET25) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio
-[**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados
-[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados
-[**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio
-[**salvarUsingPOST13**](UsuariosApi.md#salvarUsingPOST13) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio
-[**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio
+[**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**consultarUsingGET26**](UsuariosApi.md#consultarUsingGET26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST15**](UsuariosApi.md#salvarUsingPOST15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
 <a name="alterarSenhaUsingPUT"></a>
 # **alterarSenhaUsingPUT**
 > &#39;String&#39; alterarSenhaUsingPUT(id, senhaAtual, senhaNova)
 
-Alterar senha do usu\u00C3\u00A1rio
+Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
 
@@ -71,7 +71,7 @@ No authorization required
 # **alterarUsingPUT9**
 > UsuarioResponse alterarUsingPUT9(id, update)
 
-Altera os usu\u00C3\u00A1rios cadastrados
+Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -120,7 +120,7 @@ No authorization required
 # **ativarUsuarioUsingPOST**
 > UsuarioResponse ativarUsuarioUsingPOST(id)
 
-Ativa os usu\u00C3\u00A1rios cadastrados
+Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -162,11 +162,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET25"></a>
-# **consultarUsingGET25**
-> UsuarioResponse consultarUsingGET25(id)
+<a name="consultarUsingGET26"></a>
+# **consultarUsingGET26**
+> UsuarioResponse consultarUsingGET26(id)
 
-Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET25(id, callback);
+api.consultarUsingGET26(id, callback);
 ```
 
 ### Parameters
@@ -212,7 +212,7 @@ No authorization required
 # **desativarUsuarioUsingPOST**
 > UsuarioResponse desativarUsuarioUsingPOST(id)
 
-Desativa os usu\u00C3\u00A1rios cadastrados
+Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -258,7 +258,7 @@ No authorization required
 # **listarUsingGET30**
 > PageUsuarioResponse listarUsingGET30(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados
+Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
 
@@ -315,7 +315,7 @@ No authorization required
 # **recuperarSenhaUsingPOST**
 > &#39;String&#39; recuperarSenhaUsingPOST(id)
 
-Recuperar senha do usu\u00C3\u00A1rio
+Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
 
@@ -357,11 +357,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> UsuarioResponse salvarUsingPOST13(persist)
+<a name="salvarUsingPOST15"></a>
+# **salvarUsingPOST15**
+> UsuarioResponse salvarUsingPOST15(persist)
 
-Cadastra Usu\u00C3\u00A1rio
+Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -381,7 +381,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(persist, callback);
+api.salvarUsingPOST15(persist, callback);
 ```
 
 ### Parameters
@@ -407,7 +407,7 @@ No authorization required
 # **validarSenhaUsingGET1**
 > &#39;String&#39; validarSenhaUsingGET1(senha, id)
 
-Validar a senha do usu\u00C3\u00A1rio
+Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
 

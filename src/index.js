@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/AjusteResponse', './model/AntecipacaoResponse', './model/AntecipacaoSimuladaDetalhesResponse', './model/AntecipacaoSimuladaResponse', './model/AplicacaoMobilePersist', './model/AplicacaoMobileResponse', './model/AplicacaoMobileUpdate', './model/AtendimentoClienteResponse', './model/AuthToken', './model/AutorizacaoOnUsRequest', './model/BancoResponse', './model/BaseResponse', './model/BodyAccessToken', './model/BoletoResponse', './model/CampoCodificadoDescricaoResponse', './model/CancelamentoTransacaoOnUsRequest', './model/CartaoDetalheResponse', './model/CartaoImpressaoResponse', './model/CartaoResponse', './model/CdtDetalheOportunidadeAUD', './model/CompraResponse', './model/ContaDetalheResponse', './model/ContaResponse', './model/DadosCartaoResponse', './model/DesfazimentoTransacaoOnUsRequest', './model/DetalheOportunidadePersist', './model/DetalheOportunidadeResponse', './model/DetalheOportunidadeUpdate', './model/DetalhesFaturaConsignadaResponse', './model/DetalhesFaturaResponse', './model/DispositivoPersist', './model/DispositivoResponse', './model/DividaClienteResponse', './model/EnderecoAprovadoPersist', './model/EnderecoAprovadoResponse', './model/EnderecoResponse', './model/EstabelecimentoResponse', './model/EstagioCartaoResponse', './model/ExtraInfo', './model/FaqResponse', './model/FaturaConsignadaDetalheResponse', './model/FaturaConsignadaResponse', './model/FaturaResponse', './model/HistoricoAssessoriaResponse', './model/HistoricoAtrasoFaturaResponse', './model/HistoricoEventosResponse', './model/HistoricoImpressaoCartaoResponse', './model/HistoricoTelefoneResponse', './model/JobResponse', './model/LimiteDisponibilidadeResponse', './model/LoteCartoesPrePagosResponse', './model/MapOfstringAndstring', './model/NotificacaoPushResponse', './model/NotificacaoResponse', './model/NotificacaoSMSBody', './model/NotificacaoSMSResponse', './model/OportunidadeAUDResponse', './model/OportunidadePersist', './model/OportunidadeResponse', './model/OportunidadeUpdate', './model/OrigemComercialResponse', './model/PageAplicacaoMobileResponse', './model/PageAtendimentoClienteResponse', './model/PageBancoResponse', './model/PageBaseResponse', './model/PageCampoCodificadoDescricaoResponse', './model/PageCartaoResponse', './model/PageCompraResponse', './model/PageContaDetalheResponse', './model/PageContaResponse', './model/PageDispositivoResponse', './model/PageEnderecoResponse', './model/PageEstabelecimentoResponse', './model/PageEstagioCartaoResponse', './model/PageFaqResponse', './model/PageFaturaConsignadaResponse', './model/PageFaturaResponse', './model/PageHistoricoAssessoriaResponse', './model/PageHistoricoAtrasoFaturaResponse', './model/PageHistoricoEventosResponse', './model/PageJobResponse', './model/PageLoteCartoesPrePagosResponse', './model/PageOportunidadeAUDResponse', './model/PageOportunidadeResponse', './model/PageOrigemComercialResponse', './model/PagePaisResponse', './model/PagePessoaDetalheResponse', './model/PagePessoaResponse', './model/PagePlataformaMobileResponse', './model/PagePortadorResponse', './model/PageProdutoResponse', './model/PagePushResponse', './model/PageSMSResponse', './model/PageStatusCartaoResponse', './model/PageStatusContaResponse', './model/PageStatusImpressaoResponse', './model/PageStatusOportunidadeAUDResponse', './model/PageStatusOportunidadeResponse', './model/PageTaxasRefinanciamentoResponse', './model/PageTelefoneResponse', './model/PageTerminalResponse', './model/PageTipoAjusteResponse', './model/PageTipoBoletoResponse', './model/PageTipoEnderecoResponse', './model/PageTipoOportunidadeAUDResponse', './model/PageTipoOportunidadeResponse', './model/PageTipoTelefoneResponse', './model/PageTransacaoResponse', './model/PageTransacoesCorrentesResponse', './model/PageTransferenciaBancariaResponse', './model/PageTransferenciaResponse', './model/PageUsuarioResponse', './model/PageWebHookResponse', './model/PaisResponse', './model/ParametroProdutoResponse', './model/PessoaDetalheResponse', './model/PessoaFisicaAprovadaPersist', './model/PessoaFisicaAprovadaResponse', './model/PessoaJuridicaAprovadaPersist', './model/PessoaJuridicaAprovadaResponse', './model/PessoaPersist', './model/PessoaResponse', './model/PlataformaMobilePersist', './model/PlataformaMobileResponse', './model/PlataformaMobileUpdate', './model/PortadorResponse', './model/ProdutoDetalhesResponse', './model/ProdutoResponse', './model/PushAPNS', './model/PushFCMEGCM', './model/RiscoFraudeDetalhadoResponse', './model/RiscoFraudeResponse', './model/RiscoFraudeResponsePage', './model/SocioAprovadoResponse', './model/StatusCartaoResponse', './model/StatusContaResponse', './model/StatusImpressaoResponse', './model/StatusOportunidade', './model/StatusOportunidadeAUDResponse', './model/StatusOportunidadeResponse', './model/TaxaAntecipacaoRequest', './model/TaxasRefinanciamentoResponse', './model/TelefonePessoaAprovadaPersist', './model/TelefonePessoaAprovadaResponse', './model/TelefoneResponse', './model/TerminalResponse', './model/TipoAjusteResponse', './model/TipoBoletoResponse', './model/TipoEnderecoResponse', './model/TipoOportunidade', './model/TipoOportunidadeAUDResponse', './model/TipoOportunidadeResponse', './model/TipoTelefoneResponse', './model/TokenResponse', './model/TransacaoCorrenteResponse', './model/TransacaoOnUsRequest', './model/TransacaoOnUsResponse', './model/TransacoesCorrentesResponse', './model/TransferenciaBancariaPersist', './model/TransferenciaBancariaResponse', './model/TransferenciaResponse', './model/UsuarioPersist', './model/UsuarioResponse', './model/UsuarioUpdate', './model/ValidaCartaoResponse', './model/ValidaSenhaCartaoResponse', './model/WebHookResponse', './api/AplicacoesMobileApi', './api/AutorizacoesApi', './api/BaseApi', './api/CadastrosGeraisApi', './api/CartaoApi', './api/CompraApi', './api/ContaApi', './api/DispositivosApi', './api/EstabelecimentosApi', './api/FAQApi', './api/JobsApi', './api/NotificacoesApi', './api/OportunidadesApi', './api/PermissaoPaisesApi', './api/PlataformasMobileApi', './api/RiscoFraudeApi', './api/StatusParametrosApi', './api/TokenApi', './api/UsuariosApi', './api/WebhooksApi'], factory);
+    define(['./ApiClient', './model/AdicionalPersist', './model/AdicionalResponse', './model/AjusteResponse', './model/AntecipacaoResponse', './model/AntecipacaoSimuladaDetalhesResponse', './model/AntecipacaoSimuladaResponse', './model/AnuidadeResponse', './model/AplicacaoMobilePersist', './model/AplicacaoMobileResponse', './model/AplicacaoMobileUpdate', './model/ArquivoDetalhesPersist', './model/ArquivoParametroResponse', './model/ArquivoPersist', './model/ArquivoResponse', './model/AtendimentoClienteResponse', './model/AtribuirAssinaturaClienteRequest', './model/AuthToken', './model/AutorizacaoOnUsRequest', './model/BancoResponse', './model/BaseResponse', './model/BodyAccessToken', './model/BoletoResponse', './model/CampoCodificadoDescricaoResponse', './model/CancelamentoTransacaoOnUsRequest', './model/CartaoDetalheResponse', './model/CartaoImpressaoResponse', './model/CartaoResponse', './model/CdtDetalheOportunidadeAUD', './model/CodigoSegurancaSMSPersist', './model/CodigoSegurancaSMSRequest', './model/CompraResponse', './model/ConfiguracaoEmailPersist', './model/ConfiguracaoEmailResponse', './model/ContaDetalheResponse', './model/ContaResponse', './model/DadosCartaoResponse', './model/DesfazimentoTransacaoOnUsRequest', './model/DetalheOportunidadePersist', './model/DetalheOportunidadeResponse', './model/DetalheOportunidadeUpdate', './model/DetalhesFaturaConsignadaResponse', './model/DetalhesFaturaResponse', './model/DispositivoPersist', './model/DispositivoResponse', './model/DividaClienteResponse', './model/EnderecoAprovadoPersist', './model/EnderecoAprovadoResponse', './model/EnderecoResponse', './model/EstabelecimentoResponse', './model/EstagioCartaoResponse', './model/ExtraInfo', './model/FaqResponse', './model/FaturaConsignadaDetalheResponse', './model/FaturaConsignadaResponse', './model/FaturaResponse', './model/HistoricoAssessoriaResponse', './model/HistoricoAtrasoFaturaResponse', './model/HistoricoEventosResponse', './model/HistoricoImpressaoCartaoResponse', './model/HistoricoTelefoneResponse', './model/IntegracaoEmissorResponse', './model/JobResponse', './model/LimiteDisponibilidadeResponse', './model/LoteCartoesPrePagosResponse', './model/MapOfstringAndstring', './model/NotificacaoPushResponse', './model/NotificacaoResponse', './model/NotificacaoSMSBody', './model/NotificacaoSMSResponse', './model/OperadoraResponse', './model/OportunidadeAUDResponse', './model/OportunidadePersist', './model/OportunidadeResponse', './model/OportunidadeUpdate', './model/OrigemComercialResponse', './model/PageAnuidadeResponse', './model/PageAplicacaoMobileResponse', './model/PageAtendimentoClienteResponse', './model/PageBancoResponse', './model/PageBaseResponse', './model/PageCampoCodificadoDescricaoResponse', './model/PageCartaoResponse', './model/PageCompraResponse', './model/PageConfiguracaoEmailResponse', './model/PageContaDetalheResponse', './model/PageContaResponse', './model/PageDispositivoResponse', './model/PageEnderecoResponse', './model/PageEstabelecimentoResponse', './model/PageEstagioCartaoResponse', './model/PageFaqResponse', './model/PageFaturaConsignadaResponse', './model/PageFaturaResponse', './model/PageHistoricoAssessoriaResponse', './model/PageHistoricoAtrasoFaturaResponse', './model/PageHistoricoEventosResponse', './model/PageJobResponse', './model/PageLoteCartoesPrePagosResponse', './model/PageOperadoraResponse', './model/PageOportunidadeAUDResponse', './model/PageOportunidadeResponse', './model/PageOrigemComercialResponse', './model/PagePaisResponse', './model/PagePessoaDetalheResponse', './model/PagePessoaResponse', './model/PagePlataformaMobileResponse', './model/PagePortadorResponse', './model/PageProdutoResponse', './model/PagePushResponse', './model/PageRiscoFraudeResponse', './model/PageSMSResponse', './model/PageStatusCartaoResponse', './model/PageStatusContaResponse', './model/PageStatusImpressaoResponse', './model/PageStatusOportunidadeAUDResponse', './model/PageStatusOportunidadeResponse', './model/PageTaxasRefinanciamentoResponse', './model/PageTelefoneResponse', './model/PageTemplateNotificacaoResponse', './model/PageTerminalResponse', './model/PageTipoAjusteResponse', './model/PageTipoBoletoResponse', './model/PageTipoEnderecoResponse', './model/PageTipoOportunidadeAUDResponse', './model/PageTipoOportunidadeResponse', './model/PageTipoTelefoneResponse', './model/PageTransacaoResponse', './model/PageTransacoesCorrentesResponse', './model/PageTransferenciaBancariaResponse', './model/PageTransferenciaResponse', './model/PageUsuarioResponse', './model/PageWebHookResponse', './model/PaisResponse', './model/ParametroProdutoResponse', './model/PessoaDetalheResponse', './model/PessoaFisicaAprovadaPersist', './model/PessoaFisicaAprovadaResponse', './model/PessoaJuridicaAprovadaPersist', './model/PessoaJuridicaAprovadaResponse', './model/PessoaPersist', './model/PessoaResponse', './model/PlataformaMobilePersist', './model/PlataformaMobileResponse', './model/PlataformaMobileUpdate', './model/PortadorResponse', './model/ProdutoDetalhesResponse', './model/ProdutoOrigemResponse', './model/ProdutoResponse', './model/PushAPNS', './model/PushFCMEGCM', './model/RiscoFraudeDetalhadoResponse', './model/RiscoFraudeResponse', './model/SocioAprovadoResponse', './model/StatusCartaoResponse', './model/StatusContaResponse', './model/StatusImpressaoResponse', './model/StatusOportunidade', './model/StatusOportunidadeAUDResponse', './model/StatusOportunidadeResponse', './model/TaxaAntecipacaoRequest', './model/TaxasRefinanciamentoResponse', './model/TelefoneAdicionalPersist', './model/TelefonePessoaAprovadaPersist', './model/TelefonePessoaAprovadaResponse', './model/TelefoneResponse', './model/TemplateNotificacaoResponse', './model/TerminalResponse', './model/TipoAjusteResponse', './model/TipoBoletoResponse', './model/TipoEnderecoResponse', './model/TipoOportunidade', './model/TipoOportunidadeAUDResponse', './model/TipoOportunidadeResponse', './model/TipoResolucaoResponse', './model/TipoTelefoneResponse', './model/TokenResponse', './model/TransacaoCorrenteResponse', './model/TransacaoOnUsRequest', './model/TransacaoOnUsResponse', './model/TransacoesCorrentesResponse', './model/TransferenciaBancariaPersist', './model/TransferenciaBancariaResponse', './model/TransferenciaResponse', './model/UsuarioPersist', './model/UsuarioResponse', './model/UsuarioUpdate', './model/ValidaCartaoResponse', './model/ValidaSenhaCartaoResponse', './model/WebHookResponse', './api/AntecipacoesApi', './api/AplicacoesMobileApi', './api/ArquivosApi', './api/AutorizacoesApi', './api/BaseApi', './api/CadastrosClientesApi', './api/CadastrosGeraisApi', './api/CartaoApi', './api/ContaApi', './api/DispositivosApi', './api/EnderecosNacionaisApi', './api/EstabelecimentosApi', './api/FAQApi', './api/GestaoLimitesApi', './api/JobsApi', './api/NotificacoesApi', './api/OportunidadesApi', './api/PermissaoPaisesApi', './api/PlataformasMobileApi', './api/RiscoFraudeApi', './api/ServicosContaApi', './api/StatusParametrosApi', './api/TokenApi', './api/UsuariosApi', './api/WebhooksApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AjusteResponse'), require('./model/AntecipacaoResponse'), require('./model/AntecipacaoSimuladaDetalhesResponse'), require('./model/AntecipacaoSimuladaResponse'), require('./model/AplicacaoMobilePersist'), require('./model/AplicacaoMobileResponse'), require('./model/AplicacaoMobileUpdate'), require('./model/AtendimentoClienteResponse'), require('./model/AuthToken'), require('./model/AutorizacaoOnUsRequest'), require('./model/BancoResponse'), require('./model/BaseResponse'), require('./model/BodyAccessToken'), require('./model/BoletoResponse'), require('./model/CampoCodificadoDescricaoResponse'), require('./model/CancelamentoTransacaoOnUsRequest'), require('./model/CartaoDetalheResponse'), require('./model/CartaoImpressaoResponse'), require('./model/CartaoResponse'), require('./model/CdtDetalheOportunidadeAUD'), require('./model/CompraResponse'), require('./model/ContaDetalheResponse'), require('./model/ContaResponse'), require('./model/DadosCartaoResponse'), require('./model/DesfazimentoTransacaoOnUsRequest'), require('./model/DetalheOportunidadePersist'), require('./model/DetalheOportunidadeResponse'), require('./model/DetalheOportunidadeUpdate'), require('./model/DetalhesFaturaConsignadaResponse'), require('./model/DetalhesFaturaResponse'), require('./model/DispositivoPersist'), require('./model/DispositivoResponse'), require('./model/DividaClienteResponse'), require('./model/EnderecoAprovadoPersist'), require('./model/EnderecoAprovadoResponse'), require('./model/EnderecoResponse'), require('./model/EstabelecimentoResponse'), require('./model/EstagioCartaoResponse'), require('./model/ExtraInfo'), require('./model/FaqResponse'), require('./model/FaturaConsignadaDetalheResponse'), require('./model/FaturaConsignadaResponse'), require('./model/FaturaResponse'), require('./model/HistoricoAssessoriaResponse'), require('./model/HistoricoAtrasoFaturaResponse'), require('./model/HistoricoEventosResponse'), require('./model/HistoricoImpressaoCartaoResponse'), require('./model/HistoricoTelefoneResponse'), require('./model/JobResponse'), require('./model/LimiteDisponibilidadeResponse'), require('./model/LoteCartoesPrePagosResponse'), require('./model/MapOfstringAndstring'), require('./model/NotificacaoPushResponse'), require('./model/NotificacaoResponse'), require('./model/NotificacaoSMSBody'), require('./model/NotificacaoSMSResponse'), require('./model/OportunidadeAUDResponse'), require('./model/OportunidadePersist'), require('./model/OportunidadeResponse'), require('./model/OportunidadeUpdate'), require('./model/OrigemComercialResponse'), require('./model/PageAplicacaoMobileResponse'), require('./model/PageAtendimentoClienteResponse'), require('./model/PageBancoResponse'), require('./model/PageBaseResponse'), require('./model/PageCampoCodificadoDescricaoResponse'), require('./model/PageCartaoResponse'), require('./model/PageCompraResponse'), require('./model/PageContaDetalheResponse'), require('./model/PageContaResponse'), require('./model/PageDispositivoResponse'), require('./model/PageEnderecoResponse'), require('./model/PageEstabelecimentoResponse'), require('./model/PageEstagioCartaoResponse'), require('./model/PageFaqResponse'), require('./model/PageFaturaConsignadaResponse'), require('./model/PageFaturaResponse'), require('./model/PageHistoricoAssessoriaResponse'), require('./model/PageHistoricoAtrasoFaturaResponse'), require('./model/PageHistoricoEventosResponse'), require('./model/PageJobResponse'), require('./model/PageLoteCartoesPrePagosResponse'), require('./model/PageOportunidadeAUDResponse'), require('./model/PageOportunidadeResponse'), require('./model/PageOrigemComercialResponse'), require('./model/PagePaisResponse'), require('./model/PagePessoaDetalheResponse'), require('./model/PagePessoaResponse'), require('./model/PagePlataformaMobileResponse'), require('./model/PagePortadorResponse'), require('./model/PageProdutoResponse'), require('./model/PagePushResponse'), require('./model/PageSMSResponse'), require('./model/PageStatusCartaoResponse'), require('./model/PageStatusContaResponse'), require('./model/PageStatusImpressaoResponse'), require('./model/PageStatusOportunidadeAUDResponse'), require('./model/PageStatusOportunidadeResponse'), require('./model/PageTaxasRefinanciamentoResponse'), require('./model/PageTelefoneResponse'), require('./model/PageTerminalResponse'), require('./model/PageTipoAjusteResponse'), require('./model/PageTipoBoletoResponse'), require('./model/PageTipoEnderecoResponse'), require('./model/PageTipoOportunidadeAUDResponse'), require('./model/PageTipoOportunidadeResponse'), require('./model/PageTipoTelefoneResponse'), require('./model/PageTransacaoResponse'), require('./model/PageTransacoesCorrentesResponse'), require('./model/PageTransferenciaBancariaResponse'), require('./model/PageTransferenciaResponse'), require('./model/PageUsuarioResponse'), require('./model/PageWebHookResponse'), require('./model/PaisResponse'), require('./model/ParametroProdutoResponse'), require('./model/PessoaDetalheResponse'), require('./model/PessoaFisicaAprovadaPersist'), require('./model/PessoaFisicaAprovadaResponse'), require('./model/PessoaJuridicaAprovadaPersist'), require('./model/PessoaJuridicaAprovadaResponse'), require('./model/PessoaPersist'), require('./model/PessoaResponse'), require('./model/PlataformaMobilePersist'), require('./model/PlataformaMobileResponse'), require('./model/PlataformaMobileUpdate'), require('./model/PortadorResponse'), require('./model/ProdutoDetalhesResponse'), require('./model/ProdutoResponse'), require('./model/PushAPNS'), require('./model/PushFCMEGCM'), require('./model/RiscoFraudeDetalhadoResponse'), require('./model/RiscoFraudeResponse'), require('./model/RiscoFraudeResponsePage'), require('./model/SocioAprovadoResponse'), require('./model/StatusCartaoResponse'), require('./model/StatusContaResponse'), require('./model/StatusImpressaoResponse'), require('./model/StatusOportunidade'), require('./model/StatusOportunidadeAUDResponse'), require('./model/StatusOportunidadeResponse'), require('./model/TaxaAntecipacaoRequest'), require('./model/TaxasRefinanciamentoResponse'), require('./model/TelefonePessoaAprovadaPersist'), require('./model/TelefonePessoaAprovadaResponse'), require('./model/TelefoneResponse'), require('./model/TerminalResponse'), require('./model/TipoAjusteResponse'), require('./model/TipoBoletoResponse'), require('./model/TipoEnderecoResponse'), require('./model/TipoOportunidade'), require('./model/TipoOportunidadeAUDResponse'), require('./model/TipoOportunidadeResponse'), require('./model/TipoTelefoneResponse'), require('./model/TokenResponse'), require('./model/TransacaoCorrenteResponse'), require('./model/TransacaoOnUsRequest'), require('./model/TransacaoOnUsResponse'), require('./model/TransacoesCorrentesResponse'), require('./model/TransferenciaBancariaPersist'), require('./model/TransferenciaBancariaResponse'), require('./model/TransferenciaResponse'), require('./model/UsuarioPersist'), require('./model/UsuarioResponse'), require('./model/UsuarioUpdate'), require('./model/ValidaCartaoResponse'), require('./model/ValidaSenhaCartaoResponse'), require('./model/WebHookResponse'), require('./api/AplicacoesMobileApi'), require('./api/AutorizacoesApi'), require('./api/BaseApi'), require('./api/CadastrosGeraisApi'), require('./api/CartaoApi'), require('./api/CompraApi'), require('./api/ContaApi'), require('./api/DispositivosApi'), require('./api/EstabelecimentosApi'), require('./api/FAQApi'), require('./api/JobsApi'), require('./api/NotificacoesApi'), require('./api/OportunidadesApi'), require('./api/PermissaoPaisesApi'), require('./api/PlataformasMobileApi'), require('./api/RiscoFraudeApi'), require('./api/StatusParametrosApi'), require('./api/TokenApi'), require('./api/UsuariosApi'), require('./api/WebhooksApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AdicionalPersist'), require('./model/AdicionalResponse'), require('./model/AjusteResponse'), require('./model/AntecipacaoResponse'), require('./model/AntecipacaoSimuladaDetalhesResponse'), require('./model/AntecipacaoSimuladaResponse'), require('./model/AnuidadeResponse'), require('./model/AplicacaoMobilePersist'), require('./model/AplicacaoMobileResponse'), require('./model/AplicacaoMobileUpdate'), require('./model/ArquivoDetalhesPersist'), require('./model/ArquivoParametroResponse'), require('./model/ArquivoPersist'), require('./model/ArquivoResponse'), require('./model/AtendimentoClienteResponse'), require('./model/AtribuirAssinaturaClienteRequest'), require('./model/AuthToken'), require('./model/AutorizacaoOnUsRequest'), require('./model/BancoResponse'), require('./model/BaseResponse'), require('./model/BodyAccessToken'), require('./model/BoletoResponse'), require('./model/CampoCodificadoDescricaoResponse'), require('./model/CancelamentoTransacaoOnUsRequest'), require('./model/CartaoDetalheResponse'), require('./model/CartaoImpressaoResponse'), require('./model/CartaoResponse'), require('./model/CdtDetalheOportunidadeAUD'), require('./model/CodigoSegurancaSMSPersist'), require('./model/CodigoSegurancaSMSRequest'), require('./model/CompraResponse'), require('./model/ConfiguracaoEmailPersist'), require('./model/ConfiguracaoEmailResponse'), require('./model/ContaDetalheResponse'), require('./model/ContaResponse'), require('./model/DadosCartaoResponse'), require('./model/DesfazimentoTransacaoOnUsRequest'), require('./model/DetalheOportunidadePersist'), require('./model/DetalheOportunidadeResponse'), require('./model/DetalheOportunidadeUpdate'), require('./model/DetalhesFaturaConsignadaResponse'), require('./model/DetalhesFaturaResponse'), require('./model/DispositivoPersist'), require('./model/DispositivoResponse'), require('./model/DividaClienteResponse'), require('./model/EnderecoAprovadoPersist'), require('./model/EnderecoAprovadoResponse'), require('./model/EnderecoResponse'), require('./model/EstabelecimentoResponse'), require('./model/EstagioCartaoResponse'), require('./model/ExtraInfo'), require('./model/FaqResponse'), require('./model/FaturaConsignadaDetalheResponse'), require('./model/FaturaConsignadaResponse'), require('./model/FaturaResponse'), require('./model/HistoricoAssessoriaResponse'), require('./model/HistoricoAtrasoFaturaResponse'), require('./model/HistoricoEventosResponse'), require('./model/HistoricoImpressaoCartaoResponse'), require('./model/HistoricoTelefoneResponse'), require('./model/IntegracaoEmissorResponse'), require('./model/JobResponse'), require('./model/LimiteDisponibilidadeResponse'), require('./model/LoteCartoesPrePagosResponse'), require('./model/MapOfstringAndstring'), require('./model/NotificacaoPushResponse'), require('./model/NotificacaoResponse'), require('./model/NotificacaoSMSBody'), require('./model/NotificacaoSMSResponse'), require('./model/OperadoraResponse'), require('./model/OportunidadeAUDResponse'), require('./model/OportunidadePersist'), require('./model/OportunidadeResponse'), require('./model/OportunidadeUpdate'), require('./model/OrigemComercialResponse'), require('./model/PageAnuidadeResponse'), require('./model/PageAplicacaoMobileResponse'), require('./model/PageAtendimentoClienteResponse'), require('./model/PageBancoResponse'), require('./model/PageBaseResponse'), require('./model/PageCampoCodificadoDescricaoResponse'), require('./model/PageCartaoResponse'), require('./model/PageCompraResponse'), require('./model/PageConfiguracaoEmailResponse'), require('./model/PageContaDetalheResponse'), require('./model/PageContaResponse'), require('./model/PageDispositivoResponse'), require('./model/PageEnderecoResponse'), require('./model/PageEstabelecimentoResponse'), require('./model/PageEstagioCartaoResponse'), require('./model/PageFaqResponse'), require('./model/PageFaturaConsignadaResponse'), require('./model/PageFaturaResponse'), require('./model/PageHistoricoAssessoriaResponse'), require('./model/PageHistoricoAtrasoFaturaResponse'), require('./model/PageHistoricoEventosResponse'), require('./model/PageJobResponse'), require('./model/PageLoteCartoesPrePagosResponse'), require('./model/PageOperadoraResponse'), require('./model/PageOportunidadeAUDResponse'), require('./model/PageOportunidadeResponse'), require('./model/PageOrigemComercialResponse'), require('./model/PagePaisResponse'), require('./model/PagePessoaDetalheResponse'), require('./model/PagePessoaResponse'), require('./model/PagePlataformaMobileResponse'), require('./model/PagePortadorResponse'), require('./model/PageProdutoResponse'), require('./model/PagePushResponse'), require('./model/PageRiscoFraudeResponse'), require('./model/PageSMSResponse'), require('./model/PageStatusCartaoResponse'), require('./model/PageStatusContaResponse'), require('./model/PageStatusImpressaoResponse'), require('./model/PageStatusOportunidadeAUDResponse'), require('./model/PageStatusOportunidadeResponse'), require('./model/PageTaxasRefinanciamentoResponse'), require('./model/PageTelefoneResponse'), require('./model/PageTemplateNotificacaoResponse'), require('./model/PageTerminalResponse'), require('./model/PageTipoAjusteResponse'), require('./model/PageTipoBoletoResponse'), require('./model/PageTipoEnderecoResponse'), require('./model/PageTipoOportunidadeAUDResponse'), require('./model/PageTipoOportunidadeResponse'), require('./model/PageTipoTelefoneResponse'), require('./model/PageTransacaoResponse'), require('./model/PageTransacoesCorrentesResponse'), require('./model/PageTransferenciaBancariaResponse'), require('./model/PageTransferenciaResponse'), require('./model/PageUsuarioResponse'), require('./model/PageWebHookResponse'), require('./model/PaisResponse'), require('./model/ParametroProdutoResponse'), require('./model/PessoaDetalheResponse'), require('./model/PessoaFisicaAprovadaPersist'), require('./model/PessoaFisicaAprovadaResponse'), require('./model/PessoaJuridicaAprovadaPersist'), require('./model/PessoaJuridicaAprovadaResponse'), require('./model/PessoaPersist'), require('./model/PessoaResponse'), require('./model/PlataformaMobilePersist'), require('./model/PlataformaMobileResponse'), require('./model/PlataformaMobileUpdate'), require('./model/PortadorResponse'), require('./model/ProdutoDetalhesResponse'), require('./model/ProdutoOrigemResponse'), require('./model/ProdutoResponse'), require('./model/PushAPNS'), require('./model/PushFCMEGCM'), require('./model/RiscoFraudeDetalhadoResponse'), require('./model/RiscoFraudeResponse'), require('./model/SocioAprovadoResponse'), require('./model/StatusCartaoResponse'), require('./model/StatusContaResponse'), require('./model/StatusImpressaoResponse'), require('./model/StatusOportunidade'), require('./model/StatusOportunidadeAUDResponse'), require('./model/StatusOportunidadeResponse'), require('./model/TaxaAntecipacaoRequest'), require('./model/TaxasRefinanciamentoResponse'), require('./model/TelefoneAdicionalPersist'), require('./model/TelefonePessoaAprovadaPersist'), require('./model/TelefonePessoaAprovadaResponse'), require('./model/TelefoneResponse'), require('./model/TemplateNotificacaoResponse'), require('./model/TerminalResponse'), require('./model/TipoAjusteResponse'), require('./model/TipoBoletoResponse'), require('./model/TipoEnderecoResponse'), require('./model/TipoOportunidade'), require('./model/TipoOportunidadeAUDResponse'), require('./model/TipoOportunidadeResponse'), require('./model/TipoResolucaoResponse'), require('./model/TipoTelefoneResponse'), require('./model/TokenResponse'), require('./model/TransacaoCorrenteResponse'), require('./model/TransacaoOnUsRequest'), require('./model/TransacaoOnUsResponse'), require('./model/TransacoesCorrentesResponse'), require('./model/TransferenciaBancariaPersist'), require('./model/TransferenciaBancariaResponse'), require('./model/TransferenciaResponse'), require('./model/UsuarioPersist'), require('./model/UsuarioResponse'), require('./model/UsuarioUpdate'), require('./model/ValidaCartaoResponse'), require('./model/ValidaSenhaCartaoResponse'), require('./model/WebHookResponse'), require('./api/AntecipacoesApi'), require('./api/AplicacoesMobileApi'), require('./api/ArquivosApi'), require('./api/AutorizacoesApi'), require('./api/BaseApi'), require('./api/CadastrosClientesApi'), require('./api/CadastrosGeraisApi'), require('./api/CartaoApi'), require('./api/ContaApi'), require('./api/DispositivosApi'), require('./api/EnderecosNacionaisApi'), require('./api/EstabelecimentosApi'), require('./api/FAQApi'), require('./api/GestaoLimitesApi'), require('./api/JobsApi'), require('./api/NotificacoesApi'), require('./api/OportunidadesApi'), require('./api/PermissaoPaisesApi'), require('./api/PlataformasMobileApi'), require('./api/RiscoFraudeApi'), require('./api/ServicosContaApi'), require('./api/StatusParametrosApi'), require('./api/TokenApi'), require('./api/UsuariosApi'), require('./api/WebhooksApi'));
   }
-}(function(ApiClient, AjusteResponse, AntecipacaoResponse, AntecipacaoSimuladaDetalhesResponse, AntecipacaoSimuladaResponse, AplicacaoMobilePersist, AplicacaoMobileResponse, AplicacaoMobileUpdate, AtendimentoClienteResponse, AuthToken, AutorizacaoOnUsRequest, BancoResponse, BaseResponse, BodyAccessToken, BoletoResponse, CampoCodificadoDescricaoResponse, CancelamentoTransacaoOnUsRequest, CartaoDetalheResponse, CartaoImpressaoResponse, CartaoResponse, CdtDetalheOportunidadeAUD, CompraResponse, ContaDetalheResponse, ContaResponse, DadosCartaoResponse, DesfazimentoTransacaoOnUsRequest, DetalheOportunidadePersist, DetalheOportunidadeResponse, DetalheOportunidadeUpdate, DetalhesFaturaConsignadaResponse, DetalhesFaturaResponse, DispositivoPersist, DispositivoResponse, DividaClienteResponse, EnderecoAprovadoPersist, EnderecoAprovadoResponse, EnderecoResponse, EstabelecimentoResponse, EstagioCartaoResponse, ExtraInfo, FaqResponse, FaturaConsignadaDetalheResponse, FaturaConsignadaResponse, FaturaResponse, HistoricoAssessoriaResponse, HistoricoAtrasoFaturaResponse, HistoricoEventosResponse, HistoricoImpressaoCartaoResponse, HistoricoTelefoneResponse, JobResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, MapOfstringAndstring, NotificacaoPushResponse, NotificacaoResponse, NotificacaoSMSBody, NotificacaoSMSResponse, OportunidadeAUDResponse, OportunidadePersist, OportunidadeResponse, OportunidadeUpdate, OrigemComercialResponse, PageAplicacaoMobileResponse, PageAtendimentoClienteResponse, PageBancoResponse, PageBaseResponse, PageCampoCodificadoDescricaoResponse, PageCartaoResponse, PageCompraResponse, PageContaDetalheResponse, PageContaResponse, PageDispositivoResponse, PageEnderecoResponse, PageEstabelecimentoResponse, PageEstagioCartaoResponse, PageFaqResponse, PageFaturaConsignadaResponse, PageFaturaResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageHistoricoEventosResponse, PageJobResponse, PageLoteCartoesPrePagosResponse, PageOportunidadeAUDResponse, PageOportunidadeResponse, PageOrigemComercialResponse, PagePaisResponse, PagePessoaDetalheResponse, PagePessoaResponse, PagePlataformaMobileResponse, PagePortadorResponse, PageProdutoResponse, PagePushResponse, PageSMSResponse, PageStatusCartaoResponse, PageStatusContaResponse, PageStatusImpressaoResponse, PageStatusOportunidadeAUDResponse, PageStatusOportunidadeResponse, PageTaxasRefinanciamentoResponse, PageTelefoneResponse, PageTerminalResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, PageTipoEnderecoResponse, PageTipoOportunidadeAUDResponse, PageTipoOportunidadeResponse, PageTipoTelefoneResponse, PageTransacaoResponse, PageTransacoesCorrentesResponse, PageTransferenciaBancariaResponse, PageTransferenciaResponse, PageUsuarioResponse, PageWebHookResponse, PaisResponse, ParametroProdutoResponse, PessoaDetalheResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaPersist, PessoaJuridicaAprovadaResponse, PessoaPersist, PessoaResponse, PlataformaMobilePersist, PlataformaMobileResponse, PlataformaMobileUpdate, PortadorResponse, ProdutoDetalhesResponse, ProdutoResponse, PushAPNS, PushFCMEGCM, RiscoFraudeDetalhadoResponse, RiscoFraudeResponse, RiscoFraudeResponsePage, SocioAprovadoResponse, StatusCartaoResponse, StatusContaResponse, StatusImpressaoResponse, StatusOportunidade, StatusOportunidadeAUDResponse, StatusOportunidadeResponse, TaxaAntecipacaoRequest, TaxasRefinanciamentoResponse, TelefonePessoaAprovadaPersist, TelefonePessoaAprovadaResponse, TelefoneResponse, TerminalResponse, TipoAjusteResponse, TipoBoletoResponse, TipoEnderecoResponse, TipoOportunidade, TipoOportunidadeAUDResponse, TipoOportunidadeResponse, TipoTelefoneResponse, TokenResponse, TransacaoCorrenteResponse, TransacaoOnUsRequest, TransacaoOnUsResponse, TransacoesCorrentesResponse, TransferenciaBancariaPersist, TransferenciaBancariaResponse, TransferenciaResponse, UsuarioPersist, UsuarioResponse, UsuarioUpdate, ValidaCartaoResponse, ValidaSenhaCartaoResponse, WebHookResponse, AplicacoesMobileApi, AutorizacoesApi, BaseApi, CadastrosGeraisApi, CartaoApi, CompraApi, ContaApi, DispositivosApi, EstabelecimentosApi, FAQApi, JobsApi, NotificacoesApi, OportunidadesApi, PermissaoPaisesApi, PlataformasMobileApi, RiscoFraudeApi, StatusParametrosApi, TokenApi, UsuariosApi, WebhooksApi) {
+}(function(ApiClient, AdicionalPersist, AdicionalResponse, AjusteResponse, AntecipacaoResponse, AntecipacaoSimuladaDetalhesResponse, AntecipacaoSimuladaResponse, AnuidadeResponse, AplicacaoMobilePersist, AplicacaoMobileResponse, AplicacaoMobileUpdate, ArquivoDetalhesPersist, ArquivoParametroResponse, ArquivoPersist, ArquivoResponse, AtendimentoClienteResponse, AtribuirAssinaturaClienteRequest, AuthToken, AutorizacaoOnUsRequest, BancoResponse, BaseResponse, BodyAccessToken, BoletoResponse, CampoCodificadoDescricaoResponse, CancelamentoTransacaoOnUsRequest, CartaoDetalheResponse, CartaoImpressaoResponse, CartaoResponse, CdtDetalheOportunidadeAUD, CodigoSegurancaSMSPersist, CodigoSegurancaSMSRequest, CompraResponse, ConfiguracaoEmailPersist, ConfiguracaoEmailResponse, ContaDetalheResponse, ContaResponse, DadosCartaoResponse, DesfazimentoTransacaoOnUsRequest, DetalheOportunidadePersist, DetalheOportunidadeResponse, DetalheOportunidadeUpdate, DetalhesFaturaConsignadaResponse, DetalhesFaturaResponse, DispositivoPersist, DispositivoResponse, DividaClienteResponse, EnderecoAprovadoPersist, EnderecoAprovadoResponse, EnderecoResponse, EstabelecimentoResponse, EstagioCartaoResponse, ExtraInfo, FaqResponse, FaturaConsignadaDetalheResponse, FaturaConsignadaResponse, FaturaResponse, HistoricoAssessoriaResponse, HistoricoAtrasoFaturaResponse, HistoricoEventosResponse, HistoricoImpressaoCartaoResponse, HistoricoTelefoneResponse, IntegracaoEmissorResponse, JobResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, MapOfstringAndstring, NotificacaoPushResponse, NotificacaoResponse, NotificacaoSMSBody, NotificacaoSMSResponse, OperadoraResponse, OportunidadeAUDResponse, OportunidadePersist, OportunidadeResponse, OportunidadeUpdate, OrigemComercialResponse, PageAnuidadeResponse, PageAplicacaoMobileResponse, PageAtendimentoClienteResponse, PageBancoResponse, PageBaseResponse, PageCampoCodificadoDescricaoResponse, PageCartaoResponse, PageCompraResponse, PageConfiguracaoEmailResponse, PageContaDetalheResponse, PageContaResponse, PageDispositivoResponse, PageEnderecoResponse, PageEstabelecimentoResponse, PageEstagioCartaoResponse, PageFaqResponse, PageFaturaConsignadaResponse, PageFaturaResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageHistoricoEventosResponse, PageJobResponse, PageLoteCartoesPrePagosResponse, PageOperadoraResponse, PageOportunidadeAUDResponse, PageOportunidadeResponse, PageOrigemComercialResponse, PagePaisResponse, PagePessoaDetalheResponse, PagePessoaResponse, PagePlataformaMobileResponse, PagePortadorResponse, PageProdutoResponse, PagePushResponse, PageRiscoFraudeResponse, PageSMSResponse, PageStatusCartaoResponse, PageStatusContaResponse, PageStatusImpressaoResponse, PageStatusOportunidadeAUDResponse, PageStatusOportunidadeResponse, PageTaxasRefinanciamentoResponse, PageTelefoneResponse, PageTemplateNotificacaoResponse, PageTerminalResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, PageTipoEnderecoResponse, PageTipoOportunidadeAUDResponse, PageTipoOportunidadeResponse, PageTipoTelefoneResponse, PageTransacaoResponse, PageTransacoesCorrentesResponse, PageTransferenciaBancariaResponse, PageTransferenciaResponse, PageUsuarioResponse, PageWebHookResponse, PaisResponse, ParametroProdutoResponse, PessoaDetalheResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaPersist, PessoaJuridicaAprovadaResponse, PessoaPersist, PessoaResponse, PlataformaMobilePersist, PlataformaMobileResponse, PlataformaMobileUpdate, PortadorResponse, ProdutoDetalhesResponse, ProdutoOrigemResponse, ProdutoResponse, PushAPNS, PushFCMEGCM, RiscoFraudeDetalhadoResponse, RiscoFraudeResponse, SocioAprovadoResponse, StatusCartaoResponse, StatusContaResponse, StatusImpressaoResponse, StatusOportunidade, StatusOportunidadeAUDResponse, StatusOportunidadeResponse, TaxaAntecipacaoRequest, TaxasRefinanciamentoResponse, TelefoneAdicionalPersist, TelefonePessoaAprovadaPersist, TelefonePessoaAprovadaResponse, TelefoneResponse, TemplateNotificacaoResponse, TerminalResponse, TipoAjusteResponse, TipoBoletoResponse, TipoEnderecoResponse, TipoOportunidade, TipoOportunidadeAUDResponse, TipoOportunidadeResponse, TipoResolucaoResponse, TipoTelefoneResponse, TokenResponse, TransacaoCorrenteResponse, TransacaoOnUsRequest, TransacaoOnUsResponse, TransacoesCorrentesResponse, TransferenciaBancariaPersist, TransferenciaBancariaResponse, TransferenciaResponse, UsuarioPersist, UsuarioResponse, UsuarioUpdate, ValidaCartaoResponse, ValidaSenhaCartaoResponse, WebHookResponse, AntecipacoesApi, AplicacoesMobileApi, ArquivosApi, AutorizacoesApi, BaseApi, CadastrosClientesApi, CadastrosGeraisApi, CartaoApi, ContaApi, DispositivosApi, EnderecosNacionaisApi, EstabelecimentosApi, FAQApi, GestaoLimitesApi, JobsApi, NotificacoesApi, OportunidadesApi, PermissaoPaisesApi, PlataformasMobileApi, RiscoFraudeApi, ServicosContaApi, StatusParametrosApi, TokenApi, UsuariosApi, WebhooksApi) {
   'use strict';
 
   /**
@@ -38,7 +38,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 2.16.6
+   * @version 2.24.0
    */
   var exports = {
     /**
@@ -46,6 +46,16 @@
      * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
+    /**
+     * The AdicionalPersist model constructor.
+     * @property {module:model/AdicionalPersist}
+     */
+    AdicionalPersist: AdicionalPersist,
+    /**
+     * The AdicionalResponse model constructor.
+     * @property {module:model/AdicionalResponse}
+     */
+    AdicionalResponse: AdicionalResponse,
     /**
      * The AjusteResponse model constructor.
      * @property {module:model/AjusteResponse}
@@ -67,6 +77,11 @@
      */
     AntecipacaoSimuladaResponse: AntecipacaoSimuladaResponse,
     /**
+     * The AnuidadeResponse model constructor.
+     * @property {module:model/AnuidadeResponse}
+     */
+    AnuidadeResponse: AnuidadeResponse,
+    /**
      * The AplicacaoMobilePersist model constructor.
      * @property {module:model/AplicacaoMobilePersist}
      */
@@ -82,10 +97,35 @@
      */
     AplicacaoMobileUpdate: AplicacaoMobileUpdate,
     /**
+     * The ArquivoDetalhesPersist model constructor.
+     * @property {module:model/ArquivoDetalhesPersist}
+     */
+    ArquivoDetalhesPersist: ArquivoDetalhesPersist,
+    /**
+     * The ArquivoParametroResponse model constructor.
+     * @property {module:model/ArquivoParametroResponse}
+     */
+    ArquivoParametroResponse: ArquivoParametroResponse,
+    /**
+     * The ArquivoPersist model constructor.
+     * @property {module:model/ArquivoPersist}
+     */
+    ArquivoPersist: ArquivoPersist,
+    /**
+     * The ArquivoResponse model constructor.
+     * @property {module:model/ArquivoResponse}
+     */
+    ArquivoResponse: ArquivoResponse,
+    /**
      * The AtendimentoClienteResponse model constructor.
      * @property {module:model/AtendimentoClienteResponse}
      */
     AtendimentoClienteResponse: AtendimentoClienteResponse,
+    /**
+     * The AtribuirAssinaturaClienteRequest model constructor.
+     * @property {module:model/AtribuirAssinaturaClienteRequest}
+     */
+    AtribuirAssinaturaClienteRequest: AtribuirAssinaturaClienteRequest,
     /**
      * The AuthToken model constructor.
      * @property {module:model/AuthToken}
@@ -147,10 +187,30 @@
      */
     CdtDetalheOportunidadeAUD: CdtDetalheOportunidadeAUD,
     /**
+     * The CodigoSegurancaSMSPersist model constructor.
+     * @property {module:model/CodigoSegurancaSMSPersist}
+     */
+    CodigoSegurancaSMSPersist: CodigoSegurancaSMSPersist,
+    /**
+     * The CodigoSegurancaSMSRequest model constructor.
+     * @property {module:model/CodigoSegurancaSMSRequest}
+     */
+    CodigoSegurancaSMSRequest: CodigoSegurancaSMSRequest,
+    /**
      * The CompraResponse model constructor.
      * @property {module:model/CompraResponse}
      */
     CompraResponse: CompraResponse,
+    /**
+     * The ConfiguracaoEmailPersist model constructor.
+     * @property {module:model/ConfiguracaoEmailPersist}
+     */
+    ConfiguracaoEmailPersist: ConfiguracaoEmailPersist,
+    /**
+     * The ConfiguracaoEmailResponse model constructor.
+     * @property {module:model/ConfiguracaoEmailResponse}
+     */
+    ConfiguracaoEmailResponse: ConfiguracaoEmailResponse,
     /**
      * The ContaDetalheResponse model constructor.
      * @property {module:model/ContaDetalheResponse}
@@ -287,6 +347,11 @@
      */
     HistoricoTelefoneResponse: HistoricoTelefoneResponse,
     /**
+     * The IntegracaoEmissorResponse model constructor.
+     * @property {module:model/IntegracaoEmissorResponse}
+     */
+    IntegracaoEmissorResponse: IntegracaoEmissorResponse,
+    /**
      * The JobResponse model constructor.
      * @property {module:model/JobResponse}
      */
@@ -327,6 +392,11 @@
      */
     NotificacaoSMSResponse: NotificacaoSMSResponse,
     /**
+     * The OperadoraResponse model constructor.
+     * @property {module:model/OperadoraResponse}
+     */
+    OperadoraResponse: OperadoraResponse,
+    /**
      * The OportunidadeAUDResponse model constructor.
      * @property {module:model/OportunidadeAUDResponse}
      */
@@ -351,6 +421,11 @@
      * @property {module:model/OrigemComercialResponse}
      */
     OrigemComercialResponse: OrigemComercialResponse,
+    /**
+     * The PageAnuidadeResponse model constructor.
+     * @property {module:model/PageAnuidadeResponse}
+     */
+    PageAnuidadeResponse: PageAnuidadeResponse,
     /**
      * The PageAplicacaoMobileResponse model constructor.
      * @property {module:model/PageAplicacaoMobileResponse}
@@ -386,6 +461,11 @@
      * @property {module:model/PageCompraResponse}
      */
     PageCompraResponse: PageCompraResponse,
+    /**
+     * The PageConfiguracaoEmailResponse model constructor.
+     * @property {module:model/PageConfiguracaoEmailResponse}
+     */
+    PageConfiguracaoEmailResponse: PageConfiguracaoEmailResponse,
     /**
      * The PageContaDetalheResponse model constructor.
      * @property {module:model/PageContaDetalheResponse}
@@ -457,6 +537,11 @@
      */
     PageLoteCartoesPrePagosResponse: PageLoteCartoesPrePagosResponse,
     /**
+     * The PageOperadoraResponse model constructor.
+     * @property {module:model/PageOperadoraResponse}
+     */
+    PageOperadoraResponse: PageOperadoraResponse,
+    /**
      * The PageOportunidadeAUDResponse model constructor.
      * @property {module:model/PageOportunidadeAUDResponse}
      */
@@ -507,6 +592,11 @@
      */
     PagePushResponse: PagePushResponse,
     /**
+     * The PageRiscoFraudeResponse model constructor.
+     * @property {module:model/PageRiscoFraudeResponse}
+     */
+    PageRiscoFraudeResponse: PageRiscoFraudeResponse,
+    /**
      * The PageSMSResponse model constructor.
      * @property {module:model/PageSMSResponse}
      */
@@ -546,6 +636,11 @@
      * @property {module:model/PageTelefoneResponse}
      */
     PageTelefoneResponse: PageTelefoneResponse,
+    /**
+     * The PageTemplateNotificacaoResponse model constructor.
+     * @property {module:model/PageTemplateNotificacaoResponse}
+     */
+    PageTemplateNotificacaoResponse: PageTemplateNotificacaoResponse,
     /**
      * The PageTerminalResponse model constructor.
      * @property {module:model/PageTerminalResponse}
@@ -682,6 +777,11 @@
      */
     ProdutoDetalhesResponse: ProdutoDetalhesResponse,
     /**
+     * The ProdutoOrigemResponse model constructor.
+     * @property {module:model/ProdutoOrigemResponse}
+     */
+    ProdutoOrigemResponse: ProdutoOrigemResponse,
+    /**
      * The ProdutoResponse model constructor.
      * @property {module:model/ProdutoResponse}
      */
@@ -706,11 +806,6 @@
      * @property {module:model/RiscoFraudeResponse}
      */
     RiscoFraudeResponse: RiscoFraudeResponse,
-    /**
-     * The RiscoFraudeResponsePage model constructor.
-     * @property {module:model/RiscoFraudeResponsePage}
-     */
-    RiscoFraudeResponsePage: RiscoFraudeResponsePage,
     /**
      * The SocioAprovadoResponse model constructor.
      * @property {module:model/SocioAprovadoResponse}
@@ -757,6 +852,11 @@
      */
     TaxasRefinanciamentoResponse: TaxasRefinanciamentoResponse,
     /**
+     * The TelefoneAdicionalPersist model constructor.
+     * @property {module:model/TelefoneAdicionalPersist}
+     */
+    TelefoneAdicionalPersist: TelefoneAdicionalPersist,
+    /**
      * The TelefonePessoaAprovadaPersist model constructor.
      * @property {module:model/TelefonePessoaAprovadaPersist}
      */
@@ -771,6 +871,11 @@
      * @property {module:model/TelefoneResponse}
      */
     TelefoneResponse: TelefoneResponse,
+    /**
+     * The TemplateNotificacaoResponse model constructor.
+     * @property {module:model/TemplateNotificacaoResponse}
+     */
+    TemplateNotificacaoResponse: TemplateNotificacaoResponse,
     /**
      * The TerminalResponse model constructor.
      * @property {module:model/TerminalResponse}
@@ -806,6 +911,11 @@
      * @property {module:model/TipoOportunidadeResponse}
      */
     TipoOportunidadeResponse: TipoOportunidadeResponse,
+    /**
+     * The TipoResolucaoResponse model constructor.
+     * @property {module:model/TipoResolucaoResponse}
+     */
+    TipoResolucaoResponse: TipoResolucaoResponse,
     /**
      * The TipoTelefoneResponse model constructor.
      * @property {module:model/TipoTelefoneResponse}
@@ -882,10 +992,20 @@
      */
     WebHookResponse: WebHookResponse,
     /**
+     * The AntecipacoesApi service constructor.
+     * @property {module:api/AntecipacoesApi}
+     */
+    AntecipacoesApi: AntecipacoesApi,
+    /**
      * The AplicacoesMobileApi service constructor.
      * @property {module:api/AplicacoesMobileApi}
      */
     AplicacoesMobileApi: AplicacoesMobileApi,
+    /**
+     * The ArquivosApi service constructor.
+     * @property {module:api/ArquivosApi}
+     */
+    ArquivosApi: ArquivosApi,
     /**
      * The AutorizacoesApi service constructor.
      * @property {module:api/AutorizacoesApi}
@@ -897,6 +1017,11 @@
      */
     BaseApi: BaseApi,
     /**
+     * The CadastrosClientesApi service constructor.
+     * @property {module:api/CadastrosClientesApi}
+     */
+    CadastrosClientesApi: CadastrosClientesApi,
+    /**
      * The CadastrosGeraisApi service constructor.
      * @property {module:api/CadastrosGeraisApi}
      */
@@ -906,11 +1031,6 @@
      * @property {module:api/CartaoApi}
      */
     CartaoApi: CartaoApi,
-    /**
-     * The CompraApi service constructor.
-     * @property {module:api/CompraApi}
-     */
-    CompraApi: CompraApi,
     /**
      * The ContaApi service constructor.
      * @property {module:api/ContaApi}
@@ -922,6 +1042,11 @@
      */
     DispositivosApi: DispositivosApi,
     /**
+     * The EnderecosNacionaisApi service constructor.
+     * @property {module:api/EnderecosNacionaisApi}
+     */
+    EnderecosNacionaisApi: EnderecosNacionaisApi,
+    /**
      * The EstabelecimentosApi service constructor.
      * @property {module:api/EstabelecimentosApi}
      */
@@ -931,6 +1056,11 @@
      * @property {module:api/FAQApi}
      */
     FAQApi: FAQApi,
+    /**
+     * The GestaoLimitesApi service constructor.
+     * @property {module:api/GestaoLimitesApi}
+     */
+    GestaoLimitesApi: GestaoLimitesApi,
     /**
      * The JobsApi service constructor.
      * @property {module:api/JobsApi}
@@ -961,6 +1091,11 @@
      * @property {module:api/RiscoFraudeApi}
      */
     RiscoFraudeApi: RiscoFraudeApi,
+    /**
+     * The ServicosContaApi service constructor.
+     * @property {module:api/ServicosContaApi}
+     */
+    ServicosContaApi: ServicosContaApi,
     /**
      * The StatusParametrosApi service constructor.
      * @property {module:api/StatusParametrosApi}

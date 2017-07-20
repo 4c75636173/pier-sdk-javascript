@@ -18,7 +18,7 @@
   /**
    * The AjusteResponse model module.
    * @module model/AjusteResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -27,6 +27,10 @@
    * @class
    */
   var exports = function() {
+
+
+
+
 
 
   };
@@ -45,6 +49,18 @@
       if (data.hasOwnProperty('idAjuste')) {
         obj['idAjuste'] = ApiClient.convertToType(data['idAjuste'], 'Integer');
       }
+      if (data.hasOwnProperty('idTipoAjuste')) {
+        obj['idTipoAjuste'] = ApiClient.convertToType(data['idTipoAjuste'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('dataAjuste')) {
+        obj['dataAjuste'] = ApiClient.convertToType(data['dataAjuste'], 'String');
+      }
+      if (data.hasOwnProperty('valor')) {
+        obj['valor'] = ApiClient.convertToType(data['valor'], 'Number');
+      }
     }
     return obj;
   }
@@ -55,6 +71,30 @@
    * @member {Integer} idAjuste
    */
   exports.prototype['idAjuste'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+   * @member {Integer} idTipoAjuste
+   */
+  exports.prototype['idTipoAjuste'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * Data do ajuste
+   * @member {String} dataAjuste
+   */
+  exports.prototype['dataAjuste'] = undefined;
+
+  /**
+   * Valor do ajuste
+   * @member {Number} valor
+   */
+  exports.prototype['valor'] = undefined;
 
 
 

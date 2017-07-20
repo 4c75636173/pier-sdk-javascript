@@ -18,7 +18,7 @@
   /**
    * The StatusCartaoResponse model module.
    * @module model/StatusCartaoResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -42,6 +42,9 @@
     this['idStatusDestinoDesbloqueio'] = idStatusDestinoDesbloqueio;
     this['idStatusDestinoConta'] = idStatusDestinoConta;
     this['flagCobraTarifa'] = flagCobraTarifa;
+
+
+
 
 
   };
@@ -83,6 +86,15 @@
       }
       if (data.hasOwnProperty('flagPermiteDesbloqueio')) {
         obj['flagPermiteDesbloqueio'] = ApiClient.convertToType(data['flagPermiteDesbloqueio'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagCancelamento')) {
+        obj['flagCancelamento'] = ApiClient.convertToType(data['flagCancelamento'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagPermiteBloqueio')) {
+        obj['flagPermiteBloqueio'] = ApiClient.convertToType(data['flagPermiteBloqueio'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagReativar')) {
+        obj['flagReativar'] = ApiClient.convertToType(data['flagReativar'], 'Integer');
       }
     }
     return obj;
@@ -142,6 +154,24 @@
    * @member {Integer} flagPermiteDesbloqueio
    */
   exports.prototype['flagPermiteDesbloqueio'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagCancelamento
+   */
+  exports.prototype['flagCancelamento'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagPermiteBloqueio
+   */
+  exports.prototype['flagPermiteBloqueio'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} flagReativar
+   */
+  exports.prototype['flagReativar'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -28,6 +28,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -97,6 +100,15 @@
       if (data.hasOwnProperty('nomeImpresso')) {
         obj['nomeImpresso'] = ApiClient.convertToType(data['nomeImpresso'], 'String');
       }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProposta')) {
+        obj['idProposta'] = ApiClient.convertToType(data['idProposta'], 'Integer');
+      }
+      if (data.hasOwnProperty('canalEntrada')) {
+        obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
+      }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaResponse]);
       }
@@ -112,7 +124,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -188,6 +200,24 @@
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   * @member {Integer} idProposta
+   */
+  exports.prototype['idProposta'] = undefined;
+
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * @member {String} canalEntrada
+   */
+  exports.prototype['canalEntrada'] = undefined;
 
   /**
    * Apresenta os telefones da empresa

@@ -8,7 +8,10 @@ Method | HTTP request | Description
 [**alterarLimiteUsingPUT**](ContaApi.md#alterarLimiteUsingPUT) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 [**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+[**ativarAnuidadeUsingPOST**](ContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
 [**ativarEnvioFaturaEmailUsingPOST**](ContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+[**bloquearUsingPOST1**](ContaApi.md#bloquearUsingPOST1) | **POST** /api/contas/{id}/bloquear | Realiza o bloqueio de uma determinada Conta
+[**cancelarUsingPOST1**](ContaApi.md#cancelarUsingPOST1) | **POST** /api/contas/{id}/cancelar | Realiza o cancelamento de uma determinada Conta
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultarFaturaConsignadaAbertaUsingGET**](ContaApi.md#consultarFaturaConsignadaAbertaUsingGET) | **GET** /api/contas/{id}/faturas-consignadas/consultar-aberta | Consultar a fatura consignadas abertas da conta
@@ -17,9 +20,9 @@ Method | HTTP request | Description
 [**consultarLancamentosFuturosFaturaUsingGET**](ContaApi.md#consultarLancamentosFuturosFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET23**](ContaApi.md#consultarUsingGET23) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultarUsingGET24**](ContaApi.md#consultarUsingGET24) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultarUsingGET4**](ContaApi.md#consultarUsingGET4) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET24**](ContaApi.md#consultarUsingGET24) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultarUsingGET25**](ContaApi.md#consultarUsingGET25) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET5**](ContaApi.md#consultarUsingGET5) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
@@ -34,7 +37,7 @@ Method | HTTP request | Description
 [**listarUsingGET28**](ContaApi.md#listarUsingGET28) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 [**listarUsingGET29**](ContaApi.md#listarUsingGET29) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listarUsingGET7**](ContaApi.md#listarUsingGET7) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**reativarUsingPOST**](ContaApi.md#reativarUsingPOST) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+[**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
 [**transferirUsingPOST**](ContaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
 [**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
@@ -97,7 +100,7 @@ No authorization required
 
 <a name="alterarLimiteUsingPUT"></a>
 # **alterarLimiteUsingPUT**
-> LimiteDisponibilidadeResponse alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo)
+> LimiteDisponibilidadeResponse alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -135,6 +138,8 @@ var limiteInternacionalSaqueGlobal = 3.4; // {Number} Quando utilizado pelo emis
 
 var limiteInternacionalSaquePeriodo = 3.4; // {Number} Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
 
+var limiteMaximo = 3.4; // {Number} Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -143,7 +148,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, callback);
+api.alterarLimiteUsingPUT(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo, callback);
 ```
 
 ### Parameters
@@ -163,6 +168,7 @@ Name | Type | Description  | Notes
  **limiteInternacionalParcelas** | [**Number**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. | 
  **limiteInternacionalSaqueGlobal** | [**Number**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional. | 
  **limiteInternacionalSaquePeriodo** | [**Number**](.md)| Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento. | 
+ **limiteMaximo** | [**Number**](.md)| Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es. | 
 
 ### Return type
 
@@ -275,6 +281,69 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="ativarAnuidadeUsingPOST"></a>
+# **ativarAnuidadeUsingPOST**
+> Object ativarAnuidadeUsingPOST(id, idAnuidade, opts)
+
+Atribuir Anuidade
+
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var idAnuidade = 789; // {Integer} Identificador da anuidade
+
+var opts = { 
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'DDD': "DDD_example", // {String} DDD do celular
+  'celular': "celular_example", // {String} N\u00C3\u00BAmero do celular
+  'idOperadora': 789, // {Integer} Identificador da operadora do celular
+  'idOrigemComercial': 789 // {Integer} Identificador da origem comercial
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.ativarAnuidadeUsingPOST(id, idAnuidade, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idAnuidade** | **Integer**| Identificador da anuidade | 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **DDD** | **String**| DDD do celular | [optional] 
+ **celular** | **String**| N\u00C3\u00BAmero do celular | [optional] 
+ **idOperadora** | **Integer**| Identificador da operadora do celular | [optional] 
+ **idOrigemComercial** | **Integer**| Identificador da origem comercial | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="ativarEnvioFaturaEmailUsingPOST"></a>
 # **ativarEnvioFaturaEmailUsingPOST**
 > Object ativarEnvioFaturaEmailUsingPOST(id)
@@ -311,6 +380,104 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="bloquearUsingPOST1"></a>
+# **bloquearUsingPOST1**
+> ContaResponse bloquearUsingPOST1(id, idStatus)
+
+Realiza o bloqueio de uma determinada Conta
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var idStatus = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.bloquearUsingPOST1(id, idStatus, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idStatus** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+
+### Return type
+
+[**ContaResponse**](ContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cancelarUsingPOST1"></a>
+# **cancelarUsingPOST1**
+> ContaResponse cancelarUsingPOST1(id, idStatus)
+
+Realiza o cancelamento de uma determinada Conta
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var idStatus = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cancelarUsingPOST1(id, idStatus, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idStatus** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+
+### Return type
+
+[**ContaResponse**](ContaResponse.md)
 
 ### Authorization
 
@@ -719,9 +886,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> TransferenciaBancariaResponse consultarUsingGET23(id, idTransferencia, opts)
+<a name="consultarUsingGET24"></a>
+# **consultarUsingGET24**
+> TransferenciaBancariaResponse consultarUsingGET24(id, idTransferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -748,7 +915,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(id, idTransferencia, opts, callback);
+api.consultarUsingGET24(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -772,9 +939,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> PageTransferenciaResponse consultarUsingGET24(id, idTransferencia)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> PageTransferenciaResponse consultarUsingGET25(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -798,7 +965,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(id, idTransferencia, callback);
+api.consultarUsingGET25(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -821,9 +988,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET4"></a>
-# **consultarUsingGET4**
-> ContaDetalheResponse consultarUsingGET4(id)
+<a name="consultarUsingGET5"></a>
+# **consultarUsingGET5**
+> ContaDetalheResponse consultarUsingGET5(id)
 
 Apresenta dados de uma determinada conta
 
@@ -845,7 +1012,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET4(id, callback);
+api.consultarUsingGET5(id, callback);
 ```
 
 ### Parameters
@@ -1622,9 +1789,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="reativarUsingPOST"></a>
-# **reativarUsingPOST**
-> Object reativarUsingPOST(id)
+<a name="reativarUsingPOST1"></a>
+# **reativarUsingPOST1**
+> Object reativarUsingPOST1(id)
 
 Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 
@@ -1646,7 +1813,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.reativarUsingPOST(id, callback);
+api.reativarUsingPOST1(id, callback);
 ```
 
 ### Parameters

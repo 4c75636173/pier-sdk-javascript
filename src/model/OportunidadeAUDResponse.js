@@ -18,7 +18,7 @@
   /**
    * The OportunidadeAUDResponse model module.
    * @module model/OportunidadeAUDResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -89,6 +90,9 @@
       }
       if (data.hasOwnProperty('revType')) {
         obj['revType'] = ApiClient.convertToType(data['revType'], 'Integer');
+      }
+      if (data.hasOwnProperty('rev')) {
+        obj['rev'] = ApiClient.convertToType(data['rev'], 'Integer');
       }
     }
     return obj;
@@ -166,6 +170,12 @@
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
+
+  /**
+   * Identificador da auditoria
+   * @member {Integer} rev
+   */
+  exports.prototype['rev'] = undefined;
 
 
 

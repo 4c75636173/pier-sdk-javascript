@@ -18,7 +18,7 @@
   /**
    * The WebHookResponse model module.
    * @module model/WebHookResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -30,13 +30,15 @@
    * @param tipoEvento
    * @param metodo
    * @param url
+   * @param status
    */
-  var exports = function(id, tipoEvento, metodo, url) {
+  var exports = function(id, tipoEvento, metodo, url, status) {
 
     this['id'] = id;
     this['tipoEvento'] = tipoEvento;
     this['metodo'] = metodo;
     this['url'] = url;
+    this['status'] = status;
   };
 
   /**
@@ -61,6 +63,9 @@
       }
       if (data.hasOwnProperty('url')) {
         obj['url'] = ApiClient.convertToType(data['url'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
     }
     return obj;
@@ -91,6 +96,12 @@
    */
   exports.prototype['url'] = undefined;
 
+  /**
+   * Status do WebHook
+   * @member {module:model/WebHookResponse.StatusEnum} status
+   */
+  exports.prototype['status'] = undefined;
+
 
   /**
    * Allowed values for the <code>tipoEvento</code> property.
@@ -103,6 +114,12 @@
      * @const
      */
     RISCO_FRAUDE: "RISCO_FRAUDE",
+    
+    /**
+     * value: TOKEN_SMS
+     * @const
+     */
+    TOKEN_SMS: "TOKEN_SMS",
     
     /**
      * value: OUTROS
@@ -138,6 +155,23 @@
      * @const
      */
     DELETE: "DELETE"
+  };  /**
+   * Allowed values for the <code>status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StatusEnum = { 
+    /**
+     * value: INATIVO
+     * @const
+     */
+    INATIVO: "INATIVO",
+    
+    /**
+     * value: ATIVO
+     * @const
+     */
+    ATIVO: "ATIVO"
   };
 
   return exports;

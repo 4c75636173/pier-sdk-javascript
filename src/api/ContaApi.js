@@ -18,7 +18,7 @@
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -123,10 +123,11 @@
      * @param {Number} limiteInternacionalParcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
      * @param {Number} limiteInternacionalSaqueGlobal Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
      * @param {Number} limiteInternacionalSaquePeriodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+     * @param {Number} limiteMaximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
      * @param {module:api/ContaApi~alterarLimiteUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.alterarLimiteUsingPUT = function(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, callback) {
+    this.alterarLimiteUsingPUT = function(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -194,6 +195,11 @@
         throw "Missing the required parameter 'limiteInternacionalSaquePeriodo' when calling alterarLimiteUsingPUT";
       }
 
+      // verify the required parameter 'limiteMaximo' is set
+      if (limiteMaximo == undefined || limiteMaximo == null) {
+        throw "Missing the required parameter 'limiteMaximo' when calling alterarLimiteUsingPUT";
+      }
+
 
       var pathParams = {
         'id': id
@@ -210,7 +216,8 @@
         'limiteInternacionalParcelado': limiteInternacionalParcelado,
         'limiteInternacionalParcelas': limiteInternacionalParcelas,
         'limiteInternacionalSaqueGlobal': limiteInternacionalSaqueGlobal,
-        'limiteInternacionalSaquePeriodo': limiteInternacionalSaquePeriodo
+        'limiteInternacionalSaquePeriodo': limiteInternacionalSaquePeriodo,
+        'limiteMaximo': limiteMaximo
       };
       var headerParams = {
       };
@@ -336,6 +343,73 @@
     }
 
     /**
+     * Callback function to receive the result of the ativarAnuidadeUsingPOST operation.
+     * @callback module:api/ContaApi~ativarAnuidadeUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Atribuir Anuidade
+     * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idAnuidade Identificador da anuidade
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {String} opts.DDD DDD do celular
+     * @param {String} opts.celular N\u00C3\u00BAmero do celular
+     * @param {Integer} opts.idOperadora Identificador da operadora do celular
+     * @param {Integer} opts.idOrigemComercial Identificador da origem comercial
+     * @param {module:api/ContaApi~ativarAnuidadeUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.ativarAnuidadeUsingPOST = function(id, idAnuidade, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling ativarAnuidadeUsingPOST";
+      }
+
+      // verify the required parameter 'idAnuidade' is set
+      if (idAnuidade == undefined || idAnuidade == null) {
+        throw "Missing the required parameter 'idAnuidade' when calling ativarAnuidadeUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idAnuidade': idAnuidade,
+        'DDD': opts['DDD'],
+        'celular': opts['celular'],
+        'idOperadora': opts['idOperadora'],
+        'idOrigemComercial': opts['idOrigemComercial']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/atribuir-anuidade', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the ativarEnvioFaturaEmailUsingPOST operation.
      * @callback module:api/ContaApi~ativarEnvioFaturaEmailUsingPOSTCallback
      * @param {String} error Error message, if any.
@@ -376,6 +450,112 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/ativar-fatura-email', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the bloquearUsingPOST1 operation.
+     * @callback module:api/ContaApi~bloquearUsingPOST1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o bloqueio de uma determinada Conta
+     * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+     * @param {module:api/ContaApi~bloquearUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ContaResponse}
+     */
+    this.bloquearUsingPOST1 = function(id, idStatus, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling bloquearUsingPOST1";
+      }
+
+      // verify the required parameter 'idStatus' is set
+      if (idStatus == undefined || idStatus == null) {
+        throw "Missing the required parameter 'idStatus' when calling bloquearUsingPOST1";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'id_status': idStatus
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/bloquear', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cancelarUsingPOST1 operation.
+     * @callback module:api/ContaApi~cancelarUsingPOST1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o cancelamento de uma determinada Conta
+     * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+     * @param {module:api/ContaApi~cancelarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ContaResponse}
+     */
+    this.cancelarUsingPOST1 = function(id, idStatus, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling cancelarUsingPOST1";
+      }
+
+      // verify the required parameter 'idStatus' is set
+      if (idStatus == undefined || idStatus == null) {
+        throw "Missing the required parameter 'idStatus' when calling cancelarUsingPOST1";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'id_status': idStatus
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/cancelar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -788,8 +968,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET23 operation.
-     * @callback module:api/ContaApi~consultarUsingGET23Callback
+     * Callback function to receive the result of the consultarUsingGET24 operation.
+     * @callback module:api/ContaApi~consultarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -802,21 +982,21 @@
      * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/ContaApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET23 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET24 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET23";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24";
       }
 
 
@@ -845,8 +1025,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET24 operation.
-     * @callback module:api/ContaApi~consultarUsingGET24Callback
+     * Callback function to receive the result of the consultarUsingGET25 operation.
+     * @callback module:api/ContaApi~consultarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -857,20 +1037,20 @@
      * Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-     * @param {module:api/ContaApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaResponse}
      */
-    this.consultarUsingGET24 = function(id, idTransferencia, callback) {
+    this.consultarUsingGET25 = function(id, idTransferencia, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET25";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET25";
       }
 
 
@@ -898,8 +1078,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET4 operation.
-     * @callback module:api/ContaApi~consultarUsingGET4Callback
+     * Callback function to receive the result of the consultarUsingGET5 operation.
+     * @callback module:api/ContaApi~consultarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -909,15 +1089,15 @@
      * Apresenta dados de uma determinada conta
      * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {module:api/ContaApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaDetalheResponse}
      */
-    this.consultarUsingGET4 = function(id, callback) {
+    this.consultarUsingGET5 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
       }
 
 
@@ -1711,8 +1891,8 @@
     }
 
     /**
-     * Callback function to receive the result of the reativarUsingPOST operation.
-     * @callback module:api/ContaApi~reativarUsingPOSTCallback
+     * Callback function to receive the result of the reativarUsingPOST1 operation.
+     * @callback module:api/ContaApi~reativarUsingPOST1Callback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1722,15 +1902,15 @@
      * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
      * Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
      * @param {Integer} id Id Conta
-     * @param {module:api/ContaApi~reativarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~reativarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.reativarUsingPOST = function(id, callback) {
+    this.reativarUsingPOST1 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling reativarUsingPOST";
+        throw "Missing the required parameter 'id' when calling reativarUsingPOST1";
       }
 
 

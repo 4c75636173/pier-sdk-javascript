@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
 [**listarUsingGET8**](DispositivosApi.md#listarUsingGET8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvarUsingPOST3**](DispositivosApi.md#salvarUsingPOST3) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**salvarUsingPOST4**](DispositivosApi.md#salvarUsingPOST4) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 <a name="ativarUsingPOST"></a>
@@ -161,9 +161,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST3"></a>
-# **salvarUsingPOST3**
-> DispositivoResponse salvarUsingPOST3(persist)
+<a name="salvarUsingPOST4"></a>
+# **salvarUsingPOST4**
+> DispositivoResponse salvarUsingPOST4(persist)
 
 Cadastra Dispositivo
 
@@ -185,7 +185,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST3(persist, callback);
+api.salvarUsingPOST4(persist, callback);
 ```
 
 ### Parameters

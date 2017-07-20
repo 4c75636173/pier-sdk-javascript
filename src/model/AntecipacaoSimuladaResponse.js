@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoSimuladaResponse model module.
    * @module model/AntecipacaoSimuladaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -57,14 +57,14 @@
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
-      if (data.hasOwnProperty('idEventoExterno')) {
-        obj['idEventoExterno'] = ApiClient.convertToType(data['idEventoExterno'], 'Integer');
+      if (data.hasOwnProperty('idCompra')) {
+        obj['idCompra'] = ApiClient.convertToType(data['idCompra'], 'Integer');
       }
       if (data.hasOwnProperty('idTipoTransacao')) {
         obj['idTipoTransacao'] = ApiClient.convertToType(data['idTipoTransacao'], 'Integer');
       }
-      if (data.hasOwnProperty('qtdeParcelasAntecipaveis')) {
-        obj['qtdeParcelasAntecipaveis'] = ApiClient.convertToType(data['qtdeParcelasAntecipaveis'], 'Integer');
+      if (data.hasOwnProperty('quantidadeParcelasAntecipaveis')) {
+        obj['quantidadeParcelasAntecipaveis'] = ApiClient.convertToType(data['quantidadeParcelasAntecipaveis'], 'Integer');
       }
       if (data.hasOwnProperty('valorParcela')) {
         obj['valorParcela'] = ApiClient.convertToType(data['valorParcela'], 'Number');
@@ -96,22 +96,22 @@
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do evento.
-   * @member {Integer} idEventoExterno
+   * C\u00C3\u00B3digo identificador do evento compra.
+   * @member {Integer} idCompra
    */
-  exports.prototype['idEventoExterno'] = undefined;
+  exports.prototype['idCompra'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento.
+   * C\u00C3\u00B3digo identificador do tipo do evento compra.
    * @member {Integer} idTipoTransacao
    */
   exports.prototype['idTipoTransacao'] = undefined;
 
   /**
    * Quantidade de parcelas antecip\u00C3\u00A1veis.
-   * @member {Integer} qtdeParcelasAntecipaveis
+   * @member {Integer} quantidadeParcelasAntecipaveis
    */
-  exports.prototype['qtdeParcelasAntecipaveis'] = undefined;
+  exports.prototype['quantidadeParcelasAntecipaveis'] = undefined;
 
   /**
    * Valor da parcela.

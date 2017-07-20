@@ -18,7 +18,7 @@
   /**
    * The EnderecoAprovadoResponse model module.
    * @module model/EnderecoAprovadoResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

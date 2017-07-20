@@ -18,7 +18,7 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -157,16 +157,16 @@
    */
   exports.StatusEnum = { 
     /**
-     * value: ATIVO
-     * @const
-     */
-    ATIVO: "ATIVO",
-    
-    /**
      * value: INATIVO
      * @const
      */
-    INATIVO: "INATIVO"
+    INATIVO: "INATIVO",
+    
+    /**
+     * value: ATIVO
+     * @const
+     */
+    ATIVO: "ATIVO"
   };
 
   return exports;

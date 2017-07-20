@@ -18,7 +18,7 @@
   /**
    * The PageTransacoesCorrentesResponse model module.
    * @module model/PageTransacoesCorrentesResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametrosApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametrosApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET13**](StatusParametrosApi.md#consultarUsingGET13) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET14**](StatusParametrosApi.md#consultarUsingGET14) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET15**](StatusParametrosApi.md#consultarUsingGET15) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametrosApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametrosApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
 [**listarUsingGET20**](StatusParametrosApi.md#listarUsingGET20) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
@@ -106,9 +106,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> StatusContaResponse consultarUsingGET13(id)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> StatusContaResponse consultarUsingGET14(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -130,7 +130,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET14(id, callback);
 ```
 
 ### Parameters
@@ -152,9 +152,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> StatusImpressaoResponse consultarUsingGET14(id)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> StatusImpressaoResponse consultarUsingGET15(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -176,7 +176,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -276,7 +276,10 @@ var opts = {
   'idStatusDestinoConta': 789, // {Integer} Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
   'flagCobraTarifa': 56, // {Integer} Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
   'flagPermiteNovaViaCartao': 56, // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-  'flagPermiteDesbloqueio': 56 // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteDesbloqueio': 56, // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  'flagCancelamento': 56, // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteBloqueio': 56, // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+  'flagReativar': 56 // {Integer} Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
 };
 
 var callback = function(error, data, response) {
@@ -304,6 +307,9 @@ Name | Type | Description  | Notes
  **flagCobraTarifa** | **Integer**| Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor. | [optional] 
  **flagPermiteNovaViaCartao** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flagPermiteDesbloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagCancelamento** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagPermiteBloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagReativar** | **Integer**| Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 
@@ -341,7 +347,10 @@ var opts = {
   'mensagemConsultaNegada': "mensagemConsultaNegada_example", // {String} Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
   'flagPermiteNovaViaCartao': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
   'flagFazTransferencia': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
-  'flagRecebeTransferencia': 56 // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+  'flagRecebeTransferencia': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteBloqueio': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+  'flagPermiteDesbloqueio': 56, // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+  'flagCancelaConta': 56 // {Integer} Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
 };
 
 var callback = function(error, data, response) {
@@ -367,6 +376,9 @@ Name | Type | Description  | Notes
  **flagPermiteNovaViaCartao** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flagFazTransferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
  **flagRecebeTransferencia** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagPermiteBloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagPermiteDesbloqueio** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo. | [optional] 
+ **flagCancelaConta** | **Integer**| Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo. | [optional] 
 
 ### Return type
 

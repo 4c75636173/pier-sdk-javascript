@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET16**](EstabelecimentosApi.md#consultarUsingGET16) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET6**](EstabelecimentosApi.md#consultarUsingGET6) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET17**](EstabelecimentosApi.md#consultarUsingGET17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET7**](EstabelecimentosApi.md#consultarUsingGET7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
 [**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
 [**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-<a name="consultarUsingGET16"></a>
-# **consultarUsingGET16**
-> TerminalResponse consultarUsingGET16(id)
+<a name="consultarUsingGET17"></a>
+# **consultarUsingGET17**
+> TerminalResponse consultarUsingGET17(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET16(id, callback);
+api.consultarUsingGET17(id, callback);
 ```
 
 ### Parameters
@@ -56,9 +56,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> EstabelecimentoResponse consultarUsingGET6(id)
+<a name="consultarUsingGET7"></a>
+# **consultarUsingGET7**
+> EstabelecimentoResponse consultarUsingGET7(id)
 
 Consultar estabelecimento por id
 
@@ -80,7 +80,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(id, callback);
+api.consultarUsingGET7(id, callback);
 ```
 
 ### Parameters

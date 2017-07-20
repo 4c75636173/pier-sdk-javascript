@@ -18,7 +18,7 @@
   /**
    * Estabelecimentos service.
    * @module api/EstabelecimentosApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET16 operation.
-     * @callback module:api/EstabelecimentosApi~consultarUsingGET16Callback
+     * Callback function to receive the result of the consultarUsingGET17 operation.
+     * @callback module:api/EstabelecimentosApi~consultarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Apresenta os dados de um determinado Terminal
      * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {module:api/EstabelecimentosApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentosApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET16 = function(id, callback) {
+    this.consultarUsingGET17 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
       }
 
 
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/EstabelecimentosApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/EstabelecimentosApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -90,15 +90,15 @@
      * Consultar estabelecimento por id
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
-     * @param {module:api/EstabelecimentosApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentosApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET6 = function(id, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 

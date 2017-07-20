@@ -18,7 +18,7 @@
   /**
    * The PageWebHookResponse model module.
    * @module model/PageWebHookResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

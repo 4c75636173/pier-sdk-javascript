@@ -18,7 +18,7 @@
   /**
    * The PessoaJuridicaAprovadaPersist model module.
    * @module model/PessoaJuridicaAprovadaPersist
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -47,6 +47,8 @@
 
 
     this['diaVencimento'] = diaVencimento;
+
+
 
 
     this['enderecos'] = enderecos;
@@ -99,6 +101,12 @@
       }
       if (data.hasOwnProperty('nomeImpresso')) {
         obj['nomeImpresso'] = ApiClient.convertToType(data['nomeImpresso'], 'String');
+      }
+      if (data.hasOwnProperty('valorRenda')) {
+        obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
+      }
+      if (data.hasOwnProperty('canalEntrada')) {
+        obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
       }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersist]);
@@ -185,6 +193,18 @@
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
+
+  /**
+   * Apresenta o valor da renda compravada
+   * @member {Number} valorRenda
+   */
+  exports.prototype['valorRenda'] = undefined;
+
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * @member {String} canalEntrada
+   */
+  exports.prototype['canalEntrada'] = undefined;
 
   /**
    * Apresenta os telefones da empresa

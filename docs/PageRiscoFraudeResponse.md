@@ -1,4 +1,4 @@
-# Pier.RiscoFraudeResponsePage
+# Pier.PageRiscoFraudeResponse
 
 ## Properties
 Name | Type | Description | Notes

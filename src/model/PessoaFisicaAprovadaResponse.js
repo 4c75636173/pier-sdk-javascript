@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -55,6 +55,9 @@
 
 
     this['diaVencimento'] = diaVencimento;
+
+
+
 
 
 
@@ -105,8 +108,8 @@
       if (data.hasOwnProperty('idEstadoCivil')) {
         obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
       }
-      if (data.hasOwnProperty('profissao')) {
-        obj['profissao'] = ApiClient.convertToType(data['profissao'], 'String');
+      if (data.hasOwnProperty('idProfissao')) {
+        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'Integer');
       }
       if (data.hasOwnProperty('idNaturezaOcupacao')) {
         obj['idNaturezaOcupacao'] = ApiClient.convertToType(data['idNaturezaOcupacao'], 'Integer');
@@ -138,6 +141,15 @@
       if (data.hasOwnProperty('nomeEmpresa')) {
         obj['nomeEmpresa'] = ApiClient.convertToType(data['nomeEmpresa'], 'String');
       }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('idProposta')) {
+        obj['idProposta'] = ApiClient.convertToType(data['idProposta'], 'Integer');
+      }
+      if (data.hasOwnProperty('canalEntrada')) {
+        obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
+      }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaResponse]);
       }
@@ -150,7 +162,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -217,9 +229,9 @@
 
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
-   * @member {String} profissao
+   * @member {Integer} idProfissao
    */
-  exports.prototype['profissao'] = undefined;
+  exports.prototype['idProfissao'] = undefined;
 
   /**
    * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -276,10 +288,28 @@
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome da empresa
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   * @member {Integer} idProposta
+   */
+  exports.prototype['idProposta'] = undefined;
+
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * @member {String} canalEntrada
+   */
+  exports.prototype['canalEntrada'] = undefined;
 
   /**
    * Apresenta os telefones da empresa

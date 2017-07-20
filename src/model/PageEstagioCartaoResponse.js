@@ -18,7 +18,7 @@
   /**
    * The PageEstagioCartaoResponse model module.
    * @module model/PageEstagioCartaoResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

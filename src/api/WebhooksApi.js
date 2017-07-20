@@ -18,7 +18,7 @@
   /**
    * Webhooks service.
    * @module api/WebhooksApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -93,8 +93,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/WebhooksApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/WebhooksApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -104,15 +104,15 @@
      * Consultar Webhook
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-     * @param {module:api/WebhooksApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET27 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
       }
 
 
@@ -192,8 +192,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST14 operation.
-     * @callback module:api/WebhooksApi~salvarUsingPOST14Callback
+     * Callback function to receive the result of the salvarUsingPOST16 operation.
+     * @callback module:api/WebhooksApi~salvarUsingPOST16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -204,20 +204,20 @@
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhooksApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhooksApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.salvarUsingPOST14 = function(tipoEvento, url, callback) {
+    this.salvarUsingPOST16 = function(tipoEvento, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'tipoEvento' is set
       if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST16";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'url' when calling salvarUsingPOST16";
       }
 
 

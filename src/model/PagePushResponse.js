@@ -18,7 +18,7 @@
   /**
    * The PagePushResponse model module.
    * @module model/PagePushResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

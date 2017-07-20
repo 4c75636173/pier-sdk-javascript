@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoSimuladaDetalhesResponse model module.
    * @module model/AntecipacaoSimuladaDetalhesResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

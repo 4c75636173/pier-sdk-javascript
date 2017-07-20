@@ -7,19 +7,21 @@ Method | HTTP request | Description
 [**alterarAlterarSenhaUsingPUT**](CartaoApi.md#alterarAlterarSenhaUsingPUT) | **PUT** /api/cartoes/{id}/alterar-senha | Realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
 [**alterarStatusImpressaoUsingPUT**](CartaoApi.md#alterarStatusImpressaoUsingPUT) | **PUT** /api/cartoes/{id}/alterar-status-impressao | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
 [**atribuirPessoaUsingPUT**](CartaoApi.md#atribuirPessoaUsingPUT) | **PUT** /api/cartoes/{id}/atribuir-titular | Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
-[**bloquearUsingPUT**](CartaoApi.md#bloquearUsingPUT) | **PUT** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+[**bloquearUsingPOST**](CartaoApi.md#bloquearUsingPOST) | **POST** /api/cartoes/{id}/bloquear | Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 [**cadastrarAlterarSenhaUsingPOST**](CartaoApi.md#cadastrarAlterarSenhaUsingPOST) | **POST** /api/cartoes/{id}/cadastrar-senha | Realiza o cadastro da senha de um Cart\u00C3\u00A3o
+[**cancelarUsingPOST**](CartaoApi.md#cancelarUsingPOST) | **POST** /api/cartoes/{id}/cancelar | Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
 [**consultarDadosReaisCartaoUsingGET**](CartaoApi.md#consultarDadosReaisCartaoUsingGET) | **GET** /api/cartoes/{id}/consultar-dados-reais | Consultar Detalhes do Cart\u00C3\u00A3o
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultarUsingGET3**](CartaoApi.md#consultarUsingGET3) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultarUsingGET4**](CartaoApi.md#consultarUsingGET4) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
-[**desbloquearUsingPUT**](CartaoApi.md#desbloquearUsingPUT) | **PUT** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+[**desbloquearUsingPOST**](CartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**listarUsingGET5**](CartaoApi.md#listarUsingGET5) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**reativarUsingPOST**](CartaoApi.md#reativarUsingPOST) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -174,9 +176,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="bloquearUsingPUT"></a>
-# **bloquearUsingPUT**
-> CartaoResponse bloquearUsingPUT(id, idStatus, observacao)
+<a name="bloquearUsingPOST"></a>
+# **bloquearUsingPOST**
+> CartaoResponse bloquearUsingPOST(id, idStatus, observacao)
 
 Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -202,7 +204,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.bloquearUsingPUT(id, idStatus, observacao, callback);
+api.bloquearUsingPOST(id, idStatus, observacao, callback);
 ```
 
 ### Parameters
@@ -265,6 +267,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cancelarUsingPOST"></a>
+# **cancelarUsingPOST**
+> CartaoResponse cancelarUsingPOST(id, idStatus, observacao)
+
+Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+var idStatus = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+
+var observacao = "observacao_example"; // {String} Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cancelarUsingPOST(id, idStatus, observacao, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+ **idStatus** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o. | 
+ **observacao** | **String**| Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento. | 
+
+### Return type
+
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 
@@ -459,9 +513,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET3"></a>
-# **consultarUsingGET3**
-> CartaoDetalheResponse consultarUsingGET3(id)
+<a name="consultarUsingGET4"></a>
+# **consultarUsingGET4**
+> CartaoDetalheResponse consultarUsingGET4(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -483,7 +537,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET3(id, callback);
+api.consultarUsingGET4(id, callback);
 ```
 
 ### Parameters
@@ -551,9 +605,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="desbloquearUsingPUT"></a>
-# **desbloquearUsingPUT**
-> CartaoResponse desbloquearUsingPUT(id)
+<a name="desbloquearUsingPOST"></a>
+# **desbloquearUsingPOST**
+> CartaoResponse desbloquearUsingPOST(id)
 
 Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 
@@ -575,7 +629,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desbloquearUsingPUT(id, callback);
+api.desbloquearUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -842,6 +896,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageCartaoResponse**](PageCartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="reativarUsingPOST"></a>
+# **reativarUsingPOST**
+> CartaoResponse reativarUsingPOST(id)
+
+Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+
+Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.reativarUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**CartaoResponse**](CartaoResponse.md)
 
 ### Authorization
 

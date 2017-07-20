@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autorizarUsingPOST**](AutorizacoesApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**cancelarUsingPOST**](AutorizacoesApi.md#cancelarUsingPOST) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+[**cancelarUsingPOST2**](AutorizacoesApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacoesApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de pagamento
+[**simularUsingPOST**](AutorizacoesApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
 
 <a name="autorizarUsingPOST"></a>
@@ -56,9 +56,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="cancelarUsingPOST"></a>
-# **cancelarUsingPOST**
-> TransacaoOnUsResponse cancelarUsingPOST(cancelamentoRequest)
+<a name="cancelarUsingPOST2"></a>
+# **cancelarUsingPOST2**
+> TransacaoOnUsResponse cancelarUsingPOST2(cancelamentoRequest)
 
 Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 
@@ -80,7 +80,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancelarUsingPOST(cancelamentoRequest, callback);
+api.cancelarUsingPOST2(cancelamentoRequest, callback);
 ```
 
 ### Parameters
@@ -146,9 +146,9 @@ No authorization required
 # **simularUsingPOST**
 > TransacaoOnUsResponse simularUsingPOST(transacoesRequest)
 
-Simula planos de pagamento
+Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
-Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
 
 ### Example
 ```javascript

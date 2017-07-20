@@ -18,7 +18,7 @@
   /**
    * The BaseResponse model module.
    * @module model/BaseResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

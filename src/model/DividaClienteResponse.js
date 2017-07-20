@@ -18,7 +18,7 @@
   /**
    * The DividaClienteResponse model module.
    * @module model/DividaClienteResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

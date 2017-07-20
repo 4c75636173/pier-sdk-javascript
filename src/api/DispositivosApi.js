@@ -18,7 +18,7 @@
   /**
    * Dispositivos service.
    * @module api/DispositivosApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -180,8 +180,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST3 operation.
-     * @callback module:api/DispositivosApi~salvarUsingPOST3Callback
+     * Callback function to receive the result of the salvarUsingPOST4 operation.
+     * @callback module:api/DispositivosApi~salvarUsingPOST4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -191,15 +191,15 @@
      * Cadastra Dispositivo
      * Esse recurso permite cadastrar dispositivos.
      * @param {module:model/DispositivoPersist} persist persist
-     * @param {module:api/DispositivosApi~salvarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DispositivosApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DispositivoResponse}
      */
-    this.salvarUsingPOST3 = function(persist, callback) {
+    this.salvarUsingPOST4 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST3";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST4";
       }
 
 

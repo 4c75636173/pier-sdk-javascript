@@ -18,7 +18,7 @@
   /**
    * The ContaResponse model module.
    * @module model/ContaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -116,7 +116,7 @@
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;

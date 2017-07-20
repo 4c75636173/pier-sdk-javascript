@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -54,6 +54,8 @@
 
 
     this['diaVencimento'] = diaVencimento;
+
+
 
 
 
@@ -101,8 +103,8 @@
       if (data.hasOwnProperty('idEstadoCivil')) {
         obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
       }
-      if (data.hasOwnProperty('profissao')) {
-        obj['profissao'] = ApiClient.convertToType(data['profissao'], 'String');
+      if (data.hasOwnProperty('idProfissao')) {
+        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'Integer');
       }
       if (data.hasOwnProperty('idNaturezaOcupacao')) {
         obj['idNaturezaOcupacao'] = ApiClient.convertToType(data['idNaturezaOcupacao'], 'Integer');
@@ -133,6 +135,12 @@
       }
       if (data.hasOwnProperty('nomeEmpresa')) {
         obj['nomeEmpresa'] = ApiClient.convertToType(data['nomeEmpresa'], 'String');
+      }
+      if (data.hasOwnProperty('valorRenda')) {
+        obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
+      }
+      if (data.hasOwnProperty('canalEntrada')) {
+        obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
       }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersist]);
@@ -207,9 +215,9 @@
 
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
-   * @member {String} profissao
+   * @member {Integer} idProfissao
    */
-  exports.prototype['profissao'] = undefined;
+  exports.prototype['idProfissao'] = undefined;
 
   /**
    * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -270,6 +278,18 @@
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;
+
+  /**
+   * Apresenta o valor da renda compravada
+   * @member {Number} valorRenda
+   */
+  exports.prototype['valorRenda'] = undefined;
+
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * @member {String} canalEntrada
+   */
+  exports.prototype['canalEntrada'] = undefined;
 
   /**
    * Apresenta os telefones da empresa

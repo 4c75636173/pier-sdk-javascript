@@ -18,7 +18,7 @@
   /**
    * The PageTransferenciaResponse model module.
    * @module model/PageTransferenciaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

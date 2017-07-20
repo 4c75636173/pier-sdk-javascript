@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/FAQApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/FAQApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * Consultar FAQ por id
      * Consulta os detalhes de uma determinada FAQ
      * @param {Integer} id Id
-     * @param {module:api/FAQApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 

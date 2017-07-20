@@ -18,7 +18,7 @@
   /**
    * Usuarios service.
    * @module api/UsuariosApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -41,7 +41,7 @@
      */
 
     /**
-     * Alterar senha do usu\u00C3\u00A1rio
+     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {String} senhaAtual Senha Atual
@@ -101,7 +101,7 @@
      */
 
     /**
-     * Altera os usu\u00C3\u00A1rios cadastrados
+     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:model/UsuarioUpdate} update update
@@ -153,7 +153,7 @@
      */
 
     /**
-     * Ativa os usu\u00C3\u00A1rios cadastrados
+     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:api/UsuariosApi~ativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -191,26 +191,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET25 operation.
-     * @callback module:api/UsuariosApi~consultarUsingGET25Callback
+     * Callback function to receive the result of the consultarUsingGET26 operation.
+     * @callback module:api/UsuariosApi~consultarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
+     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:api/UsuariosApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuariosApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET25 = function(id, callback) {
+    this.consultarUsingGET26 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET25";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
       }
 
 
@@ -245,7 +245,7 @@
      */
 
     /**
-     * Desativa os usu\u00C3\u00A1rios cadastrados
+     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:api/UsuariosApi~desativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -291,7 +291,7 @@
      */
 
     /**
-     * Lista os Usu\u00C3\u00A1rios cadastrados
+     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
      * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -344,7 +344,7 @@
      */
 
     /**
-     * Recuperar senha do usu\u00C3\u00A1rio
+     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      * Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:api/UsuariosApi~recuperarSenhaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -382,26 +382,26 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST13 operation.
-     * @callback module:api/UsuariosApi~salvarUsingPOST13Callback
+     * Callback function to receive the result of the salvarUsingPOST15 operation.
+     * @callback module:api/UsuariosApi~salvarUsingPOST15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Cadastra Usu\u00C3\u00A1rio
+     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
      * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
      * @param {module:model/UsuarioPersist} persist persist
-     * @param {module:api/UsuariosApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuariosApi~salvarUsingPOST15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.salvarUsingPOST13 = function(persist, callback) {
+    this.salvarUsingPOST15 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST13";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST15";
       }
 
 
@@ -435,7 +435,7 @@
      */
 
     /**
-     * Validar a senha do usu\u00C3\u00A1rio
+     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
      * Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
      * @param {String} senha Senha do usu\u00C3\u00A1rio
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).

@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.RiscoFraudeResponsePage = factory(root.Pier.ApiClient, root.Pier.RiscoFraudeResponse);
+    root.Pier.PageRiscoFraudeResponse = factory(root.Pier.ApiClient, root.Pier.RiscoFraudeResponse);
   }
 }(this, function(ApiClient, RiscoFraudeResponse) {
   'use strict';
 
   /**
-   * The RiscoFraudeResponsePage model module.
-   * @module model/RiscoFraudeResponsePage
-   * @version 2.16.6
+   * The PageRiscoFraudeResponse model module.
+   * @module model/PageRiscoFraudeResponse
+   * @version 2.24.0
    */
 
   /**
-   * Constructs a new <code>RiscoFraudeResponsePage</code>.
+   * Constructs a new <code>PageRiscoFraudeResponse</code>.
    * Lista dos riscos de fraudes
-   * @alias module:model/RiscoFraudeResponsePage
+   * @alias module:model/PageRiscoFraudeResponse
    * @class
    */
   var exports = function() {
@@ -46,11 +46,11 @@
   };
 
   /**
-   * Constructs a <code>RiscoFraudeResponsePage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageRiscoFraudeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RiscoFraudeResponsePage} obj Optional instance to populate.
-   * @return {module:model/RiscoFraudeResponsePage} The populated <code>RiscoFraudeResponsePage</code> instance.
+   * @param {module:model/PageRiscoFraudeResponse} obj Optional instance to populate.
+   * @return {module:model/PageRiscoFraudeResponse} The populated <code>PageRiscoFraudeResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

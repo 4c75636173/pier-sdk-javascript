@@ -18,12 +18,12 @@
   /**
    * The TelefoneResponse model module.
    * @module model/TelefoneResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
    * Constructs a new <code>TelefoneResponse</code>.
-   * ObjetoTelefone
+   * Objeto de Resposta de Telefone
    * @alias module:model/TelefoneResponse
    * @class
    */
@@ -76,25 +76,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
    * @member {Integer} idTipoTelefone
    */
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
+   * C\u00C3\u00B3digo DDD do telefone.
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;

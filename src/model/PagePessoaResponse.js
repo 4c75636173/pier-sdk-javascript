@@ -18,7 +18,7 @@
   /**
    * The PagePessoaResponse model module.
    * @module model/PagePessoaResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

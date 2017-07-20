@@ -18,7 +18,7 @@
   /**
    * PlataformasMobile service.
    * @module api/PlataformasMobileApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -132,8 +132,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST9 operation.
-     * @callback module:api/PlataformasMobileApi~salvarUsingPOST9Callback
+     * Callback function to receive the result of the salvarUsingPOST11 operation.
+     * @callback module:api/PlataformasMobileApi~salvarUsingPOST11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -143,15 +143,15 @@
      * Cadastra Plataforma Mobile
      * Esse recurso permite cadastrar plataformas mobile.
      * @param {module:model/PlataformaMobilePersist} persist persist
-     * @param {module:api/PlataformasMobileApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformasMobileApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlataformaMobileResponse}
      */
-    this.salvarUsingPOST9 = function(persist, callback) {
+    this.salvarUsingPOST11 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST9";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST11";
       }
 
 

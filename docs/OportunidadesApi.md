@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterarUsingPUT3**](OportunidadesApi.md#alterarUsingPUT3) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**alterarUsingPUT7**](OportunidadesApi.md#alterarUsingPUT7) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultarStatusUsingGET**](OportunidadesApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultarUsingGET20**](OportunidadesApi.md#consultarUsingGET20) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
-[**consultarUsingGET8**](OportunidadesApi.md#consultarUsingGET8) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultarUsingGET21**](OportunidadesApi.md#consultarUsingGET21) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultarUsingGET9**](OportunidadesApi.md#consultarUsingGET9) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
 [**listarAuditoriasStatusUsingGET**](OportunidadesApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listarAuditoriasUsingGET**](OportunidadesApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadesApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**listarUsingGET13**](OportunidadesApi.md#listarUsingGET13) | **GET** /api/oportunidades | Lista as oportunidades
 [**listarUsingGET25**](OportunidadesApi.md#listarUsingGET25) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadesApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvarUsingPOST11**](OportunidadesApi.md#salvarUsingPOST11) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvarUsingPOST6**](OportunidadesApi.md#salvarUsingPOST6) | **POST** /api/oportunidades | Cadastra as oportunidade
+[**salvarUsingPOST13**](OportunidadesApi.md#salvarUsingPOST13) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvarUsingPOST8**](OportunidadesApi.md#salvarUsingPOST8) | **POST** /api/oportunidades | Cadastra as oportunidades
 
 
 <a name="alterarStatusUsingPUT"></a>
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> TipoOportunidadeResponse consultarUsingGET20(id)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> TipoOportunidadeResponse consultarUsingGET21(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, callback);
+api.consultarUsingGET21(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> OportunidadeResponse consultarUsingGET8(id)
+<a name="consultarUsingGET9"></a>
+# **consultarUsingGET9**
+> OportunidadeResponse consultarUsingGET9(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET9(id, callback);
 ```
 
 ### Parameters
@@ -567,7 +567,7 @@ No authorization required
 
 <a name="listarUsingGET13"></a>
 # **listarUsingGET13**
-> PageOportunidadeResponse listarUsingGET13(opts)
+> PageOportunidadeResponse listarUsingGET13(dataInicioVigencia, opts)
 
 Lista as oportunidades
 
@@ -579,6 +579,8 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.OportunidadesApi()
 
+var dataInicioVigencia = "dataInicioVigencia_example"; // {String} Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+
 var opts = { 
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
@@ -586,7 +588,6 @@ var opts = {
   'dataCadastro': "dataCadastro_example", // {String} Data do cadastro da oportunidade
   'dataAtualizacao': "dataAtualizacao_example", // {String} Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
   'numeroReceitaFederal': "numeroReceitaFederal_example", // {String} N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-  'dataInicioVigencia': "dataInicioVigencia_example", // {String} Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
   'dataFimVigencia': "dataFimVigencia_example", // {String} Data do fim da vig\u00C3\u00AAncia da oportunidade
   'flagAtivo': true // {Boolean} Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
 };
@@ -598,20 +599,20 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET13(opts, callback);
+api.listarUsingGET13(dataInicioVigencia, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **dataInicioVigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idStatusOportunidade** | **Integer**| C\u00C3\u00B3digo identificador do status oportunidade | [optional] 
  **dataCadastro** | **String**| Data do cadastro da oportunidade | [optional] 
  **dataAtualizacao** | **String**| Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade | [optional] 
  **numeroReceitaFederal** | **String**| N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade | [optional] 
- **dataInicioVigencia** | **String**| Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **dataFimVigencia** | **String**| Data do fim da vig\u00C3\u00AAncia da oportunidade | [optional] 
  **flagAtivo** | **Boolean**| Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa | [optional] 
 
@@ -730,9 +731,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST11"></a>
-# **salvarUsingPOST11**
-> TipoOportunidadeResponse salvarUsingPOST11(persist)
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> TipoOportunidadeResponse salvarUsingPOST13(persist)
 
 Cadastra tipos oportunidades
 
@@ -754,7 +755,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST11(persist, callback);
+api.salvarUsingPOST13(persist, callback);
 ```
 
 ### Parameters
@@ -776,11 +777,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST6"></a>
-# **salvarUsingPOST6**
-> OportunidadeResponse salvarUsingPOST6(persist)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> OportunidadeResponse salvarUsingPOST8(persist)
 
-Cadastra as oportunidade
+Cadastra as oportunidades
 
 Esse recurso permite cadastrar oportunidades.
 
@@ -800,7 +801,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST6(persist, callback);
+api.salvarUsingPOST8(persist, callback);
 ```
 
 ### Parameters

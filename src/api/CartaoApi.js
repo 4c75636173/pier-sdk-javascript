@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -192,8 +192,8 @@
     }
 
     /**
-     * Callback function to receive the result of the bloquearUsingPUT operation.
-     * @callback module:api/CartaoApi~bloquearUsingPUTCallback
+     * Callback function to receive the result of the bloquearUsingPOST operation.
+     * @callback module:api/CartaoApi~bloquearUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -205,25 +205,25 @@
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
      * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
      * @param {String} observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
-     * @param {module:api/CartaoApi~bloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~bloquearUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.bloquearUsingPUT = function(id, idStatus, observacao, callback) {
+    this.bloquearUsingPOST = function(id, idStatus, observacao, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling bloquearUsingPUT";
+        throw "Missing the required parameter 'id' when calling bloquearUsingPOST";
       }
 
       // verify the required parameter 'idStatus' is set
       if (idStatus == undefined || idStatus == null) {
-        throw "Missing the required parameter 'idStatus' when calling bloquearUsingPUT";
+        throw "Missing the required parameter 'idStatus' when calling bloquearUsingPOST";
       }
 
       // verify the required parameter 'observacao' is set
       if (observacao == undefined || observacao == null) {
-        throw "Missing the required parameter 'observacao' when calling bloquearUsingPUT";
+        throw "Missing the required parameter 'observacao' when calling bloquearUsingPOST";
       }
 
 
@@ -245,7 +245,7 @@
       var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id}/bloquear', 'PUT',
+        '/api/cartoes/{id}/bloquear', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -299,6 +299,66 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/cadastrar-senha', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cancelarUsingPOST operation.
+     * @callback module:api/CartaoApi~cancelarUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {Integer} idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+     * @param {String} observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+     * @param {module:api/CartaoApi~cancelarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CartaoResponse}
+     */
+    this.cancelarUsingPOST = function(id, idStatus, observacao, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling cancelarUsingPOST";
+      }
+
+      // verify the required parameter 'idStatus' is set
+      if (idStatus == undefined || idStatus == null) {
+        throw "Missing the required parameter 'idStatus' when calling cancelarUsingPOST";
+      }
+
+      // verify the required parameter 'observacao' is set
+      if (observacao == undefined || observacao == null) {
+        throw "Missing the required parameter 'observacao' when calling cancelarUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'id_status': idStatus,
+        'observacao': observacao
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CartaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/cancelar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -489,8 +549,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET3 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET3Callback
+     * Callback function to receive the result of the consultarUsingGET4 operation.
+     * @callback module:api/CartaoApi~consultarUsingGET4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -500,15 +560,15 @@
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoDetalheResponse}
      */
-    this.consultarUsingGET3 = function(id, callback) {
+    this.consultarUsingGET4 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
       }
 
 
@@ -581,8 +641,8 @@
     }
 
     /**
-     * Callback function to receive the result of the desbloquearUsingPUT operation.
-     * @callback module:api/CartaoApi~desbloquearUsingPUTCallback
+     * Callback function to receive the result of the desbloquearUsingPOST operation.
+     * @callback module:api/CartaoApi~desbloquearUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -592,15 +652,15 @@
      * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~desbloquearUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~desbloquearUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.desbloquearUsingPUT = function(id, callback) {
+    this.desbloquearUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling desbloquearUsingPUT";
+        throw "Missing the required parameter 'id' when calling desbloquearUsingPOST";
       }
 
 
@@ -620,7 +680,7 @@
       var returnType = CartaoResponse;
 
       return this.apiClient.callApi(
-        '/api/cartoes/{id}/desbloquear', 'PUT',
+        '/api/cartoes/{id}/desbloquear', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -864,6 +924,52 @@
 
       return this.apiClient.callApi(
         '/api/cartoes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reativarUsingPOST operation.
+     * @callback module:api/CartaoApi~reativarUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CartaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+     * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+     * @param {module:api/CartaoApi~reativarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CartaoResponse}
+     */
+    this.reativarUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling reativarUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CartaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/reativar', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

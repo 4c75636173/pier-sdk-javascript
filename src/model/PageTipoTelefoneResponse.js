@@ -18,7 +18,7 @@
   /**
    * The PageTipoTelefoneResponse model module.
    * @module model/PageTipoTelefoneResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**

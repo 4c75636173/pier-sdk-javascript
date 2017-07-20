@@ -18,7 +18,7 @@
   /**
    * Autorizacoes service.
    * @module api/AutorizacoesApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -78,8 +78,8 @@
     }
 
     /**
-     * Callback function to receive the result of the cancelarUsingPOST operation.
-     * @callback module:api/AutorizacoesApi~cancelarUsingPOSTCallback
+     * Callback function to receive the result of the cancelarUsingPOST2 operation.
+     * @callback module:api/AutorizacoesApi~cancelarUsingPOST2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransacaoOnUsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -89,15 +89,15 @@
      * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
      * Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:model/CancelamentoTransacaoOnUsRequest} cancelamentoRequest cancelamentoRequest
-     * @param {module:api/AutorizacoesApi~cancelarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AutorizacoesApi~cancelarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransacaoOnUsResponse}
      */
-    this.cancelarUsingPOST = function(cancelamentoRequest, callback) {
+    this.cancelarUsingPOST2 = function(cancelamentoRequest, callback) {
       var postBody = cancelamentoRequest;
 
       // verify the required parameter 'cancelamentoRequest' is set
       if (cancelamentoRequest == undefined || cancelamentoRequest == null) {
-        throw "Missing the required parameter 'cancelamentoRequest' when calling cancelarUsingPOST";
+        throw "Missing the required parameter 'cancelamentoRequest' when calling cancelarUsingPOST2";
       }
 
 
@@ -170,8 +170,8 @@
      */
 
     /**
-     * Simula planos de pagamento
-     * Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
      * @param {module:model/TransacaoOnUsRequest} transacoesRequest transacoesRequest
      * @param {module:api/AutorizacoesApi~simularUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransacaoOnUsResponse}

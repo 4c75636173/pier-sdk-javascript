@@ -18,7 +18,7 @@
   /**
    * StatusParametros service.
    * @module api/StatusParametrosApi
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusContaResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/StatusParametrosApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/StatusParametrosApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusParametrosApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametrosApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressaoResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET15 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
       }
 
 
@@ -288,6 +288,9 @@
      * @param {Integer} opts.flagCobraTarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
      * @param {Integer} opts.flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagCancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagPermiteBloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagReativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @param {module:api/StatusParametrosApi~listarStatusCartoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusCartaoResponse}
      */
@@ -309,7 +312,10 @@
         'idStatusDestinoConta': opts['idStatusDestinoConta'],
         'flagCobraTarifa': opts['flagCobraTarifa'],
         'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao'],
-        'flagPermiteDesbloqueio': opts['flagPermiteDesbloqueio']
+        'flagPermiteDesbloqueio': opts['flagPermiteDesbloqueio'],
+        'flagCancelamento': opts['flagCancelamento'],
+        'flagPermiteBloqueio': opts['flagPermiteBloqueio'],
+        'flagReativar': opts['flagReativar']
       };
       var headerParams = {
       };
@@ -349,6 +355,9 @@
      * @param {Integer} opts.flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
      * @param {Integer} opts.flagFazTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
      * @param {Integer} opts.flagRecebeTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagPermiteBloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+     * @param {Integer} opts.flagCancelaConta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
      * @param {module:api/StatusParametrosApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContaResponse}
      */
@@ -368,7 +377,10 @@
         'mensagemConsultaNegada': opts['mensagemConsultaNegada'],
         'flagPermiteNovaViaCartao': opts['flagPermiteNovaViaCartao'],
         'flagFazTransferencia': opts['flagFazTransferencia'],
-        'flagRecebeTransferencia': opts['flagRecebeTransferencia']
+        'flagRecebeTransferencia': opts['flagRecebeTransferencia'],
+        'flagPermiteBloqueio': opts['flagPermiteBloqueio'],
+        'flagPermiteDesbloqueio': opts['flagPermiteDesbloqueio'],
+        'flagCancelaConta': opts['flagCancelaConta']
       };
       var headerParams = {
       };

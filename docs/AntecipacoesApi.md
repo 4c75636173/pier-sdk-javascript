@@ -1,13 +1,113 @@
-# Pier.CompraApi
+# Pier.AntecipacoesApi
 
 All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**efetivarAntecipacaoUsingPOST**](CompraApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET6**](CompraApi.md#listarUsingGET6) | **GET** /api/compras | Listar compras
-[**simularAntecipacaoUsingGET**](CompraApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
+[**configurarTaxaAntecipacaoUsingPOST**](AntecipacoesApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**consultarTaxaAntecipacaoUsingGET**](AntecipacoesApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**efetivarAntecipacaoUsingPOST**](AntecipacoesApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+[**listarUsingGET6**](AntecipacoesApi.md#listarUsingGET6) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**simularAntecipacaoUsingGET**](AntecipacoesApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
+
+<a name="configurarTaxaAntecipacaoUsingPOST"></a>
+# **configurarTaxaAntecipacaoUsingPOST**
+> ParametroProdutoResponse configurarTaxaAntecipacaoUsingPOST(id, taxaAntecipacaoRequest)
+
+Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+
+Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.AntecipacoesApi()
+
+var id = 789; // {Integer} Id Produto
+
+var taxaAntecipacaoRequest = new Pier.TaxaAntecipacaoRequest(); // {TaxaAntecipacaoRequest} taxaAntecipacaoRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.configurarTaxaAntecipacaoUsingPOST(id, taxaAntecipacaoRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Produto | 
+ **taxaAntecipacaoRequest** | [**TaxaAntecipacaoRequest**](TaxaAntecipacaoRequest.md)| taxaAntecipacaoRequest | 
+
+### Return type
+
+[**ParametroProdutoResponse**](ParametroProdutoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarTaxaAntecipacaoUsingGET"></a>
+# **consultarTaxaAntecipacaoUsingGET**
+> ParametroProdutoResponse consultarTaxaAntecipacaoUsingGET(id, tipoTransacao)
+
+Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+
+Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.AntecipacoesApi()
+
+var id = 789; // {Integer} Id Produto
+
+var tipoTransacao = "tipoTransacao_example"; // {String} Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarTaxaAntecipacaoUsingGET(id, tipoTransacao, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Produto | 
+ **tipoTransacao** | **String**| Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US) | 
+
+### Return type
+
+[**ParametroProdutoResponse**](ParametroProdutoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="efetivarAntecipacaoUsingPOST"></a>
 # **efetivarAntecipacaoUsingPOST**
@@ -15,13 +115,13 @@ Method | HTTP request | Description
 
 Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 
-Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
+M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
 
 ### Example
 ```javascript
 var Pier = require('Pier');
 
-var apiInstance = new Pier.CompraApi()
+var apiInstance = new Pier.AntecipacoesApi()
 
 var idConta = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
 
@@ -65,15 +165,15 @@ No authorization required
 # **listarUsingGET6**
 > PageCompraResponse listarUsingGET6(idConta, opts)
 
-Listar compras
+Listar compras com parcelas antecip\u00C3\u00A1veis
 
-Lista as compras de uma conta.
+Lista as compras antecip\u00C3\u00A1veis de uma conta.
 
 ### Example
 ```javascript
 var Pier = require('Pier');
 
-var apiInstance = new Pier.CompraApi()
+var apiInstance = new Pier.AntecipacoesApi()
 
 var idConta = 789; // {Integer} C\u00C3\u00B3digo identificador da conta da Compra.
 
@@ -127,13 +227,13 @@ No authorization required
 
 Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
-Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
 
 ### Example
 ```javascript
 var Pier = require('Pier');
 
-var apiInstance = new Pier.CompraApi()
+var apiInstance = new Pier.AntecipacoesApi()
 
 var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
 

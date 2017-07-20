@@ -18,12 +18,12 @@
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.16.6
+   * @version 2.24.0
    */
 
   /**
    * Constructs a new <code>RiscoFraudeDetalhadoResponse</code>.
-   * Par\u00C3\u00A2metros de resposta de risco de fraude detalhado
+   * Objeto de resposta de Risco de Fraude Detalhado
    * @alias module:model/RiscoFraudeDetalhadoResponse
    * @class
    */
@@ -156,13 +156,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
    * @member {Integer} idTipoResolucao
    */
   exports.prototype['idTipoResolucao'] = undefined;
@@ -174,31 +174,31 @@
   exports.prototype['descricaoTipoResolucao'] = undefined;
 
   /**
-   * Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+   * Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
    * @member {Boolean} flagAltoRisco
    */
   exports.prototype['flagAltoRisco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
@@ -234,7 +234,7 @@
   exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
    * @member {Number} valorDestino
    */
   exports.prototype['valorDestino'] = undefined;
@@ -312,7 +312,7 @@
   exports.prototype['email'] = undefined;
 
   /**
-   * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+   * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
    * @member {Array.<module:model/TelefoneResponse>} tefefones
    */
   exports.prototype['tefefones'] = undefined;

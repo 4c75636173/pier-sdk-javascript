@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET26**](WebhooksApi.md#consultarUsingGET26) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultarUsingGET27**](WebhooksApi.md#consultarUsingGET27) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET31**](WebhooksApi.md#listarUsingGET31) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST14**](WebhooksApi.md#salvarUsingPOST14) | **POST** /api/webhooks | Salvar Webhook
+[**salvarUsingPOST16**](WebhooksApi.md#salvarUsingPOST16) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT10"></a>
@@ -62,9 +62,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET26"></a>
-# **consultarUsingGET26**
-> WebHookResponse consultarUsingGET26(id)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> WebHookResponse consultarUsingGET27(id)
 
 Consultar Webhook
 
@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(id, callback);
+api.consultarUsingGET27(id, callback);
 ```
 
 ### Parameters
@@ -165,9 +165,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST14"></a>
-# **salvarUsingPOST14**
-> WebHookResponse salvarUsingPOST14(tipoEvento, url)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> WebHookResponse salvarUsingPOST16(tipoEvento, url)
 
 Salvar Webhook
 
@@ -191,7 +191,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST14(tipoEvento, url, callback);
+api.salvarUsingPOST16(tipoEvento, url, callback);
 ```
 
 ### Parameters
