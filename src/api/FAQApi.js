@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -96,8 +96,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT2 operation.
-     * @callback module:api/FAQApi~alterarUsingPUT2Callback
+     * Callback function to receive the result of the alterarUsingPUT3 operation.
+     * @callback module:api/FAQApi~alterarUsingPUT3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -114,26 +114,26 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~alterarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~alterarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.alterarUsingPUT2 = function(id, pergunta, resposta, opts, callback) {
+    this.alterarUsingPUT3 = function(id, pergunta, resposta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT3";
       }
 
       // verify the required parameter 'pergunta' is set
       if (pergunta == undefined || pergunta == null) {
-        throw "Missing the required parameter 'pergunta' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'pergunta' when calling alterarUsingPUT3";
       }
 
       // verify the required parameter 'resposta' is set
       if (resposta == undefined || resposta == null) {
-        throw "Missing the required parameter 'resposta' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'resposta' when calling alterarUsingPUT3";
       }
 
 
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/FAQApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/FAQApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -223,6 +223,7 @@
      * Lista FAQs
      * Lista todas as FAQs
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -232,10 +233,10 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqResponse}
      */
-    this.listarUsingGET11 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -243,6 +244,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idFaq': opts['idFaq'],

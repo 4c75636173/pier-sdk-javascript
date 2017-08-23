@@ -18,7 +18,7 @@
   /**
    * The AutorizacaoOnUsRequest model module.
    * @module model/AutorizacaoOnUsRequest
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -29,7 +29,6 @@
    * @param nsuOrigem
    * @param numeroParcelas
    * @param codigoProcessamento
-   * @param codigoSegurancaCartao
    * @param valorTransacao
    * @param numeroRealCartao
    * @param dataValidadeCartao
@@ -37,12 +36,12 @@
    * @param dataHoraTerminal
    * @param terminalRequisitante
    */
-  var exports = function(nsuOrigem, numeroParcelas, codigoProcessamento, codigoSegurancaCartao, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
+  var exports = function(nsuOrigem, numeroParcelas, codigoProcessamento, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
 
     this['nsuOrigem'] = nsuOrigem;
     this['numeroParcelas'] = numeroParcelas;
     this['codigoProcessamento'] = codigoProcessamento;
-    this['codigoSegurancaCartao'] = codigoSegurancaCartao;
+
     this['valorTransacao'] = valorTransacao;
     this['numeroRealCartao'] = numeroRealCartao;
     this['dataValidadeCartao'] = dataValidadeCartao;

@@ -18,7 +18,7 @@
   /**
    * The SocioAprovadoResponse model module.
    * @module model/SocioAprovadoResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

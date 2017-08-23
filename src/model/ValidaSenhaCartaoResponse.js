@@ -18,7 +18,7 @@
   /**
    * The ValidaSenhaCartaoResponse model module.
    * @module model/ValidaSenhaCartaoResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

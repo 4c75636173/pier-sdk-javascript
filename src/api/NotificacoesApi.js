@@ -18,7 +18,7 @@
   /**
    * Notificacoes service.
    * @module api/NotificacoesApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -346,6 +346,7 @@
      * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
      * Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/NotificacoesApi~listarConfiguracaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -359,6 +360,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -391,6 +393,7 @@
      * Listar Push
      * Esse recurso permite listar os Pushes do emissor
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -409,6 +412,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'dataEnvio': opts['dataEnvio'],
@@ -446,6 +450,7 @@
      * Listar SMS
      * Esse recurso permite listar os SMS do emissor
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -465,6 +470,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'dataInclusao': opts['dataInclusao'],
@@ -503,6 +509,7 @@
      * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
      * Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/NotificacoesApi~listarTemplateNotificacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -516,6 +523,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };

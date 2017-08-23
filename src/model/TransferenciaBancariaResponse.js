@@ -18,7 +18,7 @@
   /**
    * The TransferenciaBancariaResponse model module.
    * @module model/TransferenciaBancariaResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -145,6 +146,9 @@
       }
       if (data.hasOwnProperty('numeroEstabelecimento')) {
         obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'Integer');
+      }
+      if (data.hasOwnProperty('valorTaxaSaque')) {
+        obj['valorTaxaSaque'] = ApiClient.convertToType(data['valorTaxaSaque'], 'Number');
       }
     }
     return obj;
@@ -305,6 +309,12 @@
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
+
+  /**
+   * Valor da taxa saque.
+   * @member {Number} valorTaxaSaque
+   */
+  exports.prototype['valorTaxaSaque'] = undefined;
 
 
 

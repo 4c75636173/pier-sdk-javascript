@@ -18,7 +18,7 @@
   /**
    * The DesfazimentoTransacaoOnUsRequest model module.
    * @module model/DesfazimentoTransacaoOnUsRequest
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

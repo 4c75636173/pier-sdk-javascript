@@ -18,7 +18,7 @@
   /**
    * PermissaoPaises service.
    * @module api/PermissaoPaisesApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -129,6 +129,7 @@
      * Lista os pa\u00C3\u00ADses
      * Este recurso permite listar os pa\u00C3\u00ADses.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
@@ -147,6 +148,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'codigo': opts['codigo'],

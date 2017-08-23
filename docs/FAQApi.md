@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
-[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**alterarUsingPUT3**](FAQApi.md#alterarUsingPUT3) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultarUsingGET8**](FAQApi.md#consultarUsingGET8) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET11**](FAQApi.md#listarUsingGET11) | **GET** /api/faqs | Lista FAQs
+[**listarUsingGET12**](FAQApi.md#listarUsingGET12) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
@@ -69,9 +69,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT2"></a>
-# **alterarUsingPUT2**
-> FaqResponse alterarUsingPUT2(id, pergunta, resposta, opts)
+<a name="alterarUsingPUT3"></a>
+# **alterarUsingPUT3**
+> FaqResponse alterarUsingPUT3(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT2(id, pergunta, resposta, opts, callback);
+api.alterarUsingPUT3(id, pergunta, resposta, opts, callback);
 ```
 
 ### Parameters
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageFaqResponse listarUsingGET11(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageFaqResponse listarUsingGET12(opts)
 
 Lista FAQs
 
@@ -192,6 +192,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.FAQApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idFaq': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -210,13 +211,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idFaq** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). | [optional] 

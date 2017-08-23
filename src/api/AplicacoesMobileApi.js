@@ -18,7 +18,7 @@
   /**
    * AplicacoesMobile service.
    * @module api/AplicacoesMobileApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET operation.
-     * @callback module:api/AplicacoesMobileApi~listarUsingGETCallback
+     * Callback function to receive the result of the listarUsingGET1 operation.
+     * @callback module:api/AplicacoesMobileApi~listarUsingGET1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -96,14 +96,15 @@
      * Lista os aplicacoes mobile cadastradas
      * Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.id Identificador da Aplicacao Mobile
      * @param {Integer} opts.idPlataformaMobile Identificador da Plataforma Mobile
-     * @param {module:api/AplicacoesMobileApi~listarUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AplicacoesMobileApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAplicacaoMobileResponse}
      */
-    this.listarUsingGET = function(opts, callback) {
+    this.listarUsingGET1 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -111,6 +112,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],

@@ -18,7 +18,7 @@
   /**
    * Estabelecimentos service.
    * @module api/EstabelecimentosApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET10 operation.
-     * @callback module:api/EstabelecimentosApi~listarUsingGET10Callback
+     * Callback function to receive the result of the listarUsingGET11 operation.
+     * @callback module:api/EstabelecimentosApi~listarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,6 +136,7 @@
      * Lista Estabelecimentos
      * Lista todas os Estabelecimentos
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -157,10 +158,10 @@
      * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
      * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
      * @param {Integer} opts.inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-     * @param {module:api/EstabelecimentosApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentosApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET10 = function(opts, callback) {
+    this.listarUsingGET11 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -168,6 +169,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -208,8 +210,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET23 operation.
-     * @callback module:api/EstabelecimentosApi~listarUsingGET23Callback
+     * Callback function to receive the result of the listarUsingGET25 operation.
+     * @callback module:api/EstabelecimentosApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -219,16 +221,17 @@
      * Lista os Terminais cadastrados no Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
      * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
      * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
      * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentosApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentosApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET23 = function(opts, callback) {
+    this.listarUsingGET25 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -236,6 +239,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],

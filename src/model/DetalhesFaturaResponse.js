@@ -18,7 +18,7 @@
   /**
    * The DetalhesFaturaResponse model module.
    * @module model/DetalhesFaturaResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

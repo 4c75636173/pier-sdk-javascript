@@ -18,7 +18,7 @@
   /**
    * The NotificacaoPushResponse model module.
    * @module model/NotificacaoPushResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -175,10 +175,10 @@
     RISCO_FRAUDE: "RISCO_FRAUDE",
     
     /**
-     * value: TOKEN_SMS
+     * value: CODIGO_SEGURANCA
      * @const
      */
-    TOKEN_SMS: "TOKEN_SMS",
+    CODIGO_SEGURANCA: "CODIGO_SEGURANCA",
     
     /**
      * value: OUTROS

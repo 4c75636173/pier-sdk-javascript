@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarAnuidadeUsingPOST**](ServicosContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
 [**ativarEnvioFaturaEmailUsingPOST**](ServicosContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
 [**desativarEnvioFaturaEmailUsingPOST**](ServicosContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
-[**listarAnuidadesUsingGET**](ServicosContaApi.md#listarAnuidadesUsingGET) | **GET** /api/api/anuidades | Listar Anuidades
+[**listarAnuidadesUsingGET**](ServicosContaApi.md#listarAnuidadesUsingGET) | **GET** /api/anuidades | Listar Anuidades
 [**listarOperadorasTelefonicasUsingGET**](ServicosContaApi.md#listarOperadorasTelefonicasUsingGET) | **GET** /api/operadoras-telefonicas | Listar Operadoras
 
 
@@ -30,6 +30,7 @@ var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00
 var idAnuidade = 789; // {Integer} Identificador da anuidade
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'DDD': "DDD_example", // {String} DDD do celular
@@ -54,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
  **idAnuidade** | **Integer**| Identificador da anuidade | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **DDD** | **String**| DDD do celular | [optional] 
@@ -181,6 +183,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.ServicosContaApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -199,6 +202,7 @@ api.listarAnuidadesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -230,6 +234,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.ServicosContaApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -248,6 +253,7 @@ api.listarOperadorasTelefonicasUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 

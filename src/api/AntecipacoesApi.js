@@ -18,7 +18,7 @@
   /**
    * Antecipacoes service.
    * @module api/AntecipacoesApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -198,8 +198,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/AntecipacoesApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/AntecipacoesApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCompraResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -210,28 +210,30 @@
      * Lista as compras antecip\u00C3\u00A1veis de uma conta.
      * @param {Integer} idConta C\u00C3\u00B3digo identificador da conta da Compra.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idCompra C\u00C3\u00B3digo identificador da Compra.
      * @param {Boolean} opts.parcelada Indica se a compra \u00C3\u00A9 parcelada.
      * @param {Boolean} opts.juros Indica se a compra \u00C3\u00A9 com ou sem juros.
      * @param {module:model/String} opts.tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-     * @param {module:api/AntecipacoesApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AntecipacoesApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCompraResponse}
      */
-    this.listarUsingGET6 = function(idConta, opts, callback) {
+    this.listarUsingGET7 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET6";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET7";
       }
 
 
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idCompra': opts['idCompra'],

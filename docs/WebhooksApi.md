@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT10**](WebhooksApi.md#alterarUsingPUT10) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**alterarUsingPUT11**](WebhooksApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET27**](WebhooksApi.md#consultarUsingGET27) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET31**](WebhooksApi.md#listarUsingGET31) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST16**](WebhooksApi.md#salvarUsingPOST16) | **POST** /api/webhooks | Salvar Webhook
+[**listarUsingGET34**](WebhooksApi.md#listarUsingGET34) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST17**](WebhooksApi.md#salvarUsingPOST17) | **POST** /api/webhooks | Salvar Webhook
 
 
-<a name="alterarUsingPUT10"></a>
-# **alterarUsingPUT10**
-> WebHookResponse alterarUsingPUT10(id, tipoEvento, url)
+<a name="alterarUsingPUT11"></a>
+# **alterarUsingPUT11**
+> WebHookResponse alterarUsingPUT11(id, tipoEvento, url, opts)
 
 Alterar Webhook
 
@@ -30,6 +30,9 @@ var tipoEvento = "tipoEvento_example"; // {String} TipoEvento a ser chamado pelo
 
 var url = "url_example"; // {String} URL que a ser consumida pelo WebHook
 
+var opts = { 
+  'status': "status_example" // {String} Status
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -38,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT10(id, tipoEvento, url, callback);
+api.alterarUsingPUT11(id, tipoEvento, url, opts, callback);
 ```
 
 ### Parameters
@@ -48,6 +51,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
  **tipoEvento** | **String**| TipoEvento a ser chamado pelo WebHook | 
  **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **status** | **String**| Status | [optional] 
 
 ### Return type
 
@@ -108,9 +112,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET31"></a>
-# **listarUsingGET31**
-> PageWebHookResponse listarUsingGET31(opts)
+<a name="listarUsingGET34"></a>
+# **listarUsingGET34**
+> PageWebHookResponse listarUsingGET34(opts)
 
 Lista os Webhooks
 
@@ -123,6 +127,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.WebhooksApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} Id do WebHook
@@ -138,13 +143,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET31(opts, callback);
+api.listarUsingGET34(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id do WebHook | [optional] 
@@ -165,9 +171,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> WebHookResponse salvarUsingPOST16(tipoEvento, url)
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> WebHookResponse salvarUsingPOST17(tipoEvento, url)
 
 Salvar Webhook
 
@@ -191,7 +197,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(tipoEvento, url, callback);
+api.salvarUsingPOST17(tipoEvento, url, callback);
 ```
 
 ### Parameters

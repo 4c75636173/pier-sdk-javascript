@@ -18,7 +18,7 @@
   /**
    * The TelefoneAdicionalPersist model module.
    * @module model/TelefoneAdicionalPersist
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ProdutoDetalhesResponse', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/BancoResponse', '../model/TipoEnderecoResponse', '../model/TipoTelefoneResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PageAtendimentoClienteResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PageBancoResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse'], factory);
+    define(['../ApiClient', '../model/ProdutoDetalhesResponse', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/BancoResponse', '../model/TipoEnderecoResponse', '../model/TipoTelefoneResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PageAtendimentoClienteResponse', '../model/PagePromotorResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageBancoResponse', '../model/PageControleVencimentoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ProdutoDetalhesResponse'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/BancoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoTelefoneResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PageBancoResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ProdutoDetalhesResponse'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/BancoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoTelefoneResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PagePromotorResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageBancoResponse'), require('../model/PageControleVencimentoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.ProdutoDetalhesResponse, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.BancoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoTelefoneResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PageBancoResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse);
+    root.Pier.CadastrosGeraisApi = factory(root.Pier.ApiClient, root.Pier.ProdutoDetalhesResponse, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.BancoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoTelefoneResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PagePromotorResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageBancoResponse, root.Pier.PageControleVencimentoResponse);
   }
-}(this, function(ApiClient, ProdutoDetalhesResponse, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, BancoResponse, TipoEnderecoResponse, TipoTelefoneResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PageAtendimentoClienteResponse, PagePortadorResponse, PageProdutoResponse, PageBancoResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse) {
+}(this, function(ApiClient, ProdutoDetalhesResponse, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, BancoResponse, TipoEnderecoResponse, TipoTelefoneResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PagePortadorResponse, PageProdutoResponse, PageAtendimentoClienteResponse, PagePromotorResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageBancoResponse, PageControleVencimentoResponse) {
   'use strict';
 
   /**
    * CadastrosGerais service.
    * @module api/CadastrosGeraisApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -333,6 +333,7 @@
      * Lista os tipos de ajustes do emissor 
      * Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de ajuste.
@@ -348,6 +349,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -382,6 +384,7 @@
      * Lista os tipos de boletos do emissor 
      * Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de boleto.
@@ -398,6 +401,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -618,6 +622,7 @@
      * Permite listar as contas de um pessoa a partir do seu numero na receita federal.
      * @param {String} numeroReceitaFederal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarContasPorPessoaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -637,6 +642,7 @@
       };
       var queryParams = {
         'numeroReceitaFederal': numeroReceitaFederal,
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -669,6 +675,7 @@
      * Lista os Estados C\u00C3\u00ADvis
      * Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarEstadosCivisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -682,6 +689,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -697,6 +705,53 @@
 
       return this.apiClient.callApi(
         '/api/estados-civis', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarFantasiasBasicasUsingGET operation.
+     * @callback module:api/CadastrosGeraisApi~listarFantasiasBasicasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageFantasiaBasicaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar Fantasias B\u00C3\u00A1sicas
+     * Lista as fantasia b\u00C3\u00A1sicas.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/CadastrosGeraisApi~listarFantasiasBasicasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageFantasiaBasicaResponse}
+     */
+    this.listarFantasiasBasicasUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageFantasiaBasicaResponse;
+
+      return this.apiClient.callApi(
+        '/api/fantasias-basicas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -760,6 +815,7 @@
      * Lista nacionalidades
      * Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarNacionalidadesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -773,6 +829,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -805,6 +862,7 @@
      * Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
      * Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarNaturezasOcupacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -818,6 +876,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -850,6 +909,7 @@
      * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
      * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id da origem comercial
@@ -868,6 +928,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -905,6 +966,7 @@
      * Lista os Parentescos
      * Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarParentescosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -918,6 +980,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -950,6 +1013,7 @@
      * Lista profiss\u00C3\u00B5es
      * Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/CadastrosGeraisApi~listarProfissoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -963,6 +1027,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -984,61 +1049,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET1 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET1Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageAtendimentoClienteResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista todos os atendimentos
-     * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-     * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-     * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-     * @param {String} opts.dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageAtendimentoClienteResponse}
-     */
-    this.listarUsingGET1 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'idTipoAtendimento': opts['idTipoAtendimento'],
-        'idConta': opts['idConta'],
-        'nomeAtendente': opts['nomeAtendente'],
-        'dataAtendimento': opts['dataAtendimento']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageAtendimentoClienteResponse;
-
-      return this.apiClient.callApi(
-        '/api/atendimento-clientes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET18 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1048,6 +1060,7 @@
      * Lista os Portadores existentes
      * Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
@@ -1060,10 +1073,10 @@
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {String} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {String} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortadorResponse}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET18 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1071,6 +1084,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idConta': opts['idConta'],
@@ -1102,8 +1116,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageProdutoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1113,15 +1127,16 @@
      * Lista os Produtos do Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
      * @param {Integer} opts.status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
      * @param {Integer} opts.idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageProdutoResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1129,6 +1144,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'nome': opts['nome'],
@@ -1156,18 +1172,23 @@
      * Callback function to receive the result of the listarUsingGET2 operation.
      * @callback module:api/CadastrosGeraisApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageBancoResponse} data The data returned by the service call.
+     * @param {module:model/PageAtendimentoClienteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista os Bancos cadastrados para o Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+     * Lista todos os atendimentos
+     * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+     * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+     * @param {String} opts.nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+     * @param {String} opts.dataAtendimento Apresenta a data em que o Atendimento foi realizado.
      * @param {module:api/CadastrosGeraisApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageBancoResponse}
+     * data is of type: {module:model/PageAtendimentoClienteResponse}
      */
     this.listarUsingGET2 = function(opts, callback) {
       opts = opts || {};
@@ -1177,8 +1198,13 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'idTipoAtendimento': opts['idTipoAtendimento'],
+        'idConta': opts['idConta'],
+        'nomeAtendente': opts['nomeAtendente'],
+        'dataAtendimento': opts['dataAtendimento']
       };
       var headerParams = {
       };
@@ -1188,18 +1214,75 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageBancoResponse;
+      var returnType = PageAtendimentoClienteResponse;
 
       return this.apiClient.callApi(
-        '/api/bancos', 'GET',
+        '/api/atendimento-clientes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET24 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET24Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET20Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PagePromotorResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista promotores cadastrados na base do emissor
+     * Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+     * @param {String} opts.nome Nome do Promotor
+     * @param {String} opts.dataCadastro Data da Inclus\u00C3\u00A3o.
+     * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+     * @param {Integer} opts.idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PagePromotorResponse}
+     */
+    this.listarUsingGET20 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome'],
+        'dataCadastro': opts['dataCadastro'],
+        'idEstabelecimento': opts['idEstabelecimento'],
+        'idUsuario': opts['idUsuario']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PagePromotorResponse;
+
+      return this.apiClient.callApi(
+        '/api/promotores', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET26 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1209,14 +1292,15 @@
      * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
      * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
      * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoEnderecoResponse}
      */
-    this.listarUsingGET24 = function(opts, callback) {
+    this.listarUsingGET26 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1224,6 +1308,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -1247,8 +1332,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET26 operation.
-     * @callback module:api/CadastrosGeraisApi~listarUsingGET26Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1258,14 +1343,15 @@
      * Lista os Tipos de Telefones
      * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
      * @param {String} opts.nome Nome do Tipo do Telefone
-     * @param {module:api/CadastrosGeraisApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefoneResponse}
      */
-    this.listarUsingGET26 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1273,6 +1359,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
@@ -1290,6 +1377,102 @@
 
       return this.apiClient.callApi(
         '/api/tipos-telefones', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET3 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET3Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageBancoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os Bancos cadastrados para o Emissor
+     * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageBancoResponse}
+     */
+    this.listarUsingGET3 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageBancoResponse;
+
+      return this.apiClient.callApi(
+        '/api/bancos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET33 operation.
+     * @callback module:api/CadastrosGeraisApi~listarUsingGET33Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageControleVencimentoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar Vencimentos
+     * Este recurso permite que sejam listados os Vencimentos do emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {String} opts.dataVencimento Indica a data de vencimento das faturas
+     * @param {module:api/CadastrosGeraisApi~listarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageControleVencimentoResponse}
+     */
+    this.listarUsingGET33 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'dataVencimento': opts['dataVencimento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageControleVencimentoResponse;
+
+      return this.apiClient.callApi(
+        '/api/vencimentos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](AntecipacoesApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacoesApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacoesApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET6**](AntecipacoesApi.md#listarUsingGET6) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET7**](AntecipacoesApi.md#listarUsingGET7) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacoesApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -161,9 +161,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PageCompraResponse listarUsingGET6(idConta, opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PageCompraResponse listarUsingGET7(idConta, opts)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -178,6 +178,7 @@ var apiInstance = new Pier.AntecipacoesApi()
 var idConta = 789; // {Integer} C\u00C3\u00B3digo identificador da conta da Compra.
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idCompra': 789, // {Integer} C\u00C3\u00B3digo identificador da Compra.
@@ -193,7 +194,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(idConta, opts, callback);
+api.listarUsingGET7(idConta, opts, callback);
 ```
 
 ### Parameters
@@ -201,6 +202,7 @@ api.listarUsingGET6(idConta, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idConta** | **Integer**| C\u00C3\u00B3digo identificador da conta da Compra. | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idCompra** | **Integer**| C\u00C3\u00B3digo identificador da Compra. | [optional] 

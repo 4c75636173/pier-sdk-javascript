@@ -18,7 +18,7 @@
   /**
    * The ArquivoPersist model module.
    * @module model/ArquivoPersist
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -32,8 +32,11 @@
    * @param idProduto
    * @param diaVencimento
    * @param enderecos
+   * @param limiteGlobal
+   * @param limiteMaximo
+   * @param limiteParcelas
    */
-  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos) {
+  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos, limiteGlobal, limiteMaximo, limiteParcelas) {
 
 
     this['nome'] = nome;
@@ -61,7 +64,11 @@
 
 
 
+
     this['enderecos'] = enderecos;
+    this['limiteGlobal'] = limiteGlobal;
+    this['limiteMaximo'] = limiteMaximo;
+    this['limiteParcelas'] = limiteParcelas;
   };
 
   /**
@@ -150,11 +157,23 @@
       if (data.hasOwnProperty('canalEntrada')) {
         obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
       }
+      if (data.hasOwnProperty('valorPontuacao')) {
+        obj['valorPontuacao'] = ApiClient.convertToType(data['valorPontuacao'], 'Integer');
+      }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaResponse]);
       }
       if (data.hasOwnProperty('enderecos')) {
         obj['enderecos'] = ApiClient.convertToType(data['enderecos'], [EnderecoAprovadoResponse]);
+      }
+      if (data.hasOwnProperty('limiteGlobal')) {
+        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteMaximo')) {
+        obj['limiteMaximo'] = ApiClient.convertToType(data['limiteMaximo'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteParcelas')) {
+        obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
       }
     }
     return obj;
@@ -312,6 +331,12 @@
   exports.prototype['canalEntrada'] = undefined;
 
   /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   * @member {Integer} valorPontuacao
+   */
+  exports.prototype['valorPontuacao'] = undefined;
+
+  /**
    * Apresenta os telefones da empresa
    * @member {Array.<module:model/TelefonePessoaAprovadaResponse>} telefones
    */
@@ -322,6 +347,24 @@
    * @member {Array.<module:model/EnderecoAprovadoResponse>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
+
+  /**
+   * Valor do Limite Global
+   * @member {Number} limiteGlobal
+   */
+  exports.prototype['limiteGlobal'] = undefined;
+
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   * @member {Number} limiteMaximo
+   */
+  exports.prototype['limiteMaximo'] = undefined;
+
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   * @member {Number} limiteParcelas
+   */
+  exports.prototype['limiteParcelas'] = undefined;
 
 
 

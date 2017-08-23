@@ -18,7 +18,7 @@
   /**
    * The TransferenciaBancariaPersist model module.
    * @module model/TransferenciaBancariaPersist
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -26,24 +26,19 @@
    * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
    * @alias module:model/TransferenciaBancariaPersist
    * @class
-   * @param dataCompra
-   * @param proximoVencimentoPadrao
-   * @param proximoVencimentoReal
    * @param valorCompra
-   * @param nomeFavorecido
+   * @param valor
    * @param documentoFavorecido
    * @param banco
    * @param numeroAgencia
    * @param numeroConta
    * @param flagContaPoupanca
+   * @param nomeFavorecido
    */
-  var exports = function(dataCompra, proximoVencimentoPadrao, proximoVencimentoReal, valorCompra, nomeFavorecido, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca) {
+  var exports = function(valorCompra, valor, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca, nomeFavorecido) {
 
-    this['dataCompra'] = dataCompra;
-    this['proximoVencimentoPadrao'] = proximoVencimentoPadrao;
-    this['proximoVencimentoReal'] = proximoVencimentoReal;
     this['valorCompra'] = valorCompra;
-    this['nomeFavorecido'] = nomeFavorecido;
+    this['valor'] = valor;
     this['documentoFavorecido'] = documentoFavorecido;
     this['banco'] = banco;
     this['numeroAgencia'] = numeroAgencia;
@@ -51,6 +46,7 @@
     this['numeroConta'] = numeroConta;
 
     this['flagContaPoupanca'] = flagContaPoupanca;
+    this['nomeFavorecido'] = nomeFavorecido;
   };
 
   /**
@@ -64,20 +60,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('dataCompra')) {
-        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], 'String');
-      }
-      if (data.hasOwnProperty('proximoVencimentoPadrao')) {
-        obj['proximoVencimentoPadrao'] = ApiClient.convertToType(data['proximoVencimentoPadrao'], 'String');
-      }
-      if (data.hasOwnProperty('proximoVencimentoReal')) {
-        obj['proximoVencimentoReal'] = ApiClient.convertToType(data['proximoVencimentoReal'], 'String');
-      }
       if (data.hasOwnProperty('valorCompra')) {
         obj['valorCompra'] = ApiClient.convertToType(data['valorCompra'], 'Number');
       }
-      if (data.hasOwnProperty('nomeFavorecido')) {
-        obj['nomeFavorecido'] = ApiClient.convertToType(data['nomeFavorecido'], 'String');
+      if (data.hasOwnProperty('valor')) {
+        obj['valor'] = ApiClient.convertToType(data['valor'], 'Number');
       }
       if (data.hasOwnProperty('documentoFavorecido')) {
         obj['documentoFavorecido'] = ApiClient.convertToType(data['documentoFavorecido'], 'String');
@@ -100,28 +87,13 @@
       if (data.hasOwnProperty('flagContaPoupanca')) {
         obj['flagContaPoupanca'] = ApiClient.convertToType(data['flagContaPoupanca'], 'Integer');
       }
+      if (data.hasOwnProperty('nomeFavorecido')) {
+        obj['nomeFavorecido'] = ApiClient.convertToType(data['nomeFavorecido'], 'String');
+      }
     }
     return obj;
   }
 
-
-  /**
-   * Data da transfer\u00C3\u00AAncia
-   * @member {String} dataCompra
-   */
-  exports.prototype['dataCompra'] = undefined;
-
-  /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura
-   * @member {String} proximoVencimentoPadrao
-   */
-  exports.prototype['proximoVencimentoPadrao'] = undefined;
-
-  /**
-   * Data do vencimento real da fatura
-   * @member {String} proximoVencimentoReal
-   */
-  exports.prototype['proximoVencimentoReal'] = undefined;
 
   /**
    * Valor da transfer\u00C3\u00AAncia
@@ -130,10 +102,10 @@
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-   * @member {String} nomeFavorecido
+   * Valor da transfer\u00C3\u00AAncia
+   * @member {Number} valor
    */
-  exports.prototype['nomeFavorecido'] = undefined;
+  exports.prototype['valor'] = undefined;
 
   /**
    * N\u00C3\u00BAmero do CPF ou CNPJ.
@@ -176,6 +148,12 @@
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
+
+  /**
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * @member {String} nomeFavorecido
+   */
+  exports.prototype['nomeFavorecido'] = undefined;
 
 
 

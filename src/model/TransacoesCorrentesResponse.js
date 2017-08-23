@@ -18,7 +18,7 @@
   /**
    * The TransacoesCorrentesResponse model module.
    * @module model/TransacoesCorrentesResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -106,8 +106,8 @@
       if (data.hasOwnProperty('nomePortador')) {
         obj['nomePortador'] = ApiClient.convertToType(data['nomePortador'], 'String');
       }
-      if (data.hasOwnProperty('dataTransacaoUTC')) {
-        obj['dataTransacaoUTC'] = ApiClient.convertToType(data['dataTransacaoUTC'], 'String');
+      if (data.hasOwnProperty('dataTransacao')) {
+        obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'String');
       }
       if (data.hasOwnProperty('dataFaturamento')) {
         obj['dataFaturamento'] = ApiClient.convertToType(data['dataFaturamento'], 'String');
@@ -250,10 +250,10 @@
   exports.prototype['nomePortador'] = undefined;
 
   /**
-   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
-   * @member {String} dataTransacaoUTC
+   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+   * @member {String} dataTransacao
    */
-  exports.prototype['dataTransacaoUTC'] = undefined;
+  exports.prototype['dataTransacao'] = undefined;
 
   /**
    * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.

@@ -18,18 +18,21 @@ Method | HTTP request | Description
 [**desativarUsoExteriorUsingPOST**](CadastrosGeraisApi.md#desativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listarContasPorPessoaUsingGET**](CadastrosGeraisApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listarEstadosCivisUsingGET**](CadastrosGeraisApi.md#listarEstadosCivisUsingGET) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
+[**listarFantasiasBasicasUsingGET**](CadastrosGeraisApi.md#listarFantasiasBasicasUsingGET) | **GET** /api/fantasias-basicas | Listar Fantasias B\u00C3\u00A1sicas
 [**listarHistoricoTelefonesUsingGET**](CadastrosGeraisApi.md#listarHistoricoTelefonesUsingGET) | **GET** /api/pessoas/{id}/historico-telefones | Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
 [**listarNacionalidadesUsingGET**](CadastrosGeraisApi.md#listarNacionalidadesUsingGET) | **GET** /api/nacionalidades | Lista nacionalidades
 [**listarNaturezasOcupacoesUsingGET**](CadastrosGeraisApi.md#listarNaturezasOcupacoesUsingGET) | **GET** /api/ocupacoes | Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
 [**listarOrigensComerciaisUsingGET**](CadastrosGeraisApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarParentescosUsingGET**](CadastrosGeraisApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | Lista os Parentescos
 [**listarProfissoesUsingGET**](CadastrosGeraisApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
-[**listarUsingGET1**](CadastrosGeraisApi.md#listarUsingGET1) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET17**](CadastrosGeraisApi.md#listarUsingGET17) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET18**](CadastrosGeraisApi.md#listarUsingGET18) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET2**](CadastrosGeraisApi.md#listarUsingGET2) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET24**](CadastrosGeraisApi.md#listarUsingGET24) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET26**](CadastrosGeraisApi.md#listarUsingGET26) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET18**](CadastrosGeraisApi.md#listarUsingGET18) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET19**](CadastrosGeraisApi.md#listarUsingGET19) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET2**](CadastrosGeraisApi.md#listarUsingGET2) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET20**](CadastrosGeraisApi.md#listarUsingGET20) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listarUsingGET26**](CadastrosGeraisApi.md#listarUsingGET26) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET28**](CadastrosGeraisApi.md#listarUsingGET28) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET3**](CadastrosGeraisApi.md#listarUsingGET3) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
+[**listarUsingGET33**](CadastrosGeraisApi.md#listarUsingGET33) | **GET** /api/vencimentos | Listar Vencimentos
 [**salvarUsingPOST2**](CadastrosGeraisApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
@@ -330,6 +333,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo de ajuste.
@@ -350,6 +354,7 @@ api.consultarUsingGET18(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | [optional] 
@@ -383,6 +388,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo identificador do tipo de boleto.
@@ -404,6 +410,7 @@ api.consultarUsingGET19(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo identificador do tipo de boleto. | [optional] 
@@ -624,6 +631,7 @@ var apiInstance = new Pier.CadastrosGeraisApi()
 var numeroReceitaFederal = "numeroReceitaFederal_example"; // {String} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -643,6 +651,7 @@ api.listarContasPorPessoaUsingGET(numeroReceitaFederal, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **numeroReceitaFederal** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ) | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -674,6 +683,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -692,12 +702,64 @@ api.listarEstadosCivisUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
 [**PageCampoCodificadoDescricaoResponse**](PageCampoCodificadoDescricaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarFantasiasBasicasUsingGET"></a>
+# **listarFantasiasBasicasUsingGET**
+> PageFantasiaBasicaResponse listarFantasiasBasicasUsingGET(opts)
+
+Listar Fantasias B\u00C3\u00A1sicas
+
+Lista as fantasia b\u00C3\u00A1sicas.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarFantasiasBasicasUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageFantasiaBasicaResponse**](PageFantasiaBasicaResponse.md)
 
 ### Authorization
 
@@ -769,6 +831,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -787,6 +850,7 @@ api.listarNacionalidadesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -818,6 +882,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -836,6 +901,7 @@ api.listarNaturezasOcupacoesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -867,6 +933,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} Id da origem comercial
@@ -890,6 +957,7 @@ api.listarOrigensComerciaisUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| Id da origem comercial | [optional] 
@@ -926,6 +994,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -944,6 +1013,7 @@ api.listarParentescosUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -975,6 +1045,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
 };
@@ -993,6 +1064,7 @@ api.listarProfissoesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
 
@@ -1009,66 +1081,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET1"></a>
-# **listarUsingGET1**
-> PageAtendimentoClienteResponse listarUsingGET1(opts)
-
-Lista todos os atendimentos
-
-Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastrosGeraisApi()
-
-var opts = { 
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTipoAtendimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
-  'dataAtendimento': "dataAtendimento_example" // {String} Apresenta a data em que o Atendimento foi realizado.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET1(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTipoAtendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
- **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **dataAtendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
-
-### Return type
-
-[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PagePortadorResponse listarUsingGET17(opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PagePortadorResponse listarUsingGET18(opts)
 
 Lista os Portadores existentes
 
@@ -1081,6 +1096,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
@@ -1102,13 +1118,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET18(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). | [optional] 
@@ -1135,9 +1152,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageProdutoResponse listarUsingGET18(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageProdutoResponse listarUsingGET19(opts)
 
 Lista os Produtos do Emissor
 
@@ -1150,6 +1167,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'nome': "nome_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
@@ -1164,13 +1182,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto. | [optional] 
@@ -1192,11 +1211,11 @@ No authorization required
 
 <a name="listarUsingGET2"></a>
 # **listarUsingGET2**
-> PageBancoResponse listarUsingGET2(opts)
+> PageAtendimentoClienteResponse listarUsingGET2(opts)
 
-Lista os Bancos cadastrados para o Emissor
+Lista todos os atendimentos
 
-Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
 
 ### Example
 ```javascript
@@ -1205,8 +1224,13 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idTipoAtendimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
+  'dataAtendimento': "dataAtendimento_example" // {String} Apresenta a data em que o Atendimento foi realizado.
 };
 
 var callback = function(error, data, response) {
@@ -1223,12 +1247,17 @@ api.listarUsingGET2(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idTipoAtendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **dataAtendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
 
 ### Return type
 
-[**PageBancoResponse**](PageBancoResponse.md)
+[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
 
 ### Authorization
 
@@ -1239,9 +1268,70 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageTipoEnderecoResponse listarUsingGET24(opts)
+<a name="listarUsingGET20"></a>
+# **listarUsingGET20**
+> PagePromotorResponse listarUsingGET20(opts)
+
+Lista promotores cadastrados na base do emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+  'nome': "nome_example", // {String} Nome do Promotor
+  'dataCadastro': "dataCadastro_example", // {String} Data da Inclus\u00C3\u00A3o.
+  'idEstabelecimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+  'idUsuario': 789 // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET20(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id) | [optional] 
+ **nome** | **String**| Nome do Promotor | [optional] 
+ **dataCadastro** | **String**| Data da Inclus\u00C3\u00A3o. | [optional] 
+ **idEstabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento | [optional] 
+ **idUsuario** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio | [optional] 
+
+### Return type
+
+[**PagePromotorResponse**](PagePromotorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageTipoEnderecoResponse listarUsingGET26(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1254,6 +1344,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
@@ -1267,13 +1358,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
@@ -1292,9 +1384,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PageTipoTelefoneResponse listarUsingGET26(opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PageTipoTelefoneResponse listarUsingGET28(opts)
 
 Lista os Tipos de Telefones
 
@@ -1307,6 +1399,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.CadastrosGeraisApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
@@ -1320,13 +1413,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET28(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id). | [optional] 
@@ -1335,6 +1429,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTipoTelefoneResponse**](PageTipoTelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET3"></a>
+# **listarUsingGET3**
+> PageBancoResponse listarUsingGET3(opts)
+
+Lista os Bancos cadastrados para o Emissor
+
+Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET3(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageBancoResponse**](PageBancoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET33"></a>
+# **listarUsingGET33**
+> PageControleVencimentoResponse listarUsingGET33(opts)
+
+Listar Vencimentos
+
+Este recurso permite que sejam listados os Vencimentos do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastrosGeraisApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'dataVencimento': "dataVencimento_example" // {String} Indica a data de vencimento das faturas
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET33(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **dataVencimento** | **String**| Indica a data de vencimento das faturas | [optional] 
+
+### Return type
+
+[**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
 
 ### Authorization
 

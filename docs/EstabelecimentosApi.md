@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET17**](EstabelecimentosApi.md#consultarUsingGET17) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
 [**consultarUsingGET7**](EstabelecimentosApi.md#consultarUsingGET7) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET10**](EstabelecimentosApi.md#listarUsingGET10) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET23**](EstabelecimentosApi.md#listarUsingGET23) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listarUsingGET11**](EstabelecimentosApi.md#listarUsingGET11) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET25**](EstabelecimentosApi.md#listarUsingGET25) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
 <a name="consultarUsingGET17"></a>
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageEstabelecimentoResponse listarUsingGET10(opts)
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageEstabelecimentoResponse listarUsingGET11(opts)
 
 Lista Estabelecimentos
 
@@ -117,6 +117,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.EstabelecimentosApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -147,13 +148,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET11(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id). | [optional] 
@@ -189,9 +191,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PageTerminalResponse listarUsingGET23(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageTerminalResponse listarUsingGET25(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -204,6 +206,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.EstabelecimentosApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
@@ -219,13 +222,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | [optional] 

@@ -18,7 +18,7 @@
   /**
    * Oportunidades service.
    * @module api/OportunidadesApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -92,8 +92,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT3 operation.
-     * @callback module:api/OportunidadesApi~alterarUsingPUT3Callback
+     * Callback function to receive the result of the alterarUsingPUT4 operation.
+     * @callback module:api/OportunidadesApi~alterarUsingPUT4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -104,20 +104,20 @@
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
      * @param {module:model/OportunidadeUpdate} update update
-     * @param {module:api/OportunidadesApi~alterarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~alterarUsingPUT4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.alterarUsingPUT3 = function(id, update, callback) {
+    this.alterarUsingPUT4 = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT3";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT4";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling alterarUsingPUT3";
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT4";
       }
 
 
@@ -144,8 +144,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT7 operation.
-     * @callback module:api/OportunidadesApi~alterarUsingPUT7Callback
+     * Callback function to receive the result of the alterarUsingPUT8 operation.
+     * @callback module:api/OportunidadesApi~alterarUsingPUT8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -156,20 +156,20 @@
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
      * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadesApi~alterarUsingPUT7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~alterarUsingPUT8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.alterarUsingPUT7 = function(id, persist, callback) {
+    this.alterarUsingPUT8 = function(id, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT7";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT8";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling alterarUsingPUT7";
+        throw "Missing the required parameter 'persist' when calling alterarUsingPUT8";
       }
 
 
@@ -352,6 +352,7 @@
      * Lista as auditorias dos status oportunidades
      * Este recurso permite listar os status oportunidades.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -373,6 +374,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'revType': opts['revType'],
@@ -413,6 +415,7 @@
      * Lista as auditorias das oportunidades
      * Este recurso permite listar as auditorias das oportunidades.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
@@ -436,6 +439,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idStatusOportunidade': opts['idStatusOportunidade'],
@@ -478,6 +482,7 @@
      * Lista as auditorias dos tipos oportunidades
      * Este recurso permite listar os tipos oportunidades.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
@@ -497,6 +502,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'revType': opts['revType'],
@@ -536,6 +542,7 @@
      * Este recurso permite listar os status do tipo oportunidades.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome do status oportunidade
@@ -558,6 +565,7 @@
         'id': id
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'nome': opts['nome'],
@@ -582,8 +590,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET13 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET13Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -592,39 +600,36 @@
     /**
      * Lista as oportunidades
      * Este recurso permite listar as oportunidades.
-     * @param {String} dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
      * @param {String} opts.dataCadastro Data do cadastro da oportunidade
      * @param {String} opts.dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
      * @param {String} opts.numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+     * @param {String} opts.dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @param {String} opts.dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-     * @param {module:api/OportunidadesApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOportunidadeResponse}
      */
-    this.listarUsingGET13 = function(dataInicioVigencia, opts, callback) {
+    this.listarUsingGET14 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'dataInicioVigencia' is set
-      if (dataInicioVigencia == undefined || dataInicioVigencia == null) {
-        throw "Missing the required parameter 'dataInicioVigencia' when calling listarUsingGET13";
-      }
 
 
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idStatusOportunidade': opts['idStatusOportunidade'],
         'dataCadastro': opts['dataCadastro'],
         'dataAtualizacao': opts['dataAtualizacao'],
         'numeroReceitaFederal': opts['numeroReceitaFederal'],
-        'dataInicioVigencia': dataInicioVigencia,
+        'dataInicioVigencia': opts['dataInicioVigencia'],
         'dataFimVigencia': opts['dataFimVigencia'],
         'flagAtivo': opts['flagAtivo']
       };
@@ -646,8 +651,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET25 operation.
-     * @callback module:api/OportunidadesApi~listarUsingGET25Callback
+     * Callback function to receive the result of the listarUsingGET27 operation.
+     * @callback module:api/OportunidadesApi~listarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -657,14 +662,15 @@
      * Lista os tipos oportunidades
      * Este recurso permite listar os tipos oportunidades.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {module:api/OportunidadesApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOportunidadeResponse}
      */
-    this.listarUsingGET25 = function(opts, callback) {
+    this.listarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -672,6 +678,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'descricao': opts['descricao'],
@@ -747,8 +754,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST13 operation.
-     * @callback module:api/OportunidadesApi~salvarUsingPOST13Callback
+     * Callback function to receive the result of the salvarUsingPOST14 operation.
+     * @callback module:api/OportunidadesApi~salvarUsingPOST14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -758,15 +765,15 @@
      * Cadastra tipos oportunidades
      * Esse recurso permite cadastrar tipos oportunidades.
      * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadesApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.salvarUsingPOST13 = function(persist, callback) {
+    this.salvarUsingPOST14 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST13";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST14";
       }
 
 
@@ -792,8 +799,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/OportunidadesApi~salvarUsingPOST8Callback
+     * Callback function to receive the result of the salvarUsingPOST9 operation.
+     * @callback module:api/OportunidadesApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -803,15 +810,15 @@
      * Cadastra as oportunidades
      * Esse recurso permite cadastrar oportunidades.
      * @param {module:model/OportunidadePersist} persist persist
-     * @param {module:api/OportunidadesApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadesApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.salvarUsingPOST8 = function(persist, callback) {
+    this.salvarUsingPOST9 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST9";
       }
 
 

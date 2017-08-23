@@ -18,7 +18,7 @@
   /**
    * The IntegracaoEmissorResponse model module.
    * @module model/IntegracaoEmissorResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,6 +28,8 @@
    * @class
    */
   var exports = function() {
+
+
 
 
 
@@ -52,11 +54,17 @@
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      if (data.hasOwnProperty('idArquivo')) {
+        obj['idArquivo'] = ApiClient.convertToType(data['idArquivo'], 'Integer');
       }
-      if (data.hasOwnProperty('dataEvento')) {
-        obj['dataEvento'] = ApiClient.convertToType(data['dataEvento'], 'String');
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      }
+      if (data.hasOwnProperty('dataInclusao')) {
+        obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'String');
+      }
+      if (data.hasOwnProperty('dataAlteracao')) {
+        obj['dataAlteracao'] = ApiClient.convertToType(data['dataAlteracao'], 'String');
       }
     }
     return obj;
@@ -76,16 +84,28 @@
   exports.prototype['idConta'] = undefined;
 
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+   * @member {Integer} idArquivo
+   */
+  exports.prototype['idArquivo'] = undefined;
+
+  /**
    * Status do registro.
-   * @member {Integer} status
+   * @member {String} status
    */
   exports.prototype['status'] = undefined;
 
   /**
    * Data de inclus\u00C3\u00A3o do registro.
-   * @member {String} dataEvento
+   * @member {String} dataInclusao
    */
-  exports.prototype['dataEvento'] = undefined;
+  exports.prototype['dataInclusao'] = undefined;
+
+  /**
+   * Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+   * @member {String} dataAlteracao
+   */
+  exports.prototype['dataAlteracao'] = undefined;
 
 
 

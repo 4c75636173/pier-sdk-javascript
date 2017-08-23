@@ -29,5 +29,6 @@ Name | Type | Description | Notes
 **dataVencimentoPadrao** | **String** | Dia do vencimento padr\u00C3\u00A3o da fatura | [optional] 
 **idContaPortador** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id) | [optional] 
 **numeroEstabelecimento** | **Integer** | Atributo que representa o numero do estabelecimento. | [optional] 
+**valorTaxaSaque** | **Number** | Valor da taxa saque. | [optional] 
 
 

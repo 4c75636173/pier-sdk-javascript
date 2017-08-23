@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -786,6 +786,52 @@
     }
 
     /**
+     * Callback function to receive the result of the lancarTarifaSegundaViaUsingPOST operation.
+     * @callback module:api/CartaoApi~lancarTarifaSegundaViaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
+     * Esse recurso permite adicionar tar\u00C3\u00ADfa de ajuste pela emiss\u00C3\u00A3o da segunda via do cart\u00C3\u00A3o.
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {module:api/CartaoApi~lancarTarifaSegundaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.lancarTarifaSegundaViaUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling lancarTarifaSegundaViaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/lancar-tarifa-reemissao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarLotesCartoesPrePagosUsingGET operation.
      * @callback module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback
      * @param {String} error Error message, if any.
@@ -797,6 +843,7 @@
      * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
@@ -819,6 +866,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idOrigemComercial': opts['idOrigemComercial'],
@@ -849,8 +897,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/CartaoApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET6 operation.
+     * @callback module:api/CartaoApi~listarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -860,6 +908,7 @@
      * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
      * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
@@ -880,10 +929,10 @@
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoResponse}
      */
-    this.listarUsingGET5 = function(opts, callback) {
+    this.listarUsingGET6 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -891,6 +940,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idStatusCartao': opts['idStatusCartao'],

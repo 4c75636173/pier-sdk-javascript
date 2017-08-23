@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivosApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivosApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET8**](DispositivosApi.md#listarUsingGET8) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET9**](DispositivosApi.md#listarUsingGET9) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST4**](DispositivosApi.md#salvarUsingPOST4) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageDispositivoResponse listarUsingGET8(opts)
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PageDispositivoResponse listarUsingGET9(opts)
 
 Lista os dispositivos cadastrados
 
@@ -117,6 +117,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.DispositivosApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'token': "token_example", // {String} Token do Dispositivo
@@ -133,13 +134,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **token** | **String**| Token do Dispositivo | [optional] 

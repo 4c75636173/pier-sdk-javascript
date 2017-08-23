@@ -18,7 +18,7 @@
   /**
    * The RiscoFraudeResponse model module.
    * @module model/RiscoFraudeResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

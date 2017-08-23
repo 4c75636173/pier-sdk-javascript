@@ -18,7 +18,7 @@
   /**
    * The CodigoSegurancaSMSPersist model module.
    * @module model/CodigoSegurancaSMSPersist
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

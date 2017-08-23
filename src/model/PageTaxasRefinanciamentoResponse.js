@@ -18,7 +18,7 @@
   /**
    * The PageTaxasRefinanciamentoResponse model module.
    * @module model/PageTaxasRefinanciamentoResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

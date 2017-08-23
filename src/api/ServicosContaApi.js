@@ -18,7 +18,7 @@
   /**
    * ServicosConta service.
    * @module api/ServicosContaApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -46,6 +46,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idAnuidade Identificador da anuidade
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.DDD DDD do celular
@@ -74,6 +75,7 @@
         'id': id
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'idAnuidade': idAnuidade,
@@ -203,6 +205,7 @@
      * Listar Anuidades
      * Lista as anuidades
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/ServicosContaApi~listarAnuidadesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -216,6 +219,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };
@@ -230,7 +234,7 @@
       var returnType = PageAnuidadeResponse;
 
       return this.apiClient.callApi(
-        '/api/api/anuidades', 'GET',
+        '/api/anuidades', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -248,6 +252,7 @@
      * Listar Operadoras
      * Lista as operadoras.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:api/ServicosContaApi~listarOperadorasTelefonicasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -261,6 +266,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit']
       };

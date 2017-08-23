@@ -18,7 +18,7 @@
   /**
    * Dispositivos service.
    * @module api/DispositivosApi
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/DispositivosApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/DispositivosApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,6 +136,7 @@
      * Lista os dispositivos cadastrados
      * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
      * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.token Token do Dispositivo
@@ -143,10 +144,10 @@
      * @param {Integer} opts.idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.dataCriacao Apresenta a data e em que o registro foi criado.
      * @param {String} opts.dataDesativacao Apresenta a data e em que o registro foi desativado.
-     * @param {module:api/DispositivosApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DispositivosApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDispositivoResponse}
      */
-    this.listarUsingGET8 = function(opts, callback) {
+    this.listarUsingGET9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -154,6 +155,7 @@
       var pathParams = {
       };
       var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
         'token': opts['token'],

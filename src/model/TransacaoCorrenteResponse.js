@@ -18,7 +18,7 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -63,9 +62,6 @@
 
       if (data.hasOwnProperty('ultimaParcelaLancada')) {
         obj['ultimaParcelaLancada'] = ApiClient.convertToType(data['ultimaParcelaLancada'], 'Integer');
-      }
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
@@ -127,12 +123,6 @@
    * @member {Integer} ultimaParcelaLancada
    */
   exports.prototype['ultimaParcelaLancada'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).

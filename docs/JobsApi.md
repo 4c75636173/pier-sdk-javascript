@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobsApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT**](JobsApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobsApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET12**](JobsApi.md#listarUsingGET12) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST7**](JobsApi.md#salvarUsingPOST7) | **POST** /api/jobs | Cadastrar Job
+[**listarUsingGET13**](JobsApi.md#listarUsingGET13) | **GET** /api/jobs | Listar Jobs
+[**salvarUsingPOST8**](JobsApi.md#salvarUsingPOST8) | **POST** /api/jobs | Cadastrar Job
 
 
 <a name="ativarJobUsingPOST"></a>
@@ -158,9 +158,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageJobResponse listarUsingGET12(opts)
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageJobResponse listarUsingGET13(opts)
 
 Listar Jobs
 
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET13(opts, callback);
 ```
 
 ### Parameters
@@ -215,9 +215,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST7"></a>
-# **salvarUsingPOST7**
-> JobResponse salvarUsingPOST7(descricao, cron, groovy)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> JobResponse salvarUsingPOST8(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -243,7 +243,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST7(descricao, cron, groovy, callback);
+api.salvarUsingPOST8(descricao, cron, groovy, callback);
 ```
 
 ### Parameters

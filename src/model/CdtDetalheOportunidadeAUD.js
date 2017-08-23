@@ -18,7 +18,7 @@
   /**
    * The CdtDetalheOportunidadeAUD model module.
    * @module model/CdtDetalheOportunidadeAUD
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

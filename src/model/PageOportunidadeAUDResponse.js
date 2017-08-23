@@ -18,7 +18,7 @@
   /**
    * The PageOportunidadeAUDResponse model module.
    * @module model/PageOportunidadeAUDResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**

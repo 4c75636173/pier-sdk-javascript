@@ -18,7 +18,7 @@
   /**
    * The StatusContaResponse model module.
    * @module model/StatusContaResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,13 +28,16 @@
    * @class
    * @param id
    * @param nome
-   * @param flagAlteraLimite
    */
-  var exports = function(id, nome, flagAlteraLimite) {
+  var exports = function(id, nome) {
 
     this['id'] = id;
     this['nome'] = nome;
-    this['flagAlteraLimite'] = flagAlteraLimite;
+
+
+
+
+
 
 
 
@@ -58,20 +61,32 @@
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
-      if (data.hasOwnProperty('flagAlteraLimite')) {
-        obj['flagAlteraLimite'] = ApiClient.convertToType(data['flagAlteraLimite'], 'Integer');
+      if (data.hasOwnProperty('permiteAlterarVencimento')) {
+        obj['permiteAlterarVencimento'] = ApiClient.convertToType(data['permiteAlterarVencimento'], 'Integer');
       }
-      if (data.hasOwnProperty('mensagemConsultaNegada')) {
-        obj['mensagemConsultaNegada'] = ApiClient.convertToType(data['mensagemConsultaNegada'], 'String');
+      if (data.hasOwnProperty('permiteAlterarLimite')) {
+        obj['permiteAlterarLimite'] = ApiClient.convertToType(data['permiteAlterarLimite'], 'Integer');
       }
-      if (data.hasOwnProperty('flagPermiteNovaViaCartao')) {
-        obj['flagPermiteNovaViaCartao'] = ApiClient.convertToType(data['flagPermiteNovaViaCartao'], 'Integer');
+      if (data.hasOwnProperty('permiteEmitirNovaViaCartao')) {
+        obj['permiteEmitirNovaViaCartao'] = ApiClient.convertToType(data['permiteEmitirNovaViaCartao'], 'Integer');
       }
-      if (data.hasOwnProperty('flagFazTransferencia')) {
-        obj['flagFazTransferencia'] = ApiClient.convertToType(data['flagFazTransferencia'], 'Integer');
+      if (data.hasOwnProperty('permiteFazerTransferencia')) {
+        obj['permiteFazerTransferencia'] = ApiClient.convertToType(data['permiteFazerTransferencia'], 'Integer');
       }
-      if (data.hasOwnProperty('flagRecebeTransferencia')) {
-        obj['flagRecebeTransferencia'] = ApiClient.convertToType(data['flagRecebeTransferencia'], 'Integer');
+      if (data.hasOwnProperty('permiteReceberTransferencia')) {
+        obj['permiteReceberTransferencia'] = ApiClient.convertToType(data['permiteReceberTransferencia'], 'Integer');
+      }
+      if (data.hasOwnProperty('permiteCriarAcordoCobranca')) {
+        obj['permiteCriarAcordoCobranca'] = ApiClient.convertToType(data['permiteCriarAcordoCobranca'], 'Integer');
+      }
+      if (data.hasOwnProperty('permiteAtribuirComoBloqueio')) {
+        obj['permiteAtribuirComoBloqueio'] = ApiClient.convertToType(data['permiteAtribuirComoBloqueio'], 'Integer');
+      }
+      if (data.hasOwnProperty('permiteDesbloquear')) {
+        obj['permiteDesbloquear'] = ApiClient.convertToType(data['permiteDesbloquear'], 'Integer');
+      }
+      if (data.hasOwnProperty('permiteAtribuirComoCancelamento')) {
+        obj['permiteAtribuirComoCancelamento'] = ApiClient.convertToType(data['permiteAtribuirComoCancelamento'], 'Integer');
       }
     }
     return obj;
@@ -91,34 +106,58 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-   * @member {Integer} flagAlteraLimite
+   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteAlterarVencimento
    */
-  exports.prototype['flagAlteraLimite'] = undefined;
+  exports.prototype['permiteAlterarVencimento'] = undefined;
 
   /**
-   * Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
-   * @member {String} mensagemConsultaNegada
+   * Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteAlterarLimite
    */
-  exports.prototype['mensagemConsultaNegada'] = undefined;
+  exports.prototype['permiteAlterarLimite'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-   * @member {Integer} flagPermiteNovaViaCartao
+   * Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteEmitirNovaViaCartao
    */
-  exports.prototype['flagPermiteNovaViaCartao'] = undefined;
+  exports.prototype['permiteEmitirNovaViaCartao'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
-   * @member {Integer} flagFazTransferencia
+   * Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteFazerTransferencia
    */
-  exports.prototype['flagFazTransferencia'] = undefined;
+  exports.prototype['permiteFazerTransferencia'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
-   * @member {Integer} flagRecebeTransferencia
+   * Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteReceberTransferencia
    */
-  exports.prototype['flagRecebeTransferencia'] = undefined;
+  exports.prototype['permiteReceberTransferencia'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteCriarAcordoCobranca
+   */
+  exports.prototype['permiteCriarAcordoCobranca'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteAtribuirComoBloqueio
+   */
+  exports.prototype['permiteAtribuirComoBloqueio'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteDesbloquear
+   */
+  exports.prototype['permiteDesbloquear'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+   * @member {Integer} permiteAtribuirComoCancelamento
+   */
+  exports.prototype['permiteAtribuirComoCancelamento'] = undefined;
 
 
 

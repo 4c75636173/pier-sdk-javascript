@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaUsingPUT**](UsuariosApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT9**](UsuariosApi.md#alterarUsingPUT9) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**alterarUsingPUT10**](UsuariosApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**ativarUsuarioUsingPOST**](UsuariosApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultarUsingGET26**](UsuariosApi.md#consultarUsingGET26) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuariosApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET30**](UsuariosApi.md#listarUsingGET30) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET32**](UsuariosApi.md#listarUsingGET32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuariosApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST15**](UsuariosApi.md#salvarUsingPOST15) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST16**](UsuariosApi.md#salvarUsingPOST16) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuariosApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
 
@@ -67,9 +67,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT9"></a>
-# **alterarUsingPUT9**
-> UsuarioResponse alterarUsingPUT9(id, update)
+<a name="alterarUsingPUT10"></a>
+# **alterarUsingPUT10**
+> UsuarioResponse alterarUsingPUT10(id, update)
 
 Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -93,7 +93,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT9(id, update, callback);
+api.alterarUsingPUT10(id, update, callback);
 ```
 
 ### Parameters
@@ -254,9 +254,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET30"></a>
-# **listarUsingGET30**
-> PageUsuarioResponse listarUsingGET30(opts)
+<a name="listarUsingGET32"></a>
+# **listarUsingGET32**
+> PageUsuarioResponse listarUsingGET32(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -269,6 +269,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.UsuariosApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'nome': "nome_example", // {String} Nome do Usuario
@@ -284,13 +285,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET30(opts, callback);
+api.listarUsingGET32(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
@@ -357,9 +359,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST15"></a>
-# **salvarUsingPOST15**
-> UsuarioResponse salvarUsingPOST15(persist)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> UsuarioResponse salvarUsingPOST16(persist)
 
 Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -381,7 +383,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST15(persist, callback);
+api.salvarUsingPOST16(persist, callback);
 ```
 
 ### Parameters

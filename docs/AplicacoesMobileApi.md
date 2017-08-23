@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT**](AplicacoesMobileApi.md#atualizarUsingPUT) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listarUsingGET**](AplicacoesMobileApi.md#listarUsingGET) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listarUsingGET1**](AplicacoesMobileApi.md#listarUsingGET1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvarUsingPOST**](AplicacoesMobileApi.md#salvarUsingPOST) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET"></a>
-# **listarUsingGET**
-> PageAplicacaoMobileResponse listarUsingGET(opts)
+<a name="listarUsingGET1"></a>
+# **listarUsingGET1**
+> PageAplicacaoMobileResponse listarUsingGET1(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -73,6 +73,7 @@ var Pier = require('Pier');
 var apiInstance = new Pier.AplicacoesMobileApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'id': "id_example", // {String} Identificador da Aplicacao Mobile
@@ -86,13 +87,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET(opts, callback);
+api.listarUsingGET1(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **id** | **String**| Identificador da Aplicacao Mobile | [optional] 

@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -207,7 +207,7 @@
   exports.prototype['nomeFantasiaBasica'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The CartaoImpressaoResponse model module.
    * @module model/CartaoImpressaoResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -133,6 +134,9 @@
       }
       if (data.hasOwnProperty('trilhaCVV2')) {
         obj['trilhaCVV2'] = ApiClient.convertToType(data['trilhaCVV2'], 'String');
+      }
+      if (data.hasOwnProperty('numeroCartaoHash')) {
+        obj['numeroCartaoHash'] = ApiClient.convertToType(data['numeroCartaoHash'], 'Integer');
       }
     }
     return obj;
@@ -275,6 +279,12 @@
    * @member {String} trilhaCVV2
    */
   exports.prototype['trilhaCVV2'] = undefined;
+
+  /**
+   * Apresenta o numero da hash do cart\u00C3\u00A3o 
+   * @member {Integer} numeroCartaoHash
+   */
+  exports.prototype['numeroCartaoHash'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The AdicionalResponse model module.
    * @module model/AdicionalResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -106,6 +107,9 @@
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
+      }
+      if (data.hasOwnProperty('flagAtivo')) {
+        obj['flagAtivo'] = ApiClient.convertToType(data['flagAtivo'], 'Integer');
       }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefoneResponse]);
@@ -210,6 +214,12 @@
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
+
+  /**
+   * Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+   * @member {Integer} flagAtivo
+   */
+  exports.prototype['flagAtivo'] = undefined;
 
   /**
    * Lista dos telefones do adicional

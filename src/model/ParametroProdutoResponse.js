@@ -18,7 +18,7 @@
   /**
    * The ParametroProdutoResponse model module.
    * @module model/ParametroProdutoResponse
-   * @version 2.24.0
+   * @version 2.28.3
    */
 
   /**
