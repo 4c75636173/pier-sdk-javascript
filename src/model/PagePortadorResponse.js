@@ -18,7 +18,7 @@
   /**
    * The PagePortadorResponse model module.
    * @module model/PagePortadorResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

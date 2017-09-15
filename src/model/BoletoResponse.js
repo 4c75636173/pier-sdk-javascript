@@ -18,7 +18,7 @@
   /**
    * The BoletoResponse model module.
    * @module model/BoletoResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -71,6 +72,9 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('numeroDoDocumento')) {
+        obj['numeroDoDocumento'] = ApiClient.convertToType(data['numeroDoDocumento'], 'String');
+      }
       if (data.hasOwnProperty('dataProcessamento')) {
         obj['dataProcessamento'] = ApiClient.convertToType(data['dataProcessamento'], 'String');
       }
@@ -80,14 +84,17 @@
       if (data.hasOwnProperty('dataVencimento')) {
         obj['dataVencimento'] = ApiClient.convertToType(data['dataVencimento'], 'String');
       }
+      if (data.hasOwnProperty('dataFechamento')) {
+        obj['dataFechamento'] = ApiClient.convertToType(data['dataFechamento'], 'String');
+      }
       if (data.hasOwnProperty('valorBoleto')) {
         obj['valorBoleto'] = ApiClient.convertToType(data['valorBoleto'], 'Number');
       }
-      if (data.hasOwnProperty('numeroDoDocumento')) {
-        obj['numeroDoDocumento'] = ApiClient.convertToType(data['numeroDoDocumento'], 'String');
-      }
       if (data.hasOwnProperty('nomeBeneficiario')) {
         obj['nomeBeneficiario'] = ApiClient.convertToType(data['nomeBeneficiario'], 'String');
+      }
+      if (data.hasOwnProperty('documentoBeneficiario')) {
+        obj['documentoBeneficiario'] = ApiClient.convertToType(data['documentoBeneficiario'], 'String');
       }
       if (data.hasOwnProperty('agencia')) {
         obj['agencia'] = ApiClient.convertToType(data['agencia'], 'String');
@@ -95,11 +102,11 @@
       if (data.hasOwnProperty('codigoBeneficiario')) {
         obj['codigoBeneficiario'] = ApiClient.convertToType(data['codigoBeneficiario'], 'String');
       }
-      if (data.hasOwnProperty('digitoCodigoBeneficiario')) {
-        obj['digitoCodigoBeneficiario'] = ApiClient.convertToType(data['digitoCodigoBeneficiario'], 'String');
-      }
       if (data.hasOwnProperty('numeroConvenio')) {
         obj['numeroConvenio'] = ApiClient.convertToType(data['numeroConvenio'], 'String');
+      }
+      if (data.hasOwnProperty('digitoCodigoBeneficiario')) {
+        obj['digitoCodigoBeneficiario'] = ApiClient.convertToType(data['digitoCodigoBeneficiario'], 'String');
       }
       if (data.hasOwnProperty('carteira')) {
         obj['carteira'] = ApiClient.convertToType(data['carteira'], 'String');
@@ -107,11 +114,11 @@
       if (data.hasOwnProperty('nossoNumero')) {
         obj['nossoNumero'] = ApiClient.convertToType(data['nossoNumero'], 'String');
       }
-      if (data.hasOwnProperty('banco')) {
-        obj['banco'] = ApiClient.convertToType(data['banco'], 'String');
-      }
       if (data.hasOwnProperty('digitoNossoNumero')) {
         obj['digitoNossoNumero'] = ApiClient.convertToType(data['digitoNossoNumero'], 'String');
+      }
+      if (data.hasOwnProperty('banco')) {
+        obj['banco'] = ApiClient.convertToType(data['banco'], 'String');
       }
       if (data.hasOwnProperty('aceite')) {
         obj['aceite'] = ApiClient.convertToType(data['aceite'], 'Boolean');
@@ -130,9 +137,6 @@
       }
       if (data.hasOwnProperty('nomePagador')) {
         obj['nomePagador'] = ApiClient.convertToType(data['nomePagador'], 'String');
-      }
-      if (data.hasOwnProperty('documentoBeneficiario')) {
-        obj['documentoBeneficiario'] = ApiClient.convertToType(data['documentoBeneficiario'], 'String');
       }
       if (data.hasOwnProperty('documentoPagador')) {
         obj['documentoPagador'] = ApiClient.convertToType(data['documentoPagador'], 'String');
@@ -164,6 +168,12 @@
 
 
   /**
+   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+   * @member {String} numeroDoDocumento
+   */
+  exports.prototype['numeroDoDocumento'] = undefined;
+
+  /**
    * Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
    * @member {String} dataProcessamento
    */
@@ -182,22 +192,28 @@
   exports.prototype['dataVencimento'] = undefined;
 
   /**
+   * Data do fechamento
+   * @member {String} dataFechamento
+   */
+  exports.prototype['dataFechamento'] = undefined;
+
+  /**
    * Valor do Boleto.
    * @member {Number} valorBoleto
    */
   exports.prototype['valorBoleto'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
-   * @member {String} numeroDoDocumento
-   */
-  exports.prototype['numeroDoDocumento'] = undefined;
-
-  /**
    * Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
    * @member {String} nomeBeneficiario
    */
   exports.prototype['nomeBeneficiario'] = undefined;
+
+  /**
+   * Documento do Beneficiario.
+   * @member {String} documentoBeneficiario
+   */
+  exports.prototype['documentoBeneficiario'] = undefined;
 
   /**
    * Ag\u00C3\u00AAncia.
@@ -212,16 +228,16 @@
   exports.prototype['codigoBeneficiario'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
-   * @member {String} digitoCodigoBeneficiario
-   */
-  exports.prototype['digitoCodigoBeneficiario'] = undefined;
-
-  /**
    * N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
    * @member {String} numeroConvenio
    */
   exports.prototype['numeroConvenio'] = undefined;
+
+  /**
+   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   * @member {String} digitoCodigoBeneficiario
+   */
+  exports.prototype['digitoCodigoBeneficiario'] = undefined;
 
   /**
    * Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
@@ -236,16 +252,16 @@
   exports.prototype['nossoNumero'] = undefined;
 
   /**
-   * Banco
-   * @member {String} banco
-   */
-  exports.prototype['banco'] = undefined;
-
-  /**
    * D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
    * @member {String} digitoNossoNumero
    */
   exports.prototype['digitoNossoNumero'] = undefined;
+
+  /**
+   * Banco
+   * @member {String} banco
+   */
+  exports.prototype['banco'] = undefined;
 
   /**
    * Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
@@ -282,12 +298,6 @@
    * @member {String} nomePagador
    */
   exports.prototype['nomePagador'] = undefined;
-
-  /**
-   * Documento do Beneficiario.
-   * @member {String} documentoBeneficiario
-   */
-  exports.prototype['documentoBeneficiario'] = undefined;
 
   /**
    * Documento do pagador (CPF ou CNPJ)

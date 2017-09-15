@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -26,24 +26,8 @@
    * Objeto conta
    * @alias module:model/ContaDetalheResponse
    * @class
-   * @param nome
-   * @param nomeOrigemComercial
-   * @param nomeFantasiaBasica
-   * @param limiteGlobal
-   * @param limiteSaqueGlobal
-   * @param saldoDisponivelGlobal
-   * @param saldoDisponivelSaque
    */
-  var exports = function(nome, nomeOrigemComercial, nomeFantasiaBasica, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque) {
-
-
-
-    this['nome'] = nome;
-
-
-    this['nomeOrigemComercial'] = nomeOrigemComercial;
-
-    this['nomeFantasiaBasica'] = nomeFantasiaBasica;
+  var exports = function() {
 
 
 
@@ -57,10 +41,19 @@
 
 
 
-    this['limiteGlobal'] = limiteGlobal;
-    this['limiteSaqueGlobal'] = limiteSaqueGlobal;
-    this['saldoDisponivelGlobal'] = saldoDisponivelGlobal;
-    this['saldoDisponivelSaque'] = saldoDisponivelSaque;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   };
 

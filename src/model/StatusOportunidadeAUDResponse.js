@@ -18,7 +18,7 @@
   /**
    * The StatusOportunidadeAUDResponse model module.
    * @module model/StatusOportunidadeAUDResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

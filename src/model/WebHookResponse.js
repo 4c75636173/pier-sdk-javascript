@@ -18,7 +18,7 @@
   /**
    * The WebHookResponse model module.
    * @module model/WebHookResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

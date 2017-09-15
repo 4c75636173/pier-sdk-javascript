@@ -18,7 +18,7 @@
   /**
    * The ContaHistoricoPagamentoResponse model module.
    * @module model/ContaHistoricoPagamentoResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flagVirtual** | **Integer** |  | [optional] 
 **idConta** | **Integer** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence. | [optional] 
 **idPessoa** | **Integer** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado. | [optional] 
 **idCartao** | **Integer** | Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado. | [optional] 
@@ -26,6 +25,7 @@ Name | Type | Description | Notes
 **trilha2** | **String** | Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor. | [optional] 
 **trilhaCVV1** | **String** | Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor. | [optional] 
 **trilhaCVV2** | **String** | Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor. | [optional] 
+**flagVirtual** | **Integer** | Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual  | [optional] 
 **numeroCartaoHash** | **Integer** | Apresenta o numero da hash do cart\u00C3\u00A3o  | [optional] 
 
 

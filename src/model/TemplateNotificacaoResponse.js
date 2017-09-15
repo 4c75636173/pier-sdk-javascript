@@ -18,7 +18,7 @@
   /**
    * The TemplateNotificacaoResponse model module.
    * @module model/TemplateNotificacaoResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -139,6 +139,12 @@
      * @const
      */
     RECUPERAR_SENHA: "RECUPERAR_SENHA",
+    
+    /**
+     * value: FATURA_POR_EMAIL
+     * @const
+     */
+    FATURA_POR_EMAIL: "FATURA_POR_EMAIL",
     
     /**
      * value: VALIDAR_DISPOSITIVO

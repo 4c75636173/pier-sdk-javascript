@@ -18,7 +18,7 @@
   /**
    * The DetalheOportunidadePersist model module.
    * @module model/DetalheOportunidadePersist
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

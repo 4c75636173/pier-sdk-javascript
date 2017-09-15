@@ -18,7 +18,7 @@
   /**
    * Base service.
    * @module api/BaseApi
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

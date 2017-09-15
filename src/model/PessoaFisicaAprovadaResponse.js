@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -116,7 +116,7 @@
         obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
       }
       if (data.hasOwnProperty('idProfissao')) {
-        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'Integer');
+        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'String');
       }
       if (data.hasOwnProperty('idNaturezaOcupacao')) {
         obj['idNaturezaOcupacao'] = ApiClient.convertToType(data['idNaturezaOcupacao'], 'Integer');
@@ -248,7 +248,7 @@
 
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
-   * @member {Integer} idProfissao
+   * @member {String} idProfissao
    */
   exports.prototype['idProfissao'] = undefined;
 

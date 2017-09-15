@@ -18,7 +18,7 @@
   /**
    * The DadosCartaoResponse model module.
    * @module model/DadosCartaoResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

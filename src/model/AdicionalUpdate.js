@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './TelefoneAdicionalPersist'], factory);
+    define(['../ApiClient', './TelefoneAdicionalUpdate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TelefoneAdicionalPersist'));
+    module.exports = factory(require('../ApiClient'), require('./TelefoneAdicionalUpdate'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AdicionalUpdate = factory(root.Pier.ApiClient, root.Pier.TelefoneAdicionalPersist);
+    root.Pier.AdicionalUpdate = factory(root.Pier.ApiClient, root.Pier.TelefoneAdicionalUpdate);
   }
-}(this, function(ApiClient, TelefoneAdicionalPersist) {
+}(this, function(ApiClient, TelefoneAdicionalUpdate) {
   'use strict';
 
   /**
    * The AdicionalUpdate model module.
    * @module model/AdicionalUpdate
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -34,10 +34,6 @@
     this['nome'] = nome;
 
     this['numeroReceitaFederal'] = numeroReceitaFederal;
-
-
-
-
 
 
 
@@ -86,23 +82,11 @@
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
         obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
-      if (data.hasOwnProperty('idEstadoCivil')) {
-        obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
-      }
-      if (data.hasOwnProperty('idProfissao')) {
-        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'Integer');
-      }
-      if (data.hasOwnProperty('idNacionalidade')) {
-        obj['idNacionalidade'] = ApiClient.convertToType(data['idNacionalidade'], 'Integer');
-      }
       if (data.hasOwnProperty('idParentesco')) {
         obj['idParentesco'] = ApiClient.convertToType(data['idParentesco'], 'Integer');
       }
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
       if (data.hasOwnProperty('telefones')) {
-        obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefoneAdicionalPersist]);
+        obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefoneAdicionalUpdate]);
       }
     }
     return obj;
@@ -164,38 +148,14 @@
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-   * @member {Integer} idEstadoCivil
-   */
-  exports.prototype['idEstadoCivil'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-   * @member {Integer} idProfissao
-   */
-  exports.prototype['idProfissao'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-   * @member {Integer} idNacionalidade
-   */
-  exports.prototype['idNacionalidade'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
    * @member {Integer} idParentesco
    */
   exports.prototype['idParentesco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-   * @member {String} email
-   */
-  exports.prototype['email'] = undefined;
-
-  /**
    * Lista de telefones do adicional.
-   * @member {Array.<module:model/TelefoneAdicionalPersist>} telefones
+   * @member {Array.<module:model/TelefoneAdicionalUpdate>} telefones
    */
   exports.prototype['telefones'] = undefined;
 

@@ -18,7 +18,7 @@
   /**
    * The CartaoImpressaoResponse model module.
    * @module model/CartaoImpressaoResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
@@ -66,9 +66,6 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('flagVirtual')) {
-        obj['flagVirtual'] = ApiClient.convertToType(data['flagVirtual'], 'Integer');
-      }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
@@ -135,6 +132,9 @@
       if (data.hasOwnProperty('trilhaCVV2')) {
         obj['trilhaCVV2'] = ApiClient.convertToType(data['trilhaCVV2'], 'String');
       }
+      if (data.hasOwnProperty('flagVirtual')) {
+        obj['flagVirtual'] = ApiClient.convertToType(data['flagVirtual'], 'Integer');
+      }
       if (data.hasOwnProperty('numeroCartaoHash')) {
         obj['numeroCartaoHash'] = ApiClient.convertToType(data['numeroCartaoHash'], 'Integer');
       }
@@ -142,11 +142,6 @@
     return obj;
   }
 
-
-  /**
-   * @member {Integer} flagVirtual
-   */
-  exports.prototype['flagVirtual'] = undefined;
 
   /**
    * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
@@ -279,6 +274,12 @@
    * @member {String} trilhaCVV2
    */
   exports.prototype['trilhaCVV2'] = undefined;
+
+  /**
+   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   * @member {Integer} flagVirtual
+   */
+  exports.prototype['flagVirtual'] = undefined;
 
   /**
    * Apresenta o numero da hash do cart\u00C3\u00A3o 

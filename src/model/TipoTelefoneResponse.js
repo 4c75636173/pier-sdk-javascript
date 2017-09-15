@@ -18,7 +18,7 @@
   /**
    * The TipoTelefoneResponse model module.
    * @module model/TipoTelefoneResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

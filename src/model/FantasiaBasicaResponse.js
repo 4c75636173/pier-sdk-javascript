@@ -18,7 +18,7 @@
   /**
    * The FantasiaBasicaResponse model module.
    * @module model/FantasiaBasicaResponse
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**

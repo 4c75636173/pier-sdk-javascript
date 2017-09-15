@@ -12,11 +12,7 @@ Name | Type | Description | Notes
 **orgaoExpedidorIdentidade** | **String** | Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional. | [optional] 
 **unidadeFederativaIdentidade** | **String** | Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido. | [optional] 
 **dataEmissaoIdentidade** | **String** | Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd. | [optional] 
-**idEstadoCivil** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional. | [optional] 
-**idProfissao** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional. | [optional] 
-**idNacionalidade** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional. | [optional] 
 **idParentesco** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular. | [optional] 
-**email** | **String** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular. | [optional] 
-**telefones** | [**[TelefoneAdicionalPersist]**](TelefoneAdicionalPersist.md) | Lista de telefones do adicional. | [optional] 
+**telefones** | [**[TelefoneAdicionalUpdate]**](TelefoneAdicionalUpdate.md) | Lista de telefones do adicional. | [optional] 
 
 

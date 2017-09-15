@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustarContaUsingPOST**](ContaApi.md#ajustarContaUsingPOST) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterarLimiteUsingPUT**](ContaApi.md#alterarLimiteUsingPUT) | **PUT** /api/contas/{id}/alterar-limites | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 [**ativarAnuidadeUsingPOST**](ContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
@@ -19,16 +18,15 @@ Method | HTTP request | Description
 [**consultarFaturaConsignadaUsingGET**](ContaApi.md#consultarFaturaConsignadaUsingGET) | **GET** /api/contas/{id}/faturas-consignadas/{id_fatura} | Apresenta dados de uma determinada fatura consignada
 [**consultarFaturaUsingGET**](ContaApi.md#consultarFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-fechada | Consultar Fatura da Conta
 [**consultarLancamentosFuturosFaturaUsingGET**](ContaApi.md#consultarLancamentosFuturosFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
-[**consultarLancamentosFuturosFaturaUsingGET1**](ContaApi.md#consultarLancamentosFuturosFaturaUsingGET1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET24**](ContaApi.md#consultarUsingGET24) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultarUsingGET25**](ContaApi.md#consultarUsingGET25) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**consultarUsingGET5**](ContaApi.md#consultarUsingGET5) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET26**](ContaApi.md#consultarUsingGET26) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultarUsingGET27**](ContaApi.md#consultarUsingGET27) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET6**](ContaApi.md#consultarUsingGET6) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
-[**enviarFaturaEmailUsingPOST**](ContaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+[**gerarCartaoProvisorioUsingPOST**](ContaApi.md#gerarCartaoProvisorioUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
 [**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
 [**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
 [**listarFaturasConsignadasUsingGET**](ContaApi.md#listarFaturasConsignadasUsingGET) | **GET** /api/contas/{id}/faturas-consignadas | Lista as faturas consignadas da conta
@@ -167,55 +165,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="alterarProdutoUsingPOST"></a>
-# **alterarProdutoUsingPOST**
-> PageContaHistoricoPagamentoResponse alterarProdutoUsingPOST(id, idProduto)
-
-Altera o produto associado \u00C3\u00A0 conta.
-
-O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.ContaApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-var idProduto = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.alterarProdutoUsingPOST(id, idProduto, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idProduto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto). | 
-
-### Return type
-
-[**PageContaHistoricoPagamentoResponse**](PageContaHistoricoPagamentoResponse.md)
 
 ### Authorization
 
@@ -835,65 +784,6 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarLancamentosFuturosFaturaUsingGET1"></a>
-# **consultarLancamentosFuturosFaturaUsingGET1**
-> PagePlanoParcelamentoResponse consultarLancamentosFuturosFaturaUsingGET1(id, dataVencimentoPadrao, opts)
-
-Listar planos de parcelamento
-
-Lista os planos de parcelamento da fatura de uma conta.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.ContaApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-var dataVencimentoPadrao = "dataVencimentoPadrao_example"; // {String} Indica a data de vencimento padr\u00C3\u00A3o das faturas
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'quantidadeParcelas': 56 // {Integer} 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarLancamentosFuturosFaturaUsingGET1(id, dataVencimentoPadrao, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimentoPadrao** | **String**| Indica a data de vencimento padr\u00C3\u00A3o das faturas | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **quantidadeParcelas** | **Integer**|  | [optional] 
-
-### Return type
-
-[**PagePlanoParcelamentoResponse**](PagePlanoParcelamentoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="consultarLimiteDisponibilidadeUsingGET1"></a>
 # **consultarLimiteDisponibilidadeUsingGET1**
 > LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET1(id)
@@ -994,9 +884,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> TransferenciaBancariaResponse consultarUsingGET24(id, idTransferencia, opts)
+<a name="consultarUsingGET26"></a>
+# **consultarUsingGET26**
+> TransferenciaBancariaResponse consultarUsingGET26(id, idTransferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -1023,7 +913,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(id, idTransferencia, opts, callback);
+api.consultarUsingGET26(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -1047,9 +937,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET25"></a>
-# **consultarUsingGET25**
-> PageTransferenciaResponse consultarUsingGET25(id, idTransferencia)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> PageTransferenciaResponse consultarUsingGET27(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -1073,7 +963,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET25(id, idTransferencia, callback);
+api.consultarUsingGET27(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -1096,9 +986,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET5"></a>
-# **consultarUsingGET5**
-> ContaDetalheResponse consultarUsingGET5(id)
+<a name="consultarUsingGET6"></a>
+# **consultarUsingGET6**
+> ContaDetalheResponse consultarUsingGET6(id)
 
 Apresenta dados de uma determinada conta
 
@@ -1120,7 +1010,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET5(id, callback);
+api.consultarUsingGET6(id, callback);
 ```
 
 ### Parameters
@@ -1188,59 +1078,6 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="enviarFaturaEmailUsingPOST"></a>
-# **enviarFaturaEmailUsingPOST**
-> &#39;String&#39; enviarFaturaEmailUsingPOST(id, dataVencimento, opts)
-
-Envia 2\u00C2\u00AA via de fatura por E-mail
-
-Envia a segunda via da fatura para o e-mail informado/cadastrado.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.ContaApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-var dataVencimento = "dataVencimento_example"; // {String} Data de Vencimento da fatura.
-
-var opts = { 
-  'email': "email_example" // {String} E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.enviarFaturaEmailUsingPOST(id, dataVencimento, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimento** | **String**| Data de Vencimento da fatura. | 
- **email** | **String**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
-
-### Return type
-
-**&#39;String&#39;**
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="gerarBoletoRecargaUsingPOST"></a>
 # **gerarBoletoRecargaUsingPOST**
 > BoletoResponse gerarBoletoRecargaUsingPOST(id, valor, dataVencimento)
@@ -1295,7 +1132,7 @@ No authorization required
 
 <a name="gerarCartaoEmbossingUsingPOST"></a>
 # **gerarCartaoEmbossingUsingPOST**
-> CartaoImpressaoResponse gerarCartaoEmbossingUsingPOST(id, idPessoa, opts)
+> CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest)
 
 Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
 
@@ -1309,11 +1146,8 @@ var apiInstance = new Pier.ContaApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
 
-var idPessoa = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+var cartaoEmbossingRequest = new Pier.CartaoEmbossingRequest(); // {CartaoEmbossingRequest} cartaoEmbossingRequest
 
-var opts = { 
-  'idTipoPlastico': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1322,7 +1156,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarCartaoEmbossingUsingPOST(id, idPessoa, opts, callback);
+api.gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest, callback);
 ```
 
 ### Parameters
@@ -1330,12 +1164,57 @@ api.gerarCartaoEmbossingUsingPOST(id, idPessoa, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
- **idTipoPlastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
+ **cartaoEmbossingRequest** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
 
 ### Return type
 
-[**CartaoImpressaoResponse**](CartaoImpressaoResponse.md)
+[**CartaoEmbossingResponse**](CartaoEmbossingResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="gerarCartaoProvisorioUsingPOST"></a>
+# **gerarCartaoProvisorioUsingPOST**
+> CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST(id)
+
+Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+
+Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ContaApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.gerarCartaoProvisorioUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+### Return type
+
+[**CartaoImpressaoProvisorioResponse**](CartaoImpressaoProvisorioResponse.md)
 
 ### Authorization
 
@@ -1724,7 +1603,7 @@ No authorization required
 
 <a name="listarNaoProcessadasUsingGET"></a>
 # **listarNaoProcessadasUsingGET**
-> PageTransacoesCorrentesResponse listarNaoProcessadasUsingGET(id, opts)
+> PageTransacaoNaoProcessadaResponse listarNaoProcessadasUsingGET(id, opts)
 
 Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 
@@ -1769,7 +1648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransacoesCorrentesResponse**](PageTransacoesCorrentesResponse.md)
+[**PageTransacaoNaoProcessadaResponse**](PageTransacaoNaoProcessadaResponse.md)
 
 ### Authorization
 

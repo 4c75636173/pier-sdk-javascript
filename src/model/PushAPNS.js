@@ -18,7 +18,7 @@
   /**
    * The PushAPNS model module.
    * @module model/PushAPNS
-   * @version 2.28.3
+   * @version 2.32.0
    */
 
   /**
