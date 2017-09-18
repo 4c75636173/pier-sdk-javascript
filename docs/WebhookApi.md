@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT11**](WebhookApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET29**](WebhookApi.md#consultarUsingGET29) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**consultarUsingGET28**](WebhookApi.md#consultarUsingGET28) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET34**](WebhookApi.md#listarUsingGET34) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST17**](WebhookApi.md#salvarUsingPOST17) | **POST** /api/webhooks | Salvar Webhook
 
@@ -66,9 +66,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET29"></a>
-# **consultarUsingGET29**
-> WebHookResponse consultarUsingGET29(id)
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> WebHookResponse consultarUsingGET28(id)
 
 Consultar Webhook
 
@@ -90,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET29(id, callback);
+api.consultarUsingGET28(id, callback);
 ```
 
 ### Parameters

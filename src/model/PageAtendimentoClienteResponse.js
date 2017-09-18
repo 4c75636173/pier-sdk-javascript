@@ -18,7 +18,7 @@
   /**
    * The PageAtendimentoClienteResponse model module.
    * @module model/PageAtendimentoClienteResponse
-   * @version 2.32.0
+   * @version 2.33.0
    */
 
   /**

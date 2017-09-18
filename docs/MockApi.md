@@ -160,7 +160,7 @@ No authorization required
 
 <a name="visualizarDocumentoUsingPOST"></a>
 # **visualizarDocumentoUsingPOST**
-> [&#39;String&#39;] visualizarDocumentoUsingPOST(id, dataVencimento)
+> Object visualizarDocumentoUsingPOST(id, dataVencimento)
 
 Permite visualizar o extrato da fatura em formato PDF
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[&#39;String&#39;]**
+**Object**
 
 ### Authorization
 

@@ -18,7 +18,7 @@
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.32.0
+   * @version 2.33.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * Mock service.
    * @module api/MockApi
-   * @version 2.32.0
+   * @version 2.33.0
    */
 
   /**
@@ -190,7 +190,7 @@
      * Callback function to receive the result of the visualizarDocumentoUsingPOST operation.
      * @callback module:api/MockApi~visualizarDocumentoUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<'String'>} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -200,7 +200,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {String} dataVencimento Data de Vencimento da fatura.
      * @param {module:api/MockApi~visualizarDocumentoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {Array.<'String'>}
+     * data is of type: {Object}
      */
     this.visualizarDocumentoUsingPOST = function(id, dataVencimento, callback) {
       var postBody = null;
@@ -230,7 +230,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/pdf', '*/*'];
-      var returnType = ['String'];
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf', 'POST',
