@@ -4,16 +4,67 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**consultarUsingGET27**](UsuarioApi.md#consultarUsingGET27) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**listarUsingGET32**](UsuarioApi.md#listarUsingGET32) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST16**](UsuarioApi.md#salvarUsingPOST16) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**salvarUsingPOST19**](UsuarioApi.md#salvarUsingPOST19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
+
+<a name="alterarSenhaLoginUsingPOST"></a>
+# **alterarSenhaLoginUsingPOST**
+> &#39;String&#39; alterarSenhaLoginUsingPOST(login, senhaNova)
+
+Alterar senha do usu\u00C3\u00A1rio.
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.UsuarioApi()
+
+var login = "login_example"; // {String} Login do usu\u00C3\u00A1rio.
+
+var senhaNova = "senhaNova_example"; // {String} Senha Nova
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarSenhaLoginUsingPOST(login, senhaNova, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **login** | **String**| Login do usu\u00C3\u00A1rio. | 
+ **senhaNova** | **String**| Senha Nova | 
+
+### Return type
+
+**&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="alterarSenhaUsingPUT"></a>
 # **alterarSenhaUsingPUT**
@@ -71,7 +122,7 @@ No authorization required
 # **alterarUsingPUT10**
 > UsuarioResponse alterarUsingPUT10(id, update)
 
-Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Altera os usu\u00C3\u00A1rios cadastrados na base.
 
 Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
 
@@ -359,11 +410,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> UsuarioResponse salvarUsingPOST16(persist)
+<a name="salvarUsingPOST19"></a>
+# **salvarUsingPOST19**
+> UsuarioResponse salvarUsingPOST19(persist)
 
-Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+Cadastra Usu\u00C3\u00A1rio na base.
 
 Esse recurso permite cadastrar usu\u00C3\u00A1rios.
 
@@ -383,7 +434,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(persist, callback);
+api.salvarUsingPOST19(persist, callback);
 ```
 
 ### Parameters
@@ -395,6 +446,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UsuarioResponse**](UsuarioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarSenhaLoginUsingPOST"></a>
+# **validarSenhaLoginUsingPOST**
+> Object validarSenhaLoginUsingPOST(login, senha)
+
+Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+
+O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.UsuarioApi()
+
+var login = "login_example"; // {String} Login identificador do usu\u00C3\u00A1rio (login).
+
+var senha = "senha_example"; // {String} Senha do usu\u00C3\u00A1rio
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarSenhaLoginUsingPOST(login, senha, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **login** | **String**| Login identificador do usu\u00C3\u00A1rio (login). | 
+ **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

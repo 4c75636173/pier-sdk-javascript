@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**listarUsingGET14**](OportunidadeApi.md#listarUsingGET14) | **GET** /api/oportunidades | Lista as oportunidades
 [**listarUsingGET27**](OportunidadeApi.md#listarUsingGET27) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvarUsingPOST14**](OportunidadeApi.md#salvarUsingPOST14) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
-[**salvarUsingPOST9**](OportunidadeApi.md#salvarUsingPOST9) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvarUsingPOST12**](OportunidadeApi.md#salvarUsingPOST12) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvarUsingPOST17**](OportunidadeApi.md#salvarUsingPOST17) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 
 
 <a name="alterarStatusUsingPUT"></a>
@@ -742,55 +742,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST14"></a>
-# **salvarUsingPOST14**
-> TipoOportunidadeResponse salvarUsingPOST14(persist)
-
-Cadastra tipos oportunidades
-
-Esse recurso permite cadastrar tipos oportunidades.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.OportunidadeApi()
-
-var persist = new Pier.TipoOportunidade(); // {TipoOportunidade} persist
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST14(persist, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
-
-### Return type
-
-[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST9"></a>
-# **salvarUsingPOST9**
-> OportunidadeResponse salvarUsingPOST9(persist)
+<a name="salvarUsingPOST12"></a>
+# **salvarUsingPOST12**
+> OportunidadeResponse salvarUsingPOST12(persist)
 
 Cadastra as oportunidades
 
@@ -812,7 +766,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST9(persist, callback);
+api.salvarUsingPOST12(persist, callback);
 ```
 
 ### Parameters
@@ -824,6 +778,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> TipoOportunidadeResponse salvarUsingPOST17(persist)
+
+Cadastra tipos oportunidades
+
+Esse recurso permite cadastrar tipos oportunidades.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.OportunidadeApi()
+
+var persist = new Pier.TipoOportunidade(); // {TipoOportunidade} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST17(persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
+
+### Return type
+
+[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
 
 ### Authorization
 

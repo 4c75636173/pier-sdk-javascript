@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformaMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
 [**listarUsingGET17**](PlataformaMobileApi.md#listarUsingGET17) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvarUsingPOST12**](PlataformaMobileApi.md#salvarUsingPOST12) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**salvarUsingPOST15**](PlataformaMobileApi.md#salvarUsingPOST15) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 <a name="atualizarUsingPUT1"></a>
@@ -111,9 +111,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST12"></a>
-# **salvarUsingPOST12**
-> PlataformaMobileResponse salvarUsingPOST12(persist)
+<a name="salvarUsingPOST15"></a>
+# **salvarUsingPOST15**
+> PlataformaMobileResponse salvarUsingPOST15(persist)
 
 Cadastra Plataforma Mobile
 
@@ -135,7 +135,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST12(persist, callback);
+api.salvarUsingPOST15(persist, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * Job service.
    * @module api/JobApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/JobApi~salvarUsingPOST8Callback
+     * Callback function to receive the result of the salvarUsingPOST11 operation.
+     * @callback module:api/JobApi~salvarUsingPOST11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -257,25 +257,25 @@
      * @param {String} descricao descricao.
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
-     * @param {module:api/JobApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
-    this.salvarUsingPOST8 = function(descricao, cron, groovy, callback) {
+    this.salvarUsingPOST11 = function(descricao, cron, groovy, callback) {
       var postBody = groovy;
 
       // verify the required parameter 'descricao' is set
       if (descricao == undefined || descricao == null) {
-        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST11";
       }
 
       // verify the required parameter 'cron' is set
       if (cron == undefined || cron == null) {
-        throw "Missing the required parameter 'cron' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'cron' when calling salvarUsingPOST11";
       }
 
       // verify the required parameter 'groovy' is set
       if (groovy == undefined || groovy == null) {
-        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST11";
       }
 
 

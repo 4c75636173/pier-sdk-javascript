@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**listarSMSUsingGET**](NotificacaoApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+[**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 [**responderSMSUsingPOST**](NotificacaoApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
 [**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -96,6 +97,7 @@ var opts = {
   'idConfiguracaoEmail': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   'tipoLayout': "tipoLayout_example", // {String} Tipo do layout.
   'tipoNotificacao': "tipoNotificacao_example", // {String} Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  'remetente': "remetente_example", // {String} Remetente
   'assunto': "assunto_example" // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 };
 
@@ -118,6 +120,7 @@ Name | Type | Description  | Notes
  **idConfiguracaoEmail** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipoLayout** | **String**| Tipo do layout. | [optional] 
  **tipoNotificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 ### Return type
@@ -592,6 +595,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="notificacaoEmailUsingPOST"></a>
+# **notificacaoEmailUsingPOST**
+> NotificacaoEmailResponse notificacaoEmailUsingPOST(request)
+
+Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var request = new Pier.NotificacaoEmailRequest(); // {NotificacaoEmailRequest} request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.notificacaoEmailUsingPOST(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**NotificacaoEmailRequest**](NotificacaoEmailRequest.md)| request | 
+
+### Return type
+
+[**NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="responderSMSUsingPOST"></a>
 # **responderSMSUsingPOST**
 > NotificacaoSMSResponse responderSMSUsingPOST(opts)
@@ -893,6 +942,7 @@ var opts = {
   'idConfiguracaoEmail': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
   'tipoLayout': "tipoLayout_example", // {String} Tipo do layout.
   'tipoNotificacao': "tipoNotificacao_example", // {String} Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+  'remetente': "remetente_example", // {String} Remetente
   'assunto': "assunto_example" // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
 };
 
@@ -914,6 +964,7 @@ Name | Type | Description  | Notes
  **idConfiguracaoEmail** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL. | [optional] 
  **tipoLayout** | **String**| Tipo do layout. | [optional] 
  **tipoNotificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
 
 ### Return type

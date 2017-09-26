@@ -18,7 +18,7 @@
   /**
    * Usuario service.
    * @module api/UsuarioApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -31,6 +31,59 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the alterarSenhaLoginUsingPOST operation.
+     * @callback module:api/UsuarioApi~alterarSenhaLoginUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Alterar senha do usu\u00C3\u00A1rio.
+     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+     * @param {String} login Login do usu\u00C3\u00A1rio.
+     * @param {String} senhaNova Senha Nova
+     * @param {module:api/UsuarioApi~alterarSenhaLoginUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.alterarSenhaLoginUsingPOST = function(login, senhaNova, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'login' is set
+      if (login == undefined || login == null) {
+        throw "Missing the required parameter 'login' when calling alterarSenhaLoginUsingPOST";
+      }
+
+      // verify the required parameter 'senhaNova' is set
+      if (senhaNova == undefined || senhaNova == null) {
+        throw "Missing the required parameter 'senhaNova' when calling alterarSenhaLoginUsingPOST";
+      }
+
+
+      var pathParams = {
+        'login': login
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+        'senhaNova': senhaNova
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/usuarios/{login}/alterar-senha', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the alterarSenhaUsingPUT operation.
@@ -101,7 +154,7 @@
      */
 
     /**
-     * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * Altera os usu\u00C3\u00A1rios cadastrados na base.
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:model/UsuarioUpdate} update update
@@ -384,26 +437,26 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST16 operation.
-     * @callback module:api/UsuarioApi~salvarUsingPOST16Callback
+     * Callback function to receive the result of the salvarUsingPOST19 operation.
+     * @callback module:api/UsuarioApi~salvarUsingPOST19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+     * Cadastra Usu\u00C3\u00A1rio na base.
      * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
      * @param {module:model/UsuarioPersist} persist persist
-     * @param {module:api/UsuarioApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.salvarUsingPOST16 = function(persist, callback) {
+    this.salvarUsingPOST19 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST16";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST19";
       }
 
 
@@ -423,6 +476,59 @@
 
       return this.apiClient.callApi(
         '/api/usuarios', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarSenhaLoginUsingPOST operation.
+     * @callback module:api/UsuarioApi~validarSenhaLoginUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+     * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+     * @param {String} login Login identificador do usu\u00C3\u00A1rio (login).
+     * @param {String} senha Senha do usu\u00C3\u00A1rio
+     * @param {module:api/UsuarioApi~validarSenhaLoginUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.validarSenhaLoginUsingPOST = function(login, senha, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'login' is set
+      if (login == undefined || login == null) {
+        throw "Missing the required parameter 'login' when calling validarSenhaLoginUsingPOST";
+      }
+
+      // verify the required parameter 'senha' is set
+      if (senha == undefined || senha == null) {
+        throw "Missing the required parameter 'senha' when calling validarSenhaLoginUsingPOST";
+      }
+
+
+      var pathParams = {
+        'login': login
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+        'senha': senha
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/usuarios/{login}/validar-senha', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -18,7 +18,7 @@
   /**
    * The LimiteDisponibilidadeResponse model module.
    * @module model/LimiteDisponibilidadeResponse
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -26,53 +26,31 @@
    * Limite Disponibilidade
    * @alias module:model/LimiteDisponibilidadeResponse
    * @class
-   * @param id
-   * @param limiteGlobal
-   * @param limiteCompra
-   * @param limiteParcelado
-   * @param limiteParcelas
-   * @param limiteSaqueGlobal
-   * @param limiteSaquePeriodo
-   * @param limiteConsignado
-   * @param limiteInternacionalCompra
-   * @param limiteInternacionalParcelado
-   * @param limiteInternacionalParcelas
-   * @param limiteInternacionalSaqueGlobal
-   * @param limiteInternacionalSaquePeriodo
-   * @param limiteMaximo
-   * @param saldoDisponivelGlobal
-   * @param saldoDisponivelCompra
-   * @param saldoDisponivelParcelado
-   * @param saldoDisponivelParcelas
-   * @param saldoDisponivelSaque
-   * @param saldoPontosFidelidade
-   * @param saldoDisponivelCompraInternacional
-   * @param saldoDisponivelSaqueInternacional
    */
-  var exports = function(id, limiteGlobal, limiteCompra, limiteParcelado, limiteParcelas, limiteSaqueGlobal, limiteSaquePeriodo, limiteConsignado, limiteInternacionalCompra, limiteInternacionalParcelado, limiteInternacionalParcelas, limiteInternacionalSaqueGlobal, limiteInternacionalSaquePeriodo, limiteMaximo, saldoDisponivelGlobal, saldoDisponivelCompra, saldoDisponivelParcelado, saldoDisponivelParcelas, saldoDisponivelSaque, saldoPontosFidelidade, saldoDisponivelCompraInternacional, saldoDisponivelSaqueInternacional) {
+  var exports = function() {
 
-    this['id'] = id;
-    this['limiteGlobal'] = limiteGlobal;
-    this['limiteCompra'] = limiteCompra;
-    this['limiteParcelado'] = limiteParcelado;
-    this['limiteParcelas'] = limiteParcelas;
-    this['limiteSaqueGlobal'] = limiteSaqueGlobal;
-    this['limiteSaquePeriodo'] = limiteSaquePeriodo;
-    this['limiteConsignado'] = limiteConsignado;
-    this['limiteInternacionalCompra'] = limiteInternacionalCompra;
-    this['limiteInternacionalParcelado'] = limiteInternacionalParcelado;
-    this['limiteInternacionalParcelas'] = limiteInternacionalParcelas;
-    this['limiteInternacionalSaqueGlobal'] = limiteInternacionalSaqueGlobal;
-    this['limiteInternacionalSaquePeriodo'] = limiteInternacionalSaquePeriodo;
-    this['limiteMaximo'] = limiteMaximo;
-    this['saldoDisponivelGlobal'] = saldoDisponivelGlobal;
-    this['saldoDisponivelCompra'] = saldoDisponivelCompra;
-    this['saldoDisponivelParcelado'] = saldoDisponivelParcelado;
-    this['saldoDisponivelParcelas'] = saldoDisponivelParcelas;
-    this['saldoDisponivelSaque'] = saldoDisponivelSaque;
-    this['saldoPontosFidelidade'] = saldoPontosFidelidade;
-    this['saldoDisponivelCompraInternacional'] = saldoDisponivelCompraInternacional;
-    this['saldoDisponivelSaqueInternacional'] = saldoDisponivelSaqueInternacional;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
   /**

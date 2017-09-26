@@ -18,7 +18,7 @@
   /**
    * Webhook service.
    * @module api/WebhookApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -198,8 +198,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST17 operation.
-     * @callback module:api/WebhookApi~salvarUsingPOST17Callback
+     * Callback function to receive the result of the salvarUsingPOST20 operation.
+     * @callback module:api/WebhookApi~salvarUsingPOST20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -210,20 +210,20 @@
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
      * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {String} url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhookApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhookApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.salvarUsingPOST17 = function(tipoEvento, url, callback) {
+    this.salvarUsingPOST20 = function(tipoEvento, url, callback) {
       var postBody = null;
 
       // verify the required parameter 'tipoEvento' is set
       if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST17";
+        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST20";
       }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling salvarUsingPOST17";
+        throw "Missing the required parameter 'url' when calling salvarUsingPOST20";
       }
 
 

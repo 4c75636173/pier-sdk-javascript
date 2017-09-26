@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **taxaJuros** | **Number** | Valor percentual da taxa de juros a ser aplicada | 
 **periodoTaxa** | **String** | Per\u00C3\u00ADodo de aplica da taxa de juros | 
 **sistemaAmortizacao** | **String** | Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas | 
-**diaVencimento** | **Integer** | Dia para cobran\u00C3\u00A7a da primeira parcela | 
 **numeroMesesCarencia** | **Integer** | N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela | [optional] 
 
 

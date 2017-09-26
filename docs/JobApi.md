@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**atualizarUsingPUT**](JobApi.md#atualizarUsingPUT) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
 [**listarUsingGET13**](JobApi.md#listarUsingGET13) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST8**](JobApi.md#salvarUsingPOST8) | **POST** /api/jobs | Cadastrar Job
+[**salvarUsingPOST11**](JobApi.md#salvarUsingPOST11) | **POST** /api/jobs | Cadastrar Job
 
 
 <a name="ativarJobUsingPOST"></a>
@@ -215,9 +215,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST8"></a>
-# **salvarUsingPOST8**
-> JobResponse salvarUsingPOST8(descricao, cron, groovy)
+<a name="salvarUsingPOST11"></a>
+# **salvarUsingPOST11**
+> JobResponse salvarUsingPOST11(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -243,7 +243,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST8(descricao, cron, groovy, callback);
+api.salvarUsingPOST11(descricao, cron, groovy, callback);
 ```
 
 ### Parameters

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaSMSRequest'], factory);
+    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailResponse', '../model/NotificacaoEmailRequest', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaSMSRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaSMSRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailResponse'), require('../model/NotificacaoEmailRequest'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaSMSRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaSMSRequest);
+    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailResponse, root.Pier.NotificacaoEmailRequest, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaSMSRequest);
   }
-}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoResponse, NotificacaoSMSResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaSMSRequest) {
+}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoResponse, NotificacaoSMSResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailResponse, NotificacaoEmailRequest, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaSMSRequest) {
   'use strict';
 
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -101,6 +101,7 @@
      * @param {Integer} opts.idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
      * @param {module:model/String} opts.tipoLayout Tipo do layout.
      * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.remetente Remetente
      * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:api/NotificacaoApi~alterarTemplateNotificacaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TemplateNotificacaoResponse}
@@ -127,6 +128,7 @@
         'idConfiguracaoEmail': opts['idConfiguracaoEmail'],
         'tipoLayout': opts['tipoLayout'],
         'tipoNotificacao': opts['tipoNotificacao'],
+        'remetente': opts['remetente'],
         'assunto': opts['assunto']
       };
       var headerParams = {
@@ -584,6 +586,51 @@
     }
 
     /**
+     * Callback function to receive the result of the notificacaoEmailUsingPOST operation.
+     * @callback module:api/NotificacaoApi~notificacaoEmailUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/NotificacaoEmailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * @param {module:model/NotificacaoEmailRequest} request request
+     * @param {module:api/NotificacaoApi~notificacaoEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/NotificacaoEmailResponse}
+     */
+    this.notificacaoEmailUsingPOST = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request == undefined || request == null) {
+        throw "Missing the required parameter 'request' when calling notificacaoEmailUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = NotificacaoEmailResponse;
+
+      return this.apiClient.callApi(
+        '/api/notificacoes-email', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the responderSMSUsingPOST operation.
      * @callback module:api/NotificacaoApi~responderSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
@@ -871,6 +918,7 @@
      * @param {Integer} opts.idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
      * @param {module:model/String} opts.tipoLayout Tipo do layout.
      * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.remetente Remetente
      * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:api/NotificacaoApi~salvarTemplateNotificacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TemplateNotificacaoResponse}
@@ -891,6 +939,7 @@
         'idConfiguracaoEmail': opts['idConfiguracaoEmail'],
         'tipoLayout': opts['tipoLayout'],
         'tipoNotificacao': opts['tipoNotificacao'],
+        'remetente': opts['remetente'],
         'assunto': opts['assunto']
       };
       var headerParams = {

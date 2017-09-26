@@ -25,11 +25,11 @@ Method | HTTP request | Description
 [**listarUsingGET24**](CadastroClienteApi.md#listarUsingGET24) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvarUsingPOST5**](CadastroClienteApi.md#salvarUsingPOST5) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST7**](CadastroClienteApi.md#salvarUsingPOST7) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST14**](CadastroClienteApi.md#salvarUsingPOST14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST8**](CadastroClienteApi.md#salvarUsingPOST8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
 <a name="alterarUsingPUT"></a>
@@ -1216,7 +1216,57 @@ No authorization required
 
 <a name="salvarUsingPOST10"></a>
 # **salvarUsingPOST10**
-> PessoaDetalheResponse salvarUsingPOST10(idPessoa, opts)
+> IntegracaoEmissorResponse salvarUsingPOST10(id, opts)
+
+Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var opts = { 
+  'body': new Pier.IntegracaoEmissorPersist() // {IntegracaoEmissorPersist} Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST10(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
+
+### Return type
+
+[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> PessoaDetalheResponse salvarUsingPOST13(idPessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1249,7 +1299,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST10(idPessoa, opts, callback);
+api.salvarUsingPOST13(idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -1280,9 +1330,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST11"></a>
-# **salvarUsingPOST11**
-> PessoaResponse salvarUsingPOST11(nome, tipo, opts)
+<a name="salvarUsingPOST14"></a>
+# **salvarUsingPOST14**
+> PessoaResponse salvarUsingPOST14(nome, tipo, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1316,7 +1366,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST11(nome, tipo, opts, callback);
+api.salvarUsingPOST14(nome, tipo, opts, callback);
 ```
 
 ### Parameters
@@ -1347,9 +1397,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> TelefoneResponse salvarUsingPOST13(opts)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> TelefoneResponse salvarUsingPOST16(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1376,7 +1426,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(opts, callback);
+api.salvarUsingPOST16(opts, callback);
 ```
 
 ### Parameters
@@ -1402,9 +1452,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST5"></a>
-# **salvarUsingPOST5**
-> EnderecoResponse salvarUsingPOST5(opts)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> EnderecoResponse salvarUsingPOST8(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1437,7 +1487,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST5(opts, callback);
+api.salvarUsingPOST8(opts, callback);
 ```
 
 ### Parameters
@@ -1459,56 +1509,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST7"></a>
-# **salvarUsingPOST7**
-> IntegracaoEmissorResponse salvarUsingPOST7(id, opts)
-
-Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-var opts = { 
-  'body': new Pier.IntegracaoEmissorPersist() // {IntegracaoEmissorPersist} Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST7(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
-
-### Return type
-
-[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -1229,6 +1229,55 @@
      * Callback function to receive the result of the salvarUsingPOST10 operation.
      * @callback module:api/CadastroClienteApi~salvarUsingPOST10Callback
      * @param {String} error Error message, if any.
+     * @param {module:model/IntegracaoEmissorResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+     * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Object} opts Optional parameters
+     * @param {module:model/IntegracaoEmissorPersist} opts.body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/IntegracaoEmissorResponse}
+     */
+    this.salvarUsingPOST10 = function(id, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling salvarUsingPOST10";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = IntegracaoEmissorResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/incluir-registro-integracao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST13 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST13Callback
+     * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
@@ -1247,16 +1296,16 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.salvarUsingPOST10 = function(idPessoa, opts, callback) {
+    this.salvarUsingPOST13 = function(idPessoa, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idPessoa' is set
       if (idPessoa == undefined || idPessoa == null) {
-        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST10";
+        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST13";
       }
 
 
@@ -1292,8 +1341,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST11 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST11Callback
+     * Callback function to receive the result of the salvarUsingPOST14 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1313,21 +1362,21 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.salvarUsingPOST11 = function(nome, tipo, opts, callback) {
+    this.salvarUsingPOST14 = function(nome, tipo, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'nome' is set
       if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'nome' when calling salvarUsingPOST14";
       }
 
       // verify the required parameter 'tipo' is set
       if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST14";
       }
 
 
@@ -1363,8 +1412,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST13 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST13Callback
+     * Callback function to receive the result of the salvarUsingPOST16 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1379,10 +1428,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.salvarUsingPOST13 = function(opts, callback) {
+    this.salvarUsingPOST16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1414,8 +1463,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST5 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST5Callback
+     * Callback function to receive the result of the salvarUsingPOST8 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1436,10 +1485,10 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.salvarUsingPOST5 = function(opts, callback) {
+    this.salvarUsingPOST8 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1471,55 +1520,6 @@
 
       return this.apiClient.callApi(
         '/api/enderecos', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST7 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST7Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/IntegracaoEmissorResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-     * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Object} opts Optional parameters
-     * @param {module:model/IntegracaoEmissorPersist} opts.body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/IntegracaoEmissorResponse}
-     */
-    this.salvarUsingPOST7 = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = opts['body'];
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling salvarUsingPOST7";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = IntegracaoEmissorResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{id}/incluir-registro-integracao', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

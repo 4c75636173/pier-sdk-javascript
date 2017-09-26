@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoEmprestimoResponse model module.
    * @module model/PlanoParcelamentoEmprestimoResponse
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -56,11 +56,11 @@
       if (data.hasOwnProperty('taxaJuros')) {
         obj['taxaJuros'] = ApiClient.convertToType(data['taxaJuros'], 'Number');
       }
-      if (data.hasOwnProperty('valorPercentualCET')) {
-        obj['valorPercentualCET'] = ApiClient.convertToType(data['valorPercentualCET'], 'Number');
-      }
       if (data.hasOwnProperty('valorTributosIOF')) {
         obj['valorTributosIOF'] = ApiClient.convertToType(data['valorTributosIOF'], 'Number');
+      }
+      if (data.hasOwnProperty('valorPercentualCET')) {
+        obj['valorPercentualCET'] = ApiClient.convertToType(data['valorPercentualCET'], 'Number');
       }
     }
     return obj;
@@ -86,16 +86,16 @@
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-   * @member {Number} valorPercentualCET
-   */
-  exports.prototype['valorPercentualCET'] = undefined;
-
-  /**
    * valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
    * @member {Number} valorTributosIOF
    */
   exports.prototype['valorTributosIOF'] = undefined;
+
+  /**
+   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+   * @member {Number} valorPercentualCET
+   */
+  exports.prototype['valorPercentualCET'] = undefined;
 
 
 

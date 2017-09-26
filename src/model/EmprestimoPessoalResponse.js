@@ -18,7 +18,7 @@
   /**
    * The EmprestimoPessoalResponse model module.
    * @module model/EmprestimoPessoalResponse
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -28,6 +28,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -54,17 +57,26 @@
       if (data.hasOwnProperty('valorSolicitado')) {
         obj['valorSolicitado'] = ApiClient.convertToType(data['valorSolicitado'], 'Number');
       }
-      if (data.hasOwnProperty('valorTotal')) {
-        obj['valorTotal'] = ApiClient.convertToType(data['valorTotal'], 'Number');
+      if (data.hasOwnProperty('valorMaximoSolicitacao')) {
+        obj['valorMaximoSolicitacao'] = ApiClient.convertToType(data['valorMaximoSolicitacao'], 'Number');
       }
-      if (data.hasOwnProperty('sistemaAmortizacao')) {
-        obj['sistemaAmortizacao'] = ApiClient.convertToType(data['sistemaAmortizacao'], 'String');
+      if (data.hasOwnProperty('numeroParcelas')) {
+        obj['numeroParcelas'] = ApiClient.convertToType(data['numeroParcelas'], 'Integer');
+      }
+      if (data.hasOwnProperty('valorMaximoParcela')) {
+        obj['valorMaximoParcela'] = ApiClient.convertToType(data['valorMaximoParcela'], 'Number');
+      }
+      if (data.hasOwnProperty('dataPrimeiraParcela')) {
+        obj['dataPrimeiraParcela'] = ApiClient.convertToType(data['dataPrimeiraParcela'], 'String');
       }
       if (data.hasOwnProperty('periodoTaxa')) {
         obj['periodoTaxa'] = ApiClient.convertToType(data['periodoTaxa'], 'String');
       }
-      if (data.hasOwnProperty('dataPrimeiraParcela')) {
-        obj['dataPrimeiraParcela'] = ApiClient.convertToType(data['dataPrimeiraParcela'], 'String');
+      if (data.hasOwnProperty('sistemaAmortizacao')) {
+        obj['sistemaAmortizacao'] = ApiClient.convertToType(data['sistemaAmortizacao'], 'String');
+      }
+      if (data.hasOwnProperty('taxaJuros')) {
+        obj['taxaJuros'] = ApiClient.convertToType(data['taxaJuros'], 'Number');
       }
     }
     return obj;
@@ -83,16 +95,28 @@
   exports.prototype['valorSolicitado'] = undefined;
 
   /**
-   * Valor total do empr\u00C3\u00A9stimo/financiamento
-   * @member {Number} valorTotal
+   * Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+   * @member {Number} valorMaximoSolicitacao
    */
-  exports.prototype['valorTotal'] = undefined;
+  exports.prototype['valorMaximoSolicitacao'] = undefined;
 
   /**
-   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
-   * @member {String} sistemaAmortizacao
+   * N\u00C3\u00BAmero de parcelas solicitado
+   * @member {Integer} numeroParcelas
    */
-  exports.prototype['sistemaAmortizacao'] = undefined;
+  exports.prototype['numeroParcelas'] = undefined;
+
+  /**
+   * Limite m\u00C3\u00A1ximo de parcela permitido
+   * @member {Number} valorMaximoParcela
+   */
+  exports.prototype['valorMaximoParcela'] = undefined;
+
+  /**
+   * Data do desconto da primeira parcela
+   * @member {String} dataPrimeiraParcela
+   */
+  exports.prototype['dataPrimeiraParcela'] = undefined;
 
   /**
    * Per\u00C3\u00ADodo de aplica da taxa de juros
@@ -101,10 +125,16 @@
   exports.prototype['periodoTaxa'] = undefined;
 
   /**
-   * Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
-   * @member {String} dataPrimeiraParcela
+   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+   * @member {String} sistemaAmortizacao
    */
-  exports.prototype['dataPrimeiraParcela'] = undefined;
+  exports.prototype['sistemaAmortizacao'] = undefined;
+
+  /**
+   * Valor percentual da taxa de juros a ser aplicada
+   * @member {Number} taxaJuros
+   */
+  exports.prototype['taxaJuros'] = undefined;
 
 
 

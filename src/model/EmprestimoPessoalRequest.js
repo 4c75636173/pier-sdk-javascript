@@ -18,7 +18,7 @@
   /**
    * The EmprestimoPessoalRequest model module.
    * @module model/EmprestimoPessoalRequest
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -31,16 +31,14 @@
    * @param taxaJuros
    * @param periodoTaxa
    * @param sistemaAmortizacao
-   * @param diaVencimento
    */
-  var exports = function(valorSolicitado, numeroParcelas, taxaJuros, periodoTaxa, sistemaAmortizacao, diaVencimento) {
+  var exports = function(valorSolicitado, numeroParcelas, taxaJuros, periodoTaxa, sistemaAmortizacao) {
 
     this['valorSolicitado'] = valorSolicitado;
     this['numeroParcelas'] = numeroParcelas;
     this['taxaJuros'] = taxaJuros;
     this['periodoTaxa'] = periodoTaxa;
     this['sistemaAmortizacao'] = sistemaAmortizacao;
-    this['diaVencimento'] = diaVencimento;
 
   };
 
@@ -69,9 +67,6 @@
       }
       if (data.hasOwnProperty('sistemaAmortizacao')) {
         obj['sistemaAmortizacao'] = ApiClient.convertToType(data['sistemaAmortizacao'], 'String');
-      }
-      if (data.hasOwnProperty('diaVencimento')) {
-        obj['diaVencimento'] = ApiClient.convertToType(data['diaVencimento'], 'Integer');
       }
       if (data.hasOwnProperty('numeroMesesCarencia')) {
         obj['numeroMesesCarencia'] = ApiClient.convertToType(data['numeroMesesCarencia'], 'Integer');
@@ -110,12 +105,6 @@
    * @member {String} sistemaAmortizacao
    */
   exports.prototype['sistemaAmortizacao'] = undefined;
-
-  /**
-   * Dia para cobran\u00C3\u00A7a da primeira parcela
-   * @member {Integer} diaVencimento
-   */
-  exports.prototype['diaVencimento'] = undefined;
 
   /**
    * N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela

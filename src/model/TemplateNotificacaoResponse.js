@@ -18,7 +18,7 @@
   /**
    * The TemplateNotificacaoResponse model module.
    * @module model/TemplateNotificacaoResponse
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -61,6 +62,9 @@
       }
       if (data.hasOwnProperty('tipoNotificacao')) {
         obj['tipoNotificacao'] = ApiClient.convertToType(data['tipoNotificacao'], 'String');
+      }
+      if (data.hasOwnProperty('remetente')) {
+        obj['remetente'] = ApiClient.convertToType(data['remetente'], 'String');
       }
       if (data.hasOwnProperty('assunto')) {
         obj['assunto'] = ApiClient.convertToType(data['assunto'], 'String');
@@ -102,6 +106,12 @@
    * @member {module:model/TemplateNotificacaoResponse.TipoNotificacaoEnum} tipoNotificacao
    */
   exports.prototype['tipoNotificacao'] = undefined;
+
+  /**
+   * Remetente.
+   * @member {String} remetente
+   */
+  exports.prototype['remetente'] = undefined;
 
   /**
    * Assunto do e-mail.
@@ -150,7 +160,13 @@
      * value: VALIDAR_DISPOSITIVO
      * @const
      */
-    VALIDAR_DISPOSITIVO: "VALIDAR_DISPOSITIVO"
+    VALIDAR_DISPOSITIVO: "VALIDAR_DISPOSITIVO",
+    
+    /**
+     * value: NOTIFICACAO_EMAIL
+     * @const
+     */
+    NOTIFICACAO_EMAIL: "NOTIFICACAO_EMAIL"
   };  /**
    * Allowed values for the <code>tipoNotificacao</code> property.
    * @enum {String}

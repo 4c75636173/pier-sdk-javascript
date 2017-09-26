@@ -18,7 +18,7 @@
   /**
    * Oportunidade service.
    * @module api/OportunidadeApi
-   * @version 2.33.0
+   * @version 2.35.2
    */
 
   /**
@@ -754,53 +754,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST14 operation.
-     * @callback module:api/OportunidadeApi~salvarUsingPOST14Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Cadastra tipos oportunidades
-     * Esse recurso permite cadastrar tipos oportunidades.
-     * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadeApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TipoOportunidadeResponse}
-     */
-    this.salvarUsingPOST14 = function(persist, callback) {
-      var postBody = persist;
-
-      // verify the required parameter 'persist' is set
-      if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST14";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TipoOportunidadeResponse;
-
-      return this.apiClient.callApi(
-        '/api/tipos-oportunidades', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST9 operation.
-     * @callback module:api/OportunidadeApi~salvarUsingPOST9Callback
+     * Callback function to receive the result of the salvarUsingPOST12 operation.
+     * @callback module:api/OportunidadeApi~salvarUsingPOST12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -810,15 +765,15 @@
      * Cadastra as oportunidades
      * Esse recurso permite cadastrar oportunidades.
      * @param {module:model/OportunidadePersist} persist persist
-     * @param {module:api/OportunidadeApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.salvarUsingPOST9 = function(persist, callback) {
+    this.salvarUsingPOST12 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST9";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST12";
       }
 
 
@@ -838,6 +793,51 @@
 
       return this.apiClient.callApi(
         '/api/oportunidades', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST17 operation.
+     * @callback module:api/OportunidadeApi~salvarUsingPOST17Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cadastra tipos oportunidades
+     * Esse recurso permite cadastrar tipos oportunidades.
+     * @param {module:model/TipoOportunidade} persist persist
+     * @param {module:api/OportunidadeApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TipoOportunidadeResponse}
+     */
+    this.salvarUsingPOST17 = function(persist, callback) {
+      var postBody = persist;
+
+      // verify the required parameter 'persist' is set
+      if (persist == undefined || persist == null) {
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST17";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TipoOportunidadeResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-oportunidades', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

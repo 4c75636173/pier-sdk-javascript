@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**alterarUsingPUT11**](WebhookApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET28**](WebhookApi.md#consultarUsingGET28) | **GET** /api/webhooks/{id} | Consultar Webhook
 [**listarUsingGET34**](WebhookApi.md#listarUsingGET34) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST17**](WebhookApi.md#salvarUsingPOST17) | **POST** /api/webhooks | Salvar Webhook
+[**salvarUsingPOST20**](WebhookApi.md#salvarUsingPOST20) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT11"></a>
@@ -171,9 +171,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST17"></a>
-# **salvarUsingPOST17**
-> WebHookResponse salvarUsingPOST17(tipoEvento, url)
+<a name="salvarUsingPOST20"></a>
+# **salvarUsingPOST20**
+> WebHookResponse salvarUsingPOST20(tipoEvento, url)
 
 Salvar Webhook
 
@@ -197,7 +197,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST17(tipoEvento, url, callback);
+api.salvarUsingPOST20(tipoEvento, url, callback);
 ```
 
 ### Parameters
