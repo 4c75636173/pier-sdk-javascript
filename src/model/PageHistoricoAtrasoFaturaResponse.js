@@ -18,7 +18,7 @@
   /**
    * The PageHistoricoAtrasoFaturaResponse model module.
    * @module model/PageHistoricoAtrasoFaturaResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

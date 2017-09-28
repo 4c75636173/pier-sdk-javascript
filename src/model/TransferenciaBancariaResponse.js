@@ -18,7 +18,7 @@
   /**
    * The TransferenciaBancariaResponse model module.
    * @module model/TransferenciaBancariaResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**
@@ -28,6 +28,14 @@
    * @class
    */
   var exports = function() {
+
+
+
+
+
+
+
+
 
 
 
@@ -149,6 +157,30 @@
       }
       if (data.hasOwnProperty('valorTaxaSaque')) {
         obj['valorTaxaSaque'] = ApiClient.convertToType(data['valorTaxaSaque'], 'Number');
+      }
+      if (data.hasOwnProperty('banco')) {
+        obj['banco'] = ApiClient.convertToType(data['banco'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroAgencia')) {
+        obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'String');
+      }
+      if (data.hasOwnProperty('digitoAgencia')) {
+        obj['digitoAgencia'] = ApiClient.convertToType(data['digitoAgencia'], 'String');
+      }
+      if (data.hasOwnProperty('numeroConta')) {
+        obj['numeroConta'] = ApiClient.convertToType(data['numeroConta'], 'String');
+      }
+      if (data.hasOwnProperty('digitoConta')) {
+        obj['digitoConta'] = ApiClient.convertToType(data['digitoConta'], 'String');
+      }
+      if (data.hasOwnProperty('flagContaPoupanca')) {
+        obj['flagContaPoupanca'] = ApiClient.convertToType(data['flagContaPoupanca'], 'Integer');
+      }
+      if (data.hasOwnProperty('documentoFavorecido')) {
+        obj['documentoFavorecido'] = ApiClient.convertToType(data['documentoFavorecido'], 'String');
+      }
+      if (data.hasOwnProperty('nomeFavorecido')) {
+        obj['nomeFavorecido'] = ApiClient.convertToType(data['nomeFavorecido'], 'String');
       }
     }
     return obj;
@@ -315,6 +347,54 @@
    * @member {Number} valorTaxaSaque
    */
   exports.prototype['valorTaxaSaque'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo do Banco
+   * @member {Integer} banco
+   */
+  exports.prototype['banco'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+   * @member {String} numeroAgencia
+   */
+  exports.prototype['numeroAgencia'] = undefined;
+
+  /**
+   * D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+   * @member {String} digitoAgencia
+   */
+  exports.prototype['digitoAgencia'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da Conta
+   * @member {String} numeroConta
+   */
+  exports.prototype['numeroConta'] = undefined;
+
+  /**
+   * D\u00C3\u00ADgito da Conta
+   * @member {String} digitoConta
+   */
+  exports.prototype['digitoConta'] = undefined;
+
+  /**
+   * Tipo da Conta
+   * @member {Integer} flagContaPoupanca
+   */
+  exports.prototype['flagContaPoupanca'] = undefined;
+
+  /**
+   * Documento do Favorecido
+   * @member {String} documentoFavorecido
+   */
+  exports.prototype['documentoFavorecido'] = undefined;
+
+  /**
+   * Nome do Favorecido
+   * @member {String} nomeFavorecido
+   */
+  exports.prototype['nomeFavorecido'] = undefined;
 
 
 

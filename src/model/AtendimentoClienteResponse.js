@@ -18,7 +18,7 @@
   /**
    * The AtendimentoClienteResponse model module.
    * @module model/AtendimentoClienteResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

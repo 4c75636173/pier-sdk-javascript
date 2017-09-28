@@ -18,7 +18,7 @@
   /**
    * The CartaoDetalheResponse model module.
    * @module model/CartaoDetalheResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

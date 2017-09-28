@@ -18,7 +18,7 @@
   /**
    * The DocumentoTipoRequest model module.
    * @module model/DocumentoTipoRequest
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

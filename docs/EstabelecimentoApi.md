@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET18**](EstabelecimentoApi.md#consultarUsingGET18) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET8**](EstabelecimentoApi.md#consultarUsingGET8) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET11**](EstabelecimentoApi.md#listarUsingGET11) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET9**](EstabelecimentoApi.md#consultarUsingGET9) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**listarUsingGET12**](EstabelecimentoApi.md#listarUsingGET12) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-<a name="consultarUsingGET18"></a>
-# **consultarUsingGET18**
-> TerminalResponse consultarUsingGET18(id)
+<a name="consultarUsingGET19"></a>
+# **consultarUsingGET19**
+> TerminalResponse consultarUsingGET19(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET18(id, callback);
+api.consultarUsingGET19(id, callback);
 ```
 
 ### Parameters
@@ -56,9 +56,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> EstabelecimentoResponse consultarUsingGET8(id)
+<a name="consultarUsingGET9"></a>
+# **consultarUsingGET9**
+> EstabelecimentoResponse consultarUsingGET9(id)
 
 Consultar estabelecimento por id
 
@@ -80,7 +80,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET9(id, callback);
 ```
 
 ### Parameters
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageEstabelecimentoResponse listarUsingGET11(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageEstabelecimentoResponse listarUsingGET12(opts)
 
 Lista Estabelecimentos
 
@@ -148,7 +148,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
@@ -191,9 +191,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageTerminalResponse listarUsingGET25(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageTerminalResponse listarUsingGET26(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -222,7 +222,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters

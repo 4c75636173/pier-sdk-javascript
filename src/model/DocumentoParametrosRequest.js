@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './PropriedadeDocumentoRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PropriedadeDocumentoRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DocumentoParametrosRequest = factory(root.Pier.ApiClient);
+    root.Pier.DocumentoParametrosRequest = factory(root.Pier.ApiClient, root.Pier.PropriedadeDocumentoRequest);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PropriedadeDocumentoRequest) {
   'use strict';
 
   /**
    * The DocumentoParametrosRequest model module.
    * @module model/DocumentoParametrosRequest
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**
@@ -56,7 +56,7 @@
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
       if (data.hasOwnProperty('parametrosConteudo')) {
-        obj['parametrosConteudo'] = ApiClient.convertToType(data['parametrosConteudo'], {'String': Object});
+        obj['parametrosConteudo'] = ApiClient.convertToType(data['parametrosConteudo'], [PropriedadeDocumentoRequest]);
       }
     }
     return obj;
@@ -82,8 +82,8 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Mapa de par\u00C3\u00A2metros para montagem do documento.
-   * @member {Object.<String, Object>} parametrosConteudo
+   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * @member {Array.<module:model/PropriedadeDocumentoRequest>} parametrosConteudo
    */
   exports.prototype['parametrosConteudo'] = undefined;
 

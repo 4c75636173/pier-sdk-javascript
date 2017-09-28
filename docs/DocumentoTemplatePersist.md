@@ -1,4 +1,4 @@
-# Pier.DocumentoTemplateRequest
+# Pier.DocumentoTemplatePersist
 
 ## Properties
 Name | Type | Description | Notes

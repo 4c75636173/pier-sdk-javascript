@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DocumentoTemplateRequest = factory(root.Pier.ApiClient);
+    root.Pier.DocumentoTemplatePersist = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The DocumentoTemplateRequest model module.
-   * @module model/DocumentoTemplateRequest
-   * @version 2.35.2
+   * The DocumentoTemplatePersist model module.
+   * @module model/DocumentoTemplatePersist
+   * @version 2.36.2
    */
 
   /**
-   * Constructs a new <code>DocumentoTemplateRequest</code>.
+   * Constructs a new <code>DocumentoTemplatePersist</code>.
    * Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
-   * @alias module:model/DocumentoTemplateRequest
+   * @alias module:model/DocumentoTemplatePersist
    * @class
    */
   var exports = function() {
@@ -34,11 +34,11 @@
   };
 
   /**
-   * Constructs a <code>DocumentoTemplateRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DocumentoTemplatePersist</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DocumentoTemplateRequest} obj Optional instance to populate.
-   * @return {module:model/DocumentoTemplateRequest} The populated <code>DocumentoTemplateRequest</code> instance.
+   * @param {module:model/DocumentoTemplatePersist} obj Optional instance to populate.
+   * @return {module:model/DocumentoTemplatePersist} The populated <code>DocumentoTemplatePersist</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 

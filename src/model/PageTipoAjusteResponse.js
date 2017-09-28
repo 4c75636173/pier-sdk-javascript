@@ -18,7 +18,7 @@
   /**
    * The PageTipoAjusteResponse model module.
    * @module model/PageTipoAjusteResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

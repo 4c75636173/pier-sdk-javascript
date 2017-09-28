@@ -18,7 +18,7 @@
   /**
    * The DocumentoTipoResponse model module.
    * @module model/DocumentoTipoResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

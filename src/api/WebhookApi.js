@@ -18,7 +18,7 @@
   /**
    * Webhook service.
    * @module api/WebhookApi
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**
@@ -97,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET28 operation.
-     * @callback module:api/WebhookApi~consultarUsingGET28Callback
+     * Callback function to receive the result of the consultarUsingGET30 operation.
+     * @callback module:api/WebhookApi~consultarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -108,15 +108,15 @@
      * Consultar Webhook
      * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-     * @param {module:api/WebhookApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhookApi~consultarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.consultarUsingGET28 = function(id, callback) {
+    this.consultarUsingGET30 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET30";
       }
 
 
@@ -143,8 +143,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET34 operation.
-     * @callback module:api/WebhookApi~listarUsingGET34Callback
+     * Callback function to receive the result of the listarUsingGET35 operation.
+     * @callback module:api/WebhookApi~listarUsingGET35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -161,10 +161,10 @@
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhookApi~listarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhookApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHookResponse}
      */
-    this.listarUsingGET34 = function(opts, callback) {
+    this.listarUsingGET35 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

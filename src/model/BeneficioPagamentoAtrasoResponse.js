@@ -18,7 +18,7 @@
   /**
    * The BeneficioPagamentoAtrasoResponse model module.
    * @module model/BeneficioPagamentoAtrasoResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

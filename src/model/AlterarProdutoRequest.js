@@ -18,7 +18,7 @@
   /**
    * The AlterarProdutoRequest model module.
    * @module model/AlterarProdutoRequest
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**
@@ -30,8 +30,9 @@
    */
   var exports = function(idProduto) {
 
-
     this['idProduto'] = idProduto;
+
+
   };
 
   /**
@@ -45,16 +46,25 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('idProduto')) {
+        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      }
       if (data.hasOwnProperty('idOrigemComercial')) {
         obj['idOrigemComercial'] = ApiClient.convertToType(data['idOrigemComercial'], 'Integer');
       }
-      if (data.hasOwnProperty('idProduto')) {
-        obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
+      if (data.hasOwnProperty('limiteGlobal')) {
+        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
       }
     }
     return obj;
   }
 
+
+  /**
+   * C\u00C3\u00B3digo identificador do produto.
+   * @member {Integer} idProduto
+   */
+  exports.prototype['idProduto'] = undefined;
 
   /**
    * C\u00C3\u00B3digo identificador da origem comercial.
@@ -63,10 +73,10 @@
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do produto.
-   * @member {Integer} idProduto
+   * Valor do novo limite Global.
+   * @member {Number} limiteGlobal
    */
-  exports.prototype['idProduto'] = undefined;
+  exports.prototype['limiteGlobal'] = undefined;
 
 
 

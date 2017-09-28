@@ -18,7 +18,7 @@
   /**
    * The PaisResponse model module.
    * @module model/PaisResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**

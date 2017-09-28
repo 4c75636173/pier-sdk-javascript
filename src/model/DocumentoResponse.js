@@ -18,7 +18,7 @@
   /**
    * The DocumentoResponse model module.
    * @module model/DocumentoResponse
-   * @version 2.35.2
+   * @version 2.36.2
    */
 
   /**
@@ -52,11 +52,11 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('idDocumentoTipo')) {
-        obj['idDocumentoTipo'] = ApiClient.convertToType(data['idDocumentoTipo'], 'Integer');
+      if (data.hasOwnProperty('idTipoDocumento')) {
+        obj['idTipoDocumento'] = ApiClient.convertToType(data['idTipoDocumento'], 'Integer');
       }
-      if (data.hasOwnProperty('idDocumentoTemplate')) {
-        obj['idDocumentoTemplate'] = ApiClient.convertToType(data['idDocumentoTemplate'], 'Integer');
+      if (data.hasOwnProperty('idTemplateDocumento')) {
+        obj['idTemplateDocumento'] = ApiClient.convertToType(data['idTemplateDocumento'], 'Integer');
       }
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
@@ -83,15 +83,15 @@
 
   /**
    * ID do Tipo de Documento associado.
-   * @member {Integer} idDocumentoTipo
+   * @member {Integer} idTipoDocumento
    */
-  exports.prototype['idDocumentoTipo'] = undefined;
+  exports.prototype['idTipoDocumento'] = undefined;
 
   /**
    * ID do Template de Documento associado.
-   * @member {Integer} idDocumentoTemplate
+   * @member {Integer} idTemplateDocumento
    */
-  exports.prototype['idDocumentoTemplate'] = undefined;
+  exports.prototype['idTemplateDocumento'] = undefined;
 
   /**
    * Nome do Documento.
