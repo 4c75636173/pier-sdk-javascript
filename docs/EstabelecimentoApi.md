@@ -4,61 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET9**](EstabelecimentoApi.md#consultarUsingGET9) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**listarUsingGET12**](EstabelecimentoApi.md#listarUsingGET12) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**consultarUsingGET10**](EstabelecimentoApi.md#consultarUsingGET10) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listarUsingGET13**](EstabelecimentoApi.md#listarUsingGET13) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET27**](EstabelecimentoApi.md#listarUsingGET27) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
 
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> TerminalResponse consultarUsingGET19(id)
-
-Apresenta os dados de um determinado Terminal
-
-Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.EstabelecimentoApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET19(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
-
-### Return type
-
-[**TerminalResponse**](TerminalResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> EstabelecimentoResponse consultarUsingGET9(id)
+<a name="consultarUsingGET10"></a>
+# **consultarUsingGET10**
+> EstabelecimentoResponse consultarUsingGET10(id)
 
 Consultar estabelecimento por id
 
@@ -80,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(id, callback);
+api.consultarUsingGET10(id, callback);
 ```
 
 ### Parameters
@@ -102,9 +56,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageEstabelecimentoResponse listarUsingGET12(opts)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> TerminalResponse consultarUsingGET20(id)
+
+Apresenta os dados de um determinado Terminal
+
+Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET20(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id). | 
+
+### Return type
+
+[**TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageEstabelecimentoResponse listarUsingGET13(opts)
 
 Lista Estabelecimentos
 
@@ -148,7 +148,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET13(opts, callback);
 ```
 
 ### Parameters
@@ -191,9 +191,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PageTerminalResponse listarUsingGET26(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PageTerminalResponse listarUsingGET27(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -222,7 +222,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters

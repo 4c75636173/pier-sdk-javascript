@@ -18,7 +18,7 @@
   /**
    * The PropriedadeDocumentoRequest model module.
    * @module model/PropriedadeDocumentoRequest
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -54,6 +55,9 @@
       if (data.hasOwnProperty('detalhesTipo')) {
         obj['detalhesTipo'] = ApiClient.convertToType(data['detalhesTipo'], 'String');
       }
+      if (data.hasOwnProperty('flagIndice')) {
+        obj['flagIndice'] = ApiClient.convertToType(data['flagIndice'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -77,6 +81,12 @@
    */
   exports.prototype['detalhesTipo'] = undefined;
 
+  /**
+   * Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+   * @member {Boolean} flagIndice
+   */
+  exports.prototype['flagIndice'] = undefined;
+
 
   /**
    * Allowed values for the <code>detalhesTipo</code> property.
@@ -84,12 +94,6 @@
    * @readonly
    */
   exports.DetalhesTipoEnum = { 
-    /**
-     * value: LIST
-     * @const
-     */
-    LIST: "LIST",
-    
     /**
      * value: IMAGEM
      * @const

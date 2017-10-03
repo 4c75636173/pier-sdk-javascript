@@ -18,7 +18,7 @@
   /**
    * The PageCartaoResponse model module.
    * @module model/PageCartaoResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

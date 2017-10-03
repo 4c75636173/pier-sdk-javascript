@@ -6,11 +6,11 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT10**](UsuarioApi.md#alterarUsingPUT10) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
+[**alterarUsingPUT11**](UsuarioApi.md#alterarUsingPUT11) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET29**](UsuarioApi.md#consultarUsingGET29) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET31**](UsuarioApi.md#consultarUsingGET31) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET33**](UsuarioApi.md#listarUsingGET33) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET35**](UsuarioApi.md#listarUsingGET35) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**salvarUsingPOST19**](UsuarioApi.md#salvarUsingPOST19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
@@ -118,9 +118,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT10"></a>
-# **alterarUsingPUT10**
-> UsuarioResponse alterarUsingPUT10(id, update)
+<a name="alterarUsingPUT11"></a>
+# **alterarUsingPUT11**
+> UsuarioResponse alterarUsingPUT11(id, update)
 
 Altera os usu\u00C3\u00A1rios cadastrados na base.
 
@@ -144,7 +144,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT10(id, update, callback);
+api.alterarUsingPUT11(id, update, callback);
 ```
 
 ### Parameters
@@ -213,9 +213,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET29"></a>
-# **consultarUsingGET29**
-> UsuarioResponse consultarUsingGET29(id)
+<a name="consultarUsingGET31"></a>
+# **consultarUsingGET31**
+> UsuarioResponse consultarUsingGET31(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -237,7 +237,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET29(id, callback);
+api.consultarUsingGET31(id, callback);
 ```
 
 ### Parameters
@@ -305,9 +305,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET33"></a>
-# **listarUsingGET33**
-> PageUsuarioResponse listarUsingGET33(opts)
+<a name="listarUsingGET35"></a>
+# **listarUsingGET35**
+> PageUsuarioResponse listarUsingGET35(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -336,7 +336,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET33(opts, callback);
+api.listarUsingGET35(opts, callback);
 ```
 
 ### Parameters

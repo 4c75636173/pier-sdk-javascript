@@ -18,7 +18,7 @@
   /**
    * The TemplateNotificacaoResponse model module.
    * @module model/TemplateNotificacaoResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -63,14 +63,14 @@
       if (data.hasOwnProperty('tipoNotificacao')) {
         obj['tipoNotificacao'] = ApiClient.convertToType(data['tipoNotificacao'], 'String');
       }
+      if (data.hasOwnProperty('templatePadrao')) {
+        obj['templatePadrao'] = ApiClient.convertToType(data['templatePadrao'], 'String');
+      }
       if (data.hasOwnProperty('remetente')) {
         obj['remetente'] = ApiClient.convertToType(data['remetente'], 'String');
       }
       if (data.hasOwnProperty('assunto')) {
         obj['assunto'] = ApiClient.convertToType(data['assunto'], 'String');
-      }
-      if (data.hasOwnProperty('conteudo')) {
-        obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
       }
       if (data.hasOwnProperty('dataInclusao')) {
         obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'String');
@@ -108,6 +108,12 @@
   exports.prototype['tipoNotificacao'] = undefined;
 
   /**
+   * Template padr\u00C3\u00A3o.
+   * @member {String} templatePadrao
+   */
+  exports.prototype['templatePadrao'] = undefined;
+
+  /**
    * Remetente.
    * @member {String} remetente
    */
@@ -118,12 +124,6 @@
    * @member {String} assunto
    */
   exports.prototype['assunto'] = undefined;
-
-  /**
-   * Conteudo do e-mail.
-   * @member {String} conteudo
-   */
-  exports.prototype['conteudo'] = undefined;
 
   /**
    * Data da inclus\u00C3\u00A3o.

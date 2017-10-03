@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './ReferenciaIdPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ReferenciaIdPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DocumentoTemplatePersist = factory(root.Pier.ApiClient);
+    root.Pier.DocumentoTemplatePersist = factory(root.Pier.ApiClient, root.Pier.ReferenciaIdPersist);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ReferenciaIdPersist) {
   'use strict';
 
   /**
    * The DocumentoTemplatePersist model module.
    * @module model/DocumentoTemplatePersist
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -44,11 +45,14 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idTipoDocumento')) {
-        obj['idTipoDocumento'] = ApiClient.convertToType(data['idTipoDocumento'], 'Integer');
+      if (data.hasOwnProperty('idTipoTemplate')) {
+        obj['idTipoTemplate'] = ApiClient.convertToType(data['idTipoTemplate'], 'Integer');
       }
       if (data.hasOwnProperty('template')) {
         obj['template'] = ApiClient.convertToType(data['template'], 'String');
+      }
+      if (data.hasOwnProperty('integracoes')) {
+        obj['integracoes'] = ApiClient.convertToType(data['integracoes'], [ReferenciaIdPersist]);
       }
     }
     return obj;
@@ -56,16 +60,22 @@
 
 
   /**
-   * ID para o Tipo de Documento vinculado ao template.
-   * @member {Integer} idTipoDocumento
+   * ID para o Tipo de Template vinculado ao template.
+   * @member {Integer} idTipoTemplate
    */
-  exports.prototype['idTipoDocumento'] = undefined;
+  exports.prototype['idTipoTemplate'] = undefined;
 
   /**
    * Template para o conte\u00C3\u00BAdo do documento.
    * @member {String} template
    */
   exports.prototype['template'] = undefined;
+
+  /**
+   * Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+   * @member {Array.<module:model/ReferenciaIdPersist>} integracoes
+   */
+  exports.prototype['integracoes'] = undefined;
 
 
 

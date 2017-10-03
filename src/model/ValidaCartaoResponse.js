@@ -18,7 +18,7 @@
   /**
    * The ValidaCartaoResponse model module.
    * @module model/ValidaCartaoResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

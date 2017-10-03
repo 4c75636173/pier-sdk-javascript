@@ -18,7 +18,7 @@
   /**
    * The TipoBoletoResponse model module.
    * @module model/TipoBoletoResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

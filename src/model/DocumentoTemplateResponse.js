@@ -18,7 +18,7 @@
   /**
    * The DocumentoTemplateResponse model module.
    * @module model/DocumentoTemplateResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -47,8 +47,8 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
-      if (data.hasOwnProperty('idTipoDocumento')) {
-        obj['idTipoDocumento'] = ApiClient.convertToType(data['idTipoDocumento'], 'Integer');
+      if (data.hasOwnProperty('idTipoTemplate')) {
+        obj['idTipoTemplate'] = ApiClient.convertToType(data['idTipoTemplate'], 'Integer');
       }
     }
     return obj;
@@ -62,10 +62,10 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * ID do Tipo de Documento.
-   * @member {Integer} idTipoDocumento
+   * ID do Tipo de Template.
+   * @member {Integer} idTipoTemplate
    */
-  exports.prototype['idTipoDocumento'] = undefined;
+  exports.prototype['idTipoTemplate'] = undefined;
 
 
 

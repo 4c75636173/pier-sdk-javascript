@@ -18,7 +18,7 @@
   /**
    * The PageFaturaConsignadaResponse model module.
    * @module model/PageFaturaConsignadaResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

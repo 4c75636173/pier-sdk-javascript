@@ -18,7 +18,7 @@
   /**
    * The CampoCodificadoDescricaoResponse model module.
    * @module model/CampoCodificadoDescricaoResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

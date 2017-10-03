@@ -18,7 +18,7 @@
   /**
    * Job service.
    * @module api/JobApi
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET14 operation.
-     * @callback module:api/JobApi~listarUsingGET14Callback
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/JobApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageJobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -208,10 +208,10 @@
      * @param {module:model/String} opts.status Status do Job
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/JobApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageJobResponse}
      */
-    this.listarUsingGET14 = function(opts, callback) {
+    this.listarUsingGET15 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST11 operation.
-     * @callback module:api/JobApi~salvarUsingPOST11Callback
+     * Callback function to receive the result of the salvarUsingPOST10 operation.
+     * @callback module:api/JobApi~salvarUsingPOST10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -257,25 +257,25 @@
      * @param {String} descricao descricao.
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
-     * @param {module:api/JobApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
-    this.salvarUsingPOST11 = function(descricao, cron, groovy, callback) {
+    this.salvarUsingPOST10 = function(descricao, cron, groovy, callback) {
       var postBody = groovy;
 
       // verify the required parameter 'descricao' is set
       if (descricao == undefined || descricao == null) {
-        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST10";
       }
 
       // verify the required parameter 'cron' is set
       if (cron == undefined || cron == null) {
-        throw "Missing the required parameter 'cron' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'cron' when calling salvarUsingPOST10";
       }
 
       // verify the required parameter 'groovy' is set
       if (groovy == undefined || groovy == null) {
-        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST10";
       }
 
 

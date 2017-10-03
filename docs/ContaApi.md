@@ -22,8 +22,8 @@ Method | HTTP request | Description
 [**consultarLancamentosFuturosFaturaUsingGET**](ContaApi.md#consultarLancamentosFuturosFaturaUsingGET) | **GET** /api/contas/{id}/faturas/consultar-aberta | Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
 [**consultarLimiteDisponibilidadeUsingGET1**](ContaApi.md#consultarLimiteDisponibilidadeUsingGET1) | **GET** /api/contas/{id}/limites-disponibilidades | Apresenta os limites da conta
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET27**](ContaApi.md#consultarUsingGET27) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-[**consultarUsingGET28**](ContaApi.md#consultarUsingGET28) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET29**](ContaApi.md#consultarUsingGET29) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+[**consultarUsingGET30**](ContaApi.md#consultarUsingGET30) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**consultarUsingGET6**](ContaApi.md#consultarUsingGET6) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
@@ -39,8 +39,8 @@ Method | HTTP request | Description
 [**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listarPagamentosUsingGET**](ContaApi.md#listarPagamentosUsingGET) | **GET** /api/contas/{id}/pagamentos | Lista hist\u00C3\u00B3rico de pagamentos da conta
 [**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET31**](ContaApi.md#listarUsingGET31) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-[**listarUsingGET32**](ContaApi.md#listarUsingGET32) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listarUsingGET33**](ContaApi.md#listarUsingGET33) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
+[**listarUsingGET34**](ContaApi.md#listarUsingGET34) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**listarUsingGET8**](ContaApi.md#listarUsingGET8) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
 [**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
@@ -982,9 +982,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET27"></a>
-# **consultarUsingGET27**
-> TransferenciaBancariaResponse consultarUsingGET27(id, idTransferencia, opts)
+<a name="consultarUsingGET29"></a>
+# **consultarUsingGET29**
+> TransferenciaBancariaResponse consultarUsingGET29(id, idTransferencia, opts)
 
 Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
 
@@ -1011,7 +1011,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET27(id, idTransferencia, opts, callback);
+api.consultarUsingGET29(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -1035,9 +1035,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET28"></a>
-# **consultarUsingGET28**
-> PageTransferenciaResponse consultarUsingGET28(id, idTransferencia)
+<a name="consultarUsingGET30"></a>
+# **consultarUsingGET30**
+> TransferenciaDetalheResponse consultarUsingGET30(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -1061,7 +1061,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET28(id, idTransferencia, callback);
+api.consultarUsingGET30(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
+[**TransferenciaDetalheResponse**](TransferenciaDetalheResponse.md)
 
 ### Authorization
 
@@ -1883,9 +1883,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET31"></a>
-# **listarUsingGET31**
-> PageTransferenciaBancariaResponse listarUsingGET31(id, opts)
+<a name="listarUsingGET33"></a>
+# **listarUsingGET33**
+> PageTransferenciaBancariaResponse listarUsingGET33(id, opts)
 
 Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
 
@@ -1913,7 +1913,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET31(id, opts, callback);
+api.listarUsingGET33(id, opts, callback);
 ```
 
 ### Parameters
@@ -1939,9 +1939,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET32"></a>
-# **listarUsingGET32**
-> PageTransferenciaResponse listarUsingGET32(id, opts)
+<a name="listarUsingGET34"></a>
+# **listarUsingGET34**
+> PageTransferenciaResponse listarUsingGET34(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1973,7 +1973,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET32(id, opts, callback);
+api.listarUsingGET34(id, opts, callback);
 ```
 
 ### Parameters
@@ -2272,7 +2272,7 @@ No authorization required
 
 <a name="transferirUsingPOST1"></a>
 # **transferirUsingPOST1**
-> PageTransferenciaResponse transferirUsingPOST1(id, idContaDestino, valorTransferencia)
+> TransferenciaDetalheResponse transferirUsingPOST1(id, idContaDestino, valorTransferencia)
 
 Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
@@ -2311,7 +2311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageTransferenciaResponse**](PageTransferenciaResponse.md)
+[**TransferenciaDetalheResponse**](TransferenciaDetalheResponse.md)
 
 ### Authorization
 

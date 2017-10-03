@@ -18,7 +18,7 @@
   /**
    * The DocumentoParametrosRequest model module.
    * @module model/DocumentoParametrosRequest
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -46,9 +45,6 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idTipoDocumento')) {
-        obj['idTipoDocumento'] = ApiClient.convertToType(data['idTipoDocumento'], 'Integer');
-      }
       if (data.hasOwnProperty('idTemplateDocumento')) {
         obj['idTemplateDocumento'] = ApiClient.convertToType(data['idTemplateDocumento'], 'Integer');
       }
@@ -62,12 +58,6 @@
     return obj;
   }
 
-
-  /**
-   * ID para o tipo de documento.
-   * @member {Integer} idTipoDocumento
-   */
-  exports.prototype['idTipoDocumento'] = undefined;
 
   /**
    * ID para o template do documento.

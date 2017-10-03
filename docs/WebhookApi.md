@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT11**](WebhookApi.md#alterarUsingPUT11) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET30**](WebhookApi.md#consultarUsingGET30) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET35**](WebhookApi.md#listarUsingGET35) | **GET** /api/webhooks | Lista os Webhooks
+[**alterarUsingPUT12**](WebhookApi.md#alterarUsingPUT12) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**consultarUsingGET32**](WebhookApi.md#consultarUsingGET32) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET37**](WebhookApi.md#listarUsingGET37) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST20**](WebhookApi.md#salvarUsingPOST20) | **POST** /api/webhooks | Salvar Webhook
 
 
-<a name="alterarUsingPUT11"></a>
-# **alterarUsingPUT11**
-> WebHookResponse alterarUsingPUT11(id, tipoEvento, url, opts)
+<a name="alterarUsingPUT12"></a>
+# **alterarUsingPUT12**
+> WebHookResponse alterarUsingPUT12(id, tipoEvento, url, opts)
 
 Alterar Webhook
 
@@ -41,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT11(id, tipoEvento, url, opts, callback);
+api.alterarUsingPUT12(id, tipoEvento, url, opts, callback);
 ```
 
 ### Parameters
@@ -66,9 +66,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET30"></a>
-# **consultarUsingGET30**
-> WebHookResponse consultarUsingGET30(id)
+<a name="consultarUsingGET32"></a>
+# **consultarUsingGET32**
+> WebHookResponse consultarUsingGET32(id)
 
 Consultar Webhook
 
@@ -90,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET30(id, callback);
+api.consultarUsingGET32(id, callback);
 ```
 
 ### Parameters
@@ -112,9 +112,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET35"></a>
-# **listarUsingGET35**
-> PageWebHookResponse listarUsingGET35(opts)
+<a name="listarUsingGET37"></a>
+# **listarUsingGET37**
+> PageWebHookResponse listarUsingGET37(opts)
 
 Lista os Webhooks
 
@@ -143,7 +143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET35(opts, callback);
+api.listarUsingGET37(opts, callback);
 ```
 
 ### Parameters

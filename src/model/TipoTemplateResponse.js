@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DocumentoTipoRequest = factory(root.Pier.ApiClient);
+    root.Pier.TipoTemplateResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The DocumentoTipoRequest model module.
-   * @module model/DocumentoTipoRequest
-   * @version 2.36.2
+   * The TipoTemplateResponse model module.
+   * @module model/TipoTemplateResponse
+   * @version 2.38.1
    */
 
   /**
-   * Constructs a new <code>DocumentoTipoRequest</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
-   * @alias module:model/DocumentoTipoRequest
+   * Constructs a new <code>TipoTemplateResponse</code>.
+   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template
+   * @alias module:model/TipoTemplateResponse
    * @class
    */
   var exports = function() {
@@ -32,19 +32,23 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>DocumentoTipoRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TipoTemplateResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DocumentoTipoRequest} obj Optional instance to populate.
-   * @return {module:model/DocumentoTipoRequest} The populated <code>DocumentoTipoRequest</code> instance.
+   * @param {module:model/TipoTemplateResponse} obj Optional instance to populate.
+   * @return {module:model/TipoTemplateResponse} The populated <code>TipoTemplateResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
       if (data.hasOwnProperty('nome')) {
         obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
@@ -60,19 +64,25 @@
 
 
   /**
-   * Nome do tipo de documento.
+   * ID do Tipo de Template.
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
+
+  /**
+   * Nome do Tipo de Template.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Sigla do tipo de documento.
+   * Sigla do Tipo de Template.
    * @member {String} sigla
    */
   exports.prototype['sigla'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The PortadorResponse model module.
    * @module model/PortadorResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

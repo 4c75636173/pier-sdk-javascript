@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailResponse', '../model/NotificacaoEmailRequest', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaSMSRequest'], factory);
+    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoDetalheResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PageCodigoSegurancaResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailResponse', '../model/NotificacaoEmailRequest', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaEMAILPersist', '../model/CodigoSegurancaSMSRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailResponse'), require('../model/NotificacaoEmailRequest'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaSMSRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoDetalheResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PageCodigoSegurancaResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailResponse'), require('../model/NotificacaoEmailRequest'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaEMAILPersist'), require('../model/CodigoSegurancaSMSRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailResponse, root.Pier.NotificacaoEmailRequest, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaSMSRequest);
+    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoDetalheResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PageCodigoSegurancaResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailResponse, root.Pier.NotificacaoEmailRequest, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaEMAILPersist, root.Pier.CodigoSegurancaSMSRequest);
   }
-}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoResponse, NotificacaoSMSResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailResponse, NotificacaoEmailRequest, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaSMSRequest) {
+}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoDetalheResponse, NotificacaoSMSResponse, CodigoSegurancaResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PageCodigoSegurancaResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailResponse, NotificacaoEmailRequest, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaEMAILPersist, CodigoSegurancaSMSRequest) {
   'use strict';
 
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -88,7 +88,7 @@
      * Callback function to receive the result of the alterarTemplateNotificacaoUsingPUT operation.
      * @callback module:api/NotificacaoApi~alterarTemplateNotificacaoUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TemplateNotificacaoResponse} data The data returned by the service call.
+     * @param {module:model/TemplateNotificacaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -103,8 +103,9 @@
      * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
      * @param {String} opts.remetente Remetente
      * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+     * @param {Boolean} opts.templatePadrao Template Padr\u00C3\u00A3o.
      * @param {module:api/NotificacaoApi~alterarTemplateNotificacaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TemplateNotificacaoResponse}
+     * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
     this.alterarTemplateNotificacaoUsingPUT = function(id, conteudo, opts, callback) {
       opts = opts || {};
@@ -129,7 +130,8 @@
         'tipoLayout': opts['tipoLayout'],
         'tipoNotificacao': opts['tipoNotificacao'],
         'remetente': opts['remetente'],
-        'assunto': opts['assunto']
+        'assunto': opts['assunto'],
+        'templatePadrao': opts['templatePadrao']
       };
       var headerParams = {
       };
@@ -139,7 +141,7 @@
       var authNames = [];
       var contentTypes = ['text/plain'];
       var accepts = ['application/json'];
-      var returnType = TemplateNotificacaoResponse;
+      var returnType = TemplateNotificacaoDetalheResponse;
 
       return this.apiClient.callApi(
         '/api/templates-notificacoes/{id}', 'PUT',
@@ -246,10 +248,102 @@
     }
 
     /**
+     * Callback function to receive the result of the consultarPorEmailUsingGET operation.
+     * @callback module:api/NotificacaoApi~consultarPorEmailUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CodigoSegurancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+     * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * @param {module:api/NotificacaoApi~consultarPorEmailUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CodigoSegurancaResponse}
+     */
+    this.consultarPorEmailUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarPorEmailUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CodigoSegurancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/codigos-seguranca-email/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarPorSMSUsingGET operation.
+     * @callback module:api/NotificacaoApi~consultarPorSMSUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CodigoSegurancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+     * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * @param {module:api/NotificacaoApi~consultarPorSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CodigoSegurancaResponse}
+     */
+    this.consultarPorSMSUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarPorSMSUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CodigoSegurancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/codigos-seguranca-sms/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the consultarTemplateNotificacaoUsingGET operation.
      * @callback module:api/NotificacaoApi~consultarTemplateNotificacaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TemplateNotificacaoResponse} data The data returned by the service call.
+     * @param {module:model/TemplateNotificacaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -258,7 +352,7 @@
      * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
      * @param {module:api/NotificacaoApi~consultarTemplateNotificacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TemplateNotificacaoResponse}
+     * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
     this.consultarTemplateNotificacaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -282,7 +376,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = TemplateNotificacaoResponse;
+      var returnType = TemplateNotificacaoDetalheResponse;
 
       return this.apiClient.callApi(
         '/api/templates-notificacoes/{id}', 'GET',
@@ -292,8 +386,53 @@
     }
 
     /**
-     * Callback function to receive the result of the gerarTokenUsingPOST operation.
-     * @callback module:api/NotificacaoApi~gerarTokenUsingPOSTCallback
+     * Callback function to receive the result of the gerarTokenEMAILUsingPOST operation.
+     * @callback module:api/NotificacaoApi~gerarTokenEMAILUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+     * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * @param {String} email email
+     * @param {module:api/NotificacaoApi~gerarTokenEMAILUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.gerarTokenEMAILUsingPOST = function(email, callback) {
+      var postBody = email;
+
+      // verify the required parameter 'email' is set
+      if (email == undefined || email == null) {
+        throw "Missing the required parameter 'email' when calling gerarTokenEMAILUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/notificacoes-email/gerar-codigo-seguranca', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the gerarTokenSMSUsingPOST operation.
+     * @callback module:api/NotificacaoApi~gerarTokenSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -303,15 +442,15 @@
      * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
      * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
      * @param {module:model/CodigoSegurancaSMSPersist} persist persist
-     * @param {module:api/NotificacaoApi~gerarTokenUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NotificacaoApi~gerarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.gerarTokenUsingPOST = function(persist, callback) {
+    this.gerarTokenSMSUsingPOST = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling gerarTokenUsingPOST";
+        throw "Missing the required parameter 'persist' when calling gerarTokenSMSUsingPOST";
       }
 
 
@@ -378,6 +517,100 @@
 
       return this.apiClient.callApi(
         '/api/configuracoes-email', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarPorEmailUsingGET operation.
+     * @callback module:api/NotificacaoApi~listarPorEmailUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageCodigoSegurancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+     * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/NotificacaoApi~listarPorEmailUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCodigoSegurancaResponse}
+     */
+    this.listarPorEmailUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageCodigoSegurancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/codigos-seguranca-email', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarPorSMSUsingGET operation.
+     * @callback module:api/NotificacaoApi~listarPorSMSUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageCodigoSegurancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+     * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/NotificacaoApi~listarPorSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCodigoSegurancaResponse}
+     */
+    this.listarPorSMSUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageCodigoSegurancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/codigos-seguranca-sms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -906,7 +1139,7 @@
      * Callback function to receive the result of the salvarTemplateNotificacaoUsingPOST operation.
      * @callback module:api/NotificacaoApi~salvarTemplateNotificacaoUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TemplateNotificacaoResponse} data The data returned by the service call.
+     * @param {module:model/TemplateNotificacaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -920,8 +1153,9 @@
      * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
      * @param {String} opts.remetente Remetente
      * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+     * @param {Boolean} opts.templatePadrao Template Padr\u00C3\u00A3o.
      * @param {module:api/NotificacaoApi~salvarTemplateNotificacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TemplateNotificacaoResponse}
+     * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
     this.salvarTemplateNotificacaoUsingPOST = function(conteudo, opts, callback) {
       opts = opts || {};
@@ -940,7 +1174,8 @@
         'tipoLayout': opts['tipoLayout'],
         'tipoNotificacao': opts['tipoNotificacao'],
         'remetente': opts['remetente'],
-        'assunto': opts['assunto']
+        'assunto': opts['assunto'],
+        'templatePadrao': opts['templatePadrao']
       };
       var headerParams = {
       };
@@ -950,7 +1185,7 @@
       var authNames = [];
       var contentTypes = ['text/plain'];
       var accepts = ['application/json'];
-      var returnType = TemplateNotificacaoResponse;
+      var returnType = TemplateNotificacaoDetalheResponse;
 
       return this.apiClient.callApi(
         '/api/templates-notificacoes', 'POST',
@@ -960,8 +1195,53 @@
     }
 
     /**
-     * Callback function to receive the result of the validarTokenUsingPOST operation.
-     * @callback module:api/NotificacaoApi~validarTokenUsingPOSTCallback
+     * Callback function to receive the result of the validarTokenEMAILUsingPOST operation.
+     * @callback module:api/NotificacaoApi~validarTokenEMAILUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+     * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * @param {module:model/CodigoSegurancaEMAILPersist} request request
+     * @param {module:api/NotificacaoApi~validarTokenEMAILUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.validarTokenEMAILUsingPOST = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request == undefined || request == null) {
+        throw "Missing the required parameter 'request' when calling validarTokenEMAILUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/notificacoes-email/validar-codigo-seguranca', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarTokenSMSUsingPOST operation.
+     * @callback module:api/NotificacaoApi~validarTokenSMSUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -971,15 +1251,15 @@
      * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
      * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
      * @param {module:model/CodigoSegurancaSMSRequest} request request
-     * @param {module:api/NotificacaoApi~validarTokenUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NotificacaoApi~validarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.validarTokenUsingPOST = function(request, callback) {
+    this.validarTokenSMSUsingPOST = function(request, callback) {
       var postBody = request;
 
       // verify the required parameter 'request' is set
       if (request == undefined || request == null) {
-        throw "Missing the required parameter 'request' when calling validarTokenUsingPOST";
+        throw "Missing the required parameter 'request' when calling validarTokenSMSUsingPOST";
       }
 
 

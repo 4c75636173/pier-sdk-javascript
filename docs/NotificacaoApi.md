@@ -8,9 +8,14 @@ Method | HTTP request | Description
 [**alterarTemplateNotificacaoUsingPUT**](NotificacaoApi.md#alterarTemplateNotificacaoUsingPUT) | **PUT** /api/templates-notificacoes/{id} | Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 [**atualizarSMSUsingPOST**](NotificacaoApi.md#atualizarSMSUsingPOST) | **POST** /api/notificacoes/sms/atualizar-status | Atualizar SMS
 [**consultarConfiguracaoUsingGET**](NotificacaoApi.md#consultarConfiguracaoUsingGET) | **GET** /api/configuracoes-email/{id} | Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+[**consultarPorEmailUsingGET**](NotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+[**consultarPorSMSUsingGET**](NotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
 [**consultarTemplateNotificacaoUsingGET**](NotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**gerarTokenUsingPOST**](NotificacaoApi.md#gerarTokenUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+[**gerarTokenEMAILUsingPOST**](NotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+[**gerarTokenSMSUsingPOST**](NotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
 [**listarConfiguracaoUsingGET**](NotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+[**listarPorEmailUsingGET**](NotificacaoApi.md#listarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+[**listarPorSMSUsingGET**](NotificacaoApi.md#listarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms | Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
 [**listarPushUsingGET**](NotificacaoApi.md#listarPushUsingGET) | **GET** /api/notificacoes/push | Listar Push
 [**listarSMSUsingGET**](NotificacaoApi.md#listarSMSUsingGET) | **GET** /api/notificacoes/sms | Listar SMS
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
@@ -23,7 +28,8 @@ Method | HTTP request | Description
 [**salvarPushUsingPOST**](NotificacaoApi.md#salvarPushUsingPOST) | **POST** /api/notificacoes/push/apns | Enviar Push APNS
 [**salvarSMSUsingPOST**](NotificacaoApi.md#salvarSMSUsingPOST) | **POST** /api/notificacoes/sms | Enviar SMS
 [**salvarTemplateNotificacaoUsingPOST**](NotificacaoApi.md#salvarTemplateNotificacaoUsingPOST) | **POST** /api/templates-notificacoes | Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-[**validarTokenUsingPOST**](NotificacaoApi.md#validarTokenUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+[**validarTokenEMAILUsingPOST**](NotificacaoApi.md#validarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+[**validarTokenSMSUsingPOST**](NotificacaoApi.md#validarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/validar-codigo-seguranca | Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
 
 
 <a name="alterarConfiguracaoUsingPUT"></a>
@@ -77,7 +83,7 @@ No authorization required
 
 <a name="alterarTemplateNotificacaoUsingPUT"></a>
 # **alterarTemplateNotificacaoUsingPUT**
-> TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT(id, conteudo, opts)
+> TemplateNotificacaoDetalheResponse alterarTemplateNotificacaoUsingPUT(id, conteudo, opts)
 
 Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -98,7 +104,8 @@ var opts = {
   'tipoLayout': "tipoLayout_example", // {String} Tipo do layout.
   'tipoNotificacao': "tipoNotificacao_example", // {String} Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
   'remetente': "remetente_example", // {String} Remetente
-  'assunto': "assunto_example" // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+  'assunto': "assunto_example", // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+  'templatePadrao': true // {Boolean} Template Padr\u00C3\u00A3o.
 };
 
 var callback = function(error, data, response) {
@@ -122,10 +129,11 @@ Name | Type | Description  | Notes
  **tipoNotificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **templatePadrao** | **Boolean**| Template Padr\u00C3\u00A3o. | [optional] 
 
 ### Return type
 
-[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -237,9 +245,101 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="consultarPorEmailUsingGET"></a>
+# **consultarPorEmailUsingGET**
+> CodigoSegurancaResponse consultarPorEmailUsingGET(id)
+
+Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
+
+Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarPorEmailUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+
+### Return type
+
+[**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarPorSMSUsingGET"></a>
+# **consultarPorSMSUsingGET**
+> CodigoSegurancaResponse consultarPorSMSUsingGET(id)
+
+Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
+
+Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarPorSMSUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail. | 
+
+### Return type
+
+[**CodigoSegurancaResponse**](CodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="consultarTemplateNotificacaoUsingGET"></a>
 # **consultarTemplateNotificacaoUsingGET**
-> TemplateNotificacaoResponse consultarTemplateNotificacaoUsingGET(id)
+> TemplateNotificacaoDetalheResponse consultarTemplateNotificacaoUsingGET(id)
 
 Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -272,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -283,9 +383,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="gerarTokenUsingPOST"></a>
-# **gerarTokenUsingPOST**
-> &#39;String&#39; gerarTokenUsingPOST(persist)
+<a name="gerarTokenEMAILUsingPOST"></a>
+# **gerarTokenEMAILUsingPOST**
+> &#39;String&#39; gerarTokenEMAILUsingPOST(email)
+
+Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
+
+Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var email = "email_example"; // {String} email
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.gerarTokenEMAILUsingPOST(email, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **String**| email | 
+
+### Return type
+
+**&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="gerarTokenSMSUsingPOST"></a>
+# **gerarTokenSMSUsingPOST**
+> &#39;String&#39; gerarTokenSMSUsingPOST(persist)
 
 Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
 
@@ -307,7 +453,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarTokenUsingPOST(persist, callback);
+api.gerarTokenSMSUsingPOST(persist, callback);
 ```
 
 ### Parameters
@@ -370,6 +516,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageConfiguracaoEmailResponse**](PageConfiguracaoEmailResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarPorEmailUsingGET"></a>
+# **listarPorEmailUsingGET**
+> PageCodigoSegurancaResponse listarPorEmailUsingGET(opts)
+
+Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
+
+Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarPorEmailUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarPorSMSUsingGET"></a>
+# **listarPorSMSUsingGET**
+> PageCodigoSegurancaResponse listarPorSMSUsingGET(opts)
+
+Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
+
+Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarPorSMSUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageCodigoSegurancaResponse**](PageCodigoSegurancaResponse.md)
 
 ### Authorization
 
@@ -924,7 +1172,7 @@ No authorization required
 
 <a name="salvarTemplateNotificacaoUsingPOST"></a>
 # **salvarTemplateNotificacaoUsingPOST**
-> TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST(conteudo, opts)
+> TemplateNotificacaoDetalheResponse salvarTemplateNotificacaoUsingPOST(conteudo, opts)
 
 Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
 
@@ -943,7 +1191,8 @@ var opts = {
   'tipoLayout': "tipoLayout_example", // {String} Tipo do layout.
   'tipoNotificacao': "tipoNotificacao_example", // {String} Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
   'remetente': "remetente_example", // {String} Remetente
-  'assunto': "assunto_example" // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+  'assunto': "assunto_example", // {String} Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+  'templatePadrao': true // {Boolean} Template Padr\u00C3\u00A3o.
 };
 
 var callback = function(error, data, response) {
@@ -966,10 +1215,11 @@ Name | Type | Description  | Notes
  **tipoNotificacao** | **String**| Tipo da notifica\u00C3\u00A7\u00C3\u00A3o. | [optional] 
  **remetente** | **String**| Remetente | [optional] 
  **assunto** | **String**| Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+ **templatePadrao** | **Boolean**| Template Padr\u00C3\u00A3o. | [optional] 
 
 ### Return type
 
-[**TemplateNotificacaoResponse**](TemplateNotificacaoResponse.md)
+[**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
 
 ### Authorization
 
@@ -980,9 +1230,55 @@ No authorization required
  - **Content-Type**: text/plain
  - **Accept**: application/json
 
-<a name="validarTokenUsingPOST"></a>
-# **validarTokenUsingPOST**
-> &#39;String&#39; validarTokenUsingPOST(request)
+<a name="validarTokenEMAILUsingPOST"></a>
+# **validarTokenEMAILUsingPOST**
+> &#39;String&#39; validarTokenEMAILUsingPOST(request)
+
+Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
+
+Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var request = new Pier.CodigoSegurancaEMAILPersist(); // {CodigoSegurancaEMAILPersist} request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarTokenEMAILUsingPOST(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CodigoSegurancaEMAILPersist**](CodigoSegurancaEMAILPersist.md)| request | 
+
+### Return type
+
+**&#39;String&#39;**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarTokenSMSUsingPOST"></a>
+# **validarTokenSMSUsingPOST**
+> &#39;String&#39; validarTokenSMSUsingPOST(request)
 
 Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
 
@@ -1004,7 +1300,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarTokenUsingPOST(request, callback);
+api.validarTokenSMSUsingPOST(request, callback);
 ```
 
 ### Parameters

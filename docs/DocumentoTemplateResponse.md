@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | ID do Template do Documento. | [optional] 
-**idTipoDocumento** | **Integer** | ID do Tipo de Documento. | [optional] 
+**idTipoTemplate** | **Integer** | ID do Tipo de Template. | [optional] 
 
 

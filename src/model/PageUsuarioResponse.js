@@ -18,7 +18,7 @@
   /**
    * The PageUsuarioResponse model module.
    * @module model/PageUsuarioResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**

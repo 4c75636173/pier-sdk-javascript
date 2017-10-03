@@ -18,7 +18,7 @@
   /**
    * The TransferenciaResponse model module.
    * @module model/TransferenciaResponse
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -28,9 +28,6 @@
    * @class
    */
   var exports = function() {
-
-
-
 
 
 
@@ -59,20 +56,11 @@
       if (data.hasOwnProperty('idContaOrigem')) {
         obj['idContaOrigem'] = ApiClient.convertToType(data['idContaOrigem'], 'Integer');
       }
-      if (data.hasOwnProperty('nomePessoaOrigem')) {
-        obj['nomePessoaOrigem'] = ApiClient.convertToType(data['nomePessoaOrigem'], 'String');
-      }
       if (data.hasOwnProperty('idContaDestino')) {
         obj['idContaDestino'] = ApiClient.convertToType(data['idContaDestino'], 'Integer');
       }
-      if (data.hasOwnProperty('nomePessoaDestino')) {
-        obj['nomePessoaDestino'] = ApiClient.convertToType(data['nomePessoaDestino'], 'String');
-      }
       if (data.hasOwnProperty('valorTransferencia')) {
         obj['valorTransferencia'] = ApiClient.convertToType(data['valorTransferencia'], 'Number');
-      }
-      if (data.hasOwnProperty('valorTarifa')) {
-        obj['valorTarifa'] = ApiClient.convertToType(data['valorTarifa'], 'Number');
       }
     }
     return obj;
@@ -98,34 +86,16 @@
   exports.prototype['idContaOrigem'] = undefined;
 
   /**
-   * Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
-   * @member {String} nomePessoaOrigem
-   */
-  exports.prototype['nomePessoaOrigem'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
    * @member {Integer} idContaDestino
    */
   exports.prototype['idContaDestino'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cliente Portador Cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-   * @member {String} nomePessoaDestino
-   */
-  exports.prototype['nomePessoaDestino'] = undefined;
-
-  /**
    * Valor estabelecido para ser transferido.
    * @member {Number} valorTransferencia
    */
   exports.prototype['valorTransferencia'] = undefined;
-
-  /**
-   * Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
-   * @member {Number} valorTarifa
-   */
-  exports.prototype['valorTarifa'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * Usuario service.
    * @module api/UsuarioApi
-   * @version 2.36.2
+   * @version 2.38.1
    */
 
   /**
@@ -146,8 +146,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT10 operation.
-     * @callback module:api/UsuarioApi~alterarUsingPUT10Callback
+     * Callback function to receive the result of the alterarUsingPUT11 operation.
+     * @callback module:api/UsuarioApi~alterarUsingPUT11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -158,20 +158,20 @@
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:model/UsuarioUpdate} update update
-     * @param {module:api/UsuarioApi~alterarUsingPUT10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~alterarUsingPUT11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.alterarUsingPUT10 = function(id, update, callback) {
+    this.alterarUsingPUT11 = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT10";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT11";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling alterarUsingPUT10";
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT11";
       }
 
 
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET29 operation.
-     * @callback module:api/UsuarioApi~consultarUsingGET29Callback
+     * Callback function to receive the result of the consultarUsingGET31 operation.
+     * @callback module:api/UsuarioApi~consultarUsingGET31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -255,15 +255,15 @@
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:api/UsuarioApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~consultarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET29 = function(id, callback) {
+    this.consultarUsingGET31 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET31";
       }
 
 
@@ -336,8 +336,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET33 operation.
-     * @callback module:api/UsuarioApi~listarUsingGET33Callback
+     * Callback function to receive the result of the listarUsingGET35 operation.
+     * @callback module:api/UsuarioApi~listarUsingGET35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -354,10 +354,10 @@
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuarioApi~listarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET33 = function(opts, callback) {
+    this.listarUsingGET35 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
