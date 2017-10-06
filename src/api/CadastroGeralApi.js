@@ -18,7 +18,7 @@
   /**
    * CadastroGeral service.
    * @module api/CadastroGeralApi
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**
@@ -230,8 +230,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET15 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET15Callback
+     * Callback function to receive the result of the consultarUsingGET16 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -241,15 +241,15 @@
      * Apresenta os dados de um determinado Produto
      * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ProdutoDetalhesResponse}
      */
-    this.consultarUsingGET15 = function(id, callback) {
+    this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
       }
 
 
@@ -322,8 +322,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET21 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET21Callback
+     * Callback function to receive the result of the consultarUsingGET22 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoAjusteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -338,10 +338,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de ajuste.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoAjusteResponse}
      */
-    this.consultarUsingGET21 = function(opts, callback) {
+    this.consultarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +373,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoBoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -390,10 +390,10 @@
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de boleto.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
      * @param {Integer} opts.banco C\u00C3\u00B3digo identificador do banco.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoBoletoResponse}
      */
-    this.consultarUsingGET22 = function(opts, callback) {
+    this.consultarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -426,8 +426,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET23 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET23Callback
+     * Callback function to receive the result of the consultarUsingGET24 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -437,15 +437,15 @@
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEnderecoResponse}
      */
-    this.consultarUsingGET23 = function(id, callback) {
+    this.consultarUsingGET24 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
       }
 
 
@@ -472,8 +472,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET24 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET24Callback
+     * Callback function to receive the result of the consultarUsingGET25 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -485,25 +485,25 @@
      * @param {Integer} idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
      * @param {Integer} idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
      * @param {String} codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOperacaoResponse}
      */
-    this.consultarUsingGET24 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
+    this.consultarUsingGET25 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
       var postBody = null;
 
       // verify the required parameter 'idCartao' is set
       if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET25";
       }
 
       // verify the required parameter 'idEstabelecimento' is set
       if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET25";
       }
 
       // verify the required parameter 'codigoProcessamento' is set
       if (codigoProcessamento == undefined || codigoProcessamento == null) {
-        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET25";
       }
 
 
@@ -532,8 +532,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -543,15 +543,15 @@
      * Apresenta os dados de um determinado Tipo de Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTelefoneResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET27 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
       }
 
 
@@ -1164,8 +1164,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1188,10 +1188,10 @@
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {String} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {String} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastroGeralApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortadorResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1231,8 +1231,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET21Callback
+     * Callback function to receive the result of the listarUsingGET22 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageProdutoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1248,10 +1248,10 @@
      * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
      * @param {Integer} opts.status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
      * @param {Integer} opts.idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-     * @param {module:api/CadastroGeralApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageProdutoResponse}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1284,8 +1284,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePromotorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1303,10 +1303,10 @@
      * @param {String} opts.dataCadastro Data da Inclus\u00C3\u00A3o.
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
      * @param {Integer} opts.idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
-     * @param {module:api/CadastroGeralApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePromotorResponse}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1341,8 +1341,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET28 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET28Callback
+     * Callback function to receive the result of the listarUsingGET29 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1357,10 +1357,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
      * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
-     * @param {module:api/CadastroGeralApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoEnderecoResponse}
      */
-    this.listarUsingGET28 = function(opts, callback) {
+    this.listarUsingGET29 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1439,8 +1439,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET30 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET30Callback
+     * Callback function to receive the result of the listarUsingGET31 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1455,10 +1455,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
      * @param {String} opts.nome Nome do Tipo do Telefone
-     * @param {module:api/CadastroGeralApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefoneResponse}
      */
-    this.listarUsingGET30 = function(opts, callback) {
+    this.listarUsingGET31 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1490,8 +1490,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET36 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET36Callback
+     * Callback function to receive the result of the listarUsingGET37 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageControleVencimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1505,10 +1505,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.dataVencimento Indica a data de vencimento das faturas
-     * @param {module:api/CadastroGeralApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageControleVencimentoResponse}
      */
-    this.listarUsingGET36 = function(opts, callback) {
+    this.listarUsingGET37 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

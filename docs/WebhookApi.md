@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT12**](WebhookApi.md#alterarUsingPUT12) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET32**](WebhookApi.md#consultarUsingGET32) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET37**](WebhookApi.md#listarUsingGET37) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST20**](WebhookApi.md#salvarUsingPOST20) | **POST** /api/webhooks | Salvar Webhook
+[**consultarUsingGET33**](WebhookApi.md#consultarUsingGET33) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET38**](WebhookApi.md#listarUsingGET38) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST21**](WebhookApi.md#salvarUsingPOST21) | **POST** /api/webhooks | Salvar Webhook
 
 
 <a name="alterarUsingPUT12"></a>
@@ -66,9 +66,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET32"></a>
-# **consultarUsingGET32**
-> WebHookResponse consultarUsingGET32(id)
+<a name="consultarUsingGET33"></a>
+# **consultarUsingGET33**
+> WebHookResponse consultarUsingGET33(id)
 
 Consultar Webhook
 
@@ -90,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET32(id, callback);
+api.consultarUsingGET33(id, callback);
 ```
 
 ### Parameters
@@ -112,9 +112,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET37"></a>
-# **listarUsingGET37**
-> PageWebHookResponse listarUsingGET37(opts)
+<a name="listarUsingGET38"></a>
+# **listarUsingGET38**
+> PageWebHookResponse listarUsingGET38(opts)
 
 Lista os Webhooks
 
@@ -143,7 +143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET37(opts, callback);
+api.listarUsingGET38(opts, callback);
 ```
 
 ### Parameters
@@ -171,9 +171,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST20"></a>
-# **salvarUsingPOST20**
-> WebHookResponse salvarUsingPOST20(tipoEvento, url)
+<a name="salvarUsingPOST21"></a>
+# **salvarUsingPOST21**
+> WebHookResponse salvarUsingPOST21(tipoEvento, url)
 
 Salvar Webhook
 
@@ -197,7 +197,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST20(tipoEvento, url, callback);
+api.salvarUsingPOST21(tipoEvento, url, callback);
 ```
 
 ### Parameters

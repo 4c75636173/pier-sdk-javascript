@@ -18,7 +18,7 @@
   /**
    * The AlterarProdutoRequest model module.
    * @module model/AlterarProdutoRequest
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

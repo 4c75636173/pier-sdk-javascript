@@ -18,7 +18,7 @@
   /**
    * The EmprestimoPessoalRequest model module.
    * @module model/EmprestimoPessoalRequest
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

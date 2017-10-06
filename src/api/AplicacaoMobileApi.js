@@ -18,7 +18,7 @@
   /**
    * AplicacaoMobile service.
    * @module api/AplicacaoMobileApi
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

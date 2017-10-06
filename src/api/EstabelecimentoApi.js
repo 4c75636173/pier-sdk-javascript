@@ -18,7 +18,7 @@
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Consultar estabelecimento por id
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET10 = function(id, callback) {
+    this.consultarUsingGET11 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -90,15 +90,15 @@
      * Apresenta os dados de um determinado Terminal
      * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET21 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
       }
 
 
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET13 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET13Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -158,10 +158,10 @@
      * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
      * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
      * @param {Integer} opts.inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET13 = function(opts, callback) {
+    this.listarUsingGET14 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -210,8 +210,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET27 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET27Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -228,10 +228,10 @@
      * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
      * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
      * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET27 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

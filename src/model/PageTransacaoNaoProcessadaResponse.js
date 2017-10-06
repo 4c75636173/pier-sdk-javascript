@@ -18,7 +18,7 @@
   /**
    * The PageTransacaoNaoProcessadaResponse model module.
    * @module model/PageTransacaoNaoProcessadaResponse
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

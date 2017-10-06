@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT3**](FAQApi.md#alterarUsingPUT3) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET11**](FAQApi.md#consultarUsingGET11) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET14**](FAQApi.md#listarUsingGET14) | **GET** /api/faqs | Lista FAQs
+[**consultarUsingGET12**](FAQApi.md#consultarUsingGET12) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET15**](FAQApi.md#listarUsingGET15) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
@@ -131,9 +131,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET11"></a>
-# **consultarUsingGET11**
-> FaqResponse consultarUsingGET11(id)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> FaqResponse consultarUsingGET12(id)
 
 Consultar FAQ por id
 
@@ -155,7 +155,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET11(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET14"></a>
-# **listarUsingGET14**
-> PageFaqResponse listarUsingGET14(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PageFaqResponse listarUsingGET15(opts)
 
 Lista FAQs
 
@@ -211,7 +211,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET14(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters

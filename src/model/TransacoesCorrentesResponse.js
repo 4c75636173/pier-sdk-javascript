@@ -18,7 +18,7 @@
   /**
    * The TransacoesCorrentesResponse model module.
    * @module model/TransacoesCorrentesResponse
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -165,6 +166,9 @@
       }
       if (data.hasOwnProperty('nomeEstabelecimento')) {
         obj['nomeEstabelecimento'] = ApiClient.convertToType(data['nomeEstabelecimento'], 'String');
+      }
+      if (data.hasOwnProperty('nomeFantasiaEstabelecimento')) {
+        obj['nomeFantasiaEstabelecimento'] = ApiClient.convertToType(data['nomeFantasiaEstabelecimento'], 'String');
       }
       if (data.hasOwnProperty('localidadeEstabelecimento')) {
         obj['localidadeEstabelecimento'] = ApiClient.convertToType(data['localidadeEstabelecimento'], 'String');
@@ -368,6 +372,12 @@
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
+
+  /**
+   * Nome Fantasia do Estabelecimento.
+   * @member {String} nomeFantasiaEstabelecimento
+   */
+  exports.prototype['nomeFantasiaEstabelecimento'] = undefined;
 
   /**
    * Localidade do Estabelecimento.

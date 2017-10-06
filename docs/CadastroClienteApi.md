@@ -12,24 +12,24 @@ Method | HTTP request | Description
 [**atribuirAssinaturaClienteUsingPOST**](CadastroClienteApi.md#atribuirAssinaturaClienteUsingPOST) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET13**](CadastroClienteApi.md#consultarUsingGET13) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET19**](CadastroClienteApi.md#consultarUsingGET19) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
-[**consultarUsingGET9**](CadastroClienteApi.md#consultarUsingGET9) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET10**](CadastroClienteApi.md#consultarUsingGET10) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listarUsingGET12**](CadastroClienteApi.md#listarUsingGET12) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET17**](CadastroClienteApi.md#listarUsingGET17) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET26**](CadastroClienteApi.md#listarUsingGET26) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET13**](CadastroClienteApi.md#listarUsingGET13) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET19**](CadastroClienteApi.md#listarUsingGET19) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST12**](CadastroClienteApi.md#salvarUsingPOST12) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST15**](CadastroClienteApi.md#salvarUsingPOST15) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvarUsingPOST7**](CadastroClienteApi.md#salvarUsingPOST7) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
-[**salvarUsingPOST9**](CadastroClienteApi.md#salvarUsingPOST9) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST14**](CadastroClienteApi.md#salvarUsingPOST14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST8**](CadastroClienteApi.md#salvarUsingPOST8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
 
 <a name="alterarUsingPUT"></a>
@@ -494,13 +494,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> PessoaDetalheResponse consultarUsingGET13(id)
+<a name="consultarUsingGET10"></a>
+# **consultarUsingGET10**
+> EnderecoResponse consultarUsingGET10(id)
 
-Apresenta os detalhes de uma determinada Pessoa
+Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
-Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
 
 ### Example
 ```javascript
@@ -508,7 +508,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.CadastroClienteApi()
 
-var id = 789; // {Integer} ID da Pessoa
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
 
 
 var callback = function(error, data, response) {
@@ -518,18 +518,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET10(id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID da Pessoa | 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
 
 ### Return type
 
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -542,11 +542,11 @@ No authorization required
 
 <a name="consultarUsingGET14"></a>
 # **consultarUsingGET14**
-> PessoaResponse consultarUsingGET14(id)
+> PessoaDetalheResponse consultarUsingGET14(id)
 
-Apresenta os dados de uma determinada Pessoa
+Apresenta os detalhes de uma determinada Pessoa
 
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -575,6 +575,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> PessoaResponse consultarUsingGET15(id)
+
+Apresenta os dados de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET15(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+
+### Return type
+
 [**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
@@ -586,9 +632,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> TelefoneResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> TelefoneResponse consultarUsingGET20(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -610,7 +656,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -622,52 +668,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> EnderecoResponse consultarUsingGET9(id)
-
-Apresenta os dados de um determinado Endere\u00C3\u00A7o
-
-Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET9(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | 
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -835,9 +835,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageEnderecoResponse listarUsingGET12(opts)
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageEnderecoResponse listarUsingGET13(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -876,7 +876,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET13(opts, callback);
 ```
 
 ### Parameters
@@ -914,9 +914,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PagePessoaDetalheResponse listarUsingGET17(opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PagePessoaDetalheResponse listarUsingGET18(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -951,7 +951,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET18(opts, callback);
 ```
 
 ### Parameters
@@ -985,9 +985,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PagePessoaResponse listarUsingGET18(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PagePessoaResponse listarUsingGET19(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1023,7 +1023,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters
@@ -1058,9 +1058,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PageTelefoneResponse listarUsingGET26(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PageTelefoneResponse listarUsingGET27(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1092,7 +1092,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -1215,9 +1215,59 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST12"></a>
-# **salvarUsingPOST12**
-> PessoaDetalheResponse salvarUsingPOST12(idPessoa, opts)
+<a name="salvarUsingPOST10"></a>
+# **salvarUsingPOST10**
+> IntegracaoEmissorResponse salvarUsingPOST10(id, opts)
+
+Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var opts = { 
+  'body': new Pier.IntegracaoEmissorPersist() // {IntegracaoEmissorPersist} Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST10(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
+
+### Return type
+
+[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> PessoaDetalheResponse salvarUsingPOST13(idPessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1250,7 +1300,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST12(idPessoa, opts, callback);
+api.salvarUsingPOST13(idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -1281,9 +1331,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> PessoaResponse salvarUsingPOST13(nome, tipo, dataNascimento, opts)
+<a name="salvarUsingPOST14"></a>
+# **salvarUsingPOST14**
+> PessoaResponse salvarUsingPOST14(nome, tipo, dataNascimento, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1318,7 +1368,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(nome, tipo, dataNascimento, opts, callback);
+api.salvarUsingPOST14(nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -1349,9 +1399,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST15"></a>
-# **salvarUsingPOST15**
-> TelefoneResponse salvarUsingPOST15(opts)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> TelefoneResponse salvarUsingPOST16(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1378,7 +1428,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST15(opts, callback);
+api.salvarUsingPOST16(opts, callback);
 ```
 
 ### Parameters
@@ -1404,9 +1454,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST7"></a>
-# **salvarUsingPOST7**
-> EnderecoResponse salvarUsingPOST7(opts)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> EnderecoResponse salvarUsingPOST8(opts)
 
 Realiza o cadastro de um novo Endere\u00C3\u00A7o
 
@@ -1439,7 +1489,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST7(opts, callback);
+api.salvarUsingPOST8(opts, callback);
 ```
 
 ### Parameters
@@ -1461,56 +1511,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST9"></a>
-# **salvarUsingPOST9**
-> IntegracaoEmissorResponse salvarUsingPOST9(id, opts)
-
-Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-
-var opts = { 
-  'body': new Pier.IntegracaoEmissorPersist() // {IntegracaoEmissorPersist} Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST9(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **body** | [**IntegracaoEmissorPersist**](IntegracaoEmissorPersist.md)| Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada | [optional] 
-
-### Return type
-
-[**IntegracaoEmissorResponse**](IntegracaoEmissorResponse.md)
 
 ### Authorization
 

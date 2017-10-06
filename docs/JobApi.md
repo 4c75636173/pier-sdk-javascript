@@ -5,10 +5,10 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarJobUsingPOST**](JobApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
-[**atualizarUsingPUT1**](JobApi.md#atualizarUsingPUT1) | **PUT** /api/jobs/{id} | Atualizar Job
+[**atualizarUsingPUT2**](JobApi.md#atualizarUsingPUT2) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET15**](JobApi.md#listarUsingGET15) | **GET** /api/jobs | Listar Jobs
-[**salvarUsingPOST10**](JobApi.md#salvarUsingPOST10) | **POST** /api/jobs | Cadastrar Job
+[**listarUsingGET16**](JobApi.md#listarUsingGET16) | **GET** /api/jobs | Listar Jobs
+[**salvarUsingPOST11**](JobApi.md#salvarUsingPOST11) | **POST** /api/jobs | Cadastrar Job
 
 
 <a name="ativarJobUsingPOST"></a>
@@ -57,9 +57,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT1"></a>
-# **atualizarUsingPUT1**
-> JobResponse atualizarUsingPUT1(id, descricao, cron, groovy)
+<a name="atualizarUsingPUT2"></a>
+# **atualizarUsingPUT2**
+> JobResponse atualizarUsingPUT2(id, descricao, cron, groovy)
 
 Atualizar Job
 
@@ -87,7 +87,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT1(id, descricao, cron, groovy, callback);
+api.atualizarUsingPUT2(id, descricao, cron, groovy, callback);
 ```
 
 ### Parameters
@@ -158,9 +158,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET15"></a>
-# **listarUsingGET15**
-> PageJobResponse listarUsingGET15(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageJobResponse listarUsingGET16(opts)
 
 Listar Jobs
 
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET15(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -215,9 +215,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST10"></a>
-# **salvarUsingPOST10**
-> JobResponse salvarUsingPOST10(descricao, cron, groovy)
+<a name="salvarUsingPOST11"></a>
+# **salvarUsingPOST11**
+> JobResponse salvarUsingPOST11(descricao, cron, groovy)
 
 Cadastrar Job
 
@@ -243,7 +243,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST10(descricao, cron, groovy, callback);
+api.salvarUsingPOST11(descricao, cron, groovy, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The ProdutoOrigemResponse model module.
    * @module model/ProdutoOrigemResponse
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

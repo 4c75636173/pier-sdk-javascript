@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **grupoDescricaoMCC** | **String** | Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento. | [optional] 
 **idEstabelecimento** | **Integer** | C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). | [optional] 
 **nomeEstabelecimento** | **String** | Nome do Estabelecimento. | [optional] 
+**nomeFantasiaEstabelecimento** | **String** | Nome Fantasia do Estabelecimento. | [optional] 
 **localidadeEstabelecimento** | **String** | Localidade do Estabelecimento. | [optional] 
 **planoParcelamento** | **Integer** | Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas. | [optional] 
 **numeroParcela** | **Integer** | Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela. | [optional] 

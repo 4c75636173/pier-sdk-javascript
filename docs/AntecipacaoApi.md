@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](AntecipacaoApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET7**](AntecipacaoApi.md#listarUsingGET7) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET8**](AntecipacaoApi.md#listarUsingGET8) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 
 
@@ -161,9 +161,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET7"></a>
-# **listarUsingGET7**
-> PageCompraResponse listarUsingGET7(idConta, opts)
+<a name="listarUsingGET8"></a>
+# **listarUsingGET8**
+> PageCompraResponse listarUsingGET8(idConta, opts)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -194,7 +194,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET7(idConta, opts, callback);
+api.listarUsingGET8(idConta, opts, callback);
 ```
 
 ### Parameters

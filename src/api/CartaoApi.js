@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**
@@ -549,8 +549,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET5 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET5Callback
+     * Callback function to receive the result of the consultarUsingGET6 operation.
+     * @callback module:api/CartaoApi~consultarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -560,15 +560,15 @@
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoDetalheResponse}
      */
-    this.consultarUsingGET5 = function(id, callback) {
+    this.consultarUsingGET6 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
       }
 
 
@@ -897,8 +897,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/CartaoApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/CartaoApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -929,10 +929,10 @@
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoResponse}
      */
-    this.listarUsingGET6 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

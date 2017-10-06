@@ -18,7 +18,7 @@
   /**
    * The HistoricoAssessoriaResponse model module.
    * @module model/HistoricoAssessoriaResponse
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

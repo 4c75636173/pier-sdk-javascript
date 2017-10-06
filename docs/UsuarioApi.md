@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 [**alterarUsingPUT11**](UsuarioApi.md#alterarUsingPUT11) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET31**](UsuarioApi.md#consultarUsingGET31) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET32**](UsuarioApi.md#consultarUsingGET32) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET35**](UsuarioApi.md#listarUsingGET35) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET36**](UsuarioApi.md#listarUsingGET36) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST19**](UsuarioApi.md#salvarUsingPOST19) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**salvarUsingPOST20**](UsuarioApi.md#salvarUsingPOST20) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -213,9 +213,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET31"></a>
-# **consultarUsingGET31**
-> UsuarioResponse consultarUsingGET31(id)
+<a name="consultarUsingGET32"></a>
+# **consultarUsingGET32**
+> UsuarioResponse consultarUsingGET32(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -237,7 +237,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET31(id, callback);
+api.consultarUsingGET32(id, callback);
 ```
 
 ### Parameters
@@ -305,9 +305,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET35"></a>
-# **listarUsingGET35**
-> PageUsuarioResponse listarUsingGET35(opts)
+<a name="listarUsingGET36"></a>
+# **listarUsingGET36**
+> PageUsuarioResponse listarUsingGET36(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -336,7 +336,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET35(opts, callback);
+api.listarUsingGET36(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST19"></a>
-# **salvarUsingPOST19**
-> UsuarioResponse salvarUsingPOST19(persist)
+<a name="salvarUsingPOST20"></a>
+# **salvarUsingPOST20**
+> UsuarioResponse salvarUsingPOST20(persist)
 
 Cadastra Usu\u00C3\u00A1rio na base.
 
@@ -434,7 +434,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST19(persist, callback);
+api.salvarUsingPOST20(persist, callback);
 ```
 
 ### Parameters

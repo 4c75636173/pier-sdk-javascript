@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET9**](DispositivoApi.md#listarUsingGET9) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvarUsingPOST4**](DispositivoApi.md#salvarUsingPOST4) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**listarUsingGET10**](DispositivoApi.md#listarUsingGET10) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**salvarUsingPOST5**](DispositivoApi.md#salvarUsingPOST5) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 <a name="ativarUsingPOST"></a>
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageDispositivoResponse listarUsingGET9(opts)
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageDispositivoResponse listarUsingGET10(opts)
 
 Lista os dispositivos cadastrados
 
@@ -134,7 +134,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(opts, callback);
+api.listarUsingGET10(opts, callback);
 ```
 
 ### Parameters
@@ -163,9 +163,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST4"></a>
-# **salvarUsingPOST4**
-> DispositivoResponse salvarUsingPOST4(persist)
+<a name="salvarUsingPOST5"></a>
+# **salvarUsingPOST5**
+> DispositivoResponse salvarUsingPOST5(persist)
 
 Cadastra Dispositivo
 
@@ -187,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST4(persist, callback);
+api.salvarUsingPOST5(persist, callback);
 ```
 
 ### Parameters

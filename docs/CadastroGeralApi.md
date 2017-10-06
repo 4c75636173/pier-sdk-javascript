@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**configurarTaxaAntecipacaoUsingPOST**](CadastroGeralApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarOrigemComercialUsingGET**](CadastroGeralApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarTaxaAntecipacaoUsingGET**](CadastroGeralApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-[**consultarUsingGET15**](CadastroGeralApi.md#consultarUsingGET15) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultarUsingGET16**](CadastroGeralApi.md#consultarUsingGET16) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
 [**consultarUsingGET2**](CadastroGeralApi.md#consultarUsingGET2) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultarUsingGET21**](CadastroGeralApi.md#consultarUsingGET21) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
-[**consultarUsingGET22**](CadastroGeralApi.md#consultarUsingGET22) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultarUsingGET23**](CadastroGeralApi.md#consultarUsingGET23) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET24**](CadastroGeralApi.md#consultarUsingGET24) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET26**](CadastroGeralApi.md#consultarUsingGET26) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET22**](CadastroGeralApi.md#consultarUsingGET22) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultarUsingGET23**](CadastroGeralApi.md#consultarUsingGET23) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultarUsingGET24**](CadastroGeralApi.md#consultarUsingGET24) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+[**consultarUsingGET25**](CadastroGeralApi.md#consultarUsingGET25) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET27**](CadastroGeralApi.md#consultarUsingGET27) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
 [**consultarUsingGET3**](CadastroGeralApi.md#consultarUsingGET3) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**desativarUsoExteriorUsingPOST**](CadastroGeralApi.md#desativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listarContasPorPessoaUsingGET**](CadastroGeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
@@ -27,13 +27,13 @@ Method | HTTP request | Description
 [**listarParentescosUsingGET**](CadastroGeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | Lista os Parentescos
 [**listarProfissoesUsingGET**](CadastroGeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
 [**listarUsingGET2**](CadastroGeralApi.md#listarUsingGET2) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET20**](CadastroGeralApi.md#listarUsingGET20) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET21**](CadastroGeralApi.md#listarUsingGET21) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET22**](CadastroGeralApi.md#listarUsingGET22) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
-[**listarUsingGET28**](CadastroGeralApi.md#listarUsingGET28) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET21**](CadastroGeralApi.md#listarUsingGET21) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET22**](CadastroGeralApi.md#listarUsingGET22) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET23**](CadastroGeralApi.md#listarUsingGET23) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listarUsingGET29**](CadastroGeralApi.md#listarUsingGET29) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 [**listarUsingGET3**](CadastroGeralApi.md#listarUsingGET3) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET30**](CadastroGeralApi.md#listarUsingGET30) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET36**](CadastroGeralApi.md#listarUsingGET36) | **GET** /api/vencimentos | Listar Vencimentos
+[**listarUsingGET31**](CadastroGeralApi.md#listarUsingGET31) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET37**](CadastroGeralApi.md#listarUsingGET37) | **GET** /api/vencimentos | Listar Vencimentos
 [**salvarUsingPOST2**](CadastroGeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 
 
@@ -227,9 +227,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> ProdutoDetalhesResponse consultarUsingGET15(id)
+<a name="consultarUsingGET16"></a>
+# **consultarUsingGET16**
+> ProdutoDetalhesResponse consultarUsingGET16(id)
 
 Apresenta os dados de um determinado Produto
 
@@ -251,7 +251,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(id, callback);
+api.consultarUsingGET16(id, callback);
 ```
 
 ### Parameters
@@ -319,9 +319,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> PageTipoAjusteResponse consultarUsingGET21(opts)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> PageTipoAjusteResponse consultarUsingGET22(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -348,7 +348,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(opts, callback);
+api.consultarUsingGET22(opts, callback);
 ```
 
 ### Parameters
@@ -374,9 +374,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> PageTipoBoletoResponse consultarUsingGET22(opts)
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> PageTipoBoletoResponse consultarUsingGET23(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -404,7 +404,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(opts, callback);
+api.consultarUsingGET23(opts, callback);
 ```
 
 ### Parameters
@@ -431,9 +431,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> TipoEnderecoResponse consultarUsingGET23(id)
+<a name="consultarUsingGET24"></a>
+# **consultarUsingGET24**
+> TipoEnderecoResponse consultarUsingGET24(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -455,7 +455,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(id, callback);
+api.consultarUsingGET24(id, callback);
 ```
 
 ### Parameters
@@ -477,9 +477,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> TipoOperacaoResponse consultarUsingGET24(idCartao, idEstabelecimento, codigoProcessamento)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> TipoOperacaoResponse consultarUsingGET25(idCartao, idEstabelecimento, codigoProcessamento)
 
 Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -505,7 +505,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(idCartao, idEstabelecimento, codigoProcessamento, callback);
+api.consultarUsingGET25(idCartao, idEstabelecimento, codigoProcessamento, callback);
 ```
 
 ### Parameters
@@ -529,9 +529,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET26"></a>
-# **consultarUsingGET26**
-> TipoTelefoneResponse consultarUsingGET26(id)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> TipoTelefoneResponse consultarUsingGET27(id)
 
 Apresenta os dados de um determinado Tipo de Telefone
 
@@ -553,7 +553,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(id, callback);
+api.consultarUsingGET27(id, callback);
 ```
 
 ### Parameters
@@ -1193,9 +1193,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET20"></a>
-# **listarUsingGET20**
-> PagePortadorResponse listarUsingGET20(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PagePortadorResponse listarUsingGET21(opts)
 
 Lista os Portadores existentes
 
@@ -1230,7 +1230,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET20(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -1264,9 +1264,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PageProdutoResponse listarUsingGET21(opts)
+<a name="listarUsingGET22"></a>
+# **listarUsingGET22**
+> PageProdutoResponse listarUsingGET22(opts)
 
 Lista os Produtos do Emissor
 
@@ -1294,7 +1294,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET22(opts, callback);
 ```
 
 ### Parameters
@@ -1321,9 +1321,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PagePromotorResponse listarUsingGET22(opts)
+<a name="listarUsingGET23"></a>
+# **listarUsingGET23**
+> PagePromotorResponse listarUsingGET23(opts)
 
 Lista promotores cadastrados na base do emissor
 
@@ -1353,7 +1353,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET23(opts, callback);
 ```
 
 ### Parameters
@@ -1382,9 +1382,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET28"></a>
-# **listarUsingGET28**
-> PageTipoEnderecoResponse listarUsingGET28(opts)
+<a name="listarUsingGET29"></a>
+# **listarUsingGET29**
+> PageTipoEnderecoResponse listarUsingGET29(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1411,7 +1411,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET28(opts, callback);
+api.listarUsingGET29(opts, callback);
 ```
 
 ### Parameters
@@ -1488,9 +1488,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET30"></a>
-# **listarUsingGET30**
-> PageTipoTelefoneResponse listarUsingGET30(opts)
+<a name="listarUsingGET31"></a>
+# **listarUsingGET31**
+> PageTipoTelefoneResponse listarUsingGET31(opts)
 
 Lista os Tipos de Telefones
 
@@ -1517,7 +1517,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET30(opts, callback);
+api.listarUsingGET31(opts, callback);
 ```
 
 ### Parameters
@@ -1543,9 +1543,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET36"></a>
-# **listarUsingGET36**
-> PageControleVencimentoResponse listarUsingGET36(opts)
+<a name="listarUsingGET37"></a>
+# **listarUsingGET37**
+> PageControleVencimentoResponse listarUsingGET37(opts)
 
 Listar Vencimentos
 
@@ -1571,7 +1571,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET36(opts, callback);
+api.listarUsingGET37(opts, callback);
 ```
 
 ### Parameters

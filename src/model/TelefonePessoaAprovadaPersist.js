@@ -18,7 +18,7 @@
   /**
    * The TelefonePessoaAprovadaPersist model module.
    * @module model/TelefonePessoaAprovadaPersist
-   * @version 2.38.1
+   * @version 2.39.3
    */
 
   /**

@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](StatusParametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
 [**consultarStatusCartaoUsingGET**](StatusParametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
-[**consultarUsingGET17**](StatusParametroApi.md#consultarUsingGET17) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
-[**consultarUsingGET18**](StatusParametroApi.md#consultarUsingGET18) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
+[**consultarUsingGET18**](StatusParametroApi.md#consultarUsingGET18) | **GET** /api/status-contas/{id} | Apresenta os dados de um determinado Status Conta
+[**consultarUsingGET19**](StatusParametroApi.md#consultarUsingGET19) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
-[**listarUsingGET24**](StatusParametroApi.md#listarUsingGET24) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
-[**listarUsingGET25**](StatusParametroApi.md#listarUsingGET25) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
+[**listarUsingGET25**](StatusParametroApi.md#listarUsingGET25) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
+[**listarUsingGET26**](StatusParametroApi.md#listarUsingGET26) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
 
 <a name="consultarEstagioCartaoUsingGET"></a>
@@ -106,9 +106,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> StatusContaResponse consultarUsingGET17(id)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> StatusContaResponse consultarUsingGET18(id)
 
 Apresenta os dados de um determinado Status Conta
 
@@ -130,7 +130,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(id, callback);
+api.consultarUsingGET18(id, callback);
 ```
 
 ### Parameters
@@ -152,9 +152,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET18"></a>
-# **consultarUsingGET18**
-> StatusImpressaoResponse consultarUsingGET18(id)
+<a name="consultarUsingGET19"></a>
+# **consultarUsingGET19**
+> StatusImpressaoResponse consultarUsingGET19(id)
 
 Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 
@@ -176,7 +176,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET18(id, callback);
+api.consultarUsingGET19(id, callback);
 ```
 
 ### Parameters
@@ -316,9 +316,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageStatusContaResponse listarUsingGET24(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageStatusContaResponse listarUsingGET25(opts)
 
 Lista os Status Contas cadastrados para o Emissor
 
@@ -354,7 +354,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -389,9 +389,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageStatusImpressaoResponse listarUsingGET25(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageStatusImpressaoResponse listarUsingGET26(opts)
 
 Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -418,7 +418,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
