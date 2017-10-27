@@ -18,7 +18,7 @@
   /**
    * The PagePessoaDetalheResponse model module.
    * @module model/PagePessoaDetalheResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

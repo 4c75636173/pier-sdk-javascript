@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobileUpdate model module.
    * @module model/AplicacaoMobileUpdate
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

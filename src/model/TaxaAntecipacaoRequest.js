@@ -18,7 +18,7 @@
   /**
    * The TaxaAntecipacaoRequest model module.
    * @module model/TaxaAntecipacaoRequest
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

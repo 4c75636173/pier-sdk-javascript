@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/AntecipacaoResponse', '../model/PageCompraResponse', '../model/AntecipacaoSimuladaResponse'], factory);
+    define(['../ApiClient', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/AntecipacaoResponse', '../model/AntecipacaoMockResponse', '../model/PageCompraResponse', '../model/AntecipacaoSimuladaResponse', '../model/AntecipacaoSimuladaLoteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/AntecipacaoResponse'), require('../model/PageCompraResponse'), require('../model/AntecipacaoSimuladaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/AntecipacaoResponse'), require('../model/AntecipacaoMockResponse'), require('../model/PageCompraResponse'), require('../model/AntecipacaoSimuladaResponse'), require('../model/AntecipacaoSimuladaLoteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AntecipacaoApi = factory(root.Pier.ApiClient, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.AntecipacaoResponse, root.Pier.PageCompraResponse, root.Pier.AntecipacaoSimuladaResponse);
+    root.Pier.AntecipacaoApi = factory(root.Pier.ApiClient, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.AntecipacaoResponse, root.Pier.AntecipacaoMockResponse, root.Pier.PageCompraResponse, root.Pier.AntecipacaoSimuladaResponse, root.Pier.AntecipacaoSimuladaLoteResponse);
   }
-}(this, function(ApiClient, ParametroProdutoResponse, TaxaAntecipacaoRequest, AntecipacaoResponse, PageCompraResponse, AntecipacaoSimuladaResponse) {
+}(this, function(ApiClient, ParametroProdutoResponse, TaxaAntecipacaoRequest, AntecipacaoResponse, AntecipacaoMockResponse, PageCompraResponse, AntecipacaoSimuladaResponse, AntecipacaoSimuladaLoteResponse) {
   'use strict';
 
   /**
    * Antecipacao service.
    * @module api/AntecipacaoApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -151,10 +151,13 @@
      * @param {Integer} idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
      * @param {Integer} quantidadeParcelas Quantidade de parcelas para serem antecipadas.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:api/AntecipacaoApi~efetivarAntecipacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoResponse}
      */
-    this.efetivarAntecipacaoUsingPOST = function(idConta, id, quantidadeParcelas, callback) {
+    this.efetivarAntecipacaoUsingPOST = function(idConta, id, quantidadeParcelas, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
@@ -178,7 +181,8 @@
       };
       var queryParams = {
         'idConta': idConta,
-        'quantidadeParcelas': quantidadeParcelas
+        'quantidadeParcelas': quantidadeParcelas,
+        'complemento': opts['complemento']
       };
       var headerParams = {
       };
@@ -192,6 +196,56 @@
 
       return this.apiClient.callApi(
         '/api/compras-antecipaveis/{id}/efetivar-antecipacao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the efetivarAntecipacoesUsingPOST operation.
+     * @callback module:api/AntecipacaoApi~efetivarAntecipacoesUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AntecipacaoMockResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+     * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+     * @param {Integer} idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {module:api/AntecipacaoApi~efetivarAntecipacoesUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/AntecipacaoMockResponse}
+     */
+    this.efetivarAntecipacoesUsingPOST = function(idConta, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling efetivarAntecipacoesUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idConta': idConta,
+        'complemento': opts['complemento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AntecipacaoMockResponse;
+
+      return this.apiClient.callApi(
+        '/api/compras-antecipaveis/efetivar-antecipacao', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -272,10 +326,13 @@
      * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
      * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:api/AntecipacaoApi~simularAntecipacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoSimuladaResponse}
      */
-    this.simularAntecipacaoUsingGET = function(idConta, id, callback) {
+    this.simularAntecipacaoUsingGET = function(idConta, id, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
@@ -293,7 +350,8 @@
         'id': id
       };
       var queryParams = {
-        'idConta': idConta
+        'idConta': idConta,
+        'complemento': opts['complemento']
       };
       var headerParams = {
       };
@@ -307,6 +365,56 @@
 
       return this.apiClient.callApi(
         '/api/compras-antecipaveis/{id}/simular-antecipacao', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the simularAntecipacoesUsingGET operation.
+     * @callback module:api/AntecipacaoApi~simularAntecipacoesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AntecipacaoSimuladaLoteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+     * O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {module:api/AntecipacaoApi~simularAntecipacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/AntecipacaoSimuladaLoteResponse}
+     */
+    this.simularAntecipacoesUsingGET = function(idConta, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling simularAntecipacoesUsingGET";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idConta': idConta,
+        'complemento': opts['complemento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AntecipacaoSimuladaLoteResponse;
+
+      return this.apiClient.callApi(
+        '/api/compras-antecipaveis/simular-antecipacao', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

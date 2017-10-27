@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -359,6 +359,52 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/cancelar', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarCartaoImpressaoUsingGET operation.
+     * @callback module:api/CartaoApi~consultarCartaoImpressaoUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+     * Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {module:api/CartaoApi~consultarCartaoImpressaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.consultarCartaoImpressaoUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarCartaoImpressaoUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/consultar-dados-impressao', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

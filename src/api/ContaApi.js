@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AjusteResponse', '../model/LimiteDisponibilidadeResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/DetalhesFaturaConsignadaResponse', '../model/FaturaConsignadaDetalheResponse', '../model/DetalhesFaturaResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/TransferenciaBancariaResponse', '../model/TransferenciaDetalheResponse', '../model/ContaDetalheResponse', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageFaturaConsignadaResponse', '../model/PageFaturaResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageContaHistoricoPagamentoResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageTransferenciaBancariaResponse', '../model/PageTransferenciaResponse', '../model/PageContaResponse', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse', '../model/TransferenciaBancariaPersist'], factory);
+    define(['../ApiClient', '../model/AjusteResponse', '../model/LimiteDisponibilidadeResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/DetalhesFaturaResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/TransferenciaBancariaResponse', '../model/TransferenciaDetalheResponse', '../model/ContaDetalheResponse', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageFaturaFechadaResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageContaHistoricoPagamentoResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageTransferenciaBancariaResponse', '../model/PageTransferenciaResponse', '../model/PageContaResponse', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse', '../model/TransferenciaBancariaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AjusteResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/DetalhesFaturaConsignadaResponse'), require('../model/FaturaConsignadaDetalheResponse'), require('../model/DetalhesFaturaResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/ContaDetalheResponse'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageFaturaConsignadaResponse'), require('../model/PageFaturaResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageContaHistoricoPagamentoResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/PageTransferenciaResponse'), require('../model/PageContaResponse'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'), require('../model/TransferenciaBancariaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/AjusteResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/DetalhesFaturaResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/ContaDetalheResponse'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageFaturaFechadaResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageContaHistoricoPagamentoResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/PageTransferenciaResponse'), require('../model/PageContaResponse'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'), require('../model/TransferenciaBancariaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.AjusteResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.DetalhesFaturaConsignadaResponse, root.Pier.FaturaConsignadaDetalheResponse, root.Pier.DetalhesFaturaResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.ContaDetalheResponse, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageFaturaConsignadaResponse, root.Pier.PageFaturaResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageContaHistoricoPagamentoResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.PageTransferenciaResponse, root.Pier.PageContaResponse, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse, root.Pier.TransferenciaBancariaPersist);
+    root.Pier.ContaApi = factory(root.Pier.ApiClient, root.Pier.AjusteResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.DetalhesFaturaResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.ContaDetalheResponse, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageFaturaFechadaResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageContaHistoricoPagamentoResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.PageTransferenciaResponse, root.Pier.PageContaResponse, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse, root.Pier.TransferenciaBancariaPersist);
   }
-}(this, function(ApiClient, AjusteResponse, LimiteDisponibilidadeResponse, AlterarProdutoRequest, ContaResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, DetalhesFaturaConsignadaResponse, FaturaConsignadaDetalheResponse, DetalhesFaturaResponse, PageTaxasRefinanciamentoResponse, TransferenciaBancariaResponse, TransferenciaDetalheResponse, ContaDetalheResponse, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageFaturaConsignadaResponse, PageFaturaResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageContaHistoricoPagamentoResponse, PageTransacoesCorrentesResponse, PageTransferenciaBancariaResponse, PageTransferenciaResponse, PageContaResponse, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse, TransferenciaBancariaPersist) {
+}(this, function(ApiClient, AjusteResponse, LimiteDisponibilidadeResponse, AlterarProdutoRequest, ContaResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, DetalhesFaturaResponse, PageTaxasRefinanciamentoResponse, TransferenciaBancariaResponse, TransferenciaDetalheResponse, ContaDetalheResponse, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageFaturaFechadaResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageContaHistoricoPagamentoResponse, PageTransacoesCorrentesResponse, PageTransferenciaBancariaResponse, PageTransferenciaResponse, PageContaResponse, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse, TransferenciaBancariaPersist) {
   'use strict';
 
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -703,109 +703,6 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarFaturaConsignadaAbertaUsingGET operation.
-     * @callback module:api/ContaApi~consultarFaturaConsignadaAbertaUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DetalhesFaturaConsignadaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Consultar a fatura consignadas abertas da conta
-     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.dataVencimento Data Vencimento
-     * @param {module:api/ContaApi~consultarFaturaConsignadaAbertaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/DetalhesFaturaConsignadaResponse}
-     */
-    this.consultarFaturaConsignadaAbertaUsingGET = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarFaturaConsignadaAbertaUsingGET";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'dataVencimento': opts['dataVencimento']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = DetalhesFaturaConsignadaResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{id}/faturas-consignadas/consultar-aberta', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarFaturaConsignadaUsingGET operation.
-     * @callback module:api/ContaApi~consultarFaturaConsignadaUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/FaturaConsignadaDetalheResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Apresenta dados de uma determinada fatura consignada
-     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Integer} idFatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
-     * @param {module:api/ContaApi~consultarFaturaConsignadaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/FaturaConsignadaDetalheResponse}
-     */
-    this.consultarFaturaConsignadaUsingGET = function(id, idFatura, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarFaturaConsignadaUsingGET";
-      }
-
-      // verify the required parameter 'idFatura' is set
-      if (idFatura == undefined || idFatura == null) {
-        throw "Missing the required parameter 'idFatura' when calling consultarFaturaConsignadaUsingGET";
-      }
-
-
-      var pathParams = {
-        'id': id,
-        'id_fatura': idFatura
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = FaturaConsignadaDetalheResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{id}/faturas-consignadas/{id_fatura}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the consultarFaturaUsingGET operation.
      * @callback module:api/ContaApi~consultarFaturaUsingGETCallback
      * @param {String} error Error message, if any.
@@ -1479,66 +1376,10 @@
     }
 
     /**
-     * Callback function to receive the result of the listarFaturasConsignadasUsingGET operation.
-     * @callback module:api/ContaApi~listarFaturasConsignadasUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageFaturaConsignadaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista as faturas consignadas da conta
-     * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {String} opts.dataVencimento Apresenta a data de vencimento da fatura.
-     * @param {module:api/ContaApi~listarFaturasConsignadasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageFaturaConsignadaResponse}
-     */
-    this.listarFaturasConsignadasUsingGET = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarFaturasConsignadasUsingGET";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'dataVencimento': opts['dataVencimento']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageFaturaConsignadaResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas/{id}/faturas-consignadas', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the listarFaturasUsingGET operation.
      * @callback module:api/ContaApi~listarFaturasUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PageFaturaResponse} data The data returned by the service call.
+     * @param {module:model/PageFaturaFechadaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1552,7 +1393,7 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.dataVencimento Data de Vencimento da Fatura.
      * @param {module:api/ContaApi~listarFaturasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageFaturaResponse}
+     * data is of type: {module:model/PageFaturaFechadaResponse}
      */
     this.listarFaturasUsingGET = function(id, opts, callback) {
       opts = opts || {};
@@ -1581,7 +1422,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = PageFaturaResponse;
+      var returnType = PageFaturaFechadaResponse;
 
       return this.apiClient.callApi(
         '/api/contas/{id}/faturas', 'GET',

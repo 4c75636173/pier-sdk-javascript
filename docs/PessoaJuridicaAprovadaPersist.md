@@ -20,8 +20,9 @@ Name | Type | Description | Notes
 **valorPontuacao** | **Integer** | Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0) | [optional] 
 **telefones** | [**[TelefonePessoaAprovadaPersist]**](TelefonePessoaAprovadaPersist.md) | Apresenta os telefones da empresa | [optional] 
 **enderecos** | [**[EnderecoAprovadoPersist]**](EnderecoAprovadoPersist.md) | Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros | 
-**limiteGlobal** | **Number** | Valor do Limite Global | 
 **socios** | [**[PessoaPersist]**](PessoaPersist.md) | Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista | [optional] 
+**referenciasComerciais** | [**[RefenciaComercialAprovadoPersist]**](RefenciaComercialAprovadoPersist.md) | Apresenta os dados das refer\u00C3\u00AAncias comerciais | [optional] 
+**limiteGlobal** | **Number** | Valor do Limite Global | 
 **limiteMaximo** | **Number** | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 
 **limiteParcelas** | **Number** | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 
 

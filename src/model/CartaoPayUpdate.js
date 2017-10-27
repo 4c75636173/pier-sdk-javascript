@@ -18,7 +18,7 @@
   /**
    * The CartaoPayUpdate model module.
    * @module model/CartaoPayUpdate
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

@@ -4,10 +4,61 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**consultarFaturaUsingGET1**](FaturaApi.md#consultarFaturaUsingGET1) | **GET** /api/faturas/{dataVencimento} | Consulta fatura de um cliente
 [**consultarLancamentosFuturosFaturaUsingGET1**](FaturaApi.md#consultarLancamentosFuturosFaturaUsingGET1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
 [**enviarFaturaEmailUsingPOST**](FaturaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
+[**listarFaturasUsingGET1**](FaturaApi.md#listarFaturasUsingGET1) | **GET** /api/faturas | Listar faturas de um cliente.
 [**visualizarDocumentoUsingGET**](FaturaApi.md#visualizarDocumentoUsingGET) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
 
+
+<a name="consultarFaturaUsingGET1"></a>
+# **consultarFaturaUsingGET1**
+> FaturaDetalheResponse consultarFaturaUsingGET1(dataVencimento, idConta)
+
+Consulta fatura de um cliente
+
+Consulta fatura de um cliente pela data de vencimento.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.FaturaApi()
+
+var dataVencimento = "dataVencimento_example"; // {String} Data Vencimento
+
+var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarFaturaUsingGET1(dataVencimento, idConta, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dataVencimento** | **String**| Data Vencimento | 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+
+### Return type
+
+[**FaturaDetalheResponse**](FaturaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="consultarLancamentosFuturosFaturaUsingGET1"></a>
 # **consultarLancamentosFuturosFaturaUsingGET1**
@@ -109,6 +160,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarFaturasUsingGET1"></a>
+# **listarFaturasUsingGET1**
+> PageFaturaResponse listarFaturasUsingGET1(idConta, opts)
+
+Listar faturas de um cliente.
+
+Lista faturas de um cliente.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.FaturaApi()
+
+var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+
+var opts = { 
+  'situacaoProcessamento': "TODAS", // {String} Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarFaturasUsingGET1(idConta, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **situacaoProcessamento** | **String**| Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. | [optional] [default to TODAS]
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageFaturaResponse**](PageFaturaResponse.md)
 
 ### Authorization
 

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/PagePlanoParcelamentoResponse'], factory);
+    define(['../ApiClient', '../model/FaturaDetalheResponse', '../model/PagePlanoParcelamentoResponse', '../model/PageFaturaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PagePlanoParcelamentoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/FaturaDetalheResponse'), require('../model/PagePlanoParcelamentoResponse'), require('../model/PageFaturaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.FaturaApi = factory(root.Pier.ApiClient, root.Pier.PagePlanoParcelamentoResponse);
+    root.Pier.FaturaApi = factory(root.Pier.ApiClient, root.Pier.FaturaDetalheResponse, root.Pier.PagePlanoParcelamentoResponse, root.Pier.PageFaturaResponse);
   }
-}(this, function(ApiClient, PagePlanoParcelamentoResponse) {
+}(this, function(ApiClient, FaturaDetalheResponse, PagePlanoParcelamentoResponse, PageFaturaResponse) {
   'use strict';
 
   /**
    * Fatura service.
    * @module api/FaturaApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -31,6 +31,59 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the consultarFaturaUsingGET1 operation.
+     * @callback module:api/FaturaApi~consultarFaturaUsingGET1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/FaturaDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consulta fatura de um cliente
+     * Consulta fatura de um cliente pela data de vencimento.
+     * @param {String} dataVencimento Data Vencimento
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {module:api/FaturaApi~consultarFaturaUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/FaturaDetalheResponse}
+     */
+    this.consultarFaturaUsingGET1 = function(dataVencimento, idConta, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling consultarFaturaUsingGET1";
+      }
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling consultarFaturaUsingGET1";
+      }
+
+
+      var pathParams = {
+        'dataVencimento': dataVencimento
+      };
+      var queryParams = {
+        'idConta': idConta
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = FaturaDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/faturas/{dataVencimento}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the consultarLancamentosFuturosFaturaUsingGET1 operation.
@@ -145,6 +198,62 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/faturas/{dataVencimento}/enviar-email', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarFaturasUsingGET1 operation.
+     * @callback module:api/FaturaApi~listarFaturasUsingGET1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageFaturaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar faturas de um cliente.
+     * Lista faturas de um cliente.
+     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.situacaoProcessamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (default to TODAS)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/FaturaApi~listarFaturasUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageFaturaResponse}
+     */
+    this.listarFaturasUsingGET1 = function(idConta, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'idConta' is set
+      if (idConta == undefined || idConta == null) {
+        throw "Missing the required parameter 'idConta' when calling listarFaturasUsingGET1";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idConta': idConta,
+        'situacaoProcessamento': opts['situacaoProcessamento'],
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageFaturaResponse;
+
+      return this.apiClient.callApi(
+        '/api/faturas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

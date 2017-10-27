@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -462,23 +462,19 @@
     /**
      * Lista os cart\u00C3\u00B5es cadastrados
      * Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
-     * @param {String} deviceId Device id criptografado
      * @param {Object} opts Optional parameters
+     * @param {String} opts.deviceId Device id criptografado
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:model/String} opts.status Status do cart\u00C3\u00A3o tokenizado
+     * @param {String} opts.numeroCartao Numero do cart\u00C3\u00A3o tokenizado
      * @param {module:api/ConductorPayApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoPayResponse}
      */
-    this.listarUsingGET6 = function(deviceId, opts, callback) {
+    this.listarUsingGET6 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'deviceId' is set
-      if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling listarUsingGET6";
-      }
 
 
       var pathParams = {
@@ -487,10 +483,11 @@
         'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
-        'status': opts['status']
+        'status': opts['status'],
+        'numeroCartao': opts['numeroCartao']
       };
       var headerParams = {
-        'device_id': deviceId
+        'device_id': opts['deviceId']
       };
       var formParams = {
       };

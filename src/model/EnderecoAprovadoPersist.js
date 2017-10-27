@@ -18,7 +18,7 @@
   /**
    * The EnderecoAprovadoPersist model module.
    * @module model/EnderecoAprovadoPersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

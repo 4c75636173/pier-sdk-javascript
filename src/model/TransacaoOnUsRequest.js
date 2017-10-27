@@ -18,7 +18,7 @@
   /**
    * The TransacaoOnUsRequest model module.
    * @module model/TransacaoOnUsRequest
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

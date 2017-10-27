@@ -18,7 +18,7 @@
   /**
    * The PageOperadoraResponse model module.
    * @module model/PageOperadoraResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

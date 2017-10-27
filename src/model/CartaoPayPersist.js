@@ -18,7 +18,7 @@
   /**
    * The CartaoPayPersist model module.
    * @module model/CartaoPayPersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

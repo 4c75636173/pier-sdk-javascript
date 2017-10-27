@@ -18,7 +18,7 @@
   /**
    * The AjusteResponse model module.
    * @module model/AjusteResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

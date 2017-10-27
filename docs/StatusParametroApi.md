@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**consultarUsingGET19**](StatusParametroApi.md#consultarUsingGET19) | **GET** /api/status-impressoes/{id} | Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
 [**listarEstagiosCartoesUsingGET**](StatusParametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o
 [**listarStatusCartoesUsingGET**](StatusParametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status do Cart\u00C3\u00A3o
+[**listarTiposEventosTransacoesUsingGET**](StatusParametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listarUsingGET25**](StatusParametroApi.md#listarUsingGET25) | **GET** /api/status-contas | Lista os Status Contas cadastrados para o Emissor
 [**listarUsingGET26**](StatusParametroApi.md#listarUsingGET26) | **GET** /api/status-impressoes | Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
 
@@ -306,6 +307,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageStatusCartaoResponse**](PageStatusCartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarTiposEventosTransacoesUsingGET"></a>
+# **listarTiposEventosTransacoesUsingGET**
+> [Object] listarTiposEventosTransacoesUsingGET
+
+Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+
+Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.StatusParametroApi()
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarTiposEventosTransacoesUsingGET(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**[Object]**
 
 ### Authorization
 

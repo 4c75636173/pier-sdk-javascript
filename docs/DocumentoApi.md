@@ -256,7 +256,7 @@ No authorization required
 
 <a name="integrarUsingPOST"></a>
 # **integrarUsingPOST**
-> &#39;String&#39; integrarUsingPOST(integrarDocumentoRequest)
+> DocumentoIntegracaoResponse integrarUsingPOST(integrarDocumentoRequest)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;String&#39;**
+[**DocumentoIntegracaoResponse**](DocumentoIntegracaoResponse.md)
 
 ### Authorization
 

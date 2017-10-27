@@ -18,7 +18,7 @@
   /**
    * The TipoResolucaoResponse model module.
    * @module model/TipoResolucaoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

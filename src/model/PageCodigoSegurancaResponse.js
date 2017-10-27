@@ -18,7 +18,7 @@
   /**
    * The PageCodigoSegurancaResponse model module.
    * @module model/PageCodigoSegurancaResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

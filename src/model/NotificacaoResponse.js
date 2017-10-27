@@ -18,7 +18,7 @@
   /**
    * The NotificacaoResponse model module.
    * @module model/NotificacaoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoDetalheResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PageCodigoSegurancaResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailResponse', '../model/NotificacaoEmailRequest', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaEMAILPersist', '../model/CodigoSegurancaSMSRequest'], factory);
+    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoDetalheResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PageCodigoSegurancaResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailRequest', '../model/NotificacaoResponse', '../model/PushFCMEGCM', '../model/PushAPNS', '../model/NotificacaoSMSBody', '../model/CodigoSegurancaEMAILPersist', '../model/CodigoSegurancaSMSRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoDetalheResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PageCodigoSegurancaResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailResponse'), require('../model/NotificacaoEmailRequest'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaEMAILPersist'), require('../model/CodigoSegurancaSMSRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoDetalheResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PageCodigoSegurancaResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailRequest'), require('../model/NotificacaoResponse'), require('../model/PushFCMEGCM'), require('../model/PushAPNS'), require('../model/NotificacaoSMSBody'), require('../model/CodigoSegurancaEMAILPersist'), require('../model/CodigoSegurancaSMSRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoDetalheResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PageCodigoSegurancaResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailResponse, root.Pier.NotificacaoEmailRequest, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaEMAILPersist, root.Pier.CodigoSegurancaSMSRequest);
+    root.Pier.NotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoDetalheResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PageCodigoSegurancaResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailRequest, root.Pier.NotificacaoResponse, root.Pier.PushFCMEGCM, root.Pier.PushAPNS, root.Pier.NotificacaoSMSBody, root.Pier.CodigoSegurancaEMAILPersist, root.Pier.CodigoSegurancaSMSRequest);
   }
-}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoDetalheResponse, NotificacaoSMSResponse, CodigoSegurancaResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PageCodigoSegurancaResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailResponse, NotificacaoEmailRequest, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaEMAILPersist, CodigoSegurancaSMSRequest) {
+}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoDetalheResponse, NotificacaoSMSResponse, CodigoSegurancaResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PageCodigoSegurancaResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailRequest, NotificacaoResponse, PushFCMEGCM, PushAPNS, NotificacaoSMSBody, CodigoSegurancaEMAILPersist, CodigoSegurancaSMSRequest) {
   'use strict';
 
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -822,7 +822,7 @@
      * Callback function to receive the result of the notificacaoEmailUsingPOST operation.
      * @callback module:api/NotificacaoApi~notificacaoEmailUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NotificacaoEmailResponse} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -831,7 +831,7 @@
      * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
      * @param {module:model/NotificacaoEmailRequest} request request
      * @param {module:api/NotificacaoApi~notificacaoEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/NotificacaoEmailResponse}
+     * data is of type: {Object}
      */
     this.notificacaoEmailUsingPOST = function(request, callback) {
       var postBody = request;
@@ -854,7 +854,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = NotificacaoEmailResponse;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/api/notificacoes-email', 'POST',
@@ -864,8 +864,8 @@
     }
 
     /**
-     * Callback function to receive the result of the responderSMSUsingPOST operation.
-     * @callback module:api/NotificacaoApi~responderSMSUsingPOSTCallback
+     * Callback function to receive the result of the responderSMSGetUsingGET operation.
+     * @callback module:api/NotificacaoApi~responderSMSGetUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:model/NotificacaoSMSResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -878,10 +878,10 @@
      * @param {String} opts.nsu Seu n\u00C3\u00BAmero
      * @param {String} opts.data Data
      * @param {String} opts.resposta TextoStatus
-     * @param {module:api/NotificacaoApi~responderSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/NotificacaoApi~responderSMSGetUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/NotificacaoSMSResponse}
      */
-    this.responderSMSUsingPOST = function(opts, callback) {
+    this.responderSMSGetUsingGET = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -904,7 +904,7 @@
       var returnType = NotificacaoSMSResponse;
 
       return this.apiClient.callApi(
-        '/api/notificacoes/sms/responder', 'POST',
+        '/api/notificacoes/sms/responder', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

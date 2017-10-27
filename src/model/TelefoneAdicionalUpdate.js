@@ -18,7 +18,7 @@
   /**
    * The TelefoneAdicionalUpdate model module.
    * @module model/TelefoneAdicionalUpdate
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

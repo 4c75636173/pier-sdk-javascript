@@ -18,7 +18,7 @@
   /**
    * The OportunidadePersist model module.
    * @module model/OportunidadePersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

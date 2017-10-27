@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoEmprestimoResponse model module.
    * @module model/PlanoParcelamentoEmprestimoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

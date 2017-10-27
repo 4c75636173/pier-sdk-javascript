@@ -18,7 +18,7 @@
   /**
    * The PageAnuidadeResponse model module.
    * @module model/PageAnuidadeResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

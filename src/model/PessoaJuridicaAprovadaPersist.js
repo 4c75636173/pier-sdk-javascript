@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoPersist', './PessoaPersist', './TelefonePessoaAprovadaPersist'], factory);
+    define(['../ApiClient', './EnderecoAprovadoPersist', './PessoaPersist', './RefenciaComercialAprovadoPersist', './TelefonePessoaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./PessoaPersist'), require('./TelefonePessoaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./PessoaPersist'), require('./RefenciaComercialAprovadoPersist'), require('./TelefonePessoaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaJuridicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.PessoaPersist, root.Pier.TelefonePessoaAprovadaPersist);
+    root.Pier.PessoaJuridicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.PessoaPersist, root.Pier.RefenciaComercialAprovadoPersist, root.Pier.TelefonePessoaAprovadaPersist);
   }
-}(this, function(ApiClient, EnderecoAprovadoPersist, PessoaPersist, TelefonePessoaAprovadaPersist) {
+}(this, function(ApiClient, EnderecoAprovadoPersist, PessoaPersist, RefenciaComercialAprovadoPersist, TelefonePessoaAprovadaPersist) {
   'use strict';
 
   /**
    * The PessoaJuridicaAprovadaPersist model module.
    * @module model/PessoaJuridicaAprovadaPersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -56,8 +56,9 @@
 
 
     this['enderecos'] = enderecos;
-    this['limiteGlobal'] = limiteGlobal;
 
+
+    this['limiteGlobal'] = limiteGlobal;
     this['limiteMaximo'] = limiteMaximo;
     this['limiteParcelas'] = limiteParcelas;
   };
@@ -124,11 +125,14 @@
       if (data.hasOwnProperty('enderecos')) {
         obj['enderecos'] = ApiClient.convertToType(data['enderecos'], [EnderecoAprovadoPersist]);
       }
-      if (data.hasOwnProperty('limiteGlobal')) {
-        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
-      }
       if (data.hasOwnProperty('socios')) {
         obj['socios'] = ApiClient.convertToType(data['socios'], [PessoaPersist]);
+      }
+      if (data.hasOwnProperty('referenciasComerciais')) {
+        obj['referenciasComerciais'] = ApiClient.convertToType(data['referenciasComerciais'], [RefenciaComercialAprovadoPersist]);
+      }
+      if (data.hasOwnProperty('limiteGlobal')) {
+        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
       }
       if (data.hasOwnProperty('limiteMaximo')) {
         obj['limiteMaximo'] = ApiClient.convertToType(data['limiteMaximo'], 'Number');
@@ -244,16 +248,22 @@
   exports.prototype['enderecos'] = undefined;
 
   /**
-   * Valor do Limite Global
-   * @member {Number} limiteGlobal
-   */
-  exports.prototype['limiteGlobal'] = undefined;
-
-  /**
    * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
    * @member {Array.<module:model/PessoaPersist>} socios
    */
   exports.prototype['socios'] = undefined;
+
+  /**
+   * Apresenta os dados das refer\u00C3\u00AAncias comerciais
+   * @member {Array.<module:model/RefenciaComercialAprovadoPersist>} referenciasComerciais
+   */
+  exports.prototype['referenciasComerciais'] = undefined;
+
+  /**
+   * Valor do Limite Global
+   * @member {Number} limiteGlobal
+   */
+  exports.prototype['limiteGlobal'] = undefined;
 
   /**
    * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es

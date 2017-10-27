@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AdicionalDetalheResponse', '../model/AdicionalUpdate', '../model/EnderecoResponse', '../model/PessoaDetalheResponse', '../model/PessoaResponse', '../model/TelefoneResponse', '../model/AtribuirAssinaturaClientePersist', '../model/AdicionalPersist', '../model/PagePessoaResponse', '../model/AdicionalResponse', '../model/PageEnderecoResponse', '../model/PagePessoaDetalheResponse', '../model/PageTelefoneResponse', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist', '../model/IntegracaoEmissorPersist', '../model/IntegracaoEmissorResponse'], factory);
+    define(['../ApiClient', '../model/AdicionalDetalheResponse', '../model/AdicionalUpdate', '../model/EnderecoResponse', '../model/PessoaDetalheResponse', '../model/PessoaResponse', '../model/TelefoneResponse', '../model/AtribuirAssinaturaClientePersist', '../model/IntegracaoEmissorPersist', '../model/IntegracaoEmissorResponse', '../model/AdicionalPersist', '../model/PagePessoaResponse', '../model/AdicionalResponse', '../model/PageEnderecoResponse', '../model/PagePessoaDetalheResponse', '../model/PageTelefoneResponse', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AdicionalDetalheResponse'), require('../model/AdicionalUpdate'), require('../model/EnderecoResponse'), require('../model/PessoaDetalheResponse'), require('../model/PessoaResponse'), require('../model/TelefoneResponse'), require('../model/AtribuirAssinaturaClientePersist'), require('../model/AdicionalPersist'), require('../model/PagePessoaResponse'), require('../model/AdicionalResponse'), require('../model/PageEnderecoResponse'), require('../model/PagePessoaDetalheResponse'), require('../model/PageTelefoneResponse'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'), require('../model/IntegracaoEmissorPersist'), require('../model/IntegracaoEmissorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AdicionalDetalheResponse'), require('../model/AdicionalUpdate'), require('../model/EnderecoResponse'), require('../model/PessoaDetalheResponse'), require('../model/PessoaResponse'), require('../model/TelefoneResponse'), require('../model/AtribuirAssinaturaClientePersist'), require('../model/IntegracaoEmissorPersist'), require('../model/IntegracaoEmissorResponse'), require('../model/AdicionalPersist'), require('../model/PagePessoaResponse'), require('../model/AdicionalResponse'), require('../model/PageEnderecoResponse'), require('../model/PagePessoaDetalheResponse'), require('../model/PageTelefoneResponse'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastroClienteApi = factory(root.Pier.ApiClient, root.Pier.AdicionalDetalheResponse, root.Pier.AdicionalUpdate, root.Pier.EnderecoResponse, root.Pier.PessoaDetalheResponse, root.Pier.PessoaResponse, root.Pier.TelefoneResponse, root.Pier.AtribuirAssinaturaClientePersist, root.Pier.AdicionalPersist, root.Pier.PagePessoaResponse, root.Pier.AdicionalResponse, root.Pier.PageEnderecoResponse, root.Pier.PagePessoaDetalheResponse, root.Pier.PageTelefoneResponse, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist, root.Pier.IntegracaoEmissorPersist, root.Pier.IntegracaoEmissorResponse);
+    root.Pier.CadastroClienteApi = factory(root.Pier.ApiClient, root.Pier.AdicionalDetalheResponse, root.Pier.AdicionalUpdate, root.Pier.EnderecoResponse, root.Pier.PessoaDetalheResponse, root.Pier.PessoaResponse, root.Pier.TelefoneResponse, root.Pier.AtribuirAssinaturaClientePersist, root.Pier.IntegracaoEmissorPersist, root.Pier.IntegracaoEmissorResponse, root.Pier.AdicionalPersist, root.Pier.PagePessoaResponse, root.Pier.AdicionalResponse, root.Pier.PageEnderecoResponse, root.Pier.PagePessoaDetalheResponse, root.Pier.PageTelefoneResponse, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist);
   }
-}(this, function(ApiClient, AdicionalDetalheResponse, AdicionalUpdate, EnderecoResponse, PessoaDetalheResponse, PessoaResponse, TelefoneResponse, AtribuirAssinaturaClientePersist, AdicionalPersist, PagePessoaResponse, AdicionalResponse, PageEnderecoResponse, PagePessoaDetalheResponse, PageTelefoneResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist, IntegracaoEmissorPersist, IntegracaoEmissorResponse) {
+}(this, function(ApiClient, AdicionalDetalheResponse, AdicionalUpdate, EnderecoResponse, PessoaDetalheResponse, PessoaResponse, TelefoneResponse, AtribuirAssinaturaClientePersist, IntegracaoEmissorPersist, IntegracaoEmissorResponse, AdicionalPersist, PagePessoaResponse, AdicionalResponse, PageEnderecoResponse, PagePessoaDetalheResponse, PageTelefoneResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist) {
   'use strict';
 
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -413,6 +413,55 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/atribuir-assinatura-cliente', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the atualizarUsingPOST operation.
+     * @callback module:api/CadastroClienteApi~atualizarUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/IntegracaoEmissorResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Atualiza conta integrada com o emissor
+     * Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Object} opts Optional parameters
+     * @param {module:model/IntegracaoEmissorPersist} opts.body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+     * @param {module:api/CadastroClienteApi~atualizarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/IntegracaoEmissorResponse}
+     */
+    this.atualizarUsingPOST = function(id, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling atualizarUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = IntegracaoEmissorResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/atualizar-registro-integracao', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

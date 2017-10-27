@@ -18,7 +18,7 @@
   /**
    * StatusParametro service.
    * @module api/StatusParametroApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -321,6 +321,45 @@
 
       return this.apiClient.callApi(
         '/api/status-cartoes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarTiposEventosTransacoesUsingGET operation.
+     * @callback module:api/StatusParametroApi~listarTiposEventosTransacoesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+     * Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+     * @param {module:api/StatusParametroApi~listarTiposEventosTransacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Array.<Object>}
+     */
+    this.listarTiposEventosTransacoesUsingGET = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [Object];
+
+      return this.apiClient.callApi(
+        '/api/tipos-eventos-transacoes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

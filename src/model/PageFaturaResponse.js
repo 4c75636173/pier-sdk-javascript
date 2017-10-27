@@ -18,12 +18,12 @@
   /**
    * The PageFaturaResponse model module.
    * @module model/PageFaturaResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
    * Constructs a new <code>PageFaturaResponse</code>.
-   * Lista de faturas
+   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
    * @alias module:model/PageFaturaResponse
    * @class
    */

@@ -18,7 +18,7 @@
   /**
    * The PagePlanoParcelamentoResponse model module.
    * @module model/PagePlanoParcelamentoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

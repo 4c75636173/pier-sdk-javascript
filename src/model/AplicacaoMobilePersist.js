@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobilePersist model module.
    * @module model/AplicacaoMobilePersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

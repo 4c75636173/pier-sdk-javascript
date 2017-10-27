@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/TipoTemplateResponse', '../model/TipoTemplateRequest', '../model/DocumentoTemplatePersist', '../model/DocumentoTemplateResponse', '../model/DocumentoDetalhadoResponse', '../model/IntegrarDocumentoRequest', '../model/PageDocumentoResponse', '../model/PageDocumentoTemplateResponse', '../model/PageTipoTemplateResponse', '../model/DocumentoParametrosRequest'], factory);
+    define(['../ApiClient', '../model/TipoTemplateResponse', '../model/TipoTemplateRequest', '../model/DocumentoTemplatePersist', '../model/DocumentoTemplateResponse', '../model/DocumentoDetalhadoResponse', '../model/IntegrarDocumentoRequest', '../model/DocumentoIntegracaoResponse', '../model/PageDocumentoResponse', '../model/PageDocumentoTemplateResponse', '../model/PageTipoTemplateResponse', '../model/DocumentoParametrosRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/TipoTemplateResponse'), require('../model/TipoTemplateRequest'), require('../model/DocumentoTemplatePersist'), require('../model/DocumentoTemplateResponse'), require('../model/DocumentoDetalhadoResponse'), require('../model/IntegrarDocumentoRequest'), require('../model/PageDocumentoResponse'), require('../model/PageDocumentoTemplateResponse'), require('../model/PageTipoTemplateResponse'), require('../model/DocumentoParametrosRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/TipoTemplateResponse'), require('../model/TipoTemplateRequest'), require('../model/DocumentoTemplatePersist'), require('../model/DocumentoTemplateResponse'), require('../model/DocumentoDetalhadoResponse'), require('../model/IntegrarDocumentoRequest'), require('../model/DocumentoIntegracaoResponse'), require('../model/PageDocumentoResponse'), require('../model/PageDocumentoTemplateResponse'), require('../model/PageTipoTemplateResponse'), require('../model/DocumentoParametrosRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DocumentoApi = factory(root.Pier.ApiClient, root.Pier.TipoTemplateResponse, root.Pier.TipoTemplateRequest, root.Pier.DocumentoTemplatePersist, root.Pier.DocumentoTemplateResponse, root.Pier.DocumentoDetalhadoResponse, root.Pier.IntegrarDocumentoRequest, root.Pier.PageDocumentoResponse, root.Pier.PageDocumentoTemplateResponse, root.Pier.PageTipoTemplateResponse, root.Pier.DocumentoParametrosRequest);
+    root.Pier.DocumentoApi = factory(root.Pier.ApiClient, root.Pier.TipoTemplateResponse, root.Pier.TipoTemplateRequest, root.Pier.DocumentoTemplatePersist, root.Pier.DocumentoTemplateResponse, root.Pier.DocumentoDetalhadoResponse, root.Pier.IntegrarDocumentoRequest, root.Pier.DocumentoIntegracaoResponse, root.Pier.PageDocumentoResponse, root.Pier.PageDocumentoTemplateResponse, root.Pier.PageTipoTemplateResponse, root.Pier.DocumentoParametrosRequest);
   }
-}(this, function(ApiClient, TipoTemplateResponse, TipoTemplateRequest, DocumentoTemplatePersist, DocumentoTemplateResponse, DocumentoDetalhadoResponse, IntegrarDocumentoRequest, PageDocumentoResponse, PageDocumentoTemplateResponse, PageTipoTemplateResponse, DocumentoParametrosRequest) {
+}(this, function(ApiClient, TipoTemplateResponse, TipoTemplateRequest, DocumentoTemplatePersist, DocumentoTemplateResponse, DocumentoDetalhadoResponse, IntegrarDocumentoRequest, DocumentoIntegracaoResponse, PageDocumentoResponse, PageDocumentoTemplateResponse, PageTipoTemplateResponse, DocumentoParametrosRequest) {
   'use strict';
 
   /**
    * Documento service.
    * @module api/DocumentoApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -278,7 +278,7 @@
      * Callback function to receive the result of the integrarUsingPOST operation.
      * @callback module:api/DocumentoApi~integrarUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
+     * @param {module:model/DocumentoIntegracaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -287,7 +287,7 @@
      * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
      * @param {module:model/IntegrarDocumentoRequest} integrarDocumentoRequest integrarDocumentoRequest
      * @param {module:api/DocumentoApi~integrarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {'String'}
+     * data is of type: {module:model/DocumentoIntegracaoResponse}
      */
     this.integrarUsingPOST = function(integrarDocumentoRequest, callback) {
       var postBody = integrarDocumentoRequest;
@@ -310,7 +310,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = 'String';
+      var returnType = DocumentoIntegracaoResponse;
 
       return this.apiClient.callApi(
         '/api/documentos/integrar', 'POST',

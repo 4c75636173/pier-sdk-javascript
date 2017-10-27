@@ -18,7 +18,7 @@
   /**
    * ServicoConta service.
    * @module api/ServicoContaApi
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

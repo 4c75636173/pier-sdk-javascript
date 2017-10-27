@@ -18,7 +18,7 @@
   /**
    * The PageTemplateNotificacaoResponse model module.
    * @module model/PageTemplateNotificacaoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

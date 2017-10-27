@@ -18,7 +18,7 @@
   /**
    * The PessoaPersist model module.
    * @module model/PessoaPersist
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -30,13 +30,13 @@
    */
   var exports = function(nome) {
 
-
-
-
-
-
-
     this['nome'] = nome;
+
+
+
+
+
+
 
 
 
@@ -56,26 +56,17 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      }
       if (data.hasOwnProperty('cpf')) {
         obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
-      }
-      if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
       if (data.hasOwnProperty('dataNascimento')) {
         obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
       }
-      if (data.hasOwnProperty('email')) {
-        obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      }
-      if (data.hasOwnProperty('estadoCivil')) {
-        obj['estadoCivil'] = ApiClient.convertToType(data['estadoCivil'], 'String');
-      }
-      if (data.hasOwnProperty('nacionalidade')) {
-        obj['nacionalidade'] = ApiClient.convertToType(data['nacionalidade'], 'String');
-      }
-      if (data.hasOwnProperty('nome')) {
-        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      if (data.hasOwnProperty('sexo')) {
+        obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
       }
       if (data.hasOwnProperty('numeroIdentidade')) {
         obj['numeroIdentidade'] = ApiClient.convertToType(data['numeroIdentidade'], 'String');
@@ -83,22 +74,37 @@
       if (data.hasOwnProperty('orgaoExpedidorIdentidade')) {
         obj['orgaoExpedidorIdentidade'] = ApiClient.convertToType(data['orgaoExpedidorIdentidade'], 'String');
       }
+      if (data.hasOwnProperty('unidadeFederativaIdentidade')) {
+        obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
+      }
+      if (data.hasOwnProperty('dataEmissaoIdentidade')) {
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
+      }
+      if (data.hasOwnProperty('estadoCivil')) {
+        obj['estadoCivil'] = ApiClient.convertToType(data['estadoCivil'], 'String');
+      }
       if (data.hasOwnProperty('profissao')) {
         obj['profissao'] = ApiClient.convertToType(data['profissao'], 'String');
       }
-      if (data.hasOwnProperty('sexo')) {
-        obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
+      if (data.hasOwnProperty('nacionalidade')) {
+        obj['nacionalidade'] = ApiClient.convertToType(data['nacionalidade'], 'String');
+      }
+      if (data.hasOwnProperty('email')) {
+        obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersist]);
-      }
-      if (data.hasOwnProperty('unidadeFederativaIdentidade')) {
-        obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
       }
     }
     return obj;
   }
 
+
+  /**
+   * Apresenta o Nome do Socio
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
 
   /**
    * N\u00C3\u00BAmero do CPF, quando PF.
@@ -107,40 +113,16 @@
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Data emiss\u00C3\u00A3o da Identidade
-   * @member {String} dataEmissaoIdentidade
-   */
-  exports.prototype['dataEmissaoIdentidade'] = undefined;
-
-  /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * Email do s\u00C3\u00B3cio
-   * @member {String} email
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * @member {String} sexo
    */
-  exports.prototype['email'] = undefined;
-
-  /**
-   * Estado civil do s\u00C3\u00B3cio
-   * @member {String} estadoCivil
-   */
-  exports.prototype['estadoCivil'] = undefined;
-
-  /**
-   * Nacionalidade do s\u00C3\u00B3cio
-   * @member {String} nacionalidade
-   */
-  exports.prototype['nacionalidade'] = undefined;
-
-  /**
-   * Apresenta o Nome do Socio
-   * @member {String} nome
-   */
-  exports.prototype['nome'] = undefined;
+  exports.prototype['sexo'] = undefined;
 
   /**
    * N\u00C3\u00BAmero da Identidade.
@@ -155,28 +137,46 @@
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * @member {String} unidadeFederativaIdentidade
+   */
+  exports.prototype['unidadeFederativaIdentidade'] = undefined;
+
+  /**
+   * Data emiss\u00C3\u00A3o da Identidade
+   * @member {String} dataEmissaoIdentidade
+   */
+  exports.prototype['dataEmissaoIdentidade'] = undefined;
+
+  /**
+   * Estado civil do s\u00C3\u00B3cio
+   * @member {String} estadoCivil
+   */
+  exports.prototype['estadoCivil'] = undefined;
+
+  /**
    * Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
    * @member {String} profissao
    */
   exports.prototype['profissao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
-   * @member {String} sexo
+   * Nacionalidade do s\u00C3\u00B3cio
+   * @member {String} nacionalidade
    */
-  exports.prototype['sexo'] = undefined;
+  exports.prototype['nacionalidade'] = undefined;
+
+  /**
+   * Email do s\u00C3\u00B3cio
+   * @member {String} email
+   */
+  exports.prototype['email'] = undefined;
 
   /**
    * Informa os telefones do s\u00C3\u00B3cio
    * @member {Array.<module:model/TelefonePessoaAprovadaPersist>} telefones
    */
   exports.prototype['telefones'] = undefined;
-
-  /**
-   * Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @member {String} unidadeFederativaIdentidade
-   */
-  exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
 
 

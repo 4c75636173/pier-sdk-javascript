@@ -421,7 +421,7 @@ No authorization required
 
 <a name="listarUsingGET6"></a>
 # **listarUsingGET6**
-> PageCartaoPayResponse listarUsingGET6(deviceId, opts)
+> PageCartaoPayResponse listarUsingGET6(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -433,13 +433,13 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ConductorPayApi()
 
-var deviceId = "deviceId_example"; // {String} Device id criptografado
-
 var opts = { 
+  'deviceId': "deviceId_example", // {String} Device id criptografado
   'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
   'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'status': "status_example" // {String} Status do cart\u00C3\u00A3o tokenizado
+  'status': "status_example", // {String} Status do cart\u00C3\u00A3o tokenizado
+  'numeroCartao': "numeroCartao_example" // {String} Numero do cart\u00C3\u00A3o tokenizado
 };
 
 var callback = function(error, data, response) {
@@ -449,18 +449,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(deviceId, opts, callback);
+api.listarUsingGET6(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **String**| Device id criptografado | 
+ **deviceId** | **String**| Device id criptografado | [optional] 
  **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
  **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **status** | **String**| Status do cart\u00C3\u00A3o tokenizado | [optional] 
+ **numeroCartao** | **String**| Numero do cart\u00C3\u00A3o tokenizado | [optional] 
 
 ### Return type
 

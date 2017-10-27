@@ -18,7 +18,7 @@
   /**
    * The PageDispositivoResponse model module.
    * @module model/PageDispositivoResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

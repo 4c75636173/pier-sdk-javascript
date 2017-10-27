@@ -18,7 +18,7 @@
   /**
    * The TipoOportunidadeAUDResponse model module.
    * @module model/TipoOportunidadeAUDResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

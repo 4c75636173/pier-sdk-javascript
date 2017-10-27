@@ -18,7 +18,7 @@
   /**
    * The TemplateNotificacaoDetalheResponse model module.
    * @module model/TemplateNotificacaoDetalheResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

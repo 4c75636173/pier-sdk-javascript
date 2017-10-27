@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './AnexoNotificacaoEmailRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./AnexoNotificacaoEmailRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacaoEmailRequest = factory(root.Pier.ApiClient);
+    root.Pier.NotificacaoEmailRequest = factory(root.Pier.ApiClient, root.Pier.AnexoNotificacaoEmailRequest);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, AnexoNotificacaoEmailRequest) {
   'use strict';
 
   /**
    * The NotificacaoEmailRequest model module.
    * @module model/NotificacaoEmailRequest
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -47,17 +46,14 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idDocumento')) {
-        obj['idDocumento'] = ApiClient.convertToType(data['idDocumento'], 'Integer');
-      }
       if (data.hasOwnProperty('idTemplateNotificacao')) {
         obj['idTemplateNotificacao'] = ApiClient.convertToType(data['idTemplateNotificacao'], 'Integer');
       }
-      if (data.hasOwnProperty('destinatario')) {
-        obj['destinatario'] = ApiClient.convertToType(data['destinatario'], 'String');
+      if (data.hasOwnProperty('destinatarios')) {
+        obj['destinatarios'] = ApiClient.convertToType(data['destinatarios'], ['String']);
       }
-      if (data.hasOwnProperty('tipoLayout')) {
-        obj['tipoLayout'] = ApiClient.convertToType(data['tipoLayout'], 'String');
+      if (data.hasOwnProperty('anexos')) {
+        obj['anexos'] = ApiClient.convertToType(data['anexos'], [AnexoNotificacaoEmailRequest]);
       }
       if (data.hasOwnProperty('parametrosConteudo')) {
         obj['parametrosConteudo'] = ApiClient.convertToType(data['parametrosConteudo'], {'String': Object});
@@ -68,28 +64,22 @@
 
 
   /**
-   * ID para o documento a ser enviado.
-   * @member {Integer} idDocumento
-   */
-  exports.prototype['idDocumento'] = undefined;
-
-  /**
    * ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
    * @member {Integer} idTemplateNotificacao
    */
   exports.prototype['idTemplateNotificacao'] = undefined;
 
   /**
-   * Email do destinat\u00C3\u00A1rio.
-   * @member {String} destinatario
+   * Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+   * @member {Array.<String>} destinatarios
    */
-  exports.prototype['destinatario'] = undefined;
+  exports.prototype['destinatarios'] = undefined;
 
   /**
-   * Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
-   * @member {module:model/NotificacaoEmailRequest.TipoLayoutEnum} tipoLayout
+   * Lista de ids dos anexos a serem enviados.
+   * @member {Array.<module:model/AnexoNotificacaoEmailRequest>} anexos
    */
-  exports.prototype['tipoLayout'] = undefined;
+  exports.prototype['anexos'] = undefined;
 
   /**
    * Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
@@ -98,36 +88,7 @@
   exports.prototype['parametrosConteudo'] = undefined;
 
 
-  /**
-   * Allowed values for the <code>tipoLayout</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.TipoLayoutEnum = { 
-    /**
-     * value: RECUPERAR_SENHA
-     * @const
-     */
-    RECUPERAR_SENHA: "RECUPERAR_SENHA",
-    
-    /**
-     * value: FATURA_POR_EMAIL
-     * @const
-     */
-    FATURA_POR_EMAIL: "FATURA_POR_EMAIL",
-    
-    /**
-     * value: VALIDAR_DISPOSITIVO
-     * @const
-     */
-    VALIDAR_DISPOSITIVO: "VALIDAR_DISPOSITIVO",
-    
-    /**
-     * value: NOTIFICACAO_EMAIL
-     * @const
-     */
-    NOTIFICACAO_EMAIL: "NOTIFICACAO_EMAIL"
-  };
+
 
   return exports;
 }));

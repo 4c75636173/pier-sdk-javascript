@@ -18,7 +18,7 @@
   /**
    * The ArquivoParametroResponse model module.
    * @module model/ArquivoParametroResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**

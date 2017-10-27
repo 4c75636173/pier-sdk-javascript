@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoResponse', './SocioAprovadoResponse', './TelefonePessoaAprovadaResponse'], factory);
+    define(['../ApiClient', './EnderecoAprovadoResponse', './ReferenciaComercialAprovadoResponse', './SocioAprovadoResponse', './TelefonePessoaAprovadaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoResponse'), require('./SocioAprovadoResponse'), require('./TelefonePessoaAprovadaResponse'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoResponse'), require('./ReferenciaComercialAprovadoResponse'), require('./SocioAprovadoResponse'), require('./TelefonePessoaAprovadaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaJuridicaAprovadaResponse = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoResponse, root.Pier.SocioAprovadoResponse, root.Pier.TelefonePessoaAprovadaResponse);
+    root.Pier.PessoaJuridicaAprovadaResponse = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoResponse, root.Pier.ReferenciaComercialAprovadoResponse, root.Pier.SocioAprovadoResponse, root.Pier.TelefonePessoaAprovadaResponse);
   }
-}(this, function(ApiClient, EnderecoAprovadoResponse, SocioAprovadoResponse, TelefonePessoaAprovadaResponse) {
+}(this, function(ApiClient, EnderecoAprovadoResponse, ReferenciaComercialAprovadoResponse, SocioAprovadoResponse, TelefonePessoaAprovadaResponse) {
   'use strict';
 
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
@@ -31,6 +31,7 @@
    * @param limiteParcelas
    */
   var exports = function(limiteGlobal, limiteMaximo, limiteParcelas) {
+
 
 
 
@@ -127,6 +128,9 @@
       }
       if (data.hasOwnProperty('socios')) {
         obj['socios'] = ApiClient.convertToType(data['socios'], [SocioAprovadoResponse]);
+      }
+      if (data.hasOwnProperty('referencias')) {
+        obj['referencias'] = ApiClient.convertToType(data['referencias'], [ReferenciaComercialAprovadoResponse]);
       }
       if (data.hasOwnProperty('limiteGlobal')) {
         obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
@@ -261,6 +265,12 @@
    * @member {Array.<module:model/SocioAprovadoResponse>} socios
    */
   exports.prototype['socios'] = undefined;
+
+  /**
+   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * @member {Array.<module:model/ReferenciaComercialAprovadoResponse>} referencias
+   */
+  exports.prototype['referencias'] = undefined;
 
   /**
    * Valor do Limite Global

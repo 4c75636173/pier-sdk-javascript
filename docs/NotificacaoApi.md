@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-[**responderSMSUsingPOST**](NotificacaoApi.md#responderSMSUsingPOST) | **POST** /api/notificacoes/sms/responder | Responder SMS
+[**responderSMSGetUsingGET**](NotificacaoApi.md#responderSMSGetUsingGET) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
 [**salvarPushGCMUsingPOST**](NotificacaoApi.md#salvarPushGCMUsingPOST) | **POST** /api/notificacoes/push/gcm | Enviar Push GCM
@@ -845,7 +845,7 @@ No authorization required
 
 <a name="notificacaoEmailUsingPOST"></a>
 # **notificacaoEmailUsingPOST**
-> NotificacaoEmailResponse notificacaoEmailUsingPOST(request)
+> Object notificacaoEmailUsingPOST(request)
 
 Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
 
@@ -878,7 +878,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificacaoEmailResponse**](NotificacaoEmailResponse.md)
+**Object**
 
 ### Authorization
 
@@ -889,9 +889,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="responderSMSUsingPOST"></a>
-# **responderSMSUsingPOST**
-> NotificacaoSMSResponse responderSMSUsingPOST(opts)
+<a name="responderSMSGetUsingGET"></a>
+# **responderSMSGetUsingGET**
+> NotificacaoSMSResponse responderSMSGetUsingGET(opts)
 
 Responder SMS
 
@@ -916,7 +916,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.responderSMSUsingPOST(opts, callback);
+api.responderSMSGetUsingGET(opts, callback);
 ```
 
 ### Parameters

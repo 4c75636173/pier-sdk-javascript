@@ -18,7 +18,7 @@
   /**
    * The NotificacaoPushResponse model module.
    * @module model/NotificacaoPushResponse
-   * @version 2.39.3
+   * @version 2.43.0
    */
 
   /**
