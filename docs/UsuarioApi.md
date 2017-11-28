@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
 [**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT11**](UsuarioApi.md#alterarUsingPUT11) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
+[**alterarUsingPUT17**](UsuarioApi.md#alterarUsingPUT17) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
 [**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET32**](UsuarioApi.md#consultarUsingGET32) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+[**consultarUsingGET37**](UsuarioApi.md#consultarUsingGET37) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 [**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET36**](UsuarioApi.md#listarUsingGET36) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET42**](UsuarioApi.md#listarUsingGET42) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST20**](UsuarioApi.md#salvarUsingPOST20) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
+[**salvarUsingPOST24**](UsuarioApi.md#salvarUsingPOST24) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
 [**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 [**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -118,9 +118,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT11"></a>
-# **alterarUsingPUT11**
-> UsuarioResponse alterarUsingPUT11(id, update)
+<a name="alterarUsingPUT17"></a>
+# **alterarUsingPUT17**
+> UsuarioResponse alterarUsingPUT17(id, update)
 
 Altera os usu\u00C3\u00A1rios cadastrados na base.
 
@@ -144,7 +144,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT11(id, update, callback);
+api.alterarUsingPUT17(id, update, callback);
 ```
 
 ### Parameters
@@ -213,9 +213,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET32"></a>
-# **consultarUsingGET32**
-> UsuarioResponse consultarUsingGET32(id)
+<a name="consultarUsingGET37"></a>
+# **consultarUsingGET37**
+> UsuarioResponse consultarUsingGET37(id)
 
 Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
 
@@ -237,7 +237,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET32(id, callback);
+api.consultarUsingGET37(id, callback);
 ```
 
 ### Parameters
@@ -305,9 +305,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET36"></a>
-# **listarUsingGET36**
-> PageUsuarioResponse listarUsingGET36(opts)
+<a name="listarUsingGET42"></a>
+# **listarUsingGET42**
+> PageUsuarioResponse listarUsingGET42(opts)
 
 Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
 
@@ -336,7 +336,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET36(opts, callback);
+api.listarUsingGET42(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST20"></a>
-# **salvarUsingPOST20**
-> UsuarioResponse salvarUsingPOST20(persist)
+<a name="salvarUsingPOST24"></a>
+# **salvarUsingPOST24**
+> UsuarioResponse salvarUsingPOST24(persist)
 
 Cadastra Usu\u00C3\u00A1rio na base.
 
@@ -434,7 +434,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST20(persist, callback);
+api.salvarUsingPOST24(persist, callback);
 ```
 
 ### Parameters

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
 [**listarUsingGET6**](ConductorPayApi.md#listarUsingGET6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvarUsingPOST4**](ConductorPayApi.md#salvarUsingPOST4) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 <a name="atualizarChaveUsingPOST"></a>
@@ -476,9 +476,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST4"></a>
-# **salvarUsingPOST4**
-> CartaoPayCadastroResponse salvarUsingPOST4(deviceId, persist)
+<a name="salvarUsingPOST5"></a>
+# **salvarUsingPOST5**
+> CartaoPayCadastroResponse salvarUsingPOST5(deviceId, persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -502,7 +502,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST4(deviceId, persist, callback);
+api.salvarUsingPOST5(deviceId, persist, callback);
 ```
 
 ### Parameters

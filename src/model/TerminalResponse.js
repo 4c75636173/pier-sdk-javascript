@@ -18,7 +18,7 @@
   /**
    * The TerminalResponse model module.
    * @module model/TerminalResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -28,6 +28,8 @@
    * @class
    */
   var exports = function() {
+
+
 
 
 
@@ -58,6 +60,12 @@
       if (data.hasOwnProperty('idEstabelecimento')) {
         obj['idEstabelecimento'] = ApiClient.convertToType(data['idEstabelecimento'], 'Integer');
       }
+      if (data.hasOwnProperty('flagConsultaExtrato')) {
+        obj['flagConsultaExtrato'] = ApiClient.convertToType(data['flagConsultaExtrato'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagTerminalVirtual')) {
+        obj['flagTerminalVirtual'] = ApiClient.convertToType(data['flagTerminalVirtual'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -86,6 +94,18 @@
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
+
+  /**
+   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * @member {Boolean} flagConsultaExtrato
+   */
+  exports.prototype['flagConsultaExtrato'] = undefined;
+
+  /**
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * @member {Boolean} flagTerminalVirtual
+   */
+  exports.prototype['flagTerminalVirtual'] = undefined;
 
 
 

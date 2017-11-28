@@ -4,19 +4,27 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alterarUsingPUT2**](CadastroGeralApi.md#alterarUsingPUT2) | **PUT** /api/campanhas/{id} | Alterar campanha
+[**alterarUsingPUT3**](CadastroGeralApi.md#alterarUsingPUT3) | **PUT** /api/configuracoes-registro-cobranca/{id} | Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+[**alterarUsingPUT4**](CadastroGeralApi.md#alterarUsingPUT4) | **PUT** /api/configuracoes-rotativos/{id} | Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
 [**ativarUsoExteriorUsingPOST**](CadastroGeralApi.md#ativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/ativar-uso-exterior | Ativa o par\u00C3\u00A2metro uso exterior para o produto
+[**cadastrarUsingPOST1**](CadastroGeralApi.md#cadastrarUsingPOST1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**configurarTaxaAntecipacaoUsingPOST**](CadastroGeralApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
+[**consultarCampanhaUsingGET**](CadastroGeralApi.md#consultarCampanhaUsingGET) | **GET** /api/campanhas/{id} | Consultar campanha
 [**consultarOrigemComercialUsingGET**](CadastroGeralApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
 [**consultarTaxaAntecipacaoUsingGET**](CadastroGeralApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-[**consultarUsingGET16**](CadastroGeralApi.md#consultarUsingGET16) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
 [**consultarUsingGET2**](CadastroGeralApi.md#consultarUsingGET2) | **GET** /api/atendimento-clientes/{id} | Apresenta os dados de um determinado Atendimento
-[**consultarUsingGET22**](CadastroGeralApi.md#consultarUsingGET22) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
-[**consultarUsingGET23**](CadastroGeralApi.md#consultarUsingGET23) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
-[**consultarUsingGET24**](CadastroGeralApi.md#consultarUsingGET24) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
-[**consultarUsingGET25**](CadastroGeralApi.md#consultarUsingGET25) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET27**](CadastroGeralApi.md#consultarUsingGET27) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET21**](CadastroGeralApi.md#consultarUsingGET21) | **GET** /api/produtos/{id} | Apresenta os dados de um determinado Produto
+[**consultarUsingGET27**](CadastroGeralApi.md#consultarUsingGET27) | **GET** /api/tipos-ajustes | Lista os tipos de ajustes do emissor 
+[**consultarUsingGET28**](CadastroGeralApi.md#consultarUsingGET28) | **GET** /api/tipos-boletos | Lista os tipos de boletos do emissor 
+[**consultarUsingGET29**](CadastroGeralApi.md#consultarUsingGET29) | **GET** /api/tipos-enderecos/{id} | Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 [**consultarUsingGET3**](CadastroGeralApi.md#consultarUsingGET3) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
+[**consultarUsingGET30**](CadastroGeralApi.md#consultarUsingGET30) | **GET** /api/tipos-operacoes | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET32**](CadastroGeralApi.md#consultarUsingGET32) | **GET** /api/tipos-telefones/{id} | Apresenta os dados de um determinado Tipo de Telefone
+[**consultarUsingGET7**](CadastroGeralApi.md#consultarUsingGET7) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+[**consultarUsingGET8**](CadastroGeralApi.md#consultarUsingGET8) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
 [**desativarUsoExteriorUsingPOST**](CadastroGeralApi.md#desativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
+[**listarCampanhasUsingGET**](CadastroGeralApi.md#listarCampanhasUsingGET) | **GET** /api/campanhas | Listar Campanhas
 [**listarContasPorPessoaUsingGET**](CadastroGeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listarEstadosCivisUsingGET**](CadastroGeralApi.md#listarEstadosCivisUsingGET) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
 [**listarFantasiasBasicasUsingGET**](CadastroGeralApi.md#listarFantasiasBasicasUsingGET) | **GET** /api/fantasias-basicas | Listar Fantasias B\u00C3\u00A1sicas
@@ -26,16 +34,168 @@ Method | HTTP request | Description
 [**listarOrigensComerciaisUsingGET**](CadastroGeralApi.md#listarOrigensComerciaisUsingGET) | **GET** /api/origens-comerciais | Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
 [**listarParentescosUsingGET**](CadastroGeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | Lista os Parentescos
 [**listarProfissoesUsingGET**](CadastroGeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
+[**listarTiposCampanhasUsingGET**](CadastroGeralApi.md#listarTiposCampanhasUsingGET) | **GET** /api/tipos-campanhas | Listar Tipos de Campanhas
+[**listarUsingGET10**](CadastroGeralApi.md#listarUsingGET10) | **GET** /api/configuracoes-rotativos | Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
 [**listarUsingGET2**](CadastroGeralApi.md#listarUsingGET2) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET21**](CadastroGeralApi.md#listarUsingGET21) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET22**](CadastroGeralApi.md#listarUsingGET22) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET23**](CadastroGeralApi.md#listarUsingGET23) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
-[**listarUsingGET29**](CadastroGeralApi.md#listarUsingGET29) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET26**](CadastroGeralApi.md#listarUsingGET26) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET27**](CadastroGeralApi.md#listarUsingGET27) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET28**](CadastroGeralApi.md#listarUsingGET28) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
 [**listarUsingGET3**](CadastroGeralApi.md#listarUsingGET3) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET31**](CadastroGeralApi.md#listarUsingGET31) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET37**](CadastroGeralApi.md#listarUsingGET37) | **GET** /api/vencimentos | Listar Vencimentos
+[**listarUsingGET35**](CadastroGeralApi.md#listarUsingGET35) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET37**](CadastroGeralApi.md#listarUsingGET37) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET43**](CadastroGeralApi.md#listarUsingGET43) | **GET** /api/vencimentos | Listar Vencimentos
+[**listarUsingGET9**](CadastroGeralApi.md#listarUsingGET9) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
 [**salvarUsingPOST2**](CadastroGeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+[**salvarUsingPOST4**](CadastroGeralApi.md#salvarUsingPOST4) | **POST** /api/campanhas | Inserir campanha
+[**salvarUsingPOST6**](CadastroGeralApi.md#salvarUsingPOST6) | **POST** /api/configuracoes-rotativos | Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
 
+
+<a name="alterarUsingPUT2"></a>
+# **alterarUsingPUT2**
+> CampanhaResponse alterarUsingPUT2(id, update)
+
+Alterar campanha
+
+Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id).
+
+var update = new Pier.CampanhaUpdate(); // {CampanhaUpdate} update
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT2(id, update, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id). | 
+ **update** | [**CampanhaUpdate**](CampanhaUpdate.md)| update | 
+
+### Return type
+
+[**CampanhaResponse**](CampanhaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT3"></a>
+# **alterarUsingPUT3**
+> ConfiguracaoRegistroCobrancaResponse alterarUsingPUT3(id, configuracaoPersist)
+
+Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+
+Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+
+var configuracaoPersist = new Pier.ConfiguracaoRegistroCobrancaPersist(); // {ConfiguracaoRegistroCobrancaPersist} configuracaoPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT3(id, configuracaoPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **configuracaoPersist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT4"></a>
+# **alterarUsingPUT4**
+> ConfiguracaoRotativoDetalheResponse alterarUsingPUT4(id, configuracaoRotativoPersist)
+
+Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+
+Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+
+var configuracaoRotativoPersist = new Pier.ConfiguracaoRotativoPersist(); // {ConfiguracaoRotativoPersist} configuracaoRotativoPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT4(id, configuracaoRotativoPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+ **configuracaoRotativoPersist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
+
+### Return type
+
+[**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="ativarUsoExteriorUsingPOST"></a>
 # **ativarUsoExteriorUsingPOST**
@@ -73,6 +233,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cadastrarUsingPOST1"></a>
+# **cadastrarUsingPOST1**
+> ConfiguracaoRegistroCobrancaResponse cadastrarUsingPOST1(configuracaoPersist)
+
+Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+
+Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var configuracaoPersist = new Pier.ConfiguracaoRegistroCobrancaPersist(); // {ConfiguracaoRegistroCobrancaPersist} configuracaoPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cadastrarUsingPOST1(configuracaoPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **configuracaoPersist** | [**ConfiguracaoRegistroCobrancaPersist**](ConfiguracaoRegistroCobrancaPersist.md)| configuracaoPersist | 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
 
 ### Authorization
 
@@ -122,6 +328,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ParametroProdutoResponse**](ParametroProdutoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarCampanhaUsingGET"></a>
+# **consultarCampanhaUsingGET**
+> CampanhaResponse consultarCampanhaUsingGET(id)
+
+Consultar campanha
+
+Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} ID da Campanha
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarCampanhaUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Campanha | 
+
+### Return type
+
+[**CampanhaResponse**](CampanhaResponse.md)
 
 ### Authorization
 
@@ -227,52 +479,6 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET16"></a>
-# **consultarUsingGET16**
-> ProdutoDetalhesResponse consultarUsingGET16(id)
-
-Apresenta os dados de um determinado Produto
-
-Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET16(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
-
-### Return type
-
-[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="consultarUsingGET2"></a>
 # **consultarUsingGET2**
 > AtendimentoClienteResponse consultarUsingGET2(id)
@@ -319,9 +525,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> PageTipoAjusteResponse consultarUsingGET22(opts)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> ProdutoDetalhesResponse consultarUsingGET21(id)
+
+Apresenta os dados de um determinado Produto
+
+Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET21(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
+
+### Return type
+
+[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> PageTipoAjusteResponse consultarUsingGET27(opts)
 
 Lista os tipos de ajustes do emissor 
 
@@ -348,7 +600,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(opts, callback);
+api.consultarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -374,9 +626,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> PageTipoBoletoResponse consultarUsingGET23(opts)
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> PageTipoBoletoResponse consultarUsingGET28(opts)
 
 Lista os tipos de boletos do emissor 
 
@@ -404,7 +656,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(opts, callback);
+api.consultarUsingGET28(opts, callback);
 ```
 
 ### Parameters
@@ -431,9 +683,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> TipoEnderecoResponse consultarUsingGET24(id)
+<a name="consultarUsingGET29"></a>
+# **consultarUsingGET29**
+> TipoEnderecoResponse consultarUsingGET29(id)
 
 Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
 
@@ -455,7 +707,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(id, callback);
+api.consultarUsingGET29(id, callback);
 ```
 
 ### Parameters
@@ -467,104 +719,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TipoEnderecoResponse**](TipoEnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET25"></a>
-# **consultarUsingGET25**
-> TipoOperacaoResponse consultarUsingGET25(idCartao, idEstabelecimento, codigoProcessamento)
-
-Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-
-Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var idCartao = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-
-var idEstabelecimento = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-
-var codigoProcessamento = "codigoProcessamento_example"; // {String} C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET25(idCartao, idEstabelecimento, codigoProcessamento, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idCartao** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). | 
- **idEstabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). | 
- **codigoProcessamento** | **String**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. | 
-
-### Return type
-
-[**TipoOperacaoResponse**](TipoOperacaoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET27"></a>
-# **consultarUsingGET27**
-> TipoTelefoneResponse consultarUsingGET27(id)
-
-Apresenta os dados de um determinado Tipo de Telefone
-
-Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET27(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
-
-### Return type
-
-[**TipoTelefoneResponse**](TipoTelefoneResponse.md)
 
 ### Authorization
 
@@ -621,6 +775,196 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="consultarUsingGET30"></a>
+# **consultarUsingGET30**
+> TipoOperacaoResponse consultarUsingGET30(idCartao, idEstabelecimento, codigoProcessamento)
+
+Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var idCartao = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
+
+var idEstabelecimento = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
+
+var codigoProcessamento = "codigoProcessamento_example"; // {String} C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET30(idCartao, idEstabelecimento, codigoProcessamento, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idCartao** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao). | 
+ **idEstabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento). | 
+ **codigoProcessamento** | **String**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o. | 
+
+### Return type
+
+[**TipoOperacaoResponse**](TipoOperacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET32"></a>
+# **consultarUsingGET32**
+> TipoTelefoneResponse consultarUsingGET32(id)
+
+Apresenta os dados de um determinado Tipo de Telefone
+
+Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET32(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id) | 
+
+### Return type
+
+[**TipoTelefoneResponse**](TipoTelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET7"></a>
+# **consultarUsingGET7**
+> ConfiguracaoRegistroCobrancaResponse consultarUsingGET7(id)
+
+Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+
+Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET7(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id). | 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> ConfiguracaoRotativoDetalheResponse consultarUsingGET8(id)
+
+Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+
+Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET8(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id). | 
+
+### Return type
+
+[**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="desativarUsoExteriorUsingPOST"></a>
 # **desativarUsoExteriorUsingPOST**
 > ProdutoDetalhesResponse desativarUsoExteriorUsingPOST(id)
@@ -657,6 +1001,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarCampanhasUsingGET"></a>
+# **listarCampanhasUsingGET**
+> PageCampanhaResponse listarCampanhasUsingGET(opts)
+
+Listar Campanhas
+
+Lista as campanhas.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idTipoCampanha': 789 // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id).
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarCampanhasUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idTipoCampanha** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id). | [optional] 
+
+### Return type
+
+[**PageCampanhaResponse**](PageCampanhaResponse.md)
 
 ### Authorization
 
@@ -1134,6 +1531,110 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="listarTiposCampanhasUsingGET"></a>
+# **listarTiposCampanhasUsingGET**
+> PageTipoCampanhaResponse listarTiposCampanhasUsingGET(opts)
+
+Listar Tipos de Campanhas
+
+Lista os tipos de campanhas.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarTiposCampanhasUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**PageTipoCampanhaResponse**](PageTipoCampanhaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageConfiguracaoRotativoResponse listarUsingGET10(opts)
+
+Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+
+Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idProduto': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET10(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idProduto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto. | [optional] 
+
+### Return type
+
+[**PageConfiguracaoRotativoResponse**](PageConfiguracaoRotativoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="listarUsingGET2"></a>
 # **listarUsingGET2**
 > PageAtendimentoClienteResponse listarUsingGET2(opts)
@@ -1193,9 +1694,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PagePortadorResponse listarUsingGET21(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PagePortadorResponse listarUsingGET26(opts)
 
 Lista os Portadores existentes
 
@@ -1230,7 +1731,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -1264,9 +1765,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageProdutoResponse listarUsingGET22(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PageProdutoResponse listarUsingGET27(opts)
 
 Lista os Produtos do Emissor
 
@@ -1294,7 +1795,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -1321,9 +1822,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PagePromotorResponse listarUsingGET23(opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PagePromotorResponse listarUsingGET28(opts)
 
 Lista promotores cadastrados na base do emissor
 
@@ -1353,7 +1854,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET28(opts, callback);
 ```
 
 ### Parameters
@@ -1372,61 +1873,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PagePromotorResponse**](PagePromotorResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET29"></a>
-# **listarUsingGET29**
-> PageTipoEnderecoResponse listarUsingGET29(opts)
-
-Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-
-Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-  'nome': "nome_example" // {String} Nome do Tipo do Endere\u00C3\u00A7o
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET29(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
- **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
-
-### Return type
-
-[**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
 
 ### Authorization
 
@@ -1488,9 +1934,64 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET31"></a>
-# **listarUsingGET31**
-> PageTipoTelefoneResponse listarUsingGET31(opts)
+<a name="listarUsingGET35"></a>
+# **listarUsingGET35**
+> PageTipoEnderecoResponse listarUsingGET35(opts)
+
+Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+
+Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'id': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+  'nome': "nome_example" // {String} Nome do Tipo do Endere\u00C3\u00A7o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET35(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id) | [optional] 
+ **nome** | **String**| Nome do Tipo do Endere\u00C3\u00A7o | [optional] 
+
+### Return type
+
+[**PageTipoEnderecoResponse**](PageTipoEnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET37"></a>
+# **listarUsingGET37**
+> PageTipoTelefoneResponse listarUsingGET37(opts)
 
 Lista os Tipos de Telefones
 
@@ -1517,7 +2018,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET31(opts, callback);
+api.listarUsingGET37(opts, callback);
 ```
 
 ### Parameters
@@ -1543,9 +2044,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET37"></a>
-# **listarUsingGET37**
-> PageControleVencimentoResponse listarUsingGET37(opts)
+<a name="listarUsingGET43"></a>
+# **listarUsingGET43**
+> PageControleVencimentoResponse listarUsingGET43(opts)
 
 Listar Vencimentos
 
@@ -1571,7 +2072,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET37(opts, callback);
+api.listarUsingGET43(opts, callback);
 ```
 
 ### Parameters
@@ -1586,6 +2087,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageControleVencimentoResponse**](PageControleVencimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> ConfiguracaoRegistroCobrancaResponse listarUsingGET9(opts)
+
+Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+
+Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET9(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
 
 ### Authorization
 
@@ -1647,6 +2199,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AtendimentoClienteResponse**](AtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST4"></a>
+# **salvarUsingPOST4**
+> CampanhaResponse salvarUsingPOST4(campanhaPersist)
+
+Inserir campanha
+
+Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var campanhaPersist = new Pier.CampanhaPersist(); // {CampanhaPersist} campanhaPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST4(campanhaPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campanhaPersist** | [**CampanhaPersist**](CampanhaPersist.md)| campanhaPersist | 
+
+### Return type
+
+[**CampanhaResponse**](CampanhaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST6"></a>
+# **salvarUsingPOST6**
+> ConfiguracaoRotativoDetalheResponse salvarUsingPOST6(configuracaoRotativoPersist)
+
+Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+
+Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var configuracaoRotativoPersist = new Pier.ConfiguracaoRotativoPersist(); // {ConfiguracaoRotativoPersist} configuracaoRotativoPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST6(configuracaoRotativoPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **configuracaoRotativoPersist** | [**ConfiguracaoRotativoPersist**](ConfiguracaoRotativoPersist.md)| configuracaoRotativoPersist | 
+
+### Return type
+
+[**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
 
 ### Authorization
 

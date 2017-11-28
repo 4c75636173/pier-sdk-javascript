@@ -32,5 +32,6 @@ Name | Type | Description | Notes
 **limiteGlobal** | **Number** | Valor do Limite Global | 
 **limiteMaximo** | **Number** | Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es | 
 **limiteParcelas** | **Number** | Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras | 
+**limiteConsignado** | **Number** | Valor do limite de margem consignado | [optional] 
 
 

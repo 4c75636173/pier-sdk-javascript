@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **dataFechamento** | **String** | Data de fechamento da fatura. | [optional] 
 **valorTotal** | **Number** | Valor total da fatura. | [optional] 
 **valorPagamentoMinimo** | **Number** | Valor do pagamento m\u00C3\u00ADnimo. | [optional] 
+**saldoAnterior** | **Number** | Valor do saldo anterior. | [optional] 
 
 

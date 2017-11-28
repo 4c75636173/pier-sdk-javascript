@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/StatusOportunidadeResponse', '../model/StatusOportunidade', '../model/OportunidadeResponse', '../model/OportunidadeUpdate', '../model/TipoOportunidade', '../model/TipoOportunidadeResponse', '../model/PageStatusOportunidadeAUDResponse', '../model/PageOportunidadeAUDResponse', '../model/PageTipoOportunidadeAUDResponse', '../model/PageStatusOportunidadeResponse', '../model/PageOportunidadeResponse', '../model/PageTipoOportunidadeResponse', '../model/OportunidadePersist'], factory);
+    define(['../ApiClient', '../model/StatusOportunidadeResponse', '../model/StatusOportunidade', '../model/TipoOportunidade', '../model/TipoOportunidadeResponse', '../model/OportunidadeResponse', '../model/OportunidadeUpdate', '../model/PageStatusOportunidadeAUDResponse', '../model/PageOportunidadeAUDResponse', '../model/PageTipoOportunidadeAUDResponse', '../model/PageStatusOportunidadeResponse', '../model/PageOportunidadeResponse', '../model/PageTipoOportunidadeResponse', '../model/OportunidadePersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/StatusOportunidadeResponse'), require('../model/StatusOportunidade'), require('../model/OportunidadeResponse'), require('../model/OportunidadeUpdate'), require('../model/TipoOportunidade'), require('../model/TipoOportunidadeResponse'), require('../model/PageStatusOportunidadeAUDResponse'), require('../model/PageOportunidadeAUDResponse'), require('../model/PageTipoOportunidadeAUDResponse'), require('../model/PageStatusOportunidadeResponse'), require('../model/PageOportunidadeResponse'), require('../model/PageTipoOportunidadeResponse'), require('../model/OportunidadePersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/StatusOportunidadeResponse'), require('../model/StatusOportunidade'), require('../model/TipoOportunidade'), require('../model/TipoOportunidadeResponse'), require('../model/OportunidadeResponse'), require('../model/OportunidadeUpdate'), require('../model/PageStatusOportunidadeAUDResponse'), require('../model/PageOportunidadeAUDResponse'), require('../model/PageTipoOportunidadeAUDResponse'), require('../model/PageStatusOportunidadeResponse'), require('../model/PageOportunidadeResponse'), require('../model/PageTipoOportunidadeResponse'), require('../model/OportunidadePersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.OportunidadeApi = factory(root.Pier.ApiClient, root.Pier.StatusOportunidadeResponse, root.Pier.StatusOportunidade, root.Pier.OportunidadeResponse, root.Pier.OportunidadeUpdate, root.Pier.TipoOportunidade, root.Pier.TipoOportunidadeResponse, root.Pier.PageStatusOportunidadeAUDResponse, root.Pier.PageOportunidadeAUDResponse, root.Pier.PageTipoOportunidadeAUDResponse, root.Pier.PageStatusOportunidadeResponse, root.Pier.PageOportunidadeResponse, root.Pier.PageTipoOportunidadeResponse, root.Pier.OportunidadePersist);
+    root.Pier.OportunidadeApi = factory(root.Pier.ApiClient, root.Pier.StatusOportunidadeResponse, root.Pier.StatusOportunidade, root.Pier.TipoOportunidade, root.Pier.TipoOportunidadeResponse, root.Pier.OportunidadeResponse, root.Pier.OportunidadeUpdate, root.Pier.PageStatusOportunidadeAUDResponse, root.Pier.PageOportunidadeAUDResponse, root.Pier.PageTipoOportunidadeAUDResponse, root.Pier.PageStatusOportunidadeResponse, root.Pier.PageOportunidadeResponse, root.Pier.PageTipoOportunidadeResponse, root.Pier.OportunidadePersist);
   }
-}(this, function(ApiClient, StatusOportunidadeResponse, StatusOportunidade, OportunidadeResponse, OportunidadeUpdate, TipoOportunidade, TipoOportunidadeResponse, PageStatusOportunidadeAUDResponse, PageOportunidadeAUDResponse, PageTipoOportunidadeAUDResponse, PageStatusOportunidadeResponse, PageOportunidadeResponse, PageTipoOportunidadeResponse, OportunidadePersist) {
+}(this, function(ApiClient, StatusOportunidadeResponse, StatusOportunidade, TipoOportunidade, TipoOportunidadeResponse, OportunidadeResponse, OportunidadeUpdate, PageStatusOportunidadeAUDResponse, PageOportunidadeAUDResponse, PageTipoOportunidadeAUDResponse, PageStatusOportunidadeResponse, PageOportunidadeResponse, PageTipoOportunidadeResponse, OportunidadePersist) {
   'use strict';
 
   /**
    * Oportunidade service.
    * @module api/OportunidadeApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -92,60 +92,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT4 operation.
-     * @callback module:api/OportunidadeApi~alterarUsingPUT4Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/OportunidadeResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Altera as oportunidades
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
-     * @param {module:model/OportunidadeUpdate} update update
-     * @param {module:api/OportunidadeApi~alterarUsingPUT4Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/OportunidadeResponse}
-     */
-    this.alterarUsingPUT4 = function(id, update, callback) {
-      var postBody = update;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT4";
-      }
-
-      // verify the required parameter 'update' is set
-      if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling alterarUsingPUT4";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = OportunidadeResponse;
-
-      return this.apiClient.callApi(
-        '/api/oportunidades/{id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the alterarUsingPUT8 operation.
-     * @callback module:api/OportunidadeApi~alterarUsingPUT8Callback
+     * Callback function to receive the result of the alterarUsingPUT14 operation.
+     * @callback module:api/OportunidadeApi~alterarUsingPUT14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -156,20 +104,20 @@
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
      * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadeApi~alterarUsingPUT8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~alterarUsingPUT14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.alterarUsingPUT8 = function(id, persist, callback) {
+    this.alterarUsingPUT14 = function(id, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT8";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT14";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling alterarUsingPUT8";
+        throw "Missing the required parameter 'persist' when calling alterarUsingPUT14";
       }
 
 
@@ -190,6 +138,58 @@
 
       return this.apiClient.callApi(
         '/api/tipos-oportunidades/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT8 operation.
+     * @callback module:api/OportunidadeApi~alterarUsingPUT8Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OportunidadeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Altera as oportunidades
+     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+     * @param {module:model/OportunidadeUpdate} update update
+     * @param {module:api/OportunidadeApi~alterarUsingPUT8Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/OportunidadeResponse}
+     */
+    this.alterarUsingPUT8 = function(id, update, callback) {
+      var postBody = update;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT8";
+      }
+
+      // verify the required parameter 'update' is set
+      if (update == undefined || update == null) {
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT8";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OportunidadeResponse;
+
+      return this.apiClient.callApi(
+        '/api/oportunidades/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -249,8 +249,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET17 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -260,15 +260,15 @@
      * Apresenta dados de uma determinada oportunidade
      * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET17 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
       }
 
 
@@ -295,8 +295,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET31 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -306,15 +306,15 @@
      * Apresenta dados de um determinado tipo oportunidade
      * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~consultarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET31 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET31";
       }
 
 
@@ -590,8 +590,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/OportunidadeApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/OportunidadeApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -611,10 +611,10 @@
      * @param {String} opts.dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
      * @param {String} opts.dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-     * @param {module:api/OportunidadeApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOportunidadeResponse}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -651,8 +651,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET30 operation.
-     * @callback module:api/OportunidadeApi~listarUsingGET30Callback
+     * Callback function to receive the result of the listarUsingGET36 operation.
+     * @callback module:api/OportunidadeApi~listarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -667,10 +667,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
      * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {module:api/OportunidadeApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOportunidadeResponse}
      */
-    this.listarUsingGET30 = function(opts, callback) {
+    this.listarUsingGET36 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -754,8 +754,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST12 operation.
-     * @callback module:api/OportunidadeApi~salvarUsingPOST12Callback
+     * Callback function to receive the result of the salvarUsingPOST15 operation.
+     * @callback module:api/OportunidadeApi~salvarUsingPOST15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -765,15 +765,15 @@
      * Cadastra as oportunidades
      * Esse recurso permite cadastrar oportunidades.
      * @param {module:model/OportunidadePersist} persist persist
-     * @param {module:api/OportunidadeApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~salvarUsingPOST15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.salvarUsingPOST12 = function(persist, callback) {
+    this.salvarUsingPOST15 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST12";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST15";
       }
 
 
@@ -799,8 +799,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST17 operation.
-     * @callback module:api/OportunidadeApi~salvarUsingPOST17Callback
+     * Callback function to receive the result of the salvarUsingPOST21 operation.
+     * @callback module:api/OportunidadeApi~salvarUsingPOST21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -810,15 +810,15 @@
      * Cadastra tipos oportunidades
      * Esse recurso permite cadastrar tipos oportunidades.
      * @param {module:model/TipoOportunidade} persist persist
-     * @param {module:api/OportunidadeApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~salvarUsingPOST21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.salvarUsingPOST17 = function(persist, callback) {
+    this.salvarUsingPOST21 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST17";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST21";
       }
 
 

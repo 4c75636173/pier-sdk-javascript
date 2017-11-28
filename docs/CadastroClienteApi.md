@@ -5,32 +5,32 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT**](CadastroClienteApi.md#alterarUsingPUT) | **PUT** /api/contas/{id}/adicionais/{idPessoa} | Altera Adicional de uma Conta
-[**alterarUsingPUT2**](CadastroClienteApi.md#alterarUsingPUT2) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
-[**alterarUsingPUT5**](CadastroClienteApi.md#alterarUsingPUT5) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
-[**alterarUsingPUT6**](CadastroClienteApi.md#alterarUsingPUT6) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
-[**alterarUsingPUT7**](CadastroClienteApi.md#alterarUsingPUT7) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterarUsingPUT11**](CadastroClienteApi.md#alterarUsingPUT11) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
+[**alterarUsingPUT12**](CadastroClienteApi.md#alterarUsingPUT12) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterarUsingPUT5**](CadastroClienteApi.md#alterarUsingPUT5) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**alterarUsingPUT9**](CadastroClienteApi.md#alterarUsingPUT9) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
 [**atribuirAssinaturaClienteUsingPOST**](CadastroClienteApi.md#atribuirAssinaturaClienteUsingPOST) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**atualizarUsingPOST**](CadastroClienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET10**](CadastroClienteApi.md#consultarUsingGET10) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET13**](CadastroClienteApi.md#consultarUsingGET13) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET18**](CadastroClienteApi.md#consultarUsingGET18) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET25**](CadastroClienteApi.md#consultarUsingGET25) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listarUsingGET13**](CadastroClienteApi.md#listarUsingGET13) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET19**](CadastroClienteApi.md#listarUsingGET19) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET17**](CadastroClienteApi.md#listarUsingGET17) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET22**](CadastroClienteApi.md#listarUsingGET22) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET24**](CadastroClienteApi.md#listarUsingGET24) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET32**](CadastroClienteApi.md#listarUsingGET32) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-[**salvarUsingPOST10**](CadastroClienteApi.md#salvarUsingPOST10) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST14**](CadastroClienteApi.md#salvarUsingPOST14) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
-[**salvarUsingPOST8**](CadastroClienteApi.md#salvarUsingPOST8) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
+[**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST17**](CadastroClienteApi.md#salvarUsingPOST17) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST19**](CadastroClienteApi.md#salvarUsingPOST19) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 <a name="alterarUsingPUT"></a>
@@ -85,145 +85,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT2"></a>
-# **alterarUsingPUT2**
-> EnderecoResponse alterarUsingPUT2(id, opts)
-
-Atualiza os dados de um determinado Endere\u00C3\u00A7o
-
-Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} id
-
-var opts = { 
-  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-  'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-  'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
-  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-  'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-  'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
-  'bairro': "bairro_example", // {String} Apresenta nome do bairro
-  'cidade': "cidade_example", // {String} Apresenta nome da cidade
-  'uf': "uf_example", // {String} Apresenta sigla da Unidade Federativa
-  'pais': "pais_example" // {String} Apresenta nome do Pais
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.alterarUsingPUT2(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
- **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
- **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
- **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
- **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
- **bairro** | **String**| Apresenta nome do bairro | [optional] 
- **cidade** | **String**| Apresenta nome da cidade | [optional] 
- **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
- **pais** | **String**| Apresenta nome do Pais | [optional] 
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="alterarUsingPUT5"></a>
-# **alterarUsingPUT5**
-> PessoaDetalheResponse alterarUsingPUT5(id, opts)
-
-Atualiza os detalhes de uma determinada Pessoa
-
-Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} ID da Pessoa
-
-var opts = { 
-  'nomeMae': "nomeMae_example", // {String} Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-  'idEstadoCivil': 789, // {Integer} Id Estado civil da pessoa fisica
-  'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
-  'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-  'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
-  'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-  'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
-  'email': "email_example", // {String} Email da pessoa fisica
-  'nomeEmpresa': "nomeEmpresa_example" // {String} Nome que deve ser impresso no cart\u00C3\u00A3o
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.alterarUsingPUT5(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID da Pessoa | 
- **nomeMae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
- **idEstadoCivil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
- **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
- **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
- **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
- **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
- **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
- **email** | **String**| Email da pessoa fisica | [optional] 
- **nomeEmpresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
-
-### Return type
-
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="alterarUsingPUT6"></a>
-# **alterarUsingPUT6**
-> PessoaResponse alterarUsingPUT6(id, nome, tipo, dataNascimento, opts)
+<a name="alterarUsingPUT11"></a>
+# **alterarUsingPUT11**
+> PessoaResponse alterarUsingPUT11(id, nome, tipo, dataNascimento, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -260,7 +124,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT6(id, nome, tipo, dataNascimento, opts, callback);
+api.alterarUsingPUT11(id, nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -292,9 +156,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT7"></a>
-# **alterarUsingPUT7**
-> TelefoneResponse alterarUsingPUT7(id, opts)
+<a name="alterarUsingPUT12"></a>
+# **alterarUsingPUT12**
+> TelefoneResponse alterarUsingPUT12(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -322,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT7(id, opts, callback);
+api.alterarUsingPUT12(id, opts, callback);
 ```
 
 ### Parameters
@@ -338,6 +202,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT5"></a>
+# **alterarUsingPUT5**
+> EnderecoResponse alterarUsingPUT5(id, opts)
+
+Atualiza os dados de um determinado Endere\u00C3\u00A7o
+
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} id
+
+var opts = { 
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+  'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+  'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
+  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+  'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+  'bairro': "bairro_example", // {String} Apresenta nome do bairro
+  'cidade': "cidade_example", // {String} Apresenta nome da cidade
+  'uf': "uf_example", // {String} Apresenta sigla da Unidade Federativa
+  'pais': "pais_example" // {String} Apresenta nome do Pais
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT5(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| id | 
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
+ **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
+ **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
+ **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
+ **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
+ **bairro** | **String**| Apresenta nome do bairro | [optional] 
+ **cidade** | **String**| Apresenta nome da cidade | [optional] 
+ **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
+ **pais** | **String**| Apresenta nome do Pais | [optional] 
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT9"></a>
+# **alterarUsingPUT9**
+> PessoaDetalheResponse alterarUsingPUT9(id, opts)
+
+Atualiza os detalhes de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+var opts = { 
+  'nomeMae': "nomeMae_example", // {String} Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+  'idEstadoCivil': 789, // {Integer} Id Estado civil da pessoa fisica
+  'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
+  'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+  'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+  'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
+  'email': "email_example", // {String} Email da pessoa fisica
+  'nomeEmpresa': "nomeEmpresa_example" // {String} Nome que deve ser impresso no cart\u00C3\u00A3o
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT9(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+ **nomeMae** | **String**| Apresenta o nome da m\u00C3\u00A3e da pessoa fisica | [optional] 
+ **idEstadoCivil** | **Integer**| Id Estado civil da pessoa fisica | [optional] 
+ **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
+ **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
+ **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
+ **email** | **String**| Email da pessoa fisica | [optional] 
+ **nomeEmpresa** | **String**| Nome que deve ser impresso no cart\u00C3\u00A3o | [optional] 
+
+### Return type
+
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
 
 ### Authorization
 
@@ -545,9 +545,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET10"></a>
-# **consultarUsingGET10**
-> EnderecoResponse consultarUsingGET10(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> EnderecoResponse consultarUsingGET13(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -569,7 +569,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET10(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -591,9 +591,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> PessoaDetalheResponse consultarUsingGET14(id)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> PessoaDetalheResponse consultarUsingGET18(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -615,7 +615,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET18(id, callback);
 ```
 
 ### Parameters
@@ -637,9 +637,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> PessoaResponse consultarUsingGET15(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> PessoaResponse consultarUsingGET20(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -661,7 +661,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -683,9 +683,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> TelefoneResponse consultarUsingGET20(id)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> TelefoneResponse consultarUsingGET25(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -707,7 +707,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, callback);
+api.consultarUsingGET25(id, callback);
 ```
 
 ### Parameters
@@ -886,9 +886,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET13"></a>
-# **listarUsingGET13**
-> PageEnderecoResponse listarUsingGET13(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageEnderecoResponse listarUsingGET17(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -927,7 +927,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET13(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -965,9 +965,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PagePessoaDetalheResponse listarUsingGET18(opts)
+<a name="listarUsingGET22"></a>
+# **listarUsingGET22**
+> PagePessoaDetalheResponse listarUsingGET22(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1002,7 +1002,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET22(opts, callback);
 ```
 
 ### Parameters
@@ -1036,9 +1036,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PagePessoaResponse listarUsingGET19(opts)
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PagePessoaResponse listarUsingGET24(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1074,7 +1074,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET19(opts, callback);
+api.listarUsingGET24(opts, callback);
 ```
 
 ### Parameters
@@ -1109,9 +1109,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET27"></a>
-# **listarUsingGET27**
-> PageTelefoneResponse listarUsingGET27(opts)
+<a name="listarUsingGET32"></a>
+# **listarUsingGET32**
+> PageTelefoneResponse listarUsingGET32(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1143,7 +1143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET27(opts, callback);
+api.listarUsingGET32(opts, callback);
 ```
 
 ### Parameters
@@ -1266,9 +1266,76 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST10"></a>
-# **salvarUsingPOST10**
-> IntegracaoEmissorResponse salvarUsingPOST10(id, opts)
+<a name="salvarUsingPOST11"></a>
+# **salvarUsingPOST11**
+> EnderecoResponse salvarUsingPOST11(opts)
+
+Realiza o cadastro de um novo Endere\u00C3\u00A7o
+
+Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var opts = { 
+  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+  'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+  'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
+  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+  'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+  'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+  'bairro': "bairro_example", // {String} Apresenta nome do bairro
+  'cidade': "cidade_example", // {String} Apresenta nome da cidade
+  'uf': "uf_example", // {String} Apresenta sigla da Unidade Federativa
+  'pais': "pais_example" // {String} Apresenta nome do Pais
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST11(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
+ **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
+ **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
+ **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
+ **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
+ **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
+ **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
+ **bairro** | **String**| Apresenta nome do bairro | [optional] 
+ **cidade** | **String**| Apresenta nome da cidade | [optional] 
+ **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
+ **pais** | **String**| Apresenta nome do Pais | [optional] 
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> IntegracaoEmissorResponse salvarUsingPOST13(id, opts)
 
 Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
 
@@ -1293,7 +1360,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST10(id, opts, callback);
+api.salvarUsingPOST13(id, opts, callback);
 ```
 
 ### Parameters
@@ -1316,9 +1383,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> PessoaDetalheResponse salvarUsingPOST13(idPessoa, opts)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> PessoaDetalheResponse salvarUsingPOST16(idPessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1351,7 +1418,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(idPessoa, opts, callback);
+api.salvarUsingPOST16(idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -1382,9 +1449,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST14"></a>
-# **salvarUsingPOST14**
-> PessoaResponse salvarUsingPOST14(nome, tipo, dataNascimento, opts)
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> PessoaResponse salvarUsingPOST17(nome, tipo, dataNascimento, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1419,7 +1486,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST14(nome, tipo, dataNascimento, opts, callback);
+api.salvarUsingPOST17(nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -1450,9 +1517,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> TelefoneResponse salvarUsingPOST16(opts)
+<a name="salvarUsingPOST19"></a>
+# **salvarUsingPOST19**
+> TelefoneResponse salvarUsingPOST19(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1479,7 +1546,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(opts, callback);
+api.salvarUsingPOST19(opts, callback);
 ```
 
 ### Parameters
@@ -1495,73 +1562,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TelefoneResponse**](TelefoneResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST8"></a>
-# **salvarUsingPOST8**
-> EnderecoResponse salvarUsingPOST8(opts)
-
-Realiza o cadastro de um novo Endere\u00C3\u00A7o
-
-Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var opts = { 
-  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-  'idTipoEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-  'cep': "cep_example", // {String} Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-  'logradouro': "logradouro_example", // {String} Apresenta o nome do Logradouro
-  'numero': 56, // {Integer} Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-  'complemento': "complemento_example", // {String} Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-  'pontoReferencia': "pontoReferencia_example", // {String} Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
-  'bairro': "bairro_example", // {String} Apresenta nome do bairro
-  'cidade': "cidade_example", // {String} Apresenta nome da cidade
-  'uf': "uf_example", // {String} Apresenta sigla da Unidade Federativa
-  'pais': "pais_example" // {String} Apresenta nome do Pais
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST8(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id) | [optional] 
- **idTipoEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id) | [optional] 
- **cep** | **String**| Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39; | [optional] 
- **logradouro** | **String**| Apresenta o nome do Logradouro | [optional] 
- **numero** | **Integer**| Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o | [optional] 
- **complemento** | **String**| Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o | [optional] 
- **pontoReferencia** | **String**| Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o | [optional] 
- **bairro** | **String**| Apresenta nome do bairro | [optional] 
- **cidade** | **String**| Apresenta nome da cidade | [optional] 
- **uf** | **String**| Apresenta sigla da Unidade Federativa | [optional] 
- **pais** | **String**| Apresenta nome do Pais | [optional] 
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 

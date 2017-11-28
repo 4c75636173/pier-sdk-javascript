@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET10**](DispositivoApi.md#listarUsingGET10) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
-[**salvarUsingPOST5**](DispositivoApi.md#salvarUsingPOST5) | **POST** /api/dispositivos | Cadastra Dispositivo
+[**listarUsingGET14**](DispositivoApi.md#listarUsingGET14) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**salvarUsingPOST8**](DispositivoApi.md#salvarUsingPOST8) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
 <a name="ativarUsingPOST"></a>
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageDispositivoResponse listarUsingGET10(opts)
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> PageDispositivoResponse listarUsingGET14(opts)
 
 Lista os dispositivos cadastrados
 
@@ -134,7 +134,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET14(opts, callback);
 ```
 
 ### Parameters
@@ -163,9 +163,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST5"></a>
-# **salvarUsingPOST5**
-> DispositivoResponse salvarUsingPOST5(persist)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> DispositivoResponse salvarUsingPOST8(persist)
 
 Cadastra Dispositivo
 
@@ -187,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST5(persist, callback);
+api.salvarUsingPOST8(persist, callback);
 ```
 
 ### Parameters

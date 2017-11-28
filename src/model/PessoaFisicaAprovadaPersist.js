@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -67,6 +67,7 @@
     this['limiteGlobal'] = limiteGlobal;
     this['limiteMaximo'] = limiteMaximo;
     this['limiteParcelas'] = limiteParcelas;
+
   };
 
   /**
@@ -166,6 +167,9 @@
       }
       if (data.hasOwnProperty('limiteParcelas')) {
         obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteConsignado')) {
+        obj['limiteConsignado'] = ApiClient.convertToType(data['limiteConsignado'], 'Number');
       }
     }
     return obj;
@@ -345,6 +349,12 @@
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;
+
+  /**
+   * Valor do limite de margem consignado
+   * @member {Number} limiteConsignado
+   */
+  exports.prototype['limiteConsignado'] = undefined;
 
 
 

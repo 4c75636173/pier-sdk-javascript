@@ -18,7 +18,7 @@
   /**
    * The PagePromotorResponse model module.
    * @module model/PagePromotorResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

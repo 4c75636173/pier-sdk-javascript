@@ -18,7 +18,7 @@
   /**
    * The StatusContaResponse model module.
    * @module model/StatusContaResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

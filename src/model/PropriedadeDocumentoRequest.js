@@ -18,7 +18,7 @@
   /**
    * The PropriedadeDocumentoRequest model module.
    * @module model/PropriedadeDocumentoRequest
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

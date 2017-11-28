@@ -18,7 +18,7 @@
   /**
    * The LoteCartoesPrePagosResponse model module.
    * @module model/LoteCartoesPrePagosResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

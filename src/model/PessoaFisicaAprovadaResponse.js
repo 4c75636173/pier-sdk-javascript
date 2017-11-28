@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -35,8 +35,9 @@
    * @param limiteGlobal
    * @param limiteMaximo
    * @param limiteParcelas
+   * @param limiteConsignado
    */
-  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos, limiteGlobal, limiteMaximo, limiteParcelas) {
+  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado) {
 
 
     this['nome'] = nome;
@@ -69,6 +70,7 @@
     this['limiteGlobal'] = limiteGlobal;
     this['limiteMaximo'] = limiteMaximo;
     this['limiteParcelas'] = limiteParcelas;
+    this['limiteConsignado'] = limiteConsignado;
   };
 
   /**
@@ -174,6 +176,9 @@
       }
       if (data.hasOwnProperty('limiteParcelas')) {
         obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteConsignado')) {
+        obj['limiteConsignado'] = ApiClient.convertToType(data['limiteConsignado'], 'Number');
       }
     }
     return obj;
@@ -365,6 +370,12 @@
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;
+
+  /**
+   * Valor do limite de margem consignado
+   * @member {Number} limiteConsignado
+   */
+  exports.prototype['limiteConsignado'] = undefined;
 
 
 

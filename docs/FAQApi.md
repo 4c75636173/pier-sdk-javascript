@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
-[**alterarUsingPUT3**](FAQApi.md#alterarUsingPUT3) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET12**](FAQApi.md#consultarUsingGET12) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET15**](FAQApi.md#listarUsingGET15) | **GET** /api/faqs | Lista FAQs
+[**alterarUsingPUT6**](FAQApi.md#alterarUsingPUT6) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultarUsingGET15**](FAQApi.md#consultarUsingGET15) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET19**](FAQApi.md#listarUsingGET19) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
@@ -69,9 +69,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT3"></a>
-# **alterarUsingPUT3**
-> FaqResponse alterarUsingPUT3(id, pergunta, resposta, opts)
+<a name="alterarUsingPUT6"></a>
+# **alterarUsingPUT6**
+> FaqResponse alterarUsingPUT6(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT3(id, pergunta, resposta, opts, callback);
+api.alterarUsingPUT6(id, pergunta, resposta, opts, callback);
 ```
 
 ### Parameters
@@ -131,9 +131,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> FaqResponse consultarUsingGET12(id)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> FaqResponse consultarUsingGET15(id)
 
 Consultar FAQ por id
 
@@ -155,7 +155,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET15"></a>
-# **listarUsingGET15**
-> PageFaqResponse listarUsingGET15(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageFaqResponse listarUsingGET19(opts)
 
 Lista FAQs
 
@@ -211,7 +211,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET15(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters

@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT9**](DocumentoApi.md#alterarUsingPUT9) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
-[**atualizarUsingPUT1**](DocumentoApi.md#atualizarUsingPUT1) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultarUsingGET28**](DocumentoApi.md#consultarUsingGET28) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**consultarUsingGET8**](DocumentoApi.md#consultarUsingGET8) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultarUsingGET9**](DocumentoApi.md#consultarUsingGET9) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**alterarUsingPUT15**](DocumentoApi.md#alterarUsingPUT15) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
+[**atualizarUsingPUT2**](DocumentoApi.md#atualizarUsingPUT2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
+[**consultarUsingGET11**](DocumentoApi.md#consultarUsingGET11) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultarUsingGET33**](DocumentoApi.md#consultarUsingGET33) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
 [**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listarUsingGET11**](DocumentoApi.md#listarUsingGET11) | **GET** /api/documentos | Lista documentos
-[**listarUsingGET12**](DocumentoApi.md#listarUsingGET12) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listarUsingGET32**](DocumentoApi.md#listarUsingGET32) | **GET** /api/tipos-templates | Lista os tipos de templates
-[**salvarUsingPOST18**](DocumentoApi.md#salvarUsingPOST18) | **POST** /api/tipos-templates | Cadastra os tipos de templates
-[**salvarUsingPOST6**](DocumentoApi.md#salvarUsingPOST6) | **POST** /api/documentos | Cadastra documentos
-[**salvarUsingPOST7**](DocumentoApi.md#salvarUsingPOST7) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
+[**listarUsingGET15**](DocumentoApi.md#listarUsingGET15) | **GET** /api/documentos | Lista documentos
+[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listarUsingGET38**](DocumentoApi.md#listarUsingGET38) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**salvarUsingPOST10**](DocumentoApi.md#salvarUsingPOST10) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
+[**salvarUsingPOST22**](DocumentoApi.md#salvarUsingPOST22) | **POST** /api/tipos-templates | Cadastra os tipos de templates
+[**salvarUsingPOST9**](DocumentoApi.md#salvarUsingPOST9) | **POST** /api/documentos | Cadastra documentos
 
 
-<a name="alterarUsingPUT9"></a>
-# **alterarUsingPUT9**
-> TipoTemplateResponse alterarUsingPUT9(id, persist)
+<a name="alterarUsingPUT15"></a>
+# **alterarUsingPUT15**
+> TipoTemplateResponse alterarUsingPUT15(id, persist)
 
 Altera o tipo de template
 
@@ -44,7 +44,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT9(id, persist, callback);
+api.alterarUsingPUT15(id, persist, callback);
 ```
 
 ### Parameters
@@ -67,9 +67,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT1"></a>
-# **atualizarUsingPUT1**
-> DocumentoTemplateResponse atualizarUsingPUT1(id, persist)
+<a name="atualizarUsingPUT2"></a>
+# **atualizarUsingPUT2**
+> DocumentoTemplateResponse atualizarUsingPUT2(id, persist)
 
 Atualizar templates dos documentos
 
@@ -93,7 +93,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT1(id, persist, callback);
+api.atualizarUsingPUT2(id, persist, callback);
 ```
 
 ### Parameters
@@ -116,55 +116,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET28"></a>
-# **consultarUsingGET28**
-> TipoTemplateResponse consultarUsingGET28(id)
-
-Consultar tipo de template
-
-Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.DocumentoApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET28(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
-
-### Return type
-
-[**TipoTemplateResponse**](TipoTemplateResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> DocumentoDetalhadoResponse consultarUsingGET8(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> DocumentoDetalhadoResponse consultarUsingGET11(id)
 
 Consulta documentos
 
@@ -186,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET11(id, callback);
 ```
 
 ### Parameters
@@ -208,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> DocumentoTemplateResponse consultarUsingGET9(id)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> DocumentoTemplateResponse consultarUsingGET12(id)
 
 Consultar templates dos documentos
 
@@ -232,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -244,6 +198,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentoTemplateResponse**](DocumentoTemplateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET33"></a>
+# **consultarUsingGET33**
+> TipoTemplateResponse consultarUsingGET33(id)
+
+Consultar tipo de template
+
+Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.DocumentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET33(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
+
+### Return type
+
+[**TipoTemplateResponse**](TipoTemplateResponse.md)
 
 ### Authorization
 
@@ -300,9 +300,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageDocumentoResponse listarUsingGET11(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PageDocumentoResponse listarUsingGET15(opts)
 
 Lista documentos
 
@@ -330,7 +330,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageDocumentoTemplateResponse listarUsingGET12(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageDocumentoTemplateResponse listarUsingGET16(opts)
 
 Lista os templates dos documentos
 
@@ -385,7 +385,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET32"></a>
-# **listarUsingGET32**
-> PageTipoTemplateResponse listarUsingGET32(opts)
+<a name="listarUsingGET38"></a>
+# **listarUsingGET38**
+> PageTipoTemplateResponse listarUsingGET38(opts)
 
 Lista os tipos de templates
 
@@ -437,7 +437,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET32(opts, callback);
+api.listarUsingGET38(opts, callback);
 ```
 
 ### Parameters
@@ -461,101 +461,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST18"></a>
-# **salvarUsingPOST18**
-> TipoTemplateResponse salvarUsingPOST18(persist)
-
-Cadastra os tipos de templates
-
-Esse recurso permite cadastrar tipos de templates.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.DocumentoApi()
-
-var persist = new Pier.TipoTemplateRequest(); // {TipoTemplateRequest} persist
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST18(persist, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
-
-### Return type
-
-[**TipoTemplateResponse**](TipoTemplateResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST6"></a>
-# **salvarUsingPOST6**
-> DocumentoDetalhadoResponse salvarUsingPOST6(persist)
-
-Cadastra documentos
-
-Esse recurso permite cadastrar documentos.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.DocumentoApi()
-
-var persist = new Pier.DocumentoParametrosRequest(); // {DocumentoParametrosRequest} persist
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST6(persist, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**DocumentoParametrosRequest**](DocumentoParametrosRequest.md)| persist | 
-
-### Return type
-
-[**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST7"></a>
-# **salvarUsingPOST7**
-> DocumentoTemplateResponse salvarUsingPOST7(persist)
+<a name="salvarUsingPOST10"></a>
+# **salvarUsingPOST10**
+> DocumentoTemplateResponse salvarUsingPOST10(persist)
 
 Cadastra os templates dos documentos
 
@@ -577,7 +485,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST7(persist, callback);
+api.salvarUsingPOST10(persist, callback);
 ```
 
 ### Parameters
@@ -589,6 +497,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentoTemplateResponse**](DocumentoTemplateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST22"></a>
+# **salvarUsingPOST22**
+> TipoTemplateResponse salvarUsingPOST22(persist)
+
+Cadastra os tipos de templates
+
+Esse recurso permite cadastrar tipos de templates.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.DocumentoApi()
+
+var persist = new Pier.TipoTemplateRequest(); // {TipoTemplateRequest} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST22(persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
+
+### Return type
+
+[**TipoTemplateResponse**](TipoTemplateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST9"></a>
+# **salvarUsingPOST9**
+> DocumentoDetalhadoResponse salvarUsingPOST9(persist)
+
+Cadastra documentos
+
+Esse recurso permite cadastrar documentos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.DocumentoApi()
+
+var persist = new Pier.DocumentoParametrosRequest(); // {DocumentoParametrosRequest} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST9(persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**DocumentoParametrosRequest**](DocumentoParametrosRequest.md)| persist | 
+
+### Return type
+
+[**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
 
 ### Authorization
 

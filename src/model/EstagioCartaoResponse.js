@@ -18,7 +18,7 @@
   /**
    * The EstagioCartaoResponse model module.
    * @module model/EstagioCartaoResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

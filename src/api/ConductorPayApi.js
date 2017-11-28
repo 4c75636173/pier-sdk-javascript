@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -505,8 +505,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST4 operation.
-     * @callback module:api/ConductorPayApi~salvarUsingPOST4Callback
+     * Callback function to receive the result of the salvarUsingPOST5 operation.
+     * @callback module:api/ConductorPayApi~salvarUsingPOST5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayCadastroResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -517,20 +517,20 @@
      * Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
      * @param {String} deviceId Device id criptografado
      * @param {module:model/CartaoPayPersist} persist persist
-     * @param {module:api/ConductorPayApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayCadastroResponse}
      */
-    this.salvarUsingPOST4 = function(deviceId, persist, callback) {
+    this.salvarUsingPOST5 = function(deviceId, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST4";
+        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST5";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST4";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST5";
       }
 
 

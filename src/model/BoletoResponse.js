@@ -18,7 +18,7 @@
   /**
    * The BoletoResponse model module.
    * @module model/BoletoResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * Dispositivo service.
    * @module api/DispositivoApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET10 operation.
-     * @callback module:api/DispositivoApi~listarUsingGET10Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/DispositivoApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -144,10 +144,10 @@
      * @param {Integer} opts.idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
      * @param {String} opts.dataCriacao Apresenta a data e em que o registro foi criado.
      * @param {String} opts.dataDesativacao Apresenta a data e em que o registro foi desativado.
-     * @param {module:api/DispositivoApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DispositivoApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDispositivoResponse}
      */
-    this.listarUsingGET10 = function(opts, callback) {
+    this.listarUsingGET14 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -182,8 +182,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST5 operation.
-     * @callback module:api/DispositivoApi~salvarUsingPOST5Callback
+     * Callback function to receive the result of the salvarUsingPOST8 operation.
+     * @callback module:api/DispositivoApi~salvarUsingPOST8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -193,15 +193,15 @@
      * Cadastra Dispositivo
      * Esse recurso permite cadastrar dispositivos.
      * @param {module:model/DispositivoPersist} persist persist
-     * @param {module:api/DispositivoApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DispositivoApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DispositivoResponse}
      */
-    this.salvarUsingPOST5 = function(persist, callback) {
+    this.salvarUsingPOST8 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST5";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
       }
 
 

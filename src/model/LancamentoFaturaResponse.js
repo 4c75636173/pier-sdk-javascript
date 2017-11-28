@@ -18,7 +18,7 @@
   /**
    * The LancamentoFaturaResponse model module.
    * @module model/LancamentoFaturaResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -137,6 +138,9 @@
       }
       if (data.hasOwnProperty('valorTaxaEmbarque')) {
         obj['valorTaxaEmbarque'] = ApiClient.convertToType(data['valorTaxaEmbarque'], 'Number');
+      }
+      if (data.hasOwnProperty('descricaoAbreviada')) {
+        obj['descricaoAbreviada'] = ApiClient.convertToType(data['descricaoAbreviada'], 'String');
       }
     }
     return obj;
@@ -286,6 +290,12 @@
    * @member {Number} valorTaxaEmbarque
    */
   exports.prototype['valorTaxaEmbarque'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   * @member {String} descricaoAbreviada
+   */
+  exports.prototype['descricaoAbreviada'] = undefined;
 
 
 

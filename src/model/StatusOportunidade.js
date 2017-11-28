@@ -18,7 +18,7 @@
   /**
    * The StatusOportunidade model module.
    * @module model/StatusOportunidade
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

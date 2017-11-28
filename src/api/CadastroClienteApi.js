@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AdicionalDetalheResponse', '../model/AdicionalUpdate', '../model/EnderecoResponse', '../model/PessoaDetalheResponse', '../model/PessoaResponse', '../model/TelefoneResponse', '../model/AtribuirAssinaturaClientePersist', '../model/IntegracaoEmissorPersist', '../model/IntegracaoEmissorResponse', '../model/AdicionalPersist', '../model/PagePessoaResponse', '../model/AdicionalResponse', '../model/PageEnderecoResponse', '../model/PagePessoaDetalheResponse', '../model/PageTelefoneResponse', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist'], factory);
+    define(['../ApiClient', '../model/AdicionalDetalheResponse', '../model/AdicionalUpdate', '../model/PessoaResponse', '../model/TelefoneResponse', '../model/EnderecoResponse', '../model/PessoaDetalheResponse', '../model/AtribuirAssinaturaClientePersist', '../model/IntegracaoEmissorPersist', '../model/IntegracaoEmissorResponse', '../model/AdicionalPersist', '../model/PagePessoaResponse', '../model/AdicionalResponse', '../model/PageEnderecoResponse', '../model/PagePessoaDetalheResponse', '../model/PageTelefoneResponse', '../model/PessoaFisicaAprovadaPersist', '../model/PessoaFisicaAprovadaResponse', '../model/PessoaJuridicaAprovadaResponse', '../model/PessoaJuridicaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AdicionalDetalheResponse'), require('../model/AdicionalUpdate'), require('../model/EnderecoResponse'), require('../model/PessoaDetalheResponse'), require('../model/PessoaResponse'), require('../model/TelefoneResponse'), require('../model/AtribuirAssinaturaClientePersist'), require('../model/IntegracaoEmissorPersist'), require('../model/IntegracaoEmissorResponse'), require('../model/AdicionalPersist'), require('../model/PagePessoaResponse'), require('../model/AdicionalResponse'), require('../model/PageEnderecoResponse'), require('../model/PagePessoaDetalheResponse'), require('../model/PageTelefoneResponse'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/AdicionalDetalheResponse'), require('../model/AdicionalUpdate'), require('../model/PessoaResponse'), require('../model/TelefoneResponse'), require('../model/EnderecoResponse'), require('../model/PessoaDetalheResponse'), require('../model/AtribuirAssinaturaClientePersist'), require('../model/IntegracaoEmissorPersist'), require('../model/IntegracaoEmissorResponse'), require('../model/AdicionalPersist'), require('../model/PagePessoaResponse'), require('../model/AdicionalResponse'), require('../model/PageEnderecoResponse'), require('../model/PagePessoaDetalheResponse'), require('../model/PageTelefoneResponse'), require('../model/PessoaFisicaAprovadaPersist'), require('../model/PessoaFisicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaResponse'), require('../model/PessoaJuridicaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastroClienteApi = factory(root.Pier.ApiClient, root.Pier.AdicionalDetalheResponse, root.Pier.AdicionalUpdate, root.Pier.EnderecoResponse, root.Pier.PessoaDetalheResponse, root.Pier.PessoaResponse, root.Pier.TelefoneResponse, root.Pier.AtribuirAssinaturaClientePersist, root.Pier.IntegracaoEmissorPersist, root.Pier.IntegracaoEmissorResponse, root.Pier.AdicionalPersist, root.Pier.PagePessoaResponse, root.Pier.AdicionalResponse, root.Pier.PageEnderecoResponse, root.Pier.PagePessoaDetalheResponse, root.Pier.PageTelefoneResponse, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist);
+    root.Pier.CadastroClienteApi = factory(root.Pier.ApiClient, root.Pier.AdicionalDetalheResponse, root.Pier.AdicionalUpdate, root.Pier.PessoaResponse, root.Pier.TelefoneResponse, root.Pier.EnderecoResponse, root.Pier.PessoaDetalheResponse, root.Pier.AtribuirAssinaturaClientePersist, root.Pier.IntegracaoEmissorPersist, root.Pier.IntegracaoEmissorResponse, root.Pier.AdicionalPersist, root.Pier.PagePessoaResponse, root.Pier.AdicionalResponse, root.Pier.PageEnderecoResponse, root.Pier.PagePessoaDetalheResponse, root.Pier.PageTelefoneResponse, root.Pier.PessoaFisicaAprovadaPersist, root.Pier.PessoaFisicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaResponse, root.Pier.PessoaJuridicaAprovadaPersist);
   }
-}(this, function(ApiClient, AdicionalDetalheResponse, AdicionalUpdate, EnderecoResponse, PessoaDetalheResponse, PessoaResponse, TelefoneResponse, AtribuirAssinaturaClientePersist, IntegracaoEmissorPersist, IntegracaoEmissorResponse, AdicionalPersist, PagePessoaResponse, AdicionalResponse, PageEnderecoResponse, PagePessoaDetalheResponse, PageTelefoneResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist) {
+}(this, function(ApiClient, AdicionalDetalheResponse, AdicionalUpdate, PessoaResponse, TelefoneResponse, EnderecoResponse, PessoaDetalheResponse, AtribuirAssinaturaClientePersist, IntegracaoEmissorPersist, IntegracaoEmissorResponse, AdicionalPersist, PagePessoaResponse, AdicionalResponse, PageEnderecoResponse, PagePessoaDetalheResponse, PageTelefoneResponse, PessoaFisicaAprovadaPersist, PessoaFisicaAprovadaResponse, PessoaJuridicaAprovadaResponse, PessoaJuridicaAprovadaPersist) {
   'use strict';
 
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -92,8 +92,147 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT2 operation.
-     * @callback module:api/CadastroClienteApi~alterarUsingPUT2Callback
+     * Callback function to receive the result of the alterarUsingPUT11 operation.
+     * @callback module:api/CadastroClienteApi~alterarUsingPUT11Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PessoaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Atualiza os dados de uma determinada Pessoa
+     * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+     * @param {Integer} id ID da Pessoa
+     * @param {String} nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+     * @param {String} tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+     * @param {String} dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
+     * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+     * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+     * @param {String} opts.numeroIdentidade N\u00C3\u00BAmero da Identidade.
+     * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
+     * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+     * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
+     * @param {module:api/CadastroClienteApi~alterarUsingPUT11Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PessoaResponse}
+     */
+    this.alterarUsingPUT11 = function(id, nome, tipo, dataNascimento, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT11";
+      }
+
+      // verify the required parameter 'nome' is set
+      if (nome == undefined || nome == null) {
+        throw "Missing the required parameter 'nome' when calling alterarUsingPUT11";
+      }
+
+      // verify the required parameter 'tipo' is set
+      if (tipo == undefined || tipo == null) {
+        throw "Missing the required parameter 'tipo' when calling alterarUsingPUT11";
+      }
+
+      // verify the required parameter 'dataNascimento' is set
+      if (dataNascimento == undefined || dataNascimento == null) {
+        throw "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT11";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'nome': nome,
+        'tipo': tipo,
+        'cpf': opts['cpf'],
+        'cnpj': opts['cnpj'],
+        'dataNascimento': dataNascimento,
+        'sexo': opts['sexo'],
+        'numeroIdentidade': opts['numeroIdentidade'],
+        'orgaoExpedidorIdentidade': opts['orgaoExpedidorIdentidade'],
+        'unidadeFederativaIdentidade': opts['unidadeFederativaIdentidade'],
+        'dataEmissaoIdentidade': opts['dataEmissaoIdentidade']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PessoaResponse;
+
+      return this.apiClient.callApi(
+        '/api/pessoas/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT12 operation.
+     * @callback module:api/CadastroClienteApi~alterarUsingPUT12Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TelefoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+     * Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+     * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
+     * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
+     * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
+     * @param {module:api/CadastroClienteApi~alterarUsingPUT12Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TelefoneResponse}
+     */
+    this.alterarUsingPUT12 = function(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT12";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'id': id,
+        'idTipoTelefone': opts['idTipoTelefone'],
+        'ddd': opts['ddd'],
+        'telefone': opts['telefone'],
+        'ramal': opts['ramal']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TelefoneResponse;
+
+      return this.apiClient.callApi(
+        '/api/telefones', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT5 operation.
+     * @callback module:api/CadastroClienteApi~alterarUsingPUT5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -115,16 +254,16 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastroClienteApi~alterarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~alterarUsingPUT5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.alterarUsingPUT2 = function(id, opts, callback) {
+    this.alterarUsingPUT5 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT2";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT5";
       }
 
 
@@ -162,8 +301,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT5 operation.
-     * @callback module:api/CadastroClienteApi~alterarUsingPUT5Callback
+     * Callback function to receive the result of the alterarUsingPUT9 operation.
+     * @callback module:api/CadastroClienteApi~alterarUsingPUT9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -183,16 +322,16 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~alterarUsingPUT5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~alterarUsingPUT9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.alterarUsingPUT5 = function(id, opts, callback) {
+    this.alterarUsingPUT9 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT5";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT9";
       }
 
 
@@ -222,145 +361,6 @@
 
       return this.apiClient.callApi(
         '/api/pessoas-detalhes/{id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the alterarUsingPUT6 operation.
-     * @callback module:api/CadastroClienteApi~alterarUsingPUT6Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PessoaResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Atualiza os dados de uma determinada Pessoa
-     * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
-     * @param {Integer} id ID da Pessoa
-     * @param {String} nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-     * @param {String} tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-     * @param {String} dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.cpf N\u00C3\u00BAmero do CPF, quando PF.
-     * @param {String} opts.cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-     * @param {String} opts.sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-     * @param {String} opts.numeroIdentidade N\u00C3\u00BAmero da Identidade.
-     * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
-     * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-     * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-     * @param {module:api/CadastroClienteApi~alterarUsingPUT6Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PessoaResponse}
-     */
-    this.alterarUsingPUT6 = function(id, nome, tipo, dataNascimento, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT6";
-      }
-
-      // verify the required parameter 'nome' is set
-      if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling alterarUsingPUT6";
-      }
-
-      // verify the required parameter 'tipo' is set
-      if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling alterarUsingPUT6";
-      }
-
-      // verify the required parameter 'dataNascimento' is set
-      if (dataNascimento == undefined || dataNascimento == null) {
-        throw "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT6";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'nome': nome,
-        'tipo': tipo,
-        'cpf': opts['cpf'],
-        'cnpj': opts['cnpj'],
-        'dataNascimento': dataNascimento,
-        'sexo': opts['sexo'],
-        'numeroIdentidade': opts['numeroIdentidade'],
-        'orgaoExpedidorIdentidade': opts['orgaoExpedidorIdentidade'],
-        'unidadeFederativaIdentidade': opts['unidadeFederativaIdentidade'],
-        'dataEmissaoIdentidade': opts['dataEmissaoIdentidade']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PessoaResponse;
-
-      return this.apiClient.callApi(
-        '/api/pessoas/{id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the alterarUsingPUT7 operation.
-     * @callback module:api/CadastroClienteApi~alterarUsingPUT7Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TelefoneResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-     * Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-     * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
-     * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
-     * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastroClienteApi~alterarUsingPUT7Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TelefoneResponse}
-     */
-    this.alterarUsingPUT7 = function(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT7";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'id': id,
-        'idTipoTelefone': opts['idTipoTelefone'],
-        'ddd': opts['ddd'],
-        'telefone': opts['telefone'],
-        'ramal': opts['ramal']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TelefoneResponse;
-
-      return this.apiClient.callApi(
-        '/api/telefones', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -573,8 +573,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -584,15 +584,15 @@
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.consultarUsingGET10 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -619,8 +619,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET18 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -630,15 +630,15 @@
      * Apresenta os detalhes de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET18 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
       }
 
 
@@ -665,8 +665,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET15 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET15Callback
+     * Callback function to receive the result of the consultarUsingGET20 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -676,15 +676,15 @@
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.consultarUsingGET15 = function(id, callback) {
+    this.consultarUsingGET20 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
       }
 
 
@@ -711,8 +711,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET25 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -722,15 +722,15 @@
      * Apresenta os dados de um determinado Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET25 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET25";
       }
 
 
@@ -918,8 +918,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET13 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET13Callback
+     * Callback function to receive the result of the listarUsingGET17 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -946,10 +946,10 @@
      * @param {String} opts.pais Apresenta nome do Pais
      * @param {String} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @param {String} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @param {module:api/CadastroClienteApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecoResponse}
      */
-    this.listarUsingGET13 = function(opts, callback) {
+    this.listarUsingGET17 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -993,8 +993,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET22 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1017,10 +1017,10 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoaDetalheResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1060,8 +1060,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET19 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET19Callback
+     * Callback function to receive the result of the listarUsingGET24 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1085,10 +1085,10 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-     * @param {module:api/CadastroClienteApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoaResponse}
      */
-    this.listarUsingGET19 = function(opts, callback) {
+    this.listarUsingGET24 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1129,8 +1129,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET27 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET27Callback
+     * Callback function to receive the result of the listarUsingGET32 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET32Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1150,10 +1150,10 @@
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
      * @param {Integer} opts.status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-     * @param {module:api/CadastroClienteApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneResponse}
      */
-    this.listarUsingGET27 = function(opts, callback) {
+    this.listarUsingGET32 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1280,8 +1280,71 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST10 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST10Callback
+     * Callback function to receive the result of the salvarUsingPOST11 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST11Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EnderecoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+     * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+     * @param {String} opts.logradouro Apresenta o nome do Logradouro
+     * @param {Integer} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+     * @param {String} opts.complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+     * @param {String} opts.pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+     * @param {String} opts.bairro Apresenta nome do bairro
+     * @param {String} opts.cidade Apresenta nome da cidade
+     * @param {String} opts.uf Apresenta sigla da Unidade Federativa
+     * @param {String} opts.pais Apresenta nome do Pais
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/EnderecoResponse}
+     */
+    this.salvarUsingPOST11 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idPessoa': opts['idPessoa'],
+        'idTipoEndereco': opts['idTipoEndereco'],
+        'cep': opts['cep'],
+        'logradouro': opts['logradouro'],
+        'numero': opts['numero'],
+        'complemento': opts['complemento'],
+        'pontoReferencia': opts['pontoReferencia'],
+        'bairro': opts['bairro'],
+        'cidade': opts['cidade'],
+        'uf': opts['uf'],
+        'pais': opts['pais']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EnderecoResponse;
+
+      return this.apiClient.callApi(
+        '/api/enderecos', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST13 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/IntegracaoEmissorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1293,16 +1356,16 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Object} opts Optional parameters
      * @param {module:model/IntegracaoEmissorPersist} opts.body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/IntegracaoEmissorResponse}
      */
-    this.salvarUsingPOST10 = function(id, opts, callback) {
+    this.salvarUsingPOST13 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = opts['body'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling salvarUsingPOST10";
+        throw "Missing the required parameter 'id' when calling salvarUsingPOST13";
       }
 
 
@@ -1329,8 +1392,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST13 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST13Callback
+     * Callback function to receive the result of the salvarUsingPOST16 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1350,16 +1413,16 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.salvarUsingPOST13 = function(idPessoa, opts, callback) {
+    this.salvarUsingPOST16 = function(idPessoa, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idPessoa' is set
       if (idPessoa == undefined || idPessoa == null) {
-        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST13";
+        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST16";
       }
 
 
@@ -1395,8 +1458,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST14 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST14Callback
+     * Callback function to receive the result of the salvarUsingPOST17 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1416,26 +1479,26 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.salvarUsingPOST14 = function(nome, tipo, dataNascimento, opts, callback) {
+    this.salvarUsingPOST17 = function(nome, tipo, dataNascimento, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'nome' is set
       if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'nome' when calling salvarUsingPOST17";
       }
 
       // verify the required parameter 'tipo' is set
       if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST17";
       }
 
       // verify the required parameter 'dataNascimento' is set
       if (dataNascimento == undefined || dataNascimento == null) {
-        throw "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST17";
       }
 
 
@@ -1471,8 +1534,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST16 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST16Callback
+     * Callback function to receive the result of the salvarUsingPOST19 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1487,10 +1550,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.salvarUsingPOST16 = function(opts, callback) {
+    this.salvarUsingPOST19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1516,69 +1579,6 @@
 
       return this.apiClient.callApi(
         '/api/telefones', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST8Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnderecoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Realiza o cadastro de um novo Endere\u00C3\u00A7o
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-     * @param {Integer} opts.idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-     * @param {String} opts.cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
-     * @param {String} opts.logradouro Apresenta o nome do Logradouro
-     * @param {Integer} opts.numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-     * @param {String} opts.complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-     * @param {String} opts.pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
-     * @param {String} opts.bairro Apresenta nome do bairro
-     * @param {String} opts.cidade Apresenta nome da cidade
-     * @param {String} opts.uf Apresenta sigla da Unidade Federativa
-     * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/EnderecoResponse}
-     */
-    this.salvarUsingPOST8 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'idPessoa': opts['idPessoa'],
-        'idTipoEndereco': opts['idTipoEndereco'],
-        'cep': opts['cep'],
-        'logradouro': opts['logradouro'],
-        'numero': opts['numero'],
-        'complemento': opts['complemento'],
-        'pontoReferencia': opts['pontoReferencia'],
-        'bairro': opts['bairro'],
-        'cidade': opts['cidade'],
-        'uf': opts['uf'],
-        'pais': opts['pais']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = EnderecoResponse;
-
-      return this.apiClient.callApi(
-        '/api/enderecos', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/AntecipacaoResponse', '../model/AntecipacaoMockResponse', '../model/PageCompraResponse', '../model/AntecipacaoSimuladaResponse', '../model/AntecipacaoSimuladaLoteResponse'], factory);
+    define(['../ApiClient', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/AntecipacaoResponse', '../model/PageCompraResponse', '../model/AntecipacaoSimuladaResponse', '../model/AntecipacaoSimuladaLoteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/AntecipacaoResponse'), require('../model/AntecipacaoMockResponse'), require('../model/PageCompraResponse'), require('../model/AntecipacaoSimuladaResponse'), require('../model/AntecipacaoSimuladaLoteResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/AntecipacaoResponse'), require('../model/PageCompraResponse'), require('../model/AntecipacaoSimuladaResponse'), require('../model/AntecipacaoSimuladaLoteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AntecipacaoApi = factory(root.Pier.ApiClient, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.AntecipacaoResponse, root.Pier.AntecipacaoMockResponse, root.Pier.PageCompraResponse, root.Pier.AntecipacaoSimuladaResponse, root.Pier.AntecipacaoSimuladaLoteResponse);
+    root.Pier.AntecipacaoApi = factory(root.Pier.ApiClient, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.AntecipacaoResponse, root.Pier.PageCompraResponse, root.Pier.AntecipacaoSimuladaResponse, root.Pier.AntecipacaoSimuladaLoteResponse);
   }
-}(this, function(ApiClient, ParametroProdutoResponse, TaxaAntecipacaoRequest, AntecipacaoResponse, AntecipacaoMockResponse, PageCompraResponse, AntecipacaoSimuladaResponse, AntecipacaoSimuladaLoteResponse) {
+}(this, function(ApiClient, ParametroProdutoResponse, TaxaAntecipacaoRequest, AntecipacaoResponse, PageCompraResponse, AntecipacaoSimuladaResponse, AntecipacaoSimuladaLoteResponse) {
   'use strict';
 
   /**
    * Antecipacao service.
    * @module api/AntecipacaoApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -205,7 +205,7 @@
      * Callback function to receive the result of the efetivarAntecipacoesUsingPOST operation.
      * @callback module:api/AntecipacaoApi~efetivarAntecipacoesUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AntecipacaoMockResponse} data The data returned by the service call.
+     * @param {module:model/AntecipacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -216,7 +216,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:api/AntecipacaoApi~efetivarAntecipacoesUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/AntecipacaoMockResponse}
+     * data is of type: {module:model/AntecipacaoResponse}
      */
     this.efetivarAntecipacoesUsingPOST = function(idConta, opts, callback) {
       opts = opts || {};
@@ -242,7 +242,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = AntecipacaoMockResponse;
+      var returnType = AntecipacaoResponse;
 
       return this.apiClient.callApi(
         '/api/compras-antecipaveis/efetivar-antecipacao', 'POST',

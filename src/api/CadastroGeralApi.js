@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ProdutoDetalhesResponse', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/BancoResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PageAtendimentoClienteResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageTipoEnderecoResponse', '../model/PageBancoResponse', '../model/PageTipoTelefoneResponse', '../model/PageControleVencimentoResponse'], factory);
+    define(['../ApiClient', '../model/CampanhaResponse', '../model/CampanhaUpdate', '../model/ConfiguracaoRegistroCobrancaPersist', '../model/ConfiguracaoRegistroCobrancaResponse', '../model/ConfiguracaoRotativoDetalheResponse', '../model/ConfiguracaoRotativoPersist', '../model/ProdutoDetalhesResponse', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/BancoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/PageCampanhaResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PageTipoCampanhaResponse', '../model/PageConfiguracaoRotativoResponse', '../model/PageAtendimentoClienteResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageBancoResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageControleVencimentoResponse', '../model/CampanhaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ProdutoDetalhesResponse'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/BancoResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageBancoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageControleVencimentoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CampanhaResponse'), require('../model/CampanhaUpdate'), require('../model/ConfiguracaoRegistroCobrancaPersist'), require('../model/ConfiguracaoRegistroCobrancaResponse'), require('../model/ConfiguracaoRotativoDetalheResponse'), require('../model/ConfiguracaoRotativoPersist'), require('../model/ProdutoDetalhesResponse'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/BancoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/PageCampanhaResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageTipoCampanhaResponse'), require('../model/PageConfiguracaoRotativoResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageBancoResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageControleVencimentoResponse'), require('../model/CampanhaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastroGeralApi = factory(root.Pier.ApiClient, root.Pier.ProdutoDetalhesResponse, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.BancoResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageBancoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageControleVencimentoResponse);
+    root.Pier.CadastroGeralApi = factory(root.Pier.ApiClient, root.Pier.CampanhaResponse, root.Pier.CampanhaUpdate, root.Pier.ConfiguracaoRegistroCobrancaPersist, root.Pier.ConfiguracaoRegistroCobrancaResponse, root.Pier.ConfiguracaoRotativoDetalheResponse, root.Pier.ConfiguracaoRotativoPersist, root.Pier.ProdutoDetalhesResponse, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.BancoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.PageCampanhaResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageTipoCampanhaResponse, root.Pier.PageConfiguracaoRotativoResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageBancoResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageControleVencimentoResponse, root.Pier.CampanhaPersist);
   }
-}(this, function(ApiClient, ProdutoDetalhesResponse, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, TipoOperacaoResponse, TipoTelefoneResponse, BancoResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PageAtendimentoClienteResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageTipoEnderecoResponse, PageBancoResponse, PageTipoTelefoneResponse, PageControleVencimentoResponse) {
+}(this, function(ApiClient, CampanhaResponse, CampanhaUpdate, ConfiguracaoRegistroCobrancaPersist, ConfiguracaoRegistroCobrancaResponse, ConfiguracaoRotativoDetalheResponse, ConfiguracaoRotativoPersist, ProdutoDetalhesResponse, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, BancoResponse, TipoOperacaoResponse, TipoTelefoneResponse, PageCampanhaResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PageTipoCampanhaResponse, PageConfiguracaoRotativoResponse, PageAtendimentoClienteResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageBancoResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageControleVencimentoResponse, CampanhaPersist) {
   'use strict';
 
   /**
    * CadastroGeral service.
    * @module api/CadastroGeralApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -31,6 +31,162 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT2 operation.
+     * @callback module:api/CadastroGeralApi~alterarUsingPUT2Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CampanhaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Alterar campanha
+     * Este m\u00C3\u00A9todo permite que sejam alterados os dados de uma campanha.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da campanha (id).
+     * @param {module:model/CampanhaUpdate} update update
+     * @param {module:api/CadastroGeralApi~alterarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CampanhaResponse}
+     */
+    this.alterarUsingPUT2 = function(id, update, callback) {
+      var postBody = update;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT2";
+      }
+
+      // verify the required parameter 'update' is set
+      if (update == undefined || update == null) {
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT2";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CampanhaResponse;
+
+      return this.apiClient.callApi(
+        '/api/campanhas/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT3 operation.
+     * @callback module:api/CadastroGeralApi~alterarUsingPUT3Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Este m\u00C3\u00A9todo permite atualizar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {module:model/ConfiguracaoRegistroCobrancaPersist} configuracaoPersist configuracaoPersist
+     * @param {module:api/CadastroGeralApi~alterarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
+     */
+    this.alterarUsingPUT3 = function(id, configuracaoPersist, callback) {
+      var postBody = configuracaoPersist;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT3";
+      }
+
+      // verify the required parameter 'configuracaoPersist' is set
+      if (configuracaoPersist == undefined || configuracaoPersist == null) {
+        throw "Missing the required parameter 'configuracaoPersist' when calling alterarUsingPUT3";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRegistroCobrancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-registro-cobranca/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarUsingPUT4 operation.
+     * @callback module:api/CadastroGeralApi~alterarUsingPUT4Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     * Este m\u00C3\u00A9todo permite que seja alterada uma configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {module:model/ConfiguracaoRotativoPersist} configuracaoRotativoPersist configuracaoRotativoPersist
+     * @param {module:api/CadastroGeralApi~alterarUsingPUT4Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
+     */
+    this.alterarUsingPUT4 = function(id, configuracaoRotativoPersist, callback) {
+      var postBody = configuracaoRotativoPersist;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT4";
+      }
+
+      // verify the required parameter 'configuracaoRotativoPersist' is set
+      if (configuracaoRotativoPersist == undefined || configuracaoRotativoPersist == null) {
+        throw "Missing the required parameter 'configuracaoRotativoPersist' when calling alterarUsingPUT4";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRotativoDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-rotativos/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the ativarUsoExteriorUsingPOST operation.
@@ -73,6 +229,51 @@
 
       return this.apiClient.callApi(
         '/api/produtos/{id}/ativar-uso-exterior', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cadastrarUsingPOST1 operation.
+     * @callback module:api/CadastroGeralApi~cadastrarUsingPOST1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+     * @param {module:model/ConfiguracaoRegistroCobrancaPersist} configuracaoPersist configuracaoPersist
+     * @param {module:api/CadastroGeralApi~cadastrarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
+     */
+    this.cadastrarUsingPOST1 = function(configuracaoPersist, callback) {
+      var postBody = configuracaoPersist;
+
+      // verify the required parameter 'configuracaoPersist' is set
+      if (configuracaoPersist == undefined || configuracaoPersist == null) {
+        throw "Missing the required parameter 'configuracaoPersist' when calling cadastrarUsingPOST1";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRegistroCobrancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-registro-cobranca', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -125,6 +326,52 @@
 
       return this.apiClient.callApi(
         '/api/produtos/{id}/configurar-taxa-antecipacao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarCampanhaUsingGET operation.
+     * @callback module:api/CadastroGeralApi~consultarCampanhaUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CampanhaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consultar campanha
+     * Este m\u00C3\u00A9todo permite que sejam listados os dados de uma determinada campanha existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id ID da Campanha
+     * @param {module:api/CadastroGeralApi~consultarCampanhaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CampanhaResponse}
+     */
+    this.consultarCampanhaUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarCampanhaUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CampanhaResponse;
+
+      return this.apiClient.callApi(
+        '/api/campanhas/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -230,52 +477,6 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET16 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET16Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Apresenta os dados de um determinado Produto
-     * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProdutoDetalhesResponse}
-     */
-    this.consultarUsingGET16 = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ProdutoDetalhesResponse;
-
-      return this.apiClient.callApi(
-        '/api/produtos/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the consultarUsingGET2 operation.
      * @callback module:api/CadastroGeralApi~consultarUsingGET2Callback
      * @param {String} error Error message, if any.
@@ -322,8 +523,54 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET21Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta os dados de um determinado Produto
+     * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+     * @param {module:api/CadastroGeralApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ProdutoDetalhesResponse}
+     */
+    this.consultarUsingGET21 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ProdutoDetalhesResponse;
+
+      return this.apiClient.callApi(
+        '/api/produtos/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoAjusteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -338,10 +585,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de ajuste.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoAjusteResponse}
      */
-    this.consultarUsingGET22 = function(opts, callback) {
+    this.consultarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +620,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET23 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET23Callback
+     * Callback function to receive the result of the consultarUsingGET28 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoBoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -390,10 +637,10 @@
      * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo de boleto.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
      * @param {Integer} opts.banco C\u00C3\u00B3digo identificador do banco.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoBoletoResponse}
      */
-    this.consultarUsingGET23 = function(opts, callback) {
+    this.consultarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -426,8 +673,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET24 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET24Callback
+     * Callback function to receive the result of the consultarUsingGET29 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -437,15 +684,15 @@
      * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEnderecoResponse}
      */
-    this.consultarUsingGET24 = function(id, callback) {
+    this.consultarUsingGET29 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
       }
 
 
@@ -466,112 +713,6 @@
 
       return this.apiClient.callApi(
         '/api/tipos-enderecos/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarUsingGET25 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET25Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TipoOperacaoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-     * @param {Integer} idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-     * @param {Integer} idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-     * @param {String} codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastroGeralApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TipoOperacaoResponse}
-     */
-    this.consultarUsingGET25 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'idCartao' is set
-      if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET25";
-      }
-
-      // verify the required parameter 'idEstabelecimento' is set
-      if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET25";
-      }
-
-      // verify the required parameter 'codigoProcessamento' is set
-      if (codigoProcessamento == undefined || codigoProcessamento == null) {
-        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET25";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'idCartao': idCartao,
-        'idEstabelecimento': idEstabelecimento,
-        'codigoProcessamento': codigoProcessamento
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TipoOperacaoResponse;
-
-      return this.apiClient.callApi(
-        '/api/tipos-operacoes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarUsingGET27 operation.
-     * @callback module:api/CadastroGeralApi~consultarUsingGET27Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TipoTelefoneResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Apresenta os dados de um determinado Tipo de Telefone
-     * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-     * @param {module:api/CadastroGeralApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/TipoTelefoneResponse}
-     */
-    this.consultarUsingGET27 = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TipoTelefoneResponse;
-
-      return this.apiClient.callApi(
-        '/api/tipos-telefones/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -624,6 +765,204 @@
     }
 
     /**
+     * Callback function to receive the result of the consultarUsingGET30 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET30Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TipoOperacaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+     * @param {Integer} idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
+     * @param {Integer} idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
+     * @param {String} codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+     * @param {module:api/CadastroGeralApi~consultarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TipoOperacaoResponse}
+     */
+    this.consultarUsingGET30 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idCartao' is set
+      if (idCartao == undefined || idCartao == null) {
+        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET30";
+      }
+
+      // verify the required parameter 'idEstabelecimento' is set
+      if (idEstabelecimento == undefined || idEstabelecimento == null) {
+        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET30";
+      }
+
+      // verify the required parameter 'codigoProcessamento' is set
+      if (codigoProcessamento == undefined || codigoProcessamento == null) {
+        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET30";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'idCartao': idCartao,
+        'idEstabelecimento': idEstabelecimento,
+        'codigoProcessamento': codigoProcessamento
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TipoOperacaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-operacoes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET32 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET32Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TipoTelefoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta os dados de um determinado Tipo de Telefone
+     * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+     * @param {module:api/CadastroGeralApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TipoTelefoneResponse}
+     */
+    this.consultarUsingGET32 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TipoTelefoneResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-telefones/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET7Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
+     * Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {module:api/CadastroGeralApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
+     */
+    this.consultarUsingGET7 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRegistroCobrancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-registro-cobranca/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/CadastroGeralApi~consultarUsingGET8Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+     * Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+     * @param {module:api/CadastroGeralApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
+     */
+    this.consultarUsingGET8 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRotativoDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-rotativos/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the desativarUsoExteriorUsingPOST operation.
      * @callback module:api/CadastroGeralApi~desativarUsoExteriorUsingPOSTCallback
      * @param {String} error Error message, if any.
@@ -664,6 +1003,55 @@
 
       return this.apiClient.callApi(
         '/api/produtos/{id}/desativar-uso-exterior', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarCampanhasUsingGET operation.
+     * @callback module:api/CadastroGeralApi~listarCampanhasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageCampanhaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar Campanhas
+     * Lista as campanhas.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idTipoCampanha C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha (id).
+     * @param {module:api/CadastroGeralApi~listarCampanhasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageCampanhaResponse}
+     */
+    this.listarCampanhasUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idTipoCampanha': opts['idTipoCampanha']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageCampanhaResponse;
+
+      return this.apiClient.callApi(
+        '/api/campanhas', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1109,6 +1497,102 @@
     }
 
     /**
+     * Callback function to receive the result of the listarTiposCampanhasUsingGET operation.
+     * @callback module:api/CadastroGeralApi~listarTiposCampanhasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTipoCampanhaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar Tipos de Campanhas
+     * Lista os tipos de campanhas.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/CadastroGeralApi~listarTiposCampanhasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoCampanhaResponse}
+     */
+    this.listarTiposCampanhasUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTipoCampanhaResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-campanhas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET10Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageConfiguracaoRotativoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+     * Este recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
+     * @param {module:api/CadastroGeralApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageConfiguracaoRotativoResponse}
+     */
+    this.listarUsingGET10 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idProduto': opts['idProduto']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageConfiguracaoRotativoResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-rotativos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarUsingGET2 operation.
      * @callback module:api/CadastroGeralApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
@@ -1164,8 +1648,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET21Callback
+     * Callback function to receive the result of the listarUsingGET26 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1188,10 +1672,10 @@
      * @param {Integer} opts.flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
      * @param {String} opts.dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
      * @param {String} opts.dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-     * @param {module:api/CadastroGeralApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortadorResponse}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET26 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1231,8 +1715,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET27 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageProdutoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1248,10 +1732,10 @@
      * @param {String} opts.nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
      * @param {Integer} opts.status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
      * @param {Integer} opts.idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-     * @param {module:api/CadastroGeralApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageProdutoResponse}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1284,8 +1768,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET23 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET23Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePromotorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1303,10 +1787,10 @@
      * @param {String} opts.dataCadastro Data da Inclus\u00C3\u00A3o.
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
      * @param {Integer} opts.idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
-     * @param {module:api/CadastroGeralApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePromotorResponse}
      */
-    this.listarUsingGET23 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1335,57 +1819,6 @@
 
       return this.apiClient.callApi(
         '/api/promotores', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET29 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET29Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageTipoEnderecoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-     * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-     * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-     * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
-     * @param {module:api/CadastroGeralApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageTipoEnderecoResponse}
-     */
-    this.listarUsingGET29 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
-        'page': opts['page'],
-        'limit': opts['limit'],
-        'id': opts['id'],
-        'nome': opts['nome']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageTipoEnderecoResponse;
-
-      return this.apiClient.callApi(
-        '/api/tipos-enderecos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1439,8 +1872,59 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET31 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET31Callback
+     * Callback function to receive the result of the listarUsingGET35 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET35Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTipoEnderecoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+     * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+     * @param {String} opts.nome Nome do Tipo do Endere\u00C3\u00A7o
+     * @param {module:api/CadastroGeralApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoEnderecoResponse}
+     */
+    this.listarUsingGET35 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'id': opts['id'],
+        'nome': opts['nome']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTipoEnderecoResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-enderecos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET37 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1455,10 +1939,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
      * @param {String} opts.nome Nome do Tipo do Telefone
-     * @param {module:api/CadastroGeralApi~listarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefoneResponse}
      */
-    this.listarUsingGET31 = function(opts, callback) {
+    this.listarUsingGET37 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1490,8 +1974,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET37 operation.
-     * @callback module:api/CadastroGeralApi~listarUsingGET37Callback
+     * Callback function to receive the result of the listarUsingGET43 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageControleVencimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1505,10 +1989,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.dataVencimento Indica a data de vencimento das faturas
-     * @param {module:api/CadastroGeralApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroGeralApi~listarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageControleVencimentoResponse}
      */
-    this.listarUsingGET37 = function(opts, callback) {
+    this.listarUsingGET43 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1533,6 +2017,53 @@
 
       return this.apiClient.callApi(
         '/api/vencimentos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/CadastroGeralApi~listarUsingGET9Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+     * Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/CadastroGeralApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
+     */
+    this.listarUsingGET9 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRegistroCobrancaResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-registro-cobranca', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1591,6 +2122,96 @@
 
       return this.apiClient.callApi(
         '/api/atendimento-clientes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST4 operation.
+     * @callback module:api/CadastroGeralApi~salvarUsingPOST4Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CampanhaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Inserir campanha
+     * Este m\u00C3\u00A9todo permite que seja cadastrado uma nova campanha.
+     * @param {module:model/CampanhaPersist} campanhaPersist campanhaPersist
+     * @param {module:api/CadastroGeralApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/CampanhaResponse}
+     */
+    this.salvarUsingPOST4 = function(campanhaPersist, callback) {
+      var postBody = campanhaPersist;
+
+      // verify the required parameter 'campanhaPersist' is set
+      if (campanhaPersist == undefined || campanhaPersist == null) {
+        throw "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST4";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CampanhaResponse;
+
+      return this.apiClient.callApi(
+        '/api/campanhas', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST6 operation.
+     * @callback module:api/CadastroGeralApi~salvarUsingPOST6Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
+     * Este m\u00C3\u00A9todo permite que seja cadastrado uma nova configura\u00C3\u00A7\u00C3\u00A3o do rotativo para um determinado produto.
+     * @param {module:model/ConfiguracaoRotativoPersist} configuracaoRotativoPersist configuracaoRotativoPersist
+     * @param {module:api/CadastroGeralApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
+     */
+    this.salvarUsingPOST6 = function(configuracaoRotativoPersist, callback) {
+      var postBody = configuracaoRotativoPersist;
+
+      // verify the required parameter 'configuracaoRotativoPersist' is set
+      if (configuracaoRotativoPersist == undefined || configuracaoRotativoPersist == null) {
+        throw "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST6";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConfiguracaoRotativoDetalheResponse;
+
+      return this.apiClient.callApi(
+        '/api/configuracoes-rotativos', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

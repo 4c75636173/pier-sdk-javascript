@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './AntecipacaoSimuladaMockResponse'], factory);
+    define(['../ApiClient', './AntecipacaoSimuladaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AntecipacaoSimuladaMockResponse'));
+    module.exports = factory(require('../ApiClient'), require('./AntecipacaoSimuladaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AntecipacaoSimuladaLoteResponse = factory(root.Pier.ApiClient, root.Pier.AntecipacaoSimuladaMockResponse);
+    root.Pier.AntecipacaoSimuladaLoteResponse = factory(root.Pier.ApiClient, root.Pier.AntecipacaoSimuladaResponse);
   }
-}(this, function(ApiClient, AntecipacaoSimuladaMockResponse) {
+}(this, function(ApiClient, AntecipacaoSimuladaResponse) {
   'use strict';
 
   /**
    * The AntecipacaoSimuladaLoteResponse model module.
    * @module model/AntecipacaoSimuladaLoteResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -56,7 +56,7 @@
         obj['valorTotalComDesconto'] = ApiClient.convertToType(data['valorTotalComDesconto'], 'Number');
       }
       if (data.hasOwnProperty('antecipacoesSimuladas')) {
-        obj['antecipacoesSimuladas'] = ApiClient.convertToType(data['antecipacoesSimuladas'], [AntecipacaoSimuladaMockResponse]);
+        obj['antecipacoesSimuladas'] = ApiClient.convertToType(data['antecipacoesSimuladas'], [AntecipacaoSimuladaResponse]);
       }
     }
     return obj;
@@ -83,7 +83,7 @@
 
   /**
    * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
-   * @member {Array.<module:model/AntecipacaoSimuladaMockResponse>} antecipacoesSimuladas
+   * @member {Array.<module:model/AntecipacaoSimuladaResponse>} antecipacoesSimuladas
    */
   exports.prototype['antecipacoesSimuladas'] = undefined;
 

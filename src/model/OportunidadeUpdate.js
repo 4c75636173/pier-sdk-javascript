@@ -18,7 +18,7 @@
   /**
    * The OportunidadeUpdate model module.
    * @module model/OportunidadeUpdate
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**

@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT12**](WebhookApi.md#alterarUsingPUT12) | **PUT** /api/webhooks/{id} | Alterar Webhook
-[**consultarUsingGET33**](WebhookApi.md#consultarUsingGET33) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET38**](WebhookApi.md#listarUsingGET38) | **GET** /api/webhooks | Lista os Webhooks
-[**salvarUsingPOST21**](WebhookApi.md#salvarUsingPOST21) | **POST** /api/webhooks | Salvar Webhook
+[**alterarUsingPUT18**](WebhookApi.md#alterarUsingPUT18) | **PUT** /api/webhooks/{id} | Alterar Webhook
+[**consultarUsingGET38**](WebhookApi.md#consultarUsingGET38) | **GET** /api/webhooks/{id} | Consultar Webhook
+[**listarUsingGET44**](WebhookApi.md#listarUsingGET44) | **GET** /api/webhooks | Lista os Webhooks
+[**salvarUsingPOST25**](WebhookApi.md#salvarUsingPOST25) | **POST** /api/webhooks | Salvar Webhook
 
 
-<a name="alterarUsingPUT12"></a>
-# **alterarUsingPUT12**
-> WebHookResponse alterarUsingPUT12(id, tipoEvento, url, opts)
+<a name="alterarUsingPUT18"></a>
+# **alterarUsingPUT18**
+> WebHookResponse alterarUsingPUT18(id, tipoEvento, url, opts)
 
 Alterar Webhook
 
@@ -41,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT12(id, tipoEvento, url, opts, callback);
+api.alterarUsingPUT18(id, tipoEvento, url, opts, callback);
 ```
 
 ### Parameters
@@ -66,9 +66,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET33"></a>
-# **consultarUsingGET33**
-> WebHookResponse consultarUsingGET33(id)
+<a name="consultarUsingGET38"></a>
+# **consultarUsingGET38**
+> WebHookResponse consultarUsingGET38(id)
 
 Consultar Webhook
 
@@ -90,7 +90,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET33(id, callback);
+api.consultarUsingGET38(id, callback);
 ```
 
 ### Parameters
@@ -112,9 +112,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET38"></a>
-# **listarUsingGET38**
-> PageWebHookResponse listarUsingGET38(opts)
+<a name="listarUsingGET44"></a>
+# **listarUsingGET44**
+> PageWebHookResponse listarUsingGET44(opts)
 
 Lista os Webhooks
 
@@ -143,7 +143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET38(opts, callback);
+api.listarUsingGET44(opts, callback);
 ```
 
 ### Parameters
@@ -171,9 +171,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST21"></a>
-# **salvarUsingPOST21**
-> WebHookResponse salvarUsingPOST21(tipoEvento, url)
+<a name="salvarUsingPOST25"></a>
+# **salvarUsingPOST25**
+> WebHookResponse salvarUsingPOST25(tipoEvento, url)
 
 Salvar Webhook
 
@@ -197,7 +197,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST21(tipoEvento, url, callback);
+api.salvarUsingPOST25(tipoEvento, url, callback);
 ```
 
 ### Parameters

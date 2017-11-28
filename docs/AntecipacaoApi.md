@@ -169,7 +169,7 @@ No authorization required
 
 <a name="efetivarAntecipacoesUsingPOST"></a>
 # **efetivarAntecipacoesUsingPOST**
-> AntecipacaoMockResponse efetivarAntecipacoesUsingPOST(idConta, opts)
+> AntecipacaoResponse efetivarAntecipacoesUsingPOST(idConta, opts)
 
 Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AntecipacaoMockResponse**](AntecipacaoMockResponse.md)
+[**AntecipacaoResponse**](AntecipacaoResponse.md)
 
 ### Authorization
 

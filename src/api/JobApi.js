@@ -18,7 +18,7 @@
   /**
    * Job service.
    * @module api/JobApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the atualizarUsingPUT2 operation.
-     * @callback module:api/JobApi~atualizarUsingPUT2Callback
+     * Callback function to receive the result of the atualizarUsingPUT3 operation.
+     * @callback module:api/JobApi~atualizarUsingPUT3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -93,30 +93,30 @@
      * @param {String} descricao descricao.
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
-     * @param {module:api/JobApi~atualizarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~atualizarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
-    this.atualizarUsingPUT2 = function(id, descricao, cron, groovy, callback) {
+    this.atualizarUsingPUT3 = function(id, descricao, cron, groovy, callback) {
       var postBody = groovy;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling atualizarUsingPUT2";
+        throw "Missing the required parameter 'id' when calling atualizarUsingPUT3";
       }
 
       // verify the required parameter 'descricao' is set
       if (descricao == undefined || descricao == null) {
-        throw "Missing the required parameter 'descricao' when calling atualizarUsingPUT2";
+        throw "Missing the required parameter 'descricao' when calling atualizarUsingPUT3";
       }
 
       // verify the required parameter 'cron' is set
       if (cron == undefined || cron == null) {
-        throw "Missing the required parameter 'cron' when calling atualizarUsingPUT2";
+        throw "Missing the required parameter 'cron' when calling atualizarUsingPUT3";
       }
 
       // verify the required parameter 'groovy' is set
       if (groovy == undefined || groovy == null) {
-        throw "Missing the required parameter 'groovy' when calling atualizarUsingPUT2";
+        throw "Missing the required parameter 'groovy' when calling atualizarUsingPUT3";
       }
 
 
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/JobApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/JobApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageJobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -208,10 +208,10 @@
      * @param {module:model/String} opts.status Status do Job
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/JobApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageJobResponse}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST11 operation.
-     * @callback module:api/JobApi~salvarUsingPOST11Callback
+     * Callback function to receive the result of the salvarUsingPOST14 operation.
+     * @callback module:api/JobApi~salvarUsingPOST14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/JobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -257,25 +257,25 @@
      * @param {String} descricao descricao.
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
-     * @param {module:api/JobApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
-    this.salvarUsingPOST11 = function(descricao, cron, groovy, callback) {
+    this.salvarUsingPOST14 = function(descricao, cron, groovy, callback) {
       var postBody = groovy;
 
       // verify the required parameter 'descricao' is set
       if (descricao == undefined || descricao == null) {
-        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'descricao' when calling salvarUsingPOST14";
       }
 
       // verify the required parameter 'cron' is set
       if (cron == undefined || cron == null) {
-        throw "Missing the required parameter 'cron' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'cron' when calling salvarUsingPOST14";
       }
 
       // verify the required parameter 'groovy' is set
       if (groovy == undefined || groovy == null) {
-        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'groovy' when calling salvarUsingPOST14";
       }
 
 

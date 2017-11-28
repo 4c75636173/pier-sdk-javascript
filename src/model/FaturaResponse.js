@@ -18,7 +18,7 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -73,6 +74,9 @@
       }
       if (data.hasOwnProperty('valorPagamentoMinimo')) {
         obj['valorPagamentoMinimo'] = ApiClient.convertToType(data['valorPagamentoMinimo'], 'Number');
+      }
+      if (data.hasOwnProperty('saldoAnterior')) {
+        obj['saldoAnterior'] = ApiClient.convertToType(data['saldoAnterior'], 'Number');
       }
     }
     return obj;
@@ -126,6 +130,12 @@
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;
+
+  /**
+   * Valor do saldo anterior.
+   * @member {Number} saldoAnterior
+   */
+  exports.prototype['saldoAnterior'] = undefined;
 
 
   /**

@@ -18,7 +18,7 @@
   /**
    * Usuario service.
    * @module api/UsuarioApi
-   * @version 2.43.0
+   * @version 2.46.3
    */
 
   /**
@@ -146,8 +146,8 @@
     }
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT11 operation.
-     * @callback module:api/UsuarioApi~alterarUsingPUT11Callback
+     * Callback function to receive the result of the alterarUsingPUT17 operation.
+     * @callback module:api/UsuarioApi~alterarUsingPUT17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -158,20 +158,20 @@
      * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
      * @param {module:model/UsuarioUpdate} update update
-     * @param {module:api/UsuarioApi~alterarUsingPUT11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~alterarUsingPUT17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.alterarUsingPUT11 = function(id, update, callback) {
+    this.alterarUsingPUT17 = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT11";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT17";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling alterarUsingPUT11";
+        throw "Missing the required parameter 'update' when calling alterarUsingPUT17";
       }
 
 
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET32 operation.
-     * @callback module:api/UsuarioApi~consultarUsingGET32Callback
+     * Callback function to receive the result of the consultarUsingGET37 operation.
+     * @callback module:api/UsuarioApi~consultarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -255,15 +255,15 @@
      * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:api/UsuarioApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET32 = function(id, callback) {
+    this.consultarUsingGET37 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
       }
 
 
@@ -336,8 +336,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET36 operation.
-     * @callback module:api/UsuarioApi~listarUsingGET36Callback
+     * Callback function to receive the result of the listarUsingGET42 operation.
+     * @callback module:api/UsuarioApi~listarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -354,10 +354,10 @@
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuarioApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET36 = function(opts, callback) {
+    this.listarUsingGET42 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -437,8 +437,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST20 operation.
-     * @callback module:api/UsuarioApi~salvarUsingPOST20Callback
+     * Callback function to receive the result of the salvarUsingPOST24 operation.
+     * @callback module:api/UsuarioApi~salvarUsingPOST24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -448,15 +448,15 @@
      * Cadastra Usu\u00C3\u00A1rio na base.
      * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
      * @param {module:model/UsuarioPersist} persist persist
-     * @param {module:api/UsuarioApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~salvarUsingPOST24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.salvarUsingPOST20 = function(persist, callback) {
+    this.salvarUsingPOST24 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST20";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST24";
       }
 
 
