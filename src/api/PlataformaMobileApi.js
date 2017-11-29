@@ -18,7 +18,7 @@
   /**
    * PlataformaMobile service.
    * @module api/PlataformaMobileApi
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

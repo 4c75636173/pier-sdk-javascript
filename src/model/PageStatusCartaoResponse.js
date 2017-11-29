@@ -18,7 +18,7 @@
   /**
    * The PageStatusCartaoResponse model module.
    * @module model/PageStatusCartaoResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PromotorResponse model module.
    * @module model/PromotorResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

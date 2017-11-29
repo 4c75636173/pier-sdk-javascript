@@ -18,7 +18,7 @@
   /**
    * RiscoFraude service.
    * @module api/RiscoFraudeApi
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

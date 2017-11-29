@@ -18,7 +18,7 @@
   /**
    * The CampanhaResponse model module.
    * @module model/CampanhaResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

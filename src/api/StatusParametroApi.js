@@ -18,7 +18,7 @@
   /**
    * StatusParametro service.
    * @module api/StatusParametroApi
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

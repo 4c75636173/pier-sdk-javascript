@@ -18,7 +18,7 @@
   /**
    * The TransacaoNaoProcessadaResponse model module.
    * @module model/TransacaoNaoProcessadaResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

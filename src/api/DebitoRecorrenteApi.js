@@ -18,7 +18,7 @@
   /**
    * DebitoRecorrente service.
    * @module api/DebitoRecorrenteApi
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

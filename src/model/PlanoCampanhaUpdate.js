@@ -18,7 +18,7 @@
   /**
    * The PlanoCampanhaUpdate model module.
    * @module model/PlanoCampanhaUpdate
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

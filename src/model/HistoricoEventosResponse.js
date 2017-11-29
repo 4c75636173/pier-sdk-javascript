@@ -18,7 +18,7 @@
   /**
    * The HistoricoEventosResponse model module.
    * @module model/HistoricoEventosResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

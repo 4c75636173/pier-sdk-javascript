@@ -18,7 +18,7 @@
   /**
    * The PageBancoResponse model module.
    * @module model/PageBancoResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

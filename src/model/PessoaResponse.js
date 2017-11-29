@@ -18,7 +18,7 @@
   /**
    * The PessoaResponse model module.
    * @module model/PessoaResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The DadosCartaoImpressaoResponse model module.
    * @module model/DadosCartaoImpressaoResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

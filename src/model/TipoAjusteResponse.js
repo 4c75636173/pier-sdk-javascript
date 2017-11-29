@@ -18,7 +18,7 @@
   /**
    * The TipoAjusteResponse model module.
    * @module model/TipoAjusteResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

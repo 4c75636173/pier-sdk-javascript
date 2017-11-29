@@ -18,7 +18,7 @@
   /**
    * The TransacaoPayQueryRequest model module.
    * @module model/TransacaoPayQueryRequest
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**

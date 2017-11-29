@@ -18,7 +18,7 @@
   /**
    * The TipoOperacaoResponse model module.
    * @module model/TipoOperacaoResponse
-   * @version 2.46.4
+   * @version 2.46.5
    */
 
   /**
