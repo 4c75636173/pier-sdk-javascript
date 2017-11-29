@@ -18,7 +18,7 @@
   /**
    * The PageHistoricoEventosResponse model module.
    * @module model/PageHistoricoEventosResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

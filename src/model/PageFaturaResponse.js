@@ -18,7 +18,7 @@
   /**
    * The PageFaturaResponse model module.
    * @module model/PageFaturaResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

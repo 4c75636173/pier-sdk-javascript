@@ -18,7 +18,7 @@
   /**
    * The PageCampanhaResponse model module.
    * @module model/PageCampanhaResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

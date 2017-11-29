@@ -18,7 +18,7 @@
   /**
    * The CartaoPayCadastroResponse model module.
    * @module model/CartaoPayCadastroResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

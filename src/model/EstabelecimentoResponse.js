@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoResponse model module.
    * @module model/EstabelecimentoResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

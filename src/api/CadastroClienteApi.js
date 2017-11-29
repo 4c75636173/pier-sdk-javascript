@@ -18,7 +18,7 @@
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

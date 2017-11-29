@@ -18,7 +18,7 @@
   /**
    * The OperadoraResponse model module.
    * @module model/OperadoraResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

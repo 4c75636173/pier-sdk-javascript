@@ -18,7 +18,7 @@
   /**
    * Oportunidade service.
    * @module api/OportunidadeApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

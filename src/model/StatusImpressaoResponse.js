@@ -18,7 +18,7 @@
   /**
    * The StatusImpressaoResponse model module.
    * @module model/StatusImpressaoResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

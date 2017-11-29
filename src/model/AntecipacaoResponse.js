@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoResponse model module.
    * @module model/AntecipacaoResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

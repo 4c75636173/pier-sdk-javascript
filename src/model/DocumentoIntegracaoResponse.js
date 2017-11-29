@@ -18,7 +18,7 @@
   /**
    * The DocumentoIntegracaoResponse model module.
    * @module model/DocumentoIntegracaoResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

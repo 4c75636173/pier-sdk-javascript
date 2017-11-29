@@ -18,7 +18,7 @@
   /**
    * The TipoTemplateRequest model module.
    * @module model/TipoTemplateRequest
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

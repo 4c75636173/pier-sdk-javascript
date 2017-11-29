@@ -18,7 +18,7 @@
   /**
    * The AlterarProdutoRequest model module.
    * @module model/AlterarProdutoRequest
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**
@@ -31,6 +31,8 @@
   var exports = function(idProduto) {
 
     this['idProduto'] = idProduto;
+
+
 
   };
 
@@ -51,6 +53,12 @@
       if (data.hasOwnProperty('idOrigemComercial')) {
         obj['idOrigemComercial'] = ApiClient.convertToType(data['idOrigemComercial'], 'Integer');
       }
+      if (data.hasOwnProperty('idEstabelecimento')) {
+        obj['idEstabelecimento'] = ApiClient.convertToType(data['idEstabelecimento'], 'Integer');
+      }
+      if (data.hasOwnProperty('idPromotor')) {
+        obj['idPromotor'] = ApiClient.convertToType(data['idPromotor'], 'Integer');
+      }
     }
     return obj;
   }
@@ -67,6 +75,18 @@
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
+
+  /**
+   * Identificador do estabelecimento.
+   * @member {Integer} idEstabelecimento
+   */
+  exports.prototype['idEstabelecimento'] = undefined;
+
+  /**
+   * Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+   * @member {Integer} idPromotor
+   */
+  exports.prototype['idPromotor'] = undefined;
 
 
 

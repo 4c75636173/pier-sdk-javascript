@@ -18,7 +18,7 @@
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

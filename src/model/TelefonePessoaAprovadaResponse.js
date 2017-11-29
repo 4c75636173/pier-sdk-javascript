@@ -18,7 +18,7 @@
   /**
    * The TelefonePessoaAprovadaResponse model module.
    * @module model/TelefonePessoaAprovadaResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

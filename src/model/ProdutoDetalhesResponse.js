@@ -18,7 +18,7 @@
   /**
    * The ProdutoDetalhesResponse model module.
    * @module model/ProdutoDetalhesResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

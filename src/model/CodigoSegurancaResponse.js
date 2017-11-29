@@ -18,7 +18,7 @@
   /**
    * The CodigoSegurancaResponse model module.
    * @module model/CodigoSegurancaResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

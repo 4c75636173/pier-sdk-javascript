@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

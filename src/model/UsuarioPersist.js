@@ -18,7 +18,7 @@
   /**
    * The UsuarioPersist model module.
    * @module model/UsuarioPersist
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

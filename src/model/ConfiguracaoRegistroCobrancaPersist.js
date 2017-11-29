@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoRegistroCobrancaPersist model module.
    * @module model/ConfiguracaoRegistroCobrancaPersist
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

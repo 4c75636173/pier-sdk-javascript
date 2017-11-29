@@ -18,7 +18,7 @@
   /**
    * The PagePessoaJuridicaResponse model module.
    * @module model/PagePessoaJuridicaResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartaoResponse', '../model/CartaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartaoResponse', '../model/CartaoResponse', '../model/DadosCartaoImpressaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/CartaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/CartaoResponse'), require('../model/DadosCartaoImpressaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.CartaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.CartaoResponse, root.Pier.DadosCartaoImpressaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartaoResponse, CartaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
+}(this, function(ApiClient, HistoricoImpressaoCartaoResponse, CartaoResponse, DadosCartaoImpressaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**
@@ -368,7 +368,7 @@
      * Callback function to receive the result of the consultarCartaoImpressaoUsingGET operation.
      * @callback module:api/CartaoApi~consultarCartaoImpressaoUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/DadosCartaoImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -377,7 +377,7 @@
      * Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
      * @param {module:api/CartaoApi~consultarCartaoImpressaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {Object}
+     * data is of type: {module:model/DadosCartaoImpressaoResponse}
      */
     this.consultarCartaoImpressaoUsingGET = function(id, callback) {
       var postBody = null;
@@ -401,7 +401,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = DadosCartaoImpressaoResponse;
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/consultar-dados-impressao', 'GET',

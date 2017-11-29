@@ -18,7 +18,7 @@
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

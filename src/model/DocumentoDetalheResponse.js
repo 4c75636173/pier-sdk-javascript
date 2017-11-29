@@ -18,7 +18,7 @@
   /**
    * The DocumentoDetalheResponse model module.
    * @module model/DocumentoDetalheResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**

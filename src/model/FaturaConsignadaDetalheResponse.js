@@ -18,7 +18,7 @@
   /**
    * The FaturaConsignadaDetalheResponse model module.
    * @module model/FaturaConsignadaDetalheResponse
-   * @version 2.46.3
+   * @version 2.46.4
    */
 
   /**
