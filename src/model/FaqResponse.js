@@ -18,7 +18,7 @@
   /**
    * The FaqResponse model module.
    * @module model/FaqResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

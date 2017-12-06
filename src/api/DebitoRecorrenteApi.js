@@ -18,7 +18,7 @@
   /**
    * DebitoRecorrente service.
    * @module api/DebitoRecorrenteApi
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
@@ -97,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET34 operation.
-     * @callback module:api/DebitoRecorrenteApi~listarUsingGET34Callback
+     * Callback function to receive the result of the listarUsingGET36 operation.
+     * @callback module:api/DebitoRecorrenteApi~listarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoDebitoRecorrenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -115,10 +115,10 @@
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
      * @param {Number} opts.valor Valor do tipo de d\u00C3\u00A9bito recorrente.
      * @param {Boolean} opts.flagAtivo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
-     * @param {module:api/DebitoRecorrenteApi~listarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DebitoRecorrenteApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoDebitoRecorrenteResponse}
      */
-    this.listarUsingGET34 = function(opts, callback) {
+    this.listarUsingGET36 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

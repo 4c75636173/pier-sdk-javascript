@@ -18,7 +18,7 @@
   /**
    * The PageEstabelecimentoResponse model module.
    * @module model/PageEstabelecimentoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

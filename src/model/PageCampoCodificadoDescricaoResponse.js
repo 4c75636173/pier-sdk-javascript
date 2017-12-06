@@ -18,7 +18,7 @@
   /**
    * The PageCampoCodificadoDescricaoResponse model module.
    * @module model/PageCampoCodificadoDescricaoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

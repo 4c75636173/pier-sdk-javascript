@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET22**](RiscoFraudeApi.md#consultarUsingGET22) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+[**consultarUsingGET23**](RiscoFraudeApi.md#consultarUsingGET23) | **GET** /api/riscos-fraudes/{id} | Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 [**listarTiposResolucaoUsingGET**](RiscoFraudeApi.md#listarTiposResolucaoUsingGET) | **GET** /api/tipos-resolucao | Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
 [**negarUsingPOST**](RiscoFraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | Negar autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 [**reconhecerUsingPOST**](RiscoFraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | Reconhecer autenticidade de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude
 
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> RiscoFraudeDetalhadoResponse consultarUsingGET22(id)
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> RiscoFraudeDetalhadoResponse consultarUsingGET23(id)
 
 Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
 
@@ -34,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(id, callback);
+api.consultarUsingGET23(id, callback);
 ```
 
 ### Parameters

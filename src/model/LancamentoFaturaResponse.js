@@ -18,7 +18,7 @@
   /**
    * The LancamentoFaturaResponse model module.
    * @module model/LancamentoFaturaResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

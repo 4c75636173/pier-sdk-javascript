@@ -18,7 +18,7 @@
   /**
    * The BancoResponse model module.
    * @module model/BancoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

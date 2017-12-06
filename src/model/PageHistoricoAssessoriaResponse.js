@@ -18,7 +18,7 @@
   /**
    * The PageHistoricoAssessoriaResponse model module.
    * @module model/PageHistoricoAssessoriaResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

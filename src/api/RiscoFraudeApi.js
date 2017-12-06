@@ -18,7 +18,7 @@
   /**
    * RiscoFraude service.
    * @module api/RiscoFraudeApi
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/RiscoFraudeApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/RiscoFraudeApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
      * Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-     * @param {module:api/RiscoFraudeApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RiscoFraudeApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeDetalhadoResponse}
      */
-    this.consultarUsingGET22 = function(id, callback) {
+    this.consultarUsingGET23 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
       }
 
 

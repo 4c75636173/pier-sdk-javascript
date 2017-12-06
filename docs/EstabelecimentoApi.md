@@ -4,21 +4,29 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT10**](EstabelecimentoApi.md#alterarUsingPUT10) | **PUT** /api/pessoas-juridicas/{id} | Alterar Pessoa Jur\u00C3\u00ADdica
-[**alterarUsingPUT13**](EstabelecimentoApi.md#alterarUsingPUT13) | **PUT** /api/terminais/{id} | Altera um Terminal
-[**cadastrarUsingPOST2**](EstabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
-[**consultarUsingGET14**](EstabelecimentoApi.md#consultarUsingGET14) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
-[**consultarUsingGET26**](EstabelecimentoApi.md#consultarUsingGET26) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**listarUsingGET18**](EstabelecimentoApi.md#listarUsingGET18) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
-[**listarUsingGET33**](EstabelecimentoApi.md#listarUsingGET33) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**salvarUsingPOST20**](EstabelecimentoApi.md#salvarUsingPOST20) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
+[**alterarUsingPUT11**](EstabelecimentoApi.md#alterarUsingPUT11) | **PUT** /api/pessoas-juridicas/{id} | Alterar Pessoa Jur\u00C3\u00ADdica
+[**alterarUsingPUT13**](EstabelecimentoApi.md#alterarUsingPUT13) | **PUT** /api/telefones-estabelecimentos/{id} | Altera um Telefone do estabelecimento
+[**alterarUsingPUT15**](EstabelecimentoApi.md#alterarUsingPUT15) | **PUT** /api/terminais/{id} | Altera um Terminal
+[**alterarUsingPUT5**](EstabelecimentoApi.md#alterarUsingPUT5) | **PUT** /api/credores/{id} | Alterar Credor
+[**cadastrarUsingPOST2**](EstabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/credores | Cadastrar Credor
+[**cadastrarUsingPOST3**](EstabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
+[**consultarUsingGET11**](EstabelecimentoApi.md#consultarUsingGET11) | **GET** /api/credores/{id} | Consultar credor
+[**consultarUsingGET15**](EstabelecimentoApi.md#consultarUsingGET15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
+[**consultarUsingGET26**](EstabelecimentoApi.md#consultarUsingGET26) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultarUsingGET28**](EstabelecimentoApi.md#consultarUsingGET28) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listarUsingGET14**](EstabelecimentoApi.md#listarUsingGET14) | **GET** /api/credores | Listar credores
+[**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
+[**listarUsingGET33**](EstabelecimentoApi.md#listarUsingGET33) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listarUsingGET35**](EstabelecimentoApi.md#listarUsingGET35) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**salvarUsingPOST19**](EstabelecimentoApi.md#salvarUsingPOST19) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
+[**salvarUsingPOST21**](EstabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
 
 
-<a name="alterarUsingPUT10"></a>
-# **alterarUsingPUT10**
-> PessoaJuridicaResponse alterarUsingPUT10(id, razaoSocial, opts)
+<a name="alterarUsingPUT11"></a>
+# **alterarUsingPUT11**
+> PessoaJuridicaResponse alterarUsingPUT11(id, razaoSocial, opts)
 
 Alterar Pessoa Jur\u00C3\u00ADdica
 
@@ -51,7 +59,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT10(id, razaoSocial, opts, callback);
+api.alterarUsingPUT11(id, razaoSocial, opts, callback);
 ```
 
 ### Parameters
@@ -83,7 +91,63 @@ No authorization required
 
 <a name="alterarUsingPUT13"></a>
 # **alterarUsingPUT13**
-> TerminalResponse alterarUsingPUT13(id, terminalUpdate)
+> TelefoneEstabelecimentoResponse alterarUsingPUT13(id, ddd, telefone, opts)
+
+Altera um Telefone do estabelecimento
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+
+var ddd = "ddd_example"; // {String} C\u00C3\u00B3digo DDD do telefone (id).
+
+var telefone = "telefone_example"; // {String} N\u00C3\u00BAmero do telefone.
+
+var opts = { 
+  'ramal': "ramal_example" // {String} N\u00C3\u00BAmero do ramal.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT13(id, ddd, telefone, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
+ **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
+ **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
+ **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT15"></a>
+# **alterarUsingPUT15**
+> TerminalResponse alterarUsingPUT15(id, terminalUpdate)
 
 Altera um Terminal
 
@@ -107,7 +171,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT13(id, terminalUpdate, callback);
+api.alterarUsingPUT15(id, terminalUpdate, callback);
 ```
 
 ### Parameters
@@ -130,9 +194,104 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="alterarUsingPUT5"></a>
+# **alterarUsingPUT5**
+> CredorResponse alterarUsingPUT5(id, credorUpdate)
+
+Alterar Credor
+
+Altera um credor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
+
+var credorUpdate = new Pier.CredorDTO(); // {CredorDTO} credorUpdate
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT5(id, credorUpdate, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
+ **credorUpdate** | [**CredorDTO**](CredorDTO.md)| credorUpdate | 
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="cadastrarUsingPOST2"></a>
 # **cadastrarUsingPOST2**
-> PessoaJuridicaResponse cadastrarUsingPOST2(razaoSocial, cnpj, opts)
+> CredorResponse cadastrarUsingPOST2(credorPersist)
+
+Cadastrar Credor
+
+Cadastra um credor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var credorPersist = new Pier.CredorDTO(); // {CredorDTO} credorPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cadastrarUsingPOST2(credorPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credorPersist** | [**CredorDTO**](CredorDTO.md)| credorPersist | 
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cadastrarUsingPOST3"></a>
+# **cadastrarUsingPOST3**
+> PessoaJuridicaResponse cadastrarUsingPOST3(razaoSocial, cnpj, opts)
 
 Cadastrar Pessoa Jur\u00C3\u00ADdica
 
@@ -165,7 +324,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cadastrarUsingPOST2(razaoSocial, cnpj, opts, callback);
+api.cadastrarUsingPOST3(razaoSocial, cnpj, opts, callback);
 ```
 
 ### Parameters
@@ -195,9 +354,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> EstabelecimentoResponse consultarUsingGET14(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> CredorResponse consultarUsingGET11(id)
+
+Consultar credor
+
+Consulta um credor atrav\u00C3\u00A9s do seu identificador.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET11(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor | 
+
+### Return type
+
+[**CredorResponse**](CredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> EstabelecimentoResponse consultarUsingGET15(id)
 
 Consultar estabelecimento por id
 
@@ -219,7 +424,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -241,9 +446,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> PessoaJuridicaResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> PessoaJuridicaResponse consultarUsingGET20(id)
 
 Consultar pessoa jur\u00C3\u00ADdica
 
@@ -265,7 +470,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -289,7 +494,53 @@ No authorization required
 
 <a name="consultarUsingGET26"></a>
 # **consultarUsingGET26**
-> TerminalResponse consultarUsingGET26(id)
+> TelefoneEstabelecimentoResponse consultarUsingGET26(id)
+
+Apresenta os dados de um determinado telefone de um estabelecimento
+
+Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET26(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id). | 
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> TerminalResponse consultarUsingGET28(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -311,7 +562,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(id, callback);
+api.consultarUsingGET28(id, callback);
 ```
 
 ### Parameters
@@ -333,9 +584,106 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageEstabelecimentoResponse listarUsingGET18(opts)
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> PageCredorResponse listarUsingGET14(opts)
+
+Listar credores
+
+Lista credores cadastrados. 
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idPessoaJuridica': 789, // {Integer} Identificador da pessoa jur\u00C3\u00ADdica do credor
+  'nome': "nome_example", // {String} Nome do credor
+  'periodicidade': "periodicidade_example", // {String} Periodicidade do pagamento
+  'pagamentoSemanal': "pagamentoSemanal_example", // {String} Dia para pagamento semanal
+  'pagamentoMensal': 56, // {Integer} Dia da data para o pagamento mensal
+  'pagamentoDecendialPrimeiro': 56, // {Integer} Dia da data para o primeiro pagamento decendial
+  'pagamentoDecendialSegundo': 56, // {Integer} Dia da data para o segundo pagamento decendial
+  'pagamentoDecendialTerceiro': 56, // {Integer} Dia da data para o terceiro pagamento decendial
+  'pagamentoQuinzenalPrimeiro': 56, // {Integer} Dia da data para o primeiro pagamento quinzenal
+  'pagamentoQuinzenalSegundo': 56, // {Integer} Dia da data para o segundo pagamento quinzenal
+  'credorBanco': true, // {Boolean} Indica se este credor pode ser um Credor RAV de outros credores
+  'percentualRAV': 3.4, // {Number} Valor percentual do RAV do credor
+  'recebeRAV': "recebeRAV_example", // {String} Indica se o credor recebe RAV e o tipo
+  'percentualMultiplica': 3.4, // {Number} Percentual Multiplica
+  'taxaAdm': 3.4, // {Number} Taxa Administrativa
+  'taxaBanco': 3.4, // {Number} Taxa do Banco
+  'limiteRAV': 3.4, // {Number} Valor limite do RAV
+  'idCredorRAV': 789, // {Integer} C\u00C3\u00B3digo identificador do credor RAV
+  'banco': 56, // {Integer} C\u00C3\u00B3digo do banco
+  'agencia': 56, // {Integer} Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+  'digitoVerificadorAgencia': "digitoVerificadorAgencia_example", // {String} D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+  'contaCorrente': "contaCorrente_example", // {String} C\u00C3\u00B3digo da Conta Corrente
+  'digitoVerificadorContaCorrente': "digitoVerificadorContaCorrente_example" // {String} D\u00C3\u00ADgito Verificador da Conta Corrente
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET14(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idPessoaJuridica** | **Integer**| Identificador da pessoa jur\u00C3\u00ADdica do credor | [optional] 
+ **nome** | **String**| Nome do credor | [optional] 
+ **periodicidade** | **String**| Periodicidade do pagamento | [optional] 
+ **pagamentoSemanal** | **String**| Dia para pagamento semanal | [optional] 
+ **pagamentoMensal** | **Integer**| Dia da data para o pagamento mensal | [optional] 
+ **pagamentoDecendialPrimeiro** | **Integer**| Dia da data para o primeiro pagamento decendial | [optional] 
+ **pagamentoDecendialSegundo** | **Integer**| Dia da data para o segundo pagamento decendial | [optional] 
+ **pagamentoDecendialTerceiro** | **Integer**| Dia da data para o terceiro pagamento decendial | [optional] 
+ **pagamentoQuinzenalPrimeiro** | **Integer**| Dia da data para o primeiro pagamento quinzenal | [optional] 
+ **pagamentoQuinzenalSegundo** | **Integer**| Dia da data para o segundo pagamento quinzenal | [optional] 
+ **credorBanco** | **Boolean**| Indica se este credor pode ser um Credor RAV de outros credores | [optional] 
+ **percentualRAV** | [**Number**](.md)| Valor percentual do RAV do credor | [optional] 
+ **recebeRAV** | **String**| Indica se o credor recebe RAV e o tipo | [optional] 
+ **percentualMultiplica** | [**Number**](.md)| Percentual Multiplica | [optional] 
+ **taxaAdm** | [**Number**](.md)| Taxa Administrativa | [optional] 
+ **taxaBanco** | [**Number**](.md)| Taxa do Banco | [optional] 
+ **limiteRAV** | [**Number**](.md)| Valor limite do RAV | [optional] 
+ **idCredorRAV** | **Integer**| C\u00C3\u00B3digo identificador do credor RAV | [optional] 
+ **banco** | **Integer**| C\u00C3\u00B3digo do banco | [optional] 
+ **agencia** | **Integer**| Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
+ **digitoVerificadorAgencia** | **String**| D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
+ **contaCorrente** | **String**| C\u00C3\u00B3digo da Conta Corrente | [optional] 
+ **digitoVerificadorContaCorrente** | **String**| D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+
+### Return type
+
+[**PageCredorResponse**](PageCredorResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageEstabelecimentoResponse listarUsingGET19(opts)
 
 Lista Estabelecimentos
 
@@ -379,7 +727,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters
@@ -422,9 +770,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PagePessoaJuridicaResponse listarUsingGET23(opts)
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PagePessoaJuridicaResponse listarUsingGET24(opts)
 
 Listar pessoas jur\u00C3\u00ADdicas
 
@@ -458,7 +806,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET24(opts, callback);
 ```
 
 ### Parameters
@@ -493,7 +841,60 @@ No authorization required
 
 <a name="listarUsingGET33"></a>
 # **listarUsingGET33**
-> PageTerminalResponse listarUsingGET33(opts)
+> PageTelefoneEstabelecimentoResponse listarUsingGET33(opts)
+
+Lista os Telefones Estabelecimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idEstabelecimento': 789 // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET33(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idEstabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id). | [optional] 
+
+### Return type
+
+[**PageTelefoneEstabelecimentoResponse**](PageTelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET35"></a>
+# **listarUsingGET35**
+> PageTerminalResponse listarUsingGET35(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -522,7 +923,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET33(opts, callback);
+api.listarUsingGET35(opts, callback);
 ```
 
 ### Parameters
@@ -550,9 +951,65 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST20"></a>
-# **salvarUsingPOST20**
-> TerminalResponse salvarUsingPOST20(idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual)
+<a name="salvarUsingPOST19"></a>
+# **salvarUsingPOST19**
+> TelefoneEstabelecimentoResponse salvarUsingPOST19(idEstabelecimento, ddd, telefone, opts)
+
+Realiza o cadastro de um novo telefone para um estabelecimento 
+
+Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var idEstabelecimento = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+
+var ddd = "ddd_example"; // {String} C\u00C3\u00B3digo DDD do telefone (id).
+
+var telefone = "telefone_example"; // {String} N\u00C3\u00BAmero do telefone.
+
+var opts = { 
+  'ramal': "ramal_example" // {String} N\u00C3\u00BAmero do ramal.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST19(idEstabelecimento, ddd, telefone, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idEstabelecimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id). | 
+ **ddd** | **String**| C\u00C3\u00B3digo DDD do telefone (id). | 
+ **telefone** | **String**| N\u00C3\u00BAmero do telefone. | 
+ **ramal** | **String**| N\u00C3\u00BAmero do ramal. | [optional] 
+
+### Return type
+
+[**TelefoneEstabelecimentoResponse**](TelefoneEstabelecimentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST21"></a>
+# **salvarUsingPOST21**
+> TerminalResponse salvarUsingPOST21(idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual)
 
 Realiza o cadastro de um novo Terminal
 
@@ -578,7 +1035,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST20(idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual, callback);
+api.salvarUsingPOST21(idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual, callback);
 ```
 
 ### Parameters

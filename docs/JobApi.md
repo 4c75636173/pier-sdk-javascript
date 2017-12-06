@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT3**](JobApi.md#atualizarUsingPUT3) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET20**](JobApi.md#listarUsingGET20) | **GET** /api/jobs | Listar Jobs
+[**listarUsingGET21**](JobApi.md#listarUsingGET21) | **GET** /api/jobs | Listar Jobs
 [**salvarUsingPOST14**](JobApi.md#salvarUsingPOST14) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -158,9 +158,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET20"></a>
-# **listarUsingGET20**
-> PageJobResponse listarUsingGET20(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageJobResponse listarUsingGET21(opts)
 
 Listar Jobs
 
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET20(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters

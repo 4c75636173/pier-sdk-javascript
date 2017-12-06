@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT7**](LimiteDisponibilidadeApi.md#alterarUsingPUT7) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultarUsingGET16**](LimiteDisponibilidadeApi.md#consultarUsingGET16) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
+[**alterarUsingPUT8**](LimiteDisponibilidadeApi.md#alterarUsingPUT8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
+[**consultarUsingGET17**](LimiteDisponibilidadeApi.md#consultarUsingGET17) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
-<a name="alterarUsingPUT7"></a>
-# **alterarUsingPUT7**
-> LimiteDisponibilidadeResponse alterarUsingPUT7(idConta, opts)
+<a name="alterarUsingPUT8"></a>
+# **alterarUsingPUT8**
+> LimiteDisponibilidadeResponse alterarUsingPUT8(idConta, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
 
@@ -47,7 +47,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT7(idConta, opts, callback);
+api.alterarUsingPUT8(idConta, opts, callback);
 ```
 
 ### Parameters
@@ -82,9 +82,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET16"></a>
-# **consultarUsingGET16**
-> LimiteDisponibilidadeResponse consultarUsingGET16(idConta)
+<a name="consultarUsingGET17"></a>
+# **consultarUsingGET17**
+> LimiteDisponibilidadeResponse consultarUsingGET17(idConta)
 
 Apresenta os limites da conta
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET16(idConta, callback);
+api.consultarUsingGET17(idConta, callback);
 ```
 
 ### Parameters

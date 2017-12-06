@@ -18,7 +18,7 @@
   /**
    * The AnexoNotificacaoEmailRequest model module.
    * @module model/AnexoNotificacaoEmailRequest
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

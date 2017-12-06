@@ -18,7 +18,7 @@
   /**
    * The PageProdutoResponse model module.
    * @module model/PageProdutoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

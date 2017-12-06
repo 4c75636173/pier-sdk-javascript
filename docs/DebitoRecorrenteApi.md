@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**listarUsingGET12**](DebitoRecorrenteApi.md#listarUsingGET12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listarUsingGET34**](DebitoRecorrenteApi.md#listarUsingGET34) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listarUsingGET36**](DebitoRecorrenteApi.md#listarUsingGET36) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
 <a name="listarUsingGET12"></a>
@@ -72,9 +72,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET34"></a>
-# **listarUsingGET34**
-> PageTipoDebitoRecorrenteResponse listarUsingGET34(opts)
+<a name="listarUsingGET36"></a>
+# **listarUsingGET36**
+> PageTipoDebitoRecorrenteResponse listarUsingGET36(opts)
 
 Listar Tipos Debitos Recorrentes
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET34(opts, callback);
+api.listarUsingGET36(opts, callback);
 ```
 
 ### Parameters

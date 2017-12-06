@@ -18,7 +18,7 @@
   /**
    * Job service.
    * @module api/JobApi
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/JobApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/JobApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageJobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -208,10 +208,10 @@
      * @param {module:model/String} opts.status Status do Job
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/JobApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/JobApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageJobResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

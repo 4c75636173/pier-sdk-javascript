@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
@@ -31,12 +31,13 @@
    * @param idOrigemComercial
    * @param idProduto
    * @param diaVencimento
+   * @param telefones
    * @param enderecos
    * @param limiteGlobal
    * @param limiteMaximo
    * @param limiteParcelas
    */
-  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos, limiteGlobal, limiteMaximo, limiteParcelas) {
+  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas) {
 
     this['nome'] = nome;
 
@@ -62,7 +63,7 @@
 
 
 
-
+    this['telefones'] = telefones;
     this['enderecos'] = enderecos;
     this['limiteGlobal'] = limiteGlobal;
     this['limiteMaximo'] = limiteMaximo;

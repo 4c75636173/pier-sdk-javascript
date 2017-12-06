@@ -18,7 +18,7 @@
   /**
    * The PageOrigemComercialResponse model module.
    * @module model/PageOrigemComercialResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

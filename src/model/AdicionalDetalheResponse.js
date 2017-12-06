@@ -18,7 +18,7 @@
   /**
    * The AdicionalDetalheResponse model module.
    * @module model/AdicionalDetalheResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

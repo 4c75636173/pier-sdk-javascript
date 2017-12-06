@@ -18,7 +18,7 @@
   /**
    * The TipoDebitoRecorrenteResponse model module.
    * @module model/TipoDebitoRecorrenteResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

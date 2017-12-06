@@ -18,7 +18,7 @@
   /**
    * The CodigoSegurancaEMAILPersist model module.
    * @module model/CodigoSegurancaEMAILPersist
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

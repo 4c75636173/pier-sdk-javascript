@@ -18,7 +18,7 @@
   /**
    * The PageDocumentoTemplateResponse model module.
    * @module model/PageDocumentoTemplateResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

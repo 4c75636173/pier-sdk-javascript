@@ -18,7 +18,7 @@
   /**
    * The StatusCartaoResponse model module.
    * @module model/StatusCartaoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

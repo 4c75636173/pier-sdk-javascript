@@ -18,7 +18,7 @@
   /**
    * The PagePaisResponse model module.
    * @module model/PagePaisResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

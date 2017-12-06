@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoResponse model module.
    * @module model/PlanoParcelamentoResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**

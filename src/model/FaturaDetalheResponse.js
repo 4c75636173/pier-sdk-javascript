@@ -18,7 +18,7 @@
   /**
    * The FaturaDetalheResponse model module.
    * @module model/FaturaDetalheResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
@@ -52,9 +52,6 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('lancamentosFaturaResponse')) {
-        obj['lancamentosFaturaResponse'] = ApiClient.convertToType(data['lancamentosFaturaResponse'], [LancamentoFaturaResponse]);
-      }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
@@ -79,6 +76,9 @@
       if (data.hasOwnProperty('valorPagamentoMinimo')) {
         obj['valorPagamentoMinimo'] = ApiClient.convertToType(data['valorPagamentoMinimo'], 'Number');
       }
+      if (data.hasOwnProperty('lancamentosFaturaResponse')) {
+        obj['lancamentosFaturaResponse'] = ApiClient.convertToType(data['lancamentosFaturaResponse'], [LancamentoFaturaResponse]);
+      }
       if (data.hasOwnProperty('saldoAnterior')) {
         obj['saldoAnterior'] = ApiClient.convertToType(data['saldoAnterior'], 'Number');
       }
@@ -86,11 +86,6 @@
     return obj;
   }
 
-
-  /**
-   * @member {Array.<module:model/LancamentoFaturaResponse>} lancamentosFaturaResponse
-   */
-  exports.prototype['lancamentosFaturaResponse'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
@@ -139,6 +134,12 @@
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;
+
+  /**
+   * Lista de lan\u00C3\u00A7amentos da fatura.
+   * @member {Array.<module:model/LancamentoFaturaResponse>} lancamentosFaturaResponse
+   */
+  exports.prototype['lancamentosFaturaResponse'] = undefined;
 
   /**
    * Valor do saldo anterior.

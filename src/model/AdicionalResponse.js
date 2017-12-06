@@ -18,7 +18,7 @@
   /**
    * The AdicionalResponse model module.
    * @module model/AdicionalResponse
-   * @version 2.46.5
+   * @version 2.47.3
    */
 
   /**
