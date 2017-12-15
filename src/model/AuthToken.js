@@ -18,7 +18,7 @@
   /**
    * The AuthToken model module.
    * @module model/AuthToken
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageFaqResponse model module.
    * @module model/PageFaqResponse
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageContaResponse model module.
    * @module model/PageContaResponse
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

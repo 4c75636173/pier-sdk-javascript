@@ -13,10 +13,10 @@ Method | HTTP request | Description
 [**atualizarUsingPOST**](CadastroClienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET19**](CadastroClienteApi.md#consultarUsingGET19) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET21**](CadastroClienteApi.md#consultarUsingGET21) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET27**](CadastroClienteApi.md#consultarUsingGET27) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET22**](CadastroClienteApi.md#consultarUsingGET22) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET28**](CadastroClienteApi.md#consultarUsingGET28) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
@@ -545,9 +545,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> EnderecoResponse consultarUsingGET14(id)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> EnderecoResponse consultarUsingGET15(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -569,7 +569,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -591,9 +591,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> PessoaDetalheResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> PessoaDetalheResponse consultarUsingGET20(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -615,7 +615,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -637,9 +637,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> PessoaResponse consultarUsingGET21(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> PessoaResponse consultarUsingGET22(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -661,7 +661,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(id, callback);
+api.consultarUsingGET22(id, callback);
 ```
 
 ### Parameters
@@ -683,9 +683,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET27"></a>
-# **consultarUsingGET27**
-> TelefoneResponse consultarUsingGET27(id)
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> TelefoneResponse consultarUsingGET28(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -707,7 +707,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET27(id, callback);
+api.consultarUsingGET28(id, callback);
 ```
 
 ### Parameters

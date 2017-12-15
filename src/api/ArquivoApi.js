@@ -18,7 +18,7 @@
   /**
    * Arquivo service.
    * @module api/ArquivoApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET1 operation.
-     * @callback module:api/ArquivoApi~consultarUsingGET1Callback
+     * Callback function to receive the result of the consultarUsingGET2 operation.
+     * @callback module:api/ArquivoApi~consultarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ArquivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * Consulta de arquivo no PIER Cloud
      * Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
-     * @param {module:api/ArquivoApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ArquivoApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ArquivoResponse}
      */
-    this.consultarUsingGET1 = function(id, callback) {
+    this.consultarUsingGET2 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET1";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
       }
 
 

@@ -18,7 +18,7 @@
   /**
    * Oportunidade service.
    * @module api/OportunidadeApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -249,8 +249,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET18 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET18Callback
+     * Callback function to receive the result of the consultarUsingGET19 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -260,15 +260,15 @@
      * Apresenta dados de uma determinada oportunidade
      * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~consultarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.consultarUsingGET18 = function(id, callback) {
+    this.consultarUsingGET19 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET19";
       }
 
 
@@ -295,8 +295,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET33 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET33Callback
+     * Callback function to receive the result of the consultarUsingGET34 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET34Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -306,15 +306,15 @@
      * Apresenta dados de um determinado tipo oportunidade
      * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OportunidadeApi~consultarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.consultarUsingGET33 = function(id, callback) {
+    this.consultarUsingGET34 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET33";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET34";
       }
 
 

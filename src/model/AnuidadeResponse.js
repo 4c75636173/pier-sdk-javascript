@@ -18,7 +18,7 @@
   /**
    * The AnuidadeResponse model module.
    * @module model/AnuidadeResponse
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

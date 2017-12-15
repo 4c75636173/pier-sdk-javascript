@@ -10,11 +10,13 @@ Method | HTTP request | Description
 [**alterarUsingPUT5**](EstabelecimentoApi.md#alterarUsingPUT5) | **PUT** /api/credores/{id} | Alterar Credor
 [**cadastrarUsingPOST2**](EstabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/credores | Cadastrar Credor
 [**cadastrarUsingPOST3**](EstabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/pessoas-juridicas | Cadastrar Pessoa Jur\u00C3\u00ADdica
-[**consultarUsingGET11**](EstabelecimentoApi.md#consultarUsingGET11) | **GET** /api/credores/{id} | Consultar credor
-[**consultarUsingGET15**](EstabelecimentoApi.md#consultarUsingGET15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
-[**consultarUsingGET26**](EstabelecimentoApi.md#consultarUsingGET26) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultarUsingGET28**](EstabelecimentoApi.md#consultarUsingGET28) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultaOperacaoUsingGET**](EstabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET12**](EstabelecimentoApi.md#consultarUsingGET12) | **GET** /api/credores/{id} | Consultar credor
+[**consultarUsingGET16**](EstabelecimentoApi.md#consultarUsingGET16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET21**](EstabelecimentoApi.md#consultarUsingGET21) | **GET** /api/pessoas-juridicas/{id} | Consultar pessoa jur\u00C3\u00ADdica
+[**consultarUsingGET27**](EstabelecimentoApi.md#consultarUsingGET27) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultarUsingGET29**](EstabelecimentoApi.md#consultarUsingGET29) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**listaOperacaoUsingGET**](EstabelecimentoApi.md#listaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos | Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
 [**listarUsingGET14**](EstabelecimentoApi.md#listarUsingGET14) | **GET** /api/credores | Listar credores
 [**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
 [**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/pessoas-juridicas | Listar pessoas jur\u00C3\u00ADdicas
@@ -354,9 +356,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET11"></a>
-# **consultarUsingGET11**
-> CredorResponse consultarUsingGET11(id)
+<a name="consultaOperacaoUsingGET"></a>
+# **consultaOperacaoUsingGET**
+> DetalheOperacaoResponse consultaOperacaoUsingGET(id)
+
+Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+
+Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultaOperacaoUsingGET(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao). | 
+
+### Return type
+
+[**DetalheOperacaoResponse**](DetalheOperacaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> CredorResponse consultarUsingGET12(id)
 
 Consultar credor
 
@@ -378,7 +426,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET11(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -400,9 +448,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> EstabelecimentoResponse consultarUsingGET15(id)
+<a name="consultarUsingGET16"></a>
+# **consultarUsingGET16**
+> EstabelecimentoResponse consultarUsingGET16(id)
 
 Consultar estabelecimento por id
 
@@ -424,7 +472,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(id, callback);
+api.consultarUsingGET16(id, callback);
 ```
 
 ### Parameters
@@ -446,9 +494,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> PessoaJuridicaResponse consultarUsingGET20(id)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> PessoaJuridicaResponse consultarUsingGET21(id)
 
 Consultar pessoa jur\u00C3\u00ADdica
 
@@ -470,7 +518,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, callback);
+api.consultarUsingGET21(id, callback);
 ```
 
 ### Parameters
@@ -492,9 +540,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET26"></a>
-# **consultarUsingGET26**
-> TelefoneEstabelecimentoResponse consultarUsingGET26(id)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> TelefoneEstabelecimentoResponse consultarUsingGET27(id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
@@ -516,7 +564,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(id, callback);
+api.consultarUsingGET27(id, callback);
 ```
 
 ### Parameters
@@ -538,9 +586,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET28"></a>
-# **consultarUsingGET28**
-> TerminalResponse consultarUsingGET28(id)
+<a name="consultarUsingGET29"></a>
+# **consultarUsingGET29**
+> TerminalResponse consultarUsingGET29(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -562,7 +610,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET28(id, callback);
+api.consultarUsingGET29(id, callback);
 ```
 
 ### Parameters
@@ -574,6 +622,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TerminalResponse**](TerminalResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listaOperacaoUsingGET"></a>
+# **listaOperacaoUsingGET**
+> PageOperacaoResponse listaOperacaoUsingGET(opts)
+
+Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+
+Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.EstabelecimentoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idOperacao': 789, // {Integer} C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+  'codigoProcessamento': "codigoProcessamento_example" // {String} C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listaOperacaoUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idOperacao** | **Integer**| C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **codigoProcessamento** | **String**| C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador | [optional] 
+
+### Return type
+
+[**PageOperacaoResponse**](PageOperacaoResponse.md)
 
 ### Authorization
 

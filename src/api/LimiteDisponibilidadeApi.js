@@ -18,7 +18,7 @@
   /**
    * LimiteDisponibilidade service.
    * @module api/LimiteDisponibilidadeApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -107,8 +107,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/LimiteDisponibilidadeApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET18 operation.
+     * @callback module:api/LimiteDisponibilidadeApi~consultarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -118,15 +118,15 @@
      * Apresenta os limites da conta
      * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idConta Id Conta
-     * @param {module:api/LimiteDisponibilidadeApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/LimiteDisponibilidadeApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.consultarUsingGET17 = function(idConta, callback) {
+    this.consultarUsingGET18 = function(idConta, callback) {
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'idConta' when calling consultarUsingGET18";
       }
 
 

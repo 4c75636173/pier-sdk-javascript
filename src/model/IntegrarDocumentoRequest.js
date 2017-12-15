@@ -18,7 +18,7 @@
   /**
    * The IntegrarDocumentoRequest model module.
    * @module model/IntegrarDocumentoRequest
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

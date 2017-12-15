@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -204,8 +204,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET5 operation.
-     * @callback module:api/ConductorPayApi~consultarUsingGET5Callback
+     * Callback function to receive the result of the consultarUsingGET6 operation.
+     * @callback module:api/ConductorPayApi~consultarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -216,20 +216,20 @@
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {String} deviceId Device id criptografado
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
-     * @param {module:api/ConductorPayApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayDetalheResponse}
      */
-    this.consultarUsingGET5 = function(deviceId, id, callback) {
+    this.consultarUsingGET6 = function(deviceId, id, callback) {
       var postBody = null;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET5";
+        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET6";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
       }
 
 

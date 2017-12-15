@@ -18,7 +18,7 @@
   /**
    * Documento service.
    * @module api/DocumentoApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -137,8 +137,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET12 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET12Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -148,15 +148,15 @@
      * Consulta documentos
      * Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.consultarUsingGET12 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -183,8 +183,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -194,15 +194,15 @@
      * Consultar templates dos documentos
      * Esse recurso permite consultar templates dos documentos.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -229,8 +229,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET35 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET35Callback
+     * Callback function to receive the result of the consultarUsingGET36 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -240,15 +240,15 @@
      * Consultar tipo de template
      * Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.consultarUsingGET35 = function(id, callback) {
+    this.consultarUsingGET36 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET35";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
       }
 
 

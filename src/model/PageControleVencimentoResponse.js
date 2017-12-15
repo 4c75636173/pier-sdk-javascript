@@ -18,7 +18,7 @@
   /**
    * The PageControleVencimentoResponse model module.
    * @module model/PageControleVencimentoResponse
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**

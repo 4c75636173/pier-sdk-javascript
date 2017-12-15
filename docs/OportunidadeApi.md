@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterarUsingPUT16**](OportunidadeApi.md#alterarUsingPUT16) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**alterarUsingPUT9**](OportunidadeApi.md#alterarUsingPUT9) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
 [**consultarStatusUsingGET**](OportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultarUsingGET18**](OportunidadeApi.md#consultarUsingGET18) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
-[**consultarUsingGET33**](OportunidadeApi.md#consultarUsingGET33) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultarUsingGET19**](OportunidadeApi.md#consultarUsingGET19) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultarUsingGET34**](OportunidadeApi.md#consultarUsingGET34) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**listarAuditoriasStatusUsingGET**](OportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listarAuditoriasUsingGET**](OportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET18"></a>
-# **consultarUsingGET18**
-> OportunidadeResponse consultarUsingGET18(id)
+<a name="consultarUsingGET19"></a>
+# **consultarUsingGET19**
+> OportunidadeResponse consultarUsingGET19(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET18(id, callback);
+api.consultarUsingGET19(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET33"></a>
-# **consultarUsingGET33**
-> TipoOportunidadeResponse consultarUsingGET33(id)
+<a name="consultarUsingGET34"></a>
+# **consultarUsingGET34**
+> TipoOportunidadeResponse consultarUsingGET34(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET33(id, callback);
+api.consultarUsingGET34(id, callback);
 ```
 
 ### Parameters

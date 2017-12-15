@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/PessoaJuridicaResponse', '../model/TelefoneEstabelecimentoResponse', '../model/TerminalUpdate', '../model/TerminalResponse', '../model/CredorResponse', '../model/CredorDTO', '../model/EstabelecimentoResponse', '../model/PageCredorResponse', '../model/PageEstabelecimentoResponse', '../model/PagePessoaJuridicaResponse', '../model/PageTelefoneEstabelecimentoResponse', '../model/PageTerminalResponse'], factory);
+    define(['../ApiClient', '../model/PessoaJuridicaResponse', '../model/TelefoneEstabelecimentoResponse', '../model/TerminalUpdate', '../model/TerminalResponse', '../model/CredorResponse', '../model/CredorDTO', '../model/DetalheOperacaoResponse', '../model/EstabelecimentoResponse', '../model/PageOperacaoResponse', '../model/PageCredorResponse', '../model/PageEstabelecimentoResponse', '../model/PagePessoaJuridicaResponse', '../model/PageTelefoneEstabelecimentoResponse', '../model/PageTerminalResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PessoaJuridicaResponse'), require('../model/TelefoneEstabelecimentoResponse'), require('../model/TerminalUpdate'), require('../model/TerminalResponse'), require('../model/CredorResponse'), require('../model/CredorDTO'), require('../model/EstabelecimentoResponse'), require('../model/PageCredorResponse'), require('../model/PageEstabelecimentoResponse'), require('../model/PagePessoaJuridicaResponse'), require('../model/PageTelefoneEstabelecimentoResponse'), require('../model/PageTerminalResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/PessoaJuridicaResponse'), require('../model/TelefoneEstabelecimentoResponse'), require('../model/TerminalUpdate'), require('../model/TerminalResponse'), require('../model/CredorResponse'), require('../model/CredorDTO'), require('../model/DetalheOperacaoResponse'), require('../model/EstabelecimentoResponse'), require('../model/PageOperacaoResponse'), require('../model/PageCredorResponse'), require('../model/PageEstabelecimentoResponse'), require('../model/PagePessoaJuridicaResponse'), require('../model/PageTelefoneEstabelecimentoResponse'), require('../model/PageTerminalResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EstabelecimentoApi = factory(root.Pier.ApiClient, root.Pier.PessoaJuridicaResponse, root.Pier.TelefoneEstabelecimentoResponse, root.Pier.TerminalUpdate, root.Pier.TerminalResponse, root.Pier.CredorResponse, root.Pier.CredorDTO, root.Pier.EstabelecimentoResponse, root.Pier.PageCredorResponse, root.Pier.PageEstabelecimentoResponse, root.Pier.PagePessoaJuridicaResponse, root.Pier.PageTelefoneEstabelecimentoResponse, root.Pier.PageTerminalResponse);
+    root.Pier.EstabelecimentoApi = factory(root.Pier.ApiClient, root.Pier.PessoaJuridicaResponse, root.Pier.TelefoneEstabelecimentoResponse, root.Pier.TerminalUpdate, root.Pier.TerminalResponse, root.Pier.CredorResponse, root.Pier.CredorDTO, root.Pier.DetalheOperacaoResponse, root.Pier.EstabelecimentoResponse, root.Pier.PageOperacaoResponse, root.Pier.PageCredorResponse, root.Pier.PageEstabelecimentoResponse, root.Pier.PagePessoaJuridicaResponse, root.Pier.PageTelefoneEstabelecimentoResponse, root.Pier.PageTerminalResponse);
   }
-}(this, function(ApiClient, PessoaJuridicaResponse, TelefoneEstabelecimentoResponse, TerminalUpdate, TerminalResponse, CredorResponse, CredorDTO, EstabelecimentoResponse, PageCredorResponse, PageEstabelecimentoResponse, PagePessoaJuridicaResponse, PageTelefoneEstabelecimentoResponse, PageTerminalResponse) {
+}(this, function(ApiClient, PessoaJuridicaResponse, TelefoneEstabelecimentoResponse, TerminalUpdate, TerminalResponse, CredorResponse, CredorDTO, DetalheOperacaoResponse, EstabelecimentoResponse, PageOperacaoResponse, PageCredorResponse, PageEstabelecimentoResponse, PagePessoaJuridicaResponse, PageTelefoneEstabelecimentoResponse, PageTerminalResponse) {
   'use strict';
 
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.47.3
+   * @version 2.49.0
    */
 
   /**
@@ -384,8 +384,54 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultaOperacaoUsingGET operation.
+     * @callback module:api/EstabelecimentoApi~consultaOperacaoUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DetalheOperacaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+     * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+     * @param {Integer} id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+     * @param {module:api/EstabelecimentoApi~consultaOperacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/DetalheOperacaoResponse}
+     */
+    this.consultaOperacaoUsingGET = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultaOperacaoUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = DetalheOperacaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-operacoes-estabelecimentos/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -395,15 +441,15 @@
      * Consultar credor
      * Consulta um credor atrav\u00C3\u00A9s do seu identificador.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CredorResponse}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -430,8 +476,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET15 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET15Callback
+     * Callback function to receive the result of the consultarUsingGET16 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -441,15 +487,15 @@
      * Consultar estabelecimento por id
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET15 = function(id, callback) {
+    this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
       }
 
 
@@ -476,8 +522,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaJuridicaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -487,15 +533,15 @@
      * Consultar pessoa jur\u00C3\u00ADdica
      * Consulta uma pessoa jur\u00C3\u00ADdica atrav\u00C3\u00A9s do seu identificador.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaJuridicaResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET21 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
       }
 
 
@@ -522,8 +568,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -533,15 +579,15 @@
      * Apresenta os dados de um determinado telefone de um estabelecimento
      * Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET27 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
       }
 
 
@@ -568,8 +614,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET28 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET28Callback
+     * Callback function to receive the result of the consultarUsingGET29 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -579,15 +625,15 @@
      * Apresenta os dados de um determinado Terminal
      * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET28 = function(id, callback) {
+    this.consultarUsingGET29 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
       }
 
 
@@ -608,6 +654,57 @@
 
       return this.apiClient.callApi(
         '/api/terminais/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listaOperacaoUsingGET operation.
+     * @callback module:api/EstabelecimentoApi~listaOperacaoUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageOperacaoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+     * Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idOperacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+     * @param {String} opts.codigoProcessamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+     * @param {module:api/EstabelecimentoApi~listaOperacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageOperacaoResponse}
+     */
+    this.listaOperacaoUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'idOperacao': opts['idOperacao'],
+        'codigoProcessamento': opts['codigoProcessamento']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageOperacaoResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-operacoes-estabelecimentos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

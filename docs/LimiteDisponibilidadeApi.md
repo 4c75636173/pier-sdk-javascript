@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT8**](LimiteDisponibilidadeApi.md#alterarUsingPUT8) | **PUT** /api/limites-disponibilidades | Realiza a altera\u00C3\u00A7\u00C3\u00A3o dos limites da conta
-[**consultarUsingGET17**](LimiteDisponibilidadeApi.md#consultarUsingGET17) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
+[**consultarUsingGET18**](LimiteDisponibilidadeApi.md#consultarUsingGET18) | **GET** /api/limites-disponibilidades | Apresenta os limites da conta
 
 
 <a name="alterarUsingPUT8"></a>
@@ -82,9 +82,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> LimiteDisponibilidadeResponse consultarUsingGET17(idConta)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> LimiteDisponibilidadeResponse consultarUsingGET18(idConta)
 
 Apresenta os limites da conta
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(idConta, callback);
+api.consultarUsingGET18(idConta, callback);
 ```
 
 ### Parameters
