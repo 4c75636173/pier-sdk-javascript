@@ -18,7 +18,7 @@
   /**
    * The PageConfiguracaoEmailResponse model module.
    * @module model/PageConfiguracaoEmailResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

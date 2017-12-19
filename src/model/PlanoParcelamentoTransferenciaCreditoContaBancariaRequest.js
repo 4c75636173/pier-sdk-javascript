@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaRequest model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**
@@ -28,19 +28,17 @@
    * @class
    * @param nsuOrigem
    * @param valorTransacao
-   * @param numeroRealCartao
-   * @param dataValidadeCartao
+   * @param idCartao
    * @param numeroMesesCarencia
    * @param numeroEstabelecimento
    * @param dataHoraTerminal
    * @param terminalRequisitante
    */
-  var exports = function(nsuOrigem, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroMesesCarencia, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
+  var exports = function(nsuOrigem, valorTransacao, idCartao, numeroMesesCarencia, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante) {
 
     this['nsuOrigem'] = nsuOrigem;
     this['valorTransacao'] = valorTransacao;
-    this['numeroRealCartao'] = numeroRealCartao;
-    this['dataValidadeCartao'] = dataValidadeCartao;
+    this['idCartao'] = idCartao;
     this['numeroMesesCarencia'] = numeroMesesCarencia;
     this['numeroEstabelecimento'] = numeroEstabelecimento;
     this['dataHoraTerminal'] = dataHoraTerminal;
@@ -64,11 +62,8 @@
       if (data.hasOwnProperty('valorTransacao')) {
         obj['valorTransacao'] = ApiClient.convertToType(data['valorTransacao'], 'Number');
       }
-      if (data.hasOwnProperty('numeroRealCartao')) {
-        obj['numeroRealCartao'] = ApiClient.convertToType(data['numeroRealCartao'], 'String');
-      }
-      if (data.hasOwnProperty('dataValidadeCartao')) {
-        obj['dataValidadeCartao'] = ApiClient.convertToType(data['dataValidadeCartao'], 'String');
+      if (data.hasOwnProperty('idCartao')) {
+        obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
       }
       if (data.hasOwnProperty('numeroMesesCarencia')) {
         obj['numeroMesesCarencia'] = ApiClient.convertToType(data['numeroMesesCarencia'], 'Integer');
@@ -100,16 +95,10 @@
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
-   * @member {String} numeroRealCartao
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+   * @member {Integer} idCartao
    */
-  exports.prototype['numeroRealCartao'] = undefined;
-
-  /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-   * @member {String} dataValidadeCartao
-   */
-  exports.prototype['dataValidadeCartao'] = undefined;
+  exports.prototype['idCartao'] = undefined;
 
   /**
    * Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.

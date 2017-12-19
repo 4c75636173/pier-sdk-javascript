@@ -18,7 +18,7 @@
   /**
    * The ContaBancariaPortadorPersist model module.
    * @module model/ContaBancariaPortadorPersist
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The TransacoesCorrentesResponse model module.
    * @module model/TransacoesCorrentesResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

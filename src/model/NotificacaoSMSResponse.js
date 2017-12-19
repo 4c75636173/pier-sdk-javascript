@@ -18,7 +18,7 @@
   /**
    * The NotificacaoSMSResponse model module.
    * @module model/NotificacaoSMSResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

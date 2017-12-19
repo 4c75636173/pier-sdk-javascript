@@ -18,7 +18,7 @@
   /**
    * The PageCompraResponse model module.
    * @module model/PageCompraResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

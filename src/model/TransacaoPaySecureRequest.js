@@ -18,7 +18,7 @@
   /**
    * The TransacaoPaySecureRequest model module.
    * @module model/TransacaoPaySecureRequest
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

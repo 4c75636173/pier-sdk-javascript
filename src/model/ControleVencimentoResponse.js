@@ -18,7 +18,7 @@
   /**
    * The ControleVencimentoResponse model module.
    * @module model/ControleVencimentoResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

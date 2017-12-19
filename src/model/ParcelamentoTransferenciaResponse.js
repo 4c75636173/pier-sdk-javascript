@@ -18,7 +18,7 @@
   /**
    * The ParcelamentoTransferenciaResponse model module.
    * @module model/ParcelamentoTransferenciaResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**
@@ -28,6 +28,9 @@
    * @class
    */
   var exports = function() {
+
+
+
 
 
 
@@ -55,6 +58,15 @@
       }
       if (data.hasOwnProperty('valorDemaisParcelas')) {
         obj['valorDemaisParcelas'] = ApiClient.convertToType(data['valorDemaisParcelas'], 'Number');
+      }
+      if (data.hasOwnProperty('valorTotal')) {
+        obj['valorTotal'] = ApiClient.convertToType(data['valorTotal'], 'Number');
+      }
+      if (data.hasOwnProperty('valorTAC')) {
+        obj['valorTAC'] = ApiClient.convertToType(data['valorTAC'], 'Number');
+      }
+      if (data.hasOwnProperty('valorIOF')) {
+        obj['valorIOF'] = ApiClient.convertToType(data['valorIOF'], 'Number');
       }
       if (data.hasOwnProperty('taxaJuros')) {
         obj['taxaJuros'] = ApiClient.convertToType(data['taxaJuros'], 'Number');
@@ -84,6 +96,24 @@
    * @member {Number} valorDemaisParcelas
    */
   exports.prototype['valorDemaisParcelas'] = undefined;
+
+  /**
+   * Valor total do financiamento.
+   * @member {Number} valorTotal
+   */
+  exports.prototype['valorTotal'] = undefined;
+
+  /**
+   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   * @member {Number} valorTAC
+   */
+  exports.prototype['valorTAC'] = undefined;
+
+  /**
+   * IOF
+   * @member {Number} valorIOF
+   */
+  exports.prototype['valorIOF'] = undefined;
 
   /**
    * Valor da taxa de juros.

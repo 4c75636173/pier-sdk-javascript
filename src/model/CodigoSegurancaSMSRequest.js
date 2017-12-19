@@ -18,7 +18,7 @@
   /**
    * The CodigoSegurancaSMSRequest model module.
    * @module model/CodigoSegurancaSMSRequest
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

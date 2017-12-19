@@ -18,7 +18,7 @@
   /**
    * The AjusteFinanceiroResponse model module.
    * @module model/AjusteFinanceiroResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

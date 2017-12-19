@@ -18,7 +18,7 @@
   /**
    * The PageFantasiaBasicaResponse model module.
    * @module model/PageFantasiaBasicaResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

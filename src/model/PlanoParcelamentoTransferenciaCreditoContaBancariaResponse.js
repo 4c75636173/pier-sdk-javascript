@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**
@@ -28,9 +28,6 @@
    * @class
    */
   var exports = function() {
-
-
-
 
 
 
@@ -52,17 +49,8 @@
       if (data.hasOwnProperty('nsuOrigem')) {
         obj['nsuOrigem'] = ApiClient.convertToType(data['nsuOrigem'], 'String');
       }
-      if (data.hasOwnProperty('nsuAutorizacao')) {
-        obj['nsuAutorizacao'] = ApiClient.convertToType(data['nsuAutorizacao'], 'String');
-      }
-      if (data.hasOwnProperty('codigoAutorizacao')) {
-        obj['codigoAutorizacao'] = ApiClient.convertToType(data['codigoAutorizacao'], 'String');
-      }
       if (data.hasOwnProperty('numeroMascaradoCartao')) {
         obj['numeroMascaradoCartao'] = ApiClient.convertToType(data['numeroMascaradoCartao'], 'String');
-      }
-      if (data.hasOwnProperty('nomePortadorCartao')) {
-        obj['nomePortadorCartao'] = ApiClient.convertToType(data['nomePortadorCartao'], 'String');
       }
       if (data.hasOwnProperty('terminalRequisitante')) {
         obj['terminalRequisitante'] = ApiClient.convertToType(data['terminalRequisitante'], 'String');
@@ -82,28 +70,10 @@
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {String} nsuAutorizacao
-   */
-  exports.prototype['nsuAutorizacao'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-   * @member {String} codigoAutorizacao
-   */
-  exports.prototype['codigoAutorizacao'] = undefined;
-
-  /**
    * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
    * @member {String} numeroMascaradoCartao
    */
   exports.prototype['numeroMascaradoCartao'] = undefined;
-
-  /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-   * @member {String} nomePortadorCartao
-   */
-  exports.prototype['nomePortadorCartao'] = undefined;
 
   /**
    * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante

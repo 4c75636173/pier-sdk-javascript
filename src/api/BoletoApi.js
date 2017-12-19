@@ -18,7 +18,7 @@
   /**
    * Boleto service.
    * @module api/BoletoApi
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

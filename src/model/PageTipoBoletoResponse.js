@@ -18,7 +18,7 @@
   /**
    * The PageTipoBoletoResponse model module.
    * @module model/PageTipoBoletoResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

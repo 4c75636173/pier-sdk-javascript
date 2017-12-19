@@ -18,7 +18,7 @@
   /**
    * CadastroGeral service.
    * @module api/CadastroGeralApi
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

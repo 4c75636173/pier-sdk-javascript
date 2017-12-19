@@ -18,7 +18,7 @@
   /**
    * The EnderecoResponse model module.
    * @module model/EnderecoResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

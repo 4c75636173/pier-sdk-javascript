@@ -18,7 +18,7 @@
   /**
    * The PessoaDetalheResponse model module.
    * @module model/PessoaDetalheResponse
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**

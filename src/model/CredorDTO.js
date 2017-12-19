@@ -18,7 +18,7 @@
   /**
    * The CredorDTO model module.
    * @module model/CredorDTO
-   * @version 2.49.0
+   * @version 2.49.5
    */
 
   /**
