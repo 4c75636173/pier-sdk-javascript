@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT**](AplicacaoMobileApi.md#atualizarUsingPUT) | **PUT** /api/aplicacoes-mobile/{id} | Atualiza Aplicacao Mobile
-[**listarUsingGET1**](AplicacaoMobileApi.md#listarUsingGET1) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
+[**listarUsingGET2**](AplicacaoMobileApi.md#listarUsingGET2) | **GET** /api/aplicacoes-mobile | Lista os aplicacoes mobile cadastradas
 [**salvarUsingPOST**](AplicacaoMobileApi.md#salvarUsingPOST) | **POST** /api/aplicacoes-mobile | Cadastra Aplicacao Mobile
 
 
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET1"></a>
-# **listarUsingGET1**
-> PageAplicacaoMobileResponse listarUsingGET1(opts)
+<a name="listarUsingGET2"></a>
+# **listarUsingGET2**
+> PageAplicacaoMobileResponse listarUsingGET2(opts)
 
 Lista os aplicacoes mobile cadastradas
 
@@ -87,7 +87,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET1(opts, callback);
+api.listarUsingGET2(opts, callback);
 ```
 
 ### Parameters

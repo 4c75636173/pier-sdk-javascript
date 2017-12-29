@@ -18,7 +18,7 @@
   /**
    * AplicacaoMobile service.
    * @module api/AplicacaoMobileApi
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET1 operation.
-     * @callback module:api/AplicacaoMobileApi~listarUsingGET1Callback
+     * Callback function to receive the result of the listarUsingGET2 operation.
+     * @callback module:api/AplicacaoMobileApi~listarUsingGET2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -101,10 +101,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.id Identificador da Aplicacao Mobile
      * @param {Integer} opts.idPlataformaMobile Identificador da Plataforma Mobile
-     * @param {module:api/AplicacaoMobileApi~listarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AplicacaoMobileApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAplicacaoMobileResponse}
      */
-    this.listarUsingGET1 = function(opts, callback) {
+    this.listarUsingGET2 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

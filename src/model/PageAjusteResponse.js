@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './PaisResponse'], factory);
+    define(['../ApiClient', './AjusteFinanceiroResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PaisResponse'));
+    module.exports = factory(require('../ApiClient'), require('./AjusteFinanceiroResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PagePaisResponse = factory(root.Pier.ApiClient, root.Pier.PaisResponse);
+    root.Pier.PageAjusteResponse = factory(root.Pier.ApiClient, root.Pier.AjusteFinanceiroResponse);
   }
-}(this, function(ApiClient, PaisResponse) {
+}(this, function(ApiClient, AjusteFinanceiroResponse) {
   'use strict';
 
   /**
-   * The PagePaisResponse model module.
-   * @module model/PagePaisResponse
-   * @version 2.47.3
+   * The PageAjusteResponse model module.
+   * @module model/PageAjusteResponse
+   * @version 2.50.4
    */
 
   /**
-   * Constructs a new <code>PagePaisResponse</code>.
-   * Lista de Pa\u00C3\u00ADses
-   * @alias module:model/PagePaisResponse
+   * Constructs a new <code>PageAjusteResponse</code>.
+   * Lista de Ajustes
+   * @alias module:model/PageAjusteResponse
    * @class
    */
   var exports = function() {
@@ -46,18 +46,18 @@
   };
 
   /**
-   * Constructs a <code>PagePaisResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageAjusteResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PagePaisResponse} obj Optional instance to populate.
-   * @return {module:model/PagePaisResponse} The populated <code>PagePaisResponse</code> instance.
+   * @param {module:model/PageAjusteResponse} obj Optional instance to populate.
+   * @return {module:model/PageAjusteResponse} The populated <code>PageAjusteResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [PaisResponse]);
+        obj['content'] = ApiClient.convertToType(data['content'], [AjusteFinanceiroResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/PaisResponse>} content
+   * @member {Array.<module:model/AjusteFinanceiroResponse>} content
    */
   exports.prototype['content'] = undefined;
 

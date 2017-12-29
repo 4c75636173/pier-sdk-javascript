@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ContaBancariaPortadorUpdate', '../model/ContaBancariaPortadorResponse', '../model/TransferenciaCreditoContaBancariaResponse', '../model/TransferenciaBancariaResponse', '../model/PageTransferenciaCreditoContaBancariaResponse', '../model/PageContaBancariaPortadorResponse', '../model/PageTransferenciaBancariaResponse', '../model/ContaBancariaPortadorPersist', '../model/TransferenciaCreditoContaBancariaPersist', '../model/TransferenciaBancariaPersist'], factory);
+    define(['../ApiClient', '../model/ContaBancariaPortadorUpdate', '../model/ContaBancariaPortadorResponse', '../model/TransferenciaCreditoContaBancariaResponse', '../model/TransferenciaBancariaResponse', '../model/PageTransferenciaCreditoContaBancariaResponse', '../model/PageContaBancariaPortadorResponse', '../model/PageTransferenciaBancariaResponse', '../model/ContaBancariaPortadorPersist', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse', '../model/TransferenciaCreditoContaBancariaPersist', '../model/TransferenciaBancariaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ContaBancariaPortadorUpdate'), require('../model/ContaBancariaPortadorResponse'), require('../model/TransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/PageTransferenciaCreditoContaBancariaResponse'), require('../model/PageContaBancariaPortadorResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/ContaBancariaPortadorPersist'), require('../model/TransferenciaCreditoContaBancariaPersist'), require('../model/TransferenciaBancariaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/ContaBancariaPortadorUpdate'), require('../model/ContaBancariaPortadorResponse'), require('../model/TransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/PageTransferenciaCreditoContaBancariaResponse'), require('../model/PageContaBancariaPortadorResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/ContaBancariaPortadorPersist'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaCreditoContaBancariaPersist'), require('../model/TransferenciaBancariaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransferenciaBancariaApi = factory(root.Pier.ApiClient, root.Pier.ContaBancariaPortadorUpdate, root.Pier.ContaBancariaPortadorResponse, root.Pier.TransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.PageTransferenciaCreditoContaBancariaResponse, root.Pier.PageContaBancariaPortadorResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.ContaBancariaPortadorPersist, root.Pier.TransferenciaCreditoContaBancariaPersist, root.Pier.TransferenciaBancariaPersist);
+    root.Pier.TransferenciaBancariaApi = factory(root.Pier.ApiClient, root.Pier.ContaBancariaPortadorUpdate, root.Pier.ContaBancariaPortadorResponse, root.Pier.TransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.PageTransferenciaCreditoContaBancariaResponse, root.Pier.PageContaBancariaPortadorResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.ContaBancariaPortadorPersist, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaCreditoContaBancariaPersist, root.Pier.TransferenciaBancariaPersist);
   }
-}(this, function(ApiClient, ContaBancariaPortadorUpdate, ContaBancariaPortadorResponse, TransferenciaCreditoContaBancariaResponse, TransferenciaBancariaResponse, PageTransferenciaCreditoContaBancariaResponse, PageContaBancariaPortadorResponse, PageTransferenciaBancariaResponse, ContaBancariaPortadorPersist, TransferenciaCreditoContaBancariaPersist, TransferenciaBancariaPersist) {
+}(this, function(ApiClient, ContaBancariaPortadorUpdate, ContaBancariaPortadorResponse, TransferenciaCreditoContaBancariaResponse, TransferenciaBancariaResponse, PageTransferenciaCreditoContaBancariaResponse, PageContaBancariaPortadorResponse, PageTransferenciaBancariaResponse, ContaBancariaPortadorPersist, PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, TransferenciaCreditoContaBancariaPersist, TransferenciaBancariaPersist) {
   'use strict';
 
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
@@ -131,8 +131,54 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET37 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET37Callback
+     * Callback function to receive the result of the consultarUsingGET10 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET10Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consulta conta banc\u00C3\u00A1ria portador
+     * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ContaBancariaPortadorResponse}
+     */
+    this.consultarUsingGET10 = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ContaBancariaPortadorResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas-bancarias-portador/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET38 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET38Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -145,21 +191,21 @@
      * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET37 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET38 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET38";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET37";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET38";
       }
 
 
@@ -182,52 +228,6 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the consultarUsingGET9 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET9Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Consulta conta banc\u00C3\u00A1ria portador
-     * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ContaBancariaPortadorResponse}
-     */
-    this.consultarUsingGET9 = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ContaBancariaPortadorResponse;
-
-      return this.apiClient.callApi(
-        '/api/contas-bancarias-portador/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -445,6 +445,51 @@
 
       return this.apiClient.callApi(
         '/api/contas-bancarias-portador', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the simularTransferenciaBancariaUsingPOST operation.
+     * @callback module:api/TransferenciaBancariaApi~simularTransferenciaBancariaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
+     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+     * @param {module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest} request request
+     * @param {module:api/TransferenciaBancariaApi~simularTransferenciaBancariaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse}
+     */
+    this.simularTransferenciaBancariaUsingPOST = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request == undefined || request == null) {
+        throw "Missing the required parameter 'request' when calling simularTransferenciaBancariaUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PlanoParcelamentoTransferenciaCreditoContaBancariaResponse;
+
+      return this.apiClient.callApi(
+        '/api/simular-transferencias-creditos-contas-bancarias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

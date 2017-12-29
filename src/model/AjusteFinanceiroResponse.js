@@ -10,20 +10,20 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AjusteResponse = factory(root.Pier.ApiClient);
+    root.Pier.AjusteFinanceiroResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The AjusteResponse model module.
-   * @module model/AjusteResponse
-   * @version 2.47.3
+   * The AjusteFinanceiroResponse model module.
+   * @module model/AjusteFinanceiroResponse
+   * @version 2.50.4
    */
 
   /**
-   * Constructs a new <code>AjusteResponse</code>.
-   * @alias module:model/AjusteResponse
+   * Constructs a new <code>AjusteFinanceiroResponse</code>.
+   * @alias module:model/AjusteFinanceiroResponse
    * @class
    */
   var exports = function() {
@@ -33,21 +33,23 @@
 
 
 
+
+
   };
 
   /**
-   * Constructs a <code>AjusteResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>AjusteFinanceiroResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/AjusteResponse} obj Optional instance to populate.
-   * @return {module:model/AjusteResponse} The populated <code>AjusteResponse</code> instance.
+   * @param {module:model/AjusteFinanceiroResponse} obj Optional instance to populate.
+   * @return {module:model/AjusteFinanceiroResponse} The populated <code>AjusteFinanceiroResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('idAjuste')) {
-        obj['idAjuste'] = ApiClient.convertToType(data['idAjuste'], 'Integer');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
       }
       if (data.hasOwnProperty('idTipoAjuste')) {
         obj['idTipoAjuste'] = ApiClient.convertToType(data['idTipoAjuste'], 'Integer');
@@ -61,6 +63,12 @@
       if (data.hasOwnProperty('valor')) {
         obj['valor'] = ApiClient.convertToType(data['valor'], 'Number');
       }
+      if (data.hasOwnProperty('identificadorExterno')) {
+        obj['identificadorExterno'] = ApiClient.convertToType(data['identificadorExterno'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
     }
     return obj;
   }
@@ -68,9 +76,9 @@
 
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
-   * @member {Integer} idAjuste
+   * @member {Integer} id
    */
-  exports.prototype['idAjuste'] = undefined;
+  exports.prototype['id'] = undefined;
 
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
@@ -95,6 +103,18 @@
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
+
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * @member {String} identificadorExterno
+   */
+  exports.prototype['identificadorExterno'] = undefined;
+
+  /**
+   * Status do ajuste.
+   * @member {Integer} status
+   */
+  exports.prototype['status'] = undefined;
 
 
 

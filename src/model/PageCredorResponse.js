@@ -18,7 +18,7 @@
   /**
    * The PageCredorResponse model module.
    * @module model/PageCredorResponse
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**

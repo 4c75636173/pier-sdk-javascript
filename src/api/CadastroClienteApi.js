@@ -18,7 +18,7 @@
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
@@ -109,6 +109,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -135,6 +136,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],
@@ -573,8 +575,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -584,15 +586,15 @@
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET15 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
       }
 
 
@@ -619,8 +621,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET19 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET19Callback
+     * Callback function to receive the result of the consultarUsingGET20 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -630,15 +632,15 @@
      * Apresenta os detalhes de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.consultarUsingGET19 = function(id, callback) {
+    this.consultarUsingGET20 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET19";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
       }
 
 
@@ -665,8 +667,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET21 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET21Callback
+     * Callback function to receive the result of the consultarUsingGET22 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -676,15 +678,15 @@
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.consultarUsingGET21 = function(id, callback) {
+    this.consultarUsingGET22 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
       }
 
 
@@ -711,8 +713,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET27 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET27Callback
+     * Callback function to receive the result of the consultarUsingGET28 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -722,15 +724,15 @@
      * Apresenta os dados de um determinado Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.consultarUsingGET27 = function(id, callback) {
+    this.consultarUsingGET28 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
       }
 
 
@@ -1013,6 +1015,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do Banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -1037,6 +1040,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],
@@ -1409,6 +1413,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -1435,6 +1440,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],

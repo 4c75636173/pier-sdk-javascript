@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustarContaUsingPOST**](ContaApi.md#ajustarContaUsingPOST) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
+[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
 [**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
 [**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
 [**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET10**](ContaApi.md#consultarUsingGET10) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET38**](ContaApi.md#consultarUsingGET38) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET11**](ContaApi.md#consultarUsingGET11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET39**](ContaApi.md#consultarUsingGET39) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -38,9 +38,9 @@ Method | HTTP request | Description
 [**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
 
 
-<a name="ajustarContaUsingPOST"></a>
-# **ajustarContaUsingPOST**
-> AjusteResponse ajustarContaUsingPOST(id, idTipoAjuste, dataAjuste, valorAjuste)
+<a name="ajustarContaUsingPOST1"></a>
+# **ajustarContaUsingPOST1**
+> AjusteFinanceiroResponse ajustarContaUsingPOST1(id, idTipoAjuste, dataAjuste, valorAjuste, opts)
 
 Lan\u00C3\u00A7a um ajuste para a conta do id informado
 
@@ -60,6 +60,9 @@ var dataAjuste = "dataAjuste_example"; // {String} Data do ajuste no formato yyy
 
 var valorAjuste = 3.4; // {Number} Valor do ajuste
 
+var opts = { 
+  'identificadorExterno': "identificadorExterno_example" // {String} Identificador Externo
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -68,7 +71,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.ajustarContaUsingPOST(id, idTipoAjuste, dataAjuste, valorAjuste, callback);
+api.ajustarContaUsingPOST1(id, idTipoAjuste, dataAjuste, valorAjuste, opts, callback);
 ```
 
 ### Parameters
@@ -79,10 +82,11 @@ Name | Type | Description  | Notes
  **idTipoAjuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
  **dataAjuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valorAjuste** | [**Number**](.md)| Valor do ajuste | 
+ **identificadorExterno** | **String**| Identificador Externo | [optional] 
 
 ### Return type
 
-[**AjusteResponse**](AjusteResponse.md)
+[**AjusteFinanceiroResponse**](AjusteFinanceiroResponse.md)
 
 ### Authorization
 
@@ -653,9 +657,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET10"></a>
-# **consultarUsingGET10**
-> ContaDetalheResponse consultarUsingGET10(id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> ContaDetalheResponse consultarUsingGET11(id)
 
 Apresenta dados de uma determinada conta
 
@@ -677,7 +681,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET10(id, callback);
+api.consultarUsingGET11(id, callback);
 ```
 
 ### Parameters
@@ -699,9 +703,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET38"></a>
-# **consultarUsingGET38**
-> TransferenciaDetalheResponse consultarUsingGET38(id, idTransferencia)
+<a name="consultarUsingGET39"></a>
+# **consultarUsingGET39**
+> TransferenciaDetalheResponse consultarUsingGET39(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -725,7 +729,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET38(id, idTransferencia, callback);
+api.consultarUsingGET39(id, idTransferencia, callback);
 ```
 
 ### Parameters

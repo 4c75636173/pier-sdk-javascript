@@ -13,10 +13,10 @@ Method | HTTP request | Description
 [**atualizarUsingPOST**](CadastroClienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET19**](CadastroClienteApi.md#consultarUsingGET19) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET21**](CadastroClienteApi.md#consultarUsingGET21) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET27**](CadastroClienteApi.md#consultarUsingGET27) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET22**](CadastroClienteApi.md#consultarUsingGET22) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET28**](CadastroClienteApi.md#consultarUsingGET28) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
@@ -107,6 +107,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -133,6 +134,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
@@ -545,9 +547,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> EnderecoResponse consultarUsingGET14(id)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> EnderecoResponse consultarUsingGET15(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -569,7 +571,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -591,9 +593,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> PessoaDetalheResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> PessoaDetalheResponse consultarUsingGET20(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
@@ -615,7 +617,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -637,9 +639,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> PessoaResponse consultarUsingGET21(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> PessoaResponse consultarUsingGET22(id)
 
 Apresenta os dados de uma determinada Pessoa
 
@@ -661,7 +663,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(id, callback);
+api.consultarUsingGET22(id, callback);
 ```
 
 ### Parameters
@@ -683,9 +685,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET27"></a>
-# **consultarUsingGET27**
-> TelefoneResponse consultarUsingGET27(id)
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> TelefoneResponse consultarUsingGET28(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -707,7 +709,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET27(id, callback);
+api.consultarUsingGET28(id, callback);
 ```
 
 ### Parameters
@@ -989,6 +991,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do Banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -1018,6 +1021,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do Banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
@@ -1405,6 +1409,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -1431,6 +1436,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 

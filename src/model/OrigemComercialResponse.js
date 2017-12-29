@@ -18,7 +18,7 @@
   /**
    * The OrigemComercialResponse model module.
    * @module model/OrigemComercialResponse
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**

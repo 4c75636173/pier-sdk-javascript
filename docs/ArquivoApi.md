@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET1**](ArquivoApi.md#consultarUsingGET1) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
+[**consultarUsingGET2**](ArquivoApi.md#consultarUsingGET2) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
 [**salvarUsingPOST1**](ArquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
-<a name="consultarUsingGET1"></a>
-# **consultarUsingGET1**
-> ArquivoResponse consultarUsingGET1(id)
+<a name="consultarUsingGET2"></a>
+# **consultarUsingGET2**
+> ArquivoResponse consultarUsingGET2(id)
 
 Consulta de arquivo no PIER Cloud
 
@@ -32,7 +32,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET1(id, callback);
+api.consultarUsingGET2(id, callback);
 ```
 
 ### Parameters

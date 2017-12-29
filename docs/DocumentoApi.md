@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT17**](DocumentoApi.md#alterarUsingPUT17) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
 [**atualizarUsingPUT2**](DocumentoApi.md#atualizarUsingPUT2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
-[**consultarUsingGET35**](DocumentoApi.md#consultarUsingGET35) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultarUsingGET14**](DocumentoApi.md#consultarUsingGET14) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultarUsingGET36**](DocumentoApi.md#consultarUsingGET36) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
 [**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 [**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/documentos | Lista documentos
 [**listarUsingGET17**](DocumentoApi.md#listarUsingGET17) | **GET** /api/templates-documentos | Lista os templates dos documentos
@@ -116,9 +116,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> DocumentoDetalhadoResponse consultarUsingGET12(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> DocumentoDetalhadoResponse consultarUsingGET13(id)
 
 Consulta documentos
 
@@ -140,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -162,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> DocumentoTemplateResponse consultarUsingGET13(id)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> DocumentoTemplateResponse consultarUsingGET14(id)
 
 Consultar templates dos documentos
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET14(id, callback);
 ```
 
 ### Parameters
@@ -208,9 +208,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET35"></a>
-# **consultarUsingGET35**
-> TipoTemplateResponse consultarUsingGET35(id)
+<a name="consultarUsingGET36"></a>
+# **consultarUsingGET36**
+> TipoTemplateResponse consultarUsingGET36(id)
 
 Consultar tipo de template
 
@@ -232,7 +232,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET35(id, callback);
+api.consultarUsingGET36(id, callback);
 ```
 
 ### Parameters

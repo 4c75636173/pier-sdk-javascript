@@ -18,7 +18,7 @@
   /**
    * The ContaResponse model module.
    * @module model/ContaResponse
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**

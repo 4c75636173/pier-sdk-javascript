@@ -1,9 +1,9 @@
-# Pier.PagePaisResponse
+# Pier.PageAjusteResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[PaisResponse]**](PaisResponse.md) |  | [optional] 
+**content** | [**[AjusteFinanceiroResponse]**](AjusteFinanceiroResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

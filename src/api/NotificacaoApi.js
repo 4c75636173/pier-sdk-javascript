@@ -18,7 +18,7 @@
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
@@ -858,6 +858,51 @@
 
       return this.apiClient.callApi(
         '/api/notificacoes-email', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reenviarTokenSMSUsingPOST operation.
+     * @callback module:api/NotificacaoApi~reenviarTokenSMSUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+     * Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+     * @param {module:model/CodigoSegurancaSMSPersist} persist persist
+     * @param {module:api/NotificacaoApi~reenviarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.reenviarTokenSMSUsingPOST = function(persist, callback) {
+      var postBody = persist;
+
+      // verify the required parameter 'persist' is set
+      if (persist == undefined || persist == null) {
+        throw "Missing the required parameter 'persist' when calling reenviarTokenSMSUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/notificacoes-sms/reenviar-codigo-seguranca', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

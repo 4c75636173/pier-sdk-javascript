@@ -18,7 +18,7 @@
   /**
    * The PessoaDetalheResponse model module.
    * @module model/PessoaDetalheResponse
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -69,6 +70,9 @@
       }
       if (data.hasOwnProperty('idNacionalidade')) {
         obj['idNacionalidade'] = ApiClient.convertToType(data['idNacionalidade'], 'Integer');
+      }
+      if (data.hasOwnProperty('numeroBanco')) {
+        obj['numeroBanco'] = ApiClient.convertToType(data['numeroBanco'], 'Integer');
       }
       if (data.hasOwnProperty('numeroAgencia')) {
         obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
@@ -122,6 +126,12 @@
    * @member {Integer} idNacionalidade
    */
   exports.prototype['idNacionalidade'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero do banco.
+   * @member {Integer} numeroBanco
+   */
+  exports.prototype['numeroBanco'] = undefined;
 
   /**
    * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.

@@ -18,7 +18,7 @@
   /**
    * The PageTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PageTransferenciaCreditoContaBancariaResponse
-   * @version 2.47.3
+   * @version 2.50.4
    */
 
   /**
