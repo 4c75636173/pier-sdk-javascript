@@ -18,7 +18,7 @@
   /**
    * The OportunidadeResponse model module.
    * @module model/OportunidadeResponse
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -62,19 +62,19 @@
         obj['idStatusOportunidade'] = ApiClient.convertToType(data['idStatusOportunidade'], 'Integer');
       }
       if (data.hasOwnProperty('dataCadastro')) {
-        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
+        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'String');
       }
       if (data.hasOwnProperty('dataAtualizacao')) {
-        obj['dataAtualizacao'] = ApiClient.convertToType(data['dataAtualizacao'], 'Date');
+        obj['dataAtualizacao'] = ApiClient.convertToType(data['dataAtualizacao'], 'String');
       }
       if (data.hasOwnProperty('numeroReceitaFederal')) {
         obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'String');
       }
       if (data.hasOwnProperty('dataInicioVigencia')) {
-        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'Date');
+        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'String');
       }
       if (data.hasOwnProperty('dataFimVigencia')) {
-        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'Date');
+        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'String');
       }
       if (data.hasOwnProperty('flagAtivo')) {
         obj['flagAtivo'] = ApiClient.convertToType(data['flagAtivo'], 'Boolean');
@@ -107,13 +107,13 @@
 
   /**
    * Data cadastro da oportunidade.
-   * @member {Date} dataCadastro
+   * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
    * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
-   * @member {Date} dataAtualizacao
+   * @member {String} dataAtualizacao
    */
   exports.prototype['dataAtualizacao'] = undefined;
 
@@ -125,13 +125,13 @@
 
   /**
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataInicioVigencia
+   * @member {String} dataInicioVigencia
    */
   exports.prototype['dataInicioVigencia'] = undefined;
 
   /**
    * Fim da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataFimVigencia
+   * @member {String} dataFimVigencia
    */
   exports.prototype['dataFimVigencia'] = undefined;
 

@@ -18,7 +18,7 @@
   /**
    * The OportunidadePersist model module.
    * @module model/OportunidadePersist
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -66,10 +66,10 @@
         obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'String');
       }
       if (data.hasOwnProperty('dataInicioVigencia')) {
-        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'Date');
+        obj['dataInicioVigencia'] = ApiClient.convertToType(data['dataInicioVigencia'], 'String');
       }
       if (data.hasOwnProperty('dataFimVigencia')) {
-        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'Date');
+        obj['dataFimVigencia'] = ApiClient.convertToType(data['dataFimVigencia'], 'String');
       }
       if (data.hasOwnProperty('flagAtivo')) {
         obj['flagAtivo'] = ApiClient.convertToType(data['flagAtivo'], 'Boolean');
@@ -102,13 +102,13 @@
 
   /**
    * Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataInicioVigencia
+   * @member {String} dataInicioVigencia
    */
   exports.prototype['dataInicioVigencia'] = undefined;
 
   /**
    * Data do fim da vig\u00C3\u00AAncia da oportunidade
-   * @member {Date} dataFimVigencia
+   * @member {String} dataFimVigencia
    */
   exports.prototype['dataFimVigencia'] = undefined;
 

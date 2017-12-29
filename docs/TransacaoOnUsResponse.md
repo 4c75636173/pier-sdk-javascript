@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **codigoAutorizacao** | **String** | C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador. | [optional] 
 **numeroMascaradoCartao** | **String** | N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado. | [optional] 
 **nomePortadorCartao** | **String** | Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o. | [optional] 
+**terminalRequisitante** | **String** | Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante | 
 
 

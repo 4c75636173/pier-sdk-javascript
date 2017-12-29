@@ -18,7 +18,7 @@
   /**
    * The NotificacaoSMSBody model module.
    * @module model/NotificacaoSMSBody
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -71,7 +71,7 @@
         obj['conteudo'] = ApiClient.convertToType(data['conteudo'], 'String');
       }
       if (data.hasOwnProperty('dataAgendamento')) {
-        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'Date');
+        obj['dataAgendamento'] = ApiClient.convertToType(data['dataAgendamento'], 'String');
       }
       if (data.hasOwnProperty('tipoEvento')) {
         obj['tipoEvento'] = ApiClient.convertToType(data['tipoEvento'], 'String');
@@ -113,7 +113,7 @@
 
   /**
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
-   * @member {Date} dataAgendamento
+   * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
@@ -135,6 +135,12 @@
      * @const
      */
     RISCO_FRAUDE: "RISCO_FRAUDE",
+    
+    /**
+     * value: CODIGO_SEGURANCA
+     * @const
+     */
+    CODIGO_SEGURANCA: "CODIGO_SEGURANCA",
     
     /**
      * value: OUTROS

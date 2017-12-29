@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobilePersist model module.
    * @module model/AplicacaoMobilePersist
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -52,9 +51,6 @@
 
       if (data.hasOwnProperty('idPlataformaMobile')) {
         obj['idPlataformaMobile'] = ApiClient.convertToType(data['idPlataformaMobile'], 'Integer');
-      }
-      if (data.hasOwnProperty('idEmissor')) {
-        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
       }
       if (data.hasOwnProperty('token')) {
         obj['token'] = ApiClient.convertToType(data['token'], 'String');
@@ -84,12 +80,6 @@
    * @member {Integer} idPlataformaMobile
    */
   exports.prototype['idPlataformaMobile'] = undefined;
-
-  /**
-   * Apresenta o identificador do emissor.
-   * @member {Integer} idEmissor
-   */
-  exports.prototype['idEmissor'] = undefined;
 
   /**
    * Apresenta o token da aplicacao.

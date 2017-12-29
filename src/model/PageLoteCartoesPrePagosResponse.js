@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './LoteCartoesPrePagos'], factory);
+    define(['../ApiClient', './LoteCartoesPrePagosResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LoteCartoesPrePagos'));
+    module.exports = factory(require('../ApiClient'), require('./LoteCartoesPrePagosResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageLoteCartoesPrePagosResponse = factory(root.Pier.ApiClient, root.Pier.LoteCartoesPrePagos);
+    root.Pier.PageLoteCartoesPrePagosResponse = factory(root.Pier.ApiClient, root.Pier.LoteCartoesPrePagosResponse);
   }
-}(this, function(ApiClient, LoteCartoesPrePagos) {
+}(this, function(ApiClient, LoteCartoesPrePagosResponse) {
   'use strict';
 
   /**
    * The PageLoteCartoesPrePagosResponse model module.
    * @module model/PageLoteCartoesPrePagosResponse
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [LoteCartoesPrePagos]);
+        obj['content'] = ApiClient.convertToType(data['content'], [LoteCartoesPrePagosResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/LoteCartoesPrePagos>} content
+   * @member {Array.<module:model/LoteCartoesPrePagosResponse>} content
    */
   exports.prototype['content'] = undefined;
 

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './FaturaConsignadaResponse', './TransacoesCorrentes'], factory);
+    define(['../ApiClient', './FaturaConsignadaResponse', './TransacoesCorrentesResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./FaturaConsignadaResponse'), require('./TransacoesCorrentes'));
+    module.exports = factory(require('../ApiClient'), require('./FaturaConsignadaResponse'), require('./TransacoesCorrentesResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DetalhesFaturaConsignadaResponse = factory(root.Pier.ApiClient, root.Pier.FaturaConsignadaResponse, root.Pier.TransacoesCorrentes);
+    root.Pier.DetalhesFaturaConsignadaResponse = factory(root.Pier.ApiClient, root.Pier.FaturaConsignadaResponse, root.Pier.TransacoesCorrentesResponse);
   }
-}(this, function(ApiClient, FaturaConsignadaResponse, TransacoesCorrentes) {
+}(this, function(ApiClient, FaturaConsignadaResponse, TransacoesCorrentesResponse) {
   'use strict';
 
   /**
    * The DetalhesFaturaConsignadaResponse model module.
    * @module model/DetalhesFaturaConsignadaResponse
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -48,7 +48,7 @@
         obj['faturaConsignadaResponse'] = FaturaConsignadaResponse.constructFromObject(data['faturaConsignadaResponse']);
       }
       if (data.hasOwnProperty('transacoes')) {
-        obj['transacoes'] = ApiClient.convertToType(data['transacoes'], [TransacoesCorrentes]);
+        obj['transacoes'] = ApiClient.convertToType(data['transacoes'], [TransacoesCorrentesResponse]);
       }
     }
     return obj;
@@ -63,7 +63,7 @@
 
   /**
    * Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
-   * @member {Array.<module:model/TransacoesCorrentes>} transacoes
+   * @member {Array.<module:model/TransacoesCorrentesResponse>} transacoes
    */
   exports.prototype['transacoes'] = undefined;
 

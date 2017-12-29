@@ -5,14 +5,14 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
-[**alterarUsingPUT2**](FAQApi.md#alterarUsingPUT2) | **PUT** /api/faqs/{id} | Alterar FAQ
-[**consultarUsingGET6**](FAQApi.md#consultarUsingGET6) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET8**](FAQApi.md#listarUsingGET8) | **GET** /api/faqs | Lista FAQs
+[**alterarUsingPUT7**](FAQApi.md#alterarUsingPUT7) | **PUT** /api/faqs/{id} | Alterar FAQ
+[**consultarUsingGET17**](FAQApi.md#consultarUsingGET17) | **GET** /api/faqs/{id} | Consultar FAQ por id
+[**listarUsingGET20**](FAQApi.md#listarUsingGET20) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
 # **adicionarUsingPOST**
-> FAQ adicionarUsingPOST(pergunta, resposta, opts)
+> FaqResponse adicionarUsingPOST(pergunta, resposta, opts)
 
 Adiciona uma nova FAQ
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -69,9 +69,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT2"></a>
-# **alterarUsingPUT2**
-> FAQ alterarUsingPUT2(id, pergunta, resposta, opts)
+<a name="alterarUsingPUT7"></a>
+# **alterarUsingPUT7**
+> FaqResponse alterarUsingPUT7(id, pergunta, resposta, opts)
 
 Alterar FAQ
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT2(id, pergunta, resposta, opts, callback);
+api.alterarUsingPUT7(id, pergunta, resposta, opts, callback);
 ```
 
 ### Parameters
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -131,9 +131,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> FAQ consultarUsingGET6(id)
+<a name="consultarUsingGET17"></a>
+# **consultarUsingGET17**
+> FaqResponse consultarUsingGET17(id)
 
 Consultar FAQ por id
 
@@ -155,7 +155,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(id, callback);
+api.consultarUsingGET17(id, callback);
 ```
 
 ### Parameters
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FAQ**](FAQ.md)
+[**FaqResponse**](FaqResponse.md)
 
 ### Authorization
 
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageFaqs listarUsingGET8(opts)
+<a name="listarUsingGET20"></a>
+# **listarUsingGET20**
+> PageFaqResponse listarUsingGET20(opts)
 
 Lista FAQs
 
@@ -192,8 +192,9 @@ var Pier = require('Pier');
 var apiInstance = new Pier.FAQApi()
 
 var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
   'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
   'idFaq': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
   'pergunta': "pergunta_example", // {String} Conte\u00C3\u00BAdo da pergunta.
   'resposta': "resposta_example", // {String} Conte\u00C3\u00BAdo da resposta.
@@ -210,15 +211,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET20(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
  **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
  **idFaq** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id). | [optional] 
  **pergunta** | **String**| Conte\u00C3\u00BAdo da pergunta. | [optional] 
  **resposta** | **String**| Conte\u00C3\u00BAdo da resposta. | [optional] 
@@ -229,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PageFaqs**](PageFaqs.md)
+[**PageFaqResponse**](PageFaqResponse.md)
 
 ### Authorization
 

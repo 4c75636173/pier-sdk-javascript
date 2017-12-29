@@ -18,7 +18,7 @@
   /**
    * The TransacaoOnUsResponse model module.
    * @module model/TransacaoOnUsResponse
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -26,8 +26,9 @@
    * Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
    * @alias module:model/TransacaoOnUsResponse
    * @class
+   * @param terminalRequisitante
    */
-  var exports = function() {
+  var exports = function(terminalRequisitante) {
 
 
 
@@ -35,6 +36,7 @@
 
 
 
+    this['terminalRequisitante'] = terminalRequisitante;
   };
 
   /**
@@ -65,6 +67,9 @@
       }
       if (data.hasOwnProperty('nomePortadorCartao')) {
         obj['nomePortadorCartao'] = ApiClient.convertToType(data['nomePortadorCartao'], 'String');
+      }
+      if (data.hasOwnProperty('terminalRequisitante')) {
+        obj['terminalRequisitante'] = ApiClient.convertToType(data['terminalRequisitante'], 'String');
       }
     }
     return obj;
@@ -106,6 +111,12 @@
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;
+
+  /**
+   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * @member {String} terminalRequisitante
+   */
+  exports.prototype['terminalRequisitante'] = undefined;
 
 
 

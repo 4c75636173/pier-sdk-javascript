@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **cpf** | **String** | CPF do Usu\u00C3\u00A1rio | [optional] 
 **email** | **String** | Email do Usu\u00C3\u00A1rio | 
 **status** | **String** | Status do Usu\u00C3\u00A1rio | [optional] 
-**dataCriacao** | **Date** | Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio | [optional] 
-**dataModificacao** | **Date** | Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio | [optional] 
+**dataCriacao** | **String** | Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio | [optional] 
+**dataModificacao** | **String** | Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio | [optional] 
 **tentativasIncorretas** | **Integer** | N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas | [optional] 
 
 

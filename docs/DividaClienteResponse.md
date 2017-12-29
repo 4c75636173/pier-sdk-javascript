@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id) | [optional] 
-**dataVencimentoFaturaAtraso** | [**ModelDate**](ModelDate.md) | Data de vencimento da cobran\u00C3\u00A7a | [optional] 
+**dataVencimentoFaturaAtraso** | **String** | Data de vencimento da cobran\u00C3\u00A7a | [optional] 
 **quantidadeDiasAtraso** | **Integer** | Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a | [optional] 
-**dataVencimentoAcordo** | [**ModelDate**](ModelDate.md) | Data de vencimento do acordo | [optional] 
+**dataVencimentoAcordo** | **String** | Data de vencimento do acordo | [optional] 
 **quantidadeDiasAtrasoCorrigido** | **Integer** | Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo | [optional] 
 **valorSaldoDevedor** | **Number** | Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a | [optional] 
 **taxaCorrecao** | **Number** | Percentual de corre\u00C3\u00A7\u00C3\u00A3o | [optional] 

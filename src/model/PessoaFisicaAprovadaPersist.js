@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoPersist', './ModelDate', './TelefonePessoaAprovadaPersist'], factory);
+    define(['../ApiClient', './EnderecoAprovadoPersist', './TelefonePessoaAprovadaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./ModelDate'), require('./TelefonePessoaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./TelefonePessoaAprovadaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaFisicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.ModelDate, root.Pier.TelefonePessoaAprovadaPersist);
+    root.Pier.PessoaFisicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.TelefonePessoaAprovadaPersist);
   }
-}(this, function(ApiClient, EnderecoAprovadoPersist, ModelDate, TelefonePessoaAprovadaPersist) {
+}(this, function(ApiClient, EnderecoAprovadoPersist, TelefonePessoaAprovadaPersist) {
   'use strict';
 
   /**
    * The PessoaFisicaAprovadaPersist model module.
    * @module model/PessoaFisicaAprovadaPersist
-   * @version 2.15.5
+   * @version 2.50.5
    */
 
   /**
@@ -31,9 +31,13 @@
    * @param idOrigemComercial
    * @param idProduto
    * @param diaVencimento
+   * @param telefones
    * @param enderecos
+   * @param limiteGlobal
+   * @param limiteMaximo
+   * @param limiteParcelas
    */
-  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, enderecos) {
+  var exports = function(nome, cpf, idOrigemComercial, idProduto, diaVencimento, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas) {
 
     this['nome'] = nome;
 
@@ -57,7 +61,14 @@
 
 
 
+
+
+    this['telefones'] = telefones;
     this['enderecos'] = enderecos;
+    this['limiteGlobal'] = limiteGlobal;
+    this['limiteMaximo'] = limiteMaximo;
+    this['limiteParcelas'] = limiteParcelas;
+
   };
 
   /**
@@ -78,7 +89,7 @@
         obj['nomeMae'] = ApiClient.convertToType(data['nomeMae'], 'String');
       }
       if (data.hasOwnProperty('dataNascimento')) {
-        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], ModelDate);
+        obj['dataNascimento'] = ApiClient.convertToType(data['dataNascimento'], 'String');
       }
       if (data.hasOwnProperty('sexo')) {
         obj['sexo'] = ApiClient.convertToType(data['sexo'], 'String');
@@ -96,13 +107,13 @@
         obj['unidadeFederativaIdentidade'] = ApiClient.convertToType(data['unidadeFederativaIdentidade'], 'String');
       }
       if (data.hasOwnProperty('dataEmissaoIdentidade')) {
-        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], ModelDate);
+        obj['dataEmissaoIdentidade'] = ApiClient.convertToType(data['dataEmissaoIdentidade'], 'String');
       }
       if (data.hasOwnProperty('idEstadoCivil')) {
         obj['idEstadoCivil'] = ApiClient.convertToType(data['idEstadoCivil'], 'Integer');
       }
-      if (data.hasOwnProperty('profissao')) {
-        obj['profissao'] = ApiClient.convertToType(data['profissao'], 'String');
+      if (data.hasOwnProperty('idProfissao')) {
+        obj['idProfissao'] = ApiClient.convertToType(data['idProfissao'], 'String');
       }
       if (data.hasOwnProperty('idNaturezaOcupacao')) {
         obj['idNaturezaOcupacao'] = ApiClient.convertToType(data['idNaturezaOcupacao'], 'Integer');
@@ -134,11 +145,32 @@
       if (data.hasOwnProperty('nomeEmpresa')) {
         obj['nomeEmpresa'] = ApiClient.convertToType(data['nomeEmpresa'], 'String');
       }
+      if (data.hasOwnProperty('valorRenda')) {
+        obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
+      }
+      if (data.hasOwnProperty('canalEntrada')) {
+        obj['canalEntrada'] = ApiClient.convertToType(data['canalEntrada'], 'String');
+      }
+      if (data.hasOwnProperty('valorPontuacao')) {
+        obj['valorPontuacao'] = ApiClient.convertToType(data['valorPontuacao'], 'Integer');
+      }
       if (data.hasOwnProperty('telefones')) {
         obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersist]);
       }
       if (data.hasOwnProperty('enderecos')) {
         obj['enderecos'] = ApiClient.convertToType(data['enderecos'], [EnderecoAprovadoPersist]);
+      }
+      if (data.hasOwnProperty('limiteGlobal')) {
+        obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteMaximo')) {
+        obj['limiteMaximo'] = ApiClient.convertToType(data['limiteMaximo'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteParcelas')) {
+        obj['limiteParcelas'] = ApiClient.convertToType(data['limiteParcelas'], 'Number');
+      }
+      if (data.hasOwnProperty('limiteConsignado')) {
+        obj['limiteConsignado'] = ApiClient.convertToType(data['limiteConsignado'], 'Number');
       }
     }
     return obj;
@@ -159,7 +191,7 @@
 
   /**
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @member {module:model/ModelDate} dataNascimento
+   * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
@@ -195,7 +227,7 @@
 
   /**
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-   * @member {module:model/ModelDate} dataEmissaoIdentidade
+   * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
@@ -207,9 +239,9 @@
 
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
-   * @member {String} profissao
+   * @member {String} idProfissao
    */
-  exports.prototype['profissao'] = undefined;
+  exports.prototype['idProfissao'] = undefined;
 
   /**
    * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
@@ -272,6 +304,24 @@
   exports.prototype['nomeEmpresa'] = undefined;
 
   /**
+   * Apresenta o valor da renda compravada
+   * @member {Number} valorRenda
+   */
+  exports.prototype['valorRenda'] = undefined;
+
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * @member {String} canalEntrada
+   */
+  exports.prototype['canalEntrada'] = undefined;
+
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   * @member {Integer} valorPontuacao
+   */
+  exports.prototype['valorPontuacao'] = undefined;
+
+  /**
    * Apresenta os telefones da empresa
    * @member {Array.<module:model/TelefonePessoaAprovadaPersist>} telefones
    */
@@ -282,6 +332,30 @@
    * @member {Array.<module:model/EnderecoAprovadoPersist>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
+
+  /**
+   * Valor do Limite Global
+   * @member {Number} limiteGlobal
+   */
+  exports.prototype['limiteGlobal'] = undefined;
+
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   * @member {Number} limiteMaximo
+   */
+  exports.prototype['limiteMaximo'] = undefined;
+
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   * @member {Number} limiteParcelas
+   */
+  exports.prototype['limiteParcelas'] = undefined;
+
+  /**
+   * Valor do limite de margem consignado
+   * @member {Number} limiteConsignado
+   */
+  exports.prototype['limiteConsignado'] = undefined;
 
 
 

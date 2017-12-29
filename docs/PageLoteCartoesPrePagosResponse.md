@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[LoteCartoesPrePagos]**](LoteCartoesPrePagos.md) |  | [optional] 
+**content** | [**[LoteCartoesPrePagosResponse]**](LoteCartoesPrePagosResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

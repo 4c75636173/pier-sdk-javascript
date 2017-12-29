@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dataEnvio** | **Date** | Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
+**dataEnvio** | **String** | Apresenta a data e em que o registro foi enviado para o dispositivo. | [optional] 
 **idEmissor** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id). | [optional] 
 **tipoEvento** | **String** | Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
 **status** | **String** | Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o | [optional] 
