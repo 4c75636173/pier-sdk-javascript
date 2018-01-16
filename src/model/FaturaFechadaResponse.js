@@ -18,7 +18,7 @@
   /**
    * The FaturaFechadaResponse model module.
    * @module model/FaturaFechadaResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

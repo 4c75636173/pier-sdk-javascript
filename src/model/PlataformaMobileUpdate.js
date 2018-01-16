@@ -18,7 +18,7 @@
   /**
    * The PlataformaMobileUpdate model module.
    * @module model/PlataformaMobileUpdate
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

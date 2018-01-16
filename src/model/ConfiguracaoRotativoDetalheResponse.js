@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoRotativoDetalheResponse model module.
    * @module model/ConfiguracaoRotativoDetalheResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

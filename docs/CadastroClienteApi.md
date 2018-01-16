@@ -107,6 +107,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -133,6 +134,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
@@ -989,6 +991,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do Banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -1018,6 +1021,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do Banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 
@@ -1405,6 +1409,7 @@ var opts = {
   'idProfissao': "idProfissao_example", // {String} Profiss\u00C3\u00A3o da pessoa fisica
   'idNaturezaOcupacao': 789, // {Integer} Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
   'idNacionalidade': 789, // {Integer} Id Nacionalidade da pessoa fisica
+  'numeroBanco': 56, // {Integer} N\u00C3\u00BAmero do banco.
   'numeroAgencia': 56, // {Integer} N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
   'numeroContaCorrente': "numeroContaCorrente_example", // {String} N\u00C3\u00BAmero da conta corrente.
   'email': "email_example", // {String} Email da pessoa fisica
@@ -1431,6 +1436,7 @@ Name | Type | Description  | Notes
  **idProfissao** | **String**| Profiss\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNaturezaOcupacao** | **Integer**| Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica | [optional] 
  **idNacionalidade** | **Integer**| Id Nacionalidade da pessoa fisica | [optional] 
+ **numeroBanco** | **Integer**| N\u00C3\u00BAmero do banco. | [optional] 
  **numeroAgencia** | **Integer**| N\u00C3\u00BAmero da ag\u00C3\u00AAncia. | [optional] 
  **numeroContaCorrente** | **String**| N\u00C3\u00BAmero da conta corrente. | [optional] 
  **email** | **String**| Email da pessoa fisica | [optional] 

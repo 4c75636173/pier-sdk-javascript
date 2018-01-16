@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**listarTemplateNotificacaoUsingGET**](NotificacaoApi.md#listarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes | Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposLayoutsUsingGET**](NotificacaoApi.md#listarTiposLayoutsUsingGET) | **GET** /api/tipos-layouts | Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
 [**notificacaoEmailUsingPOST**](NotificacaoApi.md#notificacaoEmailUsingPOST) | **POST** /api/notificacoes-email | Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+[**reenviarTokenSMSUsingPOST**](NotificacaoApi.md#reenviarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/reenviar-codigo-seguranca | Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
 [**responderSMSGetUsingGET**](NotificacaoApi.md#responderSMSGetUsingGET) | **GET** /api/notificacoes/sms/responder | Responder SMS
 [**salvarConfiguracaoUsingPOST**](NotificacaoApi.md#salvarConfiguracaoUsingPOST) | **POST** /api/configuracoes-email | Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
 [**salvarPushFCMUsingPOST**](NotificacaoApi.md#salvarPushFCMUsingPOST) | **POST** /api/notificacoes/push/fcm | Enviar Push FCM
@@ -879,6 +880,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="reenviarTokenSMSUsingPOST"></a>
+# **reenviarTokenSMSUsingPOST**
+> &#39;String&#39; reenviarTokenSMSUsingPOST(persist)
+
+Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
+
+Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.NotificacaoApi()
+
+var persist = new Pier.CodigoSegurancaSMSPersist(); // {CodigoSegurancaSMSPersist} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.reenviarTokenSMSUsingPOST(persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**CodigoSegurancaSMSPersist**](CodigoSegurancaSMSPersist.md)| persist | 
+
+### Return type
+
+**&#39;String&#39;**
 
 ### Authorization
 

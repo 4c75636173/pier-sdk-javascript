@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/CampanhaResponse', '../model/CampanhaUpdate', '../model/ConfiguracaoRegistroCobrancaPersist', '../model/ConfiguracaoRegistroCobrancaResponse', '../model/ConfiguracaoRotativoDetalheResponse', '../model/ConfiguracaoRotativoPersist', '../model/ProdutoDetalhesResponse', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/BancoResponse', '../model/PageCampanhaResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PageTipoCampanhaResponse', '../model/PageConfiguracaoRotativoResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageAtendimentoClienteResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageBancoResponse', '../model/PageControleVencimentoResponse', '../model/CampanhaPersist'], factory);
+    define(['../ApiClient', '../model/CampanhaResponse', '../model/CampanhaUpdate', '../model/ConfiguracaoRegistroCobrancaPersist', '../model/ConfiguracaoRegistroCobrancaResponse', '../model/ConfiguracaoRotativoDetalheResponse', '../model/ConfiguracaoRotativoPersist', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/OrigemComercialResponse', '../model/ProdutoDetalhesResponse', '../model/AtendimentoClienteResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/BancoResponse', '../model/PageCampanhaResponse', '../model/PageContaDetalheResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageOrigemComercialResponse', '../model/PageTipoCampanhaResponse', '../model/PageConfiguracaoRotativoResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageAtendimentoClienteResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageBancoResponse', '../model/PageControleVencimentoResponse', '../model/CampanhaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CampanhaResponse'), require('../model/CampanhaUpdate'), require('../model/ConfiguracaoRegistroCobrancaPersist'), require('../model/ConfiguracaoRegistroCobrancaResponse'), require('../model/ConfiguracaoRotativoDetalheResponse'), require('../model/ConfiguracaoRotativoPersist'), require('../model/ProdutoDetalhesResponse'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/BancoResponse'), require('../model/PageCampanhaResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageTipoCampanhaResponse'), require('../model/PageConfiguracaoRotativoResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageBancoResponse'), require('../model/PageControleVencimentoResponse'), require('../model/CampanhaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/CampanhaResponse'), require('../model/CampanhaUpdate'), require('../model/ConfiguracaoRegistroCobrancaPersist'), require('../model/ConfiguracaoRegistroCobrancaResponse'), require('../model/ConfiguracaoRotativoDetalheResponse'), require('../model/ConfiguracaoRotativoPersist'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/OrigemComercialResponse'), require('../model/ProdutoDetalhesResponse'), require('../model/AtendimentoClienteResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/BancoResponse'), require('../model/PageCampanhaResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageTipoCampanhaResponse'), require('../model/PageConfiguracaoRotativoResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageBancoResponse'), require('../model/PageControleVencimentoResponse'), require('../model/CampanhaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CadastroGeralApi = factory(root.Pier.ApiClient, root.Pier.CampanhaResponse, root.Pier.CampanhaUpdate, root.Pier.ConfiguracaoRegistroCobrancaPersist, root.Pier.ConfiguracaoRegistroCobrancaResponse, root.Pier.ConfiguracaoRotativoDetalheResponse, root.Pier.ConfiguracaoRotativoPersist, root.Pier.ProdutoDetalhesResponse, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.BancoResponse, root.Pier.PageCampanhaResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageTipoCampanhaResponse, root.Pier.PageConfiguracaoRotativoResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageBancoResponse, root.Pier.PageControleVencimentoResponse, root.Pier.CampanhaPersist);
+    root.Pier.CadastroGeralApi = factory(root.Pier.ApiClient, root.Pier.CampanhaResponse, root.Pier.CampanhaUpdate, root.Pier.ConfiguracaoRegistroCobrancaPersist, root.Pier.ConfiguracaoRegistroCobrancaResponse, root.Pier.ConfiguracaoRotativoDetalheResponse, root.Pier.ConfiguracaoRotativoPersist, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.OrigemComercialResponse, root.Pier.ProdutoDetalhesResponse, root.Pier.AtendimentoClienteResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.BancoResponse, root.Pier.PageCampanhaResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageTipoCampanhaResponse, root.Pier.PageConfiguracaoRotativoResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageBancoResponse, root.Pier.PageControleVencimentoResponse, root.Pier.CampanhaPersist);
   }
-}(this, function(ApiClient, CampanhaResponse, CampanhaUpdate, ConfiguracaoRegistroCobrancaPersist, ConfiguracaoRegistroCobrancaResponse, ConfiguracaoRotativoDetalheResponse, ConfiguracaoRotativoPersist, ProdutoDetalhesResponse, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, TipoOperacaoResponse, TipoTelefoneResponse, BancoResponse, PageCampanhaResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PageTipoCampanhaResponse, PageConfiguracaoRotativoResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageAtendimentoClienteResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageBancoResponse, PageControleVencimentoResponse, CampanhaPersist) {
+}(this, function(ApiClient, CampanhaResponse, CampanhaUpdate, ConfiguracaoRegistroCobrancaPersist, ConfiguracaoRegistroCobrancaResponse, ConfiguracaoRotativoDetalheResponse, ConfiguracaoRotativoPersist, ParametroProdutoResponse, TaxaAntecipacaoRequest, OrigemComercialResponse, ProdutoDetalhesResponse, AtendimentoClienteResponse, PageTipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, TipoOperacaoResponse, TipoTelefoneResponse, BancoResponse, PageCampanhaResponse, PageContaDetalheResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageOrigemComercialResponse, PageTipoCampanhaResponse, PageConfiguracaoRotativoResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageAtendimentoClienteResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageBancoResponse, PageControleVencimentoResponse, CampanhaPersist) {
   'use strict';
 
   /**
    * CadastroGeral service.
    * @module api/CadastroGeralApi
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**
@@ -183,52 +183,6 @@
 
       return this.apiClient.callApi(
         '/api/configuracoes-rotativos/{id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the ativarUsoExteriorUsingPOST operation.
-     * @callback module:api/CadastroGeralApi~ativarUsoExteriorUsingPOSTCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Ativa o par\u00C3\u00A2metro uso exterior para o produto
-     * Este m\u00C3\u00A9todo permite ativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-     * @param {module:api/CadastroGeralApi~ativarUsoExteriorUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProdutoDetalhesResponse}
-     */
-    this.ativarUsoExteriorUsingPOST = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling ativarUsoExteriorUsingPOST";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ProdutoDetalhesResponse;
-
-      return this.apiClient.callApi(
-        '/api/produtos/{id}/ativar-uso-exterior', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -957,52 +911,6 @@
 
       return this.apiClient.callApi(
         '/api/configuracoes-rotativos/{id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the desativarUsoExteriorUsingPOST operation.
-     * @callback module:api/CadastroGeralApi~desativarUsoExteriorUsingPOSTCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Desativa o par\u00C3\u00A2metro uso exterior para o produto
-     * Este m\u00C3\u00A9todo permite desativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-     * @param {module:api/CadastroGeralApi~desativarUsoExteriorUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/ProdutoDetalhesResponse}
-     */
-    this.desativarUsoExteriorUsingPOST = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling desativarUsoExteriorUsingPOST";
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ProdutoDetalhesResponse;
-
-      return this.apiClient.callApi(
-        '/api/produtos/{id}/desativar-uso-exterior', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

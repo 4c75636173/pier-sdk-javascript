@@ -18,7 +18,7 @@
   /**
    * The BodyAccessToken model module.
    * @module model/BodyAccessToken
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

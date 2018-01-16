@@ -18,7 +18,7 @@
   /**
    * The PlanoCampanhaResponse model module.
    * @module model/PlanoCampanhaResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -54,6 +55,9 @@
       if (data.hasOwnProperty('taxa')) {
         obj['taxa'] = ApiClient.convertToType(data['taxa'], 'Number');
       }
+      if (data.hasOwnProperty('usuario')) {
+        obj['usuario'] = ApiClient.convertToType(data['usuario'], 'String');
+      }
     }
     return obj;
   }
@@ -76,6 +80,12 @@
    * @member {Number} taxa
    */
   exports.prototype['taxa'] = undefined;
+
+  /**
+   * Nome do usu\u00C3\u00A1rio
+   * @member {String} usuario
+   */
+  exports.prototype['usuario'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The PageContaBancariaPortadorResponse model module.
    * @module model/PageContaBancariaPortadorResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

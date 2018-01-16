@@ -18,7 +18,7 @@
   /**
    * The MapOfstringAndstring model module.
    * @module model/MapOfstringAndstring
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

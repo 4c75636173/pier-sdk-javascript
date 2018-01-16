@@ -18,7 +18,7 @@
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**
@@ -109,6 +109,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -135,6 +136,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],
@@ -1013,6 +1015,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do Banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -1037,6 +1040,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],
@@ -1409,6 +1413,7 @@
      * @param {String} opts.idProfissao Profiss\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
      * @param {Integer} opts.idNacionalidade Id Nacionalidade da pessoa fisica
+     * @param {Integer} opts.numeroBanco N\u00C3\u00BAmero do banco.
      * @param {Integer} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
@@ -1435,6 +1440,7 @@
         'idProfissao': opts['idProfissao'],
         'idNaturezaOcupacao': opts['idNaturezaOcupacao'],
         'idNacionalidade': opts['idNacionalidade'],
+        'numeroBanco': opts['numeroBanco'],
         'numeroAgencia': opts['numeroAgencia'],
         'numeroContaCorrente': opts['numeroContaCorrente'],
         'email': opts['email'],

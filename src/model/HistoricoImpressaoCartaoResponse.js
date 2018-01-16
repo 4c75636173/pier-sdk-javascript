@@ -18,7 +18,7 @@
   /**
    * The HistoricoImpressaoCartaoResponse model module.
    * @module model/HistoricoImpressaoCartaoResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The NotificacaoSMSBody model module.
    * @module model/NotificacaoSMSBody
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

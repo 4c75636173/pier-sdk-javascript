@@ -18,7 +18,7 @@
   /**
    * The ParcelamentoTransferenciaResponse model module.
    * @module model/ParcelamentoTransferenciaResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -51,13 +50,10 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('numeroParcela')) {
-        obj['numeroParcela'] = ApiClient.convertToType(data['numeroParcela'], 'String');
+        obj['numeroParcela'] = ApiClient.convertToType(data['numeroParcela'], 'Integer');
       }
-      if (data.hasOwnProperty('valorPrimeiraParcela')) {
-        obj['valorPrimeiraParcela'] = ApiClient.convertToType(data['valorPrimeiraParcela'], 'Number');
-      }
-      if (data.hasOwnProperty('valorDemaisParcelas')) {
-        obj['valorDemaisParcelas'] = ApiClient.convertToType(data['valorDemaisParcelas'], 'Number');
+      if (data.hasOwnProperty('valorParcelas')) {
+        obj['valorParcelas'] = ApiClient.convertToType(data['valorParcelas'], 'Number');
       }
       if (data.hasOwnProperty('valorTotal')) {
         obj['valorTotal'] = ApiClient.convertToType(data['valorTotal'], 'Number');
@@ -81,21 +77,15 @@
 
   /**
    * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
-   * @member {String} numeroParcela
+   * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
 
   /**
-   * Valor da primeira parcela.
-   * @member {Number} valorPrimeiraParcela
-   */
-  exports.prototype['valorPrimeiraParcela'] = undefined;
-
-  /**
    * Valor das demais parcelas.
-   * @member {Number} valorDemaisParcelas
+   * @member {Number} valorParcelas
    */
-  exports.prototype['valorDemaisParcelas'] = undefined;
+  exports.prototype['valorParcelas'] = undefined;
 
   /**
    * Valor total do financiamento.

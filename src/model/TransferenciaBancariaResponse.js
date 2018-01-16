@@ -18,7 +18,7 @@
   /**
    * The TransferenciaBancariaResponse model module.
    * @module model/TransferenciaBancariaResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

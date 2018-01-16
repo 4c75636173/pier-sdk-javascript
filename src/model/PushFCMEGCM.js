@@ -18,7 +18,7 @@
   /**
    * The PushFCMEGCM model module.
    * @module model/PushFCMEGCM
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

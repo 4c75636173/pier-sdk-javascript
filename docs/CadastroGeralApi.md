@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**alterarUsingPUT2**](CadastroGeralApi.md#alterarUsingPUT2) | **PUT** /api/campanhas/{id} | Alterar campanha
 [**alterarUsingPUT3**](CadastroGeralApi.md#alterarUsingPUT3) | **PUT** /api/configuracoes-registro-cobranca/{id} | Atualizar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**alterarUsingPUT4**](CadastroGeralApi.md#alterarUsingPUT4) | **PUT** /api/configuracoes-rotativos/{id} | Alterar os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
-[**ativarUsoExteriorUsingPOST**](CadastroGeralApi.md#ativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/ativar-uso-exterior | Ativa o par\u00C3\u00A2metro uso exterior para o produto
 [**cadastrarUsingPOST1**](CadastroGeralApi.md#cadastrarUsingPOST1) | **POST** /api/configuracoes-registro-cobranca | Inserir configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**configurarTaxaAntecipacaoUsingPOST**](CadastroGeralApi.md#configurarTaxaAntecipacaoUsingPOST) | **POST** /api/produtos/{id}/configurar-taxa-antecipacao | Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**consultarCampanhaUsingGET**](CadastroGeralApi.md#consultarCampanhaUsingGET) | **GET** /api/campanhas/{id} | Consultar campanha
@@ -23,7 +22,6 @@ Method | HTTP request | Description
 [**consultarUsingGET4**](CadastroGeralApi.md#consultarUsingGET4) | **GET** /api/bancos/{id} | Apresenta os dados de um determinado Banco
 [**consultarUsingGET8**](CadastroGeralApi.md#consultarUsingGET8) | **GET** /api/configuracoes-registro-cobranca/{id} | Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
 [**consultarUsingGET9**](CadastroGeralApi.md#consultarUsingGET9) | **GET** /api/configuracoes-rotativos/{id} | Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-[**desativarUsoExteriorUsingPOST**](CadastroGeralApi.md#desativarUsoExteriorUsingPOST) | **POST** /api/produtos/{id}/desativar-uso-exterior | Desativa o par\u00C3\u00A2metro uso exterior para o produto
 [**listarCampanhasUsingGET**](CadastroGeralApi.md#listarCampanhasUsingGET) | **GET** /api/campanhas | Listar Campanhas
 [**listarContasPorPessoaUsingGET**](CadastroGeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | Lista as contas da pessoa
 [**listarEstadosCivisUsingGET**](CadastroGeralApi.md#listarEstadosCivisUsingGET) | **GET** /api/estados-civis | Lista os Estados C\u00C3\u00ADvis
@@ -187,52 +185,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="ativarUsoExteriorUsingPOST"></a>
-# **ativarUsoExteriorUsingPOST**
-> ProdutoDetalhesResponse ativarUsoExteriorUsingPOST(id)
-
-Ativa o par\u00C3\u00A2metro uso exterior para o produto
-
-Este m\u00C3\u00A9todo permite ativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.ativarUsoExteriorUsingPOST(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
-
-### Return type
-
-[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
 
 ### Authorization
 
@@ -955,52 +907,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConfiguracaoRotativoDetalheResponse**](ConfiguracaoRotativoDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="desativarUsoExteriorUsingPOST"></a>
-# **desativarUsoExteriorUsingPOST**
-> ProdutoDetalhesResponse desativarUsoExteriorUsingPOST(id)
-
-Desativa o par\u00C3\u00A2metro uso exterior para o produto
-
-Este m\u00C3\u00A9todo permite desativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.desativarUsoExteriorUsingPOST(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id) | 
-
-### Return type
-
-[**ProdutoDetalhesResponse**](ProdutoDetalhesResponse.md)
 
 ### Authorization
 

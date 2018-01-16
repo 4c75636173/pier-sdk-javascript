@@ -18,7 +18,7 @@
   /**
    * The JobResponse model module.
    * @module model/JobResponse
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**

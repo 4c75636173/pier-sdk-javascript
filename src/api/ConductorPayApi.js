@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.49.5
+   * @version 2.50.11
    */
 
   /**
