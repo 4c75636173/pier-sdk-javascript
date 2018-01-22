@@ -18,7 +18,7 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -64,9 +63,6 @@
       if (data.hasOwnProperty('ultimaParcelaLancada')) {
         obj['ultimaParcelaLancada'] = ApiClient.convertToType(data['ultimaParcelaLancada'], 'Integer');
       }
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
@@ -101,7 +97,7 @@
         obj['valorParcela'] = ApiClient.convertToType(data['valorParcela'], 'Number');
       }
       if (data.hasOwnProperty('dataEvento')) {
-        obj['dataEvento'] = ApiClient.convertToType(data['dataEvento'], 'Date');
+        obj['dataEvento'] = ApiClient.convertToType(data['dataEvento'], 'String');
       }
       if (data.hasOwnProperty('estabelecimento')) {
         obj['estabelecimento'] = ApiClient.convertToType(data['estabelecimento'], 'String');
@@ -129,12 +125,6 @@
   exports.prototype['ultimaParcelaLancada'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
-   * @member {Integer} id
-   */
-  exports.prototype['id'] = undefined;
-
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @member {Integer} idConta
    */
@@ -159,66 +149,79 @@
   exports.prototype['idTransacao'] = undefined;
 
   /**
+   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
+   * Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
+   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {String} descricaoStatus
    */
   exports.prototype['descricaoStatus'] = undefined;
 
   /**
+   * Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
+   * Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Number} valorDolar
    */
   exports.prototype['valorDolar'] = undefined;
 
   /**
+   * Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
+   * Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * @member {Date} dataEvento
+   * Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
+   * @member {String} dataEvento
    */
   exports.prototype['dataEvento'] = undefined;
 
   /**
+   * Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {String} estabelecimento
    */
   exports.prototype['estabelecimento'] = undefined;
 
   /**
+   * Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
    * @member {Integer} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
+   * Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {String} tipoEstabelecimento
    */
   exports.prototype['tipoEstabelecimento'] = undefined;
 
   /**
+   * Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
+   * Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
    * @member {Integer} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;

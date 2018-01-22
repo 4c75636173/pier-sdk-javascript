@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelDate'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelDate'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TransferenciaBancariaPersist = factory(root.Pier.ApiClient, root.Pier.ModelDate);
+    root.Pier.TransferenciaBancariaPersist = factory(root.Pier.ApiClient);
   }
-}(this, function(ApiClient, ModelDate) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The TransferenciaBancariaPersist model module.
    * @module model/TransferenciaBancariaPersist
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -26,24 +26,19 @@
    * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
    * @alias module:model/TransferenciaBancariaPersist
    * @class
-   * @param dataCompra
-   * @param proximoVencimentoPadrao
-   * @param proximoVencimentoReal
    * @param valorCompra
-   * @param nomeFavorecido
+   * @param valor
    * @param documentoFavorecido
    * @param banco
    * @param numeroAgencia
    * @param numeroConta
    * @param flagContaPoupanca
+   * @param nomeFavorecido
    */
-  var exports = function(dataCompra, proximoVencimentoPadrao, proximoVencimentoReal, valorCompra, nomeFavorecido, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca) {
+  var exports = function(valorCompra, valor, documentoFavorecido, banco, numeroAgencia, numeroConta, flagContaPoupanca, nomeFavorecido) {
 
-    this['dataCompra'] = dataCompra;
-    this['proximoVencimentoPadrao'] = proximoVencimentoPadrao;
-    this['proximoVencimentoReal'] = proximoVencimentoReal;
     this['valorCompra'] = valorCompra;
-    this['nomeFavorecido'] = nomeFavorecido;
+    this['valor'] = valor;
     this['documentoFavorecido'] = documentoFavorecido;
     this['banco'] = banco;
     this['numeroAgencia'] = numeroAgencia;
@@ -51,6 +46,7 @@
     this['numeroConta'] = numeroConta;
 
     this['flagContaPoupanca'] = flagContaPoupanca;
+    this['nomeFavorecido'] = nomeFavorecido;
   };
 
   /**
@@ -64,20 +60,11 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('dataCompra')) {
-        obj['dataCompra'] = ApiClient.convertToType(data['dataCompra'], ModelDate);
-      }
-      if (data.hasOwnProperty('proximoVencimentoPadrao')) {
-        obj['proximoVencimentoPadrao'] = ApiClient.convertToType(data['proximoVencimentoPadrao'], ModelDate);
-      }
-      if (data.hasOwnProperty('proximoVencimentoReal')) {
-        obj['proximoVencimentoReal'] = ApiClient.convertToType(data['proximoVencimentoReal'], ModelDate);
-      }
       if (data.hasOwnProperty('valorCompra')) {
         obj['valorCompra'] = ApiClient.convertToType(data['valorCompra'], 'Number');
       }
-      if (data.hasOwnProperty('nomeFavorecido')) {
-        obj['nomeFavorecido'] = ApiClient.convertToType(data['nomeFavorecido'], 'String');
+      if (data.hasOwnProperty('valor')) {
+        obj['valor'] = ApiClient.convertToType(data['valor'], 'Number');
       }
       if (data.hasOwnProperty('documentoFavorecido')) {
         obj['documentoFavorecido'] = ApiClient.convertToType(data['documentoFavorecido'], 'String');
@@ -100,28 +87,13 @@
       if (data.hasOwnProperty('flagContaPoupanca')) {
         obj['flagContaPoupanca'] = ApiClient.convertToType(data['flagContaPoupanca'], 'Integer');
       }
+      if (data.hasOwnProperty('nomeFavorecido')) {
+        obj['nomeFavorecido'] = ApiClient.convertToType(data['nomeFavorecido'], 'String');
+      }
     }
     return obj;
   }
 
-
-  /**
-   * Data da transfer\u00C3\u00AAncia
-   * @member {module:model/ModelDate} dataCompra
-   */
-  exports.prototype['dataCompra'] = undefined;
-
-  /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura
-   * @member {module:model/ModelDate} proximoVencimentoPadrao
-   */
-  exports.prototype['proximoVencimentoPadrao'] = undefined;
-
-  /**
-   * Data do vencimento real da fatura
-   * @member {module:model/ModelDate} proximoVencimentoReal
-   */
-  exports.prototype['proximoVencimentoReal'] = undefined;
 
   /**
    * Valor da transfer\u00C3\u00AAncia
@@ -130,10 +102,10 @@
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
-   * @member {String} nomeFavorecido
+   * Valor da transfer\u00C3\u00AAncia
+   * @member {Number} valor
    */
-  exports.prototype['nomeFavorecido'] = undefined;
+  exports.prototype['valor'] = undefined;
 
   /**
    * N\u00C3\u00BAmero do CPF ou CNPJ.
@@ -176,6 +148,12 @@
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
+
+  /**
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * @member {String} nomeFavorecido
+   */
+  exports.prototype['nomeFavorecido'] = undefined;
 
 
 

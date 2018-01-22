@@ -1,29 +1,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Telefone'], factory);
+    define(['../ApiClient', './TelefoneResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Telefone'));
+    module.exports = factory(require('../ApiClient'), require('./TelefoneResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient, root.Pier.Telefone);
+    root.Pier.RiscoFraudeDetalhadoResponse = factory(root.Pier.ApiClient, root.Pier.TelefoneResponse);
   }
-}(this, function(ApiClient, Telefone) {
+}(this, function(ApiClient, TelefoneResponse) {
   'use strict';
 
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
    * Constructs a new <code>RiscoFraudeDetalhadoResponse</code>.
-   * Par\u00C3\u00A2metros de resposta de risco de fraude detalhado
+   * Objeto de resposta de Risco de Fraude Detalhado
    * @alias module:model/RiscoFraudeDetalhadoResponse
    * @class
    */
@@ -94,7 +94,7 @@
         obj['idTransacao'] = ApiClient.convertToType(data['idTransacao'], 'Integer');
       }
       if (data.hasOwnProperty('dataTransacao')) {
-        obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'Date');
+        obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'String');
       }
       if (data.hasOwnProperty('valorTransacao')) {
         obj['valorTransacao'] = ApiClient.convertToType(data['valorTransacao'], 'Number');
@@ -148,7 +148,7 @@
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('tefefones')) {
-        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [Telefone]);
+        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [TelefoneResponse]);
       }
     }
     return obj;
@@ -156,13 +156,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
    * @member {Integer} idTipoResolucao
    */
   exports.prototype['idTipoResolucao'] = undefined;
@@ -174,38 +174,38 @@
   exports.prototype['descricaoTipoResolucao'] = undefined;
 
   /**
-   * Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude ser\u00C3\u00A3o analisadas
+   * Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
    * @member {Boolean} flagAltoRisco
    */
   exports.prototype['flagAltoRisco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o (id)
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
    * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
-   * @member {Date} dataTransacao
+   * @member {String} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
 
@@ -234,7 +234,7 @@
   exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
    * @member {Number} valorDestino
    */
   exports.prototype['valorDestino'] = undefined;
@@ -312,8 +312,8 @@
   exports.prototype['email'] = undefined;
 
   /**
-   * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
-   * @member {Array.<module:model/Telefone>} tefefones
+   * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+   * @member {Array.<module:model/TelefoneResponse>} tefefones
    */
   exports.prototype['tefefones'] = undefined;
 

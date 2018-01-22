@@ -18,7 +18,7 @@
   /**
    * The EnderecoAprovadoPersist model module.
    * @module model/EnderecoAprovadoPersist
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -26,20 +26,24 @@
    * Objeto Endere\u00C3\u00A7o Aprovado
    * @alias module:model/EnderecoAprovadoPersist
    * @class
+   * @param idTipoEndereco
+   * @param cidade
+   * @param uf
+   * @param enderecoCorrespondencia
    */
-  var exports = function() {
+  var exports = function(idTipoEndereco, cidade, uf, enderecoCorrespondencia) {
+
+    this['idTipoEndereco'] = idTipoEndereco;
 
 
 
 
 
 
+    this['cidade'] = cidade;
+    this['uf'] = uf;
 
-
-
-
-
-
+    this['enderecoCorrespondencia'] = enderecoCorrespondencia;
   };
 
   /**

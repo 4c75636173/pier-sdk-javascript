@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -26,24 +26,8 @@
    * Objeto conta
    * @alias module:model/ContaDetalheResponse
    * @class
-   * @param nome
-   * @param nomeOrigemComercial
-   * @param nomeFantasiaBasica
-   * @param limiteGlobal
-   * @param limiteSaqueGlobal
-   * @param saldoDisponivelGlobal
-   * @param saldoDisponivelSaque
    */
-  var exports = function(nome, nomeOrigemComercial, nomeFantasiaBasica, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque) {
-
-
-
-    this['nome'] = nome;
-
-
-    this['nomeOrigemComercial'] = nomeOrigemComercial;
-
-    this['nomeFantasiaBasica'] = nomeFantasiaBasica;
+  var exports = function() {
 
 
 
@@ -57,10 +41,19 @@
 
 
 
-    this['limiteGlobal'] = limiteGlobal;
-    this['limiteSaqueGlobal'] = limiteSaqueGlobal;
-    this['saldoDisponivelGlobal'] = saldoDisponivelGlobal;
-    this['saldoDisponivelSaque'] = saldoDisponivelSaque;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   };
 
@@ -112,19 +105,19 @@
         obj['melhorDiaCompra'] = ApiClient.convertToType(data['melhorDiaCompra'], 'Integer');
       }
       if (data.hasOwnProperty('dataStatusConta')) {
-        obj['dataStatusConta'] = ApiClient.convertToType(data['dataStatusConta'], 'Date');
+        obj['dataStatusConta'] = ApiClient.convertToType(data['dataStatusConta'], 'String');
       }
       if (data.hasOwnProperty('valorRenda')) {
         obj['valorRenda'] = ApiClient.convertToType(data['valorRenda'], 'Number');
       }
       if (data.hasOwnProperty('dataCadastro')) {
-        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'Date');
+        obj['dataCadastro'] = ApiClient.convertToType(data['dataCadastro'], 'String');
       }
       if (data.hasOwnProperty('dataUltimaAlteracaoVencimento')) {
-        obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'Date');
+        obj['dataUltimaAlteracaoVencimento'] = ApiClient.convertToType(data['dataUltimaAlteracaoVencimento'], 'String');
       }
       if (data.hasOwnProperty('dataHoraUltimaCompra')) {
-        obj['dataHoraUltimaCompra'] = ApiClient.convertToType(data['dataHoraUltimaCompra'], 'Date');
+        obj['dataHoraUltimaCompra'] = ApiClient.convertToType(data['dataHoraUltimaCompra'], 'String');
       }
       if (data.hasOwnProperty('numeroAgencia')) {
         obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
@@ -207,7 +200,7 @@
   exports.prototype['nomeFantasiaBasica'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
@@ -232,7 +225,7 @@
 
   /**
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-   * @member {Date} dataStatusConta
+   * @member {String} dataStatusConta
    */
   exports.prototype['dataStatusConta'] = undefined;
 
@@ -244,19 +237,19 @@
 
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   * @member {Date} dataCadastro
+   * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   * @member {Date} dataUltimaAlteracaoVencimento
+   * @member {String} dataUltimaAlteracaoVencimento
    */
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   * @member {Date} dataHoraUltimaCompra
+   * @member {String} dataHoraUltimaCompra
    */
   exports.prototype['dataHoraUltimaCompra'] = undefined;
 

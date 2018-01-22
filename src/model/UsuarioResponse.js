@@ -18,7 +18,7 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -76,10 +76,10 @@
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
       if (data.hasOwnProperty('dataCriacao')) {
-        obj['dataCriacao'] = ApiClient.convertToType(data['dataCriacao'], 'Date');
+        obj['dataCriacao'] = ApiClient.convertToType(data['dataCriacao'], 'String');
       }
       if (data.hasOwnProperty('dataModificacao')) {
-        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'Date');
+        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'String');
       }
       if (data.hasOwnProperty('tentativasIncorretas')) {
         obj['tentativasIncorretas'] = ApiClient.convertToType(data['tentativasIncorretas'], 'Integer');
@@ -133,13 +133,13 @@
 
   /**
    * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
-   * @member {Date} dataCriacao
+   * @member {String} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
    * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
-   * @member {Date} dataModificacao
+   * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;
 
@@ -157,16 +157,16 @@
    */
   exports.StatusEnum = { 
     /**
-     * value: ATIVO
-     * @const
-     */
-    ATIVO: "ATIVO",
-    
-    /**
      * value: INATIVO
      * @const
      */
-    INATIVO: "INATIVO"
+    INATIVO: "INATIVO",
+    
+    /**
+     * value: ATIVO
+     * @const
+     */
+    ATIVO: "ATIVO"
   };
 
   return exports;

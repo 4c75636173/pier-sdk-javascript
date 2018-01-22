@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './FaturaResponse', './TransacoesCorrentes'], factory);
+    define(['../ApiClient', './FaturaFechadaResponse', './TransacoesCorrentesResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./FaturaResponse'), require('./TransacoesCorrentes'));
+    module.exports = factory(require('../ApiClient'), require('./FaturaFechadaResponse'), require('./TransacoesCorrentesResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.DetalhesFaturaResponse = factory(root.Pier.ApiClient, root.Pier.FaturaResponse, root.Pier.TransacoesCorrentes);
+    root.Pier.DetalhesFaturaResponse = factory(root.Pier.ApiClient, root.Pier.FaturaFechadaResponse, root.Pier.TransacoesCorrentesResponse);
   }
-}(this, function(ApiClient, FaturaResponse, TransacoesCorrentes) {
+}(this, function(ApiClient, FaturaFechadaResponse, TransacoesCorrentesResponse) {
   'use strict';
 
   /**
    * The DetalhesFaturaResponse model module.
    * @module model/DetalhesFaturaResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -45,10 +45,10 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('fatura')) {
-        obj['fatura'] = FaturaResponse.constructFromObject(data['fatura']);
+        obj['fatura'] = FaturaFechadaResponse.constructFromObject(data['fatura']);
       }
       if (data.hasOwnProperty('transacoes')) {
-        obj['transacoes'] = ApiClient.convertToType(data['transacoes'], [TransacoesCorrentes]);
+        obj['transacoes'] = ApiClient.convertToType(data['transacoes'], [TransacoesCorrentesResponse]);
       }
     }
     return obj;
@@ -57,13 +57,13 @@
 
   /**
    * Apresenta os detalhes da fatura
-   * @member {module:model/FaturaResponse} fatura
+   * @member {module:model/FaturaFechadaResponse} fatura
    */
   exports.prototype['fatura'] = undefined;
 
   /**
    * Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
-   * @member {Array.<module:model/TransacoesCorrentes>} transacoes
+   * @member {Array.<module:model/TransacoesCorrentesResponse>} transacoes
    */
   exports.prototype['transacoes'] = undefined;
 

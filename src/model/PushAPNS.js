@@ -18,7 +18,7 @@
   /**
    * The PushAPNS model module.
    * @module model/PushAPNS
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -167,6 +167,12 @@
      * @const
      */
     RISCO_FRAUDE: "RISCO_FRAUDE",
+    
+    /**
+     * value: CODIGO_SEGURANCA
+     * @const
+     */
+    CODIGO_SEGURANCA: "CODIGO_SEGURANCA",
     
     /**
      * value: OUTROS

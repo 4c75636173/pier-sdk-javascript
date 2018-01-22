@@ -18,7 +18,7 @@
   /**
    * The ProdutoDetalhesResponse model module.
    * @module model/ProdutoDetalhesResponse
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -35,6 +35,7 @@
     this['id'] = id;
     this['nome'] = nome;
     this['status'] = status;
+
 
 
   };
@@ -64,6 +65,9 @@
       }
       if (data.hasOwnProperty('fantasiaBasica')) {
         obj['fantasiaBasica'] = ApiClient.convertToType(data['fantasiaBasica'], 'String');
+      }
+      if (data.hasOwnProperty('usoExterior')) {
+        obj['usoExterior'] = ApiClient.convertToType(data['usoExterior'], 'Boolean');
       }
     }
     return obj;
@@ -99,6 +103,12 @@
    * @member {String} fantasiaBasica
    */
   exports.prototype['fantasiaBasica'] = undefined;
+
+  /**
+   * Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+   * @member {Boolean} usoExterior
+   */
+  exports.prototype['usoExterior'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The TelefonePessoaAprovadaPersist model module.
    * @module model/TelefonePessoaAprovadaPersist
-   * @version 2.15.5
+   * @version 2.50.14
    */
 
   /**
@@ -26,12 +26,15 @@
    * Objeto Telefone Pessoa Aprovada
    * @alias module:model/TelefonePessoaAprovadaPersist
    * @class
+   * @param idTipoTelefone
+   * @param ddd
+   * @param telefone
    */
-  var exports = function() {
+  var exports = function(idTipoTelefone, ddd, telefone) {
 
-
-
-
+    this['idTipoTelefone'] = idTipoTelefone;
+    this['ddd'] = ddd;
+    this['telefone'] = telefone;
 
   };
 
