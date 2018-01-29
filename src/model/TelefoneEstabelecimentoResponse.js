@@ -18,7 +18,7 @@
   /**
    * The TelefoneEstabelecimentoResponse model module.
    * @module model/TelefoneEstabelecimentoResponse
-   * @version 2.50.11
+   * @version 2.50.17
    */
 
   /**

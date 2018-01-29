@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoEmailResponse model module.
    * @module model/ConfiguracaoEmailResponse
-   * @version 2.50.11
+   * @version 2.50.17
    */
 
   /**

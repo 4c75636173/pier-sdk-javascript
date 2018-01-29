@@ -18,7 +18,7 @@
   /**
    * The TipoOportunidade model module.
    * @module model/TipoOportunidade
-   * @version 2.50.11
+   * @version 2.50.17
    */
 
   /**
