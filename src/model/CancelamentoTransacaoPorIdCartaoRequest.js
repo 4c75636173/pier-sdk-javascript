@@ -18,7 +18,7 @@
   /**
    * The CancelamentoTransacaoPorIdCartaoRequest model module.
    * @module model/CancelamentoTransacaoPorIdCartaoRequest
-   * @version 2.50.11
+   * @version 2.50.15
    */
 
   /**
