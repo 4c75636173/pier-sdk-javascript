@@ -18,7 +18,7 @@
   /**
    * The PageTerminalResponse model module.
    * @module model/PageTerminalResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The EmprestimoPessoalResponse model module.
    * @module model/EmprestimoPessoalResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

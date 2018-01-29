@@ -18,7 +18,7 @@
   /**
    * The TransferenciaCreditoContaBancariaResponse model module.
    * @module model/TransferenciaCreditoContaBancariaResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

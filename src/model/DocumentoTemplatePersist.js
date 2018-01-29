@@ -18,7 +18,7 @@
   /**
    * The DocumentoTemplatePersist model module.
    * @module model/DocumentoTemplatePersist
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

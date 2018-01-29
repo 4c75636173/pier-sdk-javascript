@@ -18,7 +18,7 @@
   /**
    * The CampanhaPersist model module.
    * @module model/CampanhaPersist
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

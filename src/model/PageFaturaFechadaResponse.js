@@ -18,7 +18,7 @@
   /**
    * The PageFaturaFechadaResponse model module.
    * @module model/PageFaturaFechadaResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

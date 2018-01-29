@@ -18,7 +18,7 @@
   /**
    * Limite service.
    * @module api/LimiteApi
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The IntegracaoEmissorPersist model module.
    * @module model/IntegracaoEmissorPersist
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

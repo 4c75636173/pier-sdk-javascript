@@ -18,7 +18,7 @@
   /**
    * The PlanoCampanhaResponse model module.
    * @module model/PlanoCampanhaResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

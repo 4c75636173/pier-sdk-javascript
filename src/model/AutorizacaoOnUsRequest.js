@@ -18,7 +18,7 @@
   /**
    * The AutorizacaoOnUsRequest model module.
    * @module model/AutorizacaoOnUsRequest
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

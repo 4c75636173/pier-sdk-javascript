@@ -18,7 +18,7 @@
   /**
    * The CartaoPayDetalheResponse model module.
    * @module model/CartaoPayDetalheResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**

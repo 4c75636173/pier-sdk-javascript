@@ -18,7 +18,7 @@
   /**
    * The ArquivoResponse model module.
    * @module model/ArquivoResponse
-   * @version 2.50.11
+   * @version 2.50.18
    */
 
   /**
