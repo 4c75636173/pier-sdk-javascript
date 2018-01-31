@@ -18,7 +18,7 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

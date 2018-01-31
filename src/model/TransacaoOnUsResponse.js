@@ -18,7 +18,7 @@
   /**
    * The TransacaoOnUsResponse model module.
    * @module model/TransacaoOnUsResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

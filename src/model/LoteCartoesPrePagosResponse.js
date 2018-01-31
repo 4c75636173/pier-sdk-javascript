@@ -18,7 +18,7 @@
   /**
    * The LoteCartoesPrePagosResponse model module.
    * @module model/LoteCartoesPrePagosResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**
@@ -36,8 +36,9 @@
    * @param dataCadastro
    * @param usuarioCadastro
    * @param statusProcessamento
+   * @param identificadorExterno
    */
-  var exports = function(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento) {
+  var exports = function(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno) {
 
     this['id'] = id;
     this['idOrigemComercial'] = idOrigemComercial;
@@ -49,6 +50,7 @@
     this['dataCadastro'] = dataCadastro;
     this['usuarioCadastro'] = usuarioCadastro;
     this['statusProcessamento'] = statusProcessamento;
+    this['identificadorExterno'] = identificadorExterno;
   };
 
   /**
@@ -91,6 +93,9 @@
       }
       if (data.hasOwnProperty('statusProcessamento')) {
         obj['statusProcessamento'] = ApiClient.convertToType(data['statusProcessamento'], 'Integer');
+      }
+      if (data.hasOwnProperty('identificadorExterno')) {
+        obj['identificadorExterno'] = ApiClient.convertToType(data['identificadorExterno'], 'String');
       }
     }
     return obj;
@@ -156,6 +161,12 @@
    * @member {Integer} statusProcessamento
    */
   exports.prototype['statusProcessamento'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+   * @member {String} identificadorExterno
+   */
+  exports.prototype['identificadorExterno'] = undefined;
 
 
 

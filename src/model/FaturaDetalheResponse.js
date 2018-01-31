@@ -18,7 +18,7 @@
   /**
    * The FaturaDetalheResponse model module.
    * @module model/FaturaDetalheResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

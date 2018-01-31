@@ -18,7 +18,7 @@
   /**
    * The PlataformaMobilePersist model module.
    * @module model/PlataformaMobilePersist
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

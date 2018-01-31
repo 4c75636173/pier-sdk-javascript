@@ -18,7 +18,7 @@
   /**
    * The OportunidadeResponse model module.
    * @module model/OportunidadeResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

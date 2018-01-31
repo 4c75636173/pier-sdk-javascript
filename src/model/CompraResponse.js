@@ -18,7 +18,7 @@
   /**
    * The CompraResponse model module.
    * @module model/CompraResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

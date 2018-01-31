@@ -18,7 +18,7 @@
   /**
    * The PageSMSResponse model module.
    * @module model/PageSMSResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

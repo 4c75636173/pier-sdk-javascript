@@ -719,7 +719,8 @@ var opts = {
   'idTipoCartao': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
   'idImagem': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
   'idEndereco': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-  'quantidadeCartoes': 56 // {Integer} N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+  'quantidadeCartoes': 56, // {Integer} N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+  'identificadorExterno': "identificadorExterno_example" // {String} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
 };
 
 var callback = function(error, data, response) {
@@ -742,6 +743,7 @@ Name | Type | Description  | Notes
  **idImagem** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id). | [optional] 
  **idEndereco** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id). | [optional] 
  **quantidadeCartoes** | **Integer**| N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote. | [optional] 
+ **identificadorExterno** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | [optional] 
 
 ### Return type
 
@@ -874,7 +876,8 @@ var opts = {
   'quantidadeCartoes': 56, // {Integer} N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
   'dataCadastro': "dataCadastro_example", // {String} Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
   'usuarioCadastro': "usuarioCadastro_example", // {String} Nome do Usu\u00C3\u00A1rio que criou o Lote.
-  'statusProcessamento': 56 // {Integer} Indica o Status de Processamento do Lote.
+  'statusProcessamento': 56, // {Integer} Indica o Status de Processamento do Lote.
+  'identificadorExterno': "identificadorExterno_example" // {String} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
 };
 
 var callback = function(error, data, response) {
@@ -903,6 +906,7 @@ Name | Type | Description  | Notes
  **dataCadastro** | **String**| Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais. | [optional] 
  **usuarioCadastro** | **String**| Nome do Usu\u00C3\u00A1rio que criou o Lote. | [optional] 
  **statusProcessamento** | **Integer**| Indica o Status de Processamento do Lote. | [optional] 
+ **identificadorExterno** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | [optional] 
 
 ### Return type
 

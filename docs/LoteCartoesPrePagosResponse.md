@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **dataCadastro** | **String** | Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos. | 
 **usuarioCadastro** | **String** | Nome do usu\u00C3\u00A1rio que criou o lote. | 
 **statusProcessamento** | **Integer** | Indica o status de processamento do lote. | 
+**identificadorExterno** | **String** | N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor). | 
 
 

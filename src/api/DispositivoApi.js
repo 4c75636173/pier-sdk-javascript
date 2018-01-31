@@ -18,7 +18,7 @@
   /**
    * Dispositivo service.
    * @module api/DispositivoApi
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

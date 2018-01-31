@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

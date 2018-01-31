@@ -18,7 +18,7 @@
   /**
    * The ProdutoResponse model module.
    * @module model/ProdutoResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

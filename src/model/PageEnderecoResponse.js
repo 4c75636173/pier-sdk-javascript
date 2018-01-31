@@ -18,7 +18,7 @@
   /**
    * The PageEnderecoResponse model module.
    * @module model/PageEnderecoResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

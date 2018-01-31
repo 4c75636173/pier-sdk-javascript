@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**
@@ -750,6 +750,7 @@
      * @param {Integer} opts.idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
      * @param {Integer} opts.idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
      * @param {Integer} opts.quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+     * @param {String} opts.identificadorExterno N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
      * @param {module:api/CartaoApi~gerarLotesCartoesPrePagosUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LoteCartoesPrePagosResponse}
      */
@@ -766,7 +767,8 @@
         'idTipoCartao': opts['idTipoCartao'],
         'idImagem': opts['idImagem'],
         'idEndereco': opts['idEndereco'],
-        'quantidadeCartoes': opts['quantidadeCartoes']
+        'quantidadeCartoes': opts['quantidadeCartoes'],
+        'identificadorExterno': opts['identificadorExterno']
       };
       var headerParams = {
       };
@@ -901,6 +903,7 @@
      * @param {String} opts.dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
      * @param {String} opts.usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
      * @param {Integer} opts.statusProcessamento Indica o Status de Processamento do Lote.
+     * @param {String} opts.identificadorExterno N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
      * @param {module:api/CartaoApi~listarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageLoteCartoesPrePagosResponse}
      */
@@ -923,7 +926,8 @@
         'quantidadeCartoes': opts['quantidadeCartoes'],
         'dataCadastro': opts['dataCadastro'],
         'usuarioCadastro': opts['usuarioCadastro'],
-        'statusProcessamento': opts['statusProcessamento']
+        'statusProcessamento': opts['statusProcessamento'],
+        'identificadorExterno': opts['identificadorExterno']
       };
       var headerParams = {
       };

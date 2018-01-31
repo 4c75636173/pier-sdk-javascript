@@ -18,7 +18,7 @@
   /**
    * The GradePendenteRequest model module.
    * @module model/GradePendenteRequest
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**

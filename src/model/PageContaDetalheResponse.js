@@ -18,7 +18,7 @@
   /**
    * The PageContaDetalheResponse model module.
    * @module model/PageContaDetalheResponse
-   * @version 2.50.18
+   * @version 2.50.19
    */
 
   /**
