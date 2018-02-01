@@ -18,7 +18,7 @@
   /**
    * The PagePlataformaMobileResponse model module.
    * @module model/PagePlataformaMobileResponse
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**

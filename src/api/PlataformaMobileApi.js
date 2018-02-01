@@ -18,7 +18,7 @@
   /**
    * PlataformaMobile service.
    * @module api/PlataformaMobileApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET26 operation.
-     * @callback module:api/PlataformaMobileApi~listarUsingGET26Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/PlataformaMobileApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -100,10 +100,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome da Plataforma Mobile
-     * @param {module:api/PlataformaMobileApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformaMobileApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePlataformaMobileResponse}
      */
-    this.listarUsingGET26 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -134,8 +134,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST18 operation.
-     * @callback module:api/PlataformaMobileApi~salvarUsingPOST18Callback
+     * Callback function to receive the result of the salvarUsingPOST20 operation.
+     * @callback module:api/PlataformaMobileApi~salvarUsingPOST20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -145,15 +145,15 @@
      * Cadastra Plataforma Mobile
      * Esse recurso permite cadastrar plataformas mobile.
      * @param {module:model/PlataformaMobilePersist} persist persist
-     * @param {module:api/PlataformaMobileApi~salvarUsingPOST18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformaMobileApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlataformaMobileResponse}
      */
-    this.salvarUsingPOST18 = function(persist, callback) {
+    this.salvarUsingPOST20 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST18";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST20";
       }
 
 

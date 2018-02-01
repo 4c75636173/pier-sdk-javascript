@@ -18,7 +18,7 @@
   /**
    * Documento service.
    * @module api/DocumentoApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT17 operation.
-     * @callback module:api/DocumentoApi~alterarUsingPUT17Callback
+     * Callback function to receive the result of the alterarUsingPUT19 operation.
+     * @callback module:api/DocumentoApi~alterarUsingPUT19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -45,20 +45,20 @@
      * Esse recurso permite alterar os dados do tipo de template.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
      * @param {module:model/TipoTemplateRequest} persist persist
-     * @param {module:api/DocumentoApi~alterarUsingPUT17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~alterarUsingPUT19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.alterarUsingPUT17 = function(id, persist, callback) {
+    this.alterarUsingPUT19 = function(id, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling alterarUsingPUT17";
+        throw "Missing the required parameter 'id' when calling alterarUsingPUT19";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling alterarUsingPUT17";
+        throw "Missing the required parameter 'persist' when calling alterarUsingPUT19";
       }
 
 
@@ -137,8 +137,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -148,15 +148,15 @@
      * Consulta documentos
      * Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -183,8 +183,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -194,15 +194,15 @@
      * Consultar templates dos documentos
      * Esse recurso permite consultar templates dos documentos.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -229,8 +229,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET36 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET36Callback
+     * Callback function to receive the result of the consultarUsingGET37 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -240,15 +240,15 @@
      * Consultar tipo de template
      * Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.consultarUsingGET36 = function(id, callback) {
+    this.consultarUsingGET37 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
       }
 
 
@@ -320,8 +320,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -337,10 +337,10 @@
      * @param {Integer} opts.idTemplateDocumento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
      * @param {String} opts.nome Nome do documento.
      * @param {module:model/String} opts.extensao Extensao do documento.
-     * @param {module:api/DocumentoApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoResponse}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET15 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +373,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET16 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -388,10 +388,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
-     * @param {module:api/DocumentoApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoTemplateResponse}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -422,8 +422,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET40 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET40Callback
+     * Callback function to receive the result of the listarUsingGET42 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -436,10 +436,10 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/DocumentoApi~listarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTemplateResponse}
      */
-    this.listarUsingGET40 = function(opts, callback) {
+    this.listarUsingGET42 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -514,8 +514,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST23 operation.
-     * @callback module:api/DocumentoApi~salvarUsingPOST23Callback
+     * Callback function to receive the result of the salvarUsingPOST25 operation.
+     * @callback module:api/DocumentoApi~salvarUsingPOST25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -525,15 +525,15 @@
      * Cadastra os tipos de templates
      * Esse recurso permite cadastrar tipos de templates.
      * @param {module:model/TipoTemplateRequest} persist persist
-     * @param {module:api/DocumentoApi~salvarUsingPOST23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~salvarUsingPOST25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.salvarUsingPOST23 = function(persist, callback) {
+    this.salvarUsingPOST25 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST23";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST25";
       }
 
 

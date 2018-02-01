@@ -1,9 +1,9 @@
-# Pier.PagePessoaJuridicaResponse
+# Pier.PageTipoTerminalResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[PessoaJuridicaResponse]**](PessoaJuridicaResponse.md) |  | [optional] 
+**content** | [**[TipoTerminalResponse]**](TipoTerminalResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

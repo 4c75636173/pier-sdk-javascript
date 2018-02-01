@@ -18,37 +18,43 @@
   /**
    * The OrigemComercialResponse model module.
    * @module model/OrigemComercialResponse
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
    * Constructs a new <code>OrigemComercialResponse</code>.
-   * Origem Comercial
+   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
    * @alias module:model/OrigemComercialResponse
    * @class
-   * @param id
-   * @param nome
-   * @param descricao
-   * @param produtosOrigem
-   * @param idEstabelecimento
-   * @param idTipoOrigemComercial
-   * @param nomeTipoOrigemComercial
-   * @param idGrupoOrigemComercial
-   * @param nomeGrupoOrigemComercial
-   * @param status
    */
-  var exports = function(id, nome, descricao, produtosOrigem, idEstabelecimento, idTipoOrigemComercial, nomeTipoOrigemComercial, idGrupoOrigemComercial, nomeGrupoOrigemComercial, status) {
+  var exports = function() {
 
-    this['id'] = id;
-    this['nome'] = nome;
-    this['descricao'] = descricao;
-    this['produtosOrigem'] = produtosOrigem;
-    this['idEstabelecimento'] = idEstabelecimento;
-    this['idTipoOrigemComercial'] = idTipoOrigemComercial;
-    this['nomeTipoOrigemComercial'] = nomeTipoOrigemComercial;
-    this['idGrupoOrigemComercial'] = idGrupoOrigemComercial;
-    this['nomeGrupoOrigemComercial'] = nomeGrupoOrigemComercial;
-    this['status'] = status;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
   /**
@@ -90,7 +96,55 @@
         obj['nomeGrupoOrigemComercial'] = ApiClient.convertToType(data['nomeGrupoOrigemComercial'], 'String');
       }
       if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'Boolean');
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
+      if (data.hasOwnProperty('flagPreAprovado')) {
+        obj['flagPreAprovado'] = ApiClient.convertToType(data['flagPreAprovado'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagAprovacaoImediata')) {
+        obj['flagAprovacaoImediata'] = ApiClient.convertToType(data['flagAprovacaoImediata'], 'Boolean');
+      }
+      if (data.hasOwnProperty('nomeFantasiaPlastico')) {
+        obj['nomeFantasiaPlastico'] = ApiClient.convertToType(data['nomeFantasiaPlastico'], 'String');
+      }
+      if (data.hasOwnProperty('flagCartaoProvisorio')) {
+        obj['flagCartaoProvisorio'] = ApiClient.convertToType(data['flagCartaoProvisorio'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagCartaoDefinitivo')) {
+        obj['flagCartaoDefinitivo'] = ApiClient.convertToType(data['flagCartaoDefinitivo'], 'Boolean');
+      }
+      if (data.hasOwnProperty('usuario')) {
+        obj['usuario'] = ApiClient.convertToType(data['usuario'], 'String');
+      }
+      if (data.hasOwnProperty('senha')) {
+        obj['senha'] = ApiClient.convertToType(data['senha'], 'String');
+      }
+      if (data.hasOwnProperty('flagOrigemExterna')) {
+        obj['flagOrigemExterna'] = ApiClient.convertToType(data['flagOrigemExterna'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagModificado')) {
+        obj['flagModificado'] = ApiClient.convertToType(data['flagModificado'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagEnviaFaturaUsuario')) {
+        obj['flagEnviaFaturaUsuario'] = ApiClient.convertToType(data['flagEnviaFaturaUsuario'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagCreditoFaturamento')) {
+        obj['flagCreditoFaturamento'] = ApiClient.convertToType(data['flagCreditoFaturamento'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagConcedeLimiteProvisorio')) {
+        obj['flagConcedeLimiteProvisorio'] = ApiClient.convertToType(data['flagConcedeLimiteProvisorio'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagDigitalizarDoc')) {
+        obj['flagDigitalizarDoc'] = ApiClient.convertToType(data['flagDigitalizarDoc'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagEmbossingLoja')) {
+        obj['flagEmbossingLoja'] = ApiClient.convertToType(data['flagEmbossingLoja'], 'Boolean');
+      }
+      if (data.hasOwnProperty('flagConsultaPrevia')) {
+        obj['flagConsultaPrevia'] = ApiClient.convertToType(data['flagConsultaPrevia'], 'Boolean');
+      }
+      if (data.hasOwnProperty('tipoPessoa')) {
+        obj['tipoPessoa'] = ApiClient.convertToType(data['tipoPessoa'], 'String');
       }
     }
     return obj;
@@ -98,7 +152,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial
+   * C\u00C3\u00B3digo identificador do OrigemComercial
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -116,7 +170,7 @@
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Lista de  ProdutosOrigem associados \u00C3\u00A0 Origem comercial
+   * Produtos da origem comercial
    * @member {Array.<module:model/ProdutoOrigemResponse>} produtosOrigem
    */
   exports.prototype['produtosOrigem'] = undefined;
@@ -140,25 +194,138 @@
   exports.prototype['nomeTipoOrigemComercial'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Grupo a qual a Origem Comercial pertence
+   * Identificador do grupo da origem comercial
    * @member {Integer} idGrupoOrigemComercial
    */
   exports.prototype['idGrupoOrigemComercial'] = undefined;
 
   /**
-   * Nome do Grupo a qual a Origem Comercial pertence
+   * Nome do grupo da origem comercial
    * @member {String} nomeGrupoOrigemComercial
    */
   exports.prototype['nomeGrupoOrigemComercial'] = undefined;
 
   /**
-   * Status da origem comercial
-   * @member {Boolean} status
+   * Indica o status da origem comercial
+   * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
+  /**
+   * Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+   * @member {Boolean} flagPreAprovado
+   */
+  exports.prototype['flagPreAprovado'] = undefined;
+
+  /**
+   * Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+   * @member {Boolean} flagAprovacaoImediata
+   */
+  exports.prototype['flagAprovacaoImediata'] = undefined;
+
+  /**
+   * Nome fantasia impresso no pl\u00C3\u00A1stico
+   * @member {String} nomeFantasiaPlastico
+   */
+  exports.prototype['nomeFantasiaPlastico'] = undefined;
+
+  /**
+   * Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+   * @member {Boolean} flagCartaoProvisorio
+   */
+  exports.prototype['flagCartaoProvisorio'] = undefined;
+
+  /**
+   * Indica se permite cart\u00C3\u00A3o definitivo
+   * @member {Boolean} flagCartaoDefinitivo
+   */
+  exports.prototype['flagCartaoDefinitivo'] = undefined;
+
+  /**
+   * Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+   * @member {String} usuario
+   */
+  exports.prototype['usuario'] = undefined;
+
+  /**
+   * Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+   * @member {String} senha
+   */
+  exports.prototype['senha'] = undefined;
+
+  /**
+   * Indica se \u00C3\u00A9 origem externa
+   * @member {Boolean} flagOrigemExterna
+   */
+  exports.prototype['flagOrigemExterna'] = undefined;
+
+  /**
+   * Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+   * @member {Boolean} flagModificado
+   */
+  exports.prototype['flagModificado'] = undefined;
+
+  /**
+   * Indica se envia fatura
+   * @member {Boolean} flagEnviaFaturaUsuario
+   */
+  exports.prototype['flagEnviaFaturaUsuario'] = undefined;
+
+  /**
+   * Indica se permite cr\u00C3\u00A9dito de faturamento
+   * @member {Boolean} flagCreditoFaturamento
+   */
+  exports.prototype['flagCreditoFaturamento'] = undefined;
+
+  /**
+   * Indica se concede limite provis\u00C3\u00B3rio
+   * @member {Boolean} flagConcedeLimiteProvisorio
+   */
+  exports.prototype['flagConcedeLimiteProvisorio'] = undefined;
+
+  /**
+   * Indica se digitaliza documento
+   * @member {Boolean} flagDigitalizarDoc
+   */
+  exports.prototype['flagDigitalizarDoc'] = undefined;
+
+  /**
+   * Indica se realiza embossing em loja
+   * @member {Boolean} flagEmbossingLoja
+   */
+  exports.prototype['flagEmbossingLoja'] = undefined;
+
+  /**
+   * Indica se realiza consulta pr\u00C3\u00A9via
+   * @member {Boolean} flagConsultaPrevia
+   */
+  exports.prototype['flagConsultaPrevia'] = undefined;
+
+  /**
+   * Tipo de pessoa
+   * @member {module:model/OrigemComercialResponse.TipoPessoaEnum} tipoPessoa
+   */
+  exports.prototype['tipoPessoa'] = undefined;
 
 
+  /**
+   * Allowed values for the <code>tipoPessoa</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TipoPessoaEnum = { 
+    /**
+     * value: PESSOA_FISICA
+     * @const
+     */
+    FISICA: "PESSOA_FISICA",
+    
+    /**
+     * value: PESSOA_JURIDICA
+     * @const
+     */
+    JURIDICA: "PESSOA_JURIDICA"
+  };
 
   return exports;
 }));

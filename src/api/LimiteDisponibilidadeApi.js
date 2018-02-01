@@ -18,7 +18,7 @@
   /**
    * LimiteDisponibilidade service.
    * @module api/LimiteDisponibilidadeApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the alterarUsingPUT8 operation.
-     * @callback module:api/LimiteDisponibilidadeApi~alterarUsingPUT8Callback
+     * Callback function to receive the result of the alterarUsingPUT9 operation.
+     * @callback module:api/LimiteDisponibilidadeApi~alterarUsingPUT9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,16 +58,16 @@
      * @param {Number} opts.limiteInternacionalSaqueGlobal Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
      * @param {Number} opts.limiteInternacionalSaquePeriodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
      * @param {Number} opts.limiteMaximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
-     * @param {module:api/LimiteDisponibilidadeApi~alterarUsingPUT8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/LimiteDisponibilidadeApi~alterarUsingPUT9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.alterarUsingPUT8 = function(idConta, opts, callback) {
+    this.alterarUsingPUT9 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling alterarUsingPUT8";
+        throw "Missing the required parameter 'idConta' when calling alterarUsingPUT9";
       }
 
 

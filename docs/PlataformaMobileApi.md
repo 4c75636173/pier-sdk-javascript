@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](PlataformaMobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | Atualiza Plataforma Mobile
-[**listarUsingGET26**](PlataformaMobileApi.md#listarUsingGET26) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
-[**salvarUsingPOST18**](PlataformaMobileApi.md#salvarUsingPOST18) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
+[**listarUsingGET28**](PlataformaMobileApi.md#listarUsingGET28) | **GET** /api/plataformas-mobile | Lista as plataformas mobile cadastradas
+[**salvarUsingPOST20**](PlataformaMobileApi.md#salvarUsingPOST20) | **POST** /api/plataformas-mobile | Cadastra Plataforma Mobile
 
 
 <a name="atualizarUsingPUT1"></a>
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PagePlataformaMobileResponse listarUsingGET26(opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PagePlataformaMobileResponse listarUsingGET28(opts)
 
 Lista as plataformas mobile cadastradas
 
@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET28(opts, callback);
 ```
 
 ### Parameters
@@ -111,9 +111,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST18"></a>
-# **salvarUsingPOST18**
-> PlataformaMobileResponse salvarUsingPOST18(persist)
+<a name="salvarUsingPOST20"></a>
+# **salvarUsingPOST20**
+> PlataformaMobileResponse salvarUsingPOST20(persist)
 
 Cadastra Plataforma Mobile
 
@@ -135,7 +135,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST18(persist, callback);
+api.salvarUsingPOST20(persist, callback);
 ```
 
 ### Parameters

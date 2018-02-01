@@ -4,13 +4,64 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**autorizarPorContaUsingPOST**](AutorizacaoApi.md#autorizarPorContaUsingPOST) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
 [**autorizarUsingPOST**](AutorizacaoApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**autorizarUsingPOST1**](AutorizacaoApi.md#autorizarUsingPOST1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+[**cancelarPorIdContaUsingPOST**](AutorizacaoApi.md#cancelarPorIdContaUsingPOST) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
 [**cancelarUsingPOST2**](AutorizacaoApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
 [**cancelarUsingPOST3**](AutorizacaoApi.md#cancelarUsingPOST3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
 [**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacaoApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
 [**simularUsingPOST**](AutorizacaoApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
 
+
+<a name="autorizarPorContaUsingPOST"></a>
+# **autorizarPorContaUsingPOST**
+> TransacaoOnUsResponse autorizarPorContaUsingPOST(id, transacaoOnUsPorIdCartaoRequest)
+
+Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+
+Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.AutorizacaoApi()
+
+var id = 789; // {Integer} Id Conta
+
+var transacaoOnUsPorIdCartaoRequest = new Pier.TransacaoOnUsPorIdCartaoRequest(); // {TransacaoOnUsPorIdCartaoRequest} transacaoOnUsPorIdCartaoRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.autorizarPorContaUsingPOST(id, transacaoOnUsPorIdCartaoRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **transacaoOnUsPorIdCartaoRequest** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="autorizarUsingPOST"></a>
 # **autorizarUsingPOST**
@@ -93,6 +144,55 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Cartao | 
  **transacaoOnUsPorIdCartaoRequest** | [**TransacaoOnUsPorIdCartaoRequest**](TransacaoOnUsPorIdCartaoRequest.md)| transacaoOnUsPorIdCartaoRequest | 
+
+### Return type
+
+[**TransacaoOnUsResponse**](TransacaoOnUsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="cancelarPorIdContaUsingPOST"></a>
+# **cancelarPorIdContaUsingPOST**
+> TransacaoOnUsResponse cancelarPorIdContaUsingPOST(id, cancelamentoRequest)
+
+Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+
+Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.AutorizacaoApi()
+
+var id = 789; // {Integer} Id Conta
+
+var cancelamentoRequest = new Pier.CancelamentoTransacaoPorIdCartaoRequest(); // {CancelamentoTransacaoPorIdCartaoRequest} cancelamentoRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cancelarPorIdContaUsingPOST(id, cancelamentoRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Id Conta | 
+ **cancelamentoRequest** | [**CancelamentoTransacaoPorIdCartaoRequest**](CancelamentoTransacaoPorIdCartaoRequest.md)| cancelamentoRequest | 
 
 ### Return type
 

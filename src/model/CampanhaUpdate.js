@@ -18,7 +18,7 @@
   /**
    * The CampanhaUpdate model module.
    * @module model/CampanhaUpdate
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**

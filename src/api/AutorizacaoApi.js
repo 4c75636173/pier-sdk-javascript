@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/TransacaoOnUsResponse', '../model/AutorizacaoOnUsRequest', '../model/TransacaoOnUsPorIdCartaoRequest', '../model/CancelamentoTransacaoOnUsRequest', '../model/CancelamentoTransacaoPorIdCartaoRequest', '../model/TransacaoOnUsRequest'], factory);
+    define(['../ApiClient', '../model/TransacaoOnUsResponse', '../model/TransacaoOnUsPorIdCartaoRequest', '../model/AutorizacaoOnUsRequest', '../model/CancelamentoTransacaoPorIdCartaoRequest', '../model/CancelamentoTransacaoOnUsRequest', '../model/TransacaoOnUsRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/TransacaoOnUsResponse'), require('../model/AutorizacaoOnUsRequest'), require('../model/TransacaoOnUsPorIdCartaoRequest'), require('../model/CancelamentoTransacaoOnUsRequest'), require('../model/CancelamentoTransacaoPorIdCartaoRequest'), require('../model/TransacaoOnUsRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/TransacaoOnUsResponse'), require('../model/TransacaoOnUsPorIdCartaoRequest'), require('../model/AutorizacaoOnUsRequest'), require('../model/CancelamentoTransacaoPorIdCartaoRequest'), require('../model/CancelamentoTransacaoOnUsRequest'), require('../model/TransacaoOnUsRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.AutorizacaoApi = factory(root.Pier.ApiClient, root.Pier.TransacaoOnUsResponse, root.Pier.AutorizacaoOnUsRequest, root.Pier.TransacaoOnUsPorIdCartaoRequest, root.Pier.CancelamentoTransacaoOnUsRequest, root.Pier.CancelamentoTransacaoPorIdCartaoRequest, root.Pier.TransacaoOnUsRequest);
+    root.Pier.AutorizacaoApi = factory(root.Pier.ApiClient, root.Pier.TransacaoOnUsResponse, root.Pier.TransacaoOnUsPorIdCartaoRequest, root.Pier.AutorizacaoOnUsRequest, root.Pier.CancelamentoTransacaoPorIdCartaoRequest, root.Pier.CancelamentoTransacaoOnUsRequest, root.Pier.TransacaoOnUsRequest);
   }
-}(this, function(ApiClient, TransacaoOnUsResponse, AutorizacaoOnUsRequest, TransacaoOnUsPorIdCartaoRequest, CancelamentoTransacaoOnUsRequest, CancelamentoTransacaoPorIdCartaoRequest, TransacaoOnUsRequest) {
+}(this, function(ApiClient, TransacaoOnUsResponse, TransacaoOnUsPorIdCartaoRequest, AutorizacaoOnUsRequest, CancelamentoTransacaoPorIdCartaoRequest, CancelamentoTransacaoOnUsRequest, TransacaoOnUsRequest) {
   'use strict';
 
   /**
    * Autorizacao service.
    * @module api/AutorizacaoApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -31,6 +31,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the autorizarPorContaUsingPOST operation.
+     * @callback module:api/AutorizacaoApi~autorizarPorContaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TransacaoOnUsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+     * @param {Integer} id Id Conta
+     * @param {module:model/TransacaoOnUsPorIdCartaoRequest} transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+     * @param {module:api/AutorizacaoApi~autorizarPorContaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TransacaoOnUsResponse}
+     */
+    this.autorizarPorContaUsingPOST = function(id, transacaoOnUsPorIdCartaoRequest, callback) {
+      var postBody = transacaoOnUsPorIdCartaoRequest;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling autorizarPorContaUsingPOST";
+      }
+
+      // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+      if (transacaoOnUsPorIdCartaoRequest == undefined || transacaoOnUsPorIdCartaoRequest == null) {
+        throw "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarPorContaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TransacaoOnUsResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/autorizar-transacao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the autorizarUsingPOST operation.
@@ -124,6 +176,58 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/autorizar-transacao', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cancelarPorIdContaUsingPOST operation.
+     * @callback module:api/AutorizacaoApi~cancelarPorIdContaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TransacaoOnUsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+     * Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+     * @param {Integer} id Id Conta
+     * @param {module:model/CancelamentoTransacaoPorIdCartaoRequest} cancelamentoRequest cancelamentoRequest
+     * @param {module:api/AutorizacaoApi~cancelarPorIdContaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TransacaoOnUsResponse}
+     */
+    this.cancelarPorIdContaUsingPOST = function(id, cancelamentoRequest, callback) {
+      var postBody = cancelamentoRequest;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling cancelarPorIdContaUsingPOST";
+      }
+
+      // verify the required parameter 'cancelamentoRequest' is set
+      if (cancelamentoRequest == undefined || cancelamentoRequest == null) {
+        throw "Missing the required parameter 'cancelamentoRequest' when calling cancelarPorIdContaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TransacaoOnUsResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/cancelar-transacao', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './CredorResponse'], factory);
+    define(['../ApiClient', './GrupoEconomicoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CredorResponse'));
+    module.exports = factory(require('../ApiClient'), require('./GrupoEconomicoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PageCredorResponse = factory(root.Pier.ApiClient, root.Pier.CredorResponse);
+    root.Pier.PageGrupoEconomicoResponse = factory(root.Pier.ApiClient, root.Pier.GrupoEconomicoResponse);
   }
-}(this, function(ApiClient, CredorResponse) {
+}(this, function(ApiClient, GrupoEconomicoResponse) {
   'use strict';
 
   /**
-   * The PageCredorResponse model module.
-   * @module model/PageCredorResponse
-   * @version 2.50.19
+   * The PageGrupoEconomicoResponse model module.
+   * @module model/PageGrupoEconomicoResponse
+   * @version 2.51.0
    */
 
   /**
-   * Constructs a new <code>PageCredorResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credores
-   * @alias module:model/PageCredorResponse
+   * Constructs a new <code>PageGrupoEconomicoResponse</code>.
+   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupos encon\u00C3\u00B4micos
+   * @alias module:model/PageGrupoEconomicoResponse
    * @class
    */
   var exports = function() {
@@ -46,18 +46,18 @@
   };
 
   /**
-   * Constructs a <code>PageCredorResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PageGrupoEconomicoResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PageCredorResponse} obj Optional instance to populate.
-   * @return {module:model/PageCredorResponse} The populated <code>PageCredorResponse</code> instance.
+   * @param {module:model/PageGrupoEconomicoResponse} obj Optional instance to populate.
+   * @return {module:model/PageGrupoEconomicoResponse} The populated <code>PageGrupoEconomicoResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [CredorResponse]);
+        obj['content'] = ApiClient.convertToType(data['content'], [GrupoEconomicoResponse]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/CredorResponse>} content
+   * @member {Array.<module:model/GrupoEconomicoResponse>} content
    */
   exports.prototype['content'] = undefined;
 

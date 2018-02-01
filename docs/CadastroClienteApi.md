@@ -5,32 +5,32 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT**](CadastroClienteApi.md#alterarUsingPUT) | **PUT** /api/contas/{id}/adicionais/{idPessoa} | Altera Adicional de uma Conta
-[**alterarUsingPUT10**](CadastroClienteApi.md#alterarUsingPUT10) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
-[**alterarUsingPUT12**](CadastroClienteApi.md#alterarUsingPUT12) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
-[**alterarUsingPUT14**](CadastroClienteApi.md#alterarUsingPUT14) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-[**alterarUsingPUT6**](CadastroClienteApi.md#alterarUsingPUT6) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
+[**alterarUsingPUT13**](CadastroClienteApi.md#alterarUsingPUT13) | **PUT** /api/pessoas-detalhes/{id} | Atualiza os detalhes de uma determinada Pessoa
+[**alterarUsingPUT14**](CadastroClienteApi.md#alterarUsingPUT14) | **PUT** /api/pessoas/{id} | Atualiza os dados de uma determinada Pessoa
+[**alterarUsingPUT16**](CadastroClienteApi.md#alterarUsingPUT16) | **PUT** /api/telefones | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+[**alterarUsingPUT5**](CadastroClienteApi.md#alterarUsingPUT5) | **PUT** /api/enderecos | Atualiza os dados de um determinado Endere\u00C3\u00A7o
 [**atribuirAssinaturaClienteUsingPOST**](CadastroClienteApi.md#atribuirAssinaturaClienteUsingPOST) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | Permite atribuir um documento para uma Conta
 [**atualizarUsingPOST**](CadastroClienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | Atualiza conta integrada com o emissor
 [**cadastrarUsingPOST**](CadastroClienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | Realiza o cadastro de Adicionais para uma Conta
 [**consultarUsingGET**](CadastroClienteApi.md#consultarUsingGET) | **GET** /api/contas/{id}/adicionais/{idPessoa} | Consulta Adicional de uma Conta
-[**consultarUsingGET15**](CadastroClienteApi.md#consultarUsingGET15) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
-[**consultarUsingGET20**](CadastroClienteApi.md#consultarUsingGET20) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
-[**consultarUsingGET22**](CadastroClienteApi.md#consultarUsingGET22) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
-[**consultarUsingGET28**](CadastroClienteApi.md#consultarUsingGET28) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
+[**consultarUsingGET14**](CadastroClienteApi.md#consultarUsingGET14) | **GET** /api/enderecos/{id} | Apresenta os dados de um determinado Endere\u00C3\u00A7o
+[**consultarUsingGET22**](CadastroClienteApi.md#consultarUsingGET22) | **GET** /api/pessoas-detalhes/{id} | Apresenta os detalhes de uma determinada Pessoa
+[**consultarUsingGET23**](CadastroClienteApi.md#consultarUsingGET23) | **GET** /api/pessoas/{id} | Apresenta os dados de uma determinada Pessoa
+[**consultarUsingGET29**](CadastroClienteApi.md#consultarUsingGET29) | **GET** /api/telefones/{id} | Apresenta os dados de um determinado Telefone
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET23**](CadastroClienteApi.md#listarUsingGET23) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET25**](CadastroClienteApi.md#listarUsingGET25) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET34**](CadastroClienteApi.md#listarUsingGET34) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET17**](CadastroClienteApi.md#listarUsingGET17) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET26**](CadastroClienteApi.md#listarUsingGET26) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET36**](CadastroClienteApi.md#listarUsingGET36) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
 [**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
 [**salvarUsingPOST13**](CadastroClienteApi.md#salvarUsingPOST13) | **POST** /api/contas/{id}/incluir-registro-integracao | Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-[**salvarUsingPOST16**](CadastroClienteApi.md#salvarUsingPOST16) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
-[**salvarUsingPOST17**](CadastroClienteApi.md#salvarUsingPOST17) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
-[**salvarUsingPOST20**](CadastroClienteApi.md#salvarUsingPOST20) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
+[**salvarUsingPOST18**](CadastroClienteApi.md#salvarUsingPOST18) | **POST** /api/pessoas-detalhes | Salvar os detalhes de uma determinada Pessoa
+[**salvarUsingPOST19**](CadastroClienteApi.md#salvarUsingPOST19) | **POST** /api/pessoas | Realiza o cadastro de um nova Pessoa
+[**salvarUsingPOST22**](CadastroClienteApi.md#salvarUsingPOST22) | **POST** /api/telefones | Realiza o cadastro de um novo Telefone
 
 
 <a name="alterarUsingPUT"></a>
@@ -85,9 +85,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT10"></a>
-# **alterarUsingPUT10**
-> PessoaDetalheResponse alterarUsingPUT10(id, opts)
+<a name="alterarUsingPUT13"></a>
+# **alterarUsingPUT13**
+> PessoaDetalheResponse alterarUsingPUT13(id, opts)
 
 Atualiza os detalhes de uma determinada Pessoa
 
@@ -121,7 +121,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT10(id, opts, callback);
+api.alterarUsingPUT13(id, opts, callback);
 ```
 
 ### Parameters
@@ -153,9 +153,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT12"></a>
-# **alterarUsingPUT12**
-> PessoaResponse alterarUsingPUT12(id, nome, tipo, dataNascimento, opts)
+<a name="alterarUsingPUT14"></a>
+# **alterarUsingPUT14**
+> PessoaResponse alterarUsingPUT14(id, nome, tipo, dataNascimento, opts)
 
 Atualiza os dados de uma determinada Pessoa
 
@@ -192,7 +192,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT12(id, nome, tipo, dataNascimento, opts, callback);
+api.alterarUsingPUT14(id, nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -224,9 +224,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT14"></a>
-# **alterarUsingPUT14**
-> TelefoneResponse alterarUsingPUT14(id, opts)
+<a name="alterarUsingPUT16"></a>
+# **alterarUsingPUT16**
+> TelefoneResponse alterarUsingPUT16(id, opts)
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
 
@@ -254,7 +254,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT14(id, opts, callback);
+api.alterarUsingPUT16(id, opts, callback);
 ```
 
 ### Parameters
@@ -280,9 +280,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT6"></a>
-# **alterarUsingPUT6**
-> EnderecoResponse alterarUsingPUT6(id, opts)
+<a name="alterarUsingPUT5"></a>
+# **alterarUsingPUT5**
+> EnderecoResponse alterarUsingPUT5(id, opts)
 
 Atualiza os dados de um determinado Endere\u00C3\u00A7o
 
@@ -317,7 +317,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT6(id, opts, callback);
+api.alterarUsingPUT5(id, opts, callback);
 ```
 
 ### Parameters
@@ -547,9 +547,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> EnderecoResponse consultarUsingGET15(id)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> EnderecoResponse consultarUsingGET14(id)
 
 Apresenta os dados de um determinado Endere\u00C3\u00A7o
 
@@ -571,7 +571,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(id, callback);
+api.consultarUsingGET14(id, callback);
 ```
 
 ### Parameters
@@ -593,59 +593,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> PessoaDetalheResponse consultarUsingGET20(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> PessoaDetalheResponse consultarUsingGET22(id)
 
 Apresenta os detalhes de uma determinada Pessoa
 
 Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroClienteApi()
-
-var id = 789; // {Integer} ID da Pessoa
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET20(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID da Pessoa | 
-
-### Return type
-
-[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> PessoaResponse consultarUsingGET22(id)
-
-Apresenta os dados de uma determinada Pessoa
-
-Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -674,6 +628,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+[**PessoaDetalheResponse**](PessoaDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> PessoaResponse consultarUsingGET23(id)
+
+Apresenta os dados de uma determinada Pessoa
+
+Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroClienteApi()
+
+var id = 789; // {Integer} ID da Pessoa
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET23(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ID da Pessoa | 
+
+### Return type
+
 [**PessoaResponse**](PessoaResponse.md)
 
 ### Authorization
@@ -685,9 +685,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET28"></a>
-# **consultarUsingGET28**
-> TelefoneResponse consultarUsingGET28(id)
+<a name="consultarUsingGET29"></a>
+# **consultarUsingGET29**
+> TelefoneResponse consultarUsingGET29(id)
 
 Apresenta os dados de um determinado Telefone
 
@@ -709,7 +709,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET28(id, callback);
+api.consultarUsingGET29(id, callback);
 ```
 
 ### Parameters
@@ -888,9 +888,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageEnderecoResponse listarUsingGET18(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageEnderecoResponse listarUsingGET17(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -929,7 +929,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -967,9 +967,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PagePessoaDetalheResponse listarUsingGET23(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PagePessoaDetalheResponse listarUsingGET26(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1005,7 +1005,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -1040,9 +1040,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PagePessoaResponse listarUsingGET25(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PagePessoaResponse listarUsingGET27(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1078,7 +1078,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -1113,9 +1113,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET34"></a>
-# **listarUsingGET34**
-> PageTelefoneResponse listarUsingGET34(opts)
+<a name="listarUsingGET36"></a>
+# **listarUsingGET36**
+> PageTelefoneResponse listarUsingGET36(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1147,7 +1147,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET34(opts, callback);
+api.listarUsingGET36(opts, callback);
 ```
 
 ### Parameters
@@ -1387,9 +1387,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> PessoaDetalheResponse salvarUsingPOST16(idPessoa, opts)
+<a name="salvarUsingPOST18"></a>
+# **salvarUsingPOST18**
+> PessoaDetalheResponse salvarUsingPOST18(idPessoa, opts)
 
 Salvar os detalhes de uma determinada Pessoa
 
@@ -1423,7 +1423,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(idPessoa, opts, callback);
+api.salvarUsingPOST18(idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -1455,9 +1455,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST17"></a>
-# **salvarUsingPOST17**
-> PessoaResponse salvarUsingPOST17(nome, tipo, dataNascimento, opts)
+<a name="salvarUsingPOST19"></a>
+# **salvarUsingPOST19**
+> PessoaResponse salvarUsingPOST19(nome, tipo, dataNascimento, opts)
 
 Realiza o cadastro de um nova Pessoa
 
@@ -1492,7 +1492,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST17(nome, tipo, dataNascimento, opts, callback);
+api.salvarUsingPOST19(nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -1523,9 +1523,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST20"></a>
-# **salvarUsingPOST20**
-> TelefoneResponse salvarUsingPOST20(opts)
+<a name="salvarUsingPOST22"></a>
+# **salvarUsingPOST22**
+> TelefoneResponse salvarUsingPOST22(opts)
 
 Realiza o cadastro de um novo Telefone
 
@@ -1552,7 +1552,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST20(opts, callback);
+api.salvarUsingPOST22(opts, callback);
 ```
 
 ### Parameters

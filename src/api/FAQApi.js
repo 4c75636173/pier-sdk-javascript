@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/FAQApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET16 operation.
+     * @callback module:api/FAQApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * Consultar FAQ por id
      * Consulta os detalhes de uma determinada FAQ
      * @param {Integer} id Id
-     * @param {module:api/FAQApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
       }
 
 
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/FAQApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/FAQApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -233,10 +233,10 @@
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
      * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

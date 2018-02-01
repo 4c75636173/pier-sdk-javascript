@@ -10,24 +10,32 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CredorResponse = factory(root.Pier.ApiClient);
+    root.Pier.GrupoEconomicoDTO = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The CredorResponse model module.
-   * @module model/CredorResponse
-   * @version 2.50.19
+   * The GrupoEconomicoDTO model module.
+   * @module model/GrupoEconomicoDTO
+   * @version 2.51.0
    */
 
   /**
-   * Constructs a new <code>CredorResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credor
-   * @alias module:model/CredorResponse
+   * Constructs a new <code>GrupoEconomicoDTO</code>.
+   * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para cadastrar grupo econ\u00C3\u00B4mico
+   * @alias module:model/GrupoEconomicoDTO
    * @class
+   * @param razaoSocial
+   * @param numeroReceitaFederal
+   * @param periodicidade
+   * @param percentualRAV
    */
-  var exports = function() {
+  var exports = function(razaoSocial, numeroReceitaFederal, periodicidade, percentualRAV) {
+
+    this['razaoSocial'] = razaoSocial;
+
+    this['numeroReceitaFederal'] = numeroReceitaFederal;
 
 
 
@@ -35,6 +43,7 @@
 
 
 
+    this['periodicidade'] = periodicidade;
 
 
 
@@ -42,13 +51,7 @@
 
 
 
-
-
-
-
-
-
-
+    this['percentualRAV'] = percentualRAV;
 
 
 
@@ -57,24 +60,45 @@
   };
 
   /**
-   * Constructs a <code>CredorResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GrupoEconomicoDTO</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CredorResponse} obj Optional instance to populate.
-   * @return {module:model/CredorResponse} The populated <code>CredorResponse</code> instance.
+   * @param {module:model/GrupoEconomicoDTO} obj Optional instance to populate.
+   * @return {module:model/GrupoEconomicoDTO} The populated <code>GrupoEconomicoDTO</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      if (data.hasOwnProperty('razaoSocial')) {
+        obj['razaoSocial'] = ApiClient.convertToType(data['razaoSocial'], 'String');
       }
-      if (data.hasOwnProperty('idPessoaJuridica')) {
-        obj['idPessoaJuridica'] = ApiClient.convertToType(data['idPessoaJuridica'], 'Integer');
+      if (data.hasOwnProperty('nomeCredor')) {
+        obj['nomeCredor'] = ApiClient.convertToType(data['nomeCredor'], 'String');
       }
-      if (data.hasOwnProperty('nome')) {
-        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
+      if (data.hasOwnProperty('numeroReceitaFederal')) {
+        obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'String');
+      }
+      if (data.hasOwnProperty('inscricaoEstadual')) {
+        obj['inscricaoEstadual'] = ApiClient.convertToType(data['inscricaoEstadual'], 'String');
+      }
+      if (data.hasOwnProperty('contato')) {
+        obj['contato'] = ApiClient.convertToType(data['contato'], 'String');
+      }
+      if (data.hasOwnProperty('banco')) {
+        obj['banco'] = ApiClient.convertToType(data['banco'], 'Integer');
+      }
+      if (data.hasOwnProperty('agencia')) {
+        obj['agencia'] = ApiClient.convertToType(data['agencia'], 'Integer');
+      }
+      if (data.hasOwnProperty('digitoAgencia')) {
+        obj['digitoAgencia'] = ApiClient.convertToType(data['digitoAgencia'], 'String');
+      }
+      if (data.hasOwnProperty('contaCorrente')) {
+        obj['contaCorrente'] = ApiClient.convertToType(data['contaCorrente'], 'String');
+      }
+      if (data.hasOwnProperty('digitoContaCorrente')) {
+        obj['digitoContaCorrente'] = ApiClient.convertToType(data['digitoContaCorrente'], 'String');
       }
       if (data.hasOwnProperty('periodicidade')) {
         obj['periodicidade'] = ApiClient.convertToType(data['periodicidade'], 'String');
@@ -100,9 +124,6 @@
       if (data.hasOwnProperty('pagamentoQuinzenalSegundo')) {
         obj['pagamentoQuinzenalSegundo'] = ApiClient.convertToType(data['pagamentoQuinzenalSegundo'], 'Integer');
       }
-      if (data.hasOwnProperty('credorBanco')) {
-        obj['credorBanco'] = ApiClient.convertToType(data['credorBanco'], 'Boolean');
-      }
       if (data.hasOwnProperty('percentualRAV')) {
         obj['percentualRAV'] = ApiClient.convertToType(data['percentualRAV'], 'Number');
       }
@@ -121,59 +142,80 @@
       if (data.hasOwnProperty('limiteRAV')) {
         obj['limiteRAV'] = ApiClient.convertToType(data['limiteRAV'], 'Number');
       }
-      if (data.hasOwnProperty('idCredorRAV')) {
-        obj['idCredorRAV'] = ApiClient.convertToType(data['idCredorRAV'], 'Integer');
-      }
-      if (data.hasOwnProperty('banco')) {
-        obj['banco'] = ApiClient.convertToType(data['banco'], 'Integer');
-      }
-      if (data.hasOwnProperty('agencia')) {
-        obj['agencia'] = ApiClient.convertToType(data['agencia'], 'Integer');
-      }
-      if (data.hasOwnProperty('digitoVerificadorAgencia')) {
-        obj['digitoVerificadorAgencia'] = ApiClient.convertToType(data['digitoVerificadorAgencia'], 'String');
-      }
-      if (data.hasOwnProperty('contaCorrente')) {
-        obj['contaCorrente'] = ApiClient.convertToType(data['contaCorrente'], 'String');
-      }
-      if (data.hasOwnProperty('digitoVerificadorContaCorrente')) {
-        obj['digitoVerificadorContaCorrente'] = ApiClient.convertToType(data['digitoVerificadorContaCorrente'], 'String');
-      }
-      if (data.hasOwnProperty('usuario')) {
-        obj['usuario'] = ApiClient.convertToType(data['usuario'], 'String');
-      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00C3\u00B3digo identificador do credor
-   * @member {Integer} id
+   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @member {String} razaoSocial
    */
-  exports.prototype['id'] = undefined;
-
-  /**
-   * Identificador da pessoa jur\u00C3\u00ADdica do credor
-   * @member {Integer} idPessoaJuridica
-   */
-  exports.prototype['idPessoaJuridica'] = undefined;
+  exports.prototype['razaoSocial'] = undefined;
 
   /**
    * Nome do credor
-   * @member {String} nome
+   * @member {String} nomeCredor
    */
-  exports.prototype['nome'] = undefined;
+  exports.prototype['nomeCredor'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da Receita Federal
+   * @member {String} numeroReceitaFederal
+   */
+  exports.prototype['numeroReceitaFederal'] = undefined;
+
+  /**
+   * N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * @member {String} inscricaoEstadual
+   */
+  exports.prototype['inscricaoEstadual'] = undefined;
+
+  /**
+   * Nome da pessoa para entrar em contato
+   * @member {String} contato
+   */
+  exports.prototype['contato'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo do banco
+   * @member {Integer} banco
+   */
+  exports.prototype['banco'] = undefined;
+
+  /**
+   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @member {Integer} agencia
+   */
+  exports.prototype['agencia'] = undefined;
+
+  /**
+   * D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+   * @member {String} digitoAgencia
+   */
+  exports.prototype['digitoAgencia'] = undefined;
+
+  /**
+   * C\u00C3\u00B3digo da Conta Corrente
+   * @member {String} contaCorrente
+   */
+  exports.prototype['contaCorrente'] = undefined;
+
+  /**
+   * D\u00C3\u00ADgito Verificador da Conta Corrente
+   * @member {String} digitoContaCorrente
+   */
+  exports.prototype['digitoContaCorrente'] = undefined;
 
   /**
    * Periodicidade do pagamento
-   * @member {module:model/CredorResponse.PeriodicidadeEnum} periodicidade
+   * @member {module:model/GrupoEconomicoDTO.PeriodicidadeEnum} periodicidade
    */
   exports.prototype['periodicidade'] = undefined;
 
   /**
    * Dia para pagamento semanal
-   * @member {module:model/CredorResponse.PagamentoSemanalEnum} pagamentoSemanal
+   * @member {module:model/GrupoEconomicoDTO.PagamentoSemanalEnum} pagamentoSemanal
    */
   exports.prototype['pagamentoSemanal'] = undefined;
 
@@ -214,12 +256,6 @@
   exports.prototype['pagamentoQuinzenalSegundo'] = undefined;
 
   /**
-   * Indica se este credor pode ser um Credor RAV de outros credores
-   * @member {Boolean} credorBanco
-   */
-  exports.prototype['credorBanco'] = undefined;
-
-  /**
    * Valor percentual do RAV do credor
    * @member {Number} percentualRAV
    */
@@ -227,7 +263,7 @@
 
   /**
    * Indica se o credor recebe RAV e o tipo
-   * @member {module:model/CredorResponse.RecebeRAVEnum} recebeRAV
+   * @member {module:model/GrupoEconomicoDTO.RecebeRAVEnum} recebeRAV
    */
   exports.prototype['recebeRAV'] = undefined;
 
@@ -254,48 +290,6 @@
    * @member {Number} limiteRAV
    */
   exports.prototype['limiteRAV'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo identificador do credor RAV
-   * @member {Integer} idCredorRAV
-   */
-  exports.prototype['idCredorRAV'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo do banco
-   * @member {Integer} banco
-   */
-  exports.prototype['banco'] = undefined;
-
-  /**
-   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-   * @member {Integer} agencia
-   */
-  exports.prototype['agencia'] = undefined;
-
-  /**
-   * D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-   * @member {String} digitoVerificadorAgencia
-   */
-  exports.prototype['digitoVerificadorAgencia'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo da Conta Corrente
-   * @member {String} contaCorrente
-   */
-  exports.prototype['contaCorrente'] = undefined;
-
-  /**
-   * D\u00C3\u00ADgito Verificador da Conta Corrente
-   * @member {String} digitoVerificadorContaCorrente
-   */
-  exports.prototype['digitoVerificadorContaCorrente'] = undefined;
-
-  /**
-   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
-   * @member {String} usuario
-   */
-  exports.prototype['usuario'] = undefined;
 
 
   /**

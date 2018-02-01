@@ -18,7 +18,7 @@
   /**
    * The TerminalUpdate model module.
    * @module model/TerminalUpdate
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -58,13 +58,13 @@
 
 
   /**
-   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
    * @member {Boolean} flagConsultaExtrato
    */
   exports.prototype['flagConsultaExtrato'] = undefined;
 
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
    * @member {Boolean} flagTerminalVirtual
    */
   exports.prototype['flagTerminalVirtual'] = undefined;

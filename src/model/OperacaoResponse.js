@@ -18,7 +18,7 @@
   /**
    * The OperacaoResponse model module.
    * @module model/OperacaoResponse
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**

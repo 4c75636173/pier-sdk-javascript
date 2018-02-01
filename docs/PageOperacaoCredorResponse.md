@@ -1,9 +1,9 @@
-# Pier.PageCredorResponse
+# Pier.PageOperacaoCredorResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[CredorResponse]**](CredorResponse.md) |  | [optional] 
+**content** | [**[OperacaoCredorResponse]**](OperacaoCredorResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

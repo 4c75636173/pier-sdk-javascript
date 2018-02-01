@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarUsingPUT17**](DocumentoApi.md#alterarUsingPUT17) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
+[**alterarUsingPUT19**](DocumentoApi.md#alterarUsingPUT19) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
 [**atualizarUsingPUT2**](DocumentoApi.md#atualizarUsingPUT2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultarUsingGET14**](DocumentoApi.md#consultarUsingGET14) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
-[**consultarUsingGET36**](DocumentoApi.md#consultarUsingGET36) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultarUsingGET37**](DocumentoApi.md#consultarUsingGET37) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
 [**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/documentos | Lista documentos
-[**listarUsingGET17**](DocumentoApi.md#listarUsingGET17) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listarUsingGET40**](DocumentoApi.md#listarUsingGET40) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**listarUsingGET15**](DocumentoApi.md#listarUsingGET15) | **GET** /api/documentos | Lista documentos
+[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listarUsingGET42**](DocumentoApi.md#listarUsingGET42) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvarUsingPOST10**](DocumentoApi.md#salvarUsingPOST10) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
-[**salvarUsingPOST23**](DocumentoApi.md#salvarUsingPOST23) | **POST** /api/tipos-templates | Cadastra os tipos de templates
+[**salvarUsingPOST25**](DocumentoApi.md#salvarUsingPOST25) | **POST** /api/tipos-templates | Cadastra os tipos de templates
 [**salvarUsingPOST9**](DocumentoApi.md#salvarUsingPOST9) | **POST** /api/documentos | Cadastra documentos
 
 
-<a name="alterarUsingPUT17"></a>
-# **alterarUsingPUT17**
-> TipoTemplateResponse alterarUsingPUT17(id, persist)
+<a name="alterarUsingPUT19"></a>
+# **alterarUsingPUT19**
+> TipoTemplateResponse alterarUsingPUT19(id, persist)
 
 Altera o tipo de template
 
@@ -44,7 +44,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT17(id, persist, callback);
+api.alterarUsingPUT19(id, persist, callback);
 ```
 
 ### Parameters
@@ -116,9 +116,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> DocumentoDetalhadoResponse consultarUsingGET13(id)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> DocumentoDetalhadoResponse consultarUsingGET12(id)
 
 Consulta documentos
 
@@ -140,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -162,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> DocumentoTemplateResponse consultarUsingGET14(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> DocumentoTemplateResponse consultarUsingGET13(id)
 
 Consultar templates dos documentos
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -208,9 +208,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET36"></a>
-# **consultarUsingGET36**
-> TipoTemplateResponse consultarUsingGET36(id)
+<a name="consultarUsingGET37"></a>
+# **consultarUsingGET37**
+> TipoTemplateResponse consultarUsingGET37(id)
 
 Consultar tipo de template
 
@@ -232,7 +232,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET36(id, callback);
+api.consultarUsingGET37(id, callback);
 ```
 
 ### Parameters
@@ -300,9 +300,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PageDocumentoResponse listarUsingGET16(opts)
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> PageDocumentoResponse listarUsingGET15(opts)
 
 Lista documentos
 
@@ -330,7 +330,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PageDocumentoTemplateResponse listarUsingGET17(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageDocumentoTemplateResponse listarUsingGET16(opts)
 
 Lista os templates dos documentos
 
@@ -385,7 +385,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET40"></a>
-# **listarUsingGET40**
-> PageTipoTemplateResponse listarUsingGET40(opts)
+<a name="listarUsingGET42"></a>
+# **listarUsingGET42**
+> PageTipoTemplateResponse listarUsingGET42(opts)
 
 Lista os tipos de templates
 
@@ -437,7 +437,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET40(opts, callback);
+api.listarUsingGET42(opts, callback);
 ```
 
 ### Parameters
@@ -507,9 +507,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST23"></a>
-# **salvarUsingPOST23**
-> TipoTemplateResponse salvarUsingPOST23(persist)
+<a name="salvarUsingPOST25"></a>
+# **salvarUsingPOST25**
+> TipoTemplateResponse salvarUsingPOST25(persist)
 
 Cadastra os tipos de templates
 
@@ -531,7 +531,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST23(persist, callback);
+api.salvarUsingPOST25(persist, callback);
 ```
 
 ### Parameters

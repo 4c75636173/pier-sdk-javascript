@@ -18,7 +18,7 @@
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
@@ -177,8 +177,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET38 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET38Callback
+     * Callback function to receive the result of the consultarUsingGET39 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET39Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -191,21 +191,21 @@
      * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET38 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET39 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET38";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET39";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET38";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET39";
       }
 
 
@@ -350,8 +350,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET42 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET42Callback
+     * Callback function to receive the result of the listarUsingGET44 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET44Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -366,16 +366,16 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaBancariaResponse}
      */
-    this.listarUsingGET42 = function(id, opts, callback) {
+    this.listarUsingGET44 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET42";
+        throw "Missing the required parameter 'id' when calling listarUsingGET44";
       }
 
 

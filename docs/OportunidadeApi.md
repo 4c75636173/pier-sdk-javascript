@@ -5,20 +5,20 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarStatusUsingPUT**](OportunidadeApi.md#alterarStatusUsingPUT) | **PUT** /api/tipos-oportunidades/{id}/status/{idStatus} | Altera o status do tipo oportunidade
-[**alterarUsingPUT16**](OportunidadeApi.md#alterarUsingPUT16) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
-[**alterarUsingPUT9**](OportunidadeApi.md#alterarUsingPUT9) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
+[**alterarUsingPUT12**](OportunidadeApi.md#alterarUsingPUT12) | **PUT** /api/oportunidades/{id} | Altera as oportunidades
+[**alterarUsingPUT18**](OportunidadeApi.md#alterarUsingPUT18) | **PUT** /api/tipos-oportunidades/{id} | Altera os tipos oportunidades
 [**consultarStatusUsingGET**](OportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | Apresenta dados de um determinado status do tipo oportunidade
-[**consultarUsingGET19**](OportunidadeApi.md#consultarUsingGET19) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
-[**consultarUsingGET34**](OportunidadeApi.md#consultarUsingGET34) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
+[**consultarUsingGET21**](OportunidadeApi.md#consultarUsingGET21) | **GET** /api/oportunidades/{id} | Apresenta dados de uma determinada oportunidade
+[**consultarUsingGET35**](OportunidadeApi.md#consultarUsingGET35) | **GET** /api/tipos-oportunidades/{id} | Apresenta dados de um determinado tipo oportunidade
 [**listarAuditoriasStatusUsingGET**](OportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | Lista as auditorias dos status oportunidades
 [**listarAuditoriasUsingGET**](OportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadeApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET22**](OportunidadeApi.md#listarUsingGET22) | **GET** /api/oportunidades | Lista as oportunidades
-[**listarUsingGET38**](OportunidadeApi.md#listarUsingGET38) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listarUsingGET25**](OportunidadeApi.md#listarUsingGET25) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET40**](OportunidadeApi.md#listarUsingGET40) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
-[**salvarUsingPOST15**](OportunidadeApi.md#salvarUsingPOST15) | **POST** /api/oportunidades | Cadastra as oportunidades
-[**salvarUsingPOST22**](OportunidadeApi.md#salvarUsingPOST22) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
+[**salvarUsingPOST17**](OportunidadeApi.md#salvarUsingPOST17) | **POST** /api/oportunidades | Cadastra as oportunidades
+[**salvarUsingPOST24**](OportunidadeApi.md#salvarUsingPOST24) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
 
 
 <a name="alterarStatusUsingPUT"></a>
@@ -73,58 +73,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="alterarUsingPUT16"></a>
-# **alterarUsingPUT16**
-> TipoOportunidadeResponse alterarUsingPUT16(id, persist)
-
-Altera os tipos oportunidades
-
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.OportunidadeApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-
-var persist = new Pier.TipoOportunidade(); // {TipoOportunidade} persist
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.alterarUsingPUT16(id, persist, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
- **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
-
-### Return type
-
-[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="alterarUsingPUT9"></a>
-# **alterarUsingPUT9**
-> OportunidadeResponse alterarUsingPUT9(id, update)
+<a name="alterarUsingPUT12"></a>
+# **alterarUsingPUT12**
+> OportunidadeResponse alterarUsingPUT12(id, update)
 
 Altera as oportunidades
 
@@ -148,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT9(id, update, callback);
+api.alterarUsingPUT12(id, update, callback);
 ```
 
 ### Parameters
@@ -161,6 +112,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OportunidadeResponse**](OportunidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarUsingPUT18"></a>
+# **alterarUsingPUT18**
+> TipoOportunidadeResponse alterarUsingPUT18(id, persist)
+
+Altera os tipos oportunidades
+
+Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.OportunidadeApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+
+var persist = new Pier.TipoOportunidade(); // {TipoOportunidade} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarUsingPUT18(id, persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id). | 
+ **persist** | [**TipoOportunidade**](TipoOportunidade.md)| persist | 
+
+### Return type
+
+[**TipoOportunidadeResponse**](TipoOportunidadeResponse.md)
 
 ### Authorization
 
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> OportunidadeResponse consultarUsingGET19(id)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> OportunidadeResponse consultarUsingGET21(id)
 
 Apresenta dados de uma determinada oportunidade
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET21(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET34"></a>
-# **consultarUsingGET34**
-> TipoOportunidadeResponse consultarUsingGET34(id)
+<a name="consultarUsingGET35"></a>
+# **consultarUsingGET35**
+> TipoOportunidadeResponse consultarUsingGET35(id)
 
 Apresenta dados de um determinado tipo oportunidade
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET34(id, callback);
+api.consultarUsingGET35(id, callback);
 ```
 
 ### Parameters
@@ -573,9 +573,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageOportunidadeResponse listarUsingGET22(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageOportunidadeResponse listarUsingGET25(opts)
 
 Lista as oportunidades
 
@@ -607,7 +607,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -638,9 +638,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET38"></a>
-# **listarUsingGET38**
-> PageTipoOportunidadeResponse listarUsingGET38(opts)
+<a name="listarUsingGET40"></a>
+# **listarUsingGET40**
+> PageTipoOportunidadeResponse listarUsingGET40(opts)
 
 Lista os tipos oportunidades
 
@@ -667,7 +667,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET38(opts, callback);
+api.listarUsingGET40(opts, callback);
 ```
 
 ### Parameters
@@ -742,9 +742,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST15"></a>
-# **salvarUsingPOST15**
-> OportunidadeResponse salvarUsingPOST15(persist)
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> OportunidadeResponse salvarUsingPOST17(persist)
 
 Cadastra as oportunidades
 
@@ -766,7 +766,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST15(persist, callback);
+api.salvarUsingPOST17(persist, callback);
 ```
 
 ### Parameters
@@ -788,9 +788,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST22"></a>
-# **salvarUsingPOST22**
-> TipoOportunidadeResponse salvarUsingPOST22(persist)
+<a name="salvarUsingPOST24"></a>
+# **salvarUsingPOST24**
+> TipoOportunidadeResponse salvarUsingPOST24(persist)
 
 Cadastra tipos oportunidades
 
@@ -812,7 +812,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST22(persist, callback);
+api.salvarUsingPOST24(persist, callback);
 ```
 
 ### Parameters

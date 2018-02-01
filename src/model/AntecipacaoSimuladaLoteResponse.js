@@ -18,7 +18,7 @@
   /**
    * The AntecipacaoSimuladaLoteResponse model module.
    * @module model/AntecipacaoSimuladaLoteResponse
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**

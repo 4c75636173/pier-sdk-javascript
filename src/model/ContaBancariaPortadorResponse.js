@@ -18,7 +18,7 @@
   /**
    * The ContaBancariaPortadorResponse model module.
    * @module model/ContaBancariaPortadorResponse
-   * @version 2.50.19
+   * @version 2.51.0
    */
 
   /**
