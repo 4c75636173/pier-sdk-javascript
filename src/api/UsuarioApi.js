@@ -18,7 +18,7 @@
   /**
    * Usuario service.
    * @module api/UsuarioApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -336,8 +336,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET46 operation.
-     * @callback module:api/UsuarioApi~listarUsingGET46Callback
+     * Callback function to receive the result of the listarUsingGET47 operation.
+     * @callback module:api/UsuarioApi~listarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -354,10 +354,10 @@
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuarioApi~listarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET46 = function(opts, callback) {
+    this.listarUsingGET47 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

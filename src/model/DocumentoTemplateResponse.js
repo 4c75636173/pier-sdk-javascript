@@ -18,7 +18,7 @@
   /**
    * The DocumentoTemplateResponse model module.
    * @module model/DocumentoTemplateResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

@@ -9,10 +9,10 @@ Method | HTTP request | Description
 [**consultarUsingGET12**](DocumentoApi.md#consultarUsingGET12) | **GET** /api/documentos/{id} | Consulta documentos
 [**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
 [**consultarUsingGET37**](DocumentoApi.md#consultarUsingGET37) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**integrarUsingPOST**](DocumentoApi.md#integrarUsingPOST) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listarUsingGET15**](DocumentoApi.md#listarUsingGET15) | **GET** /api/documentos | Lista documentos
-[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listarUsingGET42**](DocumentoApi.md#listarUsingGET42) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**integrarUsingPOST1**](DocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+[**listarUsingGET16**](DocumentoApi.md#listarUsingGET16) | **GET** /api/documentos | Lista documentos
+[**listarUsingGET17**](DocumentoApi.md#listarUsingGET17) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listarUsingGET43**](DocumentoApi.md#listarUsingGET43) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvarUsingPOST10**](DocumentoApi.md#salvarUsingPOST10) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 [**salvarUsingPOST25**](DocumentoApi.md#salvarUsingPOST25) | **POST** /api/tipos-templates | Cadastra os tipos de templates
 [**salvarUsingPOST9**](DocumentoApi.md#salvarUsingPOST9) | **POST** /api/documentos | Cadastra documentos
@@ -254,9 +254,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="integrarUsingPOST"></a>
-# **integrarUsingPOST**
-> DocumentoIntegracaoResponse integrarUsingPOST(integrarDocumentoRequest)
+<a name="integrarUsingPOST1"></a>
+# **integrarUsingPOST1**
+> DocumentoIntegracaoResponse integrarUsingPOST1(integrarDocumentoRequest)
 
 Integra um arquivo a reposit\u00C3\u00B3rios remotos.
 
@@ -278,7 +278,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.integrarUsingPOST(integrarDocumentoRequest, callback);
+api.integrarUsingPOST1(integrarDocumentoRequest, callback);
 ```
 
 ### Parameters
@@ -300,9 +300,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET15"></a>
-# **listarUsingGET15**
-> PageDocumentoResponse listarUsingGET15(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageDocumentoResponse listarUsingGET16(opts)
 
 Lista documentos
 
@@ -330,7 +330,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET15(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PageDocumentoTemplateResponse listarUsingGET16(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageDocumentoTemplateResponse listarUsingGET17(opts)
 
 Lista os templates dos documentos
 
@@ -385,7 +385,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET42"></a>
-# **listarUsingGET42**
-> PageTipoTemplateResponse listarUsingGET42(opts)
+<a name="listarUsingGET43"></a>
+# **listarUsingGET43**
+> PageTipoTemplateResponse listarUsingGET43(opts)
 
 Lista os tipos de templates
 
@@ -437,7 +437,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET42(opts, callback);
+api.listarUsingGET43(opts, callback);
 ```
 
 ### Parameters

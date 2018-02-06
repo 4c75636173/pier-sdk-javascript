@@ -5,12 +5,14 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarUsingGET2**](ArquivoApi.md#consultarUsingGET2) | **GET** /api/arquivos/{id} | Consulta de arquivo no PIER Cloud
+[**integrarUsingPOST**](ArquivoApi.md#integrarUsingPOST) | **POST** /api/arquivos/integrar | Integrar Arquivos
+[**listarUsingGET3**](ArquivoApi.md#listarUsingGET3) | **GET** /api/arquivos | Listar arquivos do Pier Cloud
 [**salvarUsingPOST1**](ArquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | Permite armazenar arquivos no PIER Cloud
 
 
 <a name="consultarUsingGET2"></a>
 # **consultarUsingGET2**
-> ArquivoResponse consultarUsingGET2(id)
+> ArquivoDetalheResponse consultarUsingGET2(id)
 
 Consulta de arquivo no PIER Cloud
 
@@ -43,7 +45,112 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ArquivoResponse**](ArquivoResponse.md)
+[**ArquivoDetalheResponse**](ArquivoDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="integrarUsingPOST"></a>
+# **integrarUsingPOST**
+> Object integrarUsingPOST(integrarArquivoRequest)
+
+Integrar Arquivos
+
+Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ArquivoApi()
+
+var integrarArquivoRequest = new Pier.IntegrarArquivoRequest(); // {IntegrarArquivoRequest} integrarArquivoRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.integrarUsingPOST(integrarArquivoRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integrarArquivoRequest** | [**IntegrarArquivoRequest**](IntegrarArquivoRequest.md)| integrarArquivoRequest | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET3"></a>
+# **listarUsingGET3**
+> PageArquivoResponse listarUsingGET3(opts)
+
+Listar arquivos do Pier Cloud
+
+Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.ArquivoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'nome': "nome_example", // {String} Nome do arquivo
+  'idTipoArquivo': 789, // {Integer} Tipo do arquivo
+  'idStatusArquivo': 789, // {Integer} Identificador do status do arquivo
+  'extensao': "extensao_example" // {String} Extens\u00C3\u00A3o do arquivo
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET3(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **nome** | **String**| Nome do arquivo | [optional] 
+ **idTipoArquivo** | **Integer**| Tipo do arquivo | [optional] 
+ **idStatusArquivo** | **Integer**| Identificador do status do arquivo | [optional] 
+ **extensao** | **String**| Extens\u00C3\u00A3o do arquivo | [optional] 
+
+### Return type
+
+[**PageArquivoResponse**](PageArquivoResponse.md)
 
 ### Authorization
 
@@ -56,7 +163,7 @@ No authorization required
 
 <a name="salvarUsingPOST1"></a>
 # **salvarUsingPOST1**
-> ArquivoResponse salvarUsingPOST1(arquivoPersist)
+> ArquivoDetalheResponse salvarUsingPOST1(arquivoPersist)
 
 Permite armazenar arquivos no PIER Cloud
 
@@ -89,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ArquivoResponse**](ArquivoResponse.md)
+[**ArquivoDetalheResponse**](ArquivoDetalheResponse.md)
 
 ### Authorization
 

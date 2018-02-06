@@ -18,7 +18,7 @@
   /**
    * The ArquivoResponse model module.
    * @module model/ArquivoResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -28,7 +28,6 @@
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -61,9 +60,6 @@
       }
       if (data.hasOwnProperty('nomeTipoArquivo')) {
         obj['nomeTipoArquivo'] = ApiClient.convertToType(data['nomeTipoArquivo'], 'String');
-      }
-      if (data.hasOwnProperty('arquivo')) {
-        obj['arquivo'] = ApiClient.convertToType(data['arquivo'], 'String');
       }
       if (data.hasOwnProperty('idStatusArquivo')) {
         obj['idStatusArquivo'] = ApiClient.convertToType(data['idStatusArquivo'], 'Integer');
@@ -98,7 +94,7 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Tipo do arquivo
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
    * @member {Integer} idTipoArquivo
    */
   exports.prototype['idTipoArquivo'] = undefined;
@@ -110,13 +106,7 @@
   exports.prototype['nomeTipoArquivo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
-   * @member {String} arquivo
-   */
-  exports.prototype['arquivo'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo de status do arquivo
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
    * @member {Integer} idStatusArquivo
    */
   exports.prototype['idStatusArquivo'] = undefined;
@@ -134,7 +124,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Formato/extens\u00C3\u00A3o do arquivo
+   * Formato/Extens\u00C3\u00A3o do arquivo
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;

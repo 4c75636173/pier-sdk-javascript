@@ -18,7 +18,7 @@
   /**
    * Antecipacao service.
    * @module api/AntecipacaoApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -252,8 +252,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/AntecipacaoApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/AntecipacaoApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCompraResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -271,16 +271,16 @@
      * @param {Boolean} opts.parcelada Indica se a compra \u00C3\u00A9 parcelada.
      * @param {Boolean} opts.juros Indica se a compra \u00C3\u00A9 com ou sem juros.
      * @param {module:model/String} opts.tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-     * @param {module:api/AntecipacaoApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AntecipacaoApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCompraResponse}
      */
-    this.listarUsingGET8 = function(idConta, opts, callback) {
+    this.listarUsingGET9 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET8";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET9";
       }
 
 

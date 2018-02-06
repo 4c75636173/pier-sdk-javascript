@@ -18,7 +18,7 @@
   /**
    * The PageContaHistoricoPagamentoResponse model module.
    * @module model/PageContaHistoricoPagamentoResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

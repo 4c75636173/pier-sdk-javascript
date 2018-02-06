@@ -18,7 +18,7 @@
   /**
    * Webhook service.
    * @module api/WebhookApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -143,8 +143,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET50 operation.
-     * @callback module:api/WebhookApi~listarUsingGET50Callback
+     * Callback function to receive the result of the listarUsingGET51 operation.
+     * @callback module:api/WebhookApi~listarUsingGET51Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -161,10 +161,10 @@
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
      * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhookApi~listarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhookApi~listarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHookResponse}
      */
-    this.listarUsingGET50 = function(opts, callback) {
+    this.listarUsingGET51 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

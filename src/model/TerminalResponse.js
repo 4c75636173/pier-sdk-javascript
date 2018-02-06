@@ -18,7 +18,7 @@
   /**
    * The TerminalResponse model module.
    * @module model/TerminalResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listarUsingGET12**](DebitoRecorrenteApi.md#listarUsingGET12) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-[**listarUsingGET38**](DebitoRecorrenteApi.md#listarUsingGET38) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
+[**listarUsingGET13**](DebitoRecorrenteApi.md#listarUsingGET13) | **GET** /api/debitos-recorrentes | Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
+[**listarUsingGET39**](DebitoRecorrenteApi.md#listarUsingGET39) | **GET** /api/tipos-debitos-recorrentes | Listar Tipos Debitos Recorrentes
 
 
-<a name="listarUsingGET12"></a>
-# **listarUsingGET12**
-> PageTipoDebitoRecorrenteResponse listarUsingGET12(idConta, opts)
+<a name="listarUsingGET13"></a>
+# **listarUsingGET13**
+> PageTipoDebitoRecorrenteResponse listarUsingGET13(idConta, opts)
 
 Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
 
@@ -42,7 +42,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET12(idConta, opts, callback);
+api.listarUsingGET13(idConta, opts, callback);
 ```
 
 ### Parameters
@@ -72,9 +72,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET38"></a>
-# **listarUsingGET38**
-> PageTipoDebitoRecorrenteResponse listarUsingGET38(opts)
+<a name="listarUsingGET39"></a>
+# **listarUsingGET39**
+> PageTipoDebitoRecorrenteResponse listarUsingGET39(opts)
 
 Listar Tipos Debitos Recorrentes
 
@@ -103,7 +103,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET38(opts, callback);
+api.listarUsingGET39(opts, callback);
 ```
 
 ### Parameters

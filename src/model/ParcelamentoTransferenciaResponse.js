@@ -18,7 +18,7 @@
   /**
    * The ParcelamentoTransferenciaResponse model module.
    * @module model/ParcelamentoTransferenciaResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

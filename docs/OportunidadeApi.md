@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**listarAuditoriasUsingGET**](OportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | Lista as auditorias das oportunidades
 [**listarAuditoriasUsingGET1**](OportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | Lista as auditorias dos tipos oportunidades
 [**listarStatusUsingGET**](OportunidadeApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | Lista os status do tipo oportunidades
-[**listarUsingGET25**](OportunidadeApi.md#listarUsingGET25) | **GET** /api/oportunidades | Lista as oportunidades
-[**listarUsingGET40**](OportunidadeApi.md#listarUsingGET40) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
+[**listarUsingGET26**](OportunidadeApi.md#listarUsingGET26) | **GET** /api/oportunidades | Lista as oportunidades
+[**listarUsingGET41**](OportunidadeApi.md#listarUsingGET41) | **GET** /api/tipos-oportunidades | Lista os tipos oportunidades
 [**salvarStatusUsingPOST**](OportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | Cadastra status para o tipo oportunidade
 [**salvarUsingPOST17**](OportunidadeApi.md#salvarUsingPOST17) | **POST** /api/oportunidades | Cadastra as oportunidades
 [**salvarUsingPOST24**](OportunidadeApi.md#salvarUsingPOST24) | **POST** /api/tipos-oportunidades | Cadastra tipos oportunidades
@@ -573,9 +573,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageOportunidadeResponse listarUsingGET25(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageOportunidadeResponse listarUsingGET26(opts)
 
 Lista as oportunidades
 
@@ -607,7 +607,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -638,9 +638,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET40"></a>
-# **listarUsingGET40**
-> PageTipoOportunidadeResponse listarUsingGET40(opts)
+<a name="listarUsingGET41"></a>
+# **listarUsingGET41**
+> PageTipoOportunidadeResponse listarUsingGET41(opts)
 
 Lista os tipos oportunidades
 
@@ -667,7 +667,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET40(opts, callback);
+api.listarUsingGET41(opts, callback);
 ```
 
 ### Parameters

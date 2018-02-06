@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET6**](ConductorPayApi.md#listarUsingGET6) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**listarUsingGET7**](ConductorPayApi.md#listarUsingGET7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
 [**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
@@ -419,9 +419,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PageCartaoPayResponse listarUsingGET6(opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PageCartaoPayResponse listarUsingGET7(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -449,7 +449,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(opts, callback);
+api.listarUsingGET7(opts, callback);
 ```
 
 ### Parameters

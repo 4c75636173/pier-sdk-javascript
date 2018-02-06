@@ -18,7 +18,7 @@
   /**
    * The PageTipoCampanhaResponse model module.
    * @module model/PageTipoCampanhaResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

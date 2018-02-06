@@ -18,7 +18,7 @@
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -1488,8 +1488,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1536,10 +1536,10 @@
      * @param {String} opts.cidade2 Nome da cidade do endere\u00C3\u00A7o.
      * @param {String} opts.uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
      * @param {Integer} opts.flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1603,8 +1603,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1642,10 +1642,10 @@
      * @param {Number} opts.taxaBanco Taxa do Banco
      * @param {Number} opts.limiteRAV Valor limite do RAV
      * @param {Integer} opts.idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
-     * @param {module:api/EstabelecimentoApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoEconomicoResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1700,8 +1700,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1715,10 +1715,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMaquinetaResponse}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1749,8 +1749,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET23 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET23Callback
+     * Callback function to receive the result of the listarUsingGET24 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMoedaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1766,10 +1766,10 @@
      * @param {String} opts.codigoMoeda C\u00C3\u00B3digo identificador do tipo de moeda.
      * @param {String} opts.simbolo S\u00C3\u00ADmbolo da Moeda.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMoedaResponse}
      */
-    this.listarUsingGET23 = function(opts, callback) {
+    this.listarUsingGET24 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1802,8 +1802,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET24 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET24Callback
+     * Callback function to receive the result of the listarUsingGET25 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1819,10 +1819,10 @@
      * @param {Integer} opts.idOperacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} opts.idCredor Apresenta o id do Credor.
      * @param {Integer} opts.idProduto Apresenta o id do produto que vai ser alterado.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperacaoCredorResponse}
      */
-    this.listarUsingGET24 = function(opts, callback) {
+    this.listarUsingGET25 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1855,8 +1855,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET35 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET35Callback
+     * Callback function to receive the result of the listarUsingGET36 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1870,10 +1870,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneEstabelecimentoResponse}
      */
-    this.listarUsingGET35 = function(opts, callback) {
+    this.listarUsingGET36 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1904,8 +1904,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET37 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET37Callback
+     * Callback function to receive the result of the listarUsingGET38 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET38Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1922,10 +1922,10 @@
      * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
      * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
      * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET37 = function(opts, callback) {
+    this.listarUsingGET38 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1959,8 +1959,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET48 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET48Callback
+     * Callback function to receive the result of the listarUsingGET49 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET49Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1976,10 +1976,10 @@
      * @param {Integer} opts.idAdquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
      * @param {String} opts.codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoEstabelecimentoAdquirenteResponse}
      */
-    this.listarUsingGET48 = function(opts, callback) {
+    this.listarUsingGET49 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2012,8 +2012,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET49 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET49Callback
+     * Callback function to receive the result of the listarUsingGET50 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET50Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2030,16 +2030,16 @@
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
      * @param {Integer} opts.idOperacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} opts.codigoMCC C\u00C3\u00B3digo MCC.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoOperacaoResponse}
      */
-    this.listarUsingGET49 = function(id, opts, callback) {
+    this.listarUsingGET50 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET49";
+        throw "Missing the required parameter 'id' when calling listarUsingGET50";
       }
 
 

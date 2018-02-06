@@ -18,7 +18,7 @@
   /**
    * The ArquivoPersist model module.
    * @module model/ArquivoPersist
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -26,11 +26,13 @@
    * Objeto Arquivo para persist\u00C3\u00AAncia de dados.
    * @alias module:model/ArquivoPersist
    * @class
+   * @param arquivo
    * @param detalhes
    */
-  var exports = function(detalhes) {
+  var exports = function(arquivo, detalhes) {
 
 
+    this['arquivo'] = arquivo;
 
 
 
@@ -59,6 +61,9 @@
       }
       if (data.hasOwnProperty('extensao')) {
         obj['extensao'] = ApiClient.convertToType(data['extensao'], 'String');
+      }
+      if (data.hasOwnProperty('tipoComunicacao')) {
+        obj['tipoComunicacao'] = ApiClient.convertToType(data['tipoComunicacao'], 'String');
       }
       if (data.hasOwnProperty('detalhes')) {
         obj['detalhes'] = ApiClient.convertToType(data['detalhes'], [ArquivoDetalhesPersist]);
@@ -93,13 +98,36 @@
   exports.prototype['extensao'] = undefined;
 
   /**
+   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   * @member {module:model/ArquivoPersist.TipoComunicacaoEnum} tipoComunicacao
+   */
+  exports.prototype['tipoComunicacao'] = undefined;
+
+  /**
    * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
    * @member {Array.<module:model/ArquivoDetalhesPersist>} detalhes
    */
   exports.prototype['detalhes'] = undefined;
 
 
-
+  /**
+   * Allowed values for the <code>tipoComunicacao</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TipoComunicacaoEnum = { 
+    /**
+     * value: SOAP
+     * @const
+     */
+    SOAP: "SOAP",
+    
+    /**
+     * value: REST
+     * @const
+     */
+    REST: "REST"
+  };
 
   return exports;
 }));

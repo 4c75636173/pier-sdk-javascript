@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -452,8 +452,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/ConductorPayApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/ConductorPayApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoPayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -469,10 +469,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:model/String} opts.status Status do cart\u00C3\u00A3o tokenizado
      * @param {String} opts.numeroCartao Numero do cart\u00C3\u00A3o tokenizado
-     * @param {module:api/ConductorPayApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoPayResponse}
      */
-    this.listarUsingGET6 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

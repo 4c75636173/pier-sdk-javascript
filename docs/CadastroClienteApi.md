@@ -20,10 +20,10 @@ Method | HTTP request | Description
 [**inativarUsingPOST**](CadastroClienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | Inativa Adicional de uma Conta
 [**listarSociosUsingGET**](CadastroClienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
 [**listarUsingGET**](CadastroClienteApi.md#listarUsingGET) | **GET** /api/contas/{id}/adicionais | Lista os Adicionais de uma Conta
-[**listarUsingGET17**](CadastroClienteApi.md#listarUsingGET17) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-[**listarUsingGET26**](CadastroClienteApi.md#listarUsingGET26) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
-[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
-[**listarUsingGET36**](CadastroClienteApi.md#listarUsingGET36) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
+[**listarUsingGET18**](CadastroClienteApi.md#listarUsingGET18) | **GET** /api/enderecos | Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
+[**listarUsingGET27**](CadastroClienteApi.md#listarUsingGET27) | **GET** /api/pessoas-detalhes | Lista os Detalhes das Pessoas cadastradas no Emissor
+[**listarUsingGET28**](CadastroClienteApi.md#listarUsingGET28) | **GET** /api/pessoas | Lista as Pessoas cadastradas no Emissor
+[**listarUsingGET37**](CadastroClienteApi.md#listarUsingGET37) | **GET** /api/telefones | Lista os Telefones cadastrados no Emissor
 [**salvarPessoaFisicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | Cadastro de Conta e Pessoa Fisica
 [**salvarPessoaJuridicaAprovadaUsingPOST**](CadastroClienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
 [**salvarUsingPOST11**](CadastroClienteApi.md#salvarUsingPOST11) | **POST** /api/enderecos | Realiza o cadastro de um novo Endere\u00C3\u00A7o
@@ -888,9 +888,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PageEnderecoResponse listarUsingGET17(opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PageEnderecoResponse listarUsingGET18(opts)
 
 Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
 
@@ -929,7 +929,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET18(opts, callback);
 ```
 
 ### Parameters
@@ -967,9 +967,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PagePessoaDetalheResponse listarUsingGET26(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PagePessoaDetalheResponse listarUsingGET27(opts)
 
 Lista os Detalhes das Pessoas cadastradas no Emissor
 
@@ -1005,7 +1005,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -1040,9 +1040,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET27"></a>
-# **listarUsingGET27**
-> PagePessoaResponse listarUsingGET27(opts)
+<a name="listarUsingGET28"></a>
+# **listarUsingGET28**
+> PagePessoaResponse listarUsingGET28(opts)
 
 Lista as Pessoas cadastradas no Emissor
 
@@ -1078,7 +1078,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET27(opts, callback);
+api.listarUsingGET28(opts, callback);
 ```
 
 ### Parameters
@@ -1113,9 +1113,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET36"></a>
-# **listarUsingGET36**
-> PageTelefoneResponse listarUsingGET36(opts)
+<a name="listarUsingGET37"></a>
+# **listarUsingGET37**
+> PageTelefoneResponse listarUsingGET37(opts)
 
 Lista os Telefones cadastrados no Emissor
 
@@ -1147,7 +1147,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET36(opts, callback);
+api.listarUsingGET37(opts, callback);
 ```
 
 ### Parameters

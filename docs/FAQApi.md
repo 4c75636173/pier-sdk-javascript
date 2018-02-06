@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**adicionarUsingPOST**](FAQApi.md#adicionarUsingPOST) | **POST** /api/faqs | Adiciona uma nova FAQ
 [**alterarUsingPUT7**](FAQApi.md#alterarUsingPUT7) | **PUT** /api/faqs/{id} | Alterar FAQ
 [**consultarUsingGET16**](FAQApi.md#consultarUsingGET16) | **GET** /api/faqs/{id} | Consultar FAQ por id
-[**listarUsingGET19**](FAQApi.md#listarUsingGET19) | **GET** /api/faqs | Lista FAQs
+[**listarUsingGET20**](FAQApi.md#listarUsingGET20) | **GET** /api/faqs | Lista FAQs
 
 
 <a name="adicionarUsingPOST"></a>
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PageFaqResponse listarUsingGET19(opts)
+<a name="listarUsingGET20"></a>
+# **listarUsingGET20**
+> PageFaqResponse listarUsingGET20(opts)
 
 Lista FAQs
 
@@ -211,7 +211,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET19(opts, callback);
+api.listarUsingGET20(opts, callback);
 ```
 
 ### Parameters

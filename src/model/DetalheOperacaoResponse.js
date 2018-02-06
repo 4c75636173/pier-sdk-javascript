@@ -18,7 +18,7 @@
   /**
    * The DetalheOperacaoResponse model module.
    * @module model/DetalheOperacaoResponse
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

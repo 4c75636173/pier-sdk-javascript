@@ -33,15 +33,15 @@ Method | HTTP request | Description
 [**listarTiposAdquirentesUsingGET**](EstabelecimentoApi.md#listarTiposAdquirentesUsingGET) | **GET** /api/tipos-adquirentes | Lista os Tipos de adquirentes
 [**listarTiposMaquinetasUsingGET**](EstabelecimentoApi.md#listarTiposMaquinetasUsingGET) | **GET** /api/tipos-maquinetas | Lista os Tipos de  Maquinetas
 [**listarTiposTerminaisUsingGET1**](EstabelecimentoApi.md#listarTiposTerminaisUsingGET1) | **GET** /api/tipos-terminais-estabelecimento | Lista os Tipos Terminais
-[**listarUsingGET18**](EstabelecimentoApi.md#listarUsingGET18) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET20**](EstabelecimentoApi.md#listarUsingGET20) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
-[**listarUsingGET22**](EstabelecimentoApi.md#listarUsingGET22) | **GET** /api/maquinetas | Lista as Maquinetas
-[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
-[**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET35**](EstabelecimentoApi.md#listarUsingGET35) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
-[**listarUsingGET37**](EstabelecimentoApi.md#listarUsingGET37) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listarUsingGET48**](EstabelecimentoApi.md#listarUsingGET48) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-[**listarUsingGET49**](EstabelecimentoApi.md#listarUsingGET49) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+[**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET21**](EstabelecimentoApi.md#listarUsingGET21) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
+[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/maquinetas | Lista as Maquinetas
+[**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
+[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+[**listarUsingGET36**](EstabelecimentoApi.md#listarUsingGET36) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listarUsingGET38**](EstabelecimentoApi.md#listarUsingGET38) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listarUsingGET49**](EstabelecimentoApi.md#listarUsingGET49) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+[**listarUsingGET50**](EstabelecimentoApi.md#listarUsingGET50) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
 [**salvarUsingPOST15**](EstabelecimentoApi.md#salvarUsingPOST15) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
 [**salvarUsingPOST16**](EstabelecimentoApi.md#salvarUsingPOST16) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
 [**salvarUsingPOST21**](EstabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
@@ -1499,9 +1499,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageEstabelecimentoResponse listarUsingGET18(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageEstabelecimentoResponse listarUsingGET19(opts)
 
 Lista Estabelecimentos
 
@@ -1560,7 +1560,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters
@@ -1618,9 +1618,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET20"></a>
-# **listarUsingGET20**
-> PageGrupoEconomicoResponse listarUsingGET20(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageGrupoEconomicoResponse listarUsingGET21(opts)
 
 Listar grupos econ\u00C3\u00B4micos
 
@@ -1670,7 +1670,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET20(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -1719,9 +1719,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageMaquinetaResponse listarUsingGET22(opts)
+<a name="listarUsingGET23"></a>
+# **listarUsingGET23**
+> PageMaquinetaResponse listarUsingGET23(opts)
 
 Lista as Maquinetas
 
@@ -1747,7 +1747,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET23(opts, callback);
 ```
 
 ### Parameters
@@ -1772,9 +1772,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PageMoedaResponse listarUsingGET23(opts)
+<a name="listarUsingGET24"></a>
+# **listarUsingGET24**
+> PageMoedaResponse listarUsingGET24(opts)
 
 Lista os tipos de moedas do emissor 
 
@@ -1802,7 +1802,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET24(opts, callback);
 ```
 
 ### Parameters
@@ -1829,9 +1829,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageOperacaoCredorResponse listarUsingGET24(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageOperacaoCredorResponse listarUsingGET25(opts)
 
 Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
 
@@ -1859,7 +1859,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -1886,9 +1886,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET35"></a>
-# **listarUsingGET35**
-> PageTelefoneEstabelecimentoResponse listarUsingGET35(opts)
+<a name="listarUsingGET36"></a>
+# **listarUsingGET36**
+> PageTelefoneEstabelecimentoResponse listarUsingGET36(opts)
 
 Lista os Telefones Estabelecimentos
 
@@ -1914,7 +1914,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET35(opts, callback);
+api.listarUsingGET36(opts, callback);
 ```
 
 ### Parameters
@@ -1939,9 +1939,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET37"></a>
-# **listarUsingGET37**
-> PageTerminalResponse listarUsingGET37(opts)
+<a name="listarUsingGET38"></a>
+# **listarUsingGET38**
+> PageTerminalResponse listarUsingGET38(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -1970,7 +1970,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET37(opts, callback);
+api.listarUsingGET38(opts, callback);
 ```
 
 ### Parameters
@@ -1998,9 +1998,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET48"></a>
-# **listarUsingGET48**
-> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET48(opts)
+<a name="listarUsingGET49"></a>
+# **listarUsingGET49**
+> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET49(opts)
 
 Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
 
@@ -2028,7 +2028,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET48(opts, callback);
+api.listarUsingGET49(opts, callback);
 ```
 
 ### Parameters
@@ -2055,9 +2055,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET49"></a>
-# **listarUsingGET49**
-> PageVinculoOperacaoResponse listarUsingGET49(id, opts)
+<a name="listarUsingGET50"></a>
+# **listarUsingGET50**
+> PageVinculoOperacaoResponse listarUsingGET50(id, opts)
 
 Lista os v\u00C3\u00ADnculos cadastrados no Emissor
 
@@ -2087,7 +2087,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET49(id, opts, callback);
+api.listarUsingGET50(id, opts, callback);
 ```
 
 ### Parameters

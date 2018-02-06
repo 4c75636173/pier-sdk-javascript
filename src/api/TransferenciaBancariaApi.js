@@ -18,7 +18,7 @@
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -287,8 +287,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -309,10 +309,10 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaBancariaPortadorResponse}
      */
-    this.listarUsingGET11 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -350,8 +350,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET44 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET44Callback
+     * Callback function to receive the result of the listarUsingGET45 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -366,16 +366,16 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaBancariaResponse}
      */
-    this.listarUsingGET44 = function(id, opts, callback) {
+    this.listarUsingGET45 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET44";
+        throw "Missing the required parameter 'id' when calling listarUsingGET45";
       }
 
 

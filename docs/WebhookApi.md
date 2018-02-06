@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT22**](WebhookApi.md#alterarUsingPUT22) | **PUT** /api/webhooks/{id} | Alterar Webhook
 [**consultarUsingGET43**](WebhookApi.md#consultarUsingGET43) | **GET** /api/webhooks/{id} | Consultar Webhook
-[**listarUsingGET50**](WebhookApi.md#listarUsingGET50) | **GET** /api/webhooks | Lista os Webhooks
+[**listarUsingGET51**](WebhookApi.md#listarUsingGET51) | **GET** /api/webhooks | Lista os Webhooks
 [**salvarUsingPOST29**](WebhookApi.md#salvarUsingPOST29) | **POST** /api/webhooks | Salvar Webhook
 
 
@@ -112,9 +112,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET50"></a>
-# **listarUsingGET50**
-> PageWebHookResponse listarUsingGET50(opts)
+<a name="listarUsingGET51"></a>
+# **listarUsingGET51**
+> PageWebHookResponse listarUsingGET51(opts)
 
 Lista os Webhooks
 
@@ -143,7 +143,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET50(opts, callback);
+api.listarUsingGET51(opts, callback);
 ```
 
 ### Parameters

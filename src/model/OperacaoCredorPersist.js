@@ -18,7 +18,7 @@
   /**
    * The OperacaoCredorPersist model module.
    * @module model/OperacaoCredorPersist
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**

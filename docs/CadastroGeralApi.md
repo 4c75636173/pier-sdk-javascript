@@ -31,16 +31,16 @@ Method | HTTP request | Description
 [**listarParentescosUsingGET**](CadastroGeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | Lista os Parentescos
 [**listarProfissoesUsingGET**](CadastroGeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | Lista profiss\u00C3\u00B5es
 [**listarTiposCampanhasUsingGET**](CadastroGeralApi.md#listarTiposCampanhasUsingGET) | **GET** /api/tipos-campanhas | Listar Tipos de Campanhas
-[**listarUsingGET10**](CadastroGeralApi.md#listarUsingGET10) | **GET** /api/configuracoes-rotativos | Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
-[**listarUsingGET29**](CadastroGeralApi.md#listarUsingGET29) | **GET** /api/portadores | Lista os Portadores existentes
-[**listarUsingGET3**](CadastroGeralApi.md#listarUsingGET3) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
-[**listarUsingGET30**](CadastroGeralApi.md#listarUsingGET30) | **GET** /api/produtos | Lista os Produtos do Emissor
-[**listarUsingGET31**](CadastroGeralApi.md#listarUsingGET31) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
-[**listarUsingGET39**](CadastroGeralApi.md#listarUsingGET39) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
-[**listarUsingGET4**](CadastroGeralApi.md#listarUsingGET4) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
-[**listarUsingGET41**](CadastroGeralApi.md#listarUsingGET41) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
-[**listarUsingGET47**](CadastroGeralApi.md#listarUsingGET47) | **GET** /api/vencimentos | Listar Vencimentos
-[**listarUsingGET9**](CadastroGeralApi.md#listarUsingGET9) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+[**listarUsingGET10**](CadastroGeralApi.md#listarUsingGET10) | **GET** /api/configuracoes-registro-cobranca | Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+[**listarUsingGET11**](CadastroGeralApi.md#listarUsingGET11) | **GET** /api/configuracoes-rotativos | Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
+[**listarUsingGET30**](CadastroGeralApi.md#listarUsingGET30) | **GET** /api/portadores | Lista os Portadores existentes
+[**listarUsingGET31**](CadastroGeralApi.md#listarUsingGET31) | **GET** /api/produtos | Lista os Produtos do Emissor
+[**listarUsingGET32**](CadastroGeralApi.md#listarUsingGET32) | **GET** /api/promotores | Lista promotores cadastrados na base do emissor
+[**listarUsingGET4**](CadastroGeralApi.md#listarUsingGET4) | **GET** /api/atendimento-clientes | Lista todos os atendimentos
+[**listarUsingGET40**](CadastroGeralApi.md#listarUsingGET40) | **GET** /api/tipos-enderecos | Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+[**listarUsingGET42**](CadastroGeralApi.md#listarUsingGET42) | **GET** /api/tipos-telefones | Lista os Tipos de Telefones
+[**listarUsingGET48**](CadastroGeralApi.md#listarUsingGET48) | **GET** /api/vencimentos | Listar Vencimentos
+[**listarUsingGET5**](CadastroGeralApi.md#listarUsingGET5) | **GET** /api/bancos | Lista os Bancos cadastrados para o Emissor
 [**salvarUsingPOST2**](CadastroGeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
 [**salvarUsingPOST4**](CadastroGeralApi.md#salvarUsingPOST4) | **POST** /api/campanhas | Inserir campanha
 [**salvarUsingPOST6**](CadastroGeralApi.md#salvarUsingPOST6) | **POST** /api/configuracoes-rotativos | Inserir os dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo de um produto
@@ -1381,7 +1381,58 @@ No authorization required
 
 <a name="listarUsingGET10"></a>
 # **listarUsingGET10**
-> PageConfiguracaoRotativoResponse listarUsingGET10(opts)
+> ConfiguracaoRegistroCobrancaResponse listarUsingGET10(opts)
+
+Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+
+Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET10(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+
+### Return type
+
+[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageConfiguracaoRotativoResponse listarUsingGET11(opts)
 
 Listar as configura\u00C3\u00A7\u00C3\u00B5es rotativo.
 
@@ -1407,7 +1458,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET11(opts, callback);
 ```
 
 ### Parameters
@@ -1432,9 +1483,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET29"></a>
-# **listarUsingGET29**
-> PagePortadorResponse listarUsingGET29(opts)
+<a name="listarUsingGET30"></a>
+# **listarUsingGET30**
+> PagePortadorResponse listarUsingGET30(opts)
 
 Lista os Portadores existentes
 
@@ -1469,7 +1520,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET29(opts, callback);
+api.listarUsingGET30(opts, callback);
 ```
 
 ### Parameters
@@ -1503,68 +1554,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET3"></a>
-# **listarUsingGET3**
-> PageAtendimentoClienteResponse listarUsingGET3(opts)
-
-Lista todos os atendimentos
-
-Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTipoAtendimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
-  'dataAtendimento': "dataAtendimento_example" // {String} Apresenta a data em que o Atendimento foi realizado.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET3(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTipoAtendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
- **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
- **dataAtendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
-
-### Return type
-
-[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET30"></a>
-# **listarUsingGET30**
-> PageProdutoResponse listarUsingGET30(opts)
+<a name="listarUsingGET31"></a>
+# **listarUsingGET31**
+> PageProdutoResponse listarUsingGET31(opts)
 
 Lista os Produtos do Emissor
 
@@ -1592,7 +1584,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET30(opts, callback);
+api.listarUsingGET31(opts, callback);
 ```
 
 ### Parameters
@@ -1619,9 +1611,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET31"></a>
-# **listarUsingGET31**
-> PagePromotorResponse listarUsingGET31(opts)
+<a name="listarUsingGET32"></a>
+# **listarUsingGET32**
+> PagePromotorResponse listarUsingGET32(opts)
 
 Lista promotores cadastrados na base do emissor
 
@@ -1651,7 +1643,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET31(opts, callback);
+api.listarUsingGET32(opts, callback);
 ```
 
 ### Parameters
@@ -1680,9 +1672,68 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET39"></a>
-# **listarUsingGET39**
-> PageTipoEnderecoResponse listarUsingGET39(opts)
+<a name="listarUsingGET4"></a>
+# **listarUsingGET4**
+> PageAtendimentoClienteResponse listarUsingGET4(opts)
+
+Lista todos os atendimentos
+
+Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CadastroGeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'idTipoAtendimento': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+  'nomeAtendente': "nomeAtendente_example", // {String} Apresenta o nome do Atendente que registrou o Atendimento.
+  'dataAtendimento': "dataAtendimento_example" // {String} Apresenta a data em que o Atendimento foi realizado.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET4(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **idTipoAtendimento** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id) | [optional] 
+ **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id). | [optional] 
+ **nomeAtendente** | **String**| Apresenta o nome do Atendente que registrou o Atendimento. | [optional] 
+ **dataAtendimento** | **String**| Apresenta a data em que o Atendimento foi realizado. | [optional] 
+
+### Return type
+
+[**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET40"></a>
+# **listarUsingGET40**
+> PageTipoEnderecoResponse listarUsingGET40(opts)
 
 Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
 
@@ -1709,7 +1760,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET39(opts, callback);
+api.listarUsingGET40(opts, callback);
 ```
 
 ### Parameters
@@ -1735,60 +1786,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET4"></a>
-# **listarUsingGET4**
-> PageBancoResponse listarUsingGET4(opts)
-
-Lista os Bancos cadastrados para o Emissor
-
-Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.CadastroGeralApi()
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET4(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
-
-### Return type
-
-[**PageBancoResponse**](PageBancoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET41"></a>
-# **listarUsingGET41**
-> PageTipoTelefoneResponse listarUsingGET41(opts)
+<a name="listarUsingGET42"></a>
+# **listarUsingGET42**
+> PageTipoTelefoneResponse listarUsingGET42(opts)
 
 Lista os Tipos de Telefones
 
@@ -1815,7 +1815,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET41(opts, callback);
+api.listarUsingGET42(opts, callback);
 ```
 
 ### Parameters
@@ -1841,9 +1841,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET47"></a>
-# **listarUsingGET47**
-> PageControleVencimentoResponse listarUsingGET47(opts)
+<a name="listarUsingGET48"></a>
+# **listarUsingGET48**
+> PageControleVencimentoResponse listarUsingGET48(opts)
 
 Listar Vencimentos
 
@@ -1869,7 +1869,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET47(opts, callback);
+api.listarUsingGET48(opts, callback);
 ```
 
 ### Parameters
@@ -1894,13 +1894,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> ConfiguracaoRegistroCobrancaResponse listarUsingGET9(opts)
+<a name="listarUsingGET5"></a>
+# **listarUsingGET5**
+> PageBancoResponse listarUsingGET5(opts)
 
-Listar configura\u00C3\u00A7\u00C3\u00B5es para registro de cobran\u00C3\u00A7a
+Lista os Bancos cadastrados para o Emissor
 
-Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de registro de cobran\u00C3\u00A7a.
+Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
 
 ### Example
 ```javascript
@@ -1921,7 +1921,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(opts, callback);
+api.listarUsingGET5(opts, callback);
 ```
 
 ### Parameters
@@ -1934,7 +1934,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ConfiguracaoRegistroCobrancaResponse**](ConfiguracaoRegistroCobrancaResponse.md)
+[**PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 

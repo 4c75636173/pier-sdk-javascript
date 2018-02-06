@@ -18,7 +18,7 @@
   /**
    * Documento service.
    * @module api/DocumentoApi
-   * @version 2.51.0
+   * @version 2.52.0
    */
 
   /**
@@ -275,8 +275,8 @@
     }
 
     /**
-     * Callback function to receive the result of the integrarUsingPOST operation.
-     * @callback module:api/DocumentoApi~integrarUsingPOSTCallback
+     * Callback function to receive the result of the integrarUsingPOST1 operation.
+     * @callback module:api/DocumentoApi~integrarUsingPOST1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoIntegracaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -286,15 +286,15 @@
      * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
      * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
      * @param {module:model/IntegrarDocumentoRequest} integrarDocumentoRequest integrarDocumentoRequest
-     * @param {module:api/DocumentoApi~integrarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~integrarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoIntegracaoResponse}
      */
-    this.integrarUsingPOST = function(integrarDocumentoRequest, callback) {
+    this.integrarUsingPOST1 = function(integrarDocumentoRequest, callback) {
       var postBody = integrarDocumentoRequest;
 
       // verify the required parameter 'integrarDocumentoRequest' is set
       if (integrarDocumentoRequest == undefined || integrarDocumentoRequest == null) {
-        throw "Missing the required parameter 'integrarDocumentoRequest' when calling integrarUsingPOST";
+        throw "Missing the required parameter 'integrarDocumentoRequest' when calling integrarUsingPOST1";
       }
 
 
@@ -320,8 +320,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET15 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET15Callback
+     * Callback function to receive the result of the listarUsingGET16 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -337,10 +337,10 @@
      * @param {Integer} opts.idTemplateDocumento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
      * @param {String} opts.nome Nome do documento.
      * @param {module:model/String} opts.extensao Extensao do documento.
-     * @param {module:api/DocumentoApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoResponse}
      */
-    this.listarUsingGET15 = function(opts, callback) {
+    this.listarUsingGET16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +373,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET17 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -388,10 +388,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
-     * @param {module:api/DocumentoApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoTemplateResponse}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET17 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -422,8 +422,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET42 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET42Callback
+     * Callback function to receive the result of the listarUsingGET43 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -436,10 +436,10 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/DocumentoApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTemplateResponse}
      */
-    this.listarUsingGET42 = function(opts, callback) {
+    this.listarUsingGET43 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
