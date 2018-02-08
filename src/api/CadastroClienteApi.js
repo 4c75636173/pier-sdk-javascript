@@ -18,7 +18,7 @@
   /**
    * CadastroCliente service.
    * @module api/CadastroClienteApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -575,8 +575,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -586,15 +586,15 @@
      * Apresenta os dados de um determinado Endere\u00C3\u00A7o
      * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET15 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
       }
 
 
@@ -621,8 +621,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -632,15 +632,15 @@
      * Apresenta os detalhes de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.consultarUsingGET22 = function(id, callback) {
+    this.consultarUsingGET23 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
       }
 
 
@@ -667,8 +667,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET23 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET23Callback
+     * Callback function to receive the result of the consultarUsingGET24 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -678,15 +678,15 @@
      * Apresenta os dados de uma determinada Pessoa
      * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
      * @param {Integer} id ID da Pessoa
-     * @param {module:api/CadastroClienteApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.consultarUsingGET23 = function(id, callback) {
+    this.consultarUsingGET24 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
       }
 
 
@@ -713,8 +713,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET29 operation.
-     * @callback module:api/CadastroClienteApi~consultarUsingGET29Callback
+     * Callback function to receive the result of the consultarUsingGET30 operation.
+     * @callback module:api/CadastroClienteApi~consultarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -724,15 +724,15 @@
      * Apresenta os dados de um determinado Telefone
      * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-     * @param {module:api/CadastroClienteApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~consultarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.consultarUsingGET29 = function(id, callback) {
+    this.consultarUsingGET30 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET30";
       }
 
 
@@ -920,8 +920,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -948,10 +948,10 @@
      * @param {String} opts.pais Apresenta nome do Pais
      * @param {String} opts.dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
      * @param {String} opts.dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-     * @param {module:api/CadastroClienteApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEnderecoResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -995,8 +995,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET27 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET27Callback
+     * Callback function to receive the result of the listarUsingGET29 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1020,10 +1020,10 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoaDetalheResponse}
      */
-    this.listarUsingGET27 = function(opts, callback) {
+    this.listarUsingGET29 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1064,8 +1064,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET28 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET28Callback
+     * Callback function to receive the result of the listarUsingGET30 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1089,10 +1089,10 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-     * @param {module:api/CadastroClienteApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePessoaResponse}
      */
-    this.listarUsingGET28 = function(opts, callback) {
+    this.listarUsingGET30 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1133,8 +1133,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET37 operation.
-     * @callback module:api/CadastroClienteApi~listarUsingGET37Callback
+     * Callback function to receive the result of the listarUsingGET39 operation.
+     * @callback module:api/CadastroClienteApi~listarUsingGET39Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1154,10 +1154,10 @@
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
      * @param {Integer} opts.status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-     * @param {module:api/CadastroClienteApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~listarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneResponse}
      */
-    this.listarUsingGET37 = function(opts, callback) {
+    this.listarUsingGET39 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1284,8 +1284,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST11 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST11Callback
+     * Callback function to receive the result of the salvarUsingPOST12 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1306,10 +1306,10 @@
      * @param {String} opts.cidade Apresenta nome da cidade
      * @param {String} opts.uf Apresenta sigla da Unidade Federativa
      * @param {String} opts.pais Apresenta nome do Pais
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}
      */
-    this.salvarUsingPOST11 = function(opts, callback) {
+    this.salvarUsingPOST12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1347,8 +1347,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST13 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST13Callback
+     * Callback function to receive the result of the salvarUsingPOST14 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/IntegracaoEmissorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1360,16 +1360,16 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Object} opts Optional parameters
      * @param {module:model/IntegracaoEmissorPersist} opts.body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/IntegracaoEmissorResponse}
      */
-    this.salvarUsingPOST13 = function(id, opts, callback) {
+    this.salvarUsingPOST14 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = opts['body'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling salvarUsingPOST13";
+        throw "Missing the required parameter 'id' when calling salvarUsingPOST14";
       }
 
 
@@ -1396,8 +1396,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST18 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST18Callback
+     * Callback function to receive the result of the salvarUsingPOST19 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1418,16 +1418,16 @@
      * @param {String} opts.numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
      * @param {String} opts.email Email da pessoa fisica
      * @param {String} opts.nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaDetalheResponse}
      */
-    this.salvarUsingPOST18 = function(idPessoa, opts, callback) {
+    this.salvarUsingPOST19 = function(idPessoa, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idPessoa' is set
       if (idPessoa == undefined || idPessoa == null) {
-        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST18";
+        throw "Missing the required parameter 'idPessoa' when calling salvarUsingPOST19";
       }
 
 
@@ -1464,8 +1464,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST19 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST19Callback
+     * Callback function to receive the result of the salvarUsingPOST20 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PessoaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1485,26 +1485,26 @@
      * @param {String} opts.orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
      * @param {String} opts.unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
      * @param {String} opts.dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PessoaResponse}
      */
-    this.salvarUsingPOST19 = function(nome, tipo, dataNascimento, opts, callback) {
+    this.salvarUsingPOST20 = function(nome, tipo, dataNascimento, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'nome' is set
       if (nome == undefined || nome == null) {
-        throw "Missing the required parameter 'nome' when calling salvarUsingPOST19";
+        throw "Missing the required parameter 'nome' when calling salvarUsingPOST20";
       }
 
       // verify the required parameter 'tipo' is set
       if (tipo == undefined || tipo == null) {
-        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST19";
+        throw "Missing the required parameter 'tipo' when calling salvarUsingPOST20";
       }
 
       // verify the required parameter 'dataNascimento' is set
       if (dataNascimento == undefined || dataNascimento == null) {
-        throw "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST19";
+        throw "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST20";
       }
 
 
@@ -1540,8 +1540,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST22 operation.
-     * @callback module:api/CadastroClienteApi~salvarUsingPOST22Callback
+     * Callback function to receive the result of the salvarUsingPOST23 operation.
+     * @callback module:api/CadastroClienteApi~salvarUsingPOST23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1556,10 +1556,10 @@
      * @param {String} opts.ddd C\u00C3\u00B3digo DDD do telefone (id).
      * @param {String} opts.telefone N\u00C3\u00BAmero do telefone.
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/CadastroClienteApi~salvarUsingPOST22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CadastroClienteApi~salvarUsingPOST23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneResponse}
      */
-    this.salvarUsingPOST22 = function(opts, callback) {
+    this.salvarUsingPOST23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

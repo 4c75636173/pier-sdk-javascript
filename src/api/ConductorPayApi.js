@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -204,8 +204,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/ConductorPayApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/ConductorPayApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -216,20 +216,20 @@
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {String} deviceId Device id criptografado
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
-     * @param {module:api/ConductorPayApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayDetalheResponse}
      */
-    this.consultarUsingGET6 = function(deviceId, id, callback) {
+    this.consultarUsingGET7 = function(deviceId, id, callback) {
       var postBody = null;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET7";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 
@@ -452,8 +452,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET7 operation.
-     * @callback module:api/ConductorPayApi~listarUsingGET7Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/ConductorPayApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoPayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -469,10 +469,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {module:model/String} opts.status Status do cart\u00C3\u00A3o tokenizado
      * @param {String} opts.numeroCartao Numero do cart\u00C3\u00A3o tokenizado
-     * @param {module:api/ConductorPayApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoPayResponse}
      */
-    this.listarUsingGET7 = function(opts, callback) {
+    this.listarUsingGET9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -505,8 +505,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST5 operation.
-     * @callback module:api/ConductorPayApi~salvarUsingPOST5Callback
+     * Callback function to receive the result of the salvarUsingPOST6 operation.
+     * @callback module:api/ConductorPayApi~salvarUsingPOST6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayCadastroResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -517,20 +517,20 @@
      * Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
      * @param {String} deviceId Device id criptografado
      * @param {module:model/CartaoPayPersist} persist persist
-     * @param {module:api/ConductorPayApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConductorPayApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayCadastroResponse}
      */
-    this.salvarUsingPOST5 = function(deviceId, persist, callback) {
+    this.salvarUsingPOST6 = function(deviceId, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST5";
+        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST6";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST5";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST6";
       }
 
 

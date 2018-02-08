@@ -18,7 +18,7 @@
   /**
    * Conta service.
    * @module api/ContaApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -218,7 +218,7 @@
 
     /**
      * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
-     * Esse recurso permite alterar o vencimento de uma conta especifica.
+     * Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} novoDiaVencimento Novo dia de vencimento.
      * @param {module:api/ContaApi~alterarVencimentoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -687,8 +687,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/ContaApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/ContaApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -698,15 +698,15 @@
      * Apresenta dados de uma determinada conta
      * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {module:api/ContaApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaDetalheResponse}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -733,8 +733,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET40 operation.
-     * @callback module:api/ContaApi~consultarUsingGET40Callback
+     * Callback function to receive the result of the consultarUsingGET41 operation.
+     * @callback module:api/ContaApi~consultarUsingGET41Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -745,20 +745,20 @@
      * Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
      * @param {Integer} idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-     * @param {module:api/ContaApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~consultarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaDetalheResponse}
      */
-    this.consultarUsingGET40 = function(id, idTransferencia, callback) {
+    this.consultarUsingGET41 = function(id, idTransferencia, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET41";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET41";
       }
 
 
@@ -1380,8 +1380,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET14 operation.
-     * @callback module:api/ContaApi~listarUsingGET14Callback
+     * Callback function to receive the result of the listarUsingGET16 operation.
+     * @callback module:api/ContaApi~listarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1403,10 +1403,10 @@
      * @param {String} opts.dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
      * @param {String} opts.dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
      * @param {String} opts.dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-     * @param {module:api/ContaApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaResponse}
      */
-    this.listarUsingGET14 = function(opts, callback) {
+    this.listarUsingGET16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1445,8 +1445,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET46 operation.
-     * @callback module:api/ContaApi~listarUsingGET46Callback
+     * Callback function to receive the result of the listarUsingGET48 operation.
+     * @callback module:api/ContaApi~listarUsingGET48Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1465,16 +1465,16 @@
      * @param {Integer} opts.idContaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
      * @param {Number} opts.valorTransferencia Valor estabelecido para ser transferido.
      * @param {String} opts.dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-     * @param {module:api/ContaApi~listarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContaApi~listarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaResponse}
      */
-    this.listarUsingGET46 = function(id, opts, callback) {
+    this.listarUsingGET48 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET46";
+        throw "Missing the required parameter 'id' when calling listarUsingGET48";
       }
 
 

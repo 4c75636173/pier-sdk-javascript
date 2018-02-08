@@ -18,7 +18,7 @@
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -131,8 +131,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -142,15 +142,15 @@
      * Consulta conta banc\u00C3\u00A1ria portador
      * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.consultarUsingGET10 = function(id, callback) {
+    this.consultarUsingGET11 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -177,8 +177,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET39 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET39Callback
+     * Callback function to receive the result of the consultarUsingGET40 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET40Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -191,21 +191,21 @@
      * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET39 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET40 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET39";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET39";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET40";
       }
 
 
@@ -287,8 +287,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET12 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET12Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -309,10 +309,10 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaBancariaPortadorResponse}
      */
-    this.listarUsingGET12 = function(opts, callback) {
+    this.listarUsingGET14 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -350,8 +350,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET45 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET45Callback
+     * Callback function to receive the result of the listarUsingGET47 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -366,16 +366,16 @@
      * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaBancariaResponse}
      */
-    this.listarUsingGET45 = function(id, opts, callback) {
+    this.listarUsingGET47 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET45";
+        throw "Missing the required parameter 'id' when calling listarUsingGET47";
       }
 
 
@@ -406,8 +406,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST7 operation.
-     * @callback module:api/TransferenciaBancariaApi~salvarUsingPOST7Callback
+     * Callback function to receive the result of the salvarUsingPOST8 operation.
+     * @callback module:api/TransferenciaBancariaApi~salvarUsingPOST8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -417,15 +417,15 @@
      * Cadastra uma conta banc\u00C3\u00A1ria do portador
      * Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
      * @param {module:model/ContaBancariaPortadorPersist} persist persist
-     * @param {module:api/TransferenciaBancariaApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransferenciaBancariaApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.salvarUsingPOST7 = function(persist, callback) {
+    this.salvarUsingPOST8 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST7";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
       }
 
 

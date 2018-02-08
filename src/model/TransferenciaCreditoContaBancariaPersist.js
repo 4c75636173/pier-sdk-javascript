@@ -18,7 +18,7 @@
   /**
    * The TransferenciaCreditoContaBancariaPersist model module.
    * @module model/TransferenciaCreditoContaBancariaPersist
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**

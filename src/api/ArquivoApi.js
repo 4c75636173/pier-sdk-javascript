@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ArquivoDetalheResponse', '../model/IntegrarArquivoRequest', '../model/PageArquivoResponse', '../model/ArquivoPersist'], factory);
+    define(['../ApiClient', '../model/ArquivoDetalheResponse', '../model/IntegrarArquivoRequest', '../model/PageArquivoAUDResponse', '../model/PageArquivoResponse', '../model/ArquivoPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ArquivoDetalheResponse'), require('../model/IntegrarArquivoRequest'), require('../model/PageArquivoResponse'), require('../model/ArquivoPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/ArquivoDetalheResponse'), require('../model/IntegrarArquivoRequest'), require('../model/PageArquivoAUDResponse'), require('../model/PageArquivoResponse'), require('../model/ArquivoPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.ArquivoApi = factory(root.Pier.ApiClient, root.Pier.ArquivoDetalheResponse, root.Pier.IntegrarArquivoRequest, root.Pier.PageArquivoResponse, root.Pier.ArquivoPersist);
+    root.Pier.ArquivoApi = factory(root.Pier.ApiClient, root.Pier.ArquivoDetalheResponse, root.Pier.IntegrarArquivoRequest, root.Pier.PageArquivoAUDResponse, root.Pier.PageArquivoResponse, root.Pier.ArquivoPersist);
   }
-}(this, function(ApiClient, ArquivoDetalheResponse, IntegrarArquivoRequest, PageArquivoResponse, ArquivoPersist) {
+}(this, function(ApiClient, ArquivoDetalheResponse, IntegrarArquivoRequest, PageArquivoAUDResponse, PageArquivoResponse, ArquivoPersist) {
   'use strict';
 
   /**
    * Arquivo service.
    * @module api/ArquivoApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -127,6 +127,58 @@
      * Callback function to receive the result of the listarUsingGET3 operation.
      * @callback module:api/ArquivoApi~listarUsingGET3Callback
      * @param {String} error Error message, if any.
+     * @param {module:model/PageArquivoAUDResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista as auditorias do arquivo
+     * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {module:api/ArquivoApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageArquivoAUDResponse}
+     */
+    this.listarUsingGET3 = function(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling listarUsingGET3";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageArquivoAUDResponse;
+
+      return this.apiClient.callApi(
+        '/api/arquivos/{id}/auditorias', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET4 operation.
+     * @callback module:api/ArquivoApi~listarUsingGET4Callback
+     * @param {String} error Error message, if any.
      * @param {module:model/PageArquivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
@@ -142,10 +194,10 @@
      * @param {Integer} opts.idTipoArquivo Tipo do arquivo
      * @param {Integer} opts.idStatusArquivo Identificador do status do arquivo
      * @param {String} opts.extensao Extens\u00C3\u00A3o do arquivo
-     * @param {module:api/ArquivoApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ArquivoApi~listarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageArquivoResponse}
      */
-    this.listarUsingGET3 = function(opts, callback) {
+    this.listarUsingGET4 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

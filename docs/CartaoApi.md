@@ -15,15 +15,16 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](CartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | Apresenta os limites do Portador do Cart\u00C3\u00A3o
 [**consultarLotesCartoesPrePagosUsingGET**](CartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**consultarPortadorUsingGET**](CartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | Apresenta os dados do Portador do Cart\u00C3\u00A3o
-[**consultarUsingGET7**](CartaoApi.md#consultarUsingGET7) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
+[**consultarUsingGET8**](CartaoApi.md#consultarUsingGET8) | **GET** /api/cartoes/{id} | Apresenta os dados de um determinado Cart\u00C3\u00A3o
 [**desbloquearSenhaIncorretaUsingPOST**](CartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
 [**desbloquearUsingPOST**](CartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
 [**gerarLotesCartoesPrePagosUsingPOST**](CartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
 [**gerarNovaViaUsingPOST**](CartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | Gerar uma nova via de Cart\u00C3\u00A3o
 [**lancarTarifaSegundaViaUsingPOST**](CartaoApi.md#lancarTarifaSegundaViaUsingPOST) | **POST** /api/cartoes/{id}/lancar-tarifa-reemissao | Adiciona tarifa de ajuste da segunda via do cart\u00C3\u00A3o
 [**listarLotesCartoesPrePagosUsingGET**](CartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
-[**listarUsingGET8**](CartaoApi.md#listarUsingGET8) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+[**listarUsingGET10**](CartaoApi.md#listarUsingGET10) | **GET** /api/cartoes | Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 [**reativarUsingPOST**](CartaoApi.md#reativarUsingPOST) | **POST** /api/cartoes/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+[**validarCVVUsingPOST**](CartaoApi.md#validarCVVUsingPOST) | **POST** /api/cartoes/{id}/validar-cvv | Validar CVV do cart\u00C3\u00A3o
 [**validarDadosImpressosBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
 [**validarDadosImpressosNaoBandeiradoUsingGET**](CartaoApi.md#validarDadosImpressosNaoBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-nao-bandeirados | Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
 [**validarDe55CartaoMastercardUsingGET**](CartaoApi.md#validarDe55CartaoMastercardUsingGET) | **GET** /api/cartoes/validar-de55-mastercard | Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
@@ -561,9 +562,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET7"></a>
-# **consultarUsingGET7**
-> CartaoDetalheResponse consultarUsingGET7(id)
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> CartaoDetalheResponse consultarUsingGET8(id)
 
 Apresenta os dados de um determinado Cart\u00C3\u00A3o
 
@@ -585,7 +586,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET7(id, callback);
+api.consultarUsingGET8(id, callback);
 ```
 
 ### Parameters
@@ -921,9 +922,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageCartaoResponse listarUsingGET8(opts)
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageCartaoResponse listarUsingGET10(opts)
 
 Lista os Cart\u00C3\u00B5es gerados pelo Emissor
 
@@ -966,7 +967,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET10(opts, callback);
 ```
 
 ### Parameters
@@ -1044,6 +1045,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CartaoResponse**](CartaoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validarCVVUsingPOST"></a>
+# **validarCVVUsingPOST**
+> Object validarCVVUsingPOST(id, validaCVV)
+
+Validar CVV do cart\u00C3\u00A3o
+
+Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.CartaoApi()
+
+var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+
+var validaCVV = new Pier.ValidaCVVRequest(); // {ValidaCVVRequest} validaCVV
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.validarCVVUsingPOST(id, validaCVV, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id). | 
+ **validaCVV** | [**ValidaCVVRequest**](ValidaCVVRequest.md)| validaCVV | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

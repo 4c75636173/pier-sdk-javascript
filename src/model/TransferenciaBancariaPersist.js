@@ -18,7 +18,7 @@
   /**
    * The TransferenciaBancariaPersist model module.
    * @module model/TransferenciaBancariaPersist
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**

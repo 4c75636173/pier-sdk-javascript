@@ -18,7 +18,7 @@
   /**
    * StatusParametro service.
    * @module api/StatusParametroApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/StatusParametroApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/StatusParametroApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * Apresenta os dados de um determinado Status Conta
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-     * @param {module:api/StatusParametroApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametroApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusContaResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET27 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET27 operation.
-     * @callback module:api/StatusParametroApi~consultarUsingGET27Callback
+     * Callback function to receive the result of the consultarUsingGET28 operation.
+     * @callback module:api/StatusParametroApi~consultarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/StatusParametroApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametroApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressaoResponse}
      */
-    this.consultarUsingGET27 = function(id, callback) {
+    this.consultarUsingGET28 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
       }
 
 
@@ -366,8 +366,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET34 operation.
-     * @callback module:api/StatusParametroApi~listarUsingGET34Callback
+     * Callback function to receive the result of the listarUsingGET36 operation.
+     * @callback module:api/StatusParametroApi~listarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -391,10 +391,10 @@
      * @param {Integer} opts.permiteAtribuirComoBloqueio Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
      * @param {Integer} opts.permiteDesbloquear Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
      * @param {Integer} opts.permiteAtribuirComoCancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
-     * @param {module:api/StatusParametroApi~listarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametroApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContaResponse}
      */
-    this.listarUsingGET34 = function(opts, callback) {
+    this.listarUsingGET36 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -435,8 +435,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET35 operation.
-     * @callback module:api/StatusParametroApi~listarUsingGET35Callback
+     * Callback function to receive the result of the listarUsingGET37 operation.
+     * @callback module:api/StatusParametroApi~listarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -451,10 +451,10 @@
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
      * @param {String} opts.nome Nome do status impress\u00C3\u00A3o
-     * @param {module:api/StatusParametroApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/StatusParametroApi~listarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressaoResponse}
      */
-    this.listarUsingGET35 = function(opts, callback) {
+    this.listarUsingGET37 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

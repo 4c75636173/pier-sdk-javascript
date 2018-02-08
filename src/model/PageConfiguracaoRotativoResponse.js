@@ -18,7 +18,7 @@
   /**
    * The PageConfiguracaoRotativoResponse model module.
    * @module model/PageConfiguracaoRotativoResponse
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**

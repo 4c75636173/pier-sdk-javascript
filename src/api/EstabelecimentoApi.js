@@ -18,7 +18,7 @@
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -636,8 +636,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET15 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET15Callback
+     * Callback function to receive the result of the consultarUsingGET16 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -647,15 +647,15 @@
      * Consultar estabelecimento por id
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET15 = function(id, callback) {
+    this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
       }
 
 
@@ -682,8 +682,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET18 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/GrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -693,15 +693,15 @@
      * Consultar grupo econ\u00C3\u00B4mico
      * Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/GrupoEconomicoResponse}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET18 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
       }
 
 
@@ -728,8 +728,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET19 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET19Callback
+     * Callback function to receive the result of the consultarUsingGET20 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/MaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -739,15 +739,15 @@
      * Apresenta os dados de uma determinada maquineta
      * Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
      */
-    this.consultarUsingGET19 = function(id, callback) {
+    this.consultarUsingGET20 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET19";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
       }
 
 
@@ -774,8 +774,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -785,15 +785,15 @@
      * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET21 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
       }
 
 
@@ -820,8 +820,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET28 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET28Callback
+     * Callback function to receive the result of the consultarUsingGET29 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -831,15 +831,15 @@
      * Apresenta os dados de um determinado telefone de um estabelecimento
      * Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.consultarUsingGET28 = function(id, callback) {
+    this.consultarUsingGET29 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
       }
 
 
@@ -866,8 +866,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET30 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET30Callback
+     * Callback function to receive the result of the consultarUsingGET31 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -877,15 +877,15 @@
      * Apresenta os dados de um determinado Terminal
      * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET30 = function(id, callback) {
+    this.consultarUsingGET31 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET30";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET31";
       }
 
 
@@ -912,8 +912,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET42 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET42Callback
+     * Callback function to receive the result of the consultarUsingGET43 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/VinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -923,15 +923,15 @@
      * Apresenta os dados de um determinado V\u00C3\u00ADnculo
      * Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}
      */
-    this.consultarUsingGET42 = function(id, callback) {
+    this.consultarUsingGET43 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET42";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
       }
 
 
@@ -1488,8 +1488,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET19 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET19Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1536,10 +1536,10 @@
      * @param {String} opts.cidade2 Nome da cidade do endere\u00C3\u00A7o.
      * @param {String} opts.uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
      * @param {Integer} opts.flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET19 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1603,8 +1603,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET21Callback
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1642,10 +1642,10 @@
      * @param {Number} opts.taxaBanco Taxa do Banco
      * @param {Number} opts.limiteRAV Valor limite do RAV
      * @param {Integer} opts.idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
-     * @param {module:api/EstabelecimentoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoEconomicoResponse}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1700,8 +1700,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET23 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET23Callback
+     * Callback function to receive the result of the listarUsingGET25 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1715,10 +1715,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMaquinetaResponse}
      */
-    this.listarUsingGET23 = function(opts, callback) {
+    this.listarUsingGET25 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1749,8 +1749,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET24 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET24Callback
+     * Callback function to receive the result of the listarUsingGET26 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMoedaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1766,10 +1766,10 @@
      * @param {String} opts.codigoMoeda C\u00C3\u00B3digo identificador do tipo de moeda.
      * @param {String} opts.simbolo S\u00C3\u00ADmbolo da Moeda.
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMoedaResponse}
      */
-    this.listarUsingGET24 = function(opts, callback) {
+    this.listarUsingGET26 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1802,8 +1802,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET25 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET25Callback
+     * Callback function to receive the result of the listarUsingGET27 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1819,10 +1819,10 @@
      * @param {Integer} opts.idOperacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
      * @param {Integer} opts.idCredor Apresenta o id do Credor.
      * @param {Integer} opts.idProduto Apresenta o id do produto que vai ser alterado.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperacaoCredorResponse}
      */
-    this.listarUsingGET25 = function(opts, callback) {
+    this.listarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1855,8 +1855,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET36 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET36Callback
+     * Callback function to receive the result of the listarUsingGET38 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET38Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1870,10 +1870,10 @@
      * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneEstabelecimentoResponse}
      */
-    this.listarUsingGET36 = function(opts, callback) {
+    this.listarUsingGET38 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1904,8 +1904,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET38 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET38Callback
+     * Callback function to receive the result of the listarUsingGET40 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET40Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1922,10 +1922,10 @@
      * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
      * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
      * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET38 = function(opts, callback) {
+    this.listarUsingGET40 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1959,8 +1959,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET49 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET49Callback
+     * Callback function to receive the result of the listarUsingGET51 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET51Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1976,10 +1976,10 @@
      * @param {Integer} opts.idAdquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
      * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
      * @param {String} opts.codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoEstabelecimentoAdquirenteResponse}
      */
-    this.listarUsingGET49 = function(opts, callback) {
+    this.listarUsingGET51 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2012,8 +2012,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET50 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET50Callback
+     * Callback function to receive the result of the listarUsingGET52 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET52Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2030,16 +2030,16 @@
      * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
      * @param {Integer} opts.idOperacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} opts.codigoMCC C\u00C3\u00B3digo MCC.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoOperacaoResponse}
      */
-    this.listarUsingGET50 = function(id, opts, callback) {
+    this.listarUsingGET52 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET50";
+        throw "Missing the required parameter 'id' when calling listarUsingGET52";
       }
 
 
@@ -2072,8 +2072,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST15 operation.
-     * @callback module:api/EstabelecimentoApi~salvarUsingPOST15Callback
+     * Callback function to receive the result of the salvarUsingPOST16 operation.
+     * @callback module:api/EstabelecimentoApi~salvarUsingPOST16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/MaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2083,15 +2083,15 @@
      * Realiza o cadastro de uma nova maquineta para um estabelecimento 
      * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
      * @param {module:model/MaquinetaPersist} maquinetaPersist maquinetaPersist
-     * @param {module:api/EstabelecimentoApi~salvarUsingPOST15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
      */
-    this.salvarUsingPOST15 = function(maquinetaPersist, callback) {
+    this.salvarUsingPOST16 = function(maquinetaPersist, callback) {
       var postBody = maquinetaPersist;
 
       // verify the required parameter 'maquinetaPersist' is set
       if (maquinetaPersist == undefined || maquinetaPersist == null) {
-        throw "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST15";
+        throw "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST16";
       }
 
 
@@ -2117,8 +2117,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST16 operation.
-     * @callback module:api/EstabelecimentoApi~salvarUsingPOST16Callback
+     * Callback function to receive the result of the salvarUsingPOST17 operation.
+     * @callback module:api/EstabelecimentoApi~salvarUsingPOST17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2128,15 +2128,15 @@
      * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
      * @param {module:model/OperacaoCredorPersist} oprecaoCredorPersist oprecaoCredorPersist
-     * @param {module:api/EstabelecimentoApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
      */
-    this.salvarUsingPOST16 = function(oprecaoCredorPersist, callback) {
+    this.salvarUsingPOST17 = function(oprecaoCredorPersist, callback) {
       var postBody = oprecaoCredorPersist;
 
       // verify the required parameter 'oprecaoCredorPersist' is set
       if (oprecaoCredorPersist == undefined || oprecaoCredorPersist == null) {
-        throw "Missing the required parameter 'oprecaoCredorPersist' when calling salvarUsingPOST16";
+        throw "Missing the required parameter 'oprecaoCredorPersist' when calling salvarUsingPOST17";
       }
 
 
@@ -2162,8 +2162,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST21 operation.
-     * @callback module:api/EstabelecimentoApi~salvarUsingPOST21Callback
+     * Callback function to receive the result of the salvarUsingPOST22 operation.
+     * @callback module:api/EstabelecimentoApi~salvarUsingPOST22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2177,26 +2177,26 @@
      * @param {String} telefone N\u00C3\u00BAmero do telefone.
      * @param {Object} opts Optional parameters
      * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
-     * @param {module:api/EstabelecimentoApi~salvarUsingPOST21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~salvarUsingPOST22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.salvarUsingPOST21 = function(idEstabelecimento, ddd, telefone, opts, callback) {
+    this.salvarUsingPOST22 = function(idEstabelecimento, ddd, telefone, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idEstabelecimento' is set
       if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST21";
+        throw "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST22";
       }
 
       // verify the required parameter 'ddd' is set
       if (ddd == undefined || ddd == null) {
-        throw "Missing the required parameter 'ddd' when calling salvarUsingPOST21";
+        throw "Missing the required parameter 'ddd' when calling salvarUsingPOST22";
       }
 
       // verify the required parameter 'telefone' is set
       if (telefone == undefined || telefone == null) {
-        throw "Missing the required parameter 'telefone' when calling salvarUsingPOST21";
+        throw "Missing the required parameter 'telefone' when calling salvarUsingPOST22";
       }
 
 
@@ -2226,8 +2226,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST23 operation.
-     * @callback module:api/EstabelecimentoApi~salvarUsingPOST23Callback
+     * Callback function to receive the result of the salvarUsingPOST24 operation.
+     * @callback module:api/EstabelecimentoApi~salvarUsingPOST24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2237,15 +2237,15 @@
      * Realiza o cadastro de um novo Terminal
      * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
      * @param {module:model/TerminalPersist} terminalPersist terminalPersist
-     * @param {module:api/EstabelecimentoApi~salvarUsingPOST23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~salvarUsingPOST24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.salvarUsingPOST23 = function(terminalPersist, callback) {
+    this.salvarUsingPOST24 = function(terminalPersist, callback) {
       var postBody = terminalPersist;
 
       // verify the required parameter 'terminalPersist' is set
       if (terminalPersist == undefined || terminalPersist == null) {
-        throw "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST23";
+        throw "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST24";
       }
 
 
@@ -2271,8 +2271,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST28 operation.
-     * @callback module:api/EstabelecimentoApi~salvarUsingPOST28Callback
+     * Callback function to receive the result of the salvarUsingPOST29 operation.
+     * @callback module:api/EstabelecimentoApi~salvarUsingPOST29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/VinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2282,15 +2282,15 @@
      * Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
      * Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
      * @param {module:model/VinculoEstabelecimentoAdquirentePersist} vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
-     * @param {module:api/EstabelecimentoApi~salvarUsingPOST28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~salvarUsingPOST29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}
      */
-    this.salvarUsingPOST28 = function(vinculoEstabelecimentoAdquirentePersist, callback) {
+    this.salvarUsingPOST29 = function(vinculoEstabelecimentoAdquirentePersist, callback) {
       var postBody = vinculoEstabelecimentoAdquirentePersist;
 
       // verify the required parameter 'vinculoEstabelecimentoAdquirentePersist' is set
       if (vinculoEstabelecimentoAdquirentePersist == undefined || vinculoEstabelecimentoAdquirentePersist == null) {
-        throw "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST28";
+        throw "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST29";
       }
 
 

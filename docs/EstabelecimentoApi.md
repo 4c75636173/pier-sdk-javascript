@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrarUsingPOST3**](EstabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/grupos-economicos | Cadastrar Grupo Econ\u00C3\u00B4mico
 [**consultaOperacaoUsingGET**](EstabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
 [**consultarOrigemComercialUsingGET**](EstabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | Consultar Origem Comercial
-[**consultarUsingGET15**](EstabelecimentoApi.md#consultarUsingGET15) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
-[**consultarUsingGET17**](EstabelecimentoApi.md#consultarUsingGET17) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
-[**consultarUsingGET19**](EstabelecimentoApi.md#consultarUsingGET19) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
-[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET28**](EstabelecimentoApi.md#consultarUsingGET28) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
-[**consultarUsingGET30**](EstabelecimentoApi.md#consultarUsingGET30) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
-[**consultarUsingGET42**](EstabelecimentoApi.md#consultarUsingGET42) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
+[**consultarUsingGET16**](EstabelecimentoApi.md#consultarUsingGET16) | **GET** /api/estabelecimentos/{id} | Consultar estabelecimento por id
+[**consultarUsingGET18**](EstabelecimentoApi.md#consultarUsingGET18) | **GET** /api/grupos-economicos/{id} | Consultar grupo econ\u00C3\u00B4mico
+[**consultarUsingGET20**](EstabelecimentoApi.md#consultarUsingGET20) | **GET** /api/maquinetas/{id} | Apresenta os dados de uma determinada maquineta
+[**consultarUsingGET21**](EstabelecimentoApi.md#consultarUsingGET21) | **GET** /api/regras-operacoes-estabelecimentos/{id} | Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**consultarUsingGET29**](EstabelecimentoApi.md#consultarUsingGET29) | **GET** /api/telefones-estabelecimentos/{id} | Apresenta os dados de um determinado telefone de um estabelecimento
+[**consultarUsingGET31**](EstabelecimentoApi.md#consultarUsingGET31) | **GET** /api/terminais/{id} | Apresenta os dados de um determinado Terminal
+[**consultarUsingGET43**](EstabelecimentoApi.md#consultarUsingGET43) | **GET** /api/adquirentes-estabelecimento/{id} | Apresenta os dados de um determinado V\u00C3\u00ADnculo
 [**desabilitarVinculoUsingPOST**](EstabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | Desabilitar um V\u00C3\u00ADnculo
 [**desabilitarVinculoUsingPOST1**](EstabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
 [**habilitarVinculoUsingPOST**](EstabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | Habilitar um V\u00C3\u00ADnculo
@@ -33,20 +33,20 @@ Method | HTTP request | Description
 [**listarTiposAdquirentesUsingGET**](EstabelecimentoApi.md#listarTiposAdquirentesUsingGET) | **GET** /api/tipos-adquirentes | Lista os Tipos de adquirentes
 [**listarTiposMaquinetasUsingGET**](EstabelecimentoApi.md#listarTiposMaquinetasUsingGET) | **GET** /api/tipos-maquinetas | Lista os Tipos de  Maquinetas
 [**listarTiposTerminaisUsingGET1**](EstabelecimentoApi.md#listarTiposTerminaisUsingGET1) | **GET** /api/tipos-terminais-estabelecimento | Lista os Tipos Terminais
-[**listarUsingGET19**](EstabelecimentoApi.md#listarUsingGET19) | **GET** /api/estabelecimentos | Lista Estabelecimentos
-[**listarUsingGET21**](EstabelecimentoApi.md#listarUsingGET21) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
-[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/maquinetas | Lista as Maquinetas
-[**listarUsingGET24**](EstabelecimentoApi.md#listarUsingGET24) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
-[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET36**](EstabelecimentoApi.md#listarUsingGET36) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
-[**listarUsingGET38**](EstabelecimentoApi.md#listarUsingGET38) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
-[**listarUsingGET49**](EstabelecimentoApi.md#listarUsingGET49) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-[**listarUsingGET50**](EstabelecimentoApi.md#listarUsingGET50) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-[**salvarUsingPOST15**](EstabelecimentoApi.md#salvarUsingPOST15) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
-[**salvarUsingPOST16**](EstabelecimentoApi.md#salvarUsingPOST16) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-[**salvarUsingPOST21**](EstabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
-[**salvarUsingPOST23**](EstabelecimentoApi.md#salvarUsingPOST23) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
-[**salvarUsingPOST28**](EstabelecimentoApi.md#salvarUsingPOST28) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
+[**listarUsingGET21**](EstabelecimentoApi.md#listarUsingGET21) | **GET** /api/estabelecimentos | Lista Estabelecimentos
+[**listarUsingGET23**](EstabelecimentoApi.md#listarUsingGET23) | **GET** /api/grupos-economicos | Listar grupos econ\u00C3\u00B4micos
+[**listarUsingGET25**](EstabelecimentoApi.md#listarUsingGET25) | **GET** /api/maquinetas | Lista as Maquinetas
+[**listarUsingGET26**](EstabelecimentoApi.md#listarUsingGET26) | **GET** /api/tipos-moedas | Lista os tipos de moedas do emissor 
+[**listarUsingGET27**](EstabelecimentoApi.md#listarUsingGET27) | **GET** /api/regras-operacoes-estabelecimentos | Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
+[**listarUsingGET38**](EstabelecimentoApi.md#listarUsingGET38) | **GET** /api/telefones-estabelecimentos | Lista os Telefones Estabelecimentos
+[**listarUsingGET40**](EstabelecimentoApi.md#listarUsingGET40) | **GET** /api/terminais | Lista os Terminais cadastrados no Emissor
+[**listarUsingGET51**](EstabelecimentoApi.md#listarUsingGET51) | **GET** /api/adquirentes-estabelecimento | Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
+[**listarUsingGET52**](EstabelecimentoApi.md#listarUsingGET52) | **GET** /api/estabelecimentos/{id}/operacoes | Lista os v\u00C3\u00ADnculos cadastrados no Emissor
+[**salvarUsingPOST16**](EstabelecimentoApi.md#salvarUsingPOST16) | **POST** /api/maquinetas | Realiza o cadastro de uma nova maquineta para um estabelecimento 
+[**salvarUsingPOST17**](EstabelecimentoApi.md#salvarUsingPOST17) | **POST** /api/regras-operacoes-estabelecimentos | Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
+[**salvarUsingPOST22**](EstabelecimentoApi.md#salvarUsingPOST22) | **POST** /api/telefones-estabelecimentos | Realiza o cadastro de um novo telefone para um estabelecimento 
+[**salvarUsingPOST24**](EstabelecimentoApi.md#salvarUsingPOST24) | **POST** /api/terminais | Realiza o cadastro de um novo Terminal
+[**salvarUsingPOST29**](EstabelecimentoApi.md#salvarUsingPOST29) | **POST** /api/adquirentes-estabelecimento | Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
 
 <a name="alterarOrigemComercialUsingPUT"></a>
@@ -629,9 +629,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> EstabelecimentoResponse consultarUsingGET15(id)
+<a name="consultarUsingGET16"></a>
+# **consultarUsingGET16**
+> EstabelecimentoResponse consultarUsingGET16(id)
 
 Consultar estabelecimento por id
 
@@ -653,7 +653,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(id, callback);
+api.consultarUsingGET16(id, callback);
 ```
 
 ### Parameters
@@ -675,9 +675,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> GrupoEconomicoResponse consultarUsingGET17(id)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> GrupoEconomicoResponse consultarUsingGET18(id)
 
 Consultar grupo econ\u00C3\u00B4mico
 
@@ -699,7 +699,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(id, callback);
+api.consultarUsingGET18(id, callback);
 ```
 
 ### Parameters
@@ -721,9 +721,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> MaquinetaResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> MaquinetaResponse consultarUsingGET20(id)
 
 Apresenta os dados de uma determinada maquineta
 
@@ -745,7 +745,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -767,9 +767,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> OperacaoCredorResponse consultarUsingGET20(id)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> OperacaoCredorResponse consultarUsingGET21(id)
 
 Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -791,7 +791,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, callback);
+api.consultarUsingGET21(id, callback);
 ```
 
 ### Parameters
@@ -813,9 +813,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET28"></a>
-# **consultarUsingGET28**
-> TelefoneEstabelecimentoResponse consultarUsingGET28(id)
+<a name="consultarUsingGET29"></a>
+# **consultarUsingGET29**
+> TelefoneEstabelecimentoResponse consultarUsingGET29(id)
 
 Apresenta os dados de um determinado telefone de um estabelecimento
 
@@ -837,7 +837,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET28(id, callback);
+api.consultarUsingGET29(id, callback);
 ```
 
 ### Parameters
@@ -859,9 +859,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET30"></a>
-# **consultarUsingGET30**
-> TerminalResponse consultarUsingGET30(id)
+<a name="consultarUsingGET31"></a>
+# **consultarUsingGET31**
+> TerminalResponse consultarUsingGET31(id)
 
 Apresenta os dados de um determinado Terminal
 
@@ -883,7 +883,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET30(id, callback);
+api.consultarUsingGET31(id, callback);
 ```
 
 ### Parameters
@@ -905,9 +905,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET42"></a>
-# **consultarUsingGET42**
-> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET42(id)
+<a name="consultarUsingGET43"></a>
+# **consultarUsingGET43**
+> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET43(id)
 
 Apresenta os dados de um determinado V\u00C3\u00ADnculo
 
@@ -929,7 +929,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET42(id, callback);
+api.consultarUsingGET43(id, callback);
 ```
 
 ### Parameters
@@ -1499,9 +1499,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PageEstabelecimentoResponse listarUsingGET19(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageEstabelecimentoResponse listarUsingGET21(opts)
 
 Lista Estabelecimentos
 
@@ -1560,7 +1560,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET19(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -1618,9 +1618,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PageGrupoEconomicoResponse listarUsingGET21(opts)
+<a name="listarUsingGET23"></a>
+# **listarUsingGET23**
+> PageGrupoEconomicoResponse listarUsingGET23(opts)
 
 Listar grupos econ\u00C3\u00B4micos
 
@@ -1670,7 +1670,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET23(opts, callback);
 ```
 
 ### Parameters
@@ -1719,9 +1719,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET23"></a>
-# **listarUsingGET23**
-> PageMaquinetaResponse listarUsingGET23(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageMaquinetaResponse listarUsingGET25(opts)
 
 Lista as Maquinetas
 
@@ -1747,7 +1747,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET23(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -1772,9 +1772,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageMoedaResponse listarUsingGET24(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageMoedaResponse listarUsingGET26(opts)
 
 Lista os tipos de moedas do emissor 
 
@@ -1802,7 +1802,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -1829,9 +1829,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageOperacaoCredorResponse listarUsingGET25(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PageOperacaoCredorResponse listarUsingGET27(opts)
 
 Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
 
@@ -1859,7 +1859,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters
@@ -1886,9 +1886,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET36"></a>
-# **listarUsingGET36**
-> PageTelefoneEstabelecimentoResponse listarUsingGET36(opts)
+<a name="listarUsingGET38"></a>
+# **listarUsingGET38**
+> PageTelefoneEstabelecimentoResponse listarUsingGET38(opts)
 
 Lista os Telefones Estabelecimentos
 
@@ -1914,7 +1914,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET36(opts, callback);
+api.listarUsingGET38(opts, callback);
 ```
 
 ### Parameters
@@ -1939,9 +1939,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET38"></a>
-# **listarUsingGET38**
-> PageTerminalResponse listarUsingGET38(opts)
+<a name="listarUsingGET40"></a>
+# **listarUsingGET40**
+> PageTerminalResponse listarUsingGET40(opts)
 
 Lista os Terminais cadastrados no Emissor
 
@@ -1970,7 +1970,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET38(opts, callback);
+api.listarUsingGET40(opts, callback);
 ```
 
 ### Parameters
@@ -1998,9 +1998,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET49"></a>
-# **listarUsingGET49**
-> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET49(opts)
+<a name="listarUsingGET51"></a>
+# **listarUsingGET51**
+> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET51(opts)
 
 Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
 
@@ -2028,7 +2028,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET49(opts, callback);
+api.listarUsingGET51(opts, callback);
 ```
 
 ### Parameters
@@ -2055,9 +2055,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET50"></a>
-# **listarUsingGET50**
-> PageVinculoOperacaoResponse listarUsingGET50(id, opts)
+<a name="listarUsingGET52"></a>
+# **listarUsingGET52**
+> PageVinculoOperacaoResponse listarUsingGET52(id, opts)
 
 Lista os v\u00C3\u00ADnculos cadastrados no Emissor
 
@@ -2087,7 +2087,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET50(id, opts, callback);
+api.listarUsingGET52(id, opts, callback);
 ```
 
 ### Parameters
@@ -2115,9 +2115,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST15"></a>
-# **salvarUsingPOST15**
-> MaquinetaResponse salvarUsingPOST15(maquinetaPersist)
+<a name="salvarUsingPOST16"></a>
+# **salvarUsingPOST16**
+> MaquinetaResponse salvarUsingPOST16(maquinetaPersist)
 
 Realiza o cadastro de uma nova maquineta para um estabelecimento 
 
@@ -2139,7 +2139,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST15(maquinetaPersist, callback);
+api.salvarUsingPOST16(maquinetaPersist, callback);
 ```
 
 ### Parameters
@@ -2161,9 +2161,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> OperacaoCredorResponse salvarUsingPOST16(oprecaoCredorPersist)
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> OperacaoCredorResponse salvarUsingPOST17(oprecaoCredorPersist)
 
 Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
 
@@ -2185,7 +2185,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(oprecaoCredorPersist, callback);
+api.salvarUsingPOST17(oprecaoCredorPersist, callback);
 ```
 
 ### Parameters
@@ -2207,9 +2207,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST21"></a>
-# **salvarUsingPOST21**
-> TelefoneEstabelecimentoResponse salvarUsingPOST21(idEstabelecimento, ddd, telefone, opts)
+<a name="salvarUsingPOST22"></a>
+# **salvarUsingPOST22**
+> TelefoneEstabelecimentoResponse salvarUsingPOST22(idEstabelecimento, ddd, telefone, opts)
 
 Realiza o cadastro de um novo telefone para um estabelecimento 
 
@@ -2238,7 +2238,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST21(idEstabelecimento, ddd, telefone, opts, callback);
+api.salvarUsingPOST22(idEstabelecimento, ddd, telefone, opts, callback);
 ```
 
 ### Parameters
@@ -2263,9 +2263,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST23"></a>
-# **salvarUsingPOST23**
-> TerminalResponse salvarUsingPOST23(terminalPersist)
+<a name="salvarUsingPOST24"></a>
+# **salvarUsingPOST24**
+> TerminalResponse salvarUsingPOST24(terminalPersist)
 
 Realiza o cadastro de um novo Terminal
 
@@ -2287,7 +2287,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST23(terminalPersist, callback);
+api.salvarUsingPOST24(terminalPersist, callback);
 ```
 
 ### Parameters
@@ -2309,9 +2309,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST28"></a>
-# **salvarUsingPOST28**
-> VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST28(vinculoEstabelecimentoAdquirentePersist)
+<a name="salvarUsingPOST29"></a>
+# **salvarUsingPOST29**
+> VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST29(vinculoEstabelecimentoAdquirentePersist)
 
 Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
 
@@ -2333,7 +2333,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST28(vinculoEstabelecimentoAdquirentePersist, callback);
+api.salvarUsingPOST29(vinculoEstabelecimentoAdquirentePersist, callback);
 ```
 
 ### Parameters

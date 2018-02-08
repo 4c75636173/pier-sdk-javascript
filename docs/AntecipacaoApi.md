@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**consultarTaxaAntecipacaoUsingGET**](AntecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
 [**efetivarAntecipacaoUsingPOST**](AntecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
 [**efetivarAntecipacoesUsingPOST**](AntecipacaoApi.md#efetivarAntecipacoesUsingPOST) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-[**listarUsingGET9**](AntecipacaoApi.md#listarUsingGET9) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
+[**listarUsingGET11**](AntecipacaoApi.md#listarUsingGET11) | **GET** /api/compras-antecipaveis | Listar compras com parcelas antecip\u00C3\u00A1veis
 [**simularAntecipacaoUsingGET**](AntecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
 [**simularAntecipacoesUsingGET**](AntecipacaoApi.md#simularAntecipacoesUsingGET) | **GET** /api/compras-antecipaveis/simular-antecipacao | Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
 
@@ -217,9 +217,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageCompraResponse listarUsingGET9(idConta, opts)
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageCompraResponse listarUsingGET11(idConta, opts)
 
 Listar compras com parcelas antecip\u00C3\u00A1veis
 
@@ -250,7 +250,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET9(idConta, opts, callback);
+api.listarUsingGET11(idConta, opts, callback);
 ```
 
 ### Parameters

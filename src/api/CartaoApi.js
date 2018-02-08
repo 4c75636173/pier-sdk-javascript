@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/HistoricoImpressaoCartaoResponse', '../model/CartaoResponse', '../model/DadosCartaoImpressaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
+    define(['../ApiClient', '../model/HistoricoImpressaoCartaoResponse', '../model/CartaoResponse', '../model/DadosCartaoImpressaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCVVRequest', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/CartaoResponse'), require('../model/DadosCartaoImpressaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/CartaoResponse'), require('../model/DadosCartaoImpressaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCVVRequest'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.CartaoResponse, root.Pier.DadosCartaoImpressaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
+    root.Pier.CartaoApi = factory(root.Pier.ApiClient, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.CartaoResponse, root.Pier.DadosCartaoImpressaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCVVRequest, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
   }
-}(this, function(ApiClient, HistoricoImpressaoCartaoResponse, CartaoResponse, DadosCartaoImpressaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
+}(this, function(ApiClient, HistoricoImpressaoCartaoResponse, CartaoResponse, DadosCartaoImpressaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCVVRequest, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
   'use strict';
 
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -595,8 +595,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/CartaoApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/CartaoApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -606,15 +606,15 @@
      * Apresenta os dados de um determinado Cart\u00C3\u00A3o
      * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
      * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-     * @param {module:api/CartaoApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoDetalheResponse}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 
@@ -947,8 +947,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/CartaoApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/CartaoApi~listarUsingGET10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -979,10 +979,10 @@
      * @param {Integer} opts.flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
      * @param {String} opts.codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
      * @param {Integer} opts.sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-     * @param {module:api/CartaoApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CartaoApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoResponse}
      */
-    this.listarUsingGET8 = function(opts, callback) {
+    this.listarUsingGET10 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1070,6 +1070,58 @@
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/reativar', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validarCVVUsingPOST operation.
+     * @callback module:api/CartaoApi~validarCVVUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validar CVV do cart\u00C3\u00A3o
+     * Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {module:model/ValidaCVVRequest} validaCVV validaCVV
+     * @param {module:api/CartaoApi~validarCVVUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.validarCVVUsingPOST = function(id, validaCVV, callback) {
+      var postBody = validaCVV;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling validarCVVUsingPOST";
+      }
+
+      // verify the required parameter 'validaCVV' is set
+      if (validaCVV == undefined || validaCVV == null) {
+        throw "Missing the required parameter 'validaCVV' when calling validarCVVUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/{id}/validar-cvv', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

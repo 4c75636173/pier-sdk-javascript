@@ -18,7 +18,7 @@
   /**
    * The PageStatusContaResponse model module.
    * @module model/PageStatusContaResponse
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**

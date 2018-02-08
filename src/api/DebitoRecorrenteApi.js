@@ -18,7 +18,7 @@
   /**
    * DebitoRecorrente service.
    * @module api/DebitoRecorrenteApi
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the listarUsingGET13 operation.
-     * @callback module:api/DebitoRecorrenteApi~listarUsingGET13Callback
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/DebitoRecorrenteApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoDebitoRecorrenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -53,16 +53,16 @@
      * @param {String} opts.dataHoraFim Data fim do d\u00C3\u00A9bito recorrente.
      * @param {Boolean} opts.ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
      * @param {String} opts.dataHoraUltimoPagamento Data do \u00C3\u00BAltimo pagamento efetuado.
-     * @param {module:api/DebitoRecorrenteApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DebitoRecorrenteApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoDebitoRecorrenteResponse}
      */
-    this.listarUsingGET13 = function(idConta, opts, callback) {
+    this.listarUsingGET15 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET13";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET15";
       }
 
 
@@ -97,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET39 operation.
-     * @callback module:api/DebitoRecorrenteApi~listarUsingGET39Callback
+     * Callback function to receive the result of the listarUsingGET41 operation.
+     * @callback module:api/DebitoRecorrenteApi~listarUsingGET41Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoDebitoRecorrenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -115,10 +115,10 @@
      * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
      * @param {Number} opts.valor Valor do tipo de d\u00C3\u00A9bito recorrente.
      * @param {Boolean} opts.flagAtivo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
-     * @param {module:api/DebitoRecorrenteApi~listarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DebitoRecorrenteApi~listarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoDebitoRecorrenteResponse}
      */
-    this.listarUsingGET39 = function(opts, callback) {
+    this.listarUsingGET41 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

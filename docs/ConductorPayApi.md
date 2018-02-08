@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**atualizarChaveUsingPOST**](ConductorPayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
 [**atualizarUsingPUT**](ConductorPayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | Atualiza os dados do cart\u00C3\u00A3o
 [**confirmaAtualizacaoChaveUsingPOST**](ConductorPayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-[**consultarUsingGET6**](ConductorPayApi.md#consultarUsingGET6) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
+[**consultarUsingGET7**](ConductorPayApi.md#consultarUsingGET7) | **GET** /api/cartoes-tokenizados/{id} | Apresenta os dados de um determinado cart\u00C3\u00A3o
 [**listarCodigosRespostaUsingGET**](ConductorPayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
 [**listarModosEntradaUsingGET**](ConductorPayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | Lista os modos entradas
 [**listarOperacoesUsingGET**](ConductorPayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | Lista as opera\u00C3\u00A7\u00C3\u00B5es
 [**listarTiposTerminaisUsingGET**](ConductorPayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | Lista os tipos de terminais
 [**listarTiposTransacoesUsingGET**](ConductorPayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-[**listarUsingGET7**](ConductorPayApi.md#listarUsingGET7) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
-[**salvarUsingPOST5**](ConductorPayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+[**listarUsingGET9**](ConductorPayApi.md#listarUsingGET9) | **GET** /api/cartoes-tokenizados | Lista os cart\u00C3\u00B5es cadastrados
+[**salvarUsingPOST6**](ConductorPayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
 
 <a name="atualizarChaveUsingPOST"></a>
@@ -170,9 +170,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> CartaoPayDetalheResponse consultarUsingGET6(deviceId, id)
+<a name="consultarUsingGET7"></a>
+# **consultarUsingGET7**
+> CartaoPayDetalheResponse consultarUsingGET7(deviceId, id)
 
 Apresenta os dados de um determinado cart\u00C3\u00A3o
 
@@ -196,7 +196,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(deviceId, id, callback);
+api.consultarUsingGET7(deviceId, id, callback);
 ```
 
 ### Parameters
@@ -419,9 +419,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET7"></a>
-# **listarUsingGET7**
-> PageCartaoPayResponse listarUsingGET7(opts)
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PageCartaoPayResponse listarUsingGET9(opts)
 
 Lista os cart\u00C3\u00B5es cadastrados
 
@@ -449,7 +449,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET7(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters
@@ -476,9 +476,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST5"></a>
-# **salvarUsingPOST5**
-> CartaoPayCadastroResponse salvarUsingPOST5(deviceId, persist)
+<a name="salvarUsingPOST6"></a>
+# **salvarUsingPOST6**
+> CartaoPayCadastroResponse salvarUsingPOST6(deviceId, persist)
 
 Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
 
@@ -502,7 +502,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST5(deviceId, persist, callback);
+api.salvarUsingPOST6(deviceId, persist, callback);
 ```
 
 ### Parameters

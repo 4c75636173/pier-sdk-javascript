@@ -18,7 +18,7 @@
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**
@@ -147,8 +147,8 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
-      if (data.hasOwnProperty('tefefones')) {
-        obj['tefefones'] = ApiClient.convertToType(data['tefefones'], [TelefoneResponse]);
+      if (data.hasOwnProperty('telefones')) {
+        obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefoneResponse]);
       }
     }
     return obj;
@@ -313,9 +313,9 @@
 
   /**
    * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
-   * @member {Array.<module:model/TelefoneResponse>} tefefones
+   * @member {Array.<module:model/TelefoneResponse>} telefones
    */
-  exports.prototype['tefefones'] = undefined;
+  exports.prototype['telefones'] = undefined;
 
 
 

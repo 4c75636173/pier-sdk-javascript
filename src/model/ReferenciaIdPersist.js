@@ -18,7 +18,7 @@
   /**
    * The ReferenciaIdPersist model module.
    * @module model/ReferenciaIdPersist
-   * @version 2.52.0
+   * @version 2.54.0
    */
 
   /**

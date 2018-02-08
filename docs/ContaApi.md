@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
 [**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET11**](ContaApi.md#consultarUsingGET11) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET40**](ContaApi.md#consultarUsingGET40) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+[**consultarUsingGET12**](ContaApi.md#consultarUsingGET12) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET41**](ContaApi.md#consultarUsingGET41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 [**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
 [**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
@@ -29,8 +29,8 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
 [**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
 [**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET14**](ContaApi.md#listarUsingGET14) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listarUsingGET46**](ContaApi.md#listarUsingGET46) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
+[**listarUsingGET16**](ContaApi.md#listarUsingGET16) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET48**](ContaApi.md#listarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
 [**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
 [**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
@@ -200,7 +200,7 @@ No authorization required
 
 Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
 
-Esse recurso permite alterar o vencimento de uma conta especifica.
+Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
 
 ### Example
 ```javascript
@@ -656,9 +656,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET11"></a>
-# **consultarUsingGET11**
-> ContaDetalheResponse consultarUsingGET11(id)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> ContaDetalheResponse consultarUsingGET12(id)
 
 Apresenta dados de uma determinada conta
 
@@ -680,7 +680,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET11(id, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -702,9 +702,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET40"></a>
-# **consultarUsingGET40**
-> TransferenciaDetalheResponse consultarUsingGET40(id, idTransferencia)
+<a name="consultarUsingGET41"></a>
+# **consultarUsingGET41**
+> TransferenciaDetalheResponse consultarUsingGET41(id, idTransferencia)
 
 Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
 
@@ -728,7 +728,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET40(id, idTransferencia, callback);
+api.consultarUsingGET41(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -1326,9 +1326,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET14"></a>
-# **listarUsingGET14**
-> PageContaResponse listarUsingGET14(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageContaResponse listarUsingGET16(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1362,7 +1362,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET14(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -1395,9 +1395,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET46"></a>
-# **listarUsingGET46**
-> PageTransferenciaResponse listarUsingGET46(id, opts)
+<a name="listarUsingGET48"></a>
+# **listarUsingGET48**
+> PageTransferenciaResponse listarUsingGET48(id, opts)
 
 Lista as transfer\u00C3\u00AAncias realizadas pela conta
 
@@ -1429,7 +1429,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET46(id, opts, callback);
+api.listarUsingGET48(id, opts, callback);
 ```
 
 ### Parameters
