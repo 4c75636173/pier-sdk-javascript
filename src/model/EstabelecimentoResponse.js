@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoResponse model module.
    * @module model/EstabelecimentoResponse
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**
@@ -183,8 +183,8 @@
       if (data.hasOwnProperty('idTipoEstabelecimento')) {
         obj['idTipoEstabelecimento'] = ApiClient.convertToType(data['idTipoEstabelecimento'], 'Integer');
       }
-      if (data.hasOwnProperty('tipoCorrespondencia')) {
-        obj['tipoCorrespondencia'] = ApiClient.convertToType(data['tipoCorrespondencia'], 'String');
+      if (data.hasOwnProperty('correspondencia')) {
+        obj['correspondencia'] = ApiClient.convertToType(data['correspondencia'], 'Integer');
       }
       if (data.hasOwnProperty('cargoContato')) {
         obj['cargoContato'] = ApiClient.convertToType(data['cargoContato'], 'String');
@@ -415,9 +415,9 @@
 
   /**
    * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-   * @member {module:model/EstabelecimentoResponse.TipoCorrespondenciaEnum} tipoCorrespondencia
+   * @member {Integer} correspondencia
    */
-  exports.prototype['tipoCorrespondencia'] = undefined;
+  exports.prototype['correspondencia'] = undefined;
 
   /**
    * Cargo do contato do estabelecimento.
@@ -469,23 +469,6 @@
 
 
   /**
-   * Allowed values for the <code>tipoCorrespondencia</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.TipoCorrespondenciaEnum = { 
-    /**
-     * value: ORIGEM
-     * @const
-     */
-    ORIGEM: "ORIGEM",
-    
-    /**
-     * value: CORRESPONDENCIA
-     * @const
-     */
-    CORRESPONDENCIA: "CORRESPONDENCIA"
-  };  /**
    * Allowed values for the <code>tipoPagamento</code> property.
    * @enum {String}
    * @readonly

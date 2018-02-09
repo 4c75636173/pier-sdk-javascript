@@ -18,7 +18,7 @@
   /**
    * The TransferenciaCreditoContaBancariaPersist model module.
    * @module model/TransferenciaCreditoContaBancariaPersist
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**
@@ -85,7 +85,7 @@
         obj['terminalRequisitante'] = ApiClient.convertToType(data['terminalRequisitante'], 'String');
       }
       if (data.hasOwnProperty('numeroEstabelecimento')) {
-        obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'Integer');
+        obj['numeroEstabelecimento'] = ApiClient.convertToType(data['numeroEstabelecimento'], 'String');
       }
     }
     return obj;
@@ -142,7 +142,7 @@
 
   /**
    * Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
-   * @member {Integer} numeroEstabelecimento
+   * @member {String} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 

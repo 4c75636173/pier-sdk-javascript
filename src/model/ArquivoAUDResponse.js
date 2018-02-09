@@ -18,7 +18,7 @@
   /**
    * The ArquivoAUDResponse model module.
    * @module model/ArquivoAUDResponse
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**

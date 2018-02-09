@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoUpdate model module.
    * @module model/EstabelecimentoUpdate
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**
@@ -165,8 +165,8 @@
       if (data.hasOwnProperty('idTipoEstabelecimento')) {
         obj['idTipoEstabelecimento'] = ApiClient.convertToType(data['idTipoEstabelecimento'], 'Integer');
       }
-      if (data.hasOwnProperty('tipoCorrespondencia')) {
-        obj['tipoCorrespondencia'] = ApiClient.convertToType(data['tipoCorrespondencia'], 'String');
+      if (data.hasOwnProperty('correspondencia')) {
+        obj['correspondencia'] = ApiClient.convertToType(data['correspondencia'], 'Integer');
       }
       if (data.hasOwnProperty('cargoContato')) {
         obj['cargoContato'] = ApiClient.convertToType(data['cargoContato'], 'String');
@@ -366,10 +366,10 @@
   exports.prototype['idTipoEstabelecimento'] = undefined;
 
   /**
-   * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
-   * @member {module:model/EstabelecimentoUpdate.TipoCorrespondenciaEnum} tipoCorrespondencia
+   * Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+   * @member {Integer} correspondencia
    */
-  exports.prototype['tipoCorrespondencia'] = undefined;
+  exports.prototype['correspondencia'] = undefined;
 
   /**
    * Cargo do contato do estabelecimento.
@@ -409,23 +409,6 @@
 
 
   /**
-   * Allowed values for the <code>tipoCorrespondencia</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.TipoCorrespondenciaEnum = { 
-    /**
-     * value: ORIGEM
-     * @const
-     */
-    ORIGEM: "ORIGEM",
-    
-    /**
-     * value: CORRESPONDENCIA
-     * @const
-     */
-    CORRESPONDENCIA: "CORRESPONDENCIA"
-  };  /**
    * Allowed values for the <code>tipoPagamento</code> property.
    * @enum {String}
    * @readonly

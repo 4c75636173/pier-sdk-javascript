@@ -1540,6 +1540,7 @@ var opts = {
   'idPais': 789, // {Integer} Identificador de Pa\u00C3\u00ADs.
   'mcc': 789, // {Integer} C\u00C3\u00B3digo de Categoria de Mercado
   'idTipoEstabelecimento': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+  'correspondencia': 56, // {Integer} Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
   'idMoeda': 789, // {Integer} C\u00C3\u00B3digo identificador da moeda.
   'tipoPagamento': "tipoPagamento_example", // {String} Tipo do regime de pagamento do estabelecimento.
   'numeroEstabelecimento': "numeroEstabelecimento_example", // {String} N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
@@ -1593,6 +1594,7 @@ Name | Type | Description  | Notes
  **idPais** | **Integer**| Identificador de Pa\u00C3\u00ADs. | [optional] 
  **mcc** | **Integer**| C\u00C3\u00B3digo de Categoria de Mercado | [optional] 
  **idTipoEstabelecimento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento. | [optional] 
+ **correspondencia** | **Integer**| Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA. | [optional] 
  **idMoeda** | **Integer**| C\u00C3\u00B3digo identificador da moeda. | [optional] 
  **tipoPagamento** | **String**| Tipo do regime de pagamento do estabelecimento. | [optional] 
  **numeroEstabelecimento** | **String**| N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor. | [optional] 

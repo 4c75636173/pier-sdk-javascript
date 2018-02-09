@@ -18,7 +18,7 @@
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**
@@ -1525,6 +1525,7 @@
      * @param {Integer} opts.idPais Identificador de Pa\u00C3\u00ADs.
      * @param {Integer} opts.mcc C\u00C3\u00B3digo de Categoria de Mercado
      * @param {Integer} opts.idTipoEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+     * @param {Integer} opts.correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
      * @param {Integer} opts.idMoeda C\u00C3\u00B3digo identificador da moeda.
      * @param {module:model/String} opts.tipoPagamento Tipo do regime de pagamento do estabelecimento.
      * @param {String} opts.numeroEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
@@ -1573,6 +1574,7 @@
         'idPais': opts['idPais'],
         'mcc': opts['mcc'],
         'idTipoEstabelecimento': opts['idTipoEstabelecimento'],
+        'correspondencia': opts['correspondencia'],
         'idMoeda': opts['idMoeda'],
         'tipoPagamento': opts['tipoPagamento'],
         'numeroEstabelecimento': opts['numeroEstabelecimento'],

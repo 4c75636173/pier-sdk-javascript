@@ -18,7 +18,7 @@
   /**
    * Faturamento service.
    * @module api/FaturamentoApi
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**

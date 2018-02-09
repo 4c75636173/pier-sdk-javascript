@@ -18,7 +18,7 @@
   /**
    * The ArquivoDetalhesPersist model module.
    * @module model/ArquivoDetalhesPersist
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**

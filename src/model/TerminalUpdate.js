@@ -18,7 +18,7 @@
   /**
    * The TerminalUpdate model module.
    * @module model/TerminalUpdate
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**

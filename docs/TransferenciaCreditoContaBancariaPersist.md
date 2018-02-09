@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **numeroMesesCarencia** | **Integer** | Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia. | 
 **dataHoraTerminal** | **String** | Representa a Data e hora do terminal requisitante. | 
 **terminalRequisitante** | **String** | Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante. | 
-**numeroEstabelecimento** | **Integer** | Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. | 
+**numeroEstabelecimento** | **String** | Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento. | 
 
 

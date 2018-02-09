@@ -18,7 +18,7 @@
   /**
    * The ArquivoDetalheResponse model module.
    * @module model/ArquivoDetalheResponse
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**

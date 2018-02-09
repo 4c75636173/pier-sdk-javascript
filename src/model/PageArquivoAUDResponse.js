@@ -18,7 +18,7 @@
   /**
    * The PageArquivoAUDResponse model module.
    * @module model/PageArquivoAUDResponse
-   * @version 2.54.0
+   * @version 2.54.1
    */
 
   /**
