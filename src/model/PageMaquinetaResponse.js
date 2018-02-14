@@ -18,7 +18,7 @@
   /**
    * The PageMaquinetaResponse model module.
    * @module model/PageMaquinetaResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

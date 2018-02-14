@@ -18,7 +18,7 @@
   /**
    * The CartaoImpressaoResponse model module.
    * @module model/CartaoImpressaoResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The CartaoEmbossingRequest model module.
    * @module model/CartaoEmbossingRequest
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

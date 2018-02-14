@@ -18,7 +18,7 @@
   /**
    * The PageTelefoneResponse model module.
    * @module model/PageTelefoneResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

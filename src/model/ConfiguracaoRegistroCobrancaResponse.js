@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoRegistroCobrancaResponse model module.
    * @module model/ConfiguracaoRegistroCobrancaResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

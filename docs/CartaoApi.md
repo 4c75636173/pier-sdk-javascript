@@ -1057,7 +1057,7 @@ No authorization required
 
 <a name="validarCVVUsingPOST"></a>
 # **validarCVVUsingPOST**
-> Object validarCVVUsingPOST(id, validaCVV)
+> &#39;String&#39; validarCVVUsingPOST(id, validaCVV)
 
 Validar CVV do cart\u00C3\u00A3o
 
@@ -1093,7 +1093,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;String&#39;**
 
 ### Authorization
 

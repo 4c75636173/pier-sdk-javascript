@@ -18,7 +18,7 @@
   /**
    * The PageTipoTerminalResponse model module.
    * @module model/PageTipoTerminalResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

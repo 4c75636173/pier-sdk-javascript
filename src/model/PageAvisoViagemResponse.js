@@ -18,7 +18,7 @@
   /**
    * The PageAvisoViagemResponse model module.
    * @module model/PageAvisoViagemResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

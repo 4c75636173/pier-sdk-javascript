@@ -18,7 +18,7 @@
   /**
    * Cartao service.
    * @module api/CartaoApi
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**
@@ -1079,7 +1079,7 @@
      * Callback function to receive the result of the validarCVVUsingPOST operation.
      * @callback module:api/CartaoApi~validarCVVUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1089,7 +1089,7 @@
      * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
      * @param {module:model/ValidaCVVRequest} validaCVV validaCVV
      * @param {module:api/CartaoApi~validarCVVUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {Object}
+     * data is of type: {'String'}
      */
     this.validarCVVUsingPOST = function(id, validaCVV, callback) {
       var postBody = validaCVV;
@@ -1118,7 +1118,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/api/cartoes/{id}/validar-cvv', 'POST',

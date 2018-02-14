@@ -18,7 +18,7 @@
   /**
    * The PageJobResponse model module.
    * @module model/PageJobResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

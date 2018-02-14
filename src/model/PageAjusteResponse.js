@@ -18,7 +18,7 @@
   /**
    * The PageAjusteResponse model module.
    * @module model/PageAjusteResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

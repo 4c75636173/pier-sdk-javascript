@@ -18,7 +18,7 @@
   /**
    * The DispositivoPersist model module.
    * @module model/DispositivoPersist
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

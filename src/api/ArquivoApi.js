@@ -18,7 +18,7 @@
   /**
    * Arquivo service.
    * @module api/ArquivoApi
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

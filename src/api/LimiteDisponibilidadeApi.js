@@ -18,7 +18,7 @@
   /**
    * LimiteDisponibilidade service.
    * @module api/LimiteDisponibilidadeApi
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

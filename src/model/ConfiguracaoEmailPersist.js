@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoEmailPersist model module.
    * @module model/ConfiguracaoEmailPersist
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

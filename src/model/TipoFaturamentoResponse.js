@@ -18,7 +18,7 @@
   /**
    * The TipoFaturamentoResponse model module.
    * @module model/TipoFaturamentoResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The OrigemComercialUpdate model module.
    * @module model/OrigemComercialUpdate
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

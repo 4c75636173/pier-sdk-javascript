@@ -18,7 +18,7 @@
   /**
    * The NotificacaoEmailRequest model module.
    * @module model/NotificacaoEmailRequest
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

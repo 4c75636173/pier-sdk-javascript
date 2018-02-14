@@ -18,7 +18,7 @@
   /**
    * The TaxasRefinanciamentoResponse model module.
    * @module model/TaxasRefinanciamentoResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

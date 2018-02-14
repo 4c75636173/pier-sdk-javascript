@@ -18,7 +18,7 @@
   /**
    * The PageMoedaResponse model module.
    * @module model/PageMoedaResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

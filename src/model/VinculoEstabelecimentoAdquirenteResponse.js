@@ -18,7 +18,7 @@
   /**
    * The VinculoEstabelecimentoAdquirenteResponse model module.
    * @module model/VinculoEstabelecimentoAdquirenteResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

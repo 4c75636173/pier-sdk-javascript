@@ -18,7 +18,7 @@
   /**
    * The VinculoEstabelecimentoAdquirentePersist model module.
    * @module model/VinculoEstabelecimentoAdquirentePersist
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

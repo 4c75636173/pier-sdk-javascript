@@ -18,7 +18,7 @@
   /**
    * The ContaBancariaPortadorUpdate model module.
    * @module model/ContaBancariaPortadorUpdate
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

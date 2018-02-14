@@ -18,7 +18,7 @@
   /**
    * PermissaoPais service.
    * @module api/PermissaoPaisApi
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

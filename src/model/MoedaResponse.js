@@ -18,7 +18,7 @@
   /**
    * The MoedaResponse model module.
    * @module model/MoedaResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The HistoricoTelefoneResponse model module.
    * @module model/HistoricoTelefoneResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

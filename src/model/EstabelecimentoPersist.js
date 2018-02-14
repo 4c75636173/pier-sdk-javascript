@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoPersist model module.
    * @module model/EstabelecimentoPersist
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**

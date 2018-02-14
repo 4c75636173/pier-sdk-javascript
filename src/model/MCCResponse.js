@@ -18,7 +18,7 @@
   /**
    * The MCCResponse model module.
    * @module model/MCCResponse
-   * @version 2.54.1
+   * @version 2.54.2
    */
 
   /**
