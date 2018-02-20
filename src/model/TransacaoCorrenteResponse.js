@@ -18,7 +18,7 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

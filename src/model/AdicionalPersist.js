@@ -18,7 +18,7 @@
   /**
    * The AdicionalPersist model module.
    * @module model/AdicionalPersist
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

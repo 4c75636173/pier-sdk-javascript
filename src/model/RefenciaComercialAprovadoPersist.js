@@ -18,7 +18,7 @@
   /**
    * The RefenciaComercialAprovadoPersist model module.
    * @module model/RefenciaComercialAprovadoPersist
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

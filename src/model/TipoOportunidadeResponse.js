@@ -18,7 +18,7 @@
   /**
    * The TipoOportunidadeResponse model module.
    * @module model/TipoOportunidadeResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

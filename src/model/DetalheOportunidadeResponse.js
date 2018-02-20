@@ -18,7 +18,7 @@
   /**
    * The DetalheOportunidadeResponse model module.
    * @module model/DetalheOportunidadeResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

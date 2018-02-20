@@ -18,7 +18,7 @@
   /**
    * The PageAplicacaoMobileResponse model module.
    * @module model/PageAplicacaoMobileResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

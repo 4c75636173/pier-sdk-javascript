@@ -18,7 +18,7 @@
   /**
    * The EntidadeResponse model module.
    * @module model/EntidadeResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

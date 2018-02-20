@@ -18,7 +18,7 @@
   /**
    * The TransacaoOnUsPorIdCartaoRequest model module.
    * @module model/TransacaoOnUsPorIdCartaoRequest
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The CartaoPayAtualizarChaveResponse model module.
    * @module model/CartaoPayAtualizarChaveResponse
-   * @version 2.54.2
+   * @version 2.54.4
    */
 
   /**
