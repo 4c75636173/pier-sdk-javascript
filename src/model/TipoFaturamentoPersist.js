@@ -18,7 +18,7 @@
   /**
    * The TipoFaturamentoPersist model module.
    * @module model/TipoFaturamentoPersist
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageTelefoneEstabelecimentoResponse model module.
    * @module model/PageTelefoneEstabelecimentoResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageRiscoFraudeResponse model module.
    * @module model/PageRiscoFraudeResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/WebHookResponse', '../model/PageWebHookResponse'], factory);
+    define(['../ApiClient', '../model/WebHookResponse', '../model/WebHook', '../model/PageWebHookResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/WebHookResponse'), require('../model/PageWebHookResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/WebHookResponse'), require('../model/WebHook'), require('../model/PageWebHookResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.WebhookApi = factory(root.Pier.ApiClient, root.Pier.WebHookResponse, root.Pier.PageWebHookResponse);
+    root.Pier.WebhookApi = factory(root.Pier.ApiClient, root.Pier.WebHookResponse, root.Pier.WebHook, root.Pier.PageWebHookResponse);
   }
-}(this, function(ApiClient, WebHookResponse, PageWebHookResponse) {
+}(this, function(ApiClient, WebHookResponse, WebHook, PageWebHookResponse) {
   'use strict';
 
   /**
    * Webhook service.
    * @module api/WebhookApi
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**
@@ -44,30 +44,24 @@
      * Alterar Webhook
      * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
      * @param {Integer} id C\u00C3\u00B3digo identificador do Webhook
-     * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
-     * @param {String} url URL que a ser consumida pelo WebHook
+     * @param {module:model/WebHook} webhook webhook
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status
      * @param {module:api/WebhookApi~alterarUsingPUT22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.alterarUsingPUT22 = function(id, tipoEvento, url, opts, callback) {
+    this.alterarUsingPUT22 = function(id, webhook, opts, callback) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = webhook;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
         throw "Missing the required parameter 'id' when calling alterarUsingPUT22";
       }
 
-      // verify the required parameter 'tipoEvento' is set
-      if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT22";
-      }
-
-      // verify the required parameter 'url' is set
-      if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling alterarUsingPUT22";
+      // verify the required parameter 'webhook' is set
+      if (webhook == undefined || webhook == null) {
+        throw "Missing the required parameter 'webhook' when calling alterarUsingPUT22";
       }
 
 
@@ -75,9 +69,7 @@
         'id': id
       };
       var queryParams = {
-        'status': opts['status'],
-        'tipoEvento': tipoEvento,
-        'url': url
+        'status': opts['status']
       };
       var headerParams = {
       };
@@ -208,30 +200,22 @@
     /**
      * Salvar Webhook
      * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-     * @param {module:model/String} tipoEvento TipoEvento a ser chamado pelo WebHook
-     * @param {String} url URL que a ser consumida pelo WebHook
+     * @param {module:model/WebHook} webhook webhook
      * @param {module:api/WebhookApi~salvarUsingPOST30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.salvarUsingPOST30 = function(tipoEvento, url, callback) {
-      var postBody = null;
+    this.salvarUsingPOST30 = function(webhook, callback) {
+      var postBody = webhook;
 
-      // verify the required parameter 'tipoEvento' is set
-      if (tipoEvento == undefined || tipoEvento == null) {
-        throw "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST30";
-      }
-
-      // verify the required parameter 'url' is set
-      if (url == undefined || url == null) {
-        throw "Missing the required parameter 'url' when calling salvarUsingPOST30";
+      // verify the required parameter 'webhook' is set
+      if (webhook == undefined || webhook == null) {
+        throw "Missing the required parameter 'webhook' when calling salvarUsingPOST30";
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'tipoEvento': tipoEvento,
-        'url': url
       };
       var headerParams = {
       };

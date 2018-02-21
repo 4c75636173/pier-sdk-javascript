@@ -18,7 +18,7 @@
   /**
    * The PageOperacaoCredorResponse model module.
    * @module model/PageOperacaoCredorResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

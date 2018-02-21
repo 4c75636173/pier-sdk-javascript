@@ -18,7 +18,7 @@
   /**
    * The MaquinetaUpdate model module.
    * @module model/MaquinetaUpdate
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

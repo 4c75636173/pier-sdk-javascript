@@ -18,7 +18,7 @@
   /**
    * The ArquivoParametroAUDResponse model module.
    * @module model/ArquivoParametroAUDResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The GrupoEconomicoResponse model module.
    * @module model/GrupoEconomicoResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The CartaoPayConfirmarChaveResponse model module.
    * @module model/CartaoPayConfirmarChaveResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

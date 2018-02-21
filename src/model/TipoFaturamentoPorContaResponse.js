@@ -18,7 +18,7 @@
   /**
    * The TipoFaturamentoPorContaResponse model module.
    * @module model/TipoFaturamentoPorContaResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

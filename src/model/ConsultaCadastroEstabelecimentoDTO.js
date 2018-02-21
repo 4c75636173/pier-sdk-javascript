@@ -18,7 +18,7 @@
   /**
    * The ConsultaCadastroEstabelecimentoDTO model module.
    * @module model/ConsultaCadastroEstabelecimentoDTO
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

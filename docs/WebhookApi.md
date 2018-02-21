@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="alterarUsingPUT22"></a>
 # **alterarUsingPUT22**
-> WebHookResponse alterarUsingPUT22(id, tipoEvento, url, opts)
+> WebHookResponse alterarUsingPUT22(id, webhook, opts)
 
 Alterar Webhook
 
@@ -26,9 +26,7 @@ var apiInstance = new Pier.WebhookApi()
 
 var id = 789; // {Integer} C\u00C3\u00B3digo identificador do Webhook
 
-var tipoEvento = "tipoEvento_example"; // {String} TipoEvento a ser chamado pelo WebHook
-
-var url = "url_example"; // {String} URL que a ser consumida pelo WebHook
+var webhook = new Pier.WebHook(); // {WebHook} webhook
 
 var opts = { 
   'status': "status_example" // {String} Status
@@ -41,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarUsingPUT22(id, tipoEvento, url, opts, callback);
+api.alterarUsingPUT22(id, webhook, opts, callback);
 ```
 
 ### Parameters
@@ -49,8 +47,7 @@ api.alterarUsingPUT22(id, tipoEvento, url, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| C\u00C3\u00B3digo identificador do Webhook | 
- **tipoEvento** | **String**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**WebHook**](WebHook.md)| webhook | 
  **status** | **String**| Status | [optional] 
 
 ### Return type
@@ -173,7 +170,7 @@ No authorization required
 
 <a name="salvarUsingPOST30"></a>
 # **salvarUsingPOST30**
-> WebHookResponse salvarUsingPOST30(tipoEvento, url)
+> WebHookResponse salvarUsingPOST30(webhook)
 
 Salvar Webhook
 
@@ -185,9 +182,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.WebhookApi()
 
-var tipoEvento = "tipoEvento_example"; // {String} TipoEvento a ser chamado pelo WebHook
-
-var url = "url_example"; // {String} URL que a ser consumida pelo WebHook
+var webhook = new Pier.WebHook(); // {WebHook} webhook
 
 
 var callback = function(error, data, response) {
@@ -197,15 +192,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST30(tipoEvento, url, callback);
+api.salvarUsingPOST30(webhook, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tipoEvento** | **String**| TipoEvento a ser chamado pelo WebHook | 
- **url** | **String**| URL que a ser consumida pelo WebHook | 
+ **webhook** | [**WebHook**](WebHook.md)| webhook | 
 
 ### Return type
 

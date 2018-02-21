@@ -18,7 +18,7 @@
   /**
    * Fatura service.
    * @module api/FaturaApi
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

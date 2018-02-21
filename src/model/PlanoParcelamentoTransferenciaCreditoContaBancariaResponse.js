@@ -18,7 +18,7 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * EnderecoNacional service.
    * @module api/EnderecoNacionalApi
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**

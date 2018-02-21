@@ -18,7 +18,7 @@
   /**
    * Autorizacao service.
    * @module api/AutorizacaoApi
-   * @version 2.54.4
+   * @version 2.54.5
    */
 
   /**
