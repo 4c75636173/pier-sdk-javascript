@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarAnuidadeUsingPOST**](ServicoContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
-[**ativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-[**desativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
+[**ativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00E7o de envio de fatura por email
+[**desativarEnvioFaturaEmailUsingPOST**](ServicoContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00E7o de envio de fatura por email
 [**listarAnuidadesUsingGET**](ServicoContaApi.md#listarAnuidadesUsingGET) | **GET** /api/anuidades | Listar Anuidades
 [**listarOperadorasTelefonicasUsingGET**](ServicoContaApi.md#listarOperadorasTelefonicasUsingGET) | **GET** /api/operadoras-telefonicas | Listar Operadoras
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Atribuir Anuidade
 
-Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
 
 ### Example
 ```javascript
@@ -25,16 +25,16 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ServicoContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var idAnuidade = 789; // {Integer} Identificador da anuidade
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'DDD': "DDD_example", // {String} DDD do celular
-  'celular': "celular_example", // {String} N\u00C3\u00BAmero do celular
+  'celular': "celular_example", // {String} N\u00FAmero do celular
   'idOperadora': 789, // {Integer} Identificador da operadora do celular
   'idOrigemComercial': 789 // {Integer} Identificador da origem comercial
 };
@@ -53,13 +53,13 @@ api.ativarAnuidadeUsingPOST(id, idAnuidade, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **idAnuidade** | **Integer**| Identificador da anuidade | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **DDD** | **String**| DDD do celular | [optional] 
- **celular** | **String**| N\u00C3\u00BAmero do celular | [optional] 
+ **celular** | **String**| N\u00FAmero do celular | [optional] 
  **idOperadora** | **Integer**| Identificador da operadora do celular | [optional] 
  **idOrigemComercial** | **Integer**| Identificador da origem comercial | [optional] 
 
@@ -80,9 +80,9 @@ No authorization required
 # **ativarEnvioFaturaEmailUsingPOST**
 > Object ativarEnvioFaturaEmailUsingPOST(id)
 
- Ativa o servi\u00C3\u00A7o de envio de fatura por email
+ Ativa o servi\u00E7o de envio de fatura por email
 
-Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso ativa o servi\u00E7o de envio de fatura por email
 
 ### Example
 ```javascript
@@ -90,7 +90,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ServicoContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -107,7 +107,7 @@ api.ativarEnvioFaturaEmailUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -126,9 +126,9 @@ No authorization required
 # **desativarEnvioFaturaEmailUsingPOST**
 > Object desativarEnvioFaturaEmailUsingPOST(id)
 
-Desativa o servi\u00C3\u00A7o de envio de fatura por email
+Desativa o servi\u00E7o de envio de fatura por email
 
-Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso desativa o servi\u00E7o de envio de fatura por email
 
 ### Example
 ```javascript
@@ -136,7 +136,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ServicoContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -153,7 +153,7 @@ api.desativarEnvioFaturaEmailUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -183,9 +183,9 @@ var Pier = require('Pier');
 var apiInstance = new Pier.ServicoContaApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -202,9 +202,9 @@ api.listarAnuidadesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -234,9 +234,9 @@ var Pier = require('Pier');
 var apiInstance = new Pier.ServicoContaApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -253,9 +253,9 @@ api.listarOperadorasTelefonicasUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

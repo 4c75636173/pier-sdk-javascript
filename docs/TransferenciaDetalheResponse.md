@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
-**dataTransferencia** | **String** | Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
-**idContaOrigem** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
-**nomePessoaOrigem** | **String** | Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia. | [optional] 
-**idContaDestino** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
-**nomePessoaDestino** | **String** | Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia. | [optional] 
+**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). | [optional] 
+**dataTransferencia** | **String** | Data estabelecida para ocorrer a transfer\u00EAncia. | [optional] 
+**idContaOrigem** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). | [optional] 
+**nomePessoaOrigem** | **String** | Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia. | [optional] 
+**idContaDestino** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). | [optional] 
+**nomePessoaDestino** | **String** | Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia. | [optional] 
 **valorTransferencia** | **Number** | Valor estabelecido para ser transferido. | [optional] 
-**valorTarifa** | **Number** | Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia. | [optional] 
+**valorTarifa** | **Number** | Valor estabelecido da tarifa para a transfer\u00EAncia. | [optional] 
 
 

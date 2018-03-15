@@ -18,7 +18,7 @@
   /**
    * Antecipacao service.
    * @module api/AntecipacaoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,8 +41,8 @@
      */
 
     /**
-     * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-     * Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+     * Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
      * @param {Integer} id Id Produto
      * @param {module:model/TaxaAntecipacaoRequest} taxaAntecipacaoRequest taxaAntecipacaoRequest
      * @param {module:api/AntecipacaoApi~configurarTaxaAntecipacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -93,10 +93,10 @@
      */
 
     /**
-     * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-     * Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+     * Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
      * @param {Integer} id Id Produto
-     * @param {module:model/String} tipoTransacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+     * @param {module:model/String} tipoTransacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
      * @param {module:api/AntecipacaoApi~consultarTaxaAntecipacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ParametroProdutoResponse}
      */
@@ -146,13 +146,13 @@
      */
 
     /**
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-     * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-     * @param {Integer} idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+     * M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+     * @param {Integer} idConta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
      * @param {Integer} quantidadeParcelas Quantidade de parcelas para serem antecipadas.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
      * @param {module:api/AntecipacaoApi~efetivarAntecipacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoResponse}
      */
@@ -210,11 +210,11 @@
      */
 
     /**
-     * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-     * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
-     * @param {Integer} idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+     * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+     * M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
+     * @param {Integer} idConta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
      * @param {module:api/AntecipacaoApi~efetivarAntecipacoesUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoResponse}
      */
@@ -252,35 +252,35 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/AntecipacaoApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/AntecipacaoApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCompraResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Listar compras com parcelas antecip\u00C3\u00A1veis
-     * Lista as compras antecip\u00C3\u00A1veis de uma conta.
-     * @param {Integer} idConta C\u00C3\u00B3digo identificador da conta da Compra.
+     * Listar compras com parcelas antecip\u00E1veis
+     * Lista as compras antecip\u00E1veis de uma conta.
+     * @param {Integer} idConta C\u00F3digo identificador da conta da Compra.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idCompra C\u00C3\u00B3digo identificador da Compra.
-     * @param {Boolean} opts.parcelada Indica se a compra \u00C3\u00A9 parcelada.
-     * @param {Boolean} opts.juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-     * @param {module:model/String} opts.tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-     * @param {module:api/AntecipacaoApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idCompra C\u00F3digo identificador da Compra.
+     * @param {Boolean} opts.parcelada Indica se a compra \u00E9 parcelada.
+     * @param {Boolean} opts.juros Indica se a compra \u00E9 com ou sem juros.
+     * @param {module:model/String} opts.tipoOrigemTransacao Indica se a compra \u00E9 ON-US ou OFF-US
+     * @param {module:api/AntecipacaoApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCompraResponse}
      */
-    this.listarUsingGET11 = function(idConta, opts, callback) {
+    this.listarUsingGET12 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET11";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET12";
       }
 
 
@@ -322,12 +322,12 @@
      */
 
     /**
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-     * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+     * Simular antecipa\u00E7\u00E3o de parcelas
+     * Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+     * @param {Integer} idConta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
      * @param {module:api/AntecipacaoApi~simularAntecipacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoSimuladaResponse}
      */
@@ -379,11 +379,11 @@
      */
 
     /**
-     * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
-     * O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+     * Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+     * O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
+     * @param {Integer} idConta C\u00F3digo de identifica\u00E7\u00E3o da conta.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+     * @param {String} opts.complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
      * @param {module:api/AntecipacaoApi~simularAntecipacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AntecipacaoSimuladaLoteResponse}
      */

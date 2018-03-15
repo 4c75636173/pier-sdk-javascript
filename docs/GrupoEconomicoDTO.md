@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**razaoSocial** | **String** | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | 
+**razaoSocial** | **String** | Raz\u00E3o social da pessoa jur\u00EDdica | 
 **nomeCredor** | **String** | Nome do credor | [optional] 
-**numeroReceitaFederal** | **String** | N\u00C3\u00BAmero da Receita Federal | 
-**inscricaoEstadual** | **String** | N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual | [optional] 
+**numeroReceitaFederal** | **String** | N\u00FAmero da Receita Federal | 
+**inscricaoEstadual** | **String** | N\u00FAmero da inscri\u00E7\u00E3o estadual | [optional] 
 **contato** | **String** | Nome da pessoa para entrar em contato | [optional] 
-**banco** | **Integer** | C\u00C3\u00B3digo do banco | [optional] 
-**agencia** | **Integer** | Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica | [optional] 
-**digitoAgencia** | **String** | D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia | [optional] 
-**contaCorrente** | **String** | C\u00C3\u00B3digo da Conta Corrente | [optional] 
-**digitoContaCorrente** | **String** | D\u00C3\u00ADgito Verificador da Conta Corrente | [optional] 
+**banco** | **Integer** | C\u00F3digo do banco | [optional] 
+**agencia** | **Integer** | C\u00F3digo da ag\u00EAncia | [optional] 
+**digitoAgencia** | **String** | D\u00EDgito verificador da ag\u00EAncia | [optional] 
+**contaCorrente** | **String** | C\u00F3digo da Conta Corrente | [optional] 
+**digitoContaCorrente** | **String** | D\u00EDgito Verificador da Conta Corrente | [optional] 
 **periodicidade** | **String** | Periodicidade do pagamento | 
 **pagamentoSemanal** | **String** | Dia para pagamento semanal | [optional] 
 **pagamentoMensal** | **Integer** | Dia da data para o pagamento mensal | [optional] 
@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **pagamentoDecendialTerceiro** | **Integer** | Dia da data para o terceiro pagamento decendial | [optional] 
 **pagamentoQuinzenalPrimeiro** | **Integer** | Dia da data para o primeiro pagamento quinzenal | [optional] 
 **pagamentoQuinzenalSegundo** | **Integer** | Dia da data para o segundo pagamento quinzenal | [optional] 
+**idCredorRAV** | **Integer** | Identificador do credor RAV | 
 **percentualRAV** | **Number** | Valor percentual do RAV do credor | 
 **recebeRAV** | **String** | Indica se o credor recebe RAV e o tipo | [optional] 
 **percentualMultiplica** | **Number** | Percentual Multiplica | [optional] 

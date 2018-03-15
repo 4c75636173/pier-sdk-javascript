@@ -18,12 +18,12 @@
   /**
    * The EnderecoAprovadoResponse model module.
    * @module model/EnderecoAprovadoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>EnderecoAprovadoResponse</code>.
-   * Objeto Endere\u00C3\u00A7o Aprovado
+   * Objeto Endere\u00E7o Aprovado
    * @alias module:model/EnderecoAprovadoResponse
    * @class
    */
@@ -96,19 +96,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
    * @member {Integer} idTipoEndereco
    */
   exports.prototype['idTipoEndereco'] = undefined;
 
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   * Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
@@ -120,19 +120,19 @@
   exports.prototype['logradouro'] = undefined;
 
   /**
-   * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * Apresenta o n\u00FAmero do endere\u00E7o
    * @member {Integer} numero
    */
   exports.prototype['numero'] = undefined;
 
   /**
-   * Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
 
   /**
-   * Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    * @member {String} pontoReferencia
    */
   exports.prototype['pontoReferencia'] = undefined;
@@ -162,7 +162,7 @@
   exports.prototype['pais'] = undefined;
 
   /**
-   * Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
+   * Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
    * @member {Boolean} enderecoCorrespondencia
    */
   exports.prototype['enderecoCorrespondencia'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The TipoFaturamentoPorContaResponse model module.
    * @module model/TipoFaturamentoPorContaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -76,43 +76,43 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.
+   * Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
    * @member {Boolean} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.
+   * C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
    * @member {Integer} idTipoFaturamento
    */
   exports.prototype['idTipoFaturamento'] = undefined;
 
   /**
-   * Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+   * Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+   * Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
    * @member {String} dataHoraCancelamento
    */
   exports.prototype['dataHoraCancelamento'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
    * @member {String} modificadoPor
    */
   exports.prototype['modificadoPor'] = undefined;

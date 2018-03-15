@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarFaturaUsingGET1**](FaturaApi.md#consultarFaturaUsingGET1) | **GET** /api/faturas/{dataVencimento} | Consulta fatura de um cliente
 [**consultarLancamentosFuturosFaturaUsingGET1**](FaturaApi.md#consultarLancamentosFuturosFaturaUsingGET1) | **GET** /api/contas/{id}/faturas/planos-parcelamento | Listar planos de parcelamento
-[**enviarFaturaEmailUsingPOST**](FaturaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00C2\u00AA via de fatura por E-mail
+[**enviarFaturaEmailUsingPOST**](FaturaApi.md#enviarFaturaEmailUsingPOST) | **POST** /api/contas/{id}/faturas/{dataVencimento}/enviar-email | Envia 2\u00AA via de fatura por E-mail
 [**listarFaturasUsingGET1**](FaturaApi.md#listarFaturasUsingGET1) | **GET** /api/faturas | Listar faturas de um cliente.
 [**visualizarDocumentoUsingGET**](FaturaApi.md#visualizarDocumentoUsingGET) | **GET** /api/contas/{id}/faturas/{dataVencimento}/arquivo.pdf | Permite visualizar o extrato da fatura em formato PDF
 
@@ -27,7 +27,7 @@ var apiInstance = new Pier.FaturaApi()
 
 var dataVencimento = "dataVencimento_example"; // {String} Data Vencimento
 
-var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var idConta = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -45,7 +45,7 @@ api.consultarFaturaUsingGET1(dataVencimento, idConta, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dataVencimento** | **String**| Data Vencimento | 
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idConta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -74,14 +74,14 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.FaturaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
-var dataVencimentoPadrao = "dataVencimentoPadrao_example"; // {String} Indica a data de vencimento padr\u00C3\u00A3o das faturas
+var dataVencimentoPadrao = "dataVencimentoPadrao_example"; // {String} Indica a data de vencimento padr\u00E3o das faturas
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -98,11 +98,11 @@ api.consultarLancamentosFuturosFaturaUsingGET1(id, dataVencimentoPadrao, opts, c
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **dataVencimentoPadrao** | **String**| Indica a data de vencimento padr\u00C3\u00A3o das faturas | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **dataVencimentoPadrao** | **String**| Indica a data de vencimento padr\u00E3o das faturas | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -121,7 +121,7 @@ No authorization required
 # **enviarFaturaEmailUsingPOST**
 > Object enviarFaturaEmailUsingPOST(id, dataVencimento, opts)
 
-Envia 2\u00C2\u00AA via de fatura por E-mail
+Envia 2\u00AA via de fatura por E-mail
 
 Envia a segunda via da fatura para o e-mail informado/cadastrado.
 
@@ -131,12 +131,12 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.FaturaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var dataVencimento = "dataVencimento_example"; // {String} Data de Vencimento da fatura (yyyy-MM-dd).
 
 var opts = { 
-  'email': "email_example" // {String} E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+  'email': "email_example" // {String} E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
 };
 
 var callback = function(error, data, response) {
@@ -153,9 +153,9 @@ api.enviarFaturaEmailUsingPOST(id, dataVencimento, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **dataVencimento** | **String**| Data de Vencimento da fatura (yyyy-MM-dd). | 
- **email** | **String**| E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado. | [optional] 
+ **email** | **String**| E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado. | [optional] 
 
 ### Return type
 
@@ -184,13 +184,13 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.FaturaApi()
 
-var idConta = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var idConta = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
   'situacaoProcessamento': "TODAS", // {String} Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -207,11 +207,11 @@ api.listarFaturasUsingGET1(idConta, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **idConta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **situacaoProcessamento** | **String**| Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. | [optional] [default to TODAS]
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -232,7 +232,7 @@ No authorization required
 
 Permite visualizar o extrato da fatura em formato PDF
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
+Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
 
 ### Example
 ```javascript
@@ -240,7 +240,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.FaturaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var dataVencimento = "dataVencimento_example"; // {String} Data de Vencimento da fatura.
 
@@ -259,7 +259,7 @@ api.visualizarDocumentoUsingGET(id, dataVencimento, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **dataVencimento** | **String**| Data de Vencimento da fatura. | 
 
 ### Return type

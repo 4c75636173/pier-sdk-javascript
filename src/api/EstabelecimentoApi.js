@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/OrigemComercialUpdate', '../model/OrigemComercialResponse', '../model/MaquinetaResponse', '../model/MaquinetaUpdate', '../model/OperacaoCredorUpdate', '../model/OperacaoCredorResponse', '../model/TelefoneEstabelecimentoResponse', '../model/TerminalUpdate', '../model/TerminalResponse', '../model/EstabelecimentoUpdate', '../model/EstabelecimentoResponse', '../model/GrupoEconomicoDTO', '../model/GrupoEconomicoResponse', '../model/OrigemComercialPersist', '../model/EstabelecimentoPersist', '../model/DetalheOperacaoResponse', '../model/VinculoEstabelecimentoAdquirenteResponse', '../model/VinculoOperacaoPersist', '../model/PageOperacaoResponse', '../model/PageMCCResponse', '../model/PageOrigemComercialResponse', '../model/PageEntidadeResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageTipoTerminalResponse', '../model/PageEstabelecimentoResponse', '../model/PageGrupoEconomicoResponse', '../model/PageMaquinetaResponse', '../model/PageMoedaResponse', '../model/PageOperacaoCredorResponse', '../model/PageTelefoneEstabelecimentoResponse', '../model/PageTerminalResponse', '../model/PageVinculoEstabelecimentoAdquirenteResponse', '../model/PageVinculoOperacaoResponse', '../model/MaquinetaPersist', '../model/OperacaoCredorPersist', '../model/TerminalPersist', '../model/VinculoEstabelecimentoAdquirentePersist'], factory);
+    define(['../ApiClient', '../model/OrigemComercialUpdate', '../model/OrigemComercialResponse', '../model/MaquinetaResponse', '../model/MaquinetaUpdate', '../model/OperacaoCredorUpdate', '../model/OperacaoCredorResponse', '../model/TelefoneEstabelecimentoResponse', '../model/TelefoneEstabelecimentoUpdate', '../model/TerminalUpdate', '../model/TerminalResponse', '../model/EstabelecimentoUpdate', '../model/EstabelecimentoResponse', '../model/GrupoEconomicoDTO', '../model/GrupoEconomicoResponse', '../model/OrigemComercialPersist', '../model/EstabelecimentoPersist', '../model/DetalheOperacaoResponse', '../model/VinculoEstabelecimentoAdquirenteResponse', '../model/VinculoOperacaoPersist', '../model/PageOperacaoResponse', '../model/PageMCCResponse', '../model/PageOrigemComercialResponse', '../model/PageEntidadeResponse', '../model/PageTipoEstabelecimentoResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageTipoOrigemComercialResponse', '../model/PageTipoTerminalResponse', '../model/PageEstabelecimentoResponse', '../model/PageGrupoEconomicoResponse', '../model/PageGrupoOrigemComercialResponse', '../model/PageMaquinetaResponse', '../model/PageMoedaResponse', '../model/PageOperacaoCredorResponse', '../model/PageTelefoneEstabelecimentoResponse', '../model/PageTerminalResponse', '../model/PageVinculoEstabelecimentoAdquirenteResponse', '../model/PageVinculoOperacaoResponse', '../model/MaquinetaPersist', '../model/OperacaoCredorPersist', '../model/TelefoneEstabelecimentoPersist', '../model/TerminalPersist', '../model/VinculoEstabelecimentoAdquirentePersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercialUpdate'), require('../model/OrigemComercialResponse'), require('../model/MaquinetaResponse'), require('../model/MaquinetaUpdate'), require('../model/OperacaoCredorUpdate'), require('../model/OperacaoCredorResponse'), require('../model/TelefoneEstabelecimentoResponse'), require('../model/TerminalUpdate'), require('../model/TerminalResponse'), require('../model/EstabelecimentoUpdate'), require('../model/EstabelecimentoResponse'), require('../model/GrupoEconomicoDTO'), require('../model/GrupoEconomicoResponse'), require('../model/OrigemComercialPersist'), require('../model/EstabelecimentoPersist'), require('../model/DetalheOperacaoResponse'), require('../model/VinculoEstabelecimentoAdquirenteResponse'), require('../model/VinculoOperacaoPersist'), require('../model/PageOperacaoResponse'), require('../model/PageMCCResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageEntidadeResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageTipoTerminalResponse'), require('../model/PageEstabelecimentoResponse'), require('../model/PageGrupoEconomicoResponse'), require('../model/PageMaquinetaResponse'), require('../model/PageMoedaResponse'), require('../model/PageOperacaoCredorResponse'), require('../model/PageTelefoneEstabelecimentoResponse'), require('../model/PageTerminalResponse'), require('../model/PageVinculoEstabelecimentoAdquirenteResponse'), require('../model/PageVinculoOperacaoResponse'), require('../model/MaquinetaPersist'), require('../model/OperacaoCredorPersist'), require('../model/TerminalPersist'), require('../model/VinculoEstabelecimentoAdquirentePersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/OrigemComercialUpdate'), require('../model/OrigemComercialResponse'), require('../model/MaquinetaResponse'), require('../model/MaquinetaUpdate'), require('../model/OperacaoCredorUpdate'), require('../model/OperacaoCredorResponse'), require('../model/TelefoneEstabelecimentoResponse'), require('../model/TelefoneEstabelecimentoUpdate'), require('../model/TerminalUpdate'), require('../model/TerminalResponse'), require('../model/EstabelecimentoUpdate'), require('../model/EstabelecimentoResponse'), require('../model/GrupoEconomicoDTO'), require('../model/GrupoEconomicoResponse'), require('../model/OrigemComercialPersist'), require('../model/EstabelecimentoPersist'), require('../model/DetalheOperacaoResponse'), require('../model/VinculoEstabelecimentoAdquirenteResponse'), require('../model/VinculoOperacaoPersist'), require('../model/PageOperacaoResponse'), require('../model/PageMCCResponse'), require('../model/PageOrigemComercialResponse'), require('../model/PageEntidadeResponse'), require('../model/PageTipoEstabelecimentoResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageTipoOrigemComercialResponse'), require('../model/PageTipoTerminalResponse'), require('../model/PageEstabelecimentoResponse'), require('../model/PageGrupoEconomicoResponse'), require('../model/PageGrupoOrigemComercialResponse'), require('../model/PageMaquinetaResponse'), require('../model/PageMoedaResponse'), require('../model/PageOperacaoCredorResponse'), require('../model/PageTelefoneEstabelecimentoResponse'), require('../model/PageTerminalResponse'), require('../model/PageVinculoEstabelecimentoAdquirenteResponse'), require('../model/PageVinculoOperacaoResponse'), require('../model/MaquinetaPersist'), require('../model/OperacaoCredorPersist'), require('../model/TelefoneEstabelecimentoPersist'), require('../model/TerminalPersist'), require('../model/VinculoEstabelecimentoAdquirentePersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.EstabelecimentoApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercialUpdate, root.Pier.OrigemComercialResponse, root.Pier.MaquinetaResponse, root.Pier.MaquinetaUpdate, root.Pier.OperacaoCredorUpdate, root.Pier.OperacaoCredorResponse, root.Pier.TelefoneEstabelecimentoResponse, root.Pier.TerminalUpdate, root.Pier.TerminalResponse, root.Pier.EstabelecimentoUpdate, root.Pier.EstabelecimentoResponse, root.Pier.GrupoEconomicoDTO, root.Pier.GrupoEconomicoResponse, root.Pier.OrigemComercialPersist, root.Pier.EstabelecimentoPersist, root.Pier.DetalheOperacaoResponse, root.Pier.VinculoEstabelecimentoAdquirenteResponse, root.Pier.VinculoOperacaoPersist, root.Pier.PageOperacaoResponse, root.Pier.PageMCCResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageEntidadeResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageTipoTerminalResponse, root.Pier.PageEstabelecimentoResponse, root.Pier.PageGrupoEconomicoResponse, root.Pier.PageMaquinetaResponse, root.Pier.PageMoedaResponse, root.Pier.PageOperacaoCredorResponse, root.Pier.PageTelefoneEstabelecimentoResponse, root.Pier.PageTerminalResponse, root.Pier.PageVinculoEstabelecimentoAdquirenteResponse, root.Pier.PageVinculoOperacaoResponse, root.Pier.MaquinetaPersist, root.Pier.OperacaoCredorPersist, root.Pier.TerminalPersist, root.Pier.VinculoEstabelecimentoAdquirentePersist);
+    root.Pier.EstabelecimentoApi = factory(root.Pier.ApiClient, root.Pier.OrigemComercialUpdate, root.Pier.OrigemComercialResponse, root.Pier.MaquinetaResponse, root.Pier.MaquinetaUpdate, root.Pier.OperacaoCredorUpdate, root.Pier.OperacaoCredorResponse, root.Pier.TelefoneEstabelecimentoResponse, root.Pier.TelefoneEstabelecimentoUpdate, root.Pier.TerminalUpdate, root.Pier.TerminalResponse, root.Pier.EstabelecimentoUpdate, root.Pier.EstabelecimentoResponse, root.Pier.GrupoEconomicoDTO, root.Pier.GrupoEconomicoResponse, root.Pier.OrigemComercialPersist, root.Pier.EstabelecimentoPersist, root.Pier.DetalheOperacaoResponse, root.Pier.VinculoEstabelecimentoAdquirenteResponse, root.Pier.VinculoOperacaoPersist, root.Pier.PageOperacaoResponse, root.Pier.PageMCCResponse, root.Pier.PageOrigemComercialResponse, root.Pier.PageEntidadeResponse, root.Pier.PageTipoEstabelecimentoResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageTipoOrigemComercialResponse, root.Pier.PageTipoTerminalResponse, root.Pier.PageEstabelecimentoResponse, root.Pier.PageGrupoEconomicoResponse, root.Pier.PageGrupoOrigemComercialResponse, root.Pier.PageMaquinetaResponse, root.Pier.PageMoedaResponse, root.Pier.PageOperacaoCredorResponse, root.Pier.PageTelefoneEstabelecimentoResponse, root.Pier.PageTerminalResponse, root.Pier.PageVinculoEstabelecimentoAdquirenteResponse, root.Pier.PageVinculoOperacaoResponse, root.Pier.MaquinetaPersist, root.Pier.OperacaoCredorPersist, root.Pier.TelefoneEstabelecimentoPersist, root.Pier.TerminalPersist, root.Pier.VinculoEstabelecimentoAdquirentePersist);
   }
-}(this, function(ApiClient, OrigemComercialUpdate, OrigemComercialResponse, MaquinetaResponse, MaquinetaUpdate, OperacaoCredorUpdate, OperacaoCredorResponse, TelefoneEstabelecimentoResponse, TerminalUpdate, TerminalResponse, EstabelecimentoUpdate, EstabelecimentoResponse, GrupoEconomicoDTO, GrupoEconomicoResponse, OrigemComercialPersist, EstabelecimentoPersist, DetalheOperacaoResponse, VinculoEstabelecimentoAdquirenteResponse, VinculoOperacaoPersist, PageOperacaoResponse, PageMCCResponse, PageOrigemComercialResponse, PageEntidadeResponse, PageCampoCodificadoDescricaoResponse, PageTipoTerminalResponse, PageEstabelecimentoResponse, PageGrupoEconomicoResponse, PageMaquinetaResponse, PageMoedaResponse, PageOperacaoCredorResponse, PageTelefoneEstabelecimentoResponse, PageTerminalResponse, PageVinculoEstabelecimentoAdquirenteResponse, PageVinculoOperacaoResponse, MaquinetaPersist, OperacaoCredorPersist, TerminalPersist, VinculoEstabelecimentoAdquirentePersist) {
+}(this, function(ApiClient, OrigemComercialUpdate, OrigemComercialResponse, MaquinetaResponse, MaquinetaUpdate, OperacaoCredorUpdate, OperacaoCredorResponse, TelefoneEstabelecimentoResponse, TelefoneEstabelecimentoUpdate, TerminalUpdate, TerminalResponse, EstabelecimentoUpdate, EstabelecimentoResponse, GrupoEconomicoDTO, GrupoEconomicoResponse, OrigemComercialPersist, EstabelecimentoPersist, DetalheOperacaoResponse, VinculoEstabelecimentoAdquirenteResponse, VinculoOperacaoPersist, PageOperacaoResponse, PageMCCResponse, PageOrigemComercialResponse, PageEntidadeResponse, PageTipoEstabelecimentoResponse, PageCampoCodificadoDescricaoResponse, PageTipoOrigemComercialResponse, PageTipoTerminalResponse, PageEstabelecimentoResponse, PageGrupoEconomicoResponse, PageGrupoOrigemComercialResponse, PageMaquinetaResponse, PageMoedaResponse, PageOperacaoCredorResponse, PageTelefoneEstabelecimentoResponse, PageTerminalResponse, PageVinculoEstabelecimentoAdquirenteResponse, PageVinculoOperacaoResponse, MaquinetaPersist, OperacaoCredorPersist, TelefoneEstabelecimentoPersist, TerminalPersist, VinculoEstabelecimentoAdquirentePersist) {
   'use strict';
 
   /**
    * Estabelecimento service.
    * @module api/EstabelecimentoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Alterar Origem Comercial
      * Altera uma origem comercial.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
      * @param {module:model/OrigemComercialUpdate} origemComercialUpdate origemComercialUpdate
      * @param {module:api/EstabelecimentoApi~alterarOrigemComercialUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OrigemComercialResponse}
@@ -94,8 +94,8 @@
 
     /**
      * Altera uma Maquineta
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
      * @param {module:model/MaquinetaUpdate} maquinetaUpdate maquinetaUpdate
      * @param {module:api/EstabelecimentoApi~alterarUsingPUT10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
@@ -145,9 +145,9 @@
      */
 
     /**
-     * Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+     * Altera uma Regra Opera\u00E7\u00E3o
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
      * @param {module:model/OperacaoCredorUpdate} operacaoCredorUpdate operacaoCredorUpdate
      * @param {module:api/EstabelecimentoApi~alterarUsingPUT11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
@@ -198,32 +198,23 @@
 
     /**
      * Altera um Telefone do estabelecimento
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-     * @param {String} ddd C\u00C3\u00B3digo DDD do telefone (id).
-     * @param {String} telefone N\u00C3\u00BAmero do telefone.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+     * @param {module:model/TelefoneEstabelecimentoUpdate} telefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate
      * @param {module:api/EstabelecimentoApi~alterarUsingPUT15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.alterarUsingPUT15 = function(id, ddd, telefone, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
+    this.alterarUsingPUT15 = function(id, telefoneEstabelecimentoUpdate, callback) {
+      var postBody = telefoneEstabelecimentoUpdate;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
         throw "Missing the required parameter 'id' when calling alterarUsingPUT15";
       }
 
-      // verify the required parameter 'ddd' is set
-      if (ddd == undefined || ddd == null) {
-        throw "Missing the required parameter 'ddd' when calling alterarUsingPUT15";
-      }
-
-      // verify the required parameter 'telefone' is set
-      if (telefone == undefined || telefone == null) {
-        throw "Missing the required parameter 'telefone' when calling alterarUsingPUT15";
+      // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
+      if (telefoneEstabelecimentoUpdate == undefined || telefoneEstabelecimentoUpdate == null) {
+        throw "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT15";
       }
 
 
@@ -231,9 +222,6 @@
         'id': id
       };
       var queryParams = {
-        'ddd': ddd,
-        'telefone': telefone,
-        'ramal': opts['ramal']
       };
       var headerParams = {
       };
@@ -262,8 +250,8 @@
 
     /**
      * Altera um Terminal
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
      * @param {module:model/TerminalUpdate} terminalUpdate terminalUpdate
      * @param {module:api/EstabelecimentoApi~alterarUsingPUT17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
@@ -365,9 +353,9 @@
      */
 
     /**
-     * Alterar Grupo Econ\u00C3\u00B4mico
-     * Altera um grupo econ\u00C3\u00B4mico.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+     * Alterar Grupo Econ\u00F4mico
+     * Altera um grupo econ\u00F4mico.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
      * @param {module:model/GrupoEconomicoDTO} grupoEconomicoDTO grupoEconomicoDTO
      * @param {module:api/EstabelecimentoApi~alterarUsingPUT8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/GrupoEconomicoResponse}
@@ -507,8 +495,8 @@
      */
 
     /**
-     * Cadastrar Grupo Econ\u00C3\u00B4mico
-     * Cadastra um grupo econ\u00C3\u00B4mico.
+     * Cadastrar Grupo Econ\u00F4mico
+     * Cadastra um grupo econ\u00F4mico.
      * @param {module:model/GrupoEconomicoDTO} grupoEconomicoDTO GrupoEconomicoDTO
      * @param {module:api/EstabelecimentoApi~cadastrarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/GrupoEconomicoResponse}
@@ -552,9 +540,9 @@
      */
 
     /**
-     * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-     * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
-     * @param {Integer} id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+     * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+     * Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
+     * @param {Integer} id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
      * @param {module:api/EstabelecimentoApi~consultaOperacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DetalheOperacaoResponse}
      */
@@ -599,8 +587,8 @@
 
     /**
      * Consultar Origem Comercial
-     * Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+     * Consulta uma origem comercial atrav\u00E9s do seu identificador.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
      * @param {module:api/EstabelecimentoApi~consultarOrigemComercialUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OrigemComercialResponse}
      */
@@ -636,8 +624,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET16 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET16Callback
+     * Callback function to receive the result of the consultarUsingGET17 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -647,15 +635,15 @@
      * Consultar estabelecimento por id
      * Consulta os detalhes de um determinado estabelecimento
      * @param {Integer} id Id
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET16 = function(id, callback) {
+    this.consultarUsingGET17 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
       }
 
 
@@ -682,26 +670,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET18 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET18Callback
+     * Callback function to receive the result of the consultarUsingGET19 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/GrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Consultar grupo econ\u00C3\u00B4mico
-     * Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * Consultar grupo econ\u00F4mico
+     * Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/GrupoEconomicoResponse}
      */
-    this.consultarUsingGET18 = function(id, callback) {
+    this.consultarUsingGET19 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET19";
       }
 
 
@@ -728,8 +716,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/MaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -737,17 +725,17 @@
 
     /**
      * Apresenta os dados de uma determinada maquineta
-     * Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET21 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
       }
 
 
@@ -774,26 +762,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET21 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET21Callback
+     * Callback function to receive the result of the consultarUsingGET22 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+     * Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
      */
-    this.consultarUsingGET21 = function(id, callback) {
+    this.consultarUsingGET22 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
       }
 
 
@@ -820,8 +808,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET29 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET29Callback
+     * Callback function to receive the result of the consultarUsingGET30 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -829,17 +817,17 @@
 
     /**
      * Apresenta os dados de um determinado telefone de um estabelecimento
-     * Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.consultarUsingGET29 = function(id, callback) {
+    this.consultarUsingGET30 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET29";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET30";
       }
 
 
@@ -866,8 +854,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET31 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET31Callback
+     * Callback function to receive the result of the consultarUsingGET32 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET32Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -875,17 +863,17 @@
 
     /**
      * Apresenta os dados de um determinado Terminal
-     * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET31 = function(id, callback) {
+    this.consultarUsingGET32 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET31";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
       }
 
 
@@ -912,26 +900,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET43 operation.
-     * @callback module:api/EstabelecimentoApi~consultarUsingGET43Callback
+     * Callback function to receive the result of the consultarUsingGET44 operation.
+     * @callback module:api/EstabelecimentoApi~consultarUsingGET44Callback
      * @param {String} error Error message, if any.
      * @param {module:model/VinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Apresenta os dados de um determinado V\u00C3\u00ADnculo
-     * Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
-     * @param {module:api/EstabelecimentoApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
+     * Apresenta os dados de um determinado V\u00EDnculo
+     * Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
+     * @param {module:api/EstabelecimentoApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}
      */
-    this.consultarUsingGET43 = function(id, callback) {
+    this.consultarUsingGET44 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET44";
       }
 
 
@@ -966,9 +954,9 @@
      */
 
     /**
-     * Desabilitar um V\u00C3\u00ADnculo
-     * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+     * Desabilitar um V\u00EDnculo
+     * Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
      * @param {module:api/EstabelecimentoApi~desabilitarVinculoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -1012,9 +1000,9 @@
      */
 
     /**
-     * Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+     * Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+     * Este m\u00E9todo permite desabilitar um v\u00EDnculo.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
      * @param {module:model/VinculoOperacaoPersist} vinculoOperacaoPersist vinculoOperacaoPersist
      * @param {module:api/EstabelecimentoApi~desabilitarVinculoUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
@@ -1064,9 +1052,9 @@
      */
 
     /**
-     * Habilitar um V\u00C3\u00ADnculo
-     * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+     * Habilitar um V\u00EDnculo
+     * Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
      * @param {module:api/EstabelecimentoApi~habilitarVinculoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -1110,9 +1098,9 @@
      */
 
     /**
-     * Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+     * Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+     * Este m\u00E9todo permite habilitar um v\u00EDnculo.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
      * @param {module:model/VinculoOperacaoPersist} vinculoOperacaoPersist vinculoOperacaoPersist
      * @param {module:api/EstabelecimentoApi~habilitarVinculoUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
@@ -1162,14 +1150,14 @@
      */
 
     /**
-     * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
-     * Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+     * Apresenta dados de opera\u00E7\u00F5es em uma lista
+     * Este recurso permite listar as opera\u00E7\u00E3o
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idOperacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-     * @param {String} opts.codigoProcessamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idOperacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+     * @param {String} opts.codigoProcessamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
      * @param {module:api/EstabelecimentoApi~listaOperacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperacaoResponse}
      */
@@ -1214,11 +1202,11 @@
 
     /**
      * Lista os MCCs
-     * Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/EstabelecimentoApi~listarMCCUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMCCResponse}
      */
@@ -1263,32 +1251,32 @@
      * Listar Origens Comerciais
      * Lista origens comerciais cadastradas.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id da origem comercial
      * @param {String} opts.nome Nome da origem comercial
      * @param {Integer} opts.status Indica o status da origem comercial
      * @param {Integer} opts.idEstabelecimento Identificador do estabelecimento
      * @param {Integer} opts.idProduto Identificador do produto
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+     * @param {String} opts.descricao Descri\u00E7\u00E3o da origem comercial
      * @param {Integer} opts.idTipoOrigemComercial Identificador do tipo de origem comercial
      * @param {Integer} opts.idGrupoOrigemComercial Identificador do grupo de origem comercial
-     * @param {Boolean} opts.flagPreAprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-     * @param {Boolean} opts.flagAprovacaoImediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-     * @param {String} opts.nomeFantasiaPlastico Nome fantasia impresso no pl\u00C3\u00A1stico
-     * @param {Boolean} opts.flagCartaoProvisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-     * @param {Boolean} opts.flagCartaoDefinitivo Indica se permite cart\u00C3\u00A3o definitivo
-     * @param {String} opts.usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-     * @param {String} opts.senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-     * @param {Boolean} opts.flagOrigemExterna Indica se \u00C3\u00A9 origem externa
-     * @param {Boolean} opts.flagModificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+     * @param {Boolean} opts.flagPreAprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+     * @param {Boolean} opts.flagAprovacaoImediata Indica se permite aprova\u00E7\u00E3o imediata
+     * @param {String} opts.nomeFantasiaPlastico Nome fantasia impresso no pl\u00E1stico
+     * @param {Boolean} opts.flagCartaoProvisorio Indica se permite cart\u00E3o provis\u00F3rio
+     * @param {Boolean} opts.flagCartaoDefinitivo Indica se permite cart\u00E3o definitivo
+     * @param {String} opts.usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+     * @param {String} opts.senha Senha para autentica\u00E7\u00E3o
+     * @param {Boolean} opts.flagOrigemExterna Indica se \u00E9 origem externa
+     * @param {Boolean} opts.flagModificado Indica se h\u00E1 modifica\u00E7\u00E3o
      * @param {Boolean} opts.flagEnviaFaturaUsuario Indica se envia fatura
-     * @param {Boolean} opts.flagCreditoFaturamento Indica se permite cr\u00C3\u00A9dito de faturamento
-     * @param {Boolean} opts.flagConcedeLimiteProvisorio Indica se concede limite provis\u00C3\u00B3rio
+     * @param {Boolean} opts.flagCreditoFaturamento Indica se permite cr\u00E9dito de faturamento
+     * @param {Boolean} opts.flagConcedeLimiteProvisorio Indica se concede limite provis\u00F3rio
      * @param {Boolean} opts.flagDigitalizarDoc Indica se digitaliza documento
      * @param {Boolean} opts.flagEmbossingLoja Indica se realiza embossing em loja
-     * @param {Boolean} opts.flagConsultaPrevia Indica se realiza consulta pr\u00C3\u00A9via
+     * @param {Boolean} opts.flagConsultaPrevia Indica se realiza consulta pr\u00E9via
      * @param {module:model/String} opts.tipoPessoa Tipo de pessoa
      * @param {module:api/EstabelecimentoApi~listarOrigensComerciaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOrigemComercialResponse}
@@ -1356,11 +1344,11 @@
 
     /**
      * Lista os Tipos de adquirentes
-     * Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
+     * Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/EstabelecimentoApi~listarTiposAdquirentesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEntidadeResponse}
      */
@@ -1394,6 +1382,55 @@
     }
 
     /**
+     * Callback function to receive the result of the listarTiposEstabelecimentosUsingGET operation.
+     * @callback module:api/EstabelecimentoApi~listarTiposEstabelecimentosUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTipoEstabelecimentoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lista os tipos de estabelecimentos
+     * Lista os tipos de estabelecimentos
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do tipo de estabelecimento.
+     * @param {module:api/EstabelecimentoApi~listarTiposEstabelecimentosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoEstabelecimentoResponse}
+     */
+    this.listarTiposEstabelecimentosUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'descricao': opts['descricao']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTipoEstabelecimentoResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-estabelecimentos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarTiposMaquinetasUsingGET operation.
      * @callback module:api/EstabelecimentoApi~listarTiposMaquinetasUsingGETCallback
      * @param {String} error Error message, if any.
@@ -1403,11 +1440,11 @@
 
     /**
      * Lista os Tipos de  Maquinetas
-     * Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/EstabelecimentoApi~listarTiposMaquinetasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCampoCodificadoDescricaoResponse}
      */
@@ -1441,6 +1478,55 @@
     }
 
     /**
+     * Callback function to receive the result of the listarTiposOrigensComerciaisUsingGET operation.
+     * @callback module:api/EstabelecimentoApi~listarTiposOrigensComerciaisUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageTipoOrigemComercialResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar tipos de origens comerciais
+     * Lista os tipos de origens comerciais
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.nome Nome do tipo de origem comercial
+     * @param {module:api/EstabelecimentoApi~listarTiposOrigensComerciaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageTipoOrigemComercialResponse}
+     */
+    this.listarTiposOrigensComerciaisUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'nome': opts['nome']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageTipoOrigemComercialResponse;
+
+      return this.apiClient.callApi(
+        '/api/tipos-origens-comerciais', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listarTiposTerminaisUsingGET1 operation.
      * @callback module:api/EstabelecimentoApi~listarTiposTerminaisUsingGET1Callback
      * @param {String} error Error message, if any.
@@ -1450,11 +1536,11 @@
 
     /**
      * Lista os Tipos Terminais
-     * Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/EstabelecimentoApi~listarTiposTerminaisUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTerminalResponse}
      */
@@ -1488,8 +1574,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET21Callback
+     * Callback function to receive the result of the listarUsingGET22 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1497,50 +1583,50 @@
 
     /**
      * Lista Estabelecimentos
-     * Lista todas os Estabelecimentos
+     * Lista todos os Estabelecimentos
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-     * @param {Integer} opts.idCredor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-     * @param {String} opts.numeroReceitaFederal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+     * @param {Integer} opts.idGrupoEconomico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+     * @param {String} opts.numeroReceitaFederal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
      * @param {String} opts.nome Nome do Estabelecimento.
-     * @param {String} opts.descricao Raz\u00C3\u00A3o Social do Estabelecimento.
-     * @param {String} opts.nomeFantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
-     * @param {String} opts.cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+     * @param {String} opts.descricao Raz\u00E3o Social do Estabelecimento.
+     * @param {String} opts.nomeFantasia T\u00EDtulo Comercial do Estabelecimento.
+     * @param {String} opts.cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
      * @param {String} opts.nomeLogradouro Nome do Logradouro.
-     * @param {Integer} opts.numeroEndereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-     * @param {String} opts.complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-     * @param {String} opts.bairro Nome do bairro do endere\u00C3\u00A7o.
-     * @param {String} opts.cidade Nome da cidade do endere\u00C3\u00A7o.
-     * @param {String} opts.uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-     * @param {String} opts.pais Nome do pa\u00C3\u00ADs.
+     * @param {Integer} opts.numeroEndereco N\u00FAmero do endere\u00E7o.
+     * @param {String} opts.complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+     * @param {String} opts.bairro Nome do bairro do endere\u00E7o.
+     * @param {String} opts.cidade Nome da cidade do endere\u00E7o.
+     * @param {String} opts.uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+     * @param {String} opts.pais Nome do pa\u00EDs.
      * @param {String} opts.dataCadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
      * @param {String} opts.contato Nome da pessoa para contato com o Estabelecimento.
      * @param {String} opts.email E-mail da pessoa para contato com o Estabelecimento.
-     * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-     * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-     * @param {Integer} opts.inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-     * @param {Integer} opts.idPais Identificador de Pa\u00C3\u00ADs.
-     * @param {Integer} opts.mcc C\u00C3\u00B3digo de Categoria de Mercado
-     * @param {Integer} opts.idTipoEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-     * @param {Integer} opts.correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-     * @param {Integer} opts.idMoeda C\u00C3\u00B3digo identificador da moeda.
+     * @param {Integer} opts.flagArquivoSecrFazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+     * @param {Integer} opts.flagCartaoDigitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+     * @param {Integer} opts.inativo Indica se o estabelecimento est\u00E1 inativo.
+     * @param {Integer} opts.idPais Identificador de Pa\u00EDs.
+     * @param {Integer} opts.mcc C\u00F3digo de Categoria de Mercado
+     * @param {Integer} opts.idTipoEstabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+     * @param {Integer} opts.correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+     * @param {Integer} opts.idMoeda C\u00F3digo identificador da moeda.
      * @param {module:model/String} opts.tipoPagamento Tipo do regime de pagamento do estabelecimento.
-     * @param {String} opts.numeroEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-     * @param {String} opts.cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+     * @param {String} opts.numeroEstabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+     * @param {String} opts.cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
      * @param {String} opts.nomeLogradouro2 Nome do Logradouro.
-     * @param {Integer} opts.numeroEndereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-     * @param {String} opts.complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-     * @param {String} opts.bairro2 Nome do bairro do endere\u00C3\u00A7o.
-     * @param {String} opts.cidade2 Nome da cidade do endere\u00C3\u00A7o.
-     * @param {String} opts.uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-     * @param {Integer} opts.flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.numeroEndereco2 N\u00FAmero do endere\u00E7o.
+     * @param {String} opts.complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+     * @param {String} opts.bairro2 Nome do bairro do endere\u00E7o.
+     * @param {String} opts.cidade2 Nome da cidade do endere\u00E7o.
+     * @param {String} opts.uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+     * @param {Integer} opts.flagMatriz Indica se \u00E9 matriz ou filial.
+     * @param {module:api/EstabelecimentoApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1552,7 +1638,7 @@
         'page': opts['page'],
         'limit': opts['limit'],
         'id': opts['id'],
-        'idCredor': opts['idCredor'],
+        'idGrupoEconomico': opts['idGrupoEconomico'],
         'numeroReceitaFederal': opts['numeroReceitaFederal'],
         'nome': opts['nome'],
         'descricao': opts['descricao'],
@@ -1605,30 +1691,30 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET23 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET23Callback
+     * Callback function to receive the result of the listarUsingGET24 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Listar grupos econ\u00C3\u00B4micos
-     * Lista grupos econ\u00C3\u00B4micos cadastrados. 
+     * Listar grupos econ\u00F4micos
+     * Lista grupos econ\u00F4micos cadastrados. 
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {String} opts.razaoSocial Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.razaoSocial Raz\u00E3o social da pessoa jur\u00EDdica
      * @param {String} opts.nomeCredor Nome do credor
-     * @param {String} opts.numeroReceitaFederal N\u00C3\u00BAmero da Receita Federal
-     * @param {String} opts.inscricaoEstadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+     * @param {String} opts.numeroReceitaFederal N\u00FAmero da Receita Federal
+     * @param {String} opts.inscricaoEstadual N\u00FAmero da inscri\u00E7\u00E3o estadual
      * @param {String} opts.contato Nome da pessoa para entrar em contato
-     * @param {Integer} opts.banco C\u00C3\u00B3digo do banco
-     * @param {Integer} opts.agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-     * @param {String} opts.digitoAgencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-     * @param {String} opts.contaCorrente C\u00C3\u00B3digo da Conta Corrente
-     * @param {String} opts.digitoContaCorrente D\u00C3\u00ADgito Verificador da Conta Corrente
+     * @param {Integer} opts.banco C\u00F3digo do banco
+     * @param {Integer} opts.agencia Raz\u00E3o social da pessoa jur\u00EDdica
+     * @param {String} opts.digitoAgencia D\u00EDgito Verificador da ag\u00EAncia
+     * @param {String} opts.contaCorrente C\u00F3digo da Conta Corrente
+     * @param {String} opts.digitoContaCorrente D\u00EDgito Verificador da Conta Corrente
      * @param {module:model/String} opts.periodicidade Periodicidade do pagamento
      * @param {module:model/String} opts.pagamentoSemanal Dia para pagamento semanal
      * @param {Integer} opts.pagamentoMensal Dia da data para o pagamento mensal
@@ -1643,11 +1729,11 @@
      * @param {Number} opts.taxaAdm Taxa Administrativa
      * @param {Number} opts.taxaBanco Taxa do Banco
      * @param {Number} opts.limiteRAV Valor limite do RAV
-     * @param {Integer} opts.idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
-     * @param {module:api/EstabelecimentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.idCredorRAV C\u00F3digo identificador do credor RAV
+     * @param {module:api/EstabelecimentoApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoEconomicoResponse}
      */
-    this.listarUsingGET23 = function(opts, callback) {
+    this.listarUsingGET24 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1705,22 +1791,71 @@
      * Callback function to receive the result of the listarUsingGET25 operation.
      * @callback module:api/EstabelecimentoApi~listarUsingGET25Callback
      * @param {String} error Error message, if any.
+     * @param {module:model/PageGrupoOrigemComercialResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listar grupos de origens comerciais
+     * Lista os grupos de origens comerciais
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.nome Nome do grupo de origem comercial
+     * @param {module:api/EstabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageGrupoOrigemComercialResponse}
+     */
+    this.listarUsingGET25 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit'],
+        'nome': opts['nome']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageGrupoOrigemComercialResponse;
+
+      return this.apiClient.callApi(
+        '/api/grupos-origens-comerciais', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET27 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET27Callback
+     * @param {String} error Error message, if any.
      * @param {module:model/PageMaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Lista as Maquinetas
-     * Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+     * @param {module:api/EstabelecimentoApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMaquinetaResponse}
      */
-    this.listarUsingGET25 = function(opts, callback) {
+    this.listarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1751,8 +1886,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET26 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET26Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMoedaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1762,16 +1897,16 @@
      * Lista os tipos de moedas do emissor 
      * Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {String} opts.codigoMoeda C\u00C3\u00B3digo identificador do tipo de moeda.
-     * @param {String} opts.simbolo S\u00C3\u00ADmbolo da Moeda.
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.codigoMoeda C\u00F3digo identificador do tipo de moeda.
+     * @param {String} opts.simbolo S\u00EDmbolo da Moeda.
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do tipo da moeda.
+     * @param {module:api/EstabelecimentoApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMoedaResponse}
      */
-    this.listarUsingGET26 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1804,27 +1939,27 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET27 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET27Callback
+     * Callback function to receive the result of the listarUsingGET29 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-     * Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
+     * Lista as Regras Opera\u00E7\u00F5es
+     * Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idOperacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idOperacao Apresenta o id da Opera\u00E7\u00E3o.
      * @param {Integer} opts.idCredor Apresenta o id do Credor.
      * @param {Integer} opts.idProduto Apresenta o id do produto que vai ser alterado.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/EstabelecimentoApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperacaoCredorResponse}
      */
-    this.listarUsingGET27 = function(opts, callback) {
+    this.listarUsingGET29 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1857,8 +1992,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET38 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET38Callback
+     * Callback function to receive the result of the listarUsingGET40 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET40Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1866,16 +2001,16 @@
 
     /**
      * Lista os Telefones Estabelecimentos
-     * Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
-     * @param {module:api/EstabelecimentoApi~listarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
+     * @param {module:api/EstabelecimentoApi~listarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneEstabelecimentoResponse}
      */
-    this.listarUsingGET38 = function(opts, callback) {
+    this.listarUsingGET40 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1906,8 +2041,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET40 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET40Callback
+     * Callback function to receive the result of the listarUsingGET42 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1915,19 +2050,19 @@
 
     /**
      * Lista os Terminais cadastrados no Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+     * Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-     * @param {String} opts.terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-     * @param {Integer} opts.numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-     * @param {Integer} opts.idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+     * @param {String} opts.terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+     * @param {Integer} opts.numeroEstabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+     * @param {Integer} opts.idEstabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
+     * @param {module:api/EstabelecimentoApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET40 = function(opts, callback) {
+    this.listarUsingGET42 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1961,27 +2096,27 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET51 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET51Callback
+     * Callback function to receive the result of the listarUsingGET53 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET53Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-     * Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
+     * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+     * Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idAdquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-     * @param {Integer} opts.idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-     * @param {String} opts.codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idAdquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+     * @param {Integer} opts.idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+     * @param {String} opts.codigoEstabelecimentoAdquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
+     * @param {module:api/EstabelecimentoApi~listarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoEstabelecimentoAdquirenteResponse}
      */
-    this.listarUsingGET51 = function(opts, callback) {
+    this.listarUsingGET53 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2014,34 +2149,34 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET52 operation.
-     * @callback module:api/EstabelecimentoApi~listarUsingGET52Callback
+     * Callback function to receive the result of the listarUsingGET54 operation.
+     * @callback module:api/EstabelecimentoApi~listarUsingGET54Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+     * Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+     * Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-     * @param {Integer} opts.idOperacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} opts.codigoMCC C\u00C3\u00B3digo MCC.
-     * @param {module:api/EstabelecimentoApi~listarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idProduto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+     * @param {Integer} opts.idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+     * @param {Integer} opts.codigoMCC C\u00F3digo MCC.
+     * @param {module:api/EstabelecimentoApi~listarUsingGET54Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoOperacaoResponse}
      */
-    this.listarUsingGET52 = function(id, opts, callback) {
+    this.listarUsingGET54 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET52";
+        throw "Missing the required parameter 'id' when calling listarUsingGET54";
       }
 
 
@@ -2083,7 +2218,7 @@
 
     /**
      * Realiza o cadastro de uma nova maquineta para um estabelecimento 
-     * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+     * Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
      * @param {module:model/MaquinetaPersist} maquinetaPersist maquinetaPersist
      * @param {module:api/EstabelecimentoApi~salvarUsingPOST16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
@@ -2127,8 +2262,8 @@
      */
 
     /**
-     * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+     * Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
+     * Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
      * @param {module:model/OperacaoCredorPersist} oprecaoCredorPersist oprecaoCredorPersist
      * @param {module:api/EstabelecimentoApi~salvarUsingPOST17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
@@ -2173,42 +2308,23 @@
 
     /**
      * Realiza o cadastro de um novo telefone para um estabelecimento 
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
-     * @param {Integer} idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
-     * @param {String} ddd C\u00C3\u00B3digo DDD do telefone (id).
-     * @param {String} telefone N\u00C3\u00BAmero do telefone.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.ramal N\u00C3\u00BAmero do ramal.
+     * Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+     * @param {module:model/TelefoneEstabelecimentoPersist} telefoneEstabelecimentoPersist telefoneEstabelecimentoPersist
      * @param {module:api/EstabelecimentoApi~salvarUsingPOST22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.salvarUsingPOST22 = function(idEstabelecimento, ddd, telefone, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
+    this.salvarUsingPOST22 = function(telefoneEstabelecimentoPersist, callback) {
+      var postBody = telefoneEstabelecimentoPersist;
 
-      // verify the required parameter 'idEstabelecimento' is set
-      if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST22";
-      }
-
-      // verify the required parameter 'ddd' is set
-      if (ddd == undefined || ddd == null) {
-        throw "Missing the required parameter 'ddd' when calling salvarUsingPOST22";
-      }
-
-      // verify the required parameter 'telefone' is set
-      if (telefone == undefined || telefone == null) {
-        throw "Missing the required parameter 'telefone' when calling salvarUsingPOST22";
+      // verify the required parameter 'telefoneEstabelecimentoPersist' is set
+      if (telefoneEstabelecimentoPersist == undefined || telefoneEstabelecimentoPersist == null) {
+        throw "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST22";
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        'idEstabelecimento': idEstabelecimento,
-        'ddd': ddd,
-        'telefone': telefone,
-        'ramal': opts['ramal']
       };
       var headerParams = {
       };
@@ -2237,7 +2353,7 @@
 
     /**
      * Realiza o cadastro de um novo Terminal
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+     * Este m\u00E9todo permite que seja cadastrado um novo Terminal.
      * @param {module:model/TerminalPersist} terminalPersist terminalPersist
      * @param {module:api/EstabelecimentoApi~salvarUsingPOST24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
@@ -2282,7 +2398,7 @@
 
     /**
      * Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+     * Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
      * @param {module:model/VinculoEstabelecimentoAdquirentePersist} vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
      * @param {module:api/EstabelecimentoApi~salvarUsingPOST29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}

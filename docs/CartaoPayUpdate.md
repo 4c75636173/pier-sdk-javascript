@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** | Status do cart\u00C3\u00A3o | 
+**status** | **String** | Status do cart\u00E3o | 
 
 

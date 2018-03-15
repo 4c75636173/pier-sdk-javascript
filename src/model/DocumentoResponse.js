@@ -18,12 +18,12 @@
   /**
    * The DocumentoResponse model module.
    * @module model/DocumentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
+   * Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
    * @alias module:model/DocumentoResponse
    * @class
    */
@@ -82,7 +82,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Extens\u00C3\u00A3o do Documento.
+   * Extens\u00E3o do Documento.
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;

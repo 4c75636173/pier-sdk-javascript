@@ -18,7 +18,7 @@
   /**
    * The TelefonePessoaAprovadaResponse model module.
    * @module model/TelefonePessoaAprovadaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
    * @member {Integer} idTipoTelefone
    */
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
+   * C\u00F3digo DDD do telefone (id).
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do telefone.
+   * N\u00FAmero do telefone.
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do ramal.
+   * N\u00FAmero do ramal.
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The TransferenciaBancariaResponse model module.
    * @module model/TransferenciaBancariaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransferenciaBancariaResponse</code>.
-   * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+   * Transfer\u00EAncia banc\u00E1ria
    * @alias module:model/TransferenciaBancariaResponse
    * @class
    */
@@ -193,25 +193,25 @@
   exports.prototype['nsuorigem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
    * @member {Integer} idAutorizacao
    */
   exports.prototype['idAutorizacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
    * @member {Integer} idTransferencia
    */
   exports.prototype['idTransferencia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo da autoriza\u00E7\u00E3o
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * Data da autoriza\u00C3\u00A7\u00C3\u00A3o
+   * Data da autoriza\u00E7\u00E3o
    * @member {String} dataAutorizacao
    */
   exports.prototype['dataAutorizacao'] = undefined;
@@ -229,7 +229,7 @@
   exports.prototype['valor'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
@@ -241,25 +241,25 @@
   exports.prototype['terminal'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Data da transfer\u00C3\u00AAncia
+   * Data da transfer\u00EAncia
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * Valor da transfer\u00C3\u00AAncia
+   * Valor da transfer\u00EAncia
    * @member {Number} valorCompra
    */
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de parcelas
+   * N\u00FAmero de parcelas
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
@@ -271,7 +271,7 @@
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
@@ -283,7 +283,7 @@
   exports.prototype['dataMovimento'] = undefined;
 
   /**
-   * Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
    * @member {Number} valorContrato
    */
   exports.prototype['valorContrato'] = undefined;
@@ -307,7 +307,7 @@
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
@@ -325,13 +325,13 @@
   exports.prototype['dataVencimentoReal'] = undefined;
 
   /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura
+   * Dia do vencimento padr\u00E3o da fatura
    * @member {String} dataVencimentoPadrao
    */
   exports.prototype['dataVencimentoPadrao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
    * @member {Integer} idContaPortador
    */
   exports.prototype['idContaPortador'] = undefined;
@@ -349,31 +349,31 @@
   exports.prototype['valorTaxaSaque'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do Banco
+   * C\u00F3digo do Banco
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+   * N\u00FAmero da Ag\u00EAncia
    * @member {String} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+   * D\u00EDgito da Ag\u00EAncia
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Conta
+   * N\u00FAmero da Conta
    * @member {String} numeroConta
    */
   exports.prototype['numeroConta'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da Conta
+   * D\u00EDgito da Conta
    * @member {String} digitoConta
    */
   exports.prototype['digitoConta'] = undefined;

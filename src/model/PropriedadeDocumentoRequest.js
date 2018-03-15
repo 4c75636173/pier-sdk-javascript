@@ -18,7 +18,7 @@
   /**
    * The PropriedadeDocumentoRequest model module.
    * @module model/PropriedadeDocumentoRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -82,7 +82,7 @@
   exports.prototype['detalhesTipo'] = undefined;
 
   /**
-   * Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+   * Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
    * @member {Boolean} flagIndice
    */
   exports.prototype['flagIndice'] = undefined;

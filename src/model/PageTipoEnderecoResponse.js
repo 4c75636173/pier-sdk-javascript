@@ -18,12 +18,12 @@
   /**
    * The PageTipoEnderecoResponse model module.
    * @module model/PageTipoEnderecoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageTipoEnderecoResponse</code>.
-   * Lista de Tipos Endere\u00C3\u00A7o
+   * Lista de Tipos Endere\u00E7o
    * @alias module:model/PageTipoEnderecoResponse
    * @class
    */

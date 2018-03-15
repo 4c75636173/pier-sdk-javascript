@@ -18,12 +18,12 @@
   /**
    * The ArquivoPersist model module.
    * @module model/ArquivoPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ArquivoPersist</code>.
-   * Objeto Arquivo para persist\u00C3\u00AAncia de dados.
+   * Objeto Arquivo para persist\u00EAncia de dados.
    * @alias module:model/ArquivoPersist
    * @class
    * @param arquivo
@@ -80,7 +80,7 @@
   exports.prototype['idTipoArquivo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    * @member {String} arquivo
    */
   exports.prototype['arquivo'] = undefined;
@@ -92,19 +92,19 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Formato/extens\u00C3\u00A3o do arquivo.
+   * Formato/extens\u00E3o do arquivo.
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo de comunica\u00E7\u00E3o.
    * @member {module:model/ArquivoPersist.TipoComunicacaoEnum} tipoComunicacao
    */
   exports.prototype['tipoComunicacao'] = undefined;
 
   /**
-   * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
    * @member {Array.<module:model/ArquivoDetalhesPersist>} detalhes
    */
   exports.prototype['detalhes'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The TransacaoOnUsRequest model module.
    * @module model/TransacaoOnUsRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransacaoOnUsRequest</code>.
-   * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Transa\u00C3\u00A7\u00C3\u00A3o On Us
+   * Objeto de Requisi\u00E7\u00E3o de Transa\u00E7\u00E3o On Us
    * @alias module:model/TransacaoOnUsRequest
    * @class
    * @param nsuOrigem
@@ -88,37 +88,37 @@
 
 
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * N\u00FAmero Real do Cart\u00E3o.
    * @member {String} numeroRealCartao
    */
   exports.prototype['numeroRealCartao'] = undefined;
 
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
@@ -130,7 +130,7 @@
   exports.prototype['dataHoraTerminal'] = undefined;
 
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;

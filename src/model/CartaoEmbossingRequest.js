@@ -18,12 +18,12 @@
   /**
    * The CartaoEmbossingRequest model module.
    * @module model/CartaoEmbossingRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>CartaoEmbossingRequest</code>.
-   * Parametros de requisi\u00C3\u00A7\u00C3\u00A3o da gera\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o embossing
+   * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
    * @alias module:model/CartaoEmbossingRequest
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
    * @member {Integer} id_pessoa
    */
   exports.prototype['id_pessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
    * @member {Integer} id_tipo_plastico
    */
   exports.prototype['id_tipo_plastico'] = undefined;

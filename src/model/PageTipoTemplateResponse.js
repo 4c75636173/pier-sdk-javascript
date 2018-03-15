@@ -18,7 +18,7 @@
   /**
    * The PageTipoTemplateResponse model module.
    * @module model/PageTipoTemplateResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**

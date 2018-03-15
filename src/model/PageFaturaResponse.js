@@ -18,12 +18,12 @@
   /**
    * The PageFaturaResponse model module.
    * @module model/PageFaturaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageFaturaResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+   * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
    * @alias module:model/PageFaturaResponse
    * @class
    */

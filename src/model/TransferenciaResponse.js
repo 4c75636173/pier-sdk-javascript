@@ -18,7 +18,7 @@
   /**
    * The TransferenciaResponse model module.
    * @module model/TransferenciaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -68,25 +68,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+   * Data estabelecida para ocorrer a transfer\u00EAncia.
    * @member {String} dataTransferencia
    */
   exports.prototype['dataTransferencia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
    * @member {Integer} idContaOrigem
    */
   exports.prototype['idContaOrigem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
    * @member {Integer} idContaDestino
    */
   exports.prototype['idContaDestino'] = undefined;

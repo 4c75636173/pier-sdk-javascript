@@ -18,7 +18,7 @@
   /**
    * Oportunidade service.
    * @module api/OportunidadeApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -42,9 +42,9 @@
 
     /**
      * Altera o status do tipo oportunidade
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-     * @param {Integer} idStatus C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id).
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o do status do tipo oportunidade.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+     * @param {Integer} idStatus C\u00F3digo de identifica\u00E7\u00E3o do status do tipo oportunidade (id).
      * @param {module:model/StatusOportunidade} persist persist
      * @param {module:api/OportunidadeApi~alterarStatusUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusOportunidadeResponse}
@@ -101,8 +101,8 @@
 
     /**
      * Altera as oportunidades
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o das oportunidades.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da oportunidade (id).
      * @param {module:model/OportunidadeUpdate} update update
      * @param {module:api/OportunidadeApi~alterarUsingPUT12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
@@ -153,8 +153,8 @@
 
     /**
      * Altera os tipos oportunidades
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos tipos oportunidades.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do tipo oportunidade (id).
      * @param {module:model/TipoOportunidade} persist persist
      * @param {module:api/OportunidadeApi~alterarUsingPUT18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
@@ -205,9 +205,9 @@
 
     /**
      * Apresenta dados de um determinado status do tipo oportunidade
-     * Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (idStatus).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-     * @param {Integer} idStatus C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus).
+     * Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (idStatus).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+     * @param {Integer} idStatus C\u00F3digo de identifica\u00E7\u00E3o do status (idStatus).
      * @param {module:api/OportunidadeApi~consultarStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusOportunidadeResponse}
      */
@@ -249,8 +249,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -258,17 +258,17 @@
 
     /**
      * Apresenta dados de uma determinada oportunidade
-     * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da oportunidade (id).
+     * @param {module:api/OportunidadeApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.consultarUsingGET22 = function(id, callback) {
+    this.consultarUsingGET23 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
       }
 
 
@@ -295,8 +295,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET36 operation.
-     * @callback module:api/OportunidadeApi~consultarUsingGET36Callback
+     * Callback function to receive the result of the consultarUsingGET37 operation.
+     * @callback module:api/OportunidadeApi~consultarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -304,17 +304,17 @@
 
     /**
      * Apresenta dados de um determinado tipo oportunidade
-     * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-     * @param {module:api/OportunidadeApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+     * @param {module:api/OportunidadeApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.consultarUsingGET36 = function(id, callback) {
+    this.consultarUsingGET37 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
       }
 
 
@@ -352,17 +352,17 @@
      * Lista as auditorias dos status oportunidades
      * Este recurso permite listar os status oportunidades.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-     * @param {String} opts.revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-     * @param {Integer} opts.id C\u00C3\u00B3digo identificador do status oportunidade
-     * @param {Integer} opts.idTipoOportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.revType C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param {String} opts.revDate Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param {Integer} opts.id C\u00F3digo identificador do status oportunidade
+     * @param {Integer} opts.idTipoOportunidade C\u00F3digo identificador do tipo oportunidade
      * @param {String} opts.nome Nome do status oportunidade
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-     * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-     * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do status oportunidade
+     * @param {Boolean} opts.flagAtivo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
+     * @param {String} opts.revUser Usu\u00E1rio da auditoria
      * @param {module:api/OportunidadeApi~listarAuditoriasStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusOportunidadeAUDResponse}
      */
@@ -415,19 +415,19 @@
      * Lista as auditorias das oportunidades
      * Este recurso permite listar as auditorias das oportunidades.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idStatusOportunidade C\u00F3digo identificador do status oportunidade
      * @param {String} opts.dataCadastro Data do cadastro da oportunidade
-     * @param {String} opts.dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-     * @param {String} opts.numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-     * @param {String} opts.dataInicioVigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-     * @param {String} opts.datatFimVigencia Fim da vig\u00C3\u00AAncia da oportunidade
-     * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+     * @param {String} opts.dataAtualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+     * @param {String} opts.numeroReceitaFederal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+     * @param {String} opts.dataInicioVigencia In\u00EDcio da vig\u00EAncia da oportunidade
+     * @param {String} opts.datatFimVigencia Fim da vig\u00EAncia da oportunidade
+     * @param {Boolean} opts.flagAtivo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
      * @param {String} opts.revDate Data da auditoria
      * @param {String} opts.revType Tipo da auditoria
-     * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
+     * @param {String} opts.revUser Usu\u00E1rio da auditoria
      * @param {module:api/OportunidadeApi~listarAuditoriasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOportunidadeAUDResponse}
      */
@@ -482,15 +482,15 @@
      * Lista as auditorias dos tipos oportunidades
      * Este recurso permite listar os tipos oportunidades.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-     * @param {String} opts.revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-     * @param {Integer} opts.id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-     * @param {Boolean} opts.flagAtivo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {String} opts.revUser Usu\u00C3\u00A1rio da auditoria
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.revType C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param {String} opts.revDate Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+     * @param {Integer} opts.id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+     * @param {Boolean} opts.flagAtivo Atributo que representa se o tipo oportunidade est\u00E1 ativo
+     * @param {String} opts.revUser Usu\u00E1rio da auditoria
      * @param {module:api/OportunidadeApi~listarAuditoriasUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOportunidadeAUDResponse}
      */
@@ -540,14 +540,14 @@
     /**
      * Lista os status do tipo oportunidades
      * Este recurso permite listar os status do tipo oportunidades.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome do status oportunidade
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-     * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do status oportunidade
+     * @param {Boolean} opts.flagAtivo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
      * @param {module:api/OportunidadeApi~listarStatusUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusOportunidadeResponse}
      */
@@ -590,8 +590,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET28 operation.
-     * @callback module:api/OportunidadeApi~listarUsingGET28Callback
+     * Callback function to receive the result of the listarUsingGET30 operation.
+     * @callback module:api/OportunidadeApi~listarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -601,20 +601,20 @@
      * Lista as oportunidades
      * Este recurso permite listar as oportunidades.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idStatusOportunidade C\u00F3digo identificador do status oportunidade
      * @param {String} opts.dataCadastro Data do cadastro da oportunidade
-     * @param {String} opts.dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-     * @param {String} opts.numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-     * @param {String} opts.dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-     * @param {String} opts.dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
-     * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-     * @param {module:api/OportunidadeApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {String} opts.dataAtualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+     * @param {String} opts.numeroReceitaFederal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+     * @param {String} opts.dataInicioVigencia Data de in\u00EDcio da vig\u00EAncia da oportunidade
+     * @param {String} opts.dataFimVigencia Data do fim da vig\u00EAncia da oportunidade
+     * @param {Boolean} opts.flagAtivo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+     * @param {module:api/OportunidadeApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOportunidadeResponse}
      */
-    this.listarUsingGET28 = function(opts, callback) {
+    this.listarUsingGET30 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -651,8 +651,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET43 operation.
-     * @callback module:api/OportunidadeApi~listarUsingGET43Callback
+     * Callback function to receive the result of the listarUsingGET45 operation.
+     * @callback module:api/OportunidadeApi~listarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -662,15 +662,15 @@
      * Lista os tipos oportunidades
      * Este recurso permite listar os tipos oportunidades.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-     * @param {Boolean} opts.flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-     * @param {module:api/OportunidadeApi~listarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do tipo oportunidade
+     * @param {Boolean} opts.flagAtivo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
+     * @param {module:api/OportunidadeApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOportunidadeResponse}
      */
-    this.listarUsingGET43 = function(opts, callback) {
+    this.listarUsingGET45 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -712,7 +712,7 @@
     /**
      * Cadastra status para o tipo oportunidade
      * Esse recurso permite cadastrar status para o tipo oportunidade.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
      * @param {module:model/StatusOportunidade} persist persist
      * @param {module:api/OportunidadeApi~salvarStatusUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusOportunidadeResponse}

@@ -4,26 +4,26 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio.
-[**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**alterarUsingPUT21**](UsuarioApi.md#alterarUsingPUT21) | **PUT** /api/usuarios/{id} | Altera os usu\u00C3\u00A1rios cadastrados na base.
-[**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**consultarUsingGET42**](UsuarioApi.md#consultarUsingGET42) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-[**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**listarUsingGET49**](UsuarioApi.md#listarUsingGET49) | **GET** /api/usuarios | Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-[**salvarUsingPOST28**](UsuarioApi.md#salvarUsingPOST28) | **POST** /api/usuarios | Cadastra Usu\u00C3\u00A1rio na base.
-[**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-[**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+[**alterarSenhaLoginUsingPOST**](UsuarioApi.md#alterarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/alterar-senha | Alterar senha do usu\u00E1rio.
+[**alterarSenhaUsingPUT**](UsuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | Alterar senha do usu\u00E1rio na base do PIER ou WS.
+[**alterarUsingPUT21**](UsuarioApi.md#alterarUsingPUT21) | **PUT** /api/usuarios/{id} | Altera os usu\u00E1rios cadastrados na base.
+[**ativarUsuarioUsingPOST**](UsuarioApi.md#ativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/ativar-usuario | Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+[**consultarUsingGET43**](UsuarioApi.md#consultarUsingGET43) | **GET** /api/usuarios/{id} | Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+[**desativarUsuarioUsingPOST**](UsuarioApi.md#desativarUsuarioUsingPOST) | **POST** /api/usuarios/{id}/desativar-usuario | Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+[**listarUsingGET51**](UsuarioApi.md#listarUsingGET51) | **GET** /api/usuarios | Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+[**recuperarSenhaUsingPOST**](UsuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+[**salvarUsingPOST28**](UsuarioApi.md#salvarUsingPOST28) | **POST** /api/usuarios | Cadastra Usu\u00E1rio na base.
+[**validarSenhaLoginUsingPOST**](UsuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+[**validarSenhaUsingGET1**](UsuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | Validar a senha do usu\u00E1rio na base do PIER ou WS.
 
 
 <a name="alterarSenhaLoginUsingPOST"></a>
 # **alterarSenhaLoginUsingPOST**
 > &#39;String&#39; alterarSenhaLoginUsingPOST(login, senhaNova)
 
-Alterar senha do usu\u00C3\u00A1rio.
+Alterar senha do usu\u00E1rio.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
 
 ### Example
 ```javascript
@@ -31,7 +31,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var login = "login_example"; // {String} Login do usu\u00C3\u00A1rio.
+var login = "login_example"; // {String} Login do usu\u00E1rio.
 
 var senhaNova = "senhaNova_example"; // {String} Senha Nova
 
@@ -50,7 +50,7 @@ api.alterarSenhaLoginUsingPOST(login, senhaNova, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login** | **String**| Login do usu\u00C3\u00A1rio. | 
+ **login** | **String**| Login do usu\u00E1rio. | 
  **senhaNova** | **String**| Senha Nova | 
 
 ### Return type
@@ -70,9 +70,9 @@ No authorization required
 # **alterarSenhaUsingPUT**
 > &#39;String&#39; alterarSenhaUsingPUT(id, senhaAtual, senhaNova)
 
-Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Alterar senha do usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
 
 ### Example
 ```javascript
@@ -80,7 +80,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 var senhaAtual = "senhaAtual_example"; // {String} Senha Atual
 
@@ -101,7 +101,7 @@ api.alterarSenhaUsingPUT(id, senhaAtual, senhaNova, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
  **senhaAtual** | **String**| Senha Atual | 
  **senhaNova** | **String**| Senha Nova | 
 
@@ -122,9 +122,9 @@ No authorization required
 # **alterarUsingPUT21**
 > UsuarioResponse alterarUsingPUT21(id, update)
 
-Altera os usu\u00C3\u00A1rios cadastrados na base.
+Altera os usu\u00E1rios cadastrados na base.
 
-Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```javascript
@@ -132,7 +132,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 var update = new Pier.UsuarioUpdate(); // {UsuarioUpdate} update
 
@@ -151,7 +151,7 @@ api.alterarUsingPUT21(id, update, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
  **update** | [**UsuarioUpdate**](UsuarioUpdate.md)| update | 
 
 ### Return type
@@ -171,9 +171,9 @@ No authorization required
 # **ativarUsuarioUsingPOST**
 > UsuarioResponse ativarUsuarioUsingPOST(id)
 
-Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```javascript
@@ -181,7 +181,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 var callback = function(error, data, response) {
@@ -198,7 +198,7 @@ api.ativarUsuarioUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -213,13 +213,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET42"></a>
-# **consultarUsingGET42**
-> UsuarioResponse consultarUsingGET42(id)
+<a name="consultarUsingGET43"></a>
+# **consultarUsingGET43**
+> UsuarioResponse consultarUsingGET43(id)
 
-Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
+Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -227,7 +227,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 var callback = function(error, data, response) {
@@ -237,14 +237,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET42(id, callback);
+api.consultarUsingGET43(id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -263,9 +263,9 @@ No authorization required
 # **desativarUsuarioUsingPOST**
 > UsuarioResponse desativarUsuarioUsingPOST(id)
 
-Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
 
 ### Example
 ```javascript
@@ -273,7 +273,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 var callback = function(error, data, response) {
@@ -290,7 +290,7 @@ api.desativarUsuarioUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -305,13 +305,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET49"></a>
-# **listarUsingGET49**
-> PageUsuarioResponse listarUsingGET49(opts)
+<a name="listarUsingGET51"></a>
+# **listarUsingGET51**
+> PageUsuarioResponse listarUsingGET51(opts)
 
-Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
 
 ### Example
 ```javascript
@@ -320,9 +320,9 @@ var Pier = require('Pier');
 var apiInstance = new Pier.UsuarioApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'nome': "nome_example", // {String} Nome do Usuario
   'cpf': "cpf_example", // {String} CPF do Usuario
   'email': "email_example", // {String} Email do Usuario
@@ -336,16 +336,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET49(opts, callback);
+api.listarUsingGET51(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **nome** | **String**| Nome do Usuario | [optional] 
  **cpf** | **String**| CPF do Usuario | [optional] 
  **email** | **String**| Email do Usuario | [optional] 
@@ -368,9 +368,9 @@ No authorization required
 # **recuperarSenhaUsingPOST**
 > &#39;String&#39; recuperarSenhaUsingPOST(id)
 
-Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Recuperar senha do usu\u00E1rio na base do PIER ou WS.
 
-Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
+Esse recurso permite recuperar a senha do usu\u00E1rio.
 
 ### Example
 ```javascript
@@ -378,7 +378,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 var callback = function(error, data, response) {
@@ -395,7 +395,7 @@ api.recuperarSenhaUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 
@@ -414,9 +414,9 @@ No authorization required
 # **salvarUsingPOST28**
 > UsuarioResponse salvarUsingPOST28(persist)
 
-Cadastra Usu\u00C3\u00A1rio na base.
+Cadastra Usu\u00E1rio na base.
 
-Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+Esse recurso permite cadastrar usu\u00E1rios.
 
 ### Example
 ```javascript
@@ -460,9 +460,9 @@ No authorization required
 # **validarSenhaLoginUsingPOST**
 > Object validarSenhaLoginUsingPOST(login, senha)
 
-Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
 
-O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
 
 ### Example
 ```javascript
@@ -470,9 +470,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var login = "login_example"; // {String} Login identificador do usu\u00C3\u00A1rio (login).
+var login = "login_example"; // {String} Login identificador do usu\u00E1rio (login).
 
-var senha = "senha_example"; // {String} Senha do usu\u00C3\u00A1rio
+var senha = "senha_example"; // {String} Senha do usu\u00E1rio
 
 
 var callback = function(error, data, response) {
@@ -489,8 +489,8 @@ api.validarSenhaLoginUsingPOST(login, senha, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login** | **String**| Login identificador do usu\u00C3\u00A1rio (login). | 
- **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
+ **login** | **String**| Login identificador do usu\u00E1rio (login). | 
+ **senha** | **String**| Senha do usu\u00E1rio | 
 
 ### Return type
 
@@ -509,9 +509,9 @@ No authorization required
 # **validarSenhaUsingGET1**
 > &#39;String&#39; validarSenhaUsingGET1(senha, id)
 
-Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
+Validar a senha do usu\u00E1rio na base do PIER ou WS.
 
-Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
+Este m\u00E9todo permite validar a senha do usu\u00E1rio).
 
 ### Example
 ```javascript
@@ -519,9 +519,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.UsuarioApi()
 
-var senha = "senha_example"; // {String} Senha do usu\u00C3\u00A1rio
+var senha = "senha_example"; // {String} Senha do usu\u00E1rio
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
 
 
 var callback = function(error, data, response) {
@@ -538,8 +538,8 @@ api.validarSenhaUsingGET1(senha, id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **senha** | **String**| Senha do usu\u00C3\u00A1rio | 
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id). | 
+ **senha** | **String**| Senha do usu\u00E1rio | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id). | 
 
 ### Return type
 

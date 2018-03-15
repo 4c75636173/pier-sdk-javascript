@@ -18,7 +18,7 @@
   /**
    * The MaquinetaResponse model module.
    * @module model/MaquinetaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -80,31 +80,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
    * @member {Integer} idTipoMaquineta
    */
   exports.prototype['idTipoMaquineta'] = undefined;
 
   /**
-   * Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Valor de manuten\u00E7\u00E3o da Maquineta.
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Data de implanta\u00E7\u00E3o da Maquineta.
    * @member {String} dataHoraImplantacao
    */
   exports.prototype['dataHoraImplantacao'] = undefined;
@@ -116,13 +116,13 @@
   exports.prototype['dataHoraCadastramento'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+   * N\u00FAmero do terminal vinculado a Maquineta.
    * @member {String} terminal
    */
   exports.prototype['terminal'] = undefined;
 
   /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Usu\u00E1rio da aplica\u00E7\u00E3o.
    * @member {String} usuarioApl
    */
   exports.prototype['usuarioApl'] = undefined;

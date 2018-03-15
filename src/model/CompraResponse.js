@@ -18,7 +18,7 @@
   /**
    * The CompraResponse model module.
    * @module model/CompraResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -150,13 +150,13 @@
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+   * C\u00F3digo de identifica\u00E7\u00E3o da compra.
    * @member {Integer} idCompra
    */
   exports.prototype['idCompra'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
@@ -186,13 +186,13 @@
   exports.prototype['primeiraParcela'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de parcelas da compra.
+   * N\u00FAmero de parcelas da compra.
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de parcelas antecip\u00C3\u00A1veis da compra.
+   * N\u00FAmero de parcelas antecip\u00E1veis da compra.
    * @member {Integer} numeroParcelasAntecipaveis
    */
   exports.prototype['numeroParcelasAntecipaveis'] = undefined;
@@ -204,7 +204,7 @@
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Tipo de transa\u00E7\u00E3o da compra.
    * @member {String} tipoOrigemTransacao
    */
   exports.prototype['tipoOrigemTransacao'] = undefined;
@@ -216,61 +216,61 @@
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Pa\u00C3\u00ADs onde a compra foi realizada.
+   * Pa\u00EDs onde a compra foi realizada.
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
    * @member {String} latitude
    */
   exports.prototype['latitude'] = undefined;
 
   /**
-   * Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
    * @member {String} longitude
    */
   exports.prototype['longitude'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   * Descri\u00E7\u00E3o do Grupo MCC da compra.
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   * Descri\u00E7\u00E3o do produto da compra.
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o da compra.
+   * N\u00FAmero do cart\u00E3o da compra.
    * @member {String} cartao
    */
   exports.prototype['cartao'] = undefined;
 
   /**
-   * Nome do portador do cart\u00C3\u00A3o da compra.
+   * Nome do portador do cart\u00E3o da compra.
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;

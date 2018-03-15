@@ -18,12 +18,12 @@
   /**
    * The ArquivoParametroAUDResponse model module.
    * @module model/ArquivoParametroAUDResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ArquivoParametroAUDResponse</code>.
-   * Objeto Response da auditoria dos par\u00C3\u00A2metros do arquivo.
+   * Objeto Response da auditoria dos par\u00E2metros do arquivo.
    * @alias module:model/ArquivoParametroAUDResponse
    * @class
    */
@@ -82,37 +82,37 @@
   exports.prototype['rev'] = undefined;
 
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Identificador do par\u00C3\u00A2metro
+   * Identificador do par\u00E2metro
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do par\u00C3\u00A2metro
+   * Nome do par\u00E2metro
    * @member {String} parametro
    */
   exports.prototype['parametro'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do par\u00C3\u00A2metro
+   * Conte\u00FAdo do par\u00E2metro
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Data de inclus\u00C3\u00A3o do par\u00C3\u00A2metro
+   * Data de inclus\u00E3o do par\u00E2metro
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o do par\u00C3\u00A2metro
+   * Data de altera\u00E7\u00E3o do par\u00E2metro
    * @member {String} dataHoraAlteracao
    */
   exports.prototype['dataHoraAlteracao'] = undefined;

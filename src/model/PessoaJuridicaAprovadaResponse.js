@@ -18,7 +18,7 @@
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -147,13 +147,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
@@ -165,13 +165,13 @@
   exports.prototype['nomeFantasia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+   * N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
    * @member {String} cnpj
    */
   exports.prototype['cnpj'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
    * @member {String} inscricaoEstadual
    */
   exports.prototype['inscricaoEstadual'] = undefined;
@@ -195,13 +195,13 @@
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
@@ -219,19 +219,19 @@
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   * C\u00F3digo de identifica\u00E7\u00E3o da proposta
    * @member {Integer} idProposta
    */
   exports.prototype['idProposta'] = undefined;
@@ -243,7 +243,7 @@
   exports.prototype['canalEntrada'] = undefined;
 
   /**
-   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
    * @member {Integer} valorPontuacao
    */
   exports.prototype['valorPontuacao'] = undefined;
@@ -255,19 +255,19 @@
   exports.prototype['telefones'] = undefined;
 
   /**
-   * Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
    * @member {Array.<module:model/EnderecoAprovadoResponse>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
 
   /**
-   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
    * @member {Array.<module:model/SocioAprovadoResponse>} socios
    */
   exports.prototype['socios'] = undefined;
 
   /**
-   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
    * @member {Array.<module:model/ReferenciaComercialAprovadoResponse>} referencias
    */
   exports.prototype['referencias'] = undefined;
@@ -279,13 +279,13 @@
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
    * @member {Number} limiteMaximo
    */
   exports.prototype['limiteMaximo'] = undefined;
 
   /**
-   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;

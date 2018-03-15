@@ -18,12 +18,12 @@
   /**
    * The ArquivoDetalhesPersist model module.
    * @module model/ArquivoDetalhesPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ArquivoDetalhesPersist</code>.
-   * Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
+   * Objeto ArquivoParametros para persist\u00EAncia de dados.
    * @alias module:model/ArquivoDetalhesPersist
    * @class
    * @param nomeCampo
@@ -64,7 +64,7 @@
   exports.prototype['nomeCampo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do nomeCampo
+   * Conte\u00FAdo do nomeCampo
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

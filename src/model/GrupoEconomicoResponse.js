@@ -18,16 +18,17 @@
   /**
    * The GrupoEconomicoResponse model module.
    * @module model/GrupoEconomicoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>GrupoEconomicoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
+   * Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
    * @alias module:model/GrupoEconomicoResponse
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -128,6 +129,9 @@
       if (data.hasOwnProperty('pagamentoQuinzenalSegundo')) {
         obj['pagamentoQuinzenalSegundo'] = ApiClient.convertToType(data['pagamentoQuinzenalSegundo'], 'Integer');
       }
+      if (data.hasOwnProperty('idCredorRAV')) {
+        obj['idCredorRAV'] = ApiClient.convertToType(data['idCredorRAV'], 'Integer');
+      }
       if (data.hasOwnProperty('percentualRAV')) {
         obj['percentualRAV'] = ApiClient.convertToType(data['percentualRAV'], 'Number');
       }
@@ -152,13 +156,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+   * C\u00F3digo identificador do grupo econ\u00F4mico
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * Raz\u00E3o social da pessoa jur\u00EDdica
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
@@ -170,13 +174,13 @@
   exports.prototype['nomeCredor'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Receita Federal
+   * N\u00FAmero da Receita Federal
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * N\u00FAmero da inscri\u00E7\u00E3o estadual
    * @member {String} inscricaoEstadual
    */
   exports.prototype['inscricaoEstadual'] = undefined;
@@ -188,37 +192,37 @@
   exports.prototype['contato'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+   * C\u00F3digo da ag\u00EAncia
    * @member {Integer} agencia
    */
   exports.prototype['agencia'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+   * D\u00EDgito verificador da ag\u00EAncia
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo da Conta Corrente
+   * C\u00F3digo da Conta Corrente
    * @member {String} contaCorrente
    */
   exports.prototype['contaCorrente'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito Verificador da Conta Corrente
+   * D\u00EDgito Verificador da Conta Corrente
    * @member {String} digitoContaCorrente
    */
   exports.prototype['digitoContaCorrente'] = undefined;
 
   /**
-   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+   * Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
@@ -270,6 +274,12 @@
    * @member {Integer} pagamentoQuinzenalSegundo
    */
   exports.prototype['pagamentoQuinzenalSegundo'] = undefined;
+
+  /**
+   * Identificador do credor RAV
+   * @member {Integer} idCredorRAV
+   */
+  exports.prototype['idCredorRAV'] = undefined;
 
   /**
    * Valor percentual do RAV do credor

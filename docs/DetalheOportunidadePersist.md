@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nomeCampo** | **String** | Nome do conte\u00C3\u00BAdo | 
-**conteudo** | **String** | Conte\u00C3\u00BAdo do detalhe | 
+**nomeCampo** | **String** | Nome do conte\u00FAdo | 
+**conteudo** | **String** | Conte\u00FAdo do detalhe | 
 
 

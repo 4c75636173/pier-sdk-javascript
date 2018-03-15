@@ -18,7 +18,7 @@
   /**
    * The VinculoOperacaoResponse model module.
    * @module model/VinculoOperacaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de processamento.
+   * C\u00F3digo de processamento.
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo MCC.
+   * C\u00F3digo MCC.
    * @member {Integer} codigoMCC
    */
   exports.prototype['codigoMCC'] = undefined;

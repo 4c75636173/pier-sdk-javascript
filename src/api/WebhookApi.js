@@ -18,7 +18,7 @@
   /**
    * Webhook service.
    * @module api/WebhookApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -42,8 +42,8 @@
 
     /**
      * Alterar Webhook
-     * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-     * @param {Integer} id C\u00C3\u00B3digo identificador do Webhook
+     * Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
+     * @param {Integer} id C\u00F3digo identificador do Webhook
      * @param {module:model/WebHook} webhook webhook
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Status
@@ -89,8 +89,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET44 operation.
-     * @callback module:api/WebhookApi~consultarUsingGET44Callback
+     * Callback function to receive the result of the consultarUsingGET45 operation.
+     * @callback module:api/WebhookApi~consultarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -98,17 +98,17 @@
 
     /**
      * Consultar Webhook
-     * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-     * @param {module:api/WebhookApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).
+     * @param {module:api/WebhookApi~consultarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.consultarUsingGET44 = function(id, callback) {
+    this.consultarUsingGET45 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET44";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET45";
       }
 
 
@@ -135,8 +135,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET53 operation.
-     * @callback module:api/WebhookApi~listarUsingGET53Callback
+     * Callback function to receive the result of the listarUsingGET55 operation.
+     * @callback module:api/WebhookApi~listarUsingGET55Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -144,19 +144,19 @@
 
     /**
      * Lista os Webhooks
-     * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+     * Este m\u00E9todo permite que sejam listados os webhooks existentes
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {Integer} opts.id Id do WebHook
      * @param {module:model/String} opts.tipoEvento TipoEvento a ser chamado pelo WebHook
-     * @param {module:model/String} opts.metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+     * @param {module:model/String} opts.metodo M\u00E9todo que a ser chamado pelo WebHook
      * @param {String} opts.url URL que a ser consumida pelo WebHook
-     * @param {module:api/WebhookApi~listarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WebhookApi~listarUsingGET55Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHookResponse}
      */
-    this.listarUsingGET53 = function(opts, callback) {
+    this.listarUsingGET55 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -199,7 +199,7 @@
 
     /**
      * Salvar Webhook
-     * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+     * Este m\u00E9todo permite que seja adicionado um novo webhook
      * @param {module:model/WebHook} webhook webhook
      * @param {module:api/WebhookApi~salvarUsingPOST30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}

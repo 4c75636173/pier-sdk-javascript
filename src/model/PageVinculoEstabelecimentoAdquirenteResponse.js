@@ -18,7 +18,7 @@
   /**
    * The PageVinculoEstabelecimentoAdquirenteResponse model module.
    * @module model/PageVinculoEstabelecimentoAdquirenteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**

@@ -18,12 +18,12 @@
   /**
    * The DocumentoParametrosRequest model module.
    * @module model/DocumentoParametrosRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoParametrosRequest</code>.
-   * Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+   * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
    * @alias module:model/DocumentoParametrosRequest
    * @class
    */
@@ -72,7 +72,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00E2metros para montagem do documento.
    * @member {Array.<module:model/PropriedadeDocumentoRequest>} parametrosConteudo
    */
   exports.prototype['parametrosConteudo'] = undefined;

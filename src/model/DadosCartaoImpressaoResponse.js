@@ -18,16 +18,17 @@
   /**
    * The DadosCartaoImpressaoResponse model module.
    * @module model/DadosCartaoImpressaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DadosCartaoImpressaoResponse</code>.
-   * Objeto Cart\u00C3\u00A3o para Impresso
+   * Objeto Cart\u00E3o para Impresso
    * @alias module:model/DadosCartaoImpressaoResponse
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -230,79 +231,82 @@
       if (data.hasOwnProperty('pais')) {
         obj['pais'] = ApiClient.convertToType(data['pais'], 'String');
       }
+      if (data.hasOwnProperty('senhaCriptografada')) {
+        obj['senhaCriptografada'] = ApiClient.convertToType(data['senhaCriptografada'], 'String');
+      }
     }
     return obj;
   }
 
 
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
    * @member {Integer} idBandeira
    */
   exports.prototype['idBandeira'] = undefined;
 
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * O n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * O n\u00FAmero do cart\u00E3o.
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * O nome do Portador do Cart\u00C3\u00A3o.
+   * O nome do Portador do Cart\u00E3o.
    * @member {String} nomePlastico
    */
   exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+   * O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
    * @member {String} cvv2
    */
   exports.prototype['cvv2'] = undefined;
 
   /**
-   * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
    * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
-   * Apresenta a data de Validade do Cart\u00C3\u00A3o.
+   * Apresenta a data de Validade do Cart\u00E3o.
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * O CPF do Portador do Cart\u00C3\u00A3o.
+   * O CPF do Portador do Cart\u00E3o.
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+   * O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;
@@ -332,7 +336,7 @@
   exports.prototype['trilhaCVV2'] = undefined;
 
   /**
-   * O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   * O status que informa se o cart\u00E3o \u00E9 virtual 
    * @member {Integer} flagVirtual
    */
   exports.prototype['flagVirtual'] = undefined;
@@ -350,49 +354,49 @@
   exports.prototype['flagTitular'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o
+   * C\u00F3digo Sequencial do Cart\u00E3o
    * @member {Integer} sequencialCartao
    */
   exports.prototype['sequencialCartao'] = undefined;
 
   /**
-   * Identificador do Status do Cart\u00C3\u00A3o
+   * Identificador do Status do Cart\u00E3o
    * @member {Integer} idStatus
    */
   exports.prototype['idStatus'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do Status do Cart\u00E3o
    * @member {String} descricaoStatusCartao
    */
   exports.prototype['descricaoStatusCartao'] = undefined;
 
   /**
-   * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
    * @member {String} dataStatus
    */
   exports.prototype['dataStatus'] = undefined;
 
   /**
-   * Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.
+   * Identificador do Est\u00E1gio do Cart\u00E3o.
    * @member {Integer} idEstagio
    */
   exports.prototype['idEstagio'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
    * @member {String} descricaoEstagio
    */
   exports.prototype['descricaoEstagio'] = undefined;
 
   /**
-   * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
    * @member {String} dataEstagio
    */
   exports.prototype['dataEstagio'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o
+   * N\u00FAmero do Bin do Cart\u00E3o
    * @member {String} numeroBin
    */
   exports.prototype['numeroBin'] = undefined;
@@ -404,7 +408,7 @@
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do produto
+   * Descri\u00E7\u00E3o do produto
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
@@ -416,31 +420,31 @@
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    * @member {Integer} descricaoStatusConta
    */
   exports.prototype['descricaoStatusConta'] = undefined;
 
   /**
-   * Data que o cart\u00C3\u00A3o foi embossado
+   * Data que o cart\u00E3o foi embossado
    * @member {String} dataEmbossing
    */
   exports.prototype['dataEmbossing'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o
+   * C\u00F3digo de desbloqueio do cart\u00E3o
    * @member {String} codigoDesbloqueio
    */
   exports.prototype['codigoDesbloqueio'] = undefined;
 
   /**
-   * O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    * @member {String} nomePessoa
    */
   exports.prototype['nomePessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
    * @member {String} tipoPessoa
    */
   exports.prototype['tipoPessoa'] = undefined;
@@ -452,25 +456,25 @@
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o
+   * Identificador do Endere\u00E7o do titular do cart\u00E3o
    * @member {Integer} idEndereco
    */
   exports.prototype['idEndereco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
    * @member {Integer} idTipoEndereco
    */
   exports.prototype['idTipoEndereco'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o
+   * Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
    * @member {String} descricaoTipoEndereco
    */
   exports.prototype['descricaoTipoEndereco'] = undefined;
 
   /**
-   * O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   * O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
@@ -482,13 +486,13 @@
   exports.prototype['logradouro'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * N\u00FAmero do endere\u00E7o
    * @member {String} numeroEndereco
    */
   exports.prototype['numeroEndereco'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * Descri\u00E7oes complementares referente ao endere\u00E7o
    * @member {String} complementoEndereco
    */
   exports.prototype['complementoEndereco'] = undefined;
@@ -512,10 +516,16 @@
   exports.prototype['uf'] = undefined;
 
   /**
-   * Nome do pa\u00C3\u00ADs
+   * Nome do pa\u00EDs
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
+
+  /**
+   * Senha Criptografada
+   * @member {String} senhaCriptografada
+   */
+  exports.prototype['senhaCriptografada'] = undefined;
 
 
 

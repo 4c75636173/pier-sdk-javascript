@@ -18,12 +18,12 @@
   /**
    * The DividaClienteResponse model module.
    * @module model/DividaClienteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DividaClienteResponse</code>.
-   * D\u00C3\u00ADvida do cliente
+   * D\u00EDvida do cliente
    * @alias module:model/DividaClienteResponse
    * @class
    */
@@ -116,19 +116,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data de vencimento da cobran\u00C3\u00A7a
+   * Data de vencimento da cobran\u00E7a
    * @member {String} dataVencimentoFaturaAtraso
    */
   exports.prototype['dataVencimentoFaturaAtraso'] = undefined;
 
   /**
-   * Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
    * @member {Integer} quantidadeDiasAtraso
    */
   exports.prototype['quantidadeDiasAtraso'] = undefined;
@@ -140,25 +140,25 @@
   exports.prototype['dataVencimentoAcordo'] = undefined;
 
   /**
-   * Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
    * @member {Integer} quantidadeDiasAtrasoCorrigido
    */
   exports.prototype['quantidadeDiasAtrasoCorrigido'] = undefined;
 
   /**
-   * Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+   * Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
    * @member {Number} valorSaldoDevedor
    */
   exports.prototype['valorSaldoDevedor'] = undefined;
 
   /**
-   * Percentual de corre\u00C3\u00A7\u00C3\u00A3o
+   * Percentual de corre\u00E7\u00E3o
    * @member {Number} taxaCorrecao
    */
   exports.prototype['taxaCorrecao'] = undefined;
 
   /**
-   * Valor da corre\u00C3\u00A7\u00C3\u00A3o
+   * Valor da corre\u00E7\u00E3o
    * @member {Number} valorCorrecao
    */
   exports.prototype['valorCorrecao'] = undefined;
@@ -170,43 +170,43 @@
   exports.prototype['valorIOF'] = undefined;
 
   /**
-   * Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo
+   * Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
    * @member {Number} valorSaldoCorrigido
    */
   exports.prototype['valorSaldoCorrigido'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    * @member {String} descricaoStatusConta
    */
   exports.prototype['descricaoStatusConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
    * @member {Integer} idStatusAcordo
    */
   exports.prototype['idStatusAcordo'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo
+   * Descri\u00E7\u00E3o do status do acordo
    * @member {String} descricaoStatusAcordo
    */
   exports.prototype['descricaoStatusAcordo'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+   * C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
    * @member {Integer} idEscritorioCobranca
    */
   exports.prototype['idEscritorioCobranca'] = undefined;
 
   /**
-   * Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+   * Nome do escrit\u00F3rio de cobran\u00E7a
    * @member {String} nomeEscritorioCobranca
    */
   exports.prototype['nomeEscritorioCobranca'] = undefined;

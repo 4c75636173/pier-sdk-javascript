@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). | [optional] 
-**descricao** | **String** | Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. | [optional] 
-**flagApenasDemonstrativo** | **Boolean** | Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. | [optional] 
-**idConvenio** | **Integer** | C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. | [optional] 
+**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). | [optional] 
+**descricao** | **String** | Desci\u00E7\u00E3o do tipo de faturamento. | [optional] 
+**flagApenasDemonstrativo** | **Boolean** | Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. | [optional] 
+**idConvenio** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. | [optional] 
 
 

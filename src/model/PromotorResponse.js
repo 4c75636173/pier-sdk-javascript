@@ -18,7 +18,7 @@
   /**
    * The PromotorResponse model module.
    * @module model/PromotorResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -68,7 +68,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -80,19 +80,19 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Data da Inclus\u00C3\u00A3o
+   * Data da Inclus\u00E3o
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
    * @member {Integer} idUsuario
    */
   exports.prototype['idUsuario'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The UsuarioPersist model module.
    * @module model/UsuarioPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -68,31 +68,31 @@
 
 
   /**
-   * Apresenta o nome do usu\u00C3\u00A1rio.
+   * Apresenta o nome do usu\u00E1rio.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Apresenta o login do usu\u00C3\u00A1rio.
+   * Apresenta o login do usu\u00E1rio.
    * @member {String} login
    */
   exports.prototype['login'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF.
+   * N\u00FAmero do CPF.
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Apresenta o email do usu\u00C3\u00A1rio.
+   * Apresenta o email do usu\u00E1rio.
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Apresenta a senha do usu\u00C3\u00A1rio.
+   * Apresenta a senha do usu\u00E1rio.
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;

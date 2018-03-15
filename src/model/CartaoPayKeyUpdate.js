@@ -18,12 +18,12 @@
   /**
    * The CartaoPayKeyUpdate model module.
    * @module model/CartaoPayKeyUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>CartaoPayKeyUpdate</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso de atualiza\u00C3\u00A7\u00C3\u00A3o de chave
+   * Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
    * @alias module:model/CartaoPayKeyUpdate
    * @class
    * @param chaveCriptograma
@@ -53,7 +53,7 @@
 
 
   /**
-   * Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
    * @member {String} chaveCriptograma
    */
   exports.prototype['chaveCriptograma'] = undefined;

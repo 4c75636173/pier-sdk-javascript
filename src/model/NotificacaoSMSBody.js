@@ -18,12 +18,12 @@
   /**
    * The NotificacaoSMSBody model module.
    * @module model/NotificacaoSMSBody
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>NotificacaoSMSBody</code>.
-   * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+   * Objeto Notifica\u00E7\u00E3o
    * @alias module:model/NotificacaoSMSBody
    * @class
    * @param nsu
@@ -82,19 +82,19 @@
 
 
   /**
-   * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+   * N\u00FAmero sequencial \u00FAnico
    * @member {Integer} nsu
    */
   exports.prototype['nsu'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
@@ -112,13 +112,13 @@
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
    * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    * @member {module:model/NotificacaoSMSBody.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;

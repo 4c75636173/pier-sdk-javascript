@@ -18,7 +18,7 @@
   /**
    * The CampanhaPersist model module.
    * @module model/CampanhaPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -66,7 +66,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo da campanha.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
    * @member {Integer} idTipoCampanha
    */
   exports.prototype['idTipoCampanha'] = undefined;

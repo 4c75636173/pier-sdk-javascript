@@ -18,7 +18,7 @@
   /**
    * Dispositivo service.
    * @module api/DispositivoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Ativa Dispositivo
      * Esse recurso permite ativar dispositivo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
      * @param {module:api/DispositivoApi~ativarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DispositivoResponse}
      */
@@ -89,7 +89,7 @@
     /**
      * Desativa Dispositivo
      * Esse recurso permite desativar dispositivo.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
      * @param {module:api/DispositivoApi~desativarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DispositivoResponse}
      */
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/DispositivoApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET18 operation.
+     * @callback module:api/DispositivoApi~listarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -134,20 +134,20 @@
 
     /**
      * Lista os dispositivos cadastrados
-     * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+     * Este m\u00E9todo permite que sejam listados os dispositivos existentes na base do PIER.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.token Token do Dispositivo
-     * @param {Integer} opts.idUsuario Identificador do Usu\u00C3\u00A1rio
-     * @param {Integer} opts.idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+     * @param {Integer} opts.idUsuario Identificador do Usu\u00E1rio
+     * @param {Integer} opts.idAplicacaoMobile Identificador da aplica\u00E7\u00E3o
      * @param {String} opts.dataCriacao Apresenta a data e em que o registro foi criado.
      * @param {String} opts.dataDesativacao Apresenta a data e em que o registro foi desativado.
-     * @param {module:api/DispositivoApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DispositivoApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDispositivoResponse}
      */
-    this.listarUsingGET17 = function(opts, callback) {
+    this.listarUsingGET18 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

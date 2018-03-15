@@ -18,7 +18,7 @@
   /**
    * The DetalheOportunidadePersist model module.
    * @module model/DetalheOportunidadePersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -58,13 +58,13 @@
 
 
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    * @member {String} nomeCampo
    */
   exports.prototype['nomeCampo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

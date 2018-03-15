@@ -18,12 +18,12 @@
   /**
    * The AutorizacaoOnUsRequest model module.
    * @module model/AutorizacaoOnUsRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>AutorizacaoOnUsRequest</code>.
-   * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o
+   * Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o
    * @alias module:model/AutorizacaoOnUsRequest
    * @class
    * @param nsuOrigem
@@ -97,49 +97,49 @@
 
 
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de Parcelas.
+   * N\u00FAmero de Parcelas.
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+   * C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
    * @member {String} codigoSegurancaCartao
    */
   exports.prototype['codigoSegurancaCartao'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * N\u00FAmero Real do Cart\u00E3o.
    * @member {String} numeroRealCartao
    */
   exports.prototype['numeroRealCartao'] = undefined;
 
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
@@ -151,7 +151,7 @@
   exports.prototype['dataHoraTerminal'] = undefined;
 
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;

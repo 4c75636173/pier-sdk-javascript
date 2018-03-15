@@ -18,7 +18,7 @@
   /**
    * The FaqResponse model module.
    * @module model/FaqResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -76,25 +76,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo da pergunta.
+   * Conte\u00FAdo da pergunta.
    * @member {String} pergunta
    */
   exports.prototype['pergunta'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo da resposta.
+   * Conte\u00FAdo da resposta.
    * @member {String} resposta
    */
   exports.prototype['resposta'] = undefined;
 
   /**
-   * N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+   * N\u00EDvel de relev\u00E2ncia da pergunta.
    * @member {Integer} relevancia
    */
   exports.prototype['relevancia'] = undefined;
@@ -112,7 +112,7 @@
   exports.prototype['categoria'] = undefined;
 
   /**
-   * Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
    * @member {module:model/FaqResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

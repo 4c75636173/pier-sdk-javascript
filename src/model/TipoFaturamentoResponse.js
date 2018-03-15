@@ -18,7 +18,7 @@
   /**
    * The TipoFaturamentoResponse model module.
    * @module model/TipoFaturamentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+   * Desci\u00E7\u00E3o do tipo de faturamento.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
    * @member {Boolean} flagApenasDemonstrativo
    */
   exports.prototype['flagApenasDemonstrativo'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
    * @member {Integer} idConvenio
    */
   exports.prototype['idConvenio'] = undefined;

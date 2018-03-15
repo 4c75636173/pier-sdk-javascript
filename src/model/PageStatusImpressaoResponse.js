@@ -18,12 +18,12 @@
   /**
    * The PageStatusImpressaoResponse model module.
    * @module model/PageStatusImpressaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageStatusImpressaoResponse</code>.
-   * Lista de Status Impress\u00C3\u00A3o
+   * Lista de Status Impress\u00E3o
    * @alias module:model/PageStatusImpressaoResponse
    * @class
    */

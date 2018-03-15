@@ -18,7 +18,7 @@
   /**
    * The TransacoesCorrentesResponse model module.
    * @module model/TransacoesCorrentesResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -200,67 +200,67 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
    * @member {Integer} idTipoTransacao
    */
   exports.prototype['idTipoTransacao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
    * @member {String} descricaoAbreviada
    */
   exports.prototype['descricaoAbreviada'] = undefined;
 
   /**
-   * Status de Processamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Status de Processamento da Transa\u00E7\u00E3o.
    * @member {String} statusTransacao
    */
   exports.prototype['statusTransacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Evento que originou a Transa\u00C3\u00A7\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).
    * @member {Integer} idEvento
    */
   exports.prototype['idEvento'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Evento que representa a Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.
    * @member {String} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.
+   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
    * @member {String} cartaoMascarado
    */
   exports.prototype['cartaoMascarado'] = undefined;
 
   /**
-   * Nome completo do Portador do Cart\u00C3\u00A3o.
+   * Nome completo do Portador do Cart\u00E3o.
    * @member {String} nomePortador
    */
   exports.prototype['nomePortador'] = undefined;
 
   /**
-   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+   * Data em que a Transa\u00E7\u00E3o foi realizada.
    * @member {String} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
 
   /**
-   * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Data de Faturamento da Transa\u00E7\u00E3o.
    * @member {String} dataFaturamento
    */
   exports.prototype['dataFaturamento'] = undefined;
@@ -272,97 +272,97 @@
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
    * @member {String} modoEntradaTransacao
    */
   exports.prototype['modoEntradaTransacao'] = undefined;
 
   /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.
+   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
    * @member {Number} valorTaxaEmbarque
    */
   exports.prototype['valorTaxaEmbarque'] = undefined;
 
   /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
    * @member {Number} valorEntrada
    */
   exports.prototype['valorEntrada'] = undefined;
 
   /**
-   * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).
+   * Valor da Transa\u00E7\u00E3o em Real (BRL).
    * @member {Number} valorBRL
    */
   exports.prototype['valorBRL'] = undefined;
 
   /**
-   * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
+   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
    * @member {Number} valorUSD
    */
   exports.prototype['valorUSD'] = undefined;
 
   /**
-   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
    * @member {Number} cotacaoUSD
    */
   exports.prototype['cotacaoUSD'] = undefined;
 
   /**
-   * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
+   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
    * @member {String} dataCotacaoUSD
    */
   exports.prototype['dataCotacaoUSD'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
    * @member {String} codigoMoedaOrigem
    */
   exports.prototype['codigoMoedaOrigem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
    * @member {String} codigoMoedaDestino
    */
   exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.
+   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
    * @member {String} codigoReferencia
    */
   exports.prototype['codigoReferencia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
    * @member {String} codigoTerminal
    */
   exports.prototype['codigoTerminal'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
    * @member {Integer} codigoMCC
    */
   exports.prototype['codigoMCC'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
    * @member {Integer} grupoMCC
    */
   exports.prototype['grupoMCC'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * Descri\u00E7\u00E3o do grupo do Estabelecimento.
    * @member {String} grupoDescricaoMCC
    */
   exports.prototype['grupoDescricaoMCC'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
@@ -386,43 +386,43 @@
   exports.prototype['localidadeEstabelecimento'] = undefined;
 
   /**
-   * Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.
+   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
    * @member {Integer} planoParcelamento
    */
   exports.prototype['planoParcelamento'] = undefined;
 
   /**
-   * Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.
+   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
 
   /**
-   * Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Detalhes complementares a respeito da Transa\u00E7\u00E3o.
    * @member {String} detalhesTransacao
    */
   exports.prototype['detalhesTransacao'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo 'Cr\u00C3\u00A9dito'.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
    * @member {Integer} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
    * @member {Integer} flagFaturado
    */
   exports.prototype['flagFaturado'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
    * @member {Integer} flagEstorno
    */
   exports.prototype['flagEstorno'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
    * @member {Integer} idTransacaoEstorno
    */
   exports.prototype['idTransacaoEstorno'] = undefined;

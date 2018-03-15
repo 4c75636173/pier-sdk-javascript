@@ -18,12 +18,12 @@
   /**
    * The PageContaBancariaPortadorResponse model module.
    * @module model/PageContaBancariaPortadorResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageContaBancariaPortadorResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de conta banc\u00C3\u00A1ria portador.
+   * Representa\u00E7\u00E3o da resposta do recurso de conta banc\u00E1ria portador.
    * @alias module:model/PageContaBancariaPortadorResponse
    * @class
    */

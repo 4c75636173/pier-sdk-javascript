@@ -18,7 +18,7 @@
   /**
    * The FaturaConsignadaDetalheResponse model module.
    * @module model/FaturaConsignadaDetalheResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -261,31 +261,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador da fatura.
+   * C\u00F3digo identificador da fatura.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta (id).
+   * C\u00F3digo identificador da conta (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+   * Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+   * C\u00F3digo identificador da conta a qual a fatura se refere.
    * @member {Integer} flagEmiteFatura
    */
   exports.prototype['flagEmiteFatura'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
    * @member {Number} limiteCompra
    */
   exports.prototype['limiteCompra'] = undefined;
@@ -297,13 +297,13 @@
   exports.prototype['dataVencimentoFatura'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.
    * @member {Number} limiteParcelado
    */
   exports.prototype['limiteParcelado'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;
@@ -321,193 +321,193 @@
   exports.prototype['valorFaturaAnterior'] = undefined;
 
   /**
-   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   * Valor m\u00EDnimo para pagamento da fatura.
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;
 
   /**
-   * Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.
+   * Valor da fatura pago atrav\u00E9s de desconto em folha.
    * @member {Number} valorPagamentoConsignado
    */
   exports.prototype['valorPagamentoConsignado'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
    * @member {Number} limiteSaqueGlobal
    */
   exports.prototype['limiteSaqueGlobal'] = undefined;
 
   /**
-   * Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.
+   * Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
    * @member {Number} valorPagamentoComplementar
    */
   exports.prototype['valorPagamentoComplementar'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
    * @member {Number} limiteSaquePeriodo
    */
   exports.prototype['limiteSaquePeriodo'] = undefined;
 
   /**
-   * Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras nacionais lan\u00E7adas na fatura.
    * @member {Number} totalComprasNacionais
    */
   exports.prototype['totalComprasNacionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+   * Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.
    * @member {Number} limiteConsignado
    */
   exports.prototype['limiteConsignado'] = undefined;
 
   /**
-   * Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras internacionais lan\u00E7adas na fatura.
    * @member {Number} totalComprasInternacionas
    */
   exports.prototype['totalComprasInternacionas'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.
    * @member {Number} limiteInternacionalCompra
    */
   exports.prototype['limiteInternacionalCompra'] = undefined;
 
   /**
-   * Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques nacionais lan\u00E7ados na fatura.
    * @member {Number} totalSaquesNacionais
    */
   exports.prototype['totalSaquesNacionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.
    * @member {Number} limiteInternacionalParcelado
    */
   exports.prototype['limiteInternacionalParcelado'] = undefined;
 
   /**
-   * Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques internacionais lan\u00E7ados na fatura.
    * @member {Number} totalSaquesInternacionais
    */
   exports.prototype['totalSaquesInternacionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
    * @member {Number} limiteInternacionalParcelas
    */
   exports.prototype['limiteInternacionalParcelas'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosNacionais
    */
   exports.prototype['totalDebitosNacionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.
    * @member {Number} limiteInternacionalSaqueGlobal
    */
   exports.prototype['limiteInternacionalSaqueGlobal'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
    * @member {Number} totalDebitosRecorrentes
    */
   exports.prototype['totalDebitosRecorrentes'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.
    * @member {Number} limiteInternacionalSaquePeriodo
    */
   exports.prototype['limiteInternacionalSaquePeriodo'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosInternacionais
    */
   exports.prototype['totalDebitosInternacionais'] = undefined;
 
   /**
-   * Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+   * Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.
    * @member {Number} saldoDisponivelGlobal
    */
   exports.prototype['saldoDisponivelGlobal'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosDiversosNacionais
    */
   exports.prototype['totalDebitosDiversosNacionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
    * @member {Number} saldoDisponivelCompra
    */
   exports.prototype['saldoDisponivelCompra'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosOpcionais
    */
   exports.prototype['totalDebitosOpcionais'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
    * @member {Number} saldoDisponivelParcelado
    */
   exports.prototype['saldoDisponivelParcelado'] = undefined;
 
   /**
-   * Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+   * Valor total dos pagamentos lan\u00E7ados na fatura.
    * @member {Number} totalPagamentos
    */
   exports.prototype['totalPagamentos'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+   * Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
    * @member {Number} saldoDisponivelParcelas
    */
   exports.prototype['saldoDisponivelParcelas'] = undefined;
 
   /**
-   * Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalCreditosNacionais
    */
   exports.prototype['totalCreditosNacionais'] = undefined;
 
   /**
-   * Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos ajustes lan\u00E7ados na fatura.
    * @member {Number} totalAjustes
    */
   exports.prototype['totalAjustes'] = undefined;
 
   /**
-   * Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+   * Valor total das tarifas lan\u00E7adas na fatura.
    * @member {Number} totalTarifas
    */
   exports.prototype['totalTarifas'] = undefined;
 
   /**
-   * Valor total da multa lan\u00C3\u00A7ada na fatura.
+   * Valor total da multa lan\u00E7ada na fatura.
    * @member {Number} totalMulta
    */
   exports.prototype['totalMulta'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
    * @member {Number} saldoDisponivelSaque
    */
   exports.prototype['saldoDisponivelSaque'] = undefined;
 
   /**
-   * Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+   * Valor total dos juros de mora lan\u00E7ados na fatura.
    * @member {Number} totalJuros
    */
   exports.prototype['totalJuros'] = undefined;
 
   /**
-   * Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+   * Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.
    * @member {Number} saldoPontosFidelidade
    */
   exports.prototype['saldoPontosFidelidade'] = undefined;
@@ -519,7 +519,7 @@
   exports.prototype['taxaRotativo'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.
    * @member {Number} saldoDisponivelCompraInternacional
    */
   exports.prototype['saldoDisponivelCompraInternacional'] = undefined;
@@ -531,13 +531,13 @@
   exports.prototype['taxaSaque'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.
    * @member {Number} saldoDisponivelSaqueInternacional
    */
   exports.prototype['saldoDisponivelSaqueInternacional'] = undefined;
 
   /**
-   * Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+   * Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
    * @member {Number} taxaMaximaProximoPeriodo
    */
   exports.prototype['taxaMaximaProximoPeriodo'] = undefined;

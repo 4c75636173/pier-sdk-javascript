@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listarHistoricoAlteracoesLimitesUsingGET**](LimiteApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+[**listarHistoricoAlteracoesLimitesUsingGET**](LimiteApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
 
 
 <a name="listarHistoricoAlteracoesLimitesUsingGET"></a>
 # **listarHistoricoAlteracoesLimitesUsingGET**
 > PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(id, opts)
 
-Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
 
-Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
 
 ### Example
 ```javascript
@@ -21,12 +21,12 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.LimiteApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -43,10 +43,10 @@ api.listarHistoricoAlteracoesLimitesUsingGET(id, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

@@ -18,7 +18,7 @@
   /**
    * The ControleVencimentoResponse model module.
    * @module model/ControleVencimentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -78,19 +78,19 @@
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   *  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+   *  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
    * @member {String} dataPrevistaCorte
    */
   exports.prototype['dataPrevistaCorte'] = undefined;
 
   /**
-   * Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+   * Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
    * @member {String} dataHoraRealizacaoCorte
    */
   exports.prototype['dataHoraRealizacaoCorte'] = undefined;
 
   /**
-   * Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+   * Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
    * @member {String} dataPrevistaFaturamento
    */
   exports.prototype['dataPrevistaFaturamento'] = undefined;
@@ -102,7 +102,7 @@
   exports.prototype['dataHoraRealizacaoFaturamento'] = undefined;
 
   /**
-   * Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+   * Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
    * @member {String} dataRealVencimento
    */
   exports.prototype['dataRealVencimento'] = undefined;

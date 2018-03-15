@@ -18,7 +18,7 @@
   /**
    * EnderecoNacional service.
    * @module api/EnderecoNacionalApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,8 +41,8 @@
      */
 
     /**
-     * Consultar Endere\u00C3\u00A7o
-     * Este recurso permite consultar endere\u00C3\u00A7os atrav\u00C3\u00A9s do CEP.
+     * Consultar Endere\u00E7o
+     * Este recurso permite consultar endere\u00E7os atrav\u00E9s do CEP.
      * @param {String} CEP CEP
      * @param {module:api/EnderecoNacionalApi~consultarEnderecoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EnderecoResponse}

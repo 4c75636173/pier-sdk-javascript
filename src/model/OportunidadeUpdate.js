@@ -18,7 +18,7 @@
   /**
    * The OportunidadeUpdate model module.
    * @module model/OportunidadeUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -83,37 +83,37 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo oportunidade
+   * C\u00F3digo identificador do tipo oportunidade
    * @member {Integer} idTipoOportunidade
    */
   exports.prototype['idTipoOportunidade'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do status oportunidade
+   * C\u00F3digo identificador do status oportunidade
    * @member {Integer} idStatusOportunidade
    */
   exports.prototype['idStatusOportunidade'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero receita federal do cliente
+   * N\u00FAmero receita federal do cliente
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+   * In\u00EDcio da vig\u00EAncia da oportunidade
    * @member {String} dataInicioVigencia
    */
   exports.prototype['dataInicioVigencia'] = undefined;
 
   /**
-   * Fim da vig\u00C3\u00AAncia da oportunidade
+   * Fim da vig\u00EAncia da oportunidade
    * @member {String} dataFimVigencia
    */
   exports.prototype['dataFimVigencia'] = undefined;
 
   /**
-   * Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+   * Atributo que indica se a oportunidade est\u00E1 ativa
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The TipoOperacaoResponse model module.
    * @module model/TipoOperacaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TipoOperacaoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
+   * Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
    * @alias module:model/TipoOperacaoResponse
    * @class
    * @param id
@@ -122,13 +122,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do TipoOperacao
+   * C\u00F3digo identificador do TipoOperacao
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do TipoOperacao
+   * C\u00F3digo do TipoOperacao
    * @member {String} tipoOperacao
    */
   exports.prototype['tipoOperacao'] = undefined;
@@ -140,7 +140,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Decri\u00E7\u00E3o do TipoOperacao
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
@@ -158,19 +158,19 @@
   exports.prototype['tipoExcedentePermitido'] = undefined;
 
   /**
-   * Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
    * @member {Number} valorMinimo
    */
   exports.prototype['valorMinimo'] = undefined;
 
   /**
-   * Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
    * @member {Number} valorMaximo
    */
   exports.prototype['valorMaximo'] = undefined;
 
   /**
-   * Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor TAC da transa\u00E7\u00E3o do TipoOperacao
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
@@ -200,13 +200,13 @@
   exports.prototype['tarifa'] = undefined;
 
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao
+   * Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
    * @member {Number} remuneracaoEmissor
    */
   exports.prototype['remuneracaoEmissor'] = undefined;
 
   /**
-   * Plano m\u00C3\u00A1ximo do TipoOperacao
+   * Plano m\u00E1ximo do TipoOperacao
    * @member {Integer} planoMaximo
    */
   exports.prototype['planoMaximo'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The AntecipacaoSimuladaLoteResponse model module.
    * @module model/AntecipacaoSimuladaLoteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>AntecipacaoSimuladaLoteResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+   * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
    * @alias module:model/AntecipacaoSimuladaLoteResponse
    * @class
    */
@@ -82,7 +82,7 @@
   exports.prototype['valorTotalComDesconto'] = undefined;
 
   /**
-   * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+   * Antecipa\u00E7\u00F5es Simuladas.
    * @member {Array.<module:model/AntecipacaoSimuladaResponse>} antecipacoesSimuladas
    */
   exports.prototype['antecipacoesSimuladas'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The ContaBancariaPortadorUpdate model module.
    * @module model/ContaBancariaPortadorUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -104,55 +104,55 @@
 
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+   * Descri\u00E7\u00E3o da ag\u00EAncia
    * @member {String} nomeAgencia
    */
   exports.prototype['nomeAgencia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * N\u00FAmero da ag\u00EAncia
    * @member {String} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+   * D\u00EDgito da ag\u00EAncia
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da conta
+   * N\u00FAmero da conta
    * @member {String} numeroConta
    */
   exports.prototype['numeroConta'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da conta
+   * D\u00EDgito da conta
    * @member {String} digitoConta
    */
   exports.prototype['digitoConta'] = undefined;
 
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+   * Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
    * @member {Integer} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;
 
   /**
-   * Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+   * Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
    * @member {Integer} flagContaOrigemDoc
    */
   exports.prototype['flagContaOrigemDoc'] = undefined;
 
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
@@ -170,7 +170,7 @@
   exports.prototype['numeroReceiraFederal'] = undefined;
 
   /**
-   * Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+   * Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
    * @member {Integer} titularidade
    */
   exports.prototype['titularidade'] = undefined;

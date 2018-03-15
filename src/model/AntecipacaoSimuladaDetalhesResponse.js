@@ -18,12 +18,12 @@
   /**
    * The AntecipacaoSimuladaDetalhesResponse model module.
    * @module model/AntecipacaoSimuladaDetalhesResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>AntecipacaoSimuladaDetalhesResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
+   * Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
    * @alias module:model/AntecipacaoSimuladaDetalhesResponse
    * @class
    */
@@ -82,7 +82,7 @@
   exports.prototype['valorDesconto'] = undefined;
 
   /**
-   * Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.
+   * Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
    * @member {Number} valorParcelasDesconto
    */
   exports.prototype['valorParcelasDesconto'] = undefined;

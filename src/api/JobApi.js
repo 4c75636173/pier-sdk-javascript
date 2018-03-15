@@ -18,7 +18,7 @@
   /**
    * Job service.
    * @module api/JobApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Ativar Job
      * Este recurso adiciona o job ao agendador de tarefas.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
      * @param {module:api/JobApi~ativarJobUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
@@ -89,7 +89,7 @@
     /**
      * Atualizar Job
      * Este recurso permite atualizar os dados de um job cadastrado.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
      * @param {String} descricao descricao.
      * @param {String} cron Cron do Job.
      * @param {String} groovy groovy
@@ -155,7 +155,7 @@
     /**
      * Desativar Job
      * Este recurso retira o job do agendador de tarefas.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
      * @param {module:api/JobApi~desativarJobUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/JobResponse}
      */
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET24 operation.
-     * @callback module:api/JobApi~listarUsingGET24Callback
+     * Callback function to receive the result of the listarUsingGET26 operation.
+     * @callback module:api/JobApi~listarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageJobResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -203,15 +203,15 @@
      * Este recurso permite que sejam listados os jobs existentes na base do PIER.
      * @param {Object} opts Optional parameters
      * @param {String} opts.groovy Script Groovy do Job
-     * @param {String} opts.descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job
+     * @param {String} opts.descricao Descri\u00E7\u00E3o do Job
      * @param {String} opts.cron Cron do Job
      * @param {module:model/String} opts.status Status do Job
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/JobApi~listarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {module:api/JobApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageJobResponse}
      */
-    this.listarUsingGET24 = function(opts, callback) {
+    this.listarUsingGET26 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

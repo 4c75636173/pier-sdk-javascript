@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ativarJobUsingPOST**](JobApi.md#ativarJobUsingPOST) | **POST** /api/jobs/{id}/ativar-job | Ativar Job
 [**atualizarUsingPUT3**](JobApi.md#atualizarUsingPUT3) | **PUT** /api/jobs/{id} | Atualizar Job
 [**desativarJobUsingPOST**](JobApi.md#desativarJobUsingPOST) | **POST** /api/jobs/{id}/desativar-job | Desativar Job
-[**listarUsingGET24**](JobApi.md#listarUsingGET24) | **GET** /api/jobs | Listar Jobs
+[**listarUsingGET26**](JobApi.md#listarUsingGET26) | **GET** /api/jobs | Listar Jobs
 [**salvarUsingPOST15**](JobApi.md#salvarUsingPOST15) | **POST** /api/jobs | Cadastrar Job
 
 
@@ -25,7 +25,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.JobApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 
 var callback = function(error, data, response) {
@@ -42,7 +42,7 @@ api.ativarJobUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
 
 ### Return type
 
@@ -71,7 +71,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.JobApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 var descricao = "descricao_example"; // {String} descricao.
 
@@ -94,7 +94,7 @@ api.atualizarUsingPUT3(id, descricao, cron, groovy, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
  **descricao** | **String**| descricao. | 
  **cron** | **String**| Cron do Job. | 
  **groovy** | **String**| groovy | 
@@ -126,7 +126,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.JobApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
 
 
 var callback = function(error, data, response) {
@@ -143,7 +143,7 @@ api.desativarJobUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Job (id). | 
 
 ### Return type
 
@@ -158,9 +158,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageJobResponse listarUsingGET24(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageJobResponse listarUsingGET26(opts)
 
 Listar Jobs
 
@@ -174,11 +174,11 @@ var apiInstance = new Pier.JobApi()
 
 var opts = { 
   'groovy': "groovy_example", // {String} Script Groovy do Job
-  'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do Job
+  'descricao': "descricao_example", // {String} Descri\u00E7\u00E3o do Job
   'cron': "cron_example", // {String} Cron do Job
   'status': "status_example", // {String} Status do Job
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -196,11 +196,11 @@ api.listarUsingGET24(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groovy** | **String**| Script Groovy do Job | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do Job | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do Job | [optional] 
  **cron** | **String**| Cron do Job | [optional] 
  **status** | **String**| Status do Job | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

@@ -18,7 +18,7 @@
   /**
    * Fatura service.
    * @module api/FaturaApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -44,7 +44,7 @@
      * Consulta fatura de um cliente
      * Consulta fatura de um cliente pela data de vencimento.
      * @param {String} dataVencimento Data Vencimento
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idConta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {module:api/FaturaApi~consultarFaturaUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaturaDetalheResponse}
      */
@@ -96,12 +96,12 @@
     /**
      * Listar planos de parcelamento
      * Lista os planos de parcelamento da fatura de uma conta.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-     * @param {String} dataVencimentoPadrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+     * @param {String} dataVencimentoPadrao Indica a data de vencimento padr\u00E3o das faturas
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/FaturaApi~consultarLancamentosFuturosFaturaUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePlanoParcelamentoResponse}
      */
@@ -155,12 +155,12 @@
      */
 
     /**
-     * Envia 2\u00C2\u00AA via de fatura por E-mail
+     * Envia 2\u00AA via de fatura por E-mail
      * Envia a segunda via da fatura para o e-mail informado/cadastrado.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {String} dataVencimento Data de Vencimento da fatura (yyyy-MM-dd).
      * @param {Object} opts Optional parameters
-     * @param {String} opts.email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+     * @param {String} opts.email E-mail para envio da 2\u00AA via da fatura, caso n\u00E3o seja informado ser\u00E1 usado o e-mail cadastrado.
      * @param {module:api/FaturaApi~enviarFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -214,12 +214,12 @@
     /**
      * Listar faturas de um cliente.
      * Lista faturas de um cliente.
-     * @param {Integer} idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * @param {Integer} idConta C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.situacaoProcessamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS]. (default to TODAS)
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/FaturaApi~listarFaturasUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaturaResponse}
      */
@@ -269,8 +269,8 @@
 
     /**
      * Permite visualizar o extrato da fatura em formato PDF
-     * Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * Esta opera\u00E7\u00E3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00EAs corrente, o pdf ser\u00E1 composto pelo extrato de lan\u00E7amentos e pela ficha de compensa\u00E7\u00E3o banc\u00E1ria. Quando for de uma fatura do hist\u00F3rico do cliente, o PDF ser\u00E1 composto apenas pelo extrato de transa\u00E7\u00F5es.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {String} dataVencimento Data de Vencimento da fatura.
      * @param {module:api/FaturaApi~visualizarDocumentoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}

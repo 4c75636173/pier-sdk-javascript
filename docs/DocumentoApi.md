@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT19**](DocumentoApi.md#alterarUsingPUT19) | **PUT** /api/tipos-templates/{id} | Altera o tipo de template
 [**atualizarUsingPUT2**](DocumentoApi.md#atualizarUsingPUT2) | **PUT** /api/templates-documentos/{id} | Atualizar templates dos documentos
-[**consultarUsingGET13**](DocumentoApi.md#consultarUsingGET13) | **GET** /api/documentos/{id} | Consulta documentos
-[**consultarUsingGET14**](DocumentoApi.md#consultarUsingGET14) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
-[**consultarUsingGET38**](DocumentoApi.md#consultarUsingGET38) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
-[**integrarUsingPOST1**](DocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-[**listarUsingGET18**](DocumentoApi.md#listarUsingGET18) | **GET** /api/documentos | Lista documentos
-[**listarUsingGET19**](DocumentoApi.md#listarUsingGET19) | **GET** /api/templates-documentos | Lista os templates dos documentos
-[**listarUsingGET45**](DocumentoApi.md#listarUsingGET45) | **GET** /api/tipos-templates | Lista os tipos de templates
+[**consultarUsingGET14**](DocumentoApi.md#consultarUsingGET14) | **GET** /api/documentos/{id} | Consulta documentos
+[**consultarUsingGET15**](DocumentoApi.md#consultarUsingGET15) | **GET** /api/templates-documentos/{id} | Consultar templates dos documentos
+[**consultarUsingGET39**](DocumentoApi.md#consultarUsingGET39) | **GET** /api/tipos-templates/{id} | Consultar tipo de template
+[**integrarUsingPOST1**](DocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | Integra um arquivo a reposit\u00F3rios remotos.
+[**listarUsingGET19**](DocumentoApi.md#listarUsingGET19) | **GET** /api/documentos | Lista documentos
+[**listarUsingGET20**](DocumentoApi.md#listarUsingGET20) | **GET** /api/templates-documentos | Lista os templates dos documentos
+[**listarUsingGET47**](DocumentoApi.md#listarUsingGET47) | **GET** /api/tipos-templates | Lista os tipos de templates
 [**salvarUsingPOST10**](DocumentoApi.md#salvarUsingPOST10) | **POST** /api/documentos | Cadastra documentos
 [**salvarUsingPOST11**](DocumentoApi.md#salvarUsingPOST11) | **POST** /api/templates-documentos | Cadastra os templates dos documentos
 [**salvarUsingPOST26**](DocumentoApi.md#salvarUsingPOST26) | **POST** /api/tipos-templates | Cadastra os tipos de templates
@@ -32,7 +32,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DocumentoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
 
 var persist = new Pier.TipoTemplateRequest(); // {TipoTemplateRequest} persist
 
@@ -51,7 +51,7 @@ api.alterarUsingPUT19(id, persist, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id). | 
  **persist** | [**TipoTemplateRequest**](TipoTemplateRequest.md)| persist | 
 
 ### Return type
@@ -81,7 +81,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DocumentoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
 
 var persist = new Pier.DocumentoTemplatePersist(); // {DocumentoTemplatePersist} persist
 
@@ -100,7 +100,7 @@ api.atualizarUsingPUT2(id, persist, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento template (id). | 
  **persist** | [**DocumentoTemplatePersist**](DocumentoTemplatePersist.md)| persist | 
 
 ### Return type
@@ -116,13 +116,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> DocumentoDetalhadoResponse consultarUsingGET13(id)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> DocumentoDetalhadoResponse consultarUsingGET14(id)
 
 Consulta documentos
 
-Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -130,53 +130,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DocumentoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET13(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id). | 
-
-### Return type
-
-[**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> DocumentoTemplateResponse consultarUsingGET14(id)
-
-Consultar templates dos documentos
-
-Esse recurso permite consultar templates dos documentos.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.DocumentoApi()
-
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
 
 
 var callback = function(error, data, response) {
@@ -193,7 +147,53 @@ api.consultarUsingGET14(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento (id). | 
+
+### Return type
+
+[**DocumentoDetalhadoResponse**](DocumentoDetalhadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> DocumentoTemplateResponse consultarUsingGET15(id)
+
+Consultar templates dos documentos
+
+Esse recurso permite consultar templates dos documentos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.DocumentoApi()
+
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET15(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do documento template (id). | 
 
 ### Return type
 
@@ -208,9 +208,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET38"></a>
-# **consultarUsingGET38**
-> TipoTemplateResponse consultarUsingGET38(id)
+<a name="consultarUsingGET39"></a>
+# **consultarUsingGET39**
+> TipoTemplateResponse consultarUsingGET39(id)
 
 Consultar tipo de template
 
@@ -222,7 +222,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DocumentoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
 
 
 var callback = function(error, data, response) {
@@ -232,14 +232,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET38(id, callback);
+api.consultarUsingGET39(id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id). | 
 
 ### Return type
 
@@ -258,9 +258,9 @@ No authorization required
 # **integrarUsingPOST1**
 > DocumentoIntegracaoResponse integrarUsingPOST1(integrarDocumentoRequest)
 
-Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+Integra um arquivo a reposit\u00F3rios remotos.
 
-Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
 
 ### Example
 ```javascript
@@ -300,9 +300,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageDocumentoResponse listarUsingGET18(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageDocumentoResponse listarUsingGET19(opts)
 
 Lista documentos
 
@@ -315,67 +315,12 @@ var Pier = require('Pier');
 var apiInstance = new Pier.DocumentoApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTemplateDocumento': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idTemplateDocumento': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
   'nome': "nome_example", // {String} Nome do documento.
   'extensao': "extensao_example" // {String} Extensao do documento.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET18(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTemplateDocumento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento. | [optional] 
- **nome** | **String**| Nome do documento. | [optional] 
- **extensao** | **String**| Extensao do documento. | [optional] 
-
-### Return type
-
-[**PageDocumentoResponse**](PageDocumentoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET19"></a>
-# **listarUsingGET19**
-> PageDocumentoTemplateResponse listarUsingGET19(opts)
-
-Lista os templates dos documentos
-
-Esse recurso permite listar os templates dos documentos.
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.DocumentoApi()
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTipoTemplate': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
 };
 
 var callback = function(error, data, response) {
@@ -392,10 +337,65 @@ api.listarUsingGET19(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTipoTemplate** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template. | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idTemplateDocumento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do template do documento. | [optional] 
+ **nome** | **String**| Nome do documento. | [optional] 
+ **extensao** | **String**| Extensao do documento. | [optional] 
+
+### Return type
+
+[**PageDocumentoResponse**](PageDocumentoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET20"></a>
+# **listarUsingGET20**
+> PageDocumentoTemplateResponse listarUsingGET20(opts)
+
+Lista os templates dos documentos
+
+Esse recurso permite listar os templates dos documentos.
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.DocumentoApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idTipoTemplate': 789 // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET20(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idTipoTemplate** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo do template. | [optional] 
 
 ### Return type
 
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET45"></a>
-# **listarUsingGET45**
-> PageTipoTemplateResponse listarUsingGET45(opts)
+<a name="listarUsingGET47"></a>
+# **listarUsingGET47**
+> PageTipoTemplateResponse listarUsingGET47(opts)
 
 Lista os tipos de templates
 
@@ -425,9 +425,9 @@ var Pier = require('Pier');
 var apiInstance = new Pier.DocumentoApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -437,16 +437,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET45(opts, callback);
+api.listarUsingGET47(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 

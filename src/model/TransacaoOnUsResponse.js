@@ -18,12 +18,12 @@
   /**
    * The TransacaoOnUsResponse model module.
    * @module model/TransacaoOnUsResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransacaoOnUsResponse</code>.
-   * Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
+   * Objeto de Resposta de Autoriza\u00E7\u00E3o
    * @alias module:model/TransacaoOnUsResponse
    * @class
    * @param terminalRequisitante
@@ -77,43 +77,43 @@
 
 
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
+   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
    * @member {String} nsuAutorizacao
    */
   exports.prototype['nsuAutorizacao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
    * @member {Array.<module:model/MapOfstringAndstring>} planoDeParcelamento
    */
   exports.prototype['planoDeParcelamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
+   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
    * @member {String} numeroMascaradoCartao
    */
   exports.prototype['numeroMascaradoCartao'] = undefined;
 
   /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;
 
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;

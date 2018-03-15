@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](DispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | Ativa Dispositivo
 [**desativarUsingPOST**](DispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | Desativa Dispositivo
-[**listarUsingGET17**](DispositivoApi.md#listarUsingGET17) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
+[**listarUsingGET18**](DispositivoApi.md#listarUsingGET18) | **GET** /api/dispositivos | Lista os dispositivos cadastrados
 [**salvarUsingPOST9**](DispositivoApi.md#salvarUsingPOST9) | **POST** /api/dispositivos | Cadastra Dispositivo
 
 
@@ -24,7 +24,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DispositivoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
 
 
 var callback = function(error, data, response) {
@@ -41,7 +41,7 @@ api.ativarUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). | 
 
 ### Return type
 
@@ -70,7 +70,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.DispositivoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
 
 
 var callback = function(error, data, response) {
@@ -87,7 +87,7 @@ api.desativarUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id). | 
 
 ### Return type
 
@@ -102,13 +102,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PageDispositivoResponse listarUsingGET17(opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PageDispositivoResponse listarUsingGET18(opts)
 
 Lista os dispositivos cadastrados
 
-Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
+Este m\u00E9todo permite que sejam listados os dispositivos existentes na base do PIER.
 
 ### Example
 ```javascript
@@ -117,12 +117,12 @@ var Pier = require('Pier');
 var apiInstance = new Pier.DispositivoApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'token': "token_example", // {String} Token do Dispositivo
-  'idUsuario': 789, // {Integer} Identificador do Usu\u00C3\u00A1rio
-  'idAplicacaoMobile': 789, // {Integer} Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+  'idUsuario': 789, // {Integer} Identificador do Usu\u00E1rio
+  'idAplicacaoMobile': 789, // {Integer} Identificador da aplica\u00E7\u00E3o
   'dataCriacao': "dataCriacao_example", // {String} Apresenta a data e em que o registro foi criado.
   'dataDesativacao': "dataDesativacao_example" // {String} Apresenta a data e em que o registro foi desativado.
 };
@@ -134,19 +134,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(opts, callback);
+api.listarUsingGET18(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **token** | **String**| Token do Dispositivo | [optional] 
- **idUsuario** | **Integer**| Identificador do Usu\u00C3\u00A1rio | [optional] 
- **idAplicacaoMobile** | **Integer**| Identificador da aplica\u00C3\u00A7\u00C3\u00A3o | [optional] 
+ **idUsuario** | **Integer**| Identificador do Usu\u00E1rio | [optional] 
+ **idAplicacaoMobile** | **Integer**| Identificador da aplica\u00E7\u00E3o | [optional] 
  **dataCriacao** | **String**| Apresenta a data e em que o registro foi criado. | [optional] 
  **dataDesativacao** | **String**| Apresenta a data e em que o registro foi desativado. | [optional] 
 

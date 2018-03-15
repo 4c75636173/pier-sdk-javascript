@@ -18,7 +18,7 @@
   /**
    * The PlanoCampanhaUpdate model module.
    * @module model/PlanoCampanhaUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -64,7 +64,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do plano campanha
+   * C\u00F3digo identificador do plano campanha
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -82,7 +82,7 @@
   exports.prototype['taxa'] = undefined;
 
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

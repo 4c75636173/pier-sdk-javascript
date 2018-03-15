@@ -18,12 +18,12 @@
   /**
    * The TipoDebitoRecorrenteResponse model module.
    * @module model/TipoDebitoRecorrenteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TipoDebitoRecorrenteResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+   * Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
    * @alias module:model/TipoDebitoRecorrenteResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+   * Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Valor do tipo de d\u00C3\u00A9bito recorrente.
+   * Valor do tipo de d\u00E9bito recorrente.
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+   * Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

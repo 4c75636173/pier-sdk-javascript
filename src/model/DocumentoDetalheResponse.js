@@ -18,12 +18,12 @@
   /**
    * The DocumentoDetalheResponse model module.
    * @module model/DocumentoDetalheResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoDetalheResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o detalhamento do documento
+   * Representa\u00E7\u00E3o da resposta para o detalhamento do documento
    * @alias module:model/DocumentoDetalheResponse
    * @class
    */
@@ -60,7 +60,7 @@
 
 
   /**
-   * ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.
+   * ID de identifica\u00E7\u00E3o do detalhamento do documento.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -72,7 +72,7 @@
   exports.prototype['propriedade'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do detalhamento do documento.
+   * Conte\u00FAdo do detalhamento do documento.
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The EntidadeResponse model module.
    * @module model/EntidadeResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * Descri\u00E7\u00E3o da entidade.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que indica se a entidade est\u00C3\u00A1 ativa.
+   * Flag que indica se a entidade est\u00E1 ativa.
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

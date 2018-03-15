@@ -18,7 +18,7 @@
   /**
    * The TipoAjusteResponse model module.
    * @module model/TipoAjusteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo de ajuste.
+   * C\u00F3digo identificador do tipo de ajuste.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+   * Descri\u00E7\u00E3o do tipo de ajuste.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

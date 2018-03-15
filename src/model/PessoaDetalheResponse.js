@@ -18,7 +18,7 @@
   /**
    * The PessoaDetalheResponse model module.
    * @module model/PessoaDetalheResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -92,13 +92,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador da pessoa
+   * C\u00F3digo identificador da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * Apresenta o nome da m\u00E3e da pessoa fisica
    * @member {String} nomeMae
    */
   exports.prototype['nomeMae'] = undefined;
@@ -110,13 +110,13 @@
   exports.prototype['idEstadoCivil'] = undefined;
 
   /**
-   * Profiss\u00C3\u00A3o da pessoa fisica
+   * Profiss\u00E3o da pessoa fisica
    * @member {String} idProfissao
    */
   exports.prototype['idProfissao'] = undefined;
 
   /**
-   * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    * @member {Integer} idNaturezaOcupacao
    */
   exports.prototype['idNaturezaOcupacao'] = undefined;
@@ -128,19 +128,19 @@
   exports.prototype['idNacionalidade'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do banco.
+   * N\u00FAmero do banco.
    * @member {Integer} numeroBanco
    */
   exports.prototype['numeroBanco'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
@@ -152,7 +152,7 @@
   exports.prototype['email'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;

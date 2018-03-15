@@ -18,12 +18,12 @@
   /**
    * The StatusCartaoResponse model module.
    * @module model/StatusCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>StatusCartaoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
+   * Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
    * @alias module:model/StatusCartaoResponse
    * @class
    * @param id
@@ -74,37 +74,37 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+   * Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    * @member {Integer} permiteDesbloquear
    */
   exports.prototype['permiteDesbloquear'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    * @member {Integer} permiteAtribuirComoBloqueio
    */
   exports.prototype['permiteAtribuirComoBloqueio'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    * @member {Integer} permiteAtribuirComoCancelamento
    */
   exports.prototype['permiteAtribuirComoCancelamento'] = undefined;
 
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    * @member {Integer} cobrarTarifaAoEmitirNovaVia
    */
   exports.prototype['cobrarTarifaAoEmitirNovaVia'] = undefined;

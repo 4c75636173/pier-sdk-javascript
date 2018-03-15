@@ -18,7 +18,7 @@
   /**
    * Autorizacao service.
    * @module api/AutorizacaoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,8 +41,8 @@
      */
 
     /**
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-     * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+     * Autoriza transa\u00E7\u00E3o financeira por idConta
+     * Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
      * @param {Integer} id Id Conta
      * @param {module:model/TransacaoOnUsPorIdCartaoRequest} transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
      * @param {module:api/AutorizacaoApi~autorizarPorContaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -93,8 +93,8 @@
      */
 
     /**
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-     * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+     * Autoriza transa\u00E7\u00E3o financeira
+     * Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
      * @param {module:model/AutorizacaoOnUsRequest} autorizacaoOnUsRequest autorizacaoOnUsRequest
      * @param {module:api/AutorizacaoApi~autorizarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransacaoOnUsResponse}
@@ -138,8 +138,8 @@
      */
 
     /**
-     * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-     * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+     * Autoriza transa\u00E7\u00E3o financeira por idCartao
+     * Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
      * @param {Integer} id Id Cartao
      * @param {module:model/TransacaoOnUsPorIdCartaoRequest} transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
      * @param {module:api/AutorizacaoApi~autorizarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
@@ -190,8 +190,8 @@
      */
 
     /**
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-     * Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+     * Cancela transa\u00E7\u00E3o financeira por idConta
+     * Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
      * @param {Integer} id Id Conta
      * @param {module:model/CancelamentoTransacaoPorIdCartaoRequest} cancelamentoRequest cancelamentoRequest
      * @param {module:api/AutorizacaoApi~cancelarPorIdContaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -242,8 +242,8 @@
      */
 
     /**
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
-     * Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+     * Cancela transa\u00E7\u00E3o financeira
+     * Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
      * @param {module:model/CancelamentoTransacaoOnUsRequest} cancelamentoRequest cancelamentoRequest
      * @param {module:api/AutorizacaoApi~cancelarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransacaoOnUsResponse}
@@ -287,8 +287,8 @@
      */
 
     /**
-     * Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-     * Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+     * Cancela transa\u00E7\u00E3o financeira por idCartao
+     * Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
      * @param {Integer} id Id Cartao
      * @param {module:model/CancelamentoTransacaoPorIdCartaoRequest} cancelamentoRequest cancelamentoRequest
      * @param {module:api/AutorizacaoApi~cancelarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response
@@ -339,8 +339,8 @@
      */
 
     /**
-     * Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+     * Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
+     * Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
      * @param {module:api/AutorizacaoApi~listarCodigosProcessamentoAutorizacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -378,8 +378,8 @@
      */
 
     /**
-     * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
-     * Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+     * Simula planos de transa\u00E7\u00F5es
+     * Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
      * @param {module:model/TransacaoOnUsRequest} transacoesRequest transacoesRequest
      * @param {module:api/AutorizacaoApi~simularUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransacaoOnUsResponse}

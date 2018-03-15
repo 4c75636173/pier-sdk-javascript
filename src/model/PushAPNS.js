@@ -18,12 +18,12 @@
   /**
    * The PushAPNS model module.
    * @module model/PushAPNS
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PushAPNS</code>.
-   * Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+   * Objeto Push Notifica\u00E7\u00E3o APNS
    * @alias module:model/PushAPNS
    * @class
    * @param idPessoa
@@ -96,49 +96,49 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+   * Apresenta o token do dispositivo que dever\u00E1 receber o push.
    * @member {String} tokenDispositivo
    */
   exports.prototype['tokenDispositivo'] = undefined;
 
   /**
-   * Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+   * Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
    * @member {String} certificado
    */
   exports.prototype['certificado'] = undefined;
 
   /**
-   * Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+   * Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;
 
   /**
-   * Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
    * @member {String} titulo
    */
   exports.prototype['titulo'] = undefined;
 
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    * @member {module:model/PushAPNS.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;

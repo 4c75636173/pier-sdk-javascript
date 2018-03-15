@@ -18,7 +18,7 @@
   /**
    * The CampoCodificadoDescricaoResponse model module.
    * @module model/CampoCodificadoDescricaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
    * @member {Integer} codigo
    */
   exports.prototype['codigo'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.
+   * Descri\u00E7\u00E3o do campo codificado.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

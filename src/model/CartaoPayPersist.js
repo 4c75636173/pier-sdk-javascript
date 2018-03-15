@@ -18,12 +18,12 @@
   /**
    * The CartaoPayPersist model module.
    * @module model/CartaoPayPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>CartaoPayPersist</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+   * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
    * @alias module:model/CartaoPayPersist
    * @class
    * @param numeroCartao
@@ -74,37 +74,37 @@
 
 
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado
+   * N\u00FAmero do cart\u00E3o criptografado
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Data de validade do cart\u00C3\u00A3o
+   * Data de validade do cart\u00E3o
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * CVV do cart\u00C3\u00A3o criptografado
+   * CVV do cart\u00E3o criptografado
    * @member {String} cvv
    */
   exports.prototype['cvv'] = undefined;
 
   /**
-   * CPF do portador do cart\u00C3\u00A3o criptografado
+   * CPF do portador do cart\u00E3o criptografado
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * Nome impresso no cart\u00C3\u00A3o criptografado
+   * Nome impresso no cart\u00E3o criptografado
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Chave p\u00C3\u00BAblica do dispositivo criptografada
+   * Chave p\u00FAblica do dispositivo criptografada
    * @member {String} chavePublicaDevice
    */
   exports.prototype['chavePublicaDevice'] = undefined;

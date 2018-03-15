@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoRotativoDetalheResponse model module.
    * @module model/ConfiguracaoRotativoDetalheResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -112,13 +112,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de ConfiguracaoRotativo (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o de ConfiguracaoRotativo (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (idProduto).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
@@ -130,13 +130,13 @@
   exports.prototype['compoeOfertaValorRotativo'] = undefined;
 
   /**
-   * Quando verdadeiro, indica que o valor n\u00C3\u00A3o financi\u00C3\u00A1vel deve compor a oferta de parcelamento.
+   * Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
    * @member {Boolean} compoeOfertaValorNaoFinanciavel
    */
   exports.prototype['compoeOfertaValorNaoFinanciavel'] = undefined;
 
   /**
-   * Quando verdadeiro, indica que o valor de novos lan\u00C3\u00A7amentos deve compor a oferta de parcelamento
+   * Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
    * @member {Boolean} compoeOfertaValorNovosLancamentos
    */
   exports.prototype['compoeOfertaValorNovosLancamentos'] = undefined;
@@ -148,25 +148,25 @@
   exports.prototype['recalculaParcelamentoParaEntradaMaior'] = undefined;
 
   /**
-   * Indica o m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no rec\u00C3\u00A1lculo do parcelamento.
+   * Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
    * @member {Boolean} minimoParcelasRecalculoParcelamento
    */
   exports.prototype['minimoParcelasRecalculoParcelamento'] = undefined;
 
   /**
-   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00C3\u00ADnimo da parcela (valorMinimoParcela) e de percentual aberto
+   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
    * @member {Boolean} recalculaParcelamento
    */
   exports.prototype['recalculaParcelamento'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no recalculo da oferta.
+   * N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
    * @member {Boolean} numeroMinimoOfertas
    */
   exports.prototype['numeroMinimoOfertas'] = undefined;
 
   /**
-   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00C3\u00ADnimo da fatura ser\u00C3\u00A3o acatados para a ades\u00C3\u00A3o ao parcelamento
+   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
    * @member {Boolean} aceitaPagamentoMaiorQueEntrada
    */
   exports.prototype['aceitaPagamentoMaiorQueEntrada'] = undefined;
@@ -178,7 +178,7 @@
   exports.prototype['antecipaParcelamentosAbertos'] = undefined;
 
   /**
-   * Valor m\u00C3\u00ADnimo da parcela que deve ser aceito na oferta.
+   * Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
    * @member {Number} valorMinimoParcela
    */
   exports.prototype['valorMinimoParcela'] = undefined;
@@ -190,19 +190,19 @@
   exports.prototype['percentualLimitarValorMinimoParcela'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da regra de campanha.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
    * @member {Integer} idRegraCampanha
    */
   exports.prototype['idRegraCampanha'] = undefined;
 
   /**
-   * Quando verdadeiro, indica que parcelamento ofertado ter\u00C3\u00A1 como valor base o valor m\u00C3\u00ADnimo das transa\u00C3\u00A7\u00C3\u00B5es.
+   * Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
    * @member {Boolean} parcelarApenasMinimo
    */
   exports.prototype['parcelarApenasMinimo'] = undefined;
 
   /**
-   * Nome do usu\u00C3\u00A1rio.
+   * Nome do usu\u00E1rio.
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

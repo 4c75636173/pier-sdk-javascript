@@ -18,12 +18,12 @@
   /**
    * The PageConfiguracaoEmailResponse model module.
    * @module model/PageConfiguracaoEmailResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageConfiguracaoEmailResponse</code>.
-   * Lista de Configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+   * Lista de Configura\u00E7\u00F5es de E-mail
    * @alias module:model/PageConfiguracaoEmailResponse
    * @class
    */

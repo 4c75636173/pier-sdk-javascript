@@ -18,7 +18,7 @@
   /**
    * Usuario service.
    * @module api/UsuarioApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,9 +41,9 @@
      */
 
     /**
-     * Alterar senha do usu\u00C3\u00A1rio.
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-     * @param {String} login Login do usu\u00C3\u00A1rio.
+     * Alterar senha do usu\u00E1rio.
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+     * @param {String} login Login do usu\u00E1rio.
      * @param {String} senhaNova Senha Nova
      * @param {module:api/UsuarioApi~alterarSenhaLoginUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
@@ -94,9 +94,9 @@
      */
 
     /**
-     * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Alterar senha do usu\u00E1rio na base do PIER ou WS.
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {String} senhaAtual Senha Atual
      * @param {String} senhaNova Senha Nova
      * @param {module:api/UsuarioApi~alterarSenhaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -154,9 +154,9 @@
      */
 
     /**
-     * Altera os usu\u00C3\u00A1rios cadastrados na base.
-     * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Altera os usu\u00E1rios cadastrados na base.
+     * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {module:model/UsuarioUpdate} update update
      * @param {module:api/UsuarioApi~alterarUsingPUT21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
@@ -206,9 +206,9 @@
      */
 
     /**
-     * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+     * Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {module:api/UsuarioApi~ativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
@@ -244,26 +244,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET42 operation.
-     * @callback module:api/UsuarioApi~consultarUsingGET42Callback
+     * Callback function to receive the result of the consultarUsingGET43 operation.
+     * @callback module:api/UsuarioApi~consultarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-     * @param {module:api/UsuarioApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+     * Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
+     * @param {module:api/UsuarioApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET42 = function(id, callback) {
+    this.consultarUsingGET43 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET42";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
       }
 
 
@@ -298,9 +298,9 @@
      */
 
     /**
-     * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+     * Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {module:api/UsuarioApi~desativarUsuarioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
@@ -336,28 +336,28 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET49 operation.
-     * @callback module:api/UsuarioApi~listarUsingGET49Callback
+     * Callback function to receive the result of the listarUsingGET51 operation.
+     * @callback module:api/UsuarioApi~listarUsingGET51Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+     * Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+     * Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome do Usuario
      * @param {String} opts.cpf CPF do Usuario
      * @param {String} opts.email Email do Usuario
      * @param {module:model/String} opts.status Status do Usuario
-     * @param {module:api/UsuarioApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UsuarioApi~listarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET49 = function(opts, callback) {
+    this.listarUsingGET51 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -399,9 +399,9 @@
      */
 
     /**
-     * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-     * Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+     * Esse recurso permite recuperar a senha do usu\u00E1rio.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {module:api/UsuarioApi~recuperarSenhaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
@@ -445,8 +445,8 @@
      */
 
     /**
-     * Cadastra Usu\u00C3\u00A1rio na base.
-     * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+     * Cadastra Usu\u00E1rio na base.
+     * Esse recurso permite cadastrar usu\u00E1rios.
      * @param {module:model/UsuarioPersist} persist persist
      * @param {module:api/UsuarioApi~salvarUsingPOST28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
@@ -490,10 +490,10 @@
      */
 
     /**
-     * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-     * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
-     * @param {String} login Login identificador do usu\u00C3\u00A1rio (login).
-     * @param {String} senha Senha do usu\u00C3\u00A1rio
+     * Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+     * O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
+     * @param {String} login Login identificador do usu\u00E1rio (login).
+     * @param {String} senha Senha do usu\u00E1rio
      * @param {module:api/UsuarioApi~validarSenhaLoginUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -543,10 +543,10 @@
      */
 
     /**
-     * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-     * Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
-     * @param {String} senha Senha do usu\u00C3\u00A1rio
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+     * Validar a senha do usu\u00E1rio na base do PIER ou WS.
+     * Este m\u00E9todo permite validar a senha do usu\u00E1rio).
+     * @param {String} senha Senha do usu\u00E1rio
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
      * @param {module:api/UsuarioApi~validarSenhaUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */

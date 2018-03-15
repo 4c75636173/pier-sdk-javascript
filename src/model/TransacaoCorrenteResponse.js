@@ -18,12 +18,12 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransacaoCorrenteResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
+   * Representa\u00E7\u00E3o do recurso transacao
    * @alias module:model/TransacaoCorrenteResponse
    * @class
    */
@@ -125,103 +125,103 @@
   exports.prototype['ultimaParcelaLancada'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
    * @member {Integer} idTipoRegistro
    */
   exports.prototype['idTipoRegistro'] = undefined;
 
   /**
-   * Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+   * Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
    * @member {Integer} ordem
    */
   exports.prototype['ordem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
-   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
    * @member {String} descricaoStatus
    */
   exports.prototype['descricaoStatus'] = undefined;
 
   /**
-   * Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor da transa\u00E7\u00E3o.
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
    * @member {Number} valorDolar
    */
   exports.prototype['valorDolar'] = undefined;
 
   /**
-   * Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a data de envio da transa\u00E7\u00E3o.
    * @member {String} dataEvento
    */
   exports.prototype['dataEvento'] = undefined;
 
   /**
-   * Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
    * @member {String} estabelecimento
    */
   exports.prototype['estabelecimento'] = undefined;
 
   /**
-   * Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
+   * Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
    * @member {Integer} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
    * @member {String} tipoEstabelecimento
    */
   exports.prototype['tipoEstabelecimento'] = undefined;
 
   /**
-   * Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @member {Integer} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;

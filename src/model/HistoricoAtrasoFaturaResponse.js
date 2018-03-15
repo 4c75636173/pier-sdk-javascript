@@ -18,12 +18,12 @@
   /**
    * The HistoricoAtrasoFaturaResponse model module.
    * @module model/HistoricoAtrasoFaturaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>HistoricoAtrasoFaturaResponse</code>.
-   * Hist\u00C3\u00B3rico Pagamento Fatura Atraso
+   * Hist\u00F3rico Pagamento Fatura Atraso
    * @alias module:model/HistoricoAtrasoFaturaResponse
    * @class
    */

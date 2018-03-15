@@ -18,7 +18,7 @@
   /**
    * The ContaHistoricoPagamentoResponse model module.
    * @module model/ContaHistoricoPagamentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -80,25 +80,25 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
    * @member {Integer} idPagamento
    */
   exports.prototype['idPagamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
    * @member {Integer} idBanco
    */
   exports.prototype['idBanco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
@@ -110,7 +110,7 @@
   exports.prototype['valorPagamento'] = undefined;
 
   /**
-   * Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+   * Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
    * @member {String} dataHoraPagamento
    */
   exports.prototype['dataHoraPagamento'] = undefined;
@@ -122,7 +122,7 @@
   exports.prototype['dataHoraEntradaPagamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;

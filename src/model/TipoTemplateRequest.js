@@ -18,12 +18,12 @@
   /**
    * The TipoTemplateRequest model module.
    * @module model/TipoTemplateRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TipoTemplateRequest</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+   * Representa\u00E7\u00E3o do tipo de template.
    * @alias module:model/TipoTemplateRequest
    * @class
    */
@@ -66,7 +66,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+   * Descri\u00E7\u00E3o do tipo de template.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

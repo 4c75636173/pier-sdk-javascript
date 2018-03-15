@@ -18,12 +18,12 @@
   /**
    * The TransferenciaBancariaPersist model module.
    * @module model/TransferenciaBancariaPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransferenciaBancariaPersist</code>.
-   * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+   * Transfer\u00EAncia banc\u00E1ria
    * @alias module:model/TransferenciaBancariaPersist
    * @class
    * @param valorCompra
@@ -96,61 +96,61 @@
 
 
   /**
-   * Valor da transfer\u00C3\u00AAncia
+   * Valor da transfer\u00EAncia
    * @member {Number} valorCompra
    */
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * Valor da transfer\u00C3\u00AAncia
+   * Valor da transfer\u00EAncia
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF ou CNPJ.
+   * N\u00FAmero do CPF ou CNPJ.
    * @member {String} documentoFavorecido
    */
   exports.prototype['documentoFavorecido'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * N\u00FAmero da ag\u00EAncia
    * @member {String} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+   * D\u00EDgito da ag\u00EAncia
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da conta
+   * N\u00FAmero da conta
    * @member {String} numeroConta
    */
   exports.prototype['numeroConta'] = undefined;
 
   /**
-   * D\u00C3\u00ADgito da conta
+   * D\u00EDgito da conta
    * @member {String} digitoConta
    */
   exports.prototype['digitoConta'] = undefined;
 
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
 
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    * @member {String} nomeFavorecido
    */
   exports.prototype['nomeFavorecido'] = undefined;

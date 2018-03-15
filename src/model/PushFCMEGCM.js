@@ -18,12 +18,12 @@
   /**
    * The PushFCMEGCM model module.
    * @module model/PushFCMEGCM
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PushFCMEGCM</code>.
-   * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM
+   * Objeto Notifica\u00E7\u00E3o Push FCM e GCM
    * @alias module:model/PushFCMEGCM
    * @class
    * @param idPessoa
@@ -95,43 +95,43 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+   * Apresenta o token do dispositivo que dever\u00E1 receber o push.
    * @member {String} tokenDispositivo
    */
   exports.prototype['tokenDispositivo'] = undefined;
 
   /**
-   * Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.
+   * Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.
    * @member {String} tokenServidor
    */
   exports.prototype['tokenServidor'] = undefined;
 
   /**
-   * Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
    * @member {String} titulo
    */
   exports.prototype['titulo'] = undefined;
 
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    * @member {module:model/PushFCMEGCM.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
@@ -149,7 +149,7 @@
   exports.prototype['som'] = undefined;
 
   /**
-   * Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.
+   * Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.
    * @member {String} cor
    */
   exports.prototype['cor'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoTransferenciaCreditoContaBancariaResponse</code>.
-   * Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+   * Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
    * @alias module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
    * @class
    */
@@ -68,7 +68,7 @@
 
 
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
    * @member {String} numeroMascaradoCartao
    */
   exports.prototype['numeroMascaradoCartao'] = undefined;
@@ -80,13 +80,13 @@
   exports.prototype['vencimentoPrimeiraParcela'] = undefined;
 
   /**
-   * Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+   * Valor da solicita\u00E7\u00E3o de saque.
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+   * N\u00FAmero de meses para car\u00EAncia.
    * @member {Integer} numeroMesesCarencia
    */
   exports.prototype['numeroMesesCarencia'] = undefined;

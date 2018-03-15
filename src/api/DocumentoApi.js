@@ -18,7 +18,7 @@
   /**
    * Documento service.
    * @module api/DocumentoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Altera o tipo de template
      * Esse recurso permite alterar os dados do tipo de template.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
      * @param {module:model/TipoTemplateRequest} persist persist
      * @param {module:api/DocumentoApi~alterarUsingPUT19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
@@ -95,7 +95,7 @@
     /**
      * Atualizar templates dos documentos
      * Esse recurso permite atualizar templates dos documentos.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
      * @param {module:model/DocumentoTemplatePersist} persist persist
      * @param {module:api/DocumentoApi~atualizarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
@@ -137,8 +137,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -146,17 +146,17 @@
 
     /**
      * Consulta documentos
-     * Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
+     * @param {module:api/DocumentoApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -183,8 +183,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -193,16 +193,16 @@
     /**
      * Consultar templates dos documentos
      * Esse recurso permite consultar templates dos documentos.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
+     * @param {module:api/DocumentoApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.consultarUsingGET14 = function(id, callback) {
+    this.consultarUsingGET15 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
       }
 
 
@@ -229,8 +229,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET38 operation.
-     * @callback module:api/DocumentoApi~consultarUsingGET38Callback
+     * Callback function to receive the result of the consultarUsingGET39 operation.
+     * @callback module:api/DocumentoApi~consultarUsingGET39Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -239,16 +239,16 @@
     /**
      * Consultar tipo de template
      * Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
-     * @param {module:api/DocumentoApi~consultarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
+     * @param {module:api/DocumentoApi~consultarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.consultarUsingGET38 = function(id, callback) {
+    this.consultarUsingGET39 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET38";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET39";
       }
 
 
@@ -283,8 +283,8 @@
      */
 
     /**
-     * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-     * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+     * Integra um arquivo a reposit\u00F3rios remotos.
+     * Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
      * @param {module:model/IntegrarDocumentoRequest} integrarDocumentoRequest integrarDocumentoRequest
      * @param {module:api/DocumentoApi~integrarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoIntegracaoResponse}
@@ -320,8 +320,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -331,16 +331,16 @@
      * Lista documentos
      * Esse recurso permite listar documentos.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idTemplateDocumento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idTemplateDocumento C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
      * @param {String} opts.nome Nome do documento.
      * @param {module:model/String} opts.extensao Extensao do documento.
-     * @param {module:api/DocumentoApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DocumentoApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +373,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET19 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET19Callback
+     * Callback function to receive the result of the listarUsingGET20 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -384,14 +384,14 @@
      * Lista os templates dos documentos
      * Esse recurso permite listar os templates dos documentos.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
-     * @param {module:api/DocumentoApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idTipoTemplate C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
+     * @param {module:api/DocumentoApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoTemplateResponse}
      */
-    this.listarUsingGET19 = function(opts, callback) {
+    this.listarUsingGET20 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -422,8 +422,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET45 operation.
-     * @callback module:api/DocumentoApi~listarUsingGET45Callback
+     * Callback function to receive the result of the listarUsingGET47 operation.
+     * @callback module:api/DocumentoApi~listarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -433,13 +433,13 @@
      * Lista os tipos de templates
      * Esse recurso permite listar os tipos de templates associados ao emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/DocumentoApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {module:api/DocumentoApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTemplateResponse}
      */
-    this.listarUsingGET45 = function(opts, callback) {
+    this.listarUsingGET47 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

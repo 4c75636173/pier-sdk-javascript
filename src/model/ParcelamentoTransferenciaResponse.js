@@ -18,12 +18,12 @@
   /**
    * The ParcelamentoTransferenciaResponse model module.
    * @module model/ParcelamentoTransferenciaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ParcelamentoTransferenciaResponse</code>.
-   * Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+   * Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
    * @alias module:model/ParcelamentoTransferenciaResponse
    * @class
    */
@@ -76,7 +76,7 @@
 
 
   /**
-   * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+   * N\u00FAmero de parcelas dispon\u00EDveis.
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
@@ -94,13 +94,13 @@
   exports.prototype['valorTotal'] = undefined;
 
   /**
-   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   * Valor da tarifa de contrata\u00E7\u00E3o.
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * IOF
+   * IOF calculado para o cliente
    * @member {Number} valorIOF
    */
   exports.prototype['valorIOF'] = undefined;

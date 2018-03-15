@@ -18,7 +18,7 @@
   /**
    * The DispositivoPersist model module.
    * @module model/DispositivoPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -66,13 +66,13 @@
   exports.prototype['token'] = undefined;
 
   /**
-   * Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o identificador da aplica\u00E7\u00E3o.
    * @member {Integer} idAplicacaoMobile
    */
   exports.prototype['idAplicacaoMobile'] = undefined;
 
   /**
-   * Apresenta o identificador do usu\u00C3\u00A1rio.
+   * Apresenta o identificador do usu\u00E1rio.
    * @member {Integer} idUsuario
    */
   exports.prototype['idUsuario'] = undefined;

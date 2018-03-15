@@ -18,7 +18,7 @@
   /**
    * The RiscoFraudeDetalhadoResponse model module.
    * @module model/RiscoFraudeDetalhadoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -156,163 +156,163 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+   * C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    * @member {Integer} idTipoResolucao
    */
   exports.prototype['idTipoResolucao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    * @member {String} descricaoTipoResolucao
    */
   exports.prototype['descricaoTipoResolucao'] = undefined;
 
   /**
-   * Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+   * Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
    * @member {Boolean} flagAltoRisco
    */
   exports.prototype['flagAltoRisco'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
+   * C\u00F3digo de identifica\u00E7\u00E3o do produto
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
-   * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+   * Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
    * @member {String} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+   * Valor da transa\u00E7\u00E3o classificada com risco de fraude
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
    * @member {String} codigoMoedaOrigem
    */
   exports.prototype['codigoMoedaOrigem'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+   * Valor da transa\u00E7\u00E3o na moeda de origem
    * @member {Number} valorOrigem
    */
   exports.prototype['valorOrigem'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
    * @member {String} codigoMoedaDestino
    */
   exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
+   * Valor da transa\u00E7\u00E3o na moeda de destino
    * @member {Number} valorDestino
    */
   exports.prototype['valorDestino'] = undefined;
 
   /**
-   * Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada
+   * Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
    * @member {String} idPais
    */
   exports.prototype['idPais'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
    * @member {String} codigoRespostaAutorizador
    */
   exports.prototype['codigoRespostaAutorizador'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
    * @member {String} descricaoRespostaAutorizador
    */
   exports.prototype['descricaoRespostaAutorizador'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
    * @member {String} codigoRespostaFraude
    */
   exports.prototype['codigoRespostaFraude'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
    * @member {String} descricaoRespostaFraude
    */
   exports.prototype['descricaoRespostaFraude'] = undefined;
 
   /**
-   * Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)
+   * Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
    * @member {String} origemTransacao
    */
   exports.prototype['origemTransacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
    * @member {String} codigoModoEntradaTerminal
    */
   exports.prototype['codigoModoEntradaTerminal'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
    * @member {String} descricaoModoEntradaTerminal
    */
   exports.prototype['descricaoModoEntradaTerminal'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+   * N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+   * N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
    * @member {String} cnpj
    */
   exports.prototype['cnpj'] = undefined;
 
   /**
-   * Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+   * Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+   * Lista de telefones associados ao portador do Cart\u00E3o
    * @member {Array.<module:model/TelefoneResponse>} telefones
    */
   exports.prototype['telefones'] = undefined;

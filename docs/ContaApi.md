@@ -4,44 +4,44 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00C3\u00A7a um ajuste para a conta do id informado
-[**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00C3\u00A0 conta.
-[**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
-[**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+[**ajustarContaUsingPOST1**](ContaApi.md#ajustarContaUsingPOST1) | **POST** /api/contas/{id}/ajustes-financeiros | Lan\u00E7a um ajuste para a conta do id informado
+[**alterarProdutoUsingPOST**](ContaApi.md#alterarProdutoUsingPOST) | **POST** /api/contas/{id}/alterar-produto | Altera o produto associado \u00E0 conta.
+[**alterarTitularUsingPOST**](ContaApi.md#alterarTitularUsingPOST) | **POST** /api/contas/{id}/alterar-titular | Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
+[**alterarVencimentoUsingPUT**](ContaApi.md#alterarVencimentoUsingPUT) | **PUT** /api/contas/{id}/alterar-vencimento | Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
 [**ativarAnuidadeUsingPOST**](ContaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | Atribuir Anuidade
-[**ativarEnvioFaturaEmailUsingPOST**](ContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00C3\u00A7o de envio de fatura por email
+[**ativarEnvioFaturaEmailUsingPOST**](ContaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email |  Ativa o servi\u00E7o de envio de fatura por email
 [**bloquearUsingPOST1**](ContaApi.md#bloquearUsingPOST1) | **POST** /api/contas/{id}/bloquear | Realiza o bloqueio de uma determinada Conta
 [**cancelarUsingPOST1**](ContaApi.md#cancelarUsingPOST1) | **POST** /api/contas/{id}/cancelar | Realiza o cancelamento de uma determinada Conta
-[**consultarBeneficioPagamentoAtrasoUsingGET**](ContaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+[**consultarBeneficioPagamentoAtrasoUsingGET**](ContaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
 [**consultarBoletoEmitidoUsingGET**](ContaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | Consulta os dados de um determinado boleto da fatura
-[**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00C3\u00ADvida atualizada do cliente
+[**consultarDividaAtualizadaClienteUsingGET**](ContaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | Consulta a d\u00EDvida atualizada do cliente
 [**consultarTaxasTarifasUsingGET**](ContaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | Permite consultar a partir do ID da conta as taxas e tarifas
-[**consultarUsingGET12**](ContaApi.md#consultarUsingGET12) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
-[**consultarUsingGET41**](ContaApi.md#consultarUsingGET41) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-[**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00C3\u00A7o de envio de fatura por email
+[**consultarUsingGET13**](ContaApi.md#consultarUsingGET13) | **GET** /api/contas/{id} | Apresenta dados de uma determinada conta
+[**consultarUsingGET42**](ContaApi.md#consultarUsingGET42) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | Consulta os detalhes de uma determinada transfer\u00EAncia
+[**desativarEnvioFaturaEmailUsingPOST**](ContaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | Desativa o servi\u00E7o de envio de fatura por email
 [**gerarBoletoRecargaUsingPOST**](ContaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | Gera um boleto de recarga
-[**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-[**gerarCartaoProvisorioUsingPOST**](ContaApi.md#gerarCartaoProvisorioUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
-[**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-[**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-[**listarHistoricoAlteracoesLimitesUsingGET**](ContaApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-[**listarHistoricoAssessoriaUsingGET**](ContaApi.md#listarHistoricoAssessoriaUsingGET) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+[**gerarCartaoEmbossingUsingPOST**](ContaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
+[**gerarCartaoProvisorioUsingPOST**](ContaApi.md#gerarCartaoProvisorioUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-provisorio | Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
+[**gerarCartaoUsingPOST**](ContaApi.md#gerarCartaoUsingPOST) | **POST** /api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao | Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
+[**gerarCartaoVirtualUsingPOST**](ContaApi.md#gerarCartaoVirtualUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-virtual | Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
+[**listarHistoricoAlteracoesLimitesUsingGET**](ContaApi.md#listarHistoricoAlteracoesLimitesUsingGET) | **GET** /api/contas/{id}/historicos-alteracoes-limites | Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
+[**listarHistoricoAssessoriaUsingGET**](ContaApi.md#listarHistoricoAssessoriaUsingGET) | **GET** /api/contas/{id}/historicos-assessorias-cobranca | Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
 [**listarHistoricoAtrasosFaturasUsingGET**](ContaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | Lista o historico de atrasos das faturas
-[**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
-[**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-[**listarUsingGET16**](ContaApi.md#listarUsingGET16) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
-[**listarUsingGET48**](ContaApi.md#listarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00C3\u00AAncias realizadas pela conta
-[**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-[**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+[**listarNaoProcessadasUsingGET**](ContaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+[**listarProcessadasUsingGET**](ContaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | Lista as transa\u00E7\u00F5es processadas da conta
+[**listarUsingGET17**](ContaApi.md#listarUsingGET17) | **GET** /api/contas | Lista contas existentes na base de dados do Emissor
+[**listarUsingGET50**](ContaApi.md#listarUsingGET50) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | Lista as transfer\u00EAncias realizadas pela conta
+[**reativarUsingPOST1**](ContaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | Realiza a reativa\u00E7\u00E3o de contas.
+[**simularEmprestimoFinanciamentoUsingPOST**](ContaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
 [**transacoesUsingGET**](ContaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | Permite listar uma linha do tempo com os eventos da conta
-[**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+[**transferirUsingPOST1**](ContaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
 
 
 <a name="ajustarContaUsingPOST1"></a>
 # **ajustarContaUsingPOST1**
 > AjusteFinanceiroResponse ajustarContaUsingPOST1(id, idTipoAjuste, dataAjuste, valorAjuste, opts)
 
-Lan\u00C3\u00A7a um ajuste para a conta do id informado
+Lan\u00E7a um ajuste para a conta do id informado
 
 Este recurso insere um ajuste para a conta do id informado
 
@@ -53,7 +53,7 @@ var apiInstance = new Pier.ContaApi()
 
 var id = 789; // {Integer} Id Conta
 
-var idTipoAjuste = 789; // {Integer} C\u00C3\u00B3digo identificador do tipo de ajuste.
+var idTipoAjuste = 789; // {Integer} C\u00F3digo identificador do tipo de ajuste.
 
 var dataAjuste = "dataAjuste_example"; // {String} Data do ajuste no formato yyyy-MM-dd'T'HH:mm:ss.SSSZ.
 
@@ -78,7 +78,7 @@ api.ajustarContaUsingPOST1(id, idTipoAjuste, dataAjuste, valorAjuste, opts, call
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **idTipoAjuste** | **Integer**| C\u00C3\u00B3digo identificador do tipo de ajuste. | 
+ **idTipoAjuste** | **Integer**| C\u00F3digo identificador do tipo de ajuste. | 
  **dataAjuste** | **String**| Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. | 
  **valorAjuste** | [**Number**](.md)| Valor do ajuste | 
  **identificadorExterno** | **String**| Identificador Externo | [optional] 
@@ -100,9 +100,9 @@ No authorization required
 # **alterarProdutoUsingPOST**
 > &#39;String&#39; alterarProdutoUsingPOST(id, request)
 
-Altera o produto associado \u00C3\u00A0 conta.
+Altera o produto associado \u00E0 conta.
 
-O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
 
 ### Example
 ```javascript
@@ -110,7 +110,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var request = new Pier.AlterarProdutoRequest(); // {AlterarProdutoRequest} request
 
@@ -129,7 +129,7 @@ api.alterarProdutoUsingPOST(id, request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **request** | [**AlterarProdutoRequest**](AlterarProdutoRequest.md)| request | 
 
 ### Return type
@@ -149,9 +149,9 @@ No authorization required
 # **alterarTitularUsingPOST**
 > ContaResponse alterarTitularUsingPOST(id, idPessoa)
 
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
 
-Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+Esta m\u00E9todo permite altera a pessoa de uma conta.
 
 ### Example
 ```javascript
@@ -159,9 +159,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
 
-var idPessoa = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+var idPessoa = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
 
 
 var callback = function(error, data, response) {
@@ -178,8 +178,8 @@ api.alterarTitularUsingPOST(id, idPessoa, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) | 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) | 
+ **idPessoa** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id). | 
 
 ### Return type
 
@@ -198,9 +198,9 @@ No authorization required
 # **alterarVencimentoUsingPUT**
 > ContaResponse alterarVencimentoUsingPUT(id, novoDiaVencimento)
 
-Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
+Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
 
-Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
+Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
 
 ### Example
 ```javascript
@@ -208,7 +208,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var novoDiaVencimento = 56; // {Integer} Novo dia de vencimento.
 
@@ -227,7 +227,7 @@ api.alterarVencimentoUsingPUT(id, novoDiaVencimento, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **novoDiaVencimento** | **Integer**| Novo dia de vencimento. | 
 
 ### Return type
@@ -249,7 +249,7 @@ No authorization required
 
 Atribuir Anuidade
 
-Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
 
 ### Example
 ```javascript
@@ -257,16 +257,16 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var idAnuidade = 789; // {Integer} Identificador da anuidade
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'DDD': "DDD_example", // {String} DDD do celular
-  'celular': "celular_example", // {String} N\u00C3\u00BAmero do celular
+  'celular': "celular_example", // {String} N\u00FAmero do celular
   'idOperadora': 789, // {Integer} Identificador da operadora do celular
   'idOrigemComercial': 789 // {Integer} Identificador da origem comercial
 };
@@ -285,13 +285,13 @@ api.ativarAnuidadeUsingPOST(id, idAnuidade, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **idAnuidade** | **Integer**| Identificador da anuidade | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **DDD** | **String**| DDD do celular | [optional] 
- **celular** | **String**| N\u00C3\u00BAmero do celular | [optional] 
+ **celular** | **String**| N\u00FAmero do celular | [optional] 
  **idOperadora** | **Integer**| Identificador da operadora do celular | [optional] 
  **idOrigemComercial** | **Integer**| Identificador da origem comercial | [optional] 
 
@@ -312,9 +312,9 @@ No authorization required
 # **ativarEnvioFaturaEmailUsingPOST**
 > Object ativarEnvioFaturaEmailUsingPOST(id)
 
- Ativa o servi\u00C3\u00A7o de envio de fatura por email
+ Ativa o servi\u00E7o de envio de fatura por email
 
-Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso ativa o servi\u00E7o de envio de fatura por email
 
 ### Example
 ```javascript
@@ -322,7 +322,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -339,7 +339,7 @@ api.ativarEnvioFaturaEmailUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -360,7 +360,7 @@ No authorization required
 
 Realiza o bloqueio de uma determinada Conta
 
-Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -368,9 +368,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
-var idStatus = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+var idStatus = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
 
 
 var callback = function(error, data, response) {
@@ -387,8 +387,8 @@ api.bloquearUsingPOST1(id, idStatus, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idStatus** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **idStatus** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. | 
 
 ### Return type
 
@@ -409,7 +409,7 @@ No authorization required
 
 Realiza o cancelamento de uma determinada Conta
 
-Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -417,9 +417,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
-var idStatus = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+var idStatus = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
 
 
 var callback = function(error, data, response) {
@@ -436,8 +436,8 @@ api.cancelarUsingPOST1(id, idStatus, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idStatus** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta. | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **idStatus** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta. | 
 
 ### Return type
 
@@ -456,9 +456,9 @@ No authorization required
 # **consultarBeneficioPagamentoAtrasoUsingGET**
 > BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET(id)
 
-Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
 
-Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
 
 ### Example
 ```javascript
@@ -466,7 +466,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -483,7 +483,7 @@ api.consultarBeneficioPagamentoAtrasoUsingGET(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -548,9 +548,9 @@ No authorization required
 # **consultarDividaAtualizadaClienteUsingGET**
 > DividaClienteResponse consultarDividaAtualizadaClienteUsingGET(id, opts)
 
-Consulta a d\u00C3\u00ADvida atualizada do cliente
+Consulta a d\u00EDvida atualizada do cliente
 
-Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+Este recurso consulta a d\u00EDvida atualizada do cliente
 
 ### Example
 ```javascript
@@ -561,11 +561,11 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} Id Conta
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'dataVencimento': "dataVencimento_example", // {String} Data do vencimento
-  'idEscritorioCobranca': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+  'idEscritorioCobranca': 789 // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
 };
 
 var callback = function(error, data, response) {
@@ -583,11 +583,11 @@ api.consultarDividaAtualizadaClienteUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **dataVencimento** | **String**| Data do vencimento | [optional] 
- **idEscritorioCobranca** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a | [optional] 
+ **idEscritorioCobranca** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a | [optional] 
 
 ### Return type
 
@@ -608,7 +608,7 @@ No authorization required
 
 Permite consultar a partir do ID da conta as taxas e tarifas
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
 
 ### Example
 ```javascript
@@ -619,9 +619,9 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} ID da conta a ser consultada.
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -639,9 +639,9 @@ api.consultarTaxasTarifasUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID da conta a ser consultada. | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -656,13 +656,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> ContaDetalheResponse consultarUsingGET12(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> ContaDetalheResponse consultarUsingGET13(id)
 
 Apresenta dados de uma determinada conta
 
-Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -670,7 +670,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -680,14 +680,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -702,13 +702,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET41"></a>
-# **consultarUsingGET41**
-> TransferenciaDetalheResponse consultarUsingGET41(id, idTransferencia)
+<a name="consultarUsingGET42"></a>
+# **consultarUsingGET42**
+> TransferenciaDetalheResponse consultarUsingGET42(id, idTransferencia)
 
-Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
+Consulta os detalhes de uma determinada transfer\u00EAncia
 
-Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
+Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
 
 ### Example
 ```javascript
@@ -716,9 +716,9 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
-var idTransferencia = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+var idTransferencia = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).
 
 
 var callback = function(error, data, response) {
@@ -728,15 +728,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET41(id, idTransferencia, callback);
+api.consultarUsingGET42(id, idTransferencia, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idTransferencia** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia). | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **idTransferencia** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia). | 
 
 ### Return type
 
@@ -755,9 +755,9 @@ No authorization required
 # **desativarEnvioFaturaEmailUsingPOST**
 > Object desativarEnvioFaturaEmailUsingPOST(id)
 
-Desativa o servi\u00C3\u00A7o de envio de fatura por email
+Desativa o servi\u00E7o de envio de fatura por email
 
-Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
+Este recurso desativa o servi\u00E7o de envio de fatura por email
 
 ### Example
 ```javascript
@@ -765,7 +765,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -782,7 +782,7 @@ api.desativarEnvioFaturaEmailUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -853,9 +853,9 @@ No authorization required
 # **gerarCartaoEmbossingUsingPOST**
 > CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest)
 
-Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
 
-Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
 
 ### Example
 ```javascript
@@ -863,7 +863,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var cartaoEmbossingRequest = new Pier.CartaoEmbossingRequest(); // {CartaoEmbossingRequest} cartaoEmbossingRequest
 
@@ -882,7 +882,7 @@ api.gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **cartaoEmbossingRequest** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
 
 ### Return type
@@ -902,9 +902,9 @@ No authorization required
 # **gerarCartaoProvisorioUsingPOST**
 > CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST(id)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
 
-Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
 
 ### Example
 ```javascript
@@ -912,7 +912,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 
 var callback = function(error, data, response) {
@@ -929,7 +929,7 @@ api.gerarCartaoProvisorioUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
 
 ### Return type
 
@@ -948,9 +948,9 @@ No authorization required
 # **gerarCartaoUsingPOST**
 > CartaoImpressaoResponse gerarCartaoUsingPOST(id, idPessoa, opts)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
 
-Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
+Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
 
 ### Example
 ```javascript
@@ -958,12 +958,12 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
-var idPessoa = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+var idPessoa = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).
 
 var opts = { 
-  'idTipoPlastico': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+  'idTipoPlastico': 789 // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
 };
 
 var callback = function(error, data, response) {
@@ -980,9 +980,9 @@ api.gerarCartaoUsingPOST(id, idPessoa, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id). | 
- **idTipoPlastico** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id). | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **idPessoa** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id). | 
+ **idTipoPlastico** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id). | [optional] 
 
 ### Return type
 
@@ -1001,9 +1001,9 @@ No authorization required
 # **gerarCartaoVirtualUsingPOST**
 > CartaoImpressaoResponse gerarCartaoVirtualUsingPOST(id, dataValidade)
 
-Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
 
-Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
 
 ### Example
 ```javascript
@@ -1011,7 +1011,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var dataValidade = "dataValidade_example"; // {String} Data de Validade
 
@@ -1030,7 +1030,7 @@ api.gerarCartaoVirtualUsingPOST(id, dataValidade, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **dataValidade** | **String**| Data de Validade | 
 
 ### Return type
@@ -1050,9 +1050,9 @@ No authorization required
 # **listarHistoricoAlteracoesLimitesUsingGET**
 > PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(id, opts)
 
-Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
+Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
 
-Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
+Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
 
 ### Example
 ```javascript
@@ -1060,12 +1060,12 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1082,10 +1082,10 @@ api.listarHistoricoAlteracoesLimitesUsingGET(id, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1104,9 +1104,9 @@ No authorization required
 # **listarHistoricoAssessoriaUsingGET**
 > PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(id, opts)
 
-Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
+Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
 
-Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
 
 ### Example
 ```javascript
@@ -1117,9 +1117,9 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} Id Conta
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1137,9 +1137,9 @@ api.listarHistoricoAssessoriaUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1160,7 +1160,7 @@ No authorization required
 
 Lista o historico de atrasos das faturas
 
-Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
 
 ### Example
 ```javascript
@@ -1171,9 +1171,9 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} Id Conta
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1191,9 +1191,9 @@ api.listarHistoricoAtrasosFaturasUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1212,9 +1212,9 @@ No authorization required
 # **listarNaoProcessadasUsingGET**
 > PageTransacaoNaoProcessadaResponse listarNaoProcessadasUsingGET(id, opts)
 
-Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
+Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
+Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
 
 ### Example
 ```javascript
@@ -1222,14 +1222,14 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'dataInicio': "dataInicio_example", // {String} Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
-  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'dataInicio': "dataInicio_example", // {String} Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida).
+  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida).
 };
 
 var callback = function(error, data, response) {
@@ -1246,12 +1246,12 @@ api.listarNaoProcessadasUsingGET(id, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **dataInicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida). | [optional] 
- **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida). | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **dataInicio** | **String**| Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida). | [optional] 
+ **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida). | [optional] 
 
 ### Return type
 
@@ -1270,9 +1270,9 @@ No authorization required
 # **listarProcessadasUsingGET**
 > PageTransacoesCorrentesResponse listarProcessadasUsingGET(id, opts)
 
-Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
+Lista as transa\u00E7\u00F5es processadas da conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
+Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
 
 ### Example
 ```javascript
@@ -1280,15 +1280,15 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
   'dataVencimento': "dataVencimento_example", // {String} Data de vencimento do extrato no formato yyyy-MM-dd.
-  'dataInicio': "dataInicio_example", // {String} Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+  'dataInicio': "dataInicio_example", // {String} Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
+  'dataFim': "dataFim_example" // {String} Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
 };
 
 var callback = function(error, data, response) {
@@ -1305,13 +1305,13 @@ api.listarProcessadasUsingGET(id, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
  **dataVencimento** | **String**| Data de vencimento do extrato no formato yyyy-MM-dd. | [optional] 
- **dataInicio** | **String**| Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
- **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado). | [optional] 
+ **dataInicio** | **String**| Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). | [optional] 
+ **dataFim** | **String**| Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado). | [optional] 
 
 ### Return type
 
@@ -1326,9 +1326,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PageContaResponse listarUsingGET16(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageContaResponse listarUsingGET17(opts)
 
 Lista contas existentes na base de dados do Emissor
 
@@ -1341,18 +1341,18 @@ var Pier = require('Pier');
 var apiInstance = new Pier.ContaApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idProduto': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-  'idOrigemComercial': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-  'idPessoa': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-  'idStatusConta': 789, // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idProduto': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+  'idOrigemComercial': 789, // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+  'idPessoa': 789, // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+  'idStatusConta': 789, // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do status da conta.
   'diaVencimento': 56, // {Integer} Apresenta o dia de vencimento.
   'melhorDiaCompra': 56, // {Integer} Apresenta o melhor dia de compra.
-  'dataStatusConta': "dataStatusConta_example", // {String} Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-  'dataCadastro': "dataCadastro_example", // {String} Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-  'dataUltimaAlteracaoVencimento': "dataUltimaAlteracaoVencimento_example" // {String} Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+  'dataStatusConta': "dataStatusConta_example", // {String} Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+  'dataCadastro': "dataCadastro_example", // {String} Apresenta a data em que o cart\u00E3o foi gerado.
+  'dataUltimaAlteracaoVencimento': "dataUltimaAlteracaoVencimento_example" // {String} Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
 };
 
 var callback = function(error, data, response) {
@@ -1362,25 +1362,25 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idProduto** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id). | [optional] 
- **idOrigemComercial** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
- **idPessoa** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id). | [optional] 
- **idStatusConta** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta. | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idProduto** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id). | [optional] 
+ **idOrigemComercial** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta. | [optional] 
+ **idPessoa** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id). | [optional] 
+ **idStatusConta** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do status da conta. | [optional] 
  **diaVencimento** | **Integer**| Apresenta o dia de vencimento. | [optional] 
  **melhorDiaCompra** | **Integer**| Apresenta o melhor dia de compra. | [optional] 
- **dataStatusConta** | **String**| Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela. | [optional] 
- **dataCadastro** | **String**| Apresenta a data em que o cart\u00C3\u00A3o foi gerado. | [optional] 
- **dataUltimaAlteracaoVencimento** | **String**| Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento. | [optional] 
+ **dataStatusConta** | **String**| Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela. | [optional] 
+ **dataCadastro** | **String**| Apresenta a data em que o cart\u00E3o foi gerado. | [optional] 
+ **dataUltimaAlteracaoVencimento** | **String**| Apresenta a data da ultima altera\u00E7\u00E3o de vencimento. | [optional] 
 
 ### Return type
 
@@ -1395,13 +1395,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET48"></a>
-# **listarUsingGET48**
-> PageTransferenciaResponse listarUsingGET48(id, opts)
+<a name="listarUsingGET50"></a>
+# **listarUsingGET50**
+> PageTransferenciaResponse listarUsingGET50(id, opts)
 
-Lista as transfer\u00C3\u00AAncias realizadas pela conta
+Lista as transfer\u00EAncias realizadas pela conta
 
-Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
+Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
 
 ### Example
 ```javascript
@@ -1409,17 +1409,17 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTransferencia': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-  'idContaOrigem': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-  'idContaDestino': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idTransferencia': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+  'idContaOrigem': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+  'idContaDestino': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
   'valorTransferencia': 3.4, // {Number} Valor estabelecido para ser transferido.
-  'dataTransferencia': "dataTransferencia_example" // {String} Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+  'dataTransferencia': "dataTransferencia_example" // {String} Data estabelecida para ocorrer a transfer\u00EAncia.
 };
 
 var callback = function(error, data, response) {
@@ -1429,22 +1429,22 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET48(id, opts, callback);
+api.listarUsingGET50(id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTransferencia** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id). | [optional] 
- **idContaOrigem** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id). | [optional] 
- **idContaDestino** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id). | [optional] 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta (id). | 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idTransferencia** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id). | [optional] 
+ **idContaOrigem** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id). | [optional] 
+ **idContaDestino** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id). | [optional] 
  **valorTransferencia** | [**Number**](.md)| Valor estabelecido para ser transferido. | [optional] 
- **dataTransferencia** | **String**| Data estabelecida para ocorrer a transfer\u00C3\u00AAncia. | [optional] 
+ **dataTransferencia** | **String**| Data estabelecida para ocorrer a transfer\u00EAncia. | [optional] 
 
 ### Return type
 
@@ -1463,9 +1463,9 @@ No authorization required
 # **reativarUsingPOST1**
 > Object reativarUsingPOST1(id)
 
-Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+Realiza a reativa\u00E7\u00E3o de contas.
 
-Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
 
 ### Example
 ```javascript
@@ -1509,9 +1509,9 @@ No authorization required
 # **simularEmprestimoFinanciamentoUsingPOST**
 > EmprestimoPessoalResponse simularEmprestimoFinanciamentoUsingPOST(id, request)
 
-Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
 
 ### Example
 ```javascript
@@ -1519,7 +1519,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
 
 var request = new Pier.EmprestimoPessoalRequest(); // {EmprestimoPessoalRequest} request
 
@@ -1538,7 +1538,7 @@ api.simularEmprestimoFinanciamentoUsingPOST(id, request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o da conta (id). | 
  **request** | [**EmprestimoPessoalRequest**](EmprestimoPessoalRequest.md)| request | 
 
 ### Return type
@@ -1560,7 +1560,7 @@ No authorization required
 
 Permite listar uma linha do tempo com os eventos da conta
 
-Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
 
 ### Example
 ```javascript
@@ -1571,9 +1571,9 @@ var apiInstance = new Pier.ContaApi()
 var id = 789; // {Integer} Id Conta
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56 // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56 // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
 };
 
 var callback = function(error, data, response) {
@@ -1591,9 +1591,9 @@ api.transacoesUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Id Conta | 
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
 
 ### Return type
 
@@ -1612,9 +1612,9 @@ No authorization required
 # **transferirUsingPOST1**
 > TransferenciaDetalheResponse transferirUsingPOST1(id, idContaDestino, valorTransferencia)
 
-Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
+Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
 
-Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
+Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
 
 ### Example
 ```javascript
@@ -1622,11 +1622,11 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.ContaApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).
 
-var idContaDestino = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
+var idContaDestino = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).
 
-var valorTransferencia = 3.4; // {Number} Valor da Transfer\u00C3\u00AAncia.
+var valorTransferencia = 3.4; // {Number} Valor da Transfer\u00EAncia.
 
 
 var callback = function(error, data, response) {
@@ -1643,9 +1643,9 @@ api.transferirUsingPOST1(id, idContaDestino, valorTransferencia, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id). | 
- **idContaDestino** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id). | 
- **valorTransferencia** | [**Number**](.md)| Valor da Transfer\u00C3\u00AAncia. | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id). | 
+ **idContaDestino** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id). | 
+ **valorTransferencia** | [**Number**](.md)| Valor da Transfer\u00EAncia. | 
 
 ### Return type
 

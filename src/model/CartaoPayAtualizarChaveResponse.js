@@ -18,12 +18,12 @@
   /**
    * The CartaoPayAtualizarChaveResponse model module.
    * @module model/CartaoPayAtualizarChaveResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>CartaoPayAtualizarChaveResponse</code>.
-   * Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para atualizar a chave do criptograma
+   * Resposta da requisi\u00E7\u00E3o para atualizar a chave do criptograma
    * @alias module:model/CartaoPayAtualizarChaveResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+   * N\u00FAmero do cart\u00E3o real criptografado
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Data de validade do cart\u00C3\u00A3o
+   * Data de validade do cart\u00E3o
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * Nome impresso no cart\u00C3\u00A3o criptografado
+   * Nome impresso no cart\u00E3o criptografado
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Identificador do emissor do cart\u00C3\u00A3o
+   * Identificador do emissor do cart\u00E3o
    * @member {Integer} idEntidade
    */
   exports.prototype['idEntidade'] = undefined;
 
   /**
-   * Nome do emissor do cart\u00C3\u00A3o
+   * Nome do emissor do cart\u00E3o
    * @member {String} nomeEntidade
    */
   exports.prototype['nomeEntidade'] = undefined;
 
   /**
-   * Status do cart\u00C3\u00A3o
+   * Status do cart\u00E3o
    * @member {module:model/CartaoPayAtualizarChaveResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptograda
+   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda
    * @member {String} chaveCriptograma
    */
   exports.prototype['chaveCriptograma'] = undefined;

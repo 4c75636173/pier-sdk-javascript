@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**autorizarPorContaUsingPOST**](AutorizacaoApi.md#autorizarPorContaUsingPOST) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-[**autorizarUsingPOST**](AutorizacaoApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**autorizarUsingPOST1**](AutorizacaoApi.md#autorizarUsingPOST1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-[**cancelarPorIdContaUsingPOST**](AutorizacaoApi.md#cancelarPorIdContaUsingPOST) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
-[**cancelarUsingPOST2**](AutorizacaoApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
-[**cancelarUsingPOST3**](AutorizacaoApi.md#cancelarUsingPOST3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
-[**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacaoApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
-[**simularUsingPOST**](AutorizacaoApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+[**autorizarPorContaUsingPOST**](AutorizacaoApi.md#autorizarPorContaUsingPOST) | **POST** /api/contas/{id}/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira por idConta
+[**autorizarUsingPOST**](AutorizacaoApi.md#autorizarUsingPOST) | **POST** /api/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira
+[**autorizarUsingPOST1**](AutorizacaoApi.md#autorizarUsingPOST1) | **POST** /api/cartoes/{id}/autorizar-transacao | Autoriza transa\u00E7\u00E3o financeira por idCartao
+[**cancelarPorIdContaUsingPOST**](AutorizacaoApi.md#cancelarPorIdContaUsingPOST) | **POST** /api/contas/{id}/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira por idConta
+[**cancelarUsingPOST2**](AutorizacaoApi.md#cancelarUsingPOST2) | **POST** /api/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira
+[**cancelarUsingPOST3**](AutorizacaoApi.md#cancelarUsingPOST3) | **POST** /api/cartoes/{id}/cancelar-transacao | Cancela transa\u00E7\u00E3o financeira por idCartao
+[**listarCodigosProcessamentoAutorizacaoUsingGET**](AutorizacaoApi.md#listarCodigosProcessamentoAutorizacaoUsingGET) | **GET** /api/consultar-codigos-processamento-autorizacao | Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
+[**simularUsingPOST**](AutorizacaoApi.md#simularUsingPOST) | **POST** /api/simular-transacao | Simula planos de transa\u00E7\u00F5es
 
 
 <a name="autorizarPorContaUsingPOST"></a>
 # **autorizarPorContaUsingPOST**
 > TransacaoOnUsResponse autorizarPorContaUsingPOST(id, transacaoOnUsPorIdCartaoRequest)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+Autoriza transa\u00E7\u00E3o financeira por idConta
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idConta.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta.
 
 ### Example
 ```javascript
@@ -67,9 +67,9 @@ No authorization required
 # **autorizarUsingPOST**
 > TransacaoOnUsResponse autorizarUsingPOST(autorizacaoOnUsRequest)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira
+Autoriza transa\u00E7\u00E3o financeira
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira.
 
 ### Example
 ```javascript
@@ -113,9 +113,9 @@ No authorization required
 # **autorizarUsingPOST1**
 > TransacaoOnUsResponse autorizarUsingPOST1(id, transacaoOnUsPorIdCartaoRequest)
 
-Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+Autoriza transa\u00E7\u00E3o financeira por idCartao
 
-Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idCartao.
 
 ### Example
 ```javascript
@@ -162,9 +162,9 @@ No authorization required
 # **cancelarPorIdContaUsingPOST**
 > TransacaoOnUsResponse cancelarPorIdContaUsingPOST(id, cancelamentoRequest)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idConta
+Cancela transa\u00E7\u00E3o financeira por idConta
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idConta.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta.
 
 ### Example
 ```javascript
@@ -211,9 +211,9 @@ No authorization required
 # **cancelarUsingPOST2**
 > TransacaoOnUsResponse cancelarUsingPOST2(cancelamentoRequest)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira
+Cancela transa\u00E7\u00E3o financeira
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o.
 
 ### Example
 ```javascript
@@ -257,9 +257,9 @@ No authorization required
 # **cancelarUsingPOST3**
 > TransacaoOnUsResponse cancelarUsingPOST3(id, cancelamentoRequest)
 
-Cancela transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+Cancela transa\u00E7\u00E3o financeira por idCartao
 
-Este m\u00C3\u00A9todo permite que seja cancelada uma transa\u00C3\u00A7\u00C3\u00A3o a partir do idCartao.
+Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idCartao.
 
 ### Example
 ```javascript
@@ -306,9 +306,9 @@ No authorization required
 # **listarCodigosProcessamentoAutorizacaoUsingGET**
 > [Object] listarCodigosProcessamentoAutorizacaoUsingGET
 
-Retorna c\u00C3\u00B3digos de processamento de autoriza\u00C3\u00A7\u00C3\u00A3o
+Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
 
-Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de processamento para autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es financeiras.
+Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras.
 
 ### Example
 ```javascript
@@ -346,9 +346,9 @@ No authorization required
 # **simularUsingPOST**
 > TransacaoOnUsResponse simularUsingPOST(transacoesRequest)
 
-Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+Simula planos de transa\u00E7\u00F5es
 
-Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
+Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es.
 
 ### Example
 ```javascript

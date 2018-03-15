@@ -18,12 +18,12 @@
   /**
    * The ConfiguracaoRegistroCobrancaPersist model module.
    * @module model/ConfiguracaoRegistroCobrancaPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ConfiguracaoRegistroCobrancaPersist</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online
+   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
    * @alias module:model/ConfiguracaoRegistroCobrancaPersist
    * @class
    * @param codigoBanco
@@ -102,7 +102,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    * @member {Integer} codigoBanco
    */
   exports.prototype['codigoBanco'] = undefined;
@@ -174,7 +174,7 @@
   exports.prototype['uriAdicional'] = undefined;
 
   /**
-   * Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+   * Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
    * @member {module:model/ConfiguracaoRegistroCobrancaPersist.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

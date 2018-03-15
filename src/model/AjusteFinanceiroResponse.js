@@ -18,7 +18,7 @@
   /**
    * The AjusteFinanceiroResponse model module.
    * @module model/AjusteFinanceiroResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -75,19 +75,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
    * @member {Integer} idTipoAjuste
    */
   exports.prototype['idTipoAjuste'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
@@ -105,7 +105,7 @@
   exports.prototype['valor'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
    * @member {String} identificadorExterno
    */
   exports.prototype['identificadorExterno'] = undefined;

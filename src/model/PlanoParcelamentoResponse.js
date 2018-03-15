@@ -18,16 +18,17 @@
   /**
    * The PlanoParcelamentoResponse model module.
    * @module model/PlanoParcelamentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+   * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
    * @alias module:model/PlanoParcelamentoResponse
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -109,6 +110,9 @@
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
+      if (data.hasOwnProperty('idServicoTipo')) {
+        obj['idServicoTipo'] = ApiClient.convertToType(data['idServicoTipo'], 'Integer');
+      }
       if (data.hasOwnProperty('descricaoServicoTipo')) {
         obj['descricaoServicoTipo'] = ApiClient.convertToType(data['descricaoServicoTipo'], 'String');
       }
@@ -136,7 +140,7 @@
   exports.prototype['dataFechamentoFatura'] = undefined;
 
   /**
-   * Data de vencimento padr\u00C3\u00A3o
+   * Data de vencimento padr\u00E3o
    * @member {String} dataVencimentoPadrao
    */
   exports.prototype['dataVencimentoPadrao'] = undefined;
@@ -196,19 +200,19 @@
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * Status da ades\u00C3\u00A3o
+   * Status da ades\u00E3o
    * @member {Integer} statusAdesao
    */
   exports.prototype['statusAdesao'] = undefined;
 
   /**
-   * Data de inclus\u00C3\u00A3o
+   * Data de inclus\u00E3o
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data de processamento da ades\u00C3\u00A3o
+   * Data de processamento da ades\u00E3o
    * @member {String} dataProcessamentoAdesao
    */
   exports.prototype['dataProcessamentoAdesao'] = undefined;
@@ -220,7 +224,13 @@
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+   * @member {Integer} idServicoTipo
+   */
+  exports.prototype['idServicoTipo'] = undefined;
+
+  /**
+   * Descri\u00E7\u00E3o do tipo de servi\u00E7o
    * @member {String} descricaoServicoTipo
    */
   exports.prototype['descricaoServicoTipo'] = undefined;

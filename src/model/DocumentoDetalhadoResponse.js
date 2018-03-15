@@ -18,12 +18,12 @@
   /**
    * The DocumentoDetalhadoResponse model module.
    * @module model/DocumentoDetalhadoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoDetalhadoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+   * Representa\u00E7\u00E3o da resposta para o recurso de Documento
    * @alias module:model/DocumentoDetalhadoResponse
    * @class
    */
@@ -90,13 +90,13 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+   * Representa\u00E7\u00E3o do documento em Base64.
    * @member {String} documento
    */
   exports.prototype['documento'] = undefined;
 
   /**
-   * Extens\u00C3\u00A3o do Documento.
+   * Extens\u00E3o do Documento.
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;

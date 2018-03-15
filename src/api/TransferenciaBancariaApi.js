@@ -18,7 +18,7 @@
   /**
    * TransferenciaBancaria service.
    * @module api/TransferenciaBancariaApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,9 +41,9 @@
      */
 
     /**
-     * Atualiza conta banc\u00C3\u00A1ria portador
-     * Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+     * Atualiza conta banc\u00E1ria portador
+     * Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).
      * @param {module:model/ContaBancariaPortadorUpdate} update update
      * @param {module:api/TransferenciaBancariaApi~atualizarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
@@ -85,6 +85,98 @@
     }
 
     /**
+     * Callback function to receive the result of the cancelarTransferenciaCreditoContaBancariaUsingPOST operation.
+     * @callback module:api/TransferenciaBancariaApi~cancelarTransferenciaCreditoContaBancariaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     * Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+     * @param {Integer} idTransferencia Id Transfer\u00EAncia
+     * @param {module:api/TransferenciaBancariaApi~cancelarTransferenciaCreditoContaBancariaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.cancelarTransferenciaCreditoContaBancariaUsingPOST = function(idTransferencia, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idTransferencia' is set
+      if (idTransferencia == undefined || idTransferencia == null) {
+        throw "Missing the required parameter 'idTransferencia' when calling cancelarTransferenciaCreditoContaBancariaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'idTransferencia': idTransferencia
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the confirmarTransferenciaCreditoContaBancariaUsingPOST operation.
+     * @callback module:api/TransferenciaBancariaApi~confirmarTransferenciaCreditoContaBancariaUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+     * Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+     * @param {Integer} idTransferencia Id Transfer\u00EAncia
+     * @param {module:api/TransferenciaBancariaApi~confirmarTransferenciaCreditoContaBancariaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {'String'}
+     */
+    this.confirmarTransferenciaCreditoContaBancariaUsingPOST = function(idTransferencia, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'idTransferencia' is set
+      if (idTransferencia == undefined || idTransferencia == null) {
+        throw "Missing the required parameter 'idTransferencia' when calling confirmarTransferenciaCreditoContaBancariaUsingPOST";
+      }
+
+
+      var pathParams = {
+        'idTransferencia': idTransferencia
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the consultarTransferenciaBancariaUsingGET operation.
      * @callback module:api/TransferenciaBancariaApi~consultarTransferenciaBancariaUsingGETCallback
      * @param {String} error Error message, if any.
@@ -93,9 +185,9 @@
      */
 
     /**
-     * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-     * Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
-     * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
+     * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+     * Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+     * @param {Integer} idTransferencia Id Transfer\u00EAncia
      * @param {module:api/TransferenciaBancariaApi~consultarTransferenciaBancariaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaCreditoContaBancariaResponse}
      */
@@ -131,26 +223,26 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Consulta conta banc\u00C3\u00A1ria portador
-     * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * Consulta conta banc\u00E1ria portador
+     * Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -177,35 +269,35 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET40 operation.
-     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET40Callback
+     * Callback function to receive the result of the consultarUsingGET41 operation.
+     * @callback module:api/TransferenciaBancariaApi~consultarUsingGET41Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-     * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+     * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
+     * Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
      * @param {Integer} id Id Conta
-     * @param {Integer} idTransferencia Id Transfer\u00C3\u00AAncia
+     * @param {Integer} idTransferencia Id Transfer\u00EAncia
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+     * @param {module:api/TransferenciaBancariaApi~consultarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET40 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET41 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET41";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET41";
       }
 
 
@@ -242,15 +334,16 @@
      */
 
     /**
-     * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-     * Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
+     * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
+     * Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-     * @param {String} opts.dataSolicitacaoInicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
-     * @param {String} opts.dataSolicitacaoFinal Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idConta C\u00F3digo de identifica\u00E7\u00E3o da Conta.
+     * @param {String} opts.dataSolicitacaoInicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia.
+     * @param {String} opts.dataSolicitacaoFinal Data final da solicita\u00E7\u00E3o de transfer\u00EAncia
+     * @param {Integer} opts.status C\u00F3digo do status do processamento
      * @param {module:api/TransferenciaBancariaApi~listarTransferenciaBancariaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaCreditoContaBancariaResponse}
      */
@@ -267,7 +360,8 @@
         'limit': opts['limit'],
         'idConta': opts['idConta'],
         'dataSolicitacaoInicial': opts['dataSolicitacaoInicial'],
-        'dataSolicitacaoFinal': opts['dataSolicitacaoFinal']
+        'dataSolicitacaoFinal': opts['dataSolicitacaoFinal'],
+        'status': opts['status']
       };
       var headerParams = {
       };
@@ -287,32 +381,32 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET14 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET14Callback
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista contas banc\u00C3\u00A1rias portador
-     * Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+     * Lista contas banc\u00E1rias portador
+     * Esse recurso permite listar contas banc\u00E1rias do portador.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idConta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
-     * @param {String} opts.nomeAgencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
-     * @param {String} opts.numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-     * @param {String} opts.numeroConta N\u00C3\u00BAmero da conta
-     * @param {Integer} opts.flagContaOrigemDoc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
-     * @param {Integer} opts.idPessoaFisica C\u00C3\u00B3digo da pessoa
+     * @param {Integer} opts.idConta C\u00F3digo identificador da conta cart\u00E3o
+     * @param {String} opts.nomeAgencia Descri\u00E7\u00E3o da ag\u00EAncia
+     * @param {String} opts.numeroAgencia N\u00FAmero da ag\u00EAncia
+     * @param {String} opts.numeroConta N\u00FAmero da conta
+     * @param {Integer} opts.flagContaOrigemDoc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+     * @param {Integer} opts.idPessoaFisica C\u00F3digo da pessoa
      * @param {String} opts.favorecido Nome do favorecido
      * @param {String} opts.numeroReceiraFederal Documento do favorecido
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaBancariaPortadorResponse}
      */
-    this.listarUsingGET14 = function(opts, callback) {
+    this.listarUsingGET15 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -350,32 +444,32 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET47 operation.
-     * @callback module:api/TransferenciaBancariaApi~listarUsingGET47Callback
+     * Callback function to receive the result of the listarUsingGET49 operation.
+     * @callback module:api/TransferenciaBancariaApi~listarUsingGET49Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-     * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+     * Listar as transfer\u00EAncias banc\u00E1rias realizadas
+     * Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
      * @param {Integer} id Id Conta
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:api/TransferenciaBancariaApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {module:api/TransferenciaBancariaApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaBancariaResponse}
      */
-    this.listarUsingGET47 = function(id, opts, callback) {
+    this.listarUsingGET49 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET47";
+        throw "Missing the required parameter 'id' when calling listarUsingGET49";
       }
 
 
@@ -414,8 +508,8 @@
      */
 
     /**
-     * Cadastra uma conta banc\u00C3\u00A1ria do portador
-     * Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+     * Cadastra uma conta banc\u00E1ria do portador
+     * Esse recurso permite cadastrar contas banc\u00E1rias do portador.
      * @param {module:model/ContaBancariaPortadorPersist} persist persist
      * @param {module:api/TransferenciaBancariaApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
@@ -459,8 +553,8 @@
      */
 
     /**
-     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-     * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+     * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
+     * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
      * @param {module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest} request request
      * @param {module:api/TransferenciaBancariaApi~simularTransferenciaBancariaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse}
@@ -504,8 +598,8 @@
      */
 
     /**
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-     * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+     * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
      * @param {module:model/TransferenciaCreditoContaBancariaPersist} persist persist
      * @param {module:api/TransferenciaBancariaApi~transferenciaCreditoContaBancariaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaCreditoContaBancariaResponse}
@@ -549,8 +643,8 @@
      */
 
     /**
-     * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-     * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+     * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+     * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
      * @param {Integer} id Id Conta
      * @param {module:model/TransferenciaBancariaPersist} transferenciaBancariaPersist transferenciaBancariaPersist
      * @param {module:api/TransferenciaBancariaApi~transferirUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response

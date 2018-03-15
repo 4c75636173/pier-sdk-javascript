@@ -18,7 +18,7 @@
   /**
    * The OperacaoCredorUpdate model module.
    * @module model/OperacaoCredorUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -96,7 +96,7 @@
 
 
   /**
-   * Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o id da Opera\u00E7\u00E3o.
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
@@ -114,13 +114,13 @@
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+   * Remunera\u00E7\u00E3o Percentual.
    * @member {Number} remuneracaoPercentual
    */
   exports.prototype['remuneracaoPercentual'] = undefined;
 
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+   * Remunera\u00E7\u00E3o Fixa.
    * @member {Number} remuneracaoFixa
    */
   exports.prototype['remuneracaoFixa'] = undefined;
@@ -156,13 +156,13 @@
   exports.prototype['flagTaxaFixada'] = undefined;
 
   /**
-   * Plano m\u00C3\u00ADnimo da regra.
+   * Plano m\u00EDnimo da regra.
    * @member {Integer} planoMinimo
    */
   exports.prototype['planoMinimo'] = undefined;
 
   /**
-   * Plano m\u00C3\u00A1ximo da regra.
+   * Plano m\u00E1ximo da regra.
    * @member {Integer} planoMaximo
    */
   exports.prototype['planoMaximo'] = undefined;

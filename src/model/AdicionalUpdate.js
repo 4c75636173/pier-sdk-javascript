@@ -18,7 +18,7 @@
   /**
    * The AdicionalUpdate model module.
    * @module model/AdicionalUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -100,13 +100,13 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.
+   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.
+   * N\u00FAmero do CPF ou CNPJ do Adicional.
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
@@ -118,19 +118,19 @@
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do Documento de Identidade do Adicional.
+   * N\u00FAmero do Documento de Identidade do Adicional.
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.
+   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
@@ -142,13 +142,13 @@
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+   * Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
+   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
    * @member {Integer} idParentesco
    */
   exports.prototype['idParentesco'] = undefined;

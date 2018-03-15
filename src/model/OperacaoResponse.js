@@ -18,12 +18,12 @@
   /**
    * The OperacaoResponse model module.
    * @module model/OperacaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>OperacaoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+   * Representa\u00E7\u00E3o da resposta do recurso Operacao
    * @alias module:model/OperacaoResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    * @member {String} codigoProcessamentoCancelamento
    */
   exports.prototype['codigoProcessamentoCancelamento'] = undefined;
 
   /**
-   * Nome da opera\u00C3\u00A7\u00C3\u00A3o
+   * Nome da opera\u00E7\u00E3o
    * @member {String} nomeOperacao
    */
   exports.prototype['nomeOperacao'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de juros
+   * Flag indicativa para crobran\u00E7a de juros
    * @member {Boolean} flagCobraJuros
    */
   exports.prototype['flagCobraJuros'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de tarifas
+   * Flag indicativa para crobran\u00E7a de tarifas
    * @member {Boolean} flagCobraTarifa
    */
   exports.prototype['flagCobraTarifa'] = undefined;
 
   /**
-   * Quantidade de meses para car\u00C3\u00AAncia
+   * Quantidade de meses para car\u00EAncia
    * @member {Integer} carencia
    */
   exports.prototype['carencia'] = undefined;
 
   /**
-   * Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+   * Permitir transa\u00E7\u00F5es parceladas
    * @member {Boolean} flagPermitirParcelamento
    */
   exports.prototype['flagPermitirParcelamento'] = undefined;

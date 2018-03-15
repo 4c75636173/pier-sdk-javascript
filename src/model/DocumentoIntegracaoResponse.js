@@ -18,12 +18,12 @@
   /**
    * The DocumentoIntegracaoResponse model module.
    * @module model/DocumentoIntegracaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoIntegracaoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Documento Integra\u00C3\u00A7\u00C3\u00A3o
+   * Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
    * @alias module:model/DocumentoIntegracaoResponse
    * @class
    */

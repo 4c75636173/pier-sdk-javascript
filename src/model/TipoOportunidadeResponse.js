@@ -18,12 +18,12 @@
   /**
    * The TipoOportunidadeResponse model module.
    * @module model/TipoOportunidadeResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TipoOportunidadeResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidade
+   * Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
    * @alias module:model/TipoOportunidadeResponse
    * @class
    * @param id
@@ -63,7 +63,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do TipoOportunidade
+   * C\u00F3digo identificador do TipoOportunidade
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -75,7 +75,7 @@
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+   * Flag que representa se o tipo oportunidade est\u00E1 ativo
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

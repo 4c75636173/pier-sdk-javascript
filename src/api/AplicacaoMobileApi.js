@@ -18,7 +18,7 @@
   /**
    * AplicacaoMobile service.
    * @module api/AplicacaoMobileApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Atualiza Aplicacao Mobile
      * Esse recurso permite atualizar aplicacao mobile.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id).
      * @param {module:model/AplicacaoMobileUpdate} update update
      * @param {module:api/AplicacaoMobileApi~atualizarUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AplicacaoMobileResponse}
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET2 operation.
-     * @callback module:api/AplicacaoMobileApi~listarUsingGET2Callback
+     * Callback function to receive the result of the listarUsingGET3 operation.
+     * @callback module:api/AplicacaoMobileApi~listarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAplicacaoMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -94,17 +94,17 @@
 
     /**
      * Lista os aplicacoes mobile cadastradas
-     * Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
+     * Este m\u00E9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.id Identificador da Aplicacao Mobile
      * @param {Integer} opts.idPlataformaMobile Identificador da Plataforma Mobile
-     * @param {module:api/AplicacaoMobileApi~listarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AplicacaoMobileApi~listarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAplicacaoMobileResponse}
      */
-    this.listarUsingGET2 = function(opts, callback) {
+    this.listarUsingGET3 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

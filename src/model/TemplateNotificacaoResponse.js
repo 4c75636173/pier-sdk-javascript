@@ -18,12 +18,12 @@
   /**
    * The TemplateNotificacaoResponse model module.
    * @module model/TemplateNotificacaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TemplateNotificacaoResponse</code>.
-   * Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+   * Objeto de Notifica\u00E7\u00E3o EMAIL
    * @alias module:model/TemplateNotificacaoResponse
    * @class
    */
@@ -84,13 +84,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo Identificador.
+   * C\u00F3digo Identificador.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
    * @member {Integer} idConfiguracaoEmail
    */
   exports.prototype['idConfiguracaoEmail'] = undefined;
@@ -102,13 +102,13 @@
   exports.prototype['tipoLayout'] = undefined;
 
   /**
-   * Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo da notifica\u00E7\u00E3o.
    * @member {module:model/TemplateNotificacaoResponse.TipoNotificacaoEnum} tipoNotificacao
    */
   exports.prototype['tipoNotificacao'] = undefined;
 
   /**
-   * Template padr\u00C3\u00A3o.
+   * Template padr\u00E3o.
    * @member {String} templatePadrao
    */
   exports.prototype['templatePadrao'] = undefined;
@@ -126,13 +126,13 @@
   exports.prototype['assunto'] = undefined;
 
   /**
-   * Data da inclus\u00C3\u00A3o.
+   * Data da inclus\u00E3o.
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data altera\u00C3\u00A7\u00C3\u00A3o.
+   * Data altera\u00E7\u00E3o.
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;

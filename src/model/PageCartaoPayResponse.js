@@ -18,12 +18,12 @@
   /**
    * The PageCartaoPayResponse model module.
    * @module model/PageCartaoPayResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageCartaoPayResponse</code>.
-   * P\u00C3\u00A1gina de resposta da listagem de cart\u00C3\u00B5es tokenizados
+   * P\u00E1gina de resposta da listagem de cart\u00F5es tokenizados
    * @alias module:model/PageCartaoPayResponse
    * @class
    */

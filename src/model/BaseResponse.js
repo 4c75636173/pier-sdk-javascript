@@ -18,36 +18,39 @@
   /**
    * The BaseResponse model module.
    * @module model/BaseResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>BaseResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Base
+   * Representa\u00E7\u00E3o do recurso Base
    * @alias module:model/BaseResponse
    * @class
    * @param id
    * @param servidor
    * @param usuario
-   * @param senha
    * @param nomeBase
    * @param senhaCriptografada
    * @param domain
    * @param nomeBaseControleAcesso
    * @param servidorControleAcesso
+   * @param nomeBaseUsuarios
+   * @param servidorUsuarios
    */
-  var exports = function(id, servidor, usuario, senha, nomeBase, senhaCriptografada, domain, nomeBaseControleAcesso, servidorControleAcesso) {
+  var exports = function(id, servidor, usuario, nomeBase, senhaCriptografada, domain, nomeBaseControleAcesso, servidorControleAcesso, nomeBaseUsuarios, servidorUsuarios) {
 
     this['id'] = id;
     this['servidor'] = servidor;
     this['usuario'] = usuario;
-    this['senha'] = senha;
     this['nomeBase'] = nomeBase;
     this['senhaCriptografada'] = senhaCriptografada;
     this['domain'] = domain;
     this['nomeBaseControleAcesso'] = nomeBaseControleAcesso;
 
     this['servidorControleAcesso'] = servidorControleAcesso;
+    this['nomeBaseUsuarios'] = nomeBaseUsuarios;
+    this['servidorUsuarios'] = servidorUsuarios;
+
   };
 
   /**
@@ -70,9 +73,6 @@
       if (data.hasOwnProperty('usuario')) {
         obj['usuario'] = ApiClient.convertToType(data['usuario'], 'String');
       }
-      if (data.hasOwnProperty('senha')) {
-        obj['senha'] = ApiClient.convertToType(data['senha'], 'String');
-      }
       if (data.hasOwnProperty('nomeBase')) {
         obj['nomeBase'] = ApiClient.convertToType(data['nomeBase'], 'String');
       }
@@ -91,13 +91,22 @@
       if (data.hasOwnProperty('servidorControleAcesso')) {
         obj['servidorControleAcesso'] = ApiClient.convertToType(data['servidorControleAcesso'], 'String');
       }
+      if (data.hasOwnProperty('nomeBaseUsuarios')) {
+        obj['nomeBaseUsuarios'] = ApiClient.convertToType(data['nomeBaseUsuarios'], 'String');
+      }
+      if (data.hasOwnProperty('servidorUsuarios')) {
+        obj['servidorUsuarios'] = ApiClient.convertToType(data['servidorUsuarios'], 'String');
+      }
+      if (data.hasOwnProperty('flagCluster')) {
+        obj['flagCluster'] = ApiClient.convertToType(data['flagCluster'], 'Boolean');
+      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00C3\u00B3digo identificador da base
+   * C\u00F3digo identificador da base
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -109,16 +118,10 @@
   exports.prototype['servidor'] = undefined;
 
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
-
-  /**
-   * Senha
-   * @member {String} senha
-   */
-  exports.prototype['senha'] = undefined;
 
   /**
    * Nome da base
@@ -133,7 +136,7 @@
   exports.prototype['senhaCriptografada'] = undefined;
 
   /**
-   * Dom\u00C3\u00ADnio da base
+   * Dom\u00EDnio da base
    * @member {String} domain
    */
   exports.prototype['domain'] = undefined;
@@ -145,7 +148,7 @@
   exports.prototype['nomeBaseControleAcesso'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do identificador do emissor
+   * C\u00F3digo do identificador do emissor
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
@@ -155,6 +158,24 @@
    * @member {String} servidorControleAcesso
    */
   exports.prototype['servidorControleAcesso'] = undefined;
+
+  /**
+   * Nome da base de usu\u00E1rios
+   * @member {String} nomeBaseUsuarios
+   */
+  exports.prototype['nomeBaseUsuarios'] = undefined;
+
+  /**
+   * Servidor do controle de acesso
+   * @member {String} servidorUsuarios
+   */
+  exports.prototype['servidorUsuarios'] = undefined;
+
+  /**
+   * Flag Cluester
+   * @member {Boolean} flagCluster
+   */
+  exports.prototype['flagCluster'] = undefined;
 
 
 

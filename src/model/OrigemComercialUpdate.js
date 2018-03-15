@@ -18,12 +18,12 @@
   /**
    * The OrigemComercialUpdate model module.
    * @module model/OrigemComercialUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>OrigemComercialUpdate</code>.
-   * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
+   * Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
    * @alias module:model/OrigemComercialUpdate
    * @class
    */
@@ -142,7 +142,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+   * Descri\u00E7\u00E3o da origem comercial
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
@@ -172,55 +172,55 @@
   exports.prototype['status'] = undefined;
 
   /**
-   * Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+   * Indica se permite pr\u00E9 aprova\u00E7\u00E3o
    * @member {Boolean} flagPreAprovado
    */
   exports.prototype['flagPreAprovado'] = undefined;
 
   /**
-   * Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+   * Indica se permite aprova\u00E7\u00E3o imediata
    * @member {Boolean} flagAprovacaoImediata
    */
   exports.prototype['flagAprovacaoImediata'] = undefined;
 
   /**
-   * Nome fantasia impresso no pl\u00C3\u00A1stico
+   * Nome fantasia impresso no pl\u00E1stico
    * @member {String} nomeFantasiaPlastico
    */
   exports.prototype['nomeFantasiaPlastico'] = undefined;
 
   /**
-   * Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+   * Indica se permite cart\u00E3o provis\u00F3rio
    * @member {Boolean} flagCartaoProvisorio
    */
   exports.prototype['flagCartaoProvisorio'] = undefined;
 
   /**
-   * Indica se permite cart\u00C3\u00A3o definitivo
+   * Indica se permite cart\u00E3o definitivo
    * @member {Boolean} flagCartaoDefinitivo
    */
   exports.prototype['flagCartaoDefinitivo'] = undefined;
 
   /**
-   * Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+   * Usu\u00E1rio para autentica\u00E7\u00E3o
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
 
   /**
-   * Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+   * Senha para autentica\u00E7\u00E3o
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;
 
   /**
-   * Indica se \u00C3\u00A9 origem externa
+   * Indica se \u00E9 origem externa
    * @member {Boolean} flagOrigemExterna
    */
   exports.prototype['flagOrigemExterna'] = undefined;
 
   /**
-   * Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+   * Indica se h\u00E1 modifica\u00E7\u00E3o
    * @member {Boolean} flagModificado
    */
   exports.prototype['flagModificado'] = undefined;
@@ -232,13 +232,13 @@
   exports.prototype['flagEnviaFaturaUsuario'] = undefined;
 
   /**
-   * Indica se permite cr\u00C3\u00A9dito de faturamento
+   * Indica se permite cr\u00E9dito de faturamento
    * @member {Boolean} flagCreditoFaturamento
    */
   exports.prototype['flagCreditoFaturamento'] = undefined;
 
   /**
-   * Indica se concede limite provis\u00C3\u00B3rio
+   * Indica se concede limite provis\u00F3rio
    * @member {Boolean} flagConcedeLimiteProvisorio
    */
   exports.prototype['flagConcedeLimiteProvisorio'] = undefined;
@@ -256,7 +256,7 @@
   exports.prototype['flagEmbossingLoja'] = undefined;
 
   /**
-   * Indica se realiza consulta pr\u00C3\u00A9via
+   * Indica se realiza consulta pr\u00E9via
    * @member {Boolean} flagConsultaPrevia
    */
   exports.prototype['flagConsultaPrevia'] = undefined;

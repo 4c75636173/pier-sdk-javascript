@@ -18,12 +18,12 @@
   /**
    * The TipoCampanhaResponse model module.
    * @module model/TipoCampanhaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TipoCampanhaResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha
+   * Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha
    * @alias module:model/TipoCampanhaResponse
    * @class
    */
@@ -62,7 +62,7 @@
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha
+   * Descri\u00E7\u00E3o do tipo de campanha
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The SocioAprovadoResponse model module.
    * @module model/SocioAprovadoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -104,7 +104,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do S\u00C3\u00B3cio (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
@@ -116,7 +116,7 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
+   * N\u00FAmero do CPF, quando PF.
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
@@ -128,19 +128,19 @@
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Identidade.
+   * N\u00FAmero da Identidade.
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Org\u00C3\u00A3o expedidor do RG.
+   * Org\u00E3o expedidor do RG.
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
@@ -152,37 +152,37 @@
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data emiss\u00C3\u00A3o da Identidade
+   * Data emiss\u00E3o da Identidade
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * Estado civil do s\u00C3\u00B3cio
+   * Estado civil do s\u00F3cio
    * @member {String} estadoCivil
    */
   exports.prototype['estadoCivil'] = undefined;
 
   /**
-   * Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+   * Profiss\u00E3o do s\u00F3cio
    * @member {String} profissao
    */
   exports.prototype['profissao'] = undefined;
 
   /**
-   * Nacionalidade do s\u00C3\u00B3cio
+   * Nacionalidade do s\u00F3cio
    * @member {String} nacionalidade
    */
   exports.prototype['nacionalidade'] = undefined;
 
   /**
-   * Email do s\u00C3\u00B3cio
+   * Email do s\u00F3cio
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Informa os telefones do s\u00C3\u00B3cio
+   * Informa os telefones do s\u00F3cio
    * @member {Array.<module:model/TelefonePessoaAprovadaResponse>} telefones
    */
   exports.prototype['telefones'] = undefined;

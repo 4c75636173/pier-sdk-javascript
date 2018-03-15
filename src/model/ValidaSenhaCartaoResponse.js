@@ -18,12 +18,12 @@
   /**
    * The ValidaSenhaCartaoResponse model module.
    * @module model/ValidaSenhaCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ValidaSenhaCartaoResponse</code>.
-   * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+   * Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
    * @alias module:model/ValidaSenhaCartaoResponse
    * @class
    */
@@ -74,13 +74,13 @@
   exports.prototype['mensagem'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    * @member {Integer} idStatusCartao
    */
   exports.prototype['idStatusCartao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    * @member {String} statusCartao
    */
   exports.prototype['statusCartao'] = undefined;
@@ -92,7 +92,7 @@
   exports.prototype['quantidadeTentativas'] = undefined;
 
   /**
-   * Quantidade m\u00C3\u00A1xima tentativas permitidas
+   * Quantidade m\u00E1xima tentativas permitidas
    * @member {Integer} quantidadeMaximaTentativas
    */
   exports.prototype['quantidadeMaximaTentativas'] = undefined;

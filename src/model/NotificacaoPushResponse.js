@@ -18,7 +18,7 @@
   /**
    * The NotificacaoPushResponse model module.
    * @module model/NotificacaoPushResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -102,49 +102,49 @@
   exports.prototype['dataEnvio'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Nome do tipoEvento da notifica\u00E7\u00E3o
    * @member {module:model/NotificacaoPushResponse.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Status de envio da notifica\u00E7\u00E3o
    * @member {module:model/NotificacaoPushResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+   * Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
    * @member {String} tokenDispositivo
    */
   exports.prototype['tokenDispositivo'] = undefined;
 
   /**
-   * T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * T\u00EDtulo da notifica\u00E7\u00E3o enviada.
    * @member {String} titulo
    */
   exports.prototype['titulo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
@@ -156,7 +156,7 @@
   exports.prototype['plataforma'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;

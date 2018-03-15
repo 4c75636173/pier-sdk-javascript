@@ -18,7 +18,7 @@
   /**
    * The LancamentoFaturaResponse model module.
    * @module model/LancamentoFaturaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -148,43 +148,43 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
    * @member {String} descricaoTipoTransacao
    */
   exports.prototype['descricaoTipoTransacao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento
+   * C\u00F3digo identificador do tipo do evento
    * @member {Integer} idTipoEvento
    */
   exports.prototype['idTipoEvento'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+   * Descri\u00E7\u00E3o do tipo do evento
    * @member {String} descricaoTipoEvento
    */
   exports.prototype['descricaoTipoEvento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    * @member {Integer} idEvento
    */
   exports.prototype['idEvento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+   * Descri\u00E7\u00E3o complementar do evento
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
@@ -202,7 +202,7 @@
   exports.prototype['valorUSD'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da parcela
+   * N\u00FAmero da parcela
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
@@ -214,7 +214,7 @@
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Data da transa\u00C3\u00A7\u00C3\u00A3o
+   * Data da transa\u00E7\u00E3o
    * @member {String} dataHoraTransacao
    */
   exports.prototype['dataHoraTransacao'] = undefined;
@@ -226,7 +226,7 @@
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+   * Descri\u00E7\u00E3o do estabelecimento
    * @member {String} descricaoEstabelecimento
    */
   exports.prototype['descricaoEstabelecimento'] = undefined;
@@ -238,49 +238,49 @@
   exports.prototype['nomeFantasiaEstabelecimento'] = undefined;
 
   /**
-   * Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+   * Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
    * @member {Boolean} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+   * C\u00F3digo identificador do MCC (Merchant Category Codes)
    * @member {Integer} idMCC
    */
   exports.prototype['idMCC'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do grupo MCC
+   * C\u00F3digo identificador do grupo MCC
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+   * Descri\u00E7\u00E3o do grupo MCC
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+   * Indica se o portador do cart\u00E3o \u00E9 o titular da conta
    * @member {Boolean} titular
    */
   exports.prototype['titular'] = undefined;
 
   /**
-   * Nome impresso no cart\u00C3\u00A3o
+   * Nome impresso no cart\u00E3o
    * @member {String} nomePortador
    */
   exports.prototype['nomePortador'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+   * N\u00FAmero do cart\u00E3o mascarado
    * @member {String} numeroCartaoMascarado
    */
   exports.prototype['numeroCartaoMascarado'] = undefined;
 
   /**
-   * Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
    * @member {Boolean} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;
@@ -292,7 +292,7 @@
   exports.prototype['valorTaxaEmbarque'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
    * @member {String} descricaoAbreviada
    */
   exports.prototype['descricaoAbreviada'] = undefined;

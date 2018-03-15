@@ -18,7 +18,7 @@
   /**
    * The PlanoCampanhaPersist model module.
    * @module model/PlanoCampanhaPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**

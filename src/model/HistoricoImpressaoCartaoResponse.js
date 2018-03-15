@@ -18,12 +18,12 @@
   /**
    * The HistoricoImpressaoCartaoResponse model module.
    * @module model/HistoricoImpressaoCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>HistoricoImpressaoCartaoResponse</code>.
-   * Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o
+   * Hist\u00F3rico Impress\u00E3o Cart\u00E3o
    * @alias module:model/HistoricoImpressaoCartaoResponse
    * @class
    * @param id
@@ -71,31 +71,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).
    * @member {Integer} idStatusImpressaoCartao
    */
   exports.prototype['idStatusImpressaoCartao'] = undefined;
 
   /**
-   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.
+   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.
    * @member {String} mensagemHistorico
    */
   exports.prototype['mensagemHistorico'] = undefined;
 
   /**
-   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+   * Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.
    * @member {String} dataHistorico
    */
   exports.prototype['dataHistorico'] = undefined;

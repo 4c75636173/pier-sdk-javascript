@@ -18,12 +18,12 @@
   /**
    * The ConfiguracaoRegistroCobrancaResponse model module.
    * @module model/ConfiguracaoRegistroCobrancaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ConfiguracaoRegistroCobrancaResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
+   * Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
    * @alias module:model/ConfiguracaoRegistroCobrancaResponse
    * @class
    */
@@ -108,19 +108,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo identificador da configura\u00E7\u00E3o.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do emissor.
+   * C\u00F3digo do emissor.
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    * @member {Integer} codigoBanco
    */
   exports.prototype['codigoBanco'] = undefined;
@@ -192,7 +192,7 @@
   exports.prototype['uriAdicional'] = undefined;
 
   /**
-   * Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+   * Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
    * @member {module:model/ConfiguracaoRegistroCobrancaResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

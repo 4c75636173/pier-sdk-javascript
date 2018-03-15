@@ -5,12 +5,12 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarTipoFaturamentoUsingPUT**](FaturamentoApi.md#alterarTipoFaturamentoUsingPUT) | **PUT** /api/tipos-faturamento/{id} | Alterar Faturamento
-[**cadastrarFaturamentoPorContaUsingPOST**](FaturamentoApi.md#cadastrarFaturamentoPorContaUsingPOST) | **POST** /api/tipos-faturamento-conta | Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+[**cadastrarFaturamentoPorContaUsingPOST**](FaturamentoApi.md#cadastrarFaturamentoPorContaUsingPOST) | **POST** /api/tipos-faturamento-conta | Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
 [**cadastrarTipoFaturamentoUsingPOST**](FaturamentoApi.md#cadastrarTipoFaturamentoUsingPOST) | **POST** /api/tipos-faturamento | Adiciona um novo faturamento
 [**consultarTipoFaturamentoUsingGET**](FaturamentoApi.md#consultarTipoFaturamentoUsingGET) | **GET** /api/tipos-faturamento/{id} | Consultar Faturamento por id
-[**desativarFaturamentoPorContaUsingPOST**](FaturamentoApi.md#desativarFaturamentoPorContaUsingPOST) | **POST** /api/tipos-faturamento-conta/{id}/desativar | Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
-[**desativarTipoFaturamentoUsingPOST**](FaturamentoApi.md#desativarTipoFaturamentoUsingPOST) | **POST** /api/tipos-faturamento/{id}/desativar | Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
-[**listarFaturamentoPorContaUsingGET**](FaturamentoApi.md#listarFaturamentoPorContaUsingGET) | **GET** /api/tipos-faturamento-conta | Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+[**desativarFaturamentoPorContaUsingPOST**](FaturamentoApi.md#desativarFaturamentoPorContaUsingPOST) | **POST** /api/tipos-faturamento-conta/{id}/desativar | Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
+[**desativarTipoFaturamentoUsingPOST**](FaturamentoApi.md#desativarTipoFaturamentoUsingPOST) | **POST** /api/tipos-faturamento/{id}/desativar | Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
+[**listarFaturamentoPorContaUsingGET**](FaturamentoApi.md#listarFaturamentoPorContaUsingGET) | **GET** /api/tipos-faturamento-conta | Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
 [**listarTipoFaturamentoUsingGET**](FaturamentoApi.md#listarTipoFaturamentoUsingGET) | **GET** /api/tipos-faturamento | Lista Tipos de Faturamento
 
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 Alterar Faturamento
 
-Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
 
 ### Example
 ```javascript
@@ -67,9 +67,9 @@ No authorization required
 # **cadastrarFaturamentoPorContaUsingPOST**
 > TipoFaturamentoPorContaResponse cadastrarFaturamentoPorContaUsingPOST(tipoFaturamentoPorContaPersist)
 
-Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
+Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
 
-Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
 
 ### Example
 ```javascript
@@ -115,7 +115,7 @@ No authorization required
 
 Adiciona um novo faturamento
 
-Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
 
 ### Example
 ```javascript
@@ -205,9 +205,9 @@ No authorization required
 # **desativarFaturamentoPorContaUsingPOST**
 > TipoFaturamentoPorContaResponse desativarFaturamentoPorContaUsingPOST(id, modificadoPor)
 
-Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
+Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
 
-Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
 
 ### Example
 ```javascript
@@ -254,9 +254,9 @@ No authorization required
 # **desativarTipoFaturamentoUsingPOST**
 > TipoFaturamentoResponse desativarTipoFaturamentoUsingPOST(id)
 
-Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
+Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
 
-Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
 
 ### Example
 ```javascript
@@ -300,9 +300,9 @@ No authorization required
 # **listarFaturamentoPorContaUsingGET**
 > PageTipoFaturamentoPorContaResponse listarFaturamentoPorContaUsingGET(opts)
 
-Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
+Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
 
-Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
+Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
 
 ### Example
 ```javascript
@@ -311,16 +311,16 @@ var Pier = require('Pier');
 var apiInstance = new Pier.FaturamentoApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTipoFaturamentoPorConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-  'status': true, // {Boolean} Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
-  'idConta': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-  'idTipoFaturamento': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id).
-  'dataHoraInclusao': "dataHoraInclusao_example", // {String} Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-  'dataHoraCancelamento': "dataHoraCancelamento_example", // {String} Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-  'modificadoPor': "modificadoPor_example" // {String} Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idTipoFaturamentoPorConta': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+  'status': true, // {Boolean} Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
+  'idConta': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+  'idTipoFaturamento': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id).
+  'dataHoraInclusao': "dataHoraInclusao_example", // {String} Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'dataHoraCancelamento': "dataHoraCancelamento_example", // {String} Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+  'modificadoPor': "modificadoPor_example" // {String} Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
 };
 
 var callback = function(error, data, response) {
@@ -337,16 +337,16 @@ api.listarFaturamentoPorContaUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTipoFaturamentoPorConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). | [optional] 
- **status** | **Boolean**| Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta. | [optional] 
- **idConta** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id). | [optional] 
- **idTipoFaturamento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id). | [optional] 
- **dataHoraInclusao** | **String**| Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
- **dataHoraCancelamento** | **String**| Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
- **modificadoPor** | **String**| Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro. | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idTipoFaturamentoPorConta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). | [optional] 
+ **status** | **Boolean**| Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta. | [optional] 
+ **idConta** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id). | [optional] 
+ **idTipoFaturamento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id). | [optional] 
+ **dataHoraInclusao** | **String**| Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **dataHoraCancelamento** | **String**| Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. | [optional] 
+ **modificadoPor** | **String**| Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro. | [optional] 
 
 ### Return type
 
@@ -367,7 +367,7 @@ No authorization required
 
 Lista Tipos de Faturamento
 
-Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
+Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
 
 ### Example
 ```javascript
@@ -376,13 +376,13 @@ var Pier = require('Pier');
 var apiInstance = new Pier.FaturamentoApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'idTipoFaturamento': 789, // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
-  'descricao': "descricao_example", // {String} Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
-  'flagApenasDemonstrativo': true, // {Boolean} Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
-  'idConvenio': 789 // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'idTipoFaturamento': 789, // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+  'descricao': "descricao_example", // {String} Descri\u00E7\u00E3o do tipo de faturamento.
+  'flagApenasDemonstrativo': true, // {Boolean} Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+  'idConvenio': 789 // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
 };
 
 var callback = function(error, data, response) {
@@ -399,13 +399,13 @@ api.listarTipoFaturamentoUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **idTipoFaturamento** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id). | [optional] 
- **descricao** | **String**| Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento. | [optional] 
- **flagApenasDemonstrativo** | **Boolean**| Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo. | [optional] 
- **idConvenio** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento. | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **idTipoFaturamento** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id). | [optional] 
+ **descricao** | **String**| Descri\u00E7\u00E3o do tipo de faturamento. | [optional] 
+ **flagApenasDemonstrativo** | **Boolean**| Flag que representa que o faturamento ser\u00E1 apenas demonstrativo. | [optional] 
+ **idConvenio** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento. | [optional] 
 
 ### Return type
 

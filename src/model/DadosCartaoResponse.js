@@ -18,12 +18,12 @@
   /**
    * The DadosCartaoResponse model module.
    * @module model/DadosCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DadosCartaoResponse</code>.
-   * Objeto Dados Cart\u00C3\u00A3o
+   * Objeto Dados Cart\u00E3o
    * @alias module:model/DadosCartaoResponse
    * @class
    */
@@ -105,7 +105,7 @@
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * N\u00FAmero do cart\u00E3o.
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
@@ -117,7 +117,7 @@
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * CVV2 do cart\u00C3\u00A3o.
+   * CVV2 do cart\u00E3o.
    * @member {String} cvv2
    */
   exports.prototype['cvv2'] = undefined;
@@ -135,19 +135,19 @@
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Identificador da cart\u00C3\u00A3o do portador.
+   * Identificador da cart\u00E3o do portador.
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
    * @member {String} numeroContaCorente
    */
   exports.prototype['numeroContaCorente'] = undefined;
@@ -159,19 +159,19 @@
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+   * Descri\u00E7\u00E3o do status da conta do portador.
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
 
   /**
-   * Status do cart\u00C3\u00A3o.
+   * Status do cart\u00E3o.
    * @member {Integer} idStatusCartao
    */
   exports.prototype['idStatusCartao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do status do cart\u00E3o.
    * @member {String} statusCartao
    */
   exports.prototype['statusCartao'] = undefined;

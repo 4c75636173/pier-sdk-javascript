@@ -18,12 +18,12 @@
   /**
    * The TransacaoPayQueryRequest model module.
    * @module model/TransacaoPayQueryRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TransacaoPayQueryRequest</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta
+   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
    * @alias module:model/TransacaoPayQueryRequest
    * @class
    */
@@ -70,7 +70,7 @@
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
@@ -82,7 +82,7 @@
   exports.prototype['origem'] = undefined;
 
   /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * Tipo de ordena\u00E7\u00E3o dos registros.
    * @member {Array.<String>} sort
    */
   exports.prototype['sort'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The IntegrarArquivoRequest model module.
    * @module model/IntegrarArquivoRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>IntegrarArquivoRequest</code>.
-   * Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+   * Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
    * @alias module:model/IntegrarArquivoRequest
    * @class
    */
@@ -43,8 +43,8 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('cpf')) {
-        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
+      if (data.hasOwnProperty('numeroReceitaFederal')) {
+        obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'String');
       }
     }
     return obj;
@@ -52,10 +52,10 @@
 
 
   /**
-   * CPF do cliente de Arquivos a serem integrados
-   * @member {String} cpf
+   * N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+   * @member {String} numeroReceitaFederal
    */
-  exports.prototype['cpf'] = undefined;
+  exports.prototype['numeroReceitaFederal'] = undefined;
 
 
 

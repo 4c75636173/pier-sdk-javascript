@@ -18,12 +18,12 @@
   /**
    * The WebHookResponse model module.
    * @module model/WebHookResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>WebHookResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+   * Representa\u00E7\u00E3o do recurso WebHook
    * @alias module:model/WebHookResponse
    * @class
    * @param id
@@ -85,7 +85,7 @@
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * M\u00E9todo que a ser chamado pelo WebHook
    * @member {module:model/WebHookResponse.MetodoEnum} metodo
    */
   exports.prototype['metodo'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobileResponse model module.
    * @module model/AplicacaoMobileResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -110,19 +110,19 @@
   exports.prototype['som'] = undefined;
 
   /**
-   * Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
    * @member {String} icone
    */
   exports.prototype['icone'] = undefined;
 
   /**
-   * Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o certificado da aplica\u00E7\u00E3o.
    * @member {String} certificadoBase64
    */
   exports.prototype['certificadoBase64'] = undefined;
 
   /**
-   * Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta a senha da aplica\u00E7\u00E3o.
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;

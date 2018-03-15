@@ -18,7 +18,7 @@
   /**
    * ConductorPay service.
    * @module api/ConductorPayApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,10 +41,10 @@
      */
 
     /**
-     * Atualiza a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite atualizar a chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o de um dispositivo a partir do seu identificador (id).
+     * Atualiza a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o
+     * Este m\u00E9todo permite atualizar a chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o de um dispositivo a partir do seu identificador (id).
      * @param {String} deviceId Device id criptografado
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
      * @param {module:api/ConductorPayApi~atualizarChaveUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayAtualizarChaveResponse}
      */
@@ -94,10 +94,10 @@
      */
 
     /**
-     * Atualiza os dados do cart\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite atualizar os dados do cart\u00C3\u00A3o tokenizados de um dispositivo a partir do seu identificador (id).
+     * Atualiza os dados do cart\u00E3o
+     * Este m\u00E9todo permite atualizar os dados do cart\u00E3o tokenizados de um dispositivo a partir do seu identificador (id).
      * @param {String} deviceId Device id criptografado
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
      * @param {module:model/CartaoPayUpdate} update update
      * @param {module:api/ConductorPayApi~atualizarUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayResponse}
@@ -153,10 +153,10 @@
      */
 
     /**
-     * Confirma a atualiza\u00C3\u00A7\u00C3\u00A3o da chave de transa\u00C3\u00A7\u00C3\u00A3o
-     * Este met\u00C3\u00B3do recebe confirma\u00C3\u00A7\u00C3\u00A3o de atualiza\u00C3\u00A7\u00C3\u00A3o de chave transa\u00C3\u00A7\u00C3\u00A3o.
+     * Confirma a atualiza\u00E7\u00E3o da chave de transa\u00E7\u00E3o
+     * Este met\u00F3do recebe confirma\u00E7\u00E3o de atualiza\u00E7\u00E3o de chave transa\u00E7\u00E3o.
      * @param {String} deviceId Device id criptografado
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
      * @param {module:model/CartaoPayKeyUpdate} update update
      * @param {module:api/ConductorPayApi~confirmaAtualizacaoChaveUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayConfirmarChaveResponse}
@@ -204,32 +204,32 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/ConductorPayApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/ConductorPayApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Apresenta os dados de um determinado cart\u00C3\u00A3o
-     * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+     * Apresenta os dados de um determinado cart\u00E3o
+     * Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
      * @param {String} deviceId Device id criptografado
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
-     * @param {module:api/ConductorPayApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id).
+     * @param {module:api/ConductorPayApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayDetalheResponse}
      */
-    this.consultarUsingGET7 = function(deviceId, id, callback) {
+    this.consultarUsingGET8 = function(deviceId, id, callback) {
       var postBody = null;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET8";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 
@@ -265,8 +265,8 @@
      */
 
     /**
-     * Lista os c\u00C3\u00B3digos de resposta dos recursos de transa\u00C3\u00A7\u00C3\u00A3o e consulta de conta
-     * Este m\u00C3\u00A9todo retorna a lista dos c\u00C3\u00B3digos de resposta das transa\u00C3\u00A7\u00C3\u00B5es e consulta de saque realizada no Pay.
+     * Lista os c\u00F3digos de resposta dos recursos de transa\u00E7\u00E3o e consulta de conta
+     * Este m\u00E9todo retorna a lista dos c\u00F3digos de resposta das transa\u00E7\u00F5es e consulta de saque realizada no Pay.
      * @param {module:api/ConductorPayApi~listarCodigosRespostaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -305,7 +305,7 @@
 
     /**
      * Lista os modos entradas
-     * Este recurso permite listar os modos de entrada para transa\u00C3\u00A7\u00C3\u00A3o
+     * Este recurso permite listar os modos de entrada para transa\u00E7\u00E3o
      * @param {module:api/ConductorPayApi~listarModosEntradaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -343,8 +343,8 @@
      */
 
     /**
-     * Lista as opera\u00C3\u00A7\u00C3\u00B5es
-     * Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00B5es disponiveis de transa\u00C3\u00A7\u00C3\u00A3o
+     * Lista as opera\u00E7\u00F5es
+     * Este recurso permite listar as opera\u00E7\u00F5es disponiveis de transa\u00E7\u00E3o
      * @param {module:api/ConductorPayApi~listarOperacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -383,7 +383,7 @@
 
     /**
      * Lista os tipos de terminais
-     * Este m\u00C3\u00A9todo retorna a lista dos tipos de terminais.
+     * Este m\u00E9todo retorna a lista dos tipos de terminais.
      * @param {module:api/ConductorPayApi~listarTiposTerminaisUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -421,8 +421,8 @@
      */
 
     /**
-     * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
-     * Este m\u00C3\u00A9todo retorna a lista dos tipos de transa\u00C3\u00A7\u00C3\u00B5es realizadas no Pay.
+     * Lista os tipos de transa\u00E7\u00F5es
+     * Este m\u00E9todo retorna a lista dos tipos de transa\u00E7\u00F5es realizadas no Pay.
      * @param {module:api/ConductorPayApi~listarTiposTransacoesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -452,27 +452,27 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/ConductorPayApi~listarUsingGET9Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/ConductorPayApi~listarUsingGET10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoPayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Lista os cart\u00C3\u00B5es cadastrados
-     * Este m\u00C3\u00A9todo permite listar os cart\u00C3\u00B5es cadastrado em um dispositivo.
+     * Lista os cart\u00F5es cadastrados
+     * Este m\u00E9todo permite listar os cart\u00F5es cadastrado em um dispositivo.
      * @param {Object} opts Optional parameters
      * @param {String} opts.deviceId Device id criptografado
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {module:model/String} opts.status Status do cart\u00C3\u00A3o tokenizado
-     * @param {String} opts.numeroCartao Numero do cart\u00C3\u00A3o tokenizado
-     * @param {module:api/ConductorPayApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {module:model/String} opts.status Status do cart\u00E3o tokenizado
+     * @param {String} opts.numeroCartao Numero do cart\u00E3o tokenizado
+     * @param {module:api/ConductorPayApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoPayResponse}
      */
-    this.listarUsingGET9 = function(opts, callback) {
+    this.listarUsingGET10 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -513,8 +513,8 @@
      */
 
     /**
-     * Cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
-     * Este met\u00C3\u00B3do permite a tokeniza\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o a partir dos seus dados impressos.
+     * Cria\u00E7\u00E3o de cart\u00E3o
+     * Este met\u00F3do permite a tokeniza\u00E7\u00E3o de um cart\u00E3o a partir dos seus dados impressos.
      * @param {String} deviceId Device id criptografado
      * @param {module:model/CartaoPayPersist} persist persist
      * @param {module:api/ConductorPayApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response

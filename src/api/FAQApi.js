@@ -18,7 +18,7 @@
   /**
    * FAQ service.
    * @module api/FAQApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,13 +43,13 @@
     /**
      * Adiciona uma nova FAQ
      * Adiciona uma nova FAQ
-     * @param {String} pergunta Conte\u00C3\u00BAdo da pergunta.
-     * @param {String} resposta Conte\u00C3\u00BAdo da resposta.
+     * @param {String} pergunta Conte\u00FAdo da pergunta.
+     * @param {String} resposta Conte\u00FAdo da resposta.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+     * @param {Integer} opts.relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
-     * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+     * @param {module:model/String} opts.status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
      * @param {module:api/FAQApi~adicionarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
@@ -107,13 +107,13 @@
      * Alterar FAQ
      * Alterar FAQ
      * @param {Integer} id Id
-     * @param {String} pergunta Conte\u00C3\u00BAdo da pergunta.
-     * @param {String} resposta Conte\u00C3\u00BAdo da resposta.
+     * @param {String} pergunta Conte\u00FAdo da pergunta.
+     * @param {String} resposta Conte\u00FAdo da resposta.
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+     * @param {Integer} opts.relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
-     * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+     * @param {module:model/String} opts.status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
      * @param {module:api/FAQApi~alterarUsingPUT7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/FAQApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET18 operation.
+     * @callback module:api/FAQApi~consultarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * Consultar FAQ por id
      * Consulta os detalhes de uma determinada FAQ
      * @param {Integer} id Id
-     * @param {module:api/FAQApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FAQApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET18 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
       }
 
 
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/FAQApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/FAQApi~listarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -223,20 +223,20 @@
      * Lista FAQs
      * Lista todas as FAQs
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-     * @param {String} opts.pergunta Conte\u00C3\u00BAdo da pergunta.
-     * @param {String} opts.resposta Conte\u00C3\u00BAdo da resposta.
-     * @param {Integer} opts.relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idFaq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+     * @param {String} opts.pergunta Conte\u00FAdo da pergunta.
+     * @param {String} opts.resposta Conte\u00FAdo da resposta.
+     * @param {Integer} opts.relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
      * @param {String} opts.plataforma Plataforma em que a FAQ se encaixa.
      * @param {String} opts.categoria Categoria de assunto do qual a FAQ se trata.
-     * @param {module:model/String} opts.status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-     * @param {module:api/FAQApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/String} opts.status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
+     * @param {module:api/FAQApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqResponse}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

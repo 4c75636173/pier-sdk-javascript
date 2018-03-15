@@ -18,7 +18,7 @@
   /**
    * The PessoaResponse model module.
    * @module model/PessoaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -95,31 +95,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
    * @member {String} tipo
    */
   exports.prototype['tipo'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
+   * N\u00FAmero do CPF, quando PF.
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * N\u00FAmero do CNPJ, quando PJ.
    * @member {String} cnpj
    */
   exports.prototype['cnpj'] = undefined;
@@ -131,19 +131,19 @@
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero da Identidade
+   * N\u00FAmero da Identidade
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Org\u00C3\u00A3o expedidor do RG.
+   * Org\u00E3o expedidor do RG.
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
@@ -155,7 +155,7 @@
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   * Data emiss\u00E3o da identidade no formato aaaa-MM-dd
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;

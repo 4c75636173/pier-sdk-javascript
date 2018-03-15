@@ -18,7 +18,7 @@
   /**
    * The GradePendenteRequest model module.
    * @module model/GradePendenteRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -55,7 +55,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;

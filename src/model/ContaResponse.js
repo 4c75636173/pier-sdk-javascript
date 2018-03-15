@@ -18,7 +18,7 @@
   /**
    * The ContaResponse model module.
    * @module model/ContaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -92,31 +92,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
@@ -134,19 +134,19 @@
   exports.prototype['melhorDiaCompra'] = undefined;
 
   /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
    * @member {String} dataStatusConta
    */
   exports.prototype['dataStatusConta'] = undefined;
 
   /**
-   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   * Apresenta a data em que o cart\u00E3o foi gerado.
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
    * @member {String} dataUltimaAlteracaoVencimento
    */
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;

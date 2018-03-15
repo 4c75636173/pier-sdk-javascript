@@ -18,12 +18,12 @@
   /**
    * The PageTransacoesCorrentesResponse model module.
    * @module model/PageTransacoesCorrentesResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageTransacoesCorrentesResponse</code>.
-   * Lista de Transa\u00C3\u00A7\u00C3\u00B5es Correntes
+   * Lista de Transa\u00E7\u00F5es Correntes
    * @alias module:model/PageTransacoesCorrentesResponse
    * @class
    */

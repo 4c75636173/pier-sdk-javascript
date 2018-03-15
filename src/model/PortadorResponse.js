@@ -18,7 +18,7 @@
   /**
    * The PortadorResponse model module.
    * @module model/PortadorResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -88,61 +88,61 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
    * @member {Integer} idParentesco
    */
   exports.prototype['idParentesco'] = undefined;
 
   /**
-   * Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;
 
   /**
-   * Apresenta o nome a ser impresso no cart\u00C3\u00A3o.
+   * Apresenta o nome a ser impresso no cart\u00E3o.
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
+   * Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
+   * Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.
    * @member {Integer} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;
 
   /**
-   * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.
    * @member {String} dataCadastroPortador
    */
   exports.prototype['dataCadastroPortador'] = undefined;
 
   /**
-   * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.
    * @member {String} dataCancelamentoPortador
    */
   exports.prototype['dataCancelamentoPortador'] = undefined;

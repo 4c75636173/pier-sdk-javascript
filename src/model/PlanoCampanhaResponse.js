@@ -18,12 +18,12 @@
   /**
    * The PlanoCampanhaResponse model module.
    * @module model/PlanoCampanhaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PlanoCampanhaResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+   * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
    * @alias module:model/PlanoCampanhaResponse
    * @class
    */
@@ -82,7 +82,7 @@
   exports.prototype['taxa'] = undefined;
 
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

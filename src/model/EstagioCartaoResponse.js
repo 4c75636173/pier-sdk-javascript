@@ -18,12 +18,12 @@
   /**
    * The EstagioCartaoResponse model module.
    * @module model/EstagioCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>EstagioCartaoResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
+   * Representa\u00E7\u00E3o do recurso Est\u00E1gio Cart\u00E3o
    * @alias module:model/EstagioCartaoResponse
    * @class
    * @param id
@@ -58,13 +58,13 @@
 
 
   /**
-   * Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Id do est\u00E1gio cart\u00E3o
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Nome do est\u00E1gio cart\u00E3o
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

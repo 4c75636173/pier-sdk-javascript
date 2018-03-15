@@ -18,12 +18,12 @@
   /**
    * The CartaoPayUpdate model module.
    * @module model/CartaoPayUpdate
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>CartaoPayUpdate</code>.
-   * Represneta\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+   * Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
    * @alias module:model/CartaoPayUpdate
    * @class
    * @param status
@@ -53,7 +53,7 @@
 
 
   /**
-   * Status do cart\u00C3\u00A3o
+   * Status do cart\u00E3o
    * @member {module:model/CartaoPayUpdate.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

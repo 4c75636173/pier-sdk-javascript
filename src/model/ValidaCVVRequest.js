@@ -18,12 +18,12 @@
   /**
    * The ValidaCVVRequest model module.
    * @module model/ValidaCVVRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ValidaCVVRequest</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o de valida\u00C3\u00A7\u00C3\u00A3o do CVV.
+   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o de valida\u00E7\u00E3o do CVV.
    * @alias module:model/ValidaCVVRequest
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do chave de criptografia.
+   * C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia.
    * @member {Integer} idChaveCriptografia
    */
   exports.prototype['idChaveCriptografia'] = undefined;
 
   /**
-   * Valor de Verifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (CVV).
+   * Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV).
    * @member {String} cvv
    */
   exports.prototype['cvv'] = undefined;

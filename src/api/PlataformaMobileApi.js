@@ -18,7 +18,7 @@
   /**
    * PlataformaMobile service.
    * @module api/PlataformaMobileApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -43,7 +43,7 @@
     /**
      * Atualiza Plataforma Mobile
      * Esse recurso permite atualizar plataforma mobile.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
      * @param {module:model/PlataformaMobileUpdate} update update
      * @param {module:api/PlataformaMobileApi~atualizarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlataformaMobileResponse}
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET31 operation.
-     * @callback module:api/PlataformaMobileApi~listarUsingGET31Callback
+     * Callback function to receive the result of the listarUsingGET33 operation.
+     * @callback module:api/PlataformaMobileApi~listarUsingGET33Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -94,16 +94,16 @@
 
     /**
      * Lista as plataformas mobile cadastradas
-     * Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
+     * Este m\u00E9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.nome Nome da Plataforma Mobile
-     * @param {module:api/PlataformaMobileApi~listarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/PlataformaMobileApi~listarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePlataformaMobileResponse}
      */
-    this.listarUsingGET31 = function(opts, callback) {
+    this.listarUsingGET33 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

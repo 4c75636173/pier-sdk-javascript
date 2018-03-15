@@ -18,7 +18,7 @@
   /**
    * The VinculoEstabelecimentoAdquirenteResponse model module.
    * @module model/VinculoEstabelecimentoAdquirenteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -76,43 +76,43 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
    * @member {Integer} idAdquirente
    */
   exports.prototype['idAdquirente'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+   * C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
    * @member {String} codigoEstabelecimentoAdquirente
    */
   exports.prototype['codigoEstabelecimentoAdquirente'] = undefined;
 
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    * @member {String} dataHoraCadastro
    */
   exports.prototype['dataHoraCadastro'] = undefined;
 
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    * @member {String} mensagem
    */
   exports.prototype['mensagem'] = undefined;
 
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;

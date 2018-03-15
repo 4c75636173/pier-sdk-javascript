@@ -18,7 +18,7 @@
   /**
    * The FaturaConsignadaResponse model module.
    * @module model/FaturaConsignadaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -161,19 +161,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador da fatura.
+   * C\u00F3digo identificador da fatura.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta (id).
+   * C\u00F3digo identificador da conta (id).
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+   * C\u00F3digo identificador da conta a qual a fatura se refere.
    * @member {Integer} flagEmiteFatura
    */
   exports.prototype['flagEmiteFatura'] = undefined;
@@ -197,109 +197,109 @@
   exports.prototype['valorFaturaAnterior'] = undefined;
 
   /**
-   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   * Valor m\u00EDnimo para pagamento da fatura.
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;
 
   /**
-   * Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.
+   * Valor da fatura pago atrav\u00E9s de desconto em folha.
    * @member {Number} valorPagamentoConsignado
    */
   exports.prototype['valorPagamentoConsignado'] = undefined;
 
   /**
-   * Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.
+   * Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
    * @member {Number} valorPagamentoComplementar
    */
   exports.prototype['valorPagamentoComplementar'] = undefined;
 
   /**
-   * Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras nacionais lan\u00E7adas na fatura.
    * @member {Number} totalComprasNacionais
    */
   exports.prototype['totalComprasNacionais'] = undefined;
 
   /**
-   * Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras internacionais lan\u00E7adas na fatura.
    * @member {Number} totalComprasInternacionas
    */
   exports.prototype['totalComprasInternacionas'] = undefined;
 
   /**
-   * Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques nacionais lan\u00E7ados na fatura.
    * @member {Number} totalSaquesNacionais
    */
   exports.prototype['totalSaquesNacionais'] = undefined;
 
   /**
-   * Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques internacionais lan\u00E7ados na fatura.
    * @member {Number} totalSaquesInternacionais
    */
   exports.prototype['totalSaquesInternacionais'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosNacionais
    */
   exports.prototype['totalDebitosNacionais'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
    * @member {Number} totalDebitosRecorrentes
    */
   exports.prototype['totalDebitosRecorrentes'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosInternacionais
    */
   exports.prototype['totalDebitosInternacionais'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosDiversosNacionais
    */
   exports.prototype['totalDebitosDiversosNacionais'] = undefined;
 
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
    * @member {Number} totalDebitosOpcionais
    */
   exports.prototype['totalDebitosOpcionais'] = undefined;
 
   /**
-   * Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+   * Valor total dos pagamentos lan\u00E7ados na fatura.
    * @member {Number} totalPagamentos
    */
   exports.prototype['totalPagamentos'] = undefined;
 
   /**
-   * Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
    * @member {Number} totalCreditosNacionais
    */
   exports.prototype['totalCreditosNacionais'] = undefined;
 
   /**
-   * Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos ajustes lan\u00E7ados na fatura.
    * @member {Number} totalAjustes
    */
   exports.prototype['totalAjustes'] = undefined;
 
   /**
-   * Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+   * Valor total das tarifas lan\u00E7adas na fatura.
    * @member {Number} totalTarifas
    */
   exports.prototype['totalTarifas'] = undefined;
 
   /**
-   * Valor total da multa lan\u00C3\u00A7ada na fatura.
+   * Valor total da multa lan\u00E7ada na fatura.
    * @member {Number} totalMulta
    */
   exports.prototype['totalMulta'] = undefined;
 
   /**
-   * Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+   * Valor total dos juros de mora lan\u00E7ados na fatura.
    * @member {Number} totalJuros
    */
   exports.prototype['totalJuros'] = undefined;
@@ -317,7 +317,7 @@
   exports.prototype['taxaSaque'] = undefined;
 
   /**
-   * Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+   * Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
    * @member {Number} taxaMaximaProximoPeriodo
    */
   exports.prototype['taxaMaximaProximoPeriodo'] = undefined;

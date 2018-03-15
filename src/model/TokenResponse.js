@@ -18,17 +18,16 @@
   /**
    * The TokenResponse model module.
    * @module model/TokenResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TokenResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso token
+   * Representa\u00E7\u00E3o do recurso token
    * @alias module:model/TokenResponse
    * @class
    */
   var exports = function() {
-
 
 
 
@@ -53,9 +52,6 @@
 
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
-      }
-      if (data.hasOwnProperty('token')) {
-        obj['token'] = ApiClient.convertToType(data['token'], 'String');
       }
       if (data.hasOwnProperty('base')) {
         obj['base'] = ApiClient.convertToType(data['base'], 'Integer');
@@ -84,19 +80,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do token
+   * C\u00F3digo identificador do token
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Token
-   * @member {String} token
-   */
-  exports.prototype['token'] = undefined;
-
-  /**
-   * C\u00C3\u00B3digo identificador da base
+   * C\u00F3digo identificador da base
    * @member {Integer} base
    */
   exports.prototype['base'] = undefined;
@@ -114,25 +104,25 @@
   exports.prototype['status'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
+   * Descri\u00E7\u00E3o de quem criou o token
    * @member {String} criadoPor
    */
   exports.prototype['criadoPor'] = undefined;
 
   /**
-   * Data de cria\u00C3\u00A7\u00C3\u00A3o do token
+   * Data de cria\u00E7\u00E3o do token
    * @member {Date} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
+   * Descri\u00E7\u00E3o de quem alterou o token
    * @member {String} alteradoPor
    */
   exports.prototype['alteradoPor'] = undefined;
 
   /**
-   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do token
+   * Data de modifica\u00E7\u00E3o do token
    * @member {Date} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * ServicoConta service.
    * @module api/ServicoContaApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -42,15 +42,15 @@
 
     /**
      * Atribuir Anuidade
-     * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {Integer} idAnuidade Identificador da anuidade
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.DDD DDD do celular
-     * @param {String} opts.celular N\u00C3\u00BAmero do celular
+     * @param {String} opts.celular N\u00FAmero do celular
      * @param {Integer} opts.idOperadora Identificador da operadora do celular
      * @param {Integer} opts.idOrigemComercial Identificador da origem comercial
      * @param {module:api/ServicoContaApi~ativarAnuidadeUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
@@ -110,9 +110,9 @@
      */
 
     /**
-     *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-     * Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     *  Ativa o servi\u00E7o de envio de fatura por email
+     * Este recurso ativa o servi\u00E7o de envio de fatura por email
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {module:api/ServicoContaApi~ativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -156,9 +156,9 @@
      */
 
     /**
-     * Desativa o servi\u00C3\u00A7o de envio de fatura por email
-     * Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-     * @param {Integer} id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+     * Desativa o servi\u00E7o de envio de fatura por email
+     * Este recurso desativa o servi\u00E7o de envio de fatura por email
+     * @param {Integer} id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
      * @param {module:api/ServicoContaApi~desativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
@@ -205,9 +205,9 @@
      * Listar Anuidades
      * Lista as anuidades
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/ServicoContaApi~listarAnuidadesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAnuidadeResponse}
      */
@@ -252,9 +252,9 @@
      * Listar Operadoras
      * Lista as operadoras.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/ServicoContaApi~listarOperadorasTelefonicasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperadoraResponse}
      */

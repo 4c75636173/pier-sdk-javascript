@@ -18,12 +18,12 @@
   /**
    * The EmprestimoPessoalResponse model module.
    * @module model/EmprestimoPessoalResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>EmprestimoPessoalResponse</code>.
-   * Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+   * Resposta do recurso de simular empr\u00E9stimos/financiamentos
    * @alias module:model/EmprestimoPessoalResponse
    * @class
    */
@@ -89,25 +89,25 @@
   exports.prototype['planosParcelamentos'] = undefined;
 
   /**
-   * Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+   * Valor solicitado do empr\u00E9stimo/financiamento
    * @member {Number} valorSolicitado
    */
   exports.prototype['valorSolicitado'] = undefined;
 
   /**
-   * Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+   * Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
    * @member {Number} valorMaximoSolicitacao
    */
   exports.prototype['valorMaximoSolicitacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de parcelas solicitado
+   * N\u00FAmero de parcelas solicitado
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * Limite m\u00C3\u00A1ximo de parcela permitido
+   * Limite m\u00E1ximo de parcela permitido
    * @member {Number} valorMaximoParcela
    */
   exports.prototype['valorMaximoParcela'] = undefined;
@@ -119,13 +119,13 @@
   exports.prototype['dataPrimeiraParcela'] = undefined;
 
   /**
-   * Per\u00C3\u00ADodo de aplica da taxa de juros
+   * Per\u00EDodo de aplica da taxa de juros
    * @member {String} periodoTaxa
    */
   exports.prototype['periodoTaxa'] = undefined;
 
   /**
-   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+   * Sistema para amortiza\u00E7\u00E3o do valor das parcelas
    * @member {String} sistemaAmortizacao
    */
   exports.prototype['sistemaAmortizacao'] = undefined;

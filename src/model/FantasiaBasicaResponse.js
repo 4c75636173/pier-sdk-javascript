@@ -18,12 +18,12 @@
   /**
    * The FantasiaBasicaResponse model module.
    * @module model/FantasiaBasicaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>FantasiaBasicaResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de operadora telef\u00C3\u00B4nica
+   * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
    * @alias module:model/FantasiaBasicaResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * Identificador da fantasia b\u00C3\u00A1sica
+   * Identificador da fantasia b\u00E1sica
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome da fantasia b\u00C3\u00A1sica
+   * Nome da fantasia b\u00E1sica
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da fantasia b\u00C3\u00A1sica
+   * Descri\u00E7\u00E3o da fantasia b\u00E1sica
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

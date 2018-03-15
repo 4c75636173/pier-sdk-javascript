@@ -18,12 +18,12 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>UsuarioResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
+   * Representa\u00E7\u00E3o do recurso Usuario
    * @alias module:model/UsuarioResponse
    * @class
    * @param login
@@ -90,61 +90,61 @@
 
 
   /**
-   * Id do Usu\u00C3\u00A1rio
+   * Id do Usu\u00E1rio
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Usu\u00C3\u00A1rio
+   * Nome do Usu\u00E1rio
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Login do Usu\u00C3\u00A1rio
+   * Login do Usu\u00E1rio
    * @member {String} login
    */
   exports.prototype['login'] = undefined;
 
   /**
-   * Id do emissor do usu\u00C3\u00A1rio
+   * Id do emissor do usu\u00E1rio
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * CPF do Usu\u00C3\u00A1rio
+   * CPF do Usu\u00E1rio
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Email do Usu\u00C3\u00A1rio
+   * Email do Usu\u00E1rio
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Status do Usu\u00E1rio
    * @member {module:model/UsuarioResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+   * Data de cria\u00E7\u00E3o do Usu\u00E1rio
    * @member {String} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
-   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+   * Data de modifica\u00E7\u00E3o do Usu\u00E1rio
    * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+   * N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
    * @member {Integer} tentativasIncorretas
    */
   exports.prototype['tentativasIncorretas'] = undefined;

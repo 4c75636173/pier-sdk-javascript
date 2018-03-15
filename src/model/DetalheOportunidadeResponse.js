@@ -18,12 +18,12 @@
   /**
    * The DetalheOportunidadeResponse model module.
    * @module model/DetalheOportunidadeResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DetalheOportunidadeResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do detalhe da resposta do recurso Oportunidades
+   * Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades
    * @alias module:model/DetalheOportunidadeResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do detalhe
+   * C\u00F3digo identificador do detalhe
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    * @member {String} nomeCampo
    */
   exports.prototype['nomeCampo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

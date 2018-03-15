@@ -18,7 +18,7 @@
   /**
    * The NotificacaoSMSResponse model module.
    * @module model/NotificacaoSMSResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -128,49 +128,49 @@
 
 
   /**
-   * C\u00C3\u00B3digo Identificador.
+   * C\u00F3digo Identificador.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+   * N\u00FAmero sequencial \u00FAnico.
    * @member {Integer} nsu
    */
   exports.prototype['nsu'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+   * TipoEvento de notifica\u00E7\u00E3o
    * @member {module:model/NotificacaoSMSResponse.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Status de envio da notifica\u00E7\u00E3o
    * @member {module:model/NotificacaoSMSResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
    * @member {String} descricaoStatus
    */
   exports.prototype['descricaoStatus'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
@@ -188,31 +188,31 @@
   exports.prototype['operadora'] = undefined;
 
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+   * Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
    * @member {String} resposta
    */
   exports.prototype['resposta'] = undefined;
 
   /**
-   * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
    * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Quantidade de tentativas e envio da notifica\u00E7\u00E3o
    * @member {Integer} quantidadeTentativasEnvio
    */
   exports.prototype['quantidadeTentativasEnvio'] = undefined;
 
   /**
-   * Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+   * Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
@@ -224,7 +224,7 @@
   exports.prototype['dataAlteracaoStatus'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;

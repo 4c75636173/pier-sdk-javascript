@@ -18,12 +18,12 @@
   /**
    * The TaxasRefinanciamentoResponse model module.
    * @module model/TaxasRefinanciamentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>TaxasRefinanciamentoResponse</code>.
-   * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento
+   * Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
    * @alias module:model/TaxasRefinanciamentoResponse
    * @class
    */
@@ -184,25 +184,25 @@
   exports.prototype['vencimento'] = undefined;
 
   /**
-   * Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+   * Recupera\u00E7\u00E3o de encargos financeiro
    * @member {Number} recuperacaoEncargosFinanceiros
    */
   exports.prototype['recuperacaoEncargosFinanceiros'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+   * Descri\u00E7\u00E3o da comiss\u00E3o de garantia
    * @member {Number} comissaoGarantia
    */
   exports.prototype['comissaoGarantia'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+   * Descri\u00E7\u00E3o do agenciamento
    * @member {Number} agenciamento
    */
   exports.prototype['agenciamento'] = undefined;
 
   /**
-   * Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+   * Taxa m\u00E1xima do proximo per\u00EDodo
    * @member {Number} taxaMaximaProximoPeriodo
    */
   exports.prototype['taxaMaximaProximoPeriodo'] = undefined;
@@ -214,7 +214,7 @@
   exports.prototype['taxaEncargosFinanciamento'] = undefined;
 
   /**
-   * Taxa m\u00C3\u00A1xima de saque
+   * Taxa m\u00E1xima de saque
    * @member {Number} taxaMaximaSaque
    */
   exports.prototype['taxaMaximaSaque'] = undefined;
@@ -226,7 +226,7 @@
   exports.prototype['taxaSaque'] = undefined;
 
   /**
-   * Taxa m\u00C3\u00A1xima de compras juros
+   * Taxa m\u00E1xima de compras juros
    * @member {Number} taxaMaximaCompraJuros
    */
   exports.prototype['taxaMaximaCompraJuros'] = undefined;
@@ -262,7 +262,7 @@
   exports.prototype['taxaPercCalcPagamentoMinimo'] = undefined;
 
   /**
-   * Plano de taxa padr\u00C3\u00A3o
+   * Plano de taxa padr\u00E3o
    * @member {Integer} planoTaxaDefault
    */
   exports.prototype['planoTaxaDefault'] = undefined;

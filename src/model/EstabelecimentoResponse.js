@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoResponse model module.
    * @module model/EstabelecimentoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -93,8 +93,8 @@
       if (data.hasOwnProperty('flagMatriz')) {
         obj['flagMatriz'] = ApiClient.convertToType(data['flagMatriz'], 'Integer');
       }
-      if (data.hasOwnProperty('idCredor')) {
-        obj['idCredor'] = ApiClient.convertToType(data['idCredor'], 'Integer');
+      if (data.hasOwnProperty('idGrupoEconomico')) {
+        obj['idGrupoEconomico'] = ApiClient.convertToType(data['idGrupoEconomico'], 'Integer');
       }
       if (data.hasOwnProperty('numeroReceitaFederal')) {
         obj['numeroReceitaFederal'] = ApiClient.convertToType(data['numeroReceitaFederal'], 'Integer');
@@ -216,31 +216,31 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
+   * N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
    * @member {String} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * Indica se \u00C3\u00A9 matriz ou filial.
+   * Indica se \u00E9 matriz ou filial.
    * @member {Integer} flagMatriz
    */
   exports.prototype['flagMatriz'] = undefined;
 
   /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-   * @member {Integer} idCredor
+   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+   * @member {Integer} idGrupoEconomico
    */
-  exports.prototype['idCredor'] = undefined;
+  exports.prototype['idGrupoEconomico'] = undefined;
 
   /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
    * @member {Integer} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
@@ -252,19 +252,19 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Raz\u00C3\u00A3o Social do Estabelecimento.
+   * Raz\u00E3o Social do Estabelecimento.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * T\u00C3\u00ADtulo Comercial do Estabelecimento.
+   * T\u00EDtulo Comercial do Estabelecimento.
    * @member {String} nomeFantasia
    */
   exports.prototype['nomeFantasia'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
@@ -276,37 +276,37 @@
   exports.prototype['nomeLogradouro'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    * @member {String} numeroEndereco
    */
   exports.prototype['numeroEndereco'] = undefined;
 
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    * @member {String} bairro
    */
   exports.prototype['bairro'] = undefined;
 
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
 
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    * @member {String} uf
    */
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    * @member {String} cep2
    */
   exports.prototype['cep2'] = undefined;
@@ -318,37 +318,37 @@
   exports.prototype['nomeLogradouro2'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    * @member {String} numeroEndereco2
    */
   exports.prototype['numeroEndereco2'] = undefined;
 
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    * @member {String} bairro2
    */
   exports.prototype['bairro2'] = undefined;
 
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    * @member {String} cidade2
    */
   exports.prototype['cidade2'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    * @member {String} complemento2
    */
   exports.prototype['complemento2'] = undefined;
 
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    * @member {String} uf2
    */
   exports.prototype['uf2'] = undefined;
 
   /**
-   * Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
    * @member {String} obs
    */
   exports.prototype['obs'] = undefined;
@@ -366,55 +366,55 @@
   exports.prototype['email'] = undefined;
 
   /**
-   * Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    * @member {Integer} flagArquivoSecrFazenda
    */
   exports.prototype['flagArquivoSecrFazenda'] = undefined;
 
   /**
-   * Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
    * @member {Integer} flagCartaoDigitado
    */
   exports.prototype['flagCartaoDigitado'] = undefined;
 
   /**
-   * Indica se o estabelecimento est\u00C3\u00A1 inativo.
+   * Indica se o estabelecimento est\u00E1 inativo.
    * @member {Integer} inativo
    */
   exports.prototype['inativo'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador da moeda.
+   * C\u00F3digo identificador da moeda.
    * @member {Integer} idMoeda
    */
   exports.prototype['idMoeda'] = undefined;
 
   /**
-   * Identificador de Pa\u00C3\u00ADs.
+   * Identificador de Pa\u00EDs.
    * @member {Integer} idPais
    */
   exports.prototype['idPais'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero do associado ao SPCBrasil.
+   * N\u00FAmero do associado ao SPCBrasil.
    * @member {Integer} associadoSPCBrasil
    */
   exports.prototype['associadoSPCBrasil'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Categoria de Mercado.
+   * C\u00F3digo de Categoria de Mercado.
    * @member {Integer} mcc
    */
   exports.prototype['mcc'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
    * @member {Integer} idTipoEstabelecimento
    */
   exports.prototype['idTipoEstabelecimento'] = undefined;
 
   /**
-   * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+   * Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).
    * @member {Integer} correspondencia
    */
   exports.prototype['correspondencia'] = undefined;
@@ -432,19 +432,19 @@
   exports.prototype['tipoPagamento'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero um.
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta
    */
   exports.prototype['consulta'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero dois.
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta2
    */
   exports.prototype['consulta2'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero tr\u00EAs.
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta3
    */
   exports.prototype['consulta3'] = undefined;
@@ -462,7 +462,7 @@
   exports.prototype['dataCadastramento'] = undefined;
 
   /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Usu\u00E1rio da aplica\u00E7\u00E3o.
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

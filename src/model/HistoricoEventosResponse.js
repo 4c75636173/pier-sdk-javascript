@@ -18,12 +18,12 @@
   /**
    * The HistoricoEventosResponse model module.
    * @module model/HistoricoEventosResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>HistoricoEventosResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos
+   * Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
    * @alias module:model/HistoricoEventosResponse
    * @class
    * @param idHistorico
@@ -72,7 +72,7 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    * @member {Integer} idHistorico
    */
   exports.prototype['idHistorico'] = undefined;
@@ -90,13 +90,13 @@
   exports.prototype['tipoHistorico'] = undefined;
 
   /**
-   * Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor anterior a modifica\u00E7\u00E3o
    * @member {String} valorAnterior
    */
   exports.prototype['valorAnterior'] = undefined;
 
   /**
-   * Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor atribu\u00EDdo na modifica\u00E7\u00E3o
    * @member {String} valorAtribuido
    */
   exports.prototype['valorAtribuido'] = undefined;

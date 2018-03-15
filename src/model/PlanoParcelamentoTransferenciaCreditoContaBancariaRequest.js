@@ -18,12 +18,12 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaRequest model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoTransferenciaCreditoContaBancariaRequest</code>.
-   * Transfer\u00C3\u00AAncia cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria request
+   * Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request
    * @alias module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest
    * @class
    * @param idCartao
@@ -63,19 +63,19 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+   * Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
    * @member {Integer} numeroMesesCarencia
    */
   exports.prototype['numeroMesesCarencia'] = undefined;

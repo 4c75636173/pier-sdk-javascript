@@ -21,7 +21,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.BoletoApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+var id = 789; // {Integer} C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)
 
 
 var callback = function(error, data, response) {
@@ -38,7 +38,7 @@ api.registrarBoletoUsingPOST(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id) | 
+ **id** | **Integer**| C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id) | 
 
 ### Return type
 

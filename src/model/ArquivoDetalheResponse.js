@@ -18,7 +18,7 @@
   /**
    * The ArquivoDetalheResponse model module.
    * @module model/ArquivoDetalheResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -92,37 +92,37 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
    * @member {Integer} idTipoArquivo
    */
   exports.prototype['idTipoArquivo'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+   * Descri\u00E7\u00E3o do tipo do arquivo
    * @member {String} nomeTipoArquivo
    */
   exports.prototype['nomeTipoArquivo'] = undefined;
 
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    * @member {String} arquivo
    */
   exports.prototype['arquivo'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
    * @member {Integer} idStatusArquivo
    */
   exports.prototype['idStatusArquivo'] = undefined;
 
   /**
-   * Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+   * Desci\u00E7\u00E3o do status do arquivo
    * @member {String} nomeStatusArquivo
    */
   exports.prototype['nomeStatusArquivo'] = undefined;
@@ -134,25 +134,25 @@
   exports.prototype['nome'] = undefined;
 
   /**
-   * Formato/Extens\u00C3\u00A3o do arquivo
+   * Formato/Extens\u00E3o do arquivo
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Data de inclus\u00C3\u00A3o do arquivo.
+   * Data de inclus\u00E3o do arquivo.
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+   * Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;
 
   /**
-   * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
    * @member {Array.<module:model/ArquivoParametroResponse>} detalhes
    */
   exports.prototype['detalhes'] = undefined;

@@ -18,7 +18,7 @@
   /**
    * The ArquivoAUDResponse model module.
    * @module model/ArquivoAUDResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -106,7 +106,7 @@
   exports.prototype['rev'] = undefined;
 
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
@@ -154,25 +154,25 @@
   exports.prototype['uri'] = undefined;
 
   /**
-   * Data de inclus\u00C3\u00A3o do arquivo auditado
+   * Data de inclus\u00E3o do arquivo auditado
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+   * Data de altera\u00E7\u00E3o do arquivo auditado
    * @member {String} dataHoraAlteracao
    */
   exports.prototype['dataHoraAlteracao'] = undefined;
 
   /**
-   * Extens\u00C3\u00A3o do arquivo auditado
+   * Extens\u00E3o do arquivo auditado
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Lista  de par\u00C3\u00A2metros do arquivo auditado
+   * Lista  de par\u00E2metros do arquivo auditado
    * @member {Array.<module:model/ArquivoParametroAUDResponse>} parametros
    */
   exports.prototype['parametros'] = undefined;

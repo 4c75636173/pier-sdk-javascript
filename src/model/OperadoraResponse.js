@@ -18,12 +18,12 @@
   /**
    * The OperadoraResponse model module.
    * @module model/OperadoraResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>OperadoraResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de operadora telef\u00C3\u00B4nica
+   * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
    * @alias module:model/OperadoraResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The PageTipoDebitoRecorrenteResponse model module.
    * @module model/PageTipoDebitoRecorrenteResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageTipoDebitoRecorrenteResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+   * Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
    * @alias module:model/PageTipoDebitoRecorrenteResponse
    * @class
    */

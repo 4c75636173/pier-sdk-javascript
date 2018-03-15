@@ -18,7 +18,7 @@
   /**
    * Notificacao service.
    * @module api/NotificacaoApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -41,9 +41,9 @@
      */
 
     /**
-     * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-     * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * Altera configura\u00E7\u00F5es de E-mail
+     * Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
      * @param {module:model/ConfiguracaoEmailPersist} persist persist
      * @param {module:api/NotificacaoApi~alterarConfiguracaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoEmailResponse}
@@ -93,17 +93,17 @@
      */
 
     /**
-     * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
-     * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+     * Alterar template de notifica\u00E7\u00E3o
+     * Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
      * @param {String} conteudo Template HTML
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+     * @param {Integer} opts.idConfiguracaoEmail C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
      * @param {module:model/String} opts.tipoLayout Tipo do layout.
-     * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00E7\u00E3o.
      * @param {String} opts.remetente Remetente
-     * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-     * @param {Boolean} opts.templatePadrao Template Padr\u00C3\u00A3o.
+     * @param {String} opts.assunto Assunto da Notificaca\u00E7\u00E3o.
+     * @param {Boolean} opts.templatePadrao Template Padr\u00E3o.
      * @param {module:api/NotificacaoApi~alterarTemplateNotificacaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
@@ -162,7 +162,7 @@
      * Atualizar SMS
      * Esse recurso permite atualizar o status do SMS do emissor
      * @param {Object} opts Optional parameters
-     * @param {String} opts.nsu Seu n\u00C3\u00BAmero
+     * @param {String} opts.nsu Seu n\u00FAmero
      * @param {String} opts.status Status
      * @param {String} opts.data Data
      * @param {String} opts.textoStatus TextoStatus
@@ -210,9 +210,9 @@
      */
 
     /**
-     * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
-     * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * Consulta configura\u00E7\u00E3o de E-mail
+     * Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
      * @param {module:api/NotificacaoApi~consultarConfiguracaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoEmailResponse}
      */
@@ -256,9 +256,9 @@
      */
 
     /**
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
-     * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * Consulta c\u00F3digo de seguran\u00E7a E-mail
+     * Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
      * @param {module:api/NotificacaoApi~consultarPorEmailUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CodigoSegurancaResponse}
      */
@@ -302,9 +302,9 @@
      */
 
     /**
-     * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
-     * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+     * Consulta c\u00F3digo de seguran\u00E7a SMS
+     * Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
      * @param {module:api/NotificacaoApi~consultarPorSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CodigoSegurancaResponse}
      */
@@ -348,9 +348,9 @@
      */
 
     /**
-     * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-     * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+     * Consulta template de notifica\u00E7\u00E3o
+     * Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
      * @param {module:api/NotificacaoApi~consultarTemplateNotificacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
@@ -394,8 +394,8 @@
      */
 
     /**
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
-     * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
+     * Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
      * @param {String} email email
      * @param {module:api/NotificacaoApi~gerarTokenEMAILUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
@@ -439,8 +439,8 @@
      */
 
     /**
-     * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
-     * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
+     * Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
      * @param {module:model/CodigoSegurancaSMSPersist} persist persist
      * @param {module:api/NotificacaoApi~gerarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
@@ -484,12 +484,12 @@
      */
 
     /**
-     * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
-     * Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+     * Lista configura\u00E7\u00F5es de E-mails
+     * Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/NotificacaoApi~listarConfiguracaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageConfiguracaoEmailResponse}
      */
@@ -531,12 +531,12 @@
      */
 
     /**
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
-     * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
+     * Lista os c\u00F3digos de seguran\u00E7a E-Mail
+     * Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/NotificacaoApi~listarPorEmailUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCodigoSegurancaResponse}
      */
@@ -578,12 +578,12 @@
      */
 
     /**
-     * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
-     * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
+     * Lista os c\u00F3digos de seguran\u00E7a SMS
+     * Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/NotificacaoApi~listarPorSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCodigoSegurancaResponse}
      */
@@ -628,14 +628,14 @@
      * Listar Push
      * Esse recurso permite listar os Pushes do emissor
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {String} opts.dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
-     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-     * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00E7\u00E3o
+     * @param {module:model/String} opts.status Status de envio da notifica\u00E7\u00E3o
      * @param {module:model/String} opts.plataforma Plataforma de Push notifications.
-     * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+     * @param {String} opts.protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
      * @param {module:api/NotificacaoApi~listarPushUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePushResponse}
      */
@@ -685,15 +685,15 @@
      * Listar SMS
      * Esse recurso permite listar os SMS do emissor
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {String} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-     * @param {module:model/String} opts.status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
-     * @param {String} opts.operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
-     * @param {String} opts.protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-     * @param {Integer} opts.nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {String} opts.dataInclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+     * @param {module:model/String} opts.tipoEvento Nome do tipoEvento da notifica\u00E7\u00E3o
+     * @param {module:model/String} opts.status Status de envio da notifica\u00E7\u00E3o
+     * @param {String} opts.operadora Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada.
+     * @param {String} opts.protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+     * @param {Integer} opts.nsu Apresenta o nsu da notifica\u00E7\u00E3o
      * @param {module:api/NotificacaoApi~listarSMSUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageSMSResponse}
      */
@@ -741,12 +741,12 @@
      */
 
     /**
-     * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
-     * Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+     * Lista templates de notifica\u00E7\u00F5es
+     * Esse recurso permite listar templates notifica\u00E7\u00F5es.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
      * @param {module:api/NotificacaoApi~listarTemplateNotificacaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTemplateNotificacaoResponse}
      */
@@ -788,8 +788,8 @@
      */
 
     /**
-     * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
-     * Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+     * Lista os tipos templates de notifica\u00E7\u00E3o
+     * Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
      * @param {module:api/NotificacaoApi~listarTiposLayoutsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<Object>}
      */
@@ -827,8 +827,8 @@
      */
 
     /**
-     * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-     * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+     * Enviar notifica\u00E7\u00E3o por email
+     * Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
      * @param {module:model/NotificacaoEmailRequest} request request
      * @param {module:api/NotificacaoApi~notificacaoEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
@@ -872,8 +872,8 @@
      */
 
     /**
-     * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
-     * Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+     * Reenviar c\u00F3digo de seguran\u00E7a por sms
+     * Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
      * @param {module:model/CodigoSegurancaSMSPersist} persist persist
      * @param {module:api/NotificacaoApi~reenviarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
@@ -918,9 +918,9 @@
 
     /**
      * Responder SMS
-     * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
+     * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
      * @param {Object} opts Optional parameters
-     * @param {String} opts.nsu Seu n\u00C3\u00BAmero
+     * @param {String} opts.nsu Seu n\u00FAmero
      * @param {String} opts.data Data
      * @param {String} opts.resposta TextoStatus
      * @param {module:api/NotificacaoApi~responderSMSGetUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -964,8 +964,8 @@
      */
 
     /**
-     * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-     * Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+     * Salva configura\u00E7\u00F5es de E-mail
+     * Esse recurso salvar configura\u00E7\u00F5es de E-mail.
      * @param {module:model/ConfiguracaoEmailPersist} persist persist
      * @param {module:api/NotificacaoApi~salvarConfiguracaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoEmailResponse}
@@ -1010,7 +1010,7 @@
 
     /**
      * Enviar Push FCM
-     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
      * @param {Array.<module:model/PushFCMEGCM>} pushPersists pushPersists
      * @param {module:api/NotificacaoApi~salvarPushFCMUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/NotificacaoResponse}
@@ -1055,7 +1055,7 @@
 
     /**
      * Enviar Push GCM
-     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
      * @param {Array.<module:model/PushFCMEGCM>} pushPersists pushPersists
      * @param {module:api/NotificacaoApi~salvarPushGCMUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/NotificacaoResponse}
@@ -1100,7 +1100,7 @@
 
     /**
      * Enviar Push APNS
-     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+     * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
      * @param {Array.<module:model/PushAPNS>} pushPersists pushPersists
      * @param {module:api/NotificacaoApi~salvarPushUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/NotificacaoResponse}
@@ -1189,16 +1189,16 @@
      */
 
     /**
-     * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-     * Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+     * Salva template de notifica\u00E7\u00E3o
+     * Esse recurso salvar template notifica\u00E7\u00F5e.
      * @param {String} conteudo Template HTML
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+     * @param {Integer} opts.idConfiguracaoEmail C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
      * @param {module:model/String} opts.tipoLayout Tipo do layout.
-     * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+     * @param {module:model/String} opts.tipoNotificacao Tipo da notifica\u00E7\u00E3o.
      * @param {String} opts.remetente Remetente
-     * @param {String} opts.assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-     * @param {Boolean} opts.templatePadrao Template Padr\u00C3\u00A3o.
+     * @param {String} opts.assunto Assunto da Notificaca\u00E7\u00E3o.
+     * @param {Boolean} opts.templatePadrao Template Padr\u00E3o.
      * @param {module:api/NotificacaoApi~salvarTemplateNotificacaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TemplateNotificacaoDetalheResponse}
      */
@@ -1248,8 +1248,8 @@
      */
 
     /**
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
-     * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
+     * Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
      * @param {module:model/CodigoSegurancaEMAILPersist} request request
      * @param {module:api/NotificacaoApi~validarTokenEMAILUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
@@ -1293,8 +1293,8 @@
      */
 
     /**
-     * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
-     * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+     * Validar c\u00F3digo de seguran\u00E7a enviado por sms
+     * Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
      * @param {module:model/CodigoSegurancaSMSRequest} request request
      * @param {module:api/NotificacaoApi~validarTokenSMSUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}

@@ -18,12 +18,12 @@
   /**
    * The PageEstagioCartaoResponse model module.
    * @module model/PageEstagioCartaoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageEstagioCartaoResponse</code>.
-   * Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
+   * Lista de Est\u00E1gios Cart\u00F5es
    * @alias module:model/PageEstagioCartaoResponse
    * @class
    */

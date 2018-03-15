@@ -18,7 +18,7 @@
   /**
    * The HistoricoTelefoneResponse model module.
    * @module model/HistoricoTelefoneResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -68,13 +68,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o N\u00C3\u00BAmero do telefone.
+   * Apresenta o N\u00FAmero do telefone.
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
@@ -86,7 +86,7 @@
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+   * Apresenta a descri\u00E7\u00E3o do tipo do telefone.
    * @member {String} tipoTelefone
    */
   exports.prototype['tipoTelefone'] = undefined;

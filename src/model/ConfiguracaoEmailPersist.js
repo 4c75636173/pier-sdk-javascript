@@ -18,12 +18,12 @@
   /**
    * The ConfiguracaoEmailPersist model module.
    * @module model/ConfiguracaoEmailPersist
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>ConfiguracaoEmailPersist</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Email
+   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Email
    * @alias module:model/ConfiguracaoEmailPersist
    * @class
    */
@@ -100,49 +100,49 @@
   exports.prototype['port'] = undefined;
 
   /**
-   * Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+   * Porta usada pelo servi\u00E7o TLS/STARTTLS.
    * @member {String} portTLSSTARTTLS
    */
   exports.prototype['portTLSSTARTTLS'] = undefined;
 
   /**
-   * Porta usada pelo servi\u00C3\u00A7o SSL.
+   * Porta usada pelo servi\u00E7o SSL.
    * @member {String} portSSL
    */
   exports.prototype['portSSL'] = undefined;
 
   /**
-   * Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail.
+   * Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;
 
   /**
-   * O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+   * O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
    * @member {Boolean} requerAutenticacao
    */
   exports.prototype['requerAutenticacao'] = undefined;
 
   /**
-   * O servi\u00C3\u00A7o de e-mail requer SSL.
+   * O servi\u00E7o de e-mail requer SSL.
    * @member {Boolean} requerSSL
    */
   exports.prototype['requerSSL'] = undefined;
 
   /**
-   * O servi\u00C3\u00A7o de e-mail requer TLS.
+   * O servi\u00E7o de e-mail requer TLS.
    * @member {Boolean} requerTLS
    */
   exports.prototype['requerTLS'] = undefined;
 
   /**
-   * Usuario do servi\u00C3\u00A7o de e-mail.
+   * Usuario do servi\u00E7o de e-mail.
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
 
   /**
-   * Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+   * Senha de usu\u00E1rio do servi\u00E7o de e-mail.
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;

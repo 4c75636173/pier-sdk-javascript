@@ -18,7 +18,7 @@
   /**
    * AvisoViagem service.
    * @module api/AvisoViagemApi
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET4 operation.
-     * @callback module:api/AvisoViagemApi~consultarUsingGET4Callback
+     * Callback function to receive the result of the consultarUsingGET5 operation.
+     * @callback module:api/AvisoViagemApi~consultarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AvisoViagemResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -42,17 +42,17 @@
 
     /**
      * Consultar um aviso viagem de acordo com o id passado
-     * Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
-     * @param {module:api/AvisoViagemApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
+     * @param {module:api/AvisoViagemApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AvisoViagemResponse}
      */
-    this.consultarUsingGET4 = function(id, callback) {
+    this.consultarUsingGET5 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
       }
 
 
@@ -88,8 +88,8 @@
 
     /**
      * Desabilitar um aviso viagem de acordo com o id passado
-     * Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+     * Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
      * @param {module:api/AvisoViagemApi~desabilitarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AvisoViagemResponse}
      */
@@ -134,8 +134,8 @@
 
     /**
      * Habilitar um aviso viagem de acordo com o id passado
-     * Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
-     * @param {Integer} id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+     * Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+     * @param {Integer} id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
      * @param {module:api/AvisoViagemApi~habilitarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AvisoViagemResponse}
      */
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/AvisoViagemApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/AvisoViagemApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAvisoViagemResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -180,20 +180,20 @@
 
     /**
      * Lista os avisos viagens gerados pelo Emissor
-     * Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+     * Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-     * @param {Integer} opts.page P\u00C3\u00A1gina solicitada (Default = 0)
-     * @param {Integer} opts.limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-     * @param {Integer} opts.idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-     * @param {String} opts.codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+     * @param {Array.<String>} opts.sort Tipo de ordena\u00E7\u00E3o dos registros.
+     * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
+     * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+     * @param {Integer} opts.idCartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+     * @param {String} opts.codigoPais Codigo identificador do pa\u00EDs na base (id)
      * @param {String} opts.dataInicio Data inicio do aviso viagem
      * @param {String} opts.dataFim Data fim do aviso viagem
-     * @param {Integer} opts.flagAtivo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
-     * @param {module:api/AvisoViagemApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.flagAtivo Identifica se o aviso viagem esta ativo ou n\u00E3o
+     * @param {module:api/AvisoViagemApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAvisoViagemResponse}
      */
-    this.listarUsingGET6 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -237,9 +237,9 @@
 
     /**
      * Realiza o cadastro de um novo Aviso Viagem
-     * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
-     * @param {Integer} idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-     * @param {String} codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+     * Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+     * @param {Integer} idCartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+     * @param {String} codigoPais Codigo identificador do pa\u00EDs na base (id)
      * @param {String} dataInicio Data inicio do aviso viagem
      * @param {String} dataFim Data fim do aviso viagem
      * @param {module:api/AvisoViagemApi~salvarUsingPOST3Callback} callback The callback function, accepting three arguments: error, data, response

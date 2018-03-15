@@ -18,12 +18,12 @@
   /**
    * The DocumentoTemplateResponse model module.
    * @module model/DocumentoTemplateResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>DocumentoTemplateResponse</code>.
-   * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do Template de Documento
+   * Representa\u00E7\u00E3o da resposta do recurso do Template de Documento
    * @alias module:model/DocumentoTemplateResponse
    * @class
    */

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**codigoBanco** | **Integer** | C\u00C3\u00B3digo do Banco. | 
+**codigoBanco** | **Integer** | C\u00F3digo do Banco. | 
 **uri** | **String** | URL de acesso ao banco. | [optional] 
 **keyStoreName** | **String** | Caminho do certificado digital do emissor. | [optional] 
 **keyStorePassword** | **String** | Senha do certificado digital do emissor. | [optional] 
@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **truststoreAlias** | **String** | Alias do certificado digital do banco. | [optional] 
 **typeTruststore** | **String** | Tipo do certificado digital do banco. | [optional] 
 **uriAdicional** | **String** | URL adicional de acesso ao banco. | [optional] 
-**status** | **String** | Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o. | 
+**status** | **String** | Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o. | 
 
 

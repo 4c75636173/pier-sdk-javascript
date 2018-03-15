@@ -18,7 +18,7 @@
   /**
    * The CodigoSegurancaResponse model module.
    * @module model/CodigoSegurancaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+   * Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
    * @member {String} modoEnvio
    */
   exports.prototype['modoEnvio'] = undefined;
 
   /**
-   * Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o contato do c\u00F3digo de seguran\u00E7a.
    * @member {String} contato
    */
   exports.prototype['contato'] = undefined;
 
   /**
-   * Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o status do c\u00F3digo de seguran\u00E7a.
    * @member {Boolean} ativo
    */
   exports.prototype['ativo'] = undefined;
 
   /**
-   * Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+   * Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;

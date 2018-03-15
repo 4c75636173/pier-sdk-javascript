@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarPaisUsingGET**](PermissaoPaisApi.md#consultarPaisUsingGET) | **GET** /api/paises/{id} | Apresenta dados de um determinado pa\u00C3\u00ADs
+[**consultarPaisUsingGET**](PermissaoPaisApi.md#consultarPaisUsingGET) | **GET** /api/paises/{id} | Apresenta dados de um determinado pa\u00EDs
 [**listarContinentesUsingGET**](PermissaoPaisApi.md#listarContinentesUsingGET) | **GET** /api/continentes | Lista os continentes
-[**listarPaisesUsingGET**](PermissaoPaisApi.md#listarPaisesUsingGET) | **GET** /api/paises | Lista os pa\u00C3\u00ADses
+[**listarPaisesUsingGET**](PermissaoPaisApi.md#listarPaisesUsingGET) | **GET** /api/paises | Lista os pa\u00EDses
 
 
 <a name="consultarPaisUsingGET"></a>
 # **consultarPaisUsingGET**
 > PaisResponse consultarPaisUsingGET(id)
 
-Apresenta dados de um determinado pa\u00C3\u00ADs
+Apresenta dados de um determinado pa\u00EDs
 
-Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
 
 ### Example
 ```javascript
@@ -23,7 +23,7 @@ var Pier = require('Pier');
 
 var apiInstance = new Pier.PermissaoPaisApi()
 
-var id = 789; // {Integer} C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).
+var id = 789; // {Integer} C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).
 
 
 var callback = function(error, data, response) {
@@ -40,7 +40,7 @@ api.consultarPaisUsingGET(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id). | 
+ **id** | **Integer**| C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id). | 
 
 ### Return type
 
@@ -61,7 +61,7 @@ No authorization required
 
 Lista os continentes
 
-Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
 
 ### Example
 ```javascript
@@ -99,9 +99,9 @@ No authorization required
 # **listarPaisesUsingGET**
 > PagePaisResponse listarPaisesUsingGET(opts)
 
-Lista os pa\u00C3\u00ADses
+Lista os pa\u00EDses
 
-Este recurso permite listar os pa\u00C3\u00ADses.
+Este recurso permite listar os pa\u00EDses.
 
 ### Example
 ```javascript
@@ -110,14 +110,14 @@ var Pier = require('Pier');
 var apiInstance = new Pier.PermissaoPaisApi()
 
 var opts = { 
-  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-  'page': 56, // {Integer} P\u00C3\u00A1gina solicitada (Default = 0)
-  'limit': 56, // {Integer} Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-  'codigo': "codigo_example", // {String} C\u00C3\u00B3digo do pa\u00C3\u00ADs
-  'sigla': "sigla_example", // {String} Sigla do pa\u00C3\u00ADs
-  'descricao': "descricao_example", // {String} Nome do pa\u00C3\u00ADs
-  'continente': "continente_example", // {String} Continente no qual o pa\u00C3\u00ADs faz parte
-  'flagAtivo': true // {Boolean} Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+  'sort': ["sort_example"], // {[String]} Tipo de ordena\u00E7\u00E3o dos registros.
+  'page': 56, // {Integer} P\u00E1gina solicitada (Default = 0)
+  'limit': 56, // {Integer} Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+  'codigo': "codigo_example", // {String} C\u00F3digo do pa\u00EDs
+  'sigla': "sigla_example", // {String} Sigla do pa\u00EDs
+  'descricao': "descricao_example", // {String} Nome do pa\u00EDs
+  'continente': "continente_example", // {String} Continente no qual o pa\u00EDs faz parte
+  'flagAtivo': true // {Boolean} Atributo que representa se o pa\u00EDs est\u00E1 ativo
 };
 
 var callback = function(error, data, response) {
@@ -134,14 +134,14 @@ api.listarPaisesUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros. | [optional] 
- **page** | **Integer**| P\u00C3\u00A1gina solicitada (Default = 0) | [optional] 
- **limit** | **Integer**| Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50) | [optional] 
- **codigo** | **String**| C\u00C3\u00B3digo do pa\u00C3\u00ADs | [optional] 
- **sigla** | **String**| Sigla do pa\u00C3\u00ADs | [optional] 
- **descricao** | **String**| Nome do pa\u00C3\u00ADs | [optional] 
- **continente** | **String**| Continente no qual o pa\u00C3\u00ADs faz parte | [optional] 
- **flagAtivo** | **Boolean**| Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo | [optional] 
+ **sort** | [**[String]**](String.md)| Tipo de ordena\u00E7\u00E3o dos registros. | [optional] 
+ **page** | **Integer**| P\u00E1gina solicitada (Default = 0) | [optional] 
+ **limit** | **Integer**| Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) | [optional] 
+ **codigo** | **String**| C\u00F3digo do pa\u00EDs | [optional] 
+ **sigla** | **String**| Sigla do pa\u00EDs | [optional] 
+ **descricao** | **String**| Nome do pa\u00EDs | [optional] 
+ **continente** | **String**| Continente no qual o pa\u00EDs faz parte | [optional] 
+ **flagAtivo** | **Boolean**| Atributo que representa se o pa\u00EDs est\u00E1 ativo | [optional] 
 
 ### Return type
 

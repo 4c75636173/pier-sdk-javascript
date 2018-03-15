@@ -18,7 +18,7 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -84,13 +84,13 @@
 
 
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+   * Situa\u00E7\u00E3o de Processamento da fatura.
    * @member {module:model/FaturaResponse.SituacaoProcessamentoEnum} situacaoProcessamento
    */
   exports.prototype['situacaoProcessamento'] = undefined;
@@ -126,7 +126,7 @@
   exports.prototype['valorTotal'] = undefined;
 
   /**
-   * Valor do pagamento m\u00C3\u00ADnimo.
+   * Valor do pagamento m\u00EDnimo.
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;

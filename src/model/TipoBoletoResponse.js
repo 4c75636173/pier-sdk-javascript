@@ -18,7 +18,7 @@
   /**
    * The TipoBoletoResponse model module.
    * @module model/TipoBoletoResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00C3\u00B3digo identificador do tipo de boleto.
+   * C\u00F3digo identificador do tipo de boleto.
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+   * Descri\u00E7\u00E3o do tipo de boleto.
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * C\u00C3\u00B3digo identificador do banco.
+   * C\u00F3digo identificador do banco.
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
+   * Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero.
    * @member {Integer} faixaNossoNumero
    */
   exports.prototype['faixaNossoNumero'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
+   * N\u00FAmero minimo para o nosso n\u00FAmero.
    * @member {Number} minNossoNumero
    */
   exports.prototype['minNossoNumero'] = undefined;
 
   /**
-   * N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
+   * N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero.
    * @member {Number} maxNossoNumero
    */
   exports.prototype['maxNossoNumero'] = undefined;
 
   /**
-   * Tamanho do nosso n\u00C3\u00BAmero.
+   * Tamanho do nosso n\u00FAmero.
    * @member {Integer} tamNossoNumero
    */
   exports.prototype['tamNossoNumero'] = undefined;
 
   /**
-   * \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
+   * \u00DAltimo nosso n\u00FAmero utilizado.
    * @member {Number} ultimoNossoNumero
    */
   exports.prototype['ultimoNossoNumero'] = undefined;

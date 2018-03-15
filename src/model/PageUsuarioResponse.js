@@ -18,12 +18,12 @@
   /**
    * The PageUsuarioResponse model module.
    * @module model/PageUsuarioResponse
-   * @version 2.54.5
+   * @version 2.57.0
    */
 
   /**
    * Constructs a new <code>PageUsuarioResponse</code>.
-   * Lista de Usu\u00C3\u00A1rios
+   * Lista de Usu\u00E1rios
    * @alias module:model/PageUsuarioResponse
    * @class
    */
