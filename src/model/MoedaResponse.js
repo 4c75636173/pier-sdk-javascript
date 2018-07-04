@@ -18,12 +18,12 @@
   /**
    * The MoedaResponse model module.
    * @module model/MoedaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>MoedaResponse</code>.
-   * Tipo de moeda
+   * {{{moeda_response_description}}}
    * @alias module:model/MoedaResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Identificador do tipo de moeda.
+   * {{{moeda_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo de moeda.
+   * {{{moeda_response_codigo_moeda_value}}}
    * @member {String} codigoMoeda
    */
   exports.prototype['codigoMoeda'] = undefined;
 
   /**
-   * S\u00EDmbolo da Moeda.
+   * {{{moeda_response_simbolo_value}}}
    * @member {String} simbolo
    */
   exports.prototype['simbolo'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo da moeda.
+   * {{{moeda_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

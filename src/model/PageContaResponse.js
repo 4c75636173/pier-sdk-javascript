@@ -18,12 +18,12 @@
   /**
    * The PageContaResponse model module.
    * @module model/PageContaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageContaResponse</code>.
-   * Lista de contas
+   * {{{page_conta_response_description}}}
    * @alias module:model/PageContaResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The VinculoOperacaoPersist model module.
    * @module model/VinculoOperacaoPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>VinculoOperacaoPersist</code>.
-   * Objeto VinculoOperacao
+   * {{{vinculo_operacao_persist_description}}}
    * @alias module:model/VinculoOperacaoPersist
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{vinculo_operacao_persist_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+   * {{{vinculo_operacao_persist_id_operacao_value}}}
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * C\u00F3digo MCC.
+   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
    * @member {Integer} codigoMCC
    */
   exports.prototype['codigoMCC'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PageTipoOrigemComercialResponse model module.
    * @module model/PageTipoOrigemComercialResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoOrigemComercialResponse</code>.
-   * Listar tipos de origens comerciais
+   * {{{page_tipo_origem_comercial_response_description}}}
    * @alias module:model/PageTipoOrigemComercialResponse
    * @class
    */

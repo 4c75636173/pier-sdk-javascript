@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador do StatusOportunidade | [optional] 
-**idTipoOportunidade** | **Integer** | C\u00F3digo identificador do TipoOportunidade | [optional] 
-**nome** | **String** | Nome do status oportunidade | [optional] 
-**descricao** | **String** | Descricao do StatusOportunidade | [optional] 
-**flagAtivo** | **Boolean** | Flag que representa se o tipo oportunidade est\u00E1 ativo | [optional] 
+**id** | **Integer** | {{{status_oportunidade_response_id_value}}} | [optional] 
+**idTipoOportunidade** | **Integer** | {{{status_oportunidade_response_id_tipo_oportunidade_value}}} | [optional] 
+**nome** | **String** | {{{status_oportunidade_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{status_oportunidade_response_descricao_value}}} | [optional] 
+**flagAtivo** | **Boolean** | {{{status_oportunidade_response_flag_ativo_value}}} | [optional] 
 
 

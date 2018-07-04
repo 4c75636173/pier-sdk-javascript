@@ -18,11 +18,12 @@
   /**
    * The ContaBancariaPortadorResponse model module.
    * @module model/ContaBancariaPortadorResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ContaBancariaPortadorResponse</code>.
+   * {{{conta_bancaria_portador_response_description}}}
    * @alias module:model/ContaBancariaPortadorResponse
    * @class
    */
@@ -107,91 +108,91 @@
 
 
   /**
-   * C\u00F3digo identificador da conta banc\u00E1ria
+   * {{{conta_bancaria_portador_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador da conta cart\u00E3o
+   * {{{conta_bancaria_portador_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o da ag\u00EAncia
+   * {{{conta_bancaria_portador_response_nome_agencia_value}}}
    * @member {String} nomeAgencia
    */
   exports.prototype['nomeAgencia'] = undefined;
 
   /**
-   * C\u00F3digo do banco
+   * {{{conta_bancaria_portador_response_banco_value}}}
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia
+   * {{{conta_bancaria_portador_response_numero_agencia_value}}}
    * @member {String} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * D\u00EDgito da ag\u00EAncia
+   * {{{conta_bancaria_portador_response_digito_agencia_value}}}
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta
+   * {{{conta_bancaria_portador_response_numero_conta_value}}}
    * @member {String} numeroConta
    */
   exports.prototype['numeroConta'] = undefined;
 
   /**
-   * D\u00EDgito da conta
+   * {{{conta_bancaria_portador_response_digito_conta_value}}}
    * @member {String} digitoConta
    */
   exports.prototype['digitoConta'] = undefined;
 
   /**
-   * Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
+   * {{{conta_bancaria_portador_response_flag_ativo_value}}}
    * @member {Integer} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;
 
   /**
-   * Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+   * {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
    * @member {Integer} flagContaOrigemDoc
    */
   exports.prototype['flagContaOrigemDoc'] = undefined;
 
   /**
-   * C\u00F3digo da pessoa
+   * {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
    * @member {Integer} idPessoaFisica
    */
   exports.prototype['idPessoaFisica'] = undefined;
 
   /**
-   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
+   * {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
 
   /**
-   * Nome do favorecido
+   * {{{conta_bancaria_portador_response_favorecido_value}}}
    * @member {String} favorecido
    */
   exports.prototype['favorecido'] = undefined;
 
   /**
-   * Documento do favorecido
+   * {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
    * @member {String} numeroReceiraFederal
    */
   exports.prototype['numeroReceiraFederal'] = undefined;
 
   /**
-   * Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
+   * {{{conta_bancaria_portador_response_titularidade_value}}}
    * @member {Integer} titularidade
    */
   exports.prototype['titularidade'] = undefined;

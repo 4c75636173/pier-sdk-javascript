@@ -18,12 +18,12 @@
   /**
    * The PlataformaMobileResponse model module.
    * @module model/PlataformaMobileResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PlataformaMobileResponse</code>.
-   * Plataforma Mobile
+   * {{{plataforma_mobile_response_description}}}
    * @alias module:model/PlataformaMobileResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Identificador da Plataforma
+   * {{{plataforma_mobile_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome da Plataforma
+   * {{{plataforma_mobile_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

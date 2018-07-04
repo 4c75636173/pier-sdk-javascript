@@ -18,11 +18,12 @@
   /**
    * The GradePendenteRequest model module.
    * @module model/GradePendenteRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>GradePendenteRequest</code>.
+   * {{{grade_pendente_request_description}}}
    * @alias module:model/GradePendenteRequest
    * @class
    */
@@ -55,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo identificador da conta.
+   * {{{grade_pendente_request_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Data do ajuste no formato yyyy-MM-dd.
+   * {{{grade_pendente_request_data_base_value}}}
    * @member {String} dataBase
    */
   exports.prototype['dataBase'] = undefined;

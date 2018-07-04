@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idEstabelecimento** | **Integer** | Apresenta o id do estabelecimento. | 
-**idAdquirente** | **Integer** | Apresenta o id do adquirente. | 
-**codigoEstabelecimentoAdquirente** | **String** | Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente. | 
+**idEstabelecimento** | **Integer** | {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}} | 
+**idAdquirente** | **Integer** | {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}} | 
+**codigoEstabelecimentoAdquirente** | **String** | {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}} | 
 
 

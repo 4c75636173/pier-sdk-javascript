@@ -18,12 +18,12 @@
   /**
    * The TelefoneEstabelecimentoPersist model module.
    * @module model/TelefoneEstabelecimentoPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TelefoneEstabelecimentoPersist</code>.
-   * Objeto Telefone
+   * {{{telefone_estabelecimento_persist_description}}}
    * @alias module:model/TelefoneEstabelecimentoPersist
    * @class
    * @param idEstabelecimento
@@ -67,25 +67,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_persist_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_persist_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_persist_ramal_value}}}
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

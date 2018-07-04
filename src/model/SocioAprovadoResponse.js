@@ -18,12 +18,12 @@
   /**
    * The SocioAprovadoResponse model module.
    * @module model/SocioAprovadoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>SocioAprovadoResponse</code>.
-   * PessoaPersist
+   * {{{socio_aprovado_response_description}}}
    * @alias module:model/SocioAprovadoResponse
    * @class
    */
@@ -104,85 +104,85 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+   * {{{socio_aprovado_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o Nome do Socio
+   * {{{socio_aprovado_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * N\u00FAmero do CPF, quando PF.
+   * {{{socio_aprovado_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+   * {{{socio_aprovado_response_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+   * {{{socio_aprovado_response_sexo_value}}}
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00FAmero da Identidade.
+   * {{{socio_aprovado_response_numero_identidade_value}}}
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Org\u00E3o expedidor do RG.
+   * {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
-   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
    * @member {String} unidadeFederativaIdentidade
    */
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data emiss\u00E3o da Identidade
+   * {{{socio_aprovado_response_data_emissao_identidade_value}}}
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * Estado civil do s\u00F3cio
+   * {{{socio_aprovado_response_estado_civil_value}}}
    * @member {String} estadoCivil
    */
   exports.prototype['estadoCivil'] = undefined;
 
   /**
-   * Profiss\u00E3o do s\u00F3cio
+   * {{{socio_aprovado_response_profissao_value}}}
    * @member {String} profissao
    */
   exports.prototype['profissao'] = undefined;
 
   /**
-   * Nacionalidade do s\u00F3cio
+   * {{{socio_aprovado_response_nacionalidade_value}}}
    * @member {String} nacionalidade
    */
   exports.prototype['nacionalidade'] = undefined;
 
   /**
-   * Email do s\u00F3cio
+   * {{{socio_aprovado_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Informa os telefones do s\u00F3cio
+   * {{{socio_aprovado_response_telefones_value}}}
    * @member {Array.<module:model/TelefonePessoaAprovadaResponse>} telefones
    */
   exports.prototype['telefones'] = undefined;

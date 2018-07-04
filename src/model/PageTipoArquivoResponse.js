@@ -18,12 +18,12 @@
   /**
    * The PageTipoArquivoResponse model module.
    * @module model/PageTipoArquivoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoArquivoResponse</code>.
-   * Lista tipos de arquivos cadastrados no sistema
+   * {{{page_tipo_arquivo_response_description}}}
    * @alias module:model/PageTipoArquivoResponse
    * @class
    */

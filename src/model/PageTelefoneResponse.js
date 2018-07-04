@@ -18,12 +18,12 @@
   /**
    * The PageTelefoneResponse model module.
    * @module model/PageTelefoneResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTelefoneResponse</code>.
-   * Lista de telefones
+   * {{{page_telefone_response_description}}}
    * @alias module:model/PageTelefoneResponse
    * @class
    */

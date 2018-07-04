@@ -18,12 +18,12 @@
   /**
    * The PageTipoTemplateResponse model module.
    * @module model/PageTipoTemplateResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoTemplateResponse</code>.
-   * Lista de Tipo Template
+   * {{{page_tipo_template_response_description}}}
    * @alias module:model/PageTipoTemplateResponse
    * @class
    */

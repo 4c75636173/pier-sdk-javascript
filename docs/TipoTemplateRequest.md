@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nome** | **String** | Nome do tipo de template. | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do tipo de template. | [optional] 
-**sigla** | **String** | Sigla do tipo de template. | [optional] 
+**nome** | **String** | {{{tipo_template_request_nome_value}}} | [optional] 
+**descricao** | **String** | {{{tipo_template_request_descricao_value}}} | [optional] 
+**sigla** | **String** | {{{tipo_template_request_sigla_value}}} | [optional] 
 
 

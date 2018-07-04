@@ -18,12 +18,12 @@
   /**
    * The StatusImpressaoResponse model module.
    * @module model/StatusImpressaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>StatusImpressaoResponse</code>.
-   * Representa\u00E7\u00E3o do recurso Status Impress\u00E3o
+   * {{{status_impressao_response_description}}}
    * @alias module:model/StatusImpressaoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Id do est\u00E1gio cart\u00E3o
+   * {{{status_impressao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do status impress\u00E3o
+   * {{{status_impressao_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

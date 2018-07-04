@@ -18,12 +18,12 @@
   /**
    * The ParametroProdutoResponse model module.
    * @module model/ParametroProdutoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ParametroProdutoResponse</code>.
-   * Objeto de Resposta Par\u00E2metro Produto
+   * {{{parametro_produto_response_description}}}
    * @alias module:model/ParametroProdutoResponse
    * @class
    * @param idProduto
@@ -73,31 +73,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{parametro_produto_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).
+   * {{{parametro_produto_response_tipo_origem_transacao_value}}}
    * @member {module:model/ParametroProdutoResponse.TipoOrigemTransacaoEnum} tipoOrigemTransacao
    */
   exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+   * {{{parametro_produto_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Valor do Par\u00E2metro.
+   * {{{parametro_produto_response_valor_parametro_value}}}
    * @member {Number} valorParametro
    */
   exports.prototype['valorParametro'] = undefined;
 
   /**
-   * Data de Validade do Par\u00E2metro do Produto.
+   * {{{parametro_produto_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;

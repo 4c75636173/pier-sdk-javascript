@@ -18,12 +18,12 @@
   /**
    * The PageTemplateNotificacaoResponse model module.
    * @module model/PageTemplateNotificacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTemplateNotificacaoResponse</code>.
-   * Lista de Notifica\u00E7\u00F5es (layouts) de E-mail
+   * {{{page_template_notificacao_response_description}}}
    * @alias module:model/PageTemplateNotificacaoResponse
    * @class
    */

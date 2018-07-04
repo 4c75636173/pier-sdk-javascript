@@ -18,12 +18,12 @@
   /**
    * The TokenResponse model module.
    * @module model/TokenResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TokenResponse</code>.
-   * Representa\u00E7\u00E3o do recurso token
+   * {{{token_response_description}}}
    * @alias module:model/TokenResponse
    * @class
    */
@@ -66,13 +66,13 @@
         obj['criadoPor'] = ApiClient.convertToType(data['criadoPor'], 'String');
       }
       if (data.hasOwnProperty('dataCriacao')) {
-        obj['dataCriacao'] = ApiClient.convertToType(data['dataCriacao'], 'Date');
+        obj['dataCriacao'] = ApiClient.convertToType(data['dataCriacao'], 'String');
       }
       if (data.hasOwnProperty('alteradoPor')) {
         obj['alteradoPor'] = ApiClient.convertToType(data['alteradoPor'], 'String');
       }
       if (data.hasOwnProperty('dataModificacao')) {
-        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'Date');
+        obj['dataModificacao'] = ApiClient.convertToType(data['dataModificacao'], 'String');
       }
     }
     return obj;
@@ -80,50 +80,50 @@
 
 
   /**
-   * C\u00F3digo identificador do token
+   * {{{token_dto_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador da base
+   * {{{token_dto_base_value}}}
    * @member {Integer} base
    */
   exports.prototype['base'] = undefined;
 
   /**
-   * Owner do token
+   * {{{token_dto_owner_value}}}
    * @member {String} owner
    */
   exports.prototype['owner'] = undefined;
 
   /**
-   * Status do token
+   * {{{token_dto_status_value}}}
    * @member {module:model/TokenResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o de quem criou o token
+   * {{{token_dto_criado_por_value}}}
    * @member {String} criadoPor
    */
   exports.prototype['criadoPor'] = undefined;
 
   /**
-   * Data de cria\u00E7\u00E3o do token
-   * @member {Date} dataCriacao
+   * {{{token_dto_data_criacao_value}}}
+   * @member {String} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o de quem alterou o token
+   * {{{token_dto_alterado_por_value}}}
    * @member {String} alteradoPor
    */
   exports.prototype['alteradoPor'] = undefined;
 
   /**
-   * Data de modifica\u00E7\u00E3o do token
-   * @member {Date} dataModificacao
+   * {{{token_dto_data_modificacao_value}}}
+   * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;
 

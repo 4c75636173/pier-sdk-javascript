@@ -18,12 +18,12 @@
   /**
    * The GrupoEconomicoDTO model module.
    * @module model/GrupoEconomicoDTO
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>GrupoEconomicoDTO</code>.
-   * Par\u00E2metros de requisi\u00E7\u00E3o para cadastrar grupo econ\u00F4mico
+   * {{{grupo_economico_d_t_o_description}}}
    * @alias module:model/GrupoEconomicoDTO
    * @class
    * @param razaoSocial
@@ -153,151 +153,151 @@
 
 
   /**
-   * Raz\u00E3o social da pessoa jur\u00EDdica
+   * {{{grupo_economico_d_t_o_razao_social_value}}}
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
 
   /**
-   * Nome do credor
+   * {{{grupo_economico_d_t_o_nome_credor_value}}}
    * @member {String} nomeCredor
    */
   exports.prototype['nomeCredor'] = undefined;
 
   /**
-   * N\u00FAmero da Receita Federal
+   * {{{grupo_economico_d_t_o_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * N\u00FAmero da inscri\u00E7\u00E3o estadual
+   * {{{grupo_economico_d_t_o_inscricao_estadual_value}}}
    * @member {String} inscricaoEstadual
    */
   exports.prototype['inscricaoEstadual'] = undefined;
 
   /**
-   * Nome da pessoa para entrar em contato
+   * {{{grupo_economico_d_t_o_contato_value}}}
    * @member {String} contato
    */
   exports.prototype['contato'] = undefined;
 
   /**
-   * C\u00F3digo do banco
+   * {{{grupo_economico_d_t_o_banco_value}}}
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * C\u00F3digo da ag\u00EAncia
+   * {{{grupo_economico_d_t_o_agencia_value}}}
    * @member {Integer} agencia
    */
   exports.prototype['agencia'] = undefined;
 
   /**
-   * D\u00EDgito verificador da ag\u00EAncia
+   * {{{grupo_economico_d_t_o_digito_agencia_value}}}
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * C\u00F3digo da Conta Corrente
+   * {{{grupo_economico_d_t_o_conta_corrente_value}}}
    * @member {String} contaCorrente
    */
   exports.prototype['contaCorrente'] = undefined;
 
   /**
-   * D\u00EDgito Verificador da Conta Corrente
+   * {{{grupo_economico_d_t_o_digito_conta_corrente_value}}}
    * @member {String} digitoContaCorrente
    */
   exports.prototype['digitoContaCorrente'] = undefined;
 
   /**
-   * Periodicidade do pagamento
+   * {{{grupo_economico_d_t_o_periodicidade_value}}}
    * @member {module:model/GrupoEconomicoDTO.PeriodicidadeEnum} periodicidade
    */
   exports.prototype['periodicidade'] = undefined;
 
   /**
-   * Dia para pagamento semanal
+   * {{{grupo_economico_d_t_o_pagamento_semanal_value}}}
    * @member {module:model/GrupoEconomicoDTO.PagamentoSemanalEnum} pagamentoSemanal
    */
   exports.prototype['pagamentoSemanal'] = undefined;
 
   /**
-   * Dia da data para o pagamento mensal
+   * {{{grupo_economico_d_t_o_pagamento_mensal_value}}}
    * @member {Integer} pagamentoMensal
    */
   exports.prototype['pagamentoMensal'] = undefined;
 
   /**
-   * Dia da data para o primeiro pagamento decendial
+   * {{{grupo_economico_d_t_o_pagamento_decendial_primeiro_value}}}
    * @member {Integer} pagamentoDecendialPrimeiro
    */
   exports.prototype['pagamentoDecendialPrimeiro'] = undefined;
 
   /**
-   * Dia da data para o segundo pagamento decendial
+   * {{{grupo_economico_d_t_o_pagamento_decendial_segundo_value}}}
    * @member {Integer} pagamentoDecendialSegundo
    */
   exports.prototype['pagamentoDecendialSegundo'] = undefined;
 
   /**
-   * Dia da data para o terceiro pagamento decendial
+   * {{{grupo_economico_d_t_o_pagamento_decendial_terceiro_value}}}
    * @member {Integer} pagamentoDecendialTerceiro
    */
   exports.prototype['pagamentoDecendialTerceiro'] = undefined;
 
   /**
-   * Dia da data para o primeiro pagamento quinzenal
+   * {{{grupo_economico_d_t_o_pagamento_quinzenal_primeiro_value}}}
    * @member {Integer} pagamentoQuinzenalPrimeiro
    */
   exports.prototype['pagamentoQuinzenalPrimeiro'] = undefined;
 
   /**
-   * Dia da data para o segundo pagamento quinzenal
+   * {{{grupo_economico_d_t_o_pagamento_quinzenal_segundo_value}}}
    * @member {Integer} pagamentoQuinzenalSegundo
    */
   exports.prototype['pagamentoQuinzenalSegundo'] = undefined;
 
   /**
-   * Identificador do credor RAV
+   * {{{grupo_economico_d_t_o_id_credor_r_a_v_value}}}
    * @member {Integer} idCredorRAV
    */
   exports.prototype['idCredorRAV'] = undefined;
 
   /**
-   * Valor percentual do RAV do credor
+   * {{{grupo_economico_d_t_o_percentual_r_a_v_value}}}
    * @member {Number} percentualRAV
    */
   exports.prototype['percentualRAV'] = undefined;
 
   /**
-   * Indica se o credor recebe RAV e o tipo
+   * {{{grupo_economico_d_t_o_recebe_r_a_v_value}}}
    * @member {module:model/GrupoEconomicoDTO.RecebeRAVEnum} recebeRAV
    */
   exports.prototype['recebeRAV'] = undefined;
 
   /**
-   * Percentual Multiplica
+   * {{{grupo_economico_d_t_o_percentual_multiplica_value}}}
    * @member {Number} percentualMultiplica
    */
   exports.prototype['percentualMultiplica'] = undefined;
 
   /**
-   * Taxa Administrativa
+   * {{{grupo_economico_d_t_o_taxa_adm_value}}}
    * @member {Number} taxaAdm
    */
   exports.prototype['taxaAdm'] = undefined;
 
   /**
-   * Taxa do Banco
+   * {{{grupo_economico_d_t_o_taxa_banco_value}}}
    * @member {Number} taxaBanco
    */
   exports.prototype['taxaBanco'] = undefined;
 
   /**
-   * Valor limite do RAV
+   * {{{grupo_economico_d_t_o_limite_r_a_v_value}}}
    * @member {Number} limiteRAV
    */
   exports.prototype['limiteRAV'] = undefined;

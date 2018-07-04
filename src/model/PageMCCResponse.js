@@ -18,12 +18,12 @@
   /**
    * The PageMCCResponse model module.
    * @module model/PageMCCResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageMCCResponse</code>.
-   * Lista dos MCCs
+   * {{{page_m_c_c_response_description}}}
    * @alias module:model/PageMCCResponse
    * @class
    */

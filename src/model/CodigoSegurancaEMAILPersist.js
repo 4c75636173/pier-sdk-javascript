@@ -18,12 +18,12 @@
   /**
    * The CodigoSegurancaEMAILPersist model module.
    * @module model/CodigoSegurancaEMAILPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CodigoSegurancaEMAILPersist</code>.
-   * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
    * @alias module:model/CodigoSegurancaEMAILPersist
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Token para valida\u00E7\u00E3o.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
    * @member {String} codigoSeguranca
    */
   exports.prototype['codigoSeguranca'] = undefined;

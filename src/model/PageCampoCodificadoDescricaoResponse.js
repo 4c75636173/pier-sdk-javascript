@@ -18,12 +18,12 @@
   /**
    * The PageCampoCodificadoDescricaoResponse model module.
    * @module model/PageCampoCodificadoDescricaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageCampoCodificadoDescricaoResponse</code>.
-   * Lista de Campos Codificados
+   * {{{page_campo_codificado_descricao_response_description}}}
    * @alias module:model/PageCampoCodificadoDescricaoResponse
    * @class
    */

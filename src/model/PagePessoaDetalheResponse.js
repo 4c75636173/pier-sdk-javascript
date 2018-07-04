@@ -18,12 +18,12 @@
   /**
    * The PagePessoaDetalheResponse model module.
    * @module model/PagePessoaDetalheResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PagePessoaDetalheResponse</code>.
-   * Lista de PessoaDetalheResponse
+   * {{{page_pessoa_detalhe_response_description}}}
    * @alias module:model/PagePessoaDetalheResponse
    * @class
    */

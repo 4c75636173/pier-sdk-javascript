@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo | [optional] 
-**nome** | **String** | Nome do tipo do arquivo | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do tipo do arquivo | [optional] 
+**id** | **Integer** | {{{tipo_arquivo_response_id_value}}} | [optional] 
+**nome** | **String** | {{{tipo_arquivo_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{tipo_arquivo_response_descricao_value}}} | [optional] 
 
 

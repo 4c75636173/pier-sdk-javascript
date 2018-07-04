@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do arquivo | [optional] 
-**idTipoArquivo** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo | [optional] 
-**nomeTipoArquivo** | **String** | Descri\u00E7\u00E3o do tipo do arquivo | [optional] 
-**idStatusArquivo** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo | [optional] 
-**nomeStatusArquivo** | **String** | Desci\u00E7\u00E3o do status do arquivo | [optional] 
-**nome** | **String** | Nome do arquivo | [optional] 
-**extensao** | **String** | Formato/Extens\u00E3o do arquivo | [optional] 
-**dataInclusao** | **String** | Data de inclus\u00E3o do arquivo. | [optional] 
-**dataAlteracao** | **String** | Data da \u00FAltima altera\u00E7\u00E3o do aquivo. | [optional] 
-**detalhes** | [**[ArquivoParametroResponse]**](ArquivoParametroResponse.md) | Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo. | [optional] 
+**id** | **Integer** | {{{arquivo_response_id_value}}} | [optional] 
+**idTipoArquivo** | **Integer** | {{{arquivo_response_id_tipo_arquivo_value}}} | [optional] 
+**nomeTipoArquivo** | **String** | {{{arquivo_response_nome_tipo_arquivo_value}}} | [optional] 
+**idStatusArquivo** | **Integer** | {{{arquivo_response_id_status_arquivo_value}}} | [optional] 
+**nomeStatusArquivo** | **String** | {{{arquivo_response_nome_status_arquivo_value}}} | [optional] 
+**nome** | **String** | {{{arquivo_response_nome_value}}} | [optional] 
+**extensao** | **String** | {{{arquivo_response_extensao_value}}} | [optional] 
+**dataInclusao** | **String** | {{{arquivo_response_data_inclusao_value}}} | [optional] 
+**dataAlteracao** | **String** | {{{arquivo_response_data_alteracao_value}}} | [optional] 
+**detalhes** | [**[ArquivoParametroResponse]**](ArquivoParametroResponse.md) | {{{arquivo_response_detalhes_value}}} | [optional] 
 
 

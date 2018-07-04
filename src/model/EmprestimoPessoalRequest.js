@@ -18,12 +18,12 @@
   /**
    * The EmprestimoPessoalRequest model module.
    * @module model/EmprestimoPessoalRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>EmprestimoPessoalRequest</code>.
-   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
+   * {{{emprestimo_pessoal_request_description}}}
    * @alias module:model/EmprestimoPessoalRequest
    * @class
    * @param valorSolicitado
@@ -77,37 +77,37 @@
 
 
   /**
-   * Valor do empr\u00E9stimo/financiamento
+   * {{{emprestimo_pessoal_request_valor_solicitado_value}}}
    * @member {Number} valorSolicitado
    */
   exports.prototype['valorSolicitado'] = undefined;
 
   /**
-   * N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento
+   * {{{emprestimo_pessoal_request_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * Valor percentual da taxa de juros a ser aplicada
+   * {{{emprestimo_pessoal_request_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * Per\u00EDodo de aplica da taxa de juros
+   * {{{emprestimo_pessoal_request_periodo_taxa_value}}}
    * @member {String} periodoTaxa
    */
   exports.prototype['periodoTaxa'] = undefined;
 
   /**
-   * Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+   * {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
    * @member {String} sistemaAmortizacao
    */
   exports.prototype['sistemaAmortizacao'] = undefined;
 
   /**
-   * N\u00FAmero de meses para cobran\u00E7a da primeira parcela
+   * {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
    * @member {Integer} numeroMesesCarencia
    */
   exports.prototype['numeroMesesCarencia'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PageTipoOportunidadeResponse model module.
    * @module model/PageTipoOportunidadeResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoOportunidadeResponse</code>.
-   * Lista de tipos oportunidades
+   * {{{page_tipo_oportunidade_response_description}}}
    * @alias module:model/PageTipoOportunidadeResponse
    * @class
    */

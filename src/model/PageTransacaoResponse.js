@@ -18,12 +18,12 @@
   /**
    * The PageTransacaoResponse model module.
    * @module model/PageTransacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTransacaoResponse</code>.
-   * Lista de transa\u00E7\u00F5es de uma conta
+   * {{{page_transacao_response_description}}}
    * @alias module:model/PageTransacaoResponse
    * @class
    */

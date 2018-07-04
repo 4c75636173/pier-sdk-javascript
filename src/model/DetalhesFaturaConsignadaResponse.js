@@ -18,12 +18,12 @@
   /**
    * The DetalhesFaturaConsignadaResponse model module.
    * @module model/DetalhesFaturaConsignadaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DetalhesFaturaConsignadaResponse</code>.
-   * Objeto contendo os detalhes de uma fatura consignada
+   * {{{detalhes_fatura_consignada_response_description}}}
    * @alias module:model/DetalhesFaturaConsignadaResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Apresenta os detalhes da fatura
+   * {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
    * @member {module:model/FaturaConsignadaResponse} faturaConsignadaResponse
    */
   exports.prototype['faturaConsignadaResponse'] = undefined;
 
   /**
-   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+   * {{{detalhes_fatura_consignada_response_transacoes_value}}}
    * @member {Array.<module:model/TransacoesCorrentesResponse>} transacoes
    */
   exports.prototype['transacoes'] = undefined;

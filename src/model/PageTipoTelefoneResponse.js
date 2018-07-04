@@ -18,12 +18,12 @@
   /**
    * The PageTipoTelefoneResponse model module.
    * @module model/PageTipoTelefoneResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoTelefoneResponse</code>.
-   * Lista de tipos telefones
+   * {{{page_tipo_telefone_response_description}}}
    * @alias module:model/PageTipoTelefoneResponse
    * @class
    */

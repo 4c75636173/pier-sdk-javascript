@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idConta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**situacaoProcessamento** | **String** | Situa\u00E7\u00E3o de Processamento da fatura. | [optional] 
-**pagamentoEfetuado** | **Boolean** | Status de pagamento efetuado. | [optional] 
-**dataVencimentoFatura** | **String** | Data de vencimento da fatura. | [optional] 
-**dataVencimentoReal** | **String** | Data de vencimento real da fatura. | [optional] 
-**dataFechamento** | **String** | Data de fechamento da fatura. | [optional] 
-**valorTotal** | **Number** | Valor total da fatura. | [optional] 
-**valorPagamentoMinimo** | **Number** | Valor do pagamento m\u00EDnimo. | [optional] 
-**saldoAnterior** | **Number** | Valor do saldo anterior. | [optional] 
+**idConta** | **Integer** | {{{fatura_response_id_conta_value}}} | [optional] 
+**situacaoProcessamento** | **String** | {{{fatura_response_situacao_processamento_value}}} | [optional] 
+**pagamentoEfetuado** | **Boolean** | {{{fatura_response_pagamento_efetuado_value}}} | [optional] 
+**dataVencimentoFatura** | **String** | {{{fatura_response_data_vencimento_fatura_value}}} | [optional] 
+**dataVencimentoReal** | **String** | {{{fatura_response_data_vencimento_real_value}}} | [optional] 
+**dataFechamento** | **String** | {{{fatura_response_data_fechamento_value}}} | [optional] 
+**valorTotal** | **Number** | {{{fatura_response_valor_total_value}}} | [optional] 
+**valorPagamentoMinimo** | **Number** | {{{fatura_response_valor_pagamento_minimo_value}}} | [optional] 
+**saldoAnterior** | **Number** | {{{fatura_response_saldo_anterior_value}}} | [optional] 
 
 

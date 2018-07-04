@@ -18,12 +18,12 @@
   /**
    * The TaxasRefinanciamentoResponse model module.
    * @module model/TaxasRefinanciamentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TaxasRefinanciamentoResponse</code>.
-   * Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
+   * {{{taxas_refinanciamento_response_description}}}
    * @alias module:model/TaxasRefinanciamentoResponse
    * @class
    */
@@ -136,133 +136,133 @@
 
 
   /**
-   * ID das taxas
+   * {{{taxas_refinanciamento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * ID da conta
+   * {{{taxas_refinanciamento_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * ID do produto
+   * {{{taxas_refinanciamento_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * ID do plano de contas
+   * {{{taxas_refinanciamento_response_id_plano_conta_value}}}
    * @member {Integer} idPlanoConta
    */
   exports.prototype['idPlanoConta'] = undefined;
 
   /**
-   * ID do plano PCT
+   * {{{taxas_refinanciamento_response_id_plano_pct_value}}}
    * @member {Integer} idPlanoPct
    */
   exports.prototype['idPlanoPct'] = undefined;
 
   /**
-   * ID do plano credito taxa
+   * {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
    * @member {Integer} idPlanoCreditoTaxa
    */
   exports.prototype['idPlanoCreditoTaxa'] = undefined;
 
   /**
-   * Data de entrada
+   * {{{taxas_refinanciamento_response_data_entrada_value}}}
    * @member {String} dataEntrada
    */
   exports.prototype['dataEntrada'] = undefined;
 
   /**
-   * Vencimento das taxas
+   * {{{taxas_refinanciamento_response_vencimento_value}}}
    * @member {String} vencimento
    */
   exports.prototype['vencimento'] = undefined;
 
   /**
-   * Recupera\u00E7\u00E3o de encargos financeiro
+   * {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
    * @member {Number} recuperacaoEncargosFinanceiros
    */
   exports.prototype['recuperacaoEncargosFinanceiros'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o da comiss\u00E3o de garantia
+   * {{{taxas_refinanciamento_response_comissao_garantia_value}}}
    * @member {Number} comissaoGarantia
    */
   exports.prototype['comissaoGarantia'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do agenciamento
+   * {{{taxas_refinanciamento_response_agenciamento_value}}}
    * @member {Number} agenciamento
    */
   exports.prototype['agenciamento'] = undefined;
 
   /**
-   * Taxa m\u00E1xima do proximo per\u00EDodo
+   * {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
    * @member {Number} taxaMaximaProximoPeriodo
    */
   exports.prototype['taxaMaximaProximoPeriodo'] = undefined;
 
   /**
-   * Taxa de encargos do financiamento
+   * {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
    * @member {Number} taxaEncargosFinanciamento
    */
   exports.prototype['taxaEncargosFinanciamento'] = undefined;
 
   /**
-   * Taxa m\u00E1xima de saque
+   * {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
    * @member {Number} taxaMaximaSaque
    */
   exports.prototype['taxaMaximaSaque'] = undefined;
 
   /**
-   * Taxa de saque
+   * {{{taxas_refinanciamento_response_taxa_saque_value}}}
    * @member {Number} taxaSaque
    */
   exports.prototype['taxaSaque'] = undefined;
 
   /**
-   * Taxa m\u00E1xima de compras juros
+   * {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
    * @member {Number} taxaMaximaCompraJuros
    */
   exports.prototype['taxaMaximaCompraJuros'] = undefined;
 
   /**
-   * Taxa de juros compra
+   * {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
    * @member {Number} taxaCompraJuros
    */
   exports.prototype['taxaCompraJuros'] = undefined;
 
   /**
-   * Taxa de permanencia
+   * {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
    * @member {Number} taxaPermanencia
    */
   exports.prototype['taxaPermanencia'] = undefined;
 
   /**
-   * Taxa de permanencia
+   * {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
    * @member {Number} taxaRefinanciamento
    */
   exports.prototype['taxaRefinanciamento'] = undefined;
 
   /**
-   * Taxa de permanencia
+   * {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
    * @member {Number} taxaRecuperacaoRefinanciamento
    */
   exports.prototype['taxaRecuperacaoRefinanciamento'] = undefined;
 
   /**
-   * Taxa Percelamento pagamento minimo
+   * {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
    * @member {Number} taxaPercCalcPagamentoMinimo
    */
   exports.prototype['taxaPercCalcPagamentoMinimo'] = undefined;
 
   /**
-   * Plano de taxa padr\u00E3o
+   * {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
    * @member {Integer} planoTaxaDefault
    */
   exports.prototype['planoTaxaDefault'] = undefined;

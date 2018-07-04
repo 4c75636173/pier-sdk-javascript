@@ -18,12 +18,12 @@
   /**
    * The MCCResponse model module.
    * @module model/MCCResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>MCCResponse</code>.
-   * ObjetoMCC
+   * {{{m_c_c_response_description}}}
    * @alias module:model/MCCResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).
+   * {{{m_c_c_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * descricao do MCC.
+   * {{{m_c_c_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

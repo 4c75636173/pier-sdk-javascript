@@ -18,12 +18,12 @@
   /**
    * The DocumentoParametrosRequest model module.
    * @module model/DocumentoParametrosRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DocumentoParametrosRequest</code>.
-   * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
+   * {{{documento_parametros_request_description}}}
    * @alias module:model/DocumentoParametrosRequest
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * ID para o template do documento.
+   * {{{documento_parametros_request_id_template_documento_value}}}
    * @member {Integer} idTemplateDocumento
    */
   exports.prototype['idTemplateDocumento'] = undefined;
 
   /**
-   * Nome para o arquivo.
+   * {{{documento_parametros_request_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Lista de par\u00E2metros para montagem do documento.
+   * {{{documento_parametros_request_parametros_conteudo_value}}}
    * @member {Array.<module:model/PropriedadeDocumentoRequest>} parametrosConteudo
    */
   exports.prototype['parametrosConteudo'] = undefined;

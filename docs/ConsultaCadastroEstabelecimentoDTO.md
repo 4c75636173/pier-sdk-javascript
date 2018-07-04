@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dataHoraConsulta** | **String** | Data hora de cadastro. | [optional] 
-**status** | **String** | Status da consulta (1 - OK, 2 - NOK). | [optional] 
-**tipoEntidade** | **String** | Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO). | [optional] 
+**dataHoraConsulta** | **String** | {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}} | [optional] 
+**status** | **String** | {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}} | [optional] 
+**tipoEntidade** | **String** | {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}} | [optional] 
 
 

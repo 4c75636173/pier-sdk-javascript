@@ -18,12 +18,12 @@
   /**
    * The LimiteDisponibilidadeResponse model module.
    * @module model/LimiteDisponibilidadeResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>LimiteDisponibilidadeResponse</code>.
-   * Limite Disponibilidade
+   * {{{limite_disponibilidade_response_description}}}
    * @alias module:model/LimiteDisponibilidadeResponse
    * @class
    */
@@ -136,133 +136,133 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
+   * {{{limite_disponibilidade_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito.
+   * {{{limite_disponibilidade_response_limite_global_value}}}
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
+   * {{{limite_disponibilidade_response_limite_compra_value}}}
    * @member {Number} limiteCompra
    */
   exports.prototype['limiteCompra'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_parcelado_value}}}
    * @member {Number} limiteParcelado
    */
   exports.prototype['limiteParcelado'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_parcelas_value}}}
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_limite_saque_global_value}}}
    * @member {Number} limiteSaqueGlobal
    */
   exports.prototype['limiteSaqueGlobal'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
    * @member {Number} limiteSaquePeriodo
    */
   exports.prototype['limiteSaquePeriodo'] = undefined;
 
   /**
-   * Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
+   * {{{limite_disponibilidade_response_limite_consignado_value}}}
    * @member {Number} limiteConsignado
    */
   exports.prototype['limiteConsignado'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
+   * {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
    * @member {Number} limiteInternacionalCompra
    */
   exports.prototype['limiteInternacionalCompra'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
    * @member {Number} limiteInternacionalParcelado
    */
   exports.prototype['limiteInternacionalParcelado'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
    * @member {Number} limiteInternacionalParcelas
    */
   exports.prototype['limiteInternacionalParcelas'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
    * @member {Number} limiteInternacionalSaqueGlobal
    */
   exports.prototype['limiteInternacionalSaqueGlobal'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
    * @member {Number} limiteInternacionalSaquePeriodo
    */
   exports.prototype['limiteInternacionalSaquePeriodo'] = undefined;
 
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_limite_maximo_value}}}
    * @member {Number} limiteMaximo
    */
   exports.prototype['limiteMaximo'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
    * @member {Number} saldoDisponivelGlobal
    */
   exports.prototype['saldoDisponivelGlobal'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
    * @member {Number} saldoDisponivelCompra
    */
   exports.prototype['saldoDisponivelCompra'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
    * @member {Number} saldoDisponivelParcelado
    */
   exports.prototype['saldoDisponivelParcelado'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
    * @member {Number} saldoDisponivelParcelas
    */
   exports.prototype['saldoDisponivelParcelas'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
    * @member {Number} saldoDisponivelSaque
    */
   exports.prototype['saldoDisponivelSaque'] = undefined;
 
   /**
-   * Saldo atual de pontos do programa de fidelidade.
+   * {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
    * @member {Number} saldoPontosFidelidade
    */
   exports.prototype['saldoPontosFidelidade'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
    * @member {Number} saldoDisponivelCompraInternacional
    */
   exports.prototype['saldoDisponivelCompraInternacional'] = undefined;
 
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
    * @member {Number} saldoDisponivelSaqueInternacional
    */
   exports.prototype['saldoDisponivelSaqueInternacional'] = undefined;

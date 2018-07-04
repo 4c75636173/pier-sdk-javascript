@@ -18,12 +18,12 @@
   /**
    * The CampanhaResponse model module.
    * @module model/CampanhaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CampanhaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de campanha
+   * {{{campanha_response_description}}}
    * @alias module:model/CampanhaResponse
    * @class
    * @param planosCampanhas
@@ -65,25 +65,25 @@
 
 
   /**
-   * Identificador da campanha
+   * {{{campanha_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome da campanha
+   * {{{campanha_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
+   * {{{campanha_response_id_tipo_campanha_value}}}
    * @member {Integer} idTipoCampanha
    */
   exports.prototype['idTipoCampanha'] = undefined;
 
   /**
-   * Lista de planos associados a Campanha
+   * {{{campanha_response_planos_campanhas_value}}}
    * @member {Array.<module:model/PlanoCampanhaResponse>} planosCampanhas
    */
   exports.prototype['planosCampanhas'] = undefined;

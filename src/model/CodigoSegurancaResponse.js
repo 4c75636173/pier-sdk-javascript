@@ -18,12 +18,12 @@
   /**
    * The CodigoSegurancaResponse model module.
    * @module model/CodigoSegurancaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CodigoSegurancaResponse</code>.
-   * Objeto codigo seguranca
+   * {{{codigo_seguranca_response_description}}}
    * @alias module:model/CodigoSegurancaResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
+   * {{{codigo_seguranca_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
+   * {{{codigo_seguranca_response_id_emissor_value}}}
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
+   * {{{codigo_seguranca_response_modo_envio_value}}}
    * @member {String} modoEnvio
    */
   exports.prototype['modoEnvio'] = undefined;
 
   /**
-   * Apresenta o contato do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_response_contato_value}}}
    * @member {String} contato
    */
   exports.prototype['contato'] = undefined;
 
   /**
-   * Apresenta o status do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_response_ativo_value}}}
    * @member {Boolean} ativo
    */
   exports.prototype['ativo'] = undefined;
 
   /**
-   * Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
+   * {{{codigo_seguranca_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;

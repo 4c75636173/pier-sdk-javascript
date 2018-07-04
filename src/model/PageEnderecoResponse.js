@@ -18,12 +18,12 @@
   /**
    * The PageEnderecoResponse model module.
    * @module model/PageEnderecoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageEnderecoResponse</code>.
-   * Lista de Endere\u00E7os
+   * {{{page_endereco_response_description}}}
    * @alias module:model/PageEnderecoResponse
    * @class
    */

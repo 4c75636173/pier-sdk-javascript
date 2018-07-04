@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id) | [optional] 
-**idTipoAjuste** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste | [optional] 
-**idConta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta) | [optional] 
-**dataAjuste** | **String** | Data do ajuste | [optional] 
-**valor** | **Number** | Valor do ajuste | [optional] 
-**identificadorExterno** | **String** | Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra. | [optional] 
-**status** | **Integer** | Status do ajuste. | [optional] 
+**id** | **Integer** | {{{ajuste_financeiro_response_id_value}}} | [optional] 
+**idTipoAjuste** | **Integer** | {{{ajuste_financeiro_response_id_tipo_ajuste_value}}} | [optional] 
+**idConta** | **Integer** | {{{ajuste_financeiro_response_id_conta_value}}} | [optional] 
+**dataAjuste** | **String** | {{{ajuste_financeiro_response_data_ajuste_value}}} | [optional] 
+**valor** | **Number** | {{{ajuste_financeiro_response_valor_value}}} | [optional] 
+**identificadorExterno** | **String** | {{{ajuste_financeiro_response_identificador_externo_value}}} | [optional] 
+**status** | **Integer** | {{{ajuste_financeiro_response_status_value}}} | [optional] 
 
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador da fantasia b\u00E1sica | [optional] 
-**nome** | **String** | Nome da fantasia b\u00E1sica | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o da fantasia b\u00E1sica | [optional] 
+**id** | **Integer** | {{{fantasia_basica_response_id_value}}} | [optional] 
+**nome** | **String** | {{{fantasia_basica_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{fantasia_basica_response_descricao_value}}} | [optional] 
 
 

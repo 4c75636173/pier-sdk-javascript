@@ -18,12 +18,12 @@
   /**
    * The TipoTerminalResponse model module.
    * @module model/TipoTerminalResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoTerminalResponse</code>.
-   * ObjetoTipoTerminal
+   * {{{tipo_terminal_response_description}}}
    * @alias module:model/TipoTerminalResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
+   * {{{tipo_terminal_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Tipo Terminal.
+   * {{{tipo_terminal_response_descricao_terminal_value}}}
    * @member {String} descricaoTerminal
    */
   exports.prototype['descricaoTerminal'] = undefined;

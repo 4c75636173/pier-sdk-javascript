@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ddd** | **String** | DDD do n\u00FAmero de telefone para envio do sms. | [optional] 
-**telefone** | **String** | N\u00FAmero do telefone para envio do sms. | [optional] 
+**ddd** | **String** | {{{codigo_seguranca_s_m_s_persist_ddd_value}}} | [optional] 
+**telefone** | **String** | {{{codigo_seguranca_s_m_s_persist_telefone_value}}} | [optional] 
 
 

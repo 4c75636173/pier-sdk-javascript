@@ -18,12 +18,12 @@
   /**
    * The PageAjusteResponse model module.
    * @module model/PageAjusteResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageAjusteResponse</code>.
-   * Lista de Ajustes
+   * {{{page_ajuste_response_description}}}
    * @alias module:model/PageAjusteResponse
    * @class
    */

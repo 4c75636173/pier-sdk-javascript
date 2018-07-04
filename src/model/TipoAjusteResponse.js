@@ -1,33 +1,34 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', './TipoTransacaoAjusteResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./TipoTransacaoAjusteResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.TipoAjusteResponse = factory(root.Pier.ApiClient);
+    root.Pier.TipoAjusteResponse = factory(root.Pier.ApiClient, root.Pier.TipoTransacaoAjusteResponse);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, TipoTransacaoAjusteResponse) {
   'use strict';
 
   /**
    * The TipoAjusteResponse model module.
    * @module model/TipoAjusteResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoAjusteResponse</code>.
-   * Tipo de ajuste
+   * {{{tipo_ajuste_response_description}}}
    * @alias module:model/TipoAjusteResponse
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -50,22 +51,31 @@
       if (data.hasOwnProperty('descricao')) {
         obj['descricao'] = ApiClient.convertToType(data['descricao'], 'String');
       }
+      if (data.hasOwnProperty('transacoes')) {
+        obj['transacoes'] = ApiClient.convertToType(data['transacoes'], [TipoTransacaoAjusteResponse]);
+      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00F3digo identificador do tipo de ajuste.
+   * {{{tipo_ajuste_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo de ajuste.
+   * {{{tipo_ajuste_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
+
+  /**
+   * {{{tipo_ajuste_response_transacoes_value}}}
+   * @member {Array.<module:model/TipoTransacaoAjusteResponse>} transacoes
+   */
+  exports.prototype['transacoes'] = undefined;
 
 
 

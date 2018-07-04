@@ -18,12 +18,12 @@
   /**
    * The PageAvisoViagemResponse model module.
    * @module model/PageAvisoViagemResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageAvisoViagemResponse</code>.
-   * Lista de Avisos Viagem
+   * {{{page_aviso_viagem_response_description}}}
    * @alias module:model/PageAvisoViagemResponse
    * @class
    */

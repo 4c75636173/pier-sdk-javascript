@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idProduto** | **Integer** | C\u00F3digo identificador do produto | [optional] 
+**idProduto** | **Integer** | {{{produto_origem_response_id_produto_value}}} | [optional] 
 
 

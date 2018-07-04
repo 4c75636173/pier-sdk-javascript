@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idTemplateDocumento** | **Integer** | ID para o template do documento. | [optional] 
-**nome** | **String** | Nome para o arquivo. | [optional] 
-**parametrosConteudo** | [**[PropriedadeDocumentoRequest]**](PropriedadeDocumentoRequest.md) | Lista de par\u00E2metros para montagem do documento. | [optional] 
+**idTemplateDocumento** | **Integer** | {{{documento_parametros_request_id_template_documento_value}}} | [optional] 
+**nome** | **String** | {{{documento_parametros_request_nome_value}}} | [optional] 
+**parametrosConteudo** | [**[PropriedadeDocumentoRequest]**](PropriedadeDocumentoRequest.md) | {{{documento_parametros_request_parametros_conteudo_value}}} | [optional] 
 
 

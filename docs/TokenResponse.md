@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador do token | [optional] 
-**base** | **Integer** | C\u00F3digo identificador da base | [optional] 
-**owner** | **String** | Owner do token | [optional] 
-**status** | **String** | Status do token | [optional] 
-**criadoPor** | **String** | Descri\u00E7\u00E3o de quem criou o token | [optional] 
-**dataCriacao** | **Date** | Data de cria\u00E7\u00E3o do token | [optional] 
-**alteradoPor** | **String** | Descri\u00E7\u00E3o de quem alterou o token | [optional] 
-**dataModificacao** | **Date** | Data de modifica\u00E7\u00E3o do token | [optional] 
+**id** | **Integer** | {{{token_dto_id_value}}} | [optional] 
+**base** | **Integer** | {{{token_dto_base_value}}} | [optional] 
+**owner** | **String** | {{{token_dto_owner_value}}} | [optional] 
+**status** | **String** | {{{token_dto_status_value}}} | [optional] 
+**criadoPor** | **String** | {{{token_dto_criado_por_value}}} | [optional] 
+**dataCriacao** | **String** | {{{token_dto_data_criacao_value}}} | [optional] 
+**alteradoPor** | **String** | {{{token_dto_alterado_por_value}}} | [optional] 
+**dataModificacao** | **String** | {{{token_dto_data_modificacao_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The LoteCartoesPrePagosResponse model module.
    * @module model/LoteCartoesPrePagosResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>LoteCartoesPrePagosResponse</code>.
-   * Lote Cart\u00F5es Pr\u00E9-Pagos
+   * {{{lote_cartoes_pre_pagos_response_description}}}
    * @alias module:model/LoteCartoesPrePagosResponse
    * @class
    * @param id
@@ -103,67 +103,67 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
+   * {{{lote_cartoes_pre_pagos_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador da origem comercial.
+   * {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * C\u00F3digo identificador do Produto.
+   * {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo do cart\u00E3o.
+   * {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * C\u00F3digo identificador da Imagem do cart\u00E3o.
+   * {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
    * @member {Integer} idImagem
    */
   exports.prototype['idImagem'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
+   * {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
    * @member {Integer} idEndereco
    */
   exports.prototype['idEndereco'] = undefined;
 
   /**
-   * N\u00FAmero de cart\u00F5es existentes no Lote.
+   * {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
    * @member {Integer} quantidade
    */
   exports.prototype['quantidade'] = undefined;
 
   /**
-   * Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
+   * {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * Nome do usu\u00E1rio que criou o lote.
+   * {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
    * @member {String} usuarioCadastro
    */
   exports.prototype['usuarioCadastro'] = undefined;
 
   /**
-   * Indica o status de processamento do lote.
+   * {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
    * @member {Integer} statusProcessamento
    */
   exports.prototype['statusProcessamento'] = undefined;
 
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
+   * {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
    * @member {String} identificadorExterno
    */
   exports.prototype['identificadorExterno'] = undefined;

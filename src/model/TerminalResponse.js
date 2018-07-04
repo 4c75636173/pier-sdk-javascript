@@ -18,12 +18,12 @@
   /**
    * The TerminalResponse model module.
    * @module model/TerminalResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TerminalResponse</code>.
-   * ObjetoTerminal
+   * {{{terminal_response_description}}}
    * @alias module:model/TerminalResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+   * {{{terminal_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00FAmero \u00FAnico do terminal.
+   * {{{terminal_response_terminal_value}}}
    * @member {String} terminal
    */
   exports.prototype['terminal'] = undefined;
 
   /**
-   * N\u00FAmero do estabelecimento a qual o terminal pertence.
+   * {{{terminal_response_numero_estabelecimento_value}}}
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
+   * {{{terminal_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+   * {{{terminal_response_flag_consulta_extrato_value}}}
    * @member {Boolean} flagConsultaExtrato
    */
   exports.prototype['flagConsultaExtrato'] = undefined;
 
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+   * {{{terminal_response_flag_terminal_virtual_value}}}
    * @member {Boolean} flagTerminalVirtual
    */
   exports.prototype['flagTerminalVirtual'] = undefined;

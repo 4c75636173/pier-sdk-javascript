@@ -18,12 +18,12 @@
   /**
    * The ReferenciaComercialAprovadoResponse model module.
    * @module model/ReferenciaComercialAprovadoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ReferenciaComercialAprovadoResponse</code>.
-   * ReferenciaComercialAprovadoResponse
+   * {{{referencia_comercial_aprovado_response_description}}}
    * @alias module:model/ReferenciaComercialAprovadoResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+   * {{{referencia_comercial_aprovado_response_razao_social_value}}}
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
 
   /**
-   * Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
    * @member {String} nomeContrato
    */
   exports.prototype['nomeContrato'] = undefined;
 
   /**
-   * Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * Apresenta o e-mail de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;

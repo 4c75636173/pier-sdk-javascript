@@ -18,12 +18,12 @@
   /**
    * The ProdutoDetalhesResponse model module.
    * @module model/ProdutoDetalhesResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ProdutoDetalhesResponse</code>.
-   * ProdutoDetalhes
+   * {{{produto_detalhes_response_description}}}
    * @alias module:model/ProdutoDetalhesResponse
    * @class
    * @param id
@@ -75,37 +75,37 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{produto_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Nome do Produto.
+   * {{{produto_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+   * {{{produto_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+   * {{{produto_response_id_fantasia_basica_value}}}
    * @member {Integer} idFantasiaBasica
    */
   exports.prototype['idFantasiaBasica'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
+   * {{{produto_detalhes_response_fantasia_basica_value}}}
    * @member {String} fantasiaBasica
    */
   exports.prototype['fantasiaBasica'] = undefined;
 
   /**
-   * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
+   * {{{produto_detalhes_response_uso_exterior_value}}}
    * @member {Boolean} usoExterior
    */
   exports.prototype['usoExterior'] = undefined;

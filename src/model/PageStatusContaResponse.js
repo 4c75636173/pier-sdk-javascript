@@ -18,12 +18,12 @@
   /**
    * The PageStatusContaResponse model module.
    * @module model/PageStatusContaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageStatusContaResponse</code>.
-   * Lista de Status Contas
+   * {{{page_status_conta_response_description}}}
    * @alias module:model/PageStatusContaResponse
    * @class
    */

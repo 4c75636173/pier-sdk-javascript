@@ -18,12 +18,12 @@
   /**
    * The ParcelamentoTransferenciaResponse model module.
    * @module model/ParcelamentoTransferenciaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ParcelamentoTransferenciaResponse</code>.
-   * Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+   * {{{parcelamento_transferencia_response_description}}}
    * @alias module:model/ParcelamentoTransferenciaResponse
    * @class
    */
@@ -76,43 +76,43 @@
 
 
   /**
-   * N\u00FAmero de parcelas dispon\u00EDveis.
+   * {{{parcelamento_transferencia_response_numero_parcela_value}}}
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
 
   /**
-   * Valor das demais parcelas.
+   * {{{parcelamento_transferencia_response_valor_parcelas_value}}}
    * @member {Number} valorParcelas
    */
   exports.prototype['valorParcelas'] = undefined;
 
   /**
-   * Valor total do financiamento.
+   * {{{parcelamento_transferencia_response_valor_total_value}}}
    * @member {Number} valorTotal
    */
   exports.prototype['valorTotal'] = undefined;
 
   /**
-   * Valor da tarifa de contrata\u00E7\u00E3o.
+   * {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * IOF calculado para o cliente
+   * {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
    * @member {Number} valorIOF
    */
   exports.prototype['valorIOF'] = undefined;
 
   /**
-   * Valor da taxa de juros.
+   * {{{parcelamento_transferencia_response_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * CET anual.
+   * {{{parcelamento_transferencia_response_cet_anual_value}}}
    * @member {Number} cetAnual
    */
   exports.prototype['cetAnual'] = undefined;

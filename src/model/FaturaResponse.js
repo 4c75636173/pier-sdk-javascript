@@ -18,12 +18,12 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>FaturaResponse</code>.
-   * Fatura futura
+   * {{{fatura_response_description}}}
    * @alias module:model/FaturaResponse
    * @class
    */
@@ -84,55 +84,55 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{fatura_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Situa\u00E7\u00E3o de Processamento da fatura.
+   * {{{fatura_response_situacao_processamento_value}}}
    * @member {module:model/FaturaResponse.SituacaoProcessamentoEnum} situacaoProcessamento
    */
   exports.prototype['situacaoProcessamento'] = undefined;
 
   /**
-   * Status de pagamento efetuado.
+   * {{{fatura_response_pagamento_efetuado_value}}}
    * @member {Boolean} pagamentoEfetuado
    */
   exports.prototype['pagamentoEfetuado'] = undefined;
 
   /**
-   * Data de vencimento da fatura.
+   * {{{fatura_response_data_vencimento_fatura_value}}}
    * @member {String} dataVencimentoFatura
    */
   exports.prototype['dataVencimentoFatura'] = undefined;
 
   /**
-   * Data de vencimento real da fatura.
+   * {{{fatura_response_data_vencimento_real_value}}}
    * @member {String} dataVencimentoReal
    */
   exports.prototype['dataVencimentoReal'] = undefined;
 
   /**
-   * Data de fechamento da fatura.
+   * {{{fatura_response_data_fechamento_value}}}
    * @member {String} dataFechamento
    */
   exports.prototype['dataFechamento'] = undefined;
 
   /**
-   * Valor total da fatura.
+   * {{{fatura_response_valor_total_value}}}
    * @member {Number} valorTotal
    */
   exports.prototype['valorTotal'] = undefined;
 
   /**
-   * Valor do pagamento m\u00EDnimo.
+   * {{{fatura_response_valor_pagamento_minimo_value}}}
    * @member {Number} valorPagamentoMinimo
    */
   exports.prototype['valorPagamentoMinimo'] = undefined;
 
   /**
-   * Valor do saldo anterior.
+   * {{{fatura_response_saldo_anterior_value}}}
    * @member {Number} saldoAnterior
    */
   exports.prototype['saldoAnterior'] = undefined;

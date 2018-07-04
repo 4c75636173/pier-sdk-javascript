@@ -1,6 +1,6 @@
 {
   "name": "Pier",
-  "version": "2.57.0",
+  "version": "2.66.1",
   "description": "Gest\u00E3o de pagamento eletr\u00F4nicos como servi\u00E7o",
   "license": "Apache 2.0",
   "main": "src/index.js",

@@ -18,12 +18,12 @@
   /**
    * The ControleVencimentoResponse model module.
    * @module model/ControleVencimentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ControleVencimentoResponse</code>.
-   * Objeto de Resposta dos Vencimentos
+   * {{{controle_vencimento_response_description}}}
    * @alias module:model/ControleVencimentoResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   *  Indica a data de vencimento das faturas
+   * {{{controle_vencimento_response_data_vencimento_value}}}
    * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   *  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
+   * {{{controle_vencimento_response_data_prevista_corte_value}}}
    * @member {String} dataPrevistaCorte
    */
   exports.prototype['dataPrevistaCorte'] = undefined;
 
   /**
-   * Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
+   * {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
    * @member {String} dataHoraRealizacaoCorte
    */
   exports.prototype['dataHoraRealizacaoCorte'] = undefined;
 
   /**
-   * Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
+   * {{{controle_vencimento_response_data_prevista_faturamento_value}}}
    * @member {String} dataPrevistaFaturamento
    */
   exports.prototype['dataPrevistaFaturamento'] = undefined;
 
   /**
-   * Indica a data e a hora que fora realizado o faturamento
+   * {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
    * @member {String} dataHoraRealizacaoFaturamento
    */
   exports.prototype['dataHoraRealizacaoFaturamento'] = undefined;
 
   /**
-   * Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
+   * {{{controle_vencimento_response_data_real_vencimento_value}}}
    * @member {String} dataRealVencimento
    */
   exports.prototype['dataRealVencimento'] = undefined;

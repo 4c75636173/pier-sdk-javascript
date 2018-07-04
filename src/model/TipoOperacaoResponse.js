@@ -18,12 +18,12 @@
   /**
    * The TipoOperacaoResponse model module.
    * @module model/TipoOperacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoOperacaoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
+   * {{{tipo_operacao_response_description}}}
    * @alias module:model/TipoOperacaoResponse
    * @class
    * @param id
@@ -122,97 +122,97 @@
 
 
   /**
-   * C\u00F3digo identificador do TipoOperacao
+   * {{{tipo_operacao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo do TipoOperacao
+   * {{{tipo_operacao_response_tipo_operacao_value}}}
    * @member {String} tipoOperacao
    */
   exports.prototype['tipoOperacao'] = undefined;
 
   /**
-   * Nome do TipoOperacao
+   * {{{tipo_operacao_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Decri\u00E7\u00E3o do TipoOperacao
+   * {{{tipo_operacao_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Excedente permitido para o TipoOperacao
+   * {{{tipo_operacao_response_excedente_permitido_value}}}
    * @member {Number} excedentePermitido
    */
   exports.prototype['excedentePermitido'] = undefined;
 
   /**
-   * Tipo do Excedente permitido para o TipoOperacao
+   * {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
    * @member {String} tipoExcedentePermitido
    */
   exports.prototype['tipoExcedentePermitido'] = undefined;
 
   /**
-   * Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
+   * {{{tipo_operacao_response_valor_minimo_value}}}
    * @member {Number} valorMinimo
    */
   exports.prototype['valorMinimo'] = undefined;
 
   /**
-   * Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
+   * {{{tipo_operacao_response_valor_maximo_value}}}
    * @member {Number} valorMaximo
    */
   exports.prototype['valorMaximo'] = undefined;
 
   /**
-   * Valor TAC da transa\u00E7\u00E3o do TipoOperacao
+   * {{{tipo_operacao_response_valor_t_a_c_value}}}
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * Flag Tira TAC do TipoOperacao
+   * {{{tipo_operacao_response_flag_tira_tac_value}}}
    * @member {Integer} flagTiraTac
    */
   exports.prototype['flagTiraTac'] = undefined;
 
   /**
-   * Identificador do Produto do TipoOperacao
+   * {{{tipo_operacao_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Identificador do Estabelecimento do TipoOperacao
+   * {{{tipo_operacao_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Tarifa do TipoOperacao
+   * {{{tipo_operacao_response_tarifa_value}}}
    * @member {Number} tarifa
    */
   exports.prototype['tarifa'] = undefined;
 
   /**
-   * Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
+   * {{{tipo_operacao_response_remuneracao_emissor_value}}}
    * @member {Number} remuneracaoEmissor
    */
   exports.prototype['remuneracaoEmissor'] = undefined;
 
   /**
-   * Plano m\u00E1ximo do TipoOperacao
+   * {{{tipo_operacao_response_plano_maximo_value}}}
    * @member {Integer} planoMaximo
    */
   exports.prototype['planoMaximo'] = undefined;
 
   /**
-   * Plano minimo do TipoOperacao
+   * {{{tipo_operacao_response_plano_minimo_value}}}
    * @member {Integer} planoMinimo
    */
   exports.prototype['planoMinimo'] = undefined;

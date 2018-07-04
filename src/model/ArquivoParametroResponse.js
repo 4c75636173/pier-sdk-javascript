@@ -18,12 +18,12 @@
   /**
    * The ArquivoParametroResponse model module.
    * @module model/ArquivoParametroResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ArquivoParametroResponse</code>.
-   * Objeto Response de par\u00E2metros do arquivo.
+   * {{{arquivo_parametro_response_description}}}
    * @alias module:model/ArquivoParametroResponse
    * @class
    * @param nomeCampo
@@ -62,19 +62,19 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
+   * {{{arquivo_parametro_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome que identifica o detalhe do arquivo
+   * {{{arquivo_parametro_response_nome_campo_value}}}
    * @member {String} nomeCampo
    */
   exports.prototype['nomeCampo'] = undefined;
 
   /**
-   * Conte\u00FAdo do nomeCampo
+   * {{{arquivo_parametro_response_conteudo_value}}}
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

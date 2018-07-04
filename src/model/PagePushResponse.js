@@ -1,29 +1,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './NotificacaoPushResponse'], factory);
+    define(['../ApiClient', './NotificacaoPushResponseValue'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./NotificacaoPushResponse'));
+    module.exports = factory(require('../ApiClient'), require('./NotificacaoPushResponseValue'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PagePushResponse = factory(root.Pier.ApiClient, root.Pier.NotificacaoPushResponse);
+    root.Pier.PagePushResponse = factory(root.Pier.ApiClient, root.Pier.NotificacaoPushResponseValue);
   }
-}(this, function(ApiClient, NotificacaoPushResponse) {
+}(this, function(ApiClient, NotificacaoPushResponseValue) {
   'use strict';
 
   /**
    * The PagePushResponse model module.
    * @module model/PagePushResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PagePushResponse</code>.
-   * Lista de Push
+   * {{{page_push_response_description}}}
    * @alias module:model/PagePushResponse
    * @class
    */
@@ -57,7 +57,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], [NotificacaoPushResponse]);
+        obj['content'] = ApiClient.convertToType(data['content'], [NotificacaoPushResponseValue]);
       }
       if (data.hasOwnProperty('first')) {
         obj['first'] = ApiClient.convertToType(data['first'], 'Boolean');
@@ -104,7 +104,7 @@
 
 
   /**
-   * @member {Array.<module:model/NotificacaoPushResponse>} content
+   * @member {Array.<module:model/NotificacaoPushResponseValue>} content
    */
   exports.prototype['content'] = undefined;
 

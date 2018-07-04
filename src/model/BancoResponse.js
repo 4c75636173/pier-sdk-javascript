@@ -18,12 +18,12 @@
   /**
    * The BancoResponse model module.
    * @module model/BancoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>BancoResponse</code>.
-   * Objeto Banco
+   * {{{banco_response_description}}}
    * @alias module:model/BancoResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
+   * {{{banco_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do banco
+   * {{{banco_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do banco
+   * {{{banco_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Digito do banco
+   * {{{banco_response_digito_banco_value}}}
    * @member {String} digitoBanco
    */
   exports.prototype['digitoBanco'] = undefined;

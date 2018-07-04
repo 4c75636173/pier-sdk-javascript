@@ -18,12 +18,12 @@
   /**
    * The PageStatusCartaoResponse model module.
    * @module model/PageStatusCartaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageStatusCartaoResponse</code>.
-   * Lista de Status Cart\u00F5es
+   * {{{page_status_cartao_response_description}}}
    * @alias module:model/PageStatusCartaoResponse
    * @class
    */

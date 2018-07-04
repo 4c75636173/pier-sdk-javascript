@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador do tipo de campanha | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do tipo de campanha | [optional] 
+**id** | **Integer** | {{{tipo_campanha_response_id_value}}} | [optional] 
+**descricao** | **String** | {{{tipo_campanha_response_descricao_value}}} | [optional] 
 
 

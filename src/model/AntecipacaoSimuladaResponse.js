@@ -18,12 +18,12 @@
   /**
    * The AntecipacaoSimuladaResponse model module.
    * @module model/AntecipacaoSimuladaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AntecipacaoSimuladaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
+   * {{{antecipacao_simulada_response_description}}}
    * @alias module:model/AntecipacaoSimuladaResponse
    * @class
    */
@@ -158,139 +158,139 @@
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
+   * {{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}
    * @member {Integer} idAntecipacaoSimulada
    */
   exports.prototype['idAntecipacaoSimulada'] = undefined;
 
   /**
-   * C\u00F3digo identificador da conta.
+   * {{{antecipacao_simulada_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo identificador do evento compra.
+   * {{{antecipacao_simulada_response_id_compra_value}}}
    * @member {Integer} idCompra
    */
   exports.prototype['idCompra'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo do evento compra.
+   * {{{antecipacao_simulada_response_id_tipo_transacao_value}}}
    * @member {Integer} idTipoTransacao
    */
   exports.prototype['idTipoTransacao'] = undefined;
 
   /**
-   * Quantidade de parcelas antecip\u00E1veis.
+   * {{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}
    * @member {Integer} quantidadeParcelasAntecipaveis
    */
   exports.prototype['quantidadeParcelasAntecipaveis'] = undefined;
 
   /**
-   * Valor da parcela.
+   * {{{antecipacao_simulada_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Data e hora em que a simula\u00E7\u00E3o foi feita.
+   * {{{antecipacao_simulada_response_data_hora_simulacao_value}}}
    * @member {String} dataHoraSimulacao
    */
   exports.prototype['dataHoraSimulacao'] = undefined;
 
   /**
-   * Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
+   * {{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}
    * @member {Number} taxaAntecipacaoAno
    */
   exports.prototype['taxaAntecipacaoAno'] = undefined;
 
   /**
-   * Estabelecimento onde foi realizada a transa\u00E7\u00E3o
+   * {{{antecipacao_simulada_response_nome_estabelecimento_value}}}
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_status_value}}}
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data da compra.
+   * {{{antecipacao_simulada_response_data_compra_value}}}
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * Tipo de transa\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_tipo_origem_transacao_value}}}
    * @member {String} tipoOrigemTransacao
    */
   exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
-   * Cidade onde a compra foi realizada.
+   * {{{antecipacao_simulada_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Pa\u00EDs onde a compra foi realizada.
+   * {{{antecipacao_simulada_response_pais_value}}}
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_latitude_value}}}
    * @member {String} latitude
    */
   exports.prototype['latitude'] = undefined;
 
   /**
-   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_longitude_value}}}
    * @member {String} longitude
    */
   exports.prototype['longitude'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_simulada_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_simulada_response_descricao_produto_value}}}
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do estabelecimento da compra.
+   * {{{antecipacao_simulada_response_descricao_estabelecimento_value}}}
    * @member {String} descricaoEstabelecimento
    */
   exports.prototype['descricaoEstabelecimento'] = undefined;
 
   /**
-   * Nome fantasia do estabelecimento da compra.
+   * {{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}
    * @member {String} nomeFantasiaEstabelecimento
    */
   exports.prototype['nomeFantasiaEstabelecimento'] = undefined;
 
   /**
-   * Detalhes da simula\u00E7\u00E3o.
+   * {{{antecipacao_simulada_response_detalhes_value}}}
    * @member {Array.<module:model/AntecipacaoSimuladaDetalhesResponse>} detalhes
    */
   exports.prototype['detalhes'] = undefined;

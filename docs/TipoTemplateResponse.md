@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | ID do Tipo de Template. | [optional] 
-**nome** | **String** | Nome do Tipo de Template. | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do Tipo de Template. | [optional] 
-**sigla** | **String** | Sigla do Tipo de Template. | [optional] 
+**id** | **Integer** | {{{tipo_template_response_id_value}}} | [optional] 
+**nome** | **String** | {{{tipo_template_response_nome_value}}} | [optional] 
+**descricao** | **String** | {{{tipo_template_response_descricao_value}}} | [optional] 
+**sigla** | **String** | {{{tipo_template_response_sigla_value}}} | [optional] 
 
 

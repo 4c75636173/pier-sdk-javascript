@@ -18,12 +18,12 @@
   /**
    * The PageAnuidadeResponse model module.
    * @module model/PageAnuidadeResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageAnuidadeResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso Tipos de Anuidades
+   * {{{page_anuidade_response_description}}}
    * @alias module:model/PageAnuidadeResponse
    * @class
    */

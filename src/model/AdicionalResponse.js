@@ -18,12 +18,12 @@
   /**
    * The AdicionalResponse model module.
    * @module model/AdicionalResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AdicionalResponse</code>.
-   * Resposta do recurso de cadastrar adicional
+   * {{{adicional_response_description}}}
    * @alias module:model/AdicionalResponse
    * @class
    */
@@ -108,91 +108,91 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
+   * {{{adicional_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
+   * {{{adicional_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Nome completo do Adicional
+   * {{{adicional_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
+   * {{{adicional_response_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * N\u00FAmero do CPF ou CNPJ do Adicional
+   * {{{adicional_response_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * Data de Nascimento do Adicional
+   * {{{adicional_response_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+   * {{{adicional_response_sexo_value}}}
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00FAmero do Documento de Identidade do Adicional
+   * {{{adicional_response_numero_identidade_value}}}
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
+   * {{{adicional_response_orgao_expedidor_identidade_value}}}
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
-   * Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+   * {{{adicional_response_unidade_federativa_identidade_value}}}
    * @member {String} unidadeFederativaIdentidade
    */
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data de emiss\u00E3o do Documento de Identidade do Adicional
+   * {{{adicional_response_data_emissao_identidade_value}}}
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
+   * {{{adicional_response_id_parentesco_value}}}
    * @member {Integer} idParentesco
    */
   exports.prototype['idParentesco'] = undefined;
 
   /**
-   * Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
+   * {{{adicional_response_flag_ativo_value}}}
    * @member {Integer} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;
 
   /**
-   * Indica a data de cadastro do adicional
+   * {{{adicional_response_data_cadastro_portador_value}}}
    * @member {String} dataCadastroPortador
    */
   exports.prototype['dataCadastroPortador'] = undefined;
 
   /**
-   * Indica a data de cancelamento do adicional
+   * {{{adicional_response_data_cancelamento_portador_value}}}
    * @member {String} dataCancelamentoPortador
    */
   exports.prototype['dataCancelamentoPortador'] = undefined;

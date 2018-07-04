@@ -18,12 +18,12 @@
   /**
    * The PropriedadeDocumentoRequest model module.
    * @module model/PropriedadeDocumentoRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PropriedadeDocumentoRequest</code>.
-   * Objeto que encapsula as propriedades do detalhamento do documento.
+   * {{{propriedade_documento_request_description}}}
    * @alias module:model/PropriedadeDocumentoRequest
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Valor da propriedade do Documento.
+   * {{{propriedade_documento_request_chave_value}}}
    * @member {String} chave
    */
   exports.prototype['chave'] = undefined;
 
   /**
-   * Valor da propriedade do Documento.
+   * {{{propriedade_documento_request_valor_value}}}
    * @member {String} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Tipo da propriedade do Documento.
+   * {{{propriedade_documento_request_detalhes_tipo_value}}}
    * @member {module:model/PropriedadeDocumentoRequest.DetalhesTipoEnum} detalhesTipo
    */
   exports.prototype['detalhesTipo'] = undefined;
 
   /**
-   * Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
+   * {{{propriedade_documento_request_flag_indice_value}}}
    * @member {Boolean} flagIndice
    */
   exports.prototype['flagIndice'] = undefined;

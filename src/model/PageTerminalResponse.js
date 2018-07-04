@@ -18,12 +18,12 @@
   /**
    * The PageTerminalResponse model module.
    * @module model/PageTerminalResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTerminalResponse</code>.
-   * Lista de terminais
+   * {{{page_terminal_response_description}}}
    * @alias module:model/PageTerminalResponse
    * @class
    */

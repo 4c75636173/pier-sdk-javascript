@@ -18,12 +18,12 @@
   /**
    * The PageOrigemComercialResponse model module.
    * @module model/PageOrigemComercialResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageOrigemComercialResponse</code>.
-   * Lista de Origens Comerciais
+   * {{{page_origem_comercial_response_description}}}
    * @alias module:model/PageOrigemComercialResponse
    * @class
    */

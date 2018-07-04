@@ -18,12 +18,12 @@
   /**
    * The PagePlataformaMobileResponse model module.
    * @module model/PagePlataformaMobileResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PagePlataformaMobileResponse</code>.
-   * Lista de Plataformas Mobile
+   * {{{page_plataforma_mobile_response_description}}}
    * @alias module:model/PagePlataformaMobileResponse
    * @class
    */

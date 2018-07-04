@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** | Status do cart\u00E3o | 
+**status** | **String** | {{{cartao_pay_update_status_value}}} | 
 
 

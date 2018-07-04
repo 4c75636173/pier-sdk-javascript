@@ -3,22 +3,22 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo Identificador. | [optional] 
-**nsu** | **Integer** | N\u00FAmero sequencial \u00FAnico. | [optional] 
-**idEmissor** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do emissor (id). | [optional] 
-**tipoEvento** | **String** | TipoEvento de notifica\u00E7\u00E3o | [optional] 
-**status** | **String** | Status de envio da notifica\u00E7\u00E3o | 
-**descricaoStatus** | **String** | Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o | 
-**idPessoa** | **Integer** | C\u00F3digo identificado da pessoa | 
-**idConta** | **Integer** | C\u00F3digo identificador da conta | 
-**celular** | **String** | Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999 | 
-**operadora** | **String** | Apresenta a operadora do celular a ser eviado o SMS | 
-**conteudo** | **String** | Apresenta o texto da notifica\u00E7\u00E3o a ser enviado | 
-**resposta** | **String** | Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada | 
-**dataAgendamento** | **String** | Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o | 
-**quantidadeTentativasEnvio** | **Integer** | Quantidade de tentativas e envio da notifica\u00E7\u00E3o | 
-**dataInclusao** | **String** | Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado | 
-**dataAlteracaoStatus** | **String** | Apresenta a data e em que o Stattjus do registro foi modificado | 
-**protocolo** | **String** | N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es | [optional] 
+**id** | **Integer** | {{{notificacao_s_m_s_response_id_value}}} | [optional] 
+**nsu** | **Integer** | {{{notificacao_s_m_s_response_nsu_value}}} | [optional] 
+**idEmissor** | **Integer** | {{{notificacao_s_m_s_response_id_emissor_value}}} | [optional] 
+**tipoEvento** | **String** | {{{notificacao_s_m_s_response_tipo_evento_value}}} | [optional] 
+**status** | **String** | {{{notificacao_s_m_s_response_status_value}}} | 
+**descricaoStatus** | **String** | {{{notificacao_s_m_s_response_descricao_status_value}}} | 
+**idPessoa** | **Integer** | {{{notificacao_s_m_s_response_id_pessoa_value}}} | 
+**idConta** | **Integer** | {{{notificacao_s_m_s_response_id_conta_value}}} | 
+**celular** | **String** | {{{notificacao_s_m_s_response_celular_value}}} | 
+**operadora** | **String** | {{{notificacao_s_m_s_response_operadora_value}}} | 
+**conteudo** | **String** | {{{notificacao_s_m_s_response_conteudo_value}}} | 
+**resposta** | **String** | {{{notificacao_s_m_s_response_resposta_value}}} | 
+**dataAgendamento** | **String** | {{{notificacao_s_m_s_response_data_agendamento_value}}} | 
+**quantidadeTentativasEnvio** | **Integer** | {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}} | 
+**dataInclusao** | **String** | {{{notificacao_s_m_s_response_data_inclusao_value}}} | 
+**dataAlteracaoStatus** | **String** | {{{notificacao_s_m_s_response_data_alteracao_status_value}}} | 
+**protocolo** | **String** | {{{notificacao_s_m_s_response_protocolo_value}}} | [optional] 
 
 

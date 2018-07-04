@@ -18,12 +18,12 @@
   /**
    * The AnexoNotificacaoEmailRequest model module.
    * @module model/AnexoNotificacaoEmailRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AnexoNotificacaoEmailRequest</code>.
-   * Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o.
+   * {{{anexo_notificacao_email_request_description}}}
    * @alias module:model/AnexoNotificacaoEmailRequest
    * @class
    */
@@ -52,7 +52,7 @@
 
 
   /**
-   * ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o.
+   * {{{anexo_notificacao_email_request_id_documento_value}}}
    * @member {Integer} idDocumento
    */
   exports.prototype['idDocumento'] = undefined;

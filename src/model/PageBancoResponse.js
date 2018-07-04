@@ -18,12 +18,12 @@
   /**
    * The PageBancoResponse model module.
    * @module model/PageBancoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageBancoResponse</code>.
-   * Lista de Bancos
+   * {{{page_banco_response_description}}}
    * @alias module:model/PageBancoResponse
    * @class
    */

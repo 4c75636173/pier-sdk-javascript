@@ -18,12 +18,12 @@
   /**
    * The NotificacaoEmailRequest model module.
    * @module model/NotificacaoEmailRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>NotificacaoEmailRequest</code>.
-   * Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
+   * {{{notificacao_email_request_description}}}
    * @alias module:model/NotificacaoEmailRequest
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * ID para o template da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_id_template_notificacao_value}}}
    * @member {Integer} idTemplateNotificacao
    */
   exports.prototype['idTemplateNotificacao'] = undefined;
 
   /**
-   * Lista de email(s) do(s) destinat\u00E1rio(s).
+   * {{{notificacao_email_request_destinatarios_value}}}
    * @member {Array.<String>} destinatarios
    */
   exports.prototype['destinatarios'] = undefined;
 
   /**
-   * Lista de ids dos anexos a serem enviados.
+   * {{{notificacao_email_request_anexos_value}}}
    * @member {Array.<module:model/AnexoNotificacaoEmailRequest>} anexos
    */
   exports.prototype['anexos'] = undefined;
 
   /**
-   * Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_parametros_conteudo_value}}}
    * @member {Object.<String, Object>} parametrosConteudo
    */
   exports.prototype['parametrosConteudo'] = undefined;

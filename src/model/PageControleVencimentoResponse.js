@@ -18,12 +18,12 @@
   /**
    * The PageControleVencimentoResponse model module.
    * @module model/PageControleVencimentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageControleVencimentoResponse</code>.
-   * Lista de Vencimentos
+   * {{{page_controle_vencimento_response_description}}}
    * @alias module:model/PageControleVencimentoResponse
    * @class
    */

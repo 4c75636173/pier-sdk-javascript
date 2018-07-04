@@ -18,12 +18,12 @@
   /**
    * The TipoArquivoResponse model module.
    * @module model/TipoArquivoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoArquivoResponse</code>.
-   * Objeto Response do tipo arquivo.
+   * {{{tipo_arquivo_response_description}}}
    * @alias module:model/TipoArquivoResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo
+   * {{{tipo_arquivo_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do tipo do arquivo
+   * {{{tipo_arquivo_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo do arquivo
+   * {{{tipo_arquivo_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

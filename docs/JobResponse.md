@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador do Job | [optional] 
-**descricao** | **String** | Descricao do Job | [optional] 
-**groovy** | **String** | Script Groovy do Job | [optional] 
-**cron** | **String** | Cron do Job | [optional] 
-**status** | **String** | Status do Job no agendador de tarefas | [optional] 
+**id** | **Integer** | {{{job_response_id_value}}} | [optional] 
+**descricao** | **String** | {{{job_response_descricao_value}}} | [optional] 
+**groovy** | **String** | {{{job_response_groovy_value}}} | [optional] 
+**cron** | **String** | {{{job_response_cron_value}}} | [optional] 
+**status** | **String** | {{{job_response_status_value}}} | [optional] 
 
 

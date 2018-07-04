@@ -18,12 +18,12 @@
   /**
    * The PageAcordoResponse model module.
    * @module model/PageAcordoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageAcordoResponse</code>.
-   * Lista de Acordos
+   * {{{page_acordo_response_description}}}
    * @alias module:model/PageAcordoResponse
    * @class
    */

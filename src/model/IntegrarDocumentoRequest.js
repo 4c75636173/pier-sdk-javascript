@@ -18,12 +18,12 @@
   /**
    * The IntegrarDocumentoRequest model module.
    * @module model/IntegrarDocumentoRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>IntegrarDocumentoRequest</code>.
-   * Objeto de requisi\u00E7\u00E3o.
+   * {{{integrar_documento_request_description}}}
    * @alias module:model/IntegrarDocumentoRequest
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Identificador do template de documento
+   * {{{integrar_documento_request_id_template_value}}}
    * @member {Integer} idTemplate
    */
   exports.prototype['idTemplate'] = undefined;
 
   /**
-   * Conte\u00FAdo do arquivo convertido em Base 64
+   * {{{integrar_documento_request_arquivo_value}}}
    * @member {String} arquivo
    */
   exports.prototype['arquivo'] = undefined;
 
   /**
-   * Nome do arquivo.
+   * {{{integrar_documento_request_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Lista de par\u00E2metros para montagem do documento.
+   * {{{integrar_documento_request_propriedades_value}}}
    * @member {Array.<module:model/PropriedadeDocumentoRequest>} propriedades
    */
   exports.prototype['propriedades'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PageVinculoOperacaoResponse model module.
    * @module model/PageVinculoOperacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageVinculoOperacaoResponse</code>.
-   * Lista de vinculosOperacao
+   * {{{page_vinculo_operacao_response_description}}}
    * @alias module:model/PageVinculoOperacaoResponse
    * @class
    */

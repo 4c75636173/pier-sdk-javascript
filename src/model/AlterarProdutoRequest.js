@@ -18,12 +18,12 @@
   /**
    * The AlterarProdutoRequest model module.
    * @module model/AlterarProdutoRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AlterarProdutoRequest</code>.
-   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
+   * {{{alterar_produto_request_description}}}
    * @alias module:model/AlterarProdutoRequest
    * @class
    * @param idProduto
@@ -65,25 +65,25 @@
 
 
   /**
-   * C\u00F3digo identificador do produto.
+   * {{{alterar_produto_request_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00F3digo identificador da origem comercial.
+   * {{{alterar_produto_request_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
+   * {{{alterar_produto_request_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.
+   * {{{alterar_produto_request_id_promotor_value}}}
    * @member {Integer} idPromotor
    */
   exports.prototype['idPromotor'] = undefined;

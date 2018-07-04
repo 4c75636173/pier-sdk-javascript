@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Apresenta o identificador da aplicacao. | [optional] 
-**idPlataformaMobile** | **Integer** | Apresenta o identificador da plataforma. | [optional] 
-**token** | **String** | Apresenta o token da aplicacao. | [optional] 
-**cor** | **String** | Apresenta a cor da mensagem da aplicacao. | [optional] 
-**som** | **String** | Apresenta o som da mensagem da aplicacao | [optional] 
-**icone** | **String** | Apresenta o icone da mensagem da aplica\u00E7\u00E3o. | [optional] 
-**certificadoBase64** | **String** | Apresenta o certificado da aplica\u00E7\u00E3o. | [optional] 
-**senha** | **String** | Apresenta a senha da aplica\u00E7\u00E3o. | [optional] 
+**id** | **Integer** | {{{aplicacao_mobile_response_id_value}}} | [optional] 
+**idPlataformaMobile** | **Integer** | {{{aplicacao_mobile_response_id_plataforma_mobile_value}}} | [optional] 
+**token** | **String** | {{{aplicacao_mobile_response_token_value}}} | [optional] 
+**cor** | **String** | {{{aplicacao_mobile_response_cor_value}}} | [optional] 
+**som** | **String** | {{{aplicacao_mobile_response_som_value}}} | [optional] 
+**icone** | **String** | {{{aplicacao_mobile_response_icone_value}}} | [optional] 
+**certificadoBase64** | **String** | {{{aplicacao_mobile_response_certificado_base64_value}}} | [optional] 
+**senha** | **String** | {{{aplicacao_mobile_response_senha_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The PagePromotorResponse model module.
    * @module model/PagePromotorResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PagePromotorResponse</code>.
-   * Lista de Promotores
+   * {{{page_promotor_response_description}}}
    * @alias module:model/PagePromotorResponse
    * @class
    */

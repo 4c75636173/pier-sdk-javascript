@@ -18,12 +18,12 @@
   /**
    * The PageFantasiaBasicaResponse model module.
    * @module model/PageFantasiaBasicaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageFantasiaBasicaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de fantasia b\u00E1sica
+   * {{{page_fantasia_basica_response_description}}}
    * @alias module:model/PageFantasiaBasicaResponse
    * @class
    */

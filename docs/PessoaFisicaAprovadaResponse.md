@@ -3,37 +3,37 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id) | [optional] 
-**nome** | **String** | Apresenta o nome completo da pessoa fisica. | 
-**nomeMae** | **String** | Apresenta o nome da m\u00E3e da pessoa fisica | [optional] 
-**dataNascimento** | **String** | Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd. | [optional] 
-**sexo** | **String** | C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino). | [optional] 
-**cpf** | **String** | N\u00FAmero do Cadastro de Pessoa Fisica (CPF) | 
-**numeroIdentidade** | **String** | N\u00FAmero da identidade. | [optional] 
-**orgaoExpedidorIdentidade** | **String** | Org\u00E3o expedidor da Identidade. | [optional] 
-**unidadeFederativaIdentidade** | **String** | Sigla da Unidade Federativa de onde foi expedido a Identidade | [optional] 
-**dataEmissaoIdentidade** | **String** | Data emiss\u00E3o da Identidade no formato aaaa-MM-dd | [optional] 
-**idEstadoCivil** | **Integer** | Id Estado civil da pessoa fisica | [optional] 
-**idProfissao** | **String** | Profiss\u00E3o da pessoa fisica | [optional] 
-**idNaturezaOcupacao** | **Integer** | Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica | [optional] 
-**idNacionalidade** | **Integer** | Id Nacionalidade da pessoa fisica | [optional] 
-**idOrigemComercial** | **Integer** | Id da origem comercial | 
-**idProduto** | **Integer** | Id do produto | 
-**numeroAgencia** | **Integer** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numeroContaCorrente** | **String** | N\u00FAmero da conta corrente. | [optional] 
-**email** | **String** | Email da pessoa fisica | [optional] 
-**diaVencimento** | **Integer** | Dia vencimento | 
-**nomeImpresso** | **String** | Nome que deve ser impresso no cart\u00E3o | [optional] 
-**nomeEmpresa** | **String** | Nome da empresa | [optional] 
-**idConta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada | [optional] 
-**idProposta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da proposta | [optional] 
-**canalEntrada** | **String** | Indica o canal pelo qual o cadastro do cliente foi realizado | [optional] 
-**valorPontuacao** | **Integer** | Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0) | [optional] 
-**telefones** | [**[TelefonePessoaAprovadaResponse]**](TelefonePessoaAprovadaResponse.md) | Apresenta os telefones da empresa | [optional] 
-**enderecos** | [**[EnderecoAprovadoResponse]**](EnderecoAprovadoResponse.md) | Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros | 
-**limiteGlobal** | **Number** | Valor do Limite Global | 
-**limiteMaximo** | **Number** | Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es | 
-**limiteParcelas** | **Number** | Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras | 
-**limiteConsignado** | **Number** | Valor do limite de margem consignado | 
+**id** | **Integer** | {{{pessoa_fisica_aprovada_response_id_value}}} | [optional] 
+**nome** | **String** | {{{pessoa_fisica_aprovada_response_nome_value}}} | 
+**nomeMae** | **String** | {{{pessoa_fisica_aprovada_response_nome_mae_value}}} | [optional] 
+**dataNascimento** | **String** | {{{pessoa_fisica_aprovada_response_data_nascimento_value}}} | [optional] 
+**sexo** | **String** | {{{pessoa_fisica_aprovada_response_sexo_value}}} | [optional] 
+**cpf** | **String** | {{{pessoa_fisica_aprovada_response_cpf_value}}} | 
+**numeroIdentidade** | **String** | {{{pessoa_fisica_aprovada_response_numero_identidade_value}}} | [optional] 
+**orgaoExpedidorIdentidade** | **String** | {{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}} | [optional] 
+**unidadeFederativaIdentidade** | **String** | {{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}} | [optional] 
+**dataEmissaoIdentidade** | **String** | {{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}} | [optional] 
+**idEstadoCivil** | **Integer** | {{{pessoa_fisica_aprovada_response_id_estado_civil_value}}} | [optional] 
+**idProfissao** | **String** | {{{pessoa_fisica_aprovada_response_id_profissao_value}}} | [optional] 
+**idNaturezaOcupacao** | **Integer** | {{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}} | [optional] 
+**idNacionalidade** | **Integer** | {{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}} | [optional] 
+**idOrigemComercial** | **Integer** | {{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}} | 
+**idProduto** | **Integer** | {{{pessoa_fisica_aprovada_response_id_produto_value}}} | 
+**numeroAgencia** | **Integer** | {{{pessoa_fisica_aprovada_response_numero_agencia_value}}} | [optional] 
+**numeroContaCorrente** | **String** | {{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}} | [optional] 
+**email** | **String** | {{{pessoa_fisica_aprovada_response_email_value}}} | [optional] 
+**diaVencimento** | **Integer** | {{{pessoa_fisica_aprovada_response_dia_vencimento_value}}} | 
+**nomeImpresso** | **String** | {{{pessoa_fisica_aprovada_response_nome_impresso_value}}} | [optional] 
+**nomeEmpresa** | **String** | {{{pessoa_fisica_aprovada_response_nome_empresa_value}}} | [optional] 
+**idConta** | **Integer** | {{{pessoa_fisica_aprovada_response_id_conta_value}}} | [optional] 
+**idProposta** | **Integer** | {{{pessoa_fisica_aprovada_response_id_proposta_value}}} | [optional] 
+**canalEntrada** | **String** | {{{pessoa_fisica_aprovada_response_canal_entrada_value}}} | [optional] 
+**valorPontuacao** | **Integer** | {{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}} | [optional] 
+**telefones** | [**[TelefonePessoaAprovadaResponse]**](TelefonePessoaAprovadaResponse.md) | {{{pessoa_fisica_aprovada_response_telefones_value}}} | [optional] 
+**enderecos** | [**[EnderecoAprovadoResponse]**](EnderecoAprovadoResponse.md) | {{{pessoa_fisica_aprovada_response_enderecos_value}}} | 
+**limiteGlobal** | **Number** | {{{pessoa_fisica_aprovada_response_limite_global_value}}} | 
+**limiteMaximo** | **Number** | {{{pessoa_fisica_aprovada_response_limite_maximo_value}}} | 
+**limiteParcelas** | **Number** | {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}} | 
+**limiteConsignado** | **Number** | {{{pessoa_fisica_aprovada_response_limite_consignado_value}}} | 
 
 

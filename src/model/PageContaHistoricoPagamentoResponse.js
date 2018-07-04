@@ -18,12 +18,12 @@
   /**
    * The PageContaHistoricoPagamentoResponse model module.
    * @module model/PageContaHistoricoPagamentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageContaHistoricoPagamentoResponse</code>.
-   * Lista de pagamentos da conta
+   * {{{page_conta_historico_pagamento_response_description}}}
    * @alias module:model/PageContaHistoricoPagamentoResponse
    * @class
    */

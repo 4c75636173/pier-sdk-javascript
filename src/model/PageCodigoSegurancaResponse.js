@@ -18,12 +18,12 @@
   /**
    * The PageCodigoSegurancaResponse model module.
    * @module model/PageCodigoSegurancaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageCodigoSegurancaResponse</code>.
-   * Lista de C\u00F3digos de Seguran\u00E7a
+   * {{{page_codigo_seguranca_response_description}}}
    * @alias module:model/PageCodigoSegurancaResponse
    * @class
    */

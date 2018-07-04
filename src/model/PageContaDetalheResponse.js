@@ -18,12 +18,12 @@
   /**
    * The PageContaDetalheResponse model module.
    * @module model/PageContaDetalheResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageContaDetalheResponse</code>.
-   * Lista detalhes contas
+   * {{{page_conta_detalhe_response_description}}}
    * @alias module:model/PageContaDetalheResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The PlanoCampanhaResponse model module.
    * @module model/PlanoCampanhaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PlanoCampanhaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
+   * {{{plano_campanha_response_description}}}
    * @alias module:model/PlanoCampanhaResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Identificador do plano de campanha
+   * {{{plano_campanha_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Quantidade de parcelas
+   * {{{plano_campanha_response_parcelas_value}}}
    * @member {Integer} parcelas
    */
   exports.prototype['parcelas'] = undefined;
 
   /**
-   * Taxa de juros
+   * {{{plano_campanha_response_taxa_value}}}
    * @member {Number} taxa
    */
   exports.prototype['taxa'] = undefined;
 
   /**
-   * Nome do usu\u00E1rio
+   * {{{plano_campanha_response_usuario_value}}}
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

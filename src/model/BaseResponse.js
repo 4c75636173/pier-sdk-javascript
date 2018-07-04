@@ -18,38 +18,28 @@
   /**
    * The BaseResponse model module.
    * @module model/BaseResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>BaseResponse</code>.
-   * Representa\u00E7\u00E3o do recurso Base
+   * {{{base_response_description}}}
    * @alias module:model/BaseResponse
    * @class
-   * @param id
-   * @param servidor
-   * @param usuario
-   * @param nomeBase
-   * @param senhaCriptografada
-   * @param domain
-   * @param nomeBaseControleAcesso
-   * @param servidorControleAcesso
-   * @param nomeBaseUsuarios
-   * @param servidorUsuarios
    */
-  var exports = function(id, servidor, usuario, nomeBase, senhaCriptografada, domain, nomeBaseControleAcesso, servidorControleAcesso, nomeBaseUsuarios, servidorUsuarios) {
+  var exports = function() {
 
-    this['id'] = id;
-    this['servidor'] = servidor;
-    this['usuario'] = usuario;
-    this['nomeBase'] = nomeBase;
-    this['senhaCriptografada'] = senhaCriptografada;
-    this['domain'] = domain;
-    this['nomeBaseControleAcesso'] = nomeBaseControleAcesso;
 
-    this['servidorControleAcesso'] = servidorControleAcesso;
-    this['nomeBaseUsuarios'] = nomeBaseUsuarios;
-    this['servidorUsuarios'] = servidorUsuarios;
+
+
+
+
+
+
+
+
+
+
 
   };
 
@@ -76,11 +66,11 @@
       if (data.hasOwnProperty('nomeBase')) {
         obj['nomeBase'] = ApiClient.convertToType(data['nomeBase'], 'String');
       }
-      if (data.hasOwnProperty('senhaCriptografada')) {
-        obj['senhaCriptografada'] = ApiClient.convertToType(data['senhaCriptografada'], 'Boolean');
-      }
       if (data.hasOwnProperty('domain')) {
         obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
+      }
+      if (data.hasOwnProperty('senhaCriptografada')) {
+        obj['senhaCriptografada'] = ApiClient.convertToType(data['senhaCriptografada'], 'Boolean');
       }
       if (data.hasOwnProperty('nomeBaseControleAcesso')) {
         obj['nomeBaseControleAcesso'] = ApiClient.convertToType(data['nomeBaseControleAcesso'], 'String');
@@ -106,73 +96,73 @@
 
 
   /**
-   * C\u00F3digo identificador da base
+   * {{{base_dto_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * IP do servidor
+   * {{{base_dto_servidor_value}}}
    * @member {String} servidor
    */
   exports.prototype['servidor'] = undefined;
 
   /**
-   * Nome do usu\u00E1rio
+   * {{{base_dto_usuario_value}}}
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
 
   /**
-   * Nome da base
+   * {{{base_dto_nome_base_value}}}
    * @member {String} nomeBase
    */
   exports.prototype['nomeBase'] = undefined;
 
   /**
-   * senha Criptografada
-   * @member {Boolean} senhaCriptografada
-   */
-  exports.prototype['senhaCriptografada'] = undefined;
-
-  /**
-   * Dom\u00EDnio da base
+   * {{{base_dto_domain_value}}}
    * @member {String} domain
    */
   exports.prototype['domain'] = undefined;
 
   /**
-   * Nome da base de controle acesso
+   * {{{base_dto_senha_criptografada_value}}}
+   * @member {Boolean} senhaCriptografada
+   */
+  exports.prototype['senhaCriptografada'] = undefined;
+
+  /**
+   * {{{base_dto_nome_base_controle_acesso_value}}}
    * @member {String} nomeBaseControleAcesso
    */
   exports.prototype['nomeBaseControleAcesso'] = undefined;
 
   /**
-   * C\u00F3digo do identificador do emissor
+   * {{{base_dto_id_emissor_value}}}
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * Servidor do controle de acesso
+   * {{{base_dto_servidor_controle_acesso_value}}}
    * @member {String} servidorControleAcesso
    */
   exports.prototype['servidorControleAcesso'] = undefined;
 
   /**
-   * Nome da base de usu\u00E1rios
+   * {{{base_dto_nome_base_usuarios_value}}}
    * @member {String} nomeBaseUsuarios
    */
   exports.prototype['nomeBaseUsuarios'] = undefined;
 
   /**
-   * Servidor do controle de acesso
+   * {{{base_dto_servidor_usuarios_value}}}
    * @member {String} servidorUsuarios
    */
   exports.prototype['servidorUsuarios'] = undefined;
 
   /**
-   * Flag Cluester
+   * {{{base_dto_flag_cluster_value}}}
    * @member {Boolean} flagCluster
    */
   exports.prototype['flagCluster'] = undefined;

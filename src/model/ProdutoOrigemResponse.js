@@ -18,12 +18,12 @@
   /**
    * The ProdutoOrigemResponse model module.
    * @module model/ProdutoOrigemResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ProdutoOrigemResponse</code>.
-   * Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial
+   * {{{produto_origem_response_description}}}
    * @alias module:model/ProdutoOrigemResponse
    * @class
    */
@@ -52,7 +52,7 @@
 
 
   /**
-   * C\u00F3digo identificador do produto
+   * {{{produto_origem_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;

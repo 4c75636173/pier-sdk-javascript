@@ -18,12 +18,12 @@
   /**
    * The EntidadeResponse model module.
    * @module model/EntidadeResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>EntidadeResponse</code>.
-   * Objeto de Resposta da Entidade
+   * {{{entidade_response_description}}}
    * @alias module:model/EntidadeResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
+   * {{{entidade_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o da entidade.
+   * {{{entidade_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que indica se a entidade est\u00E1 ativa.
+   * {{{entidade_response_flag_ativo_value}}}
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

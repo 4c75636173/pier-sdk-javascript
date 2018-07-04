@@ -18,12 +18,12 @@
   /**
    * The VinculoEstabelecimentoAdquirentePersist model module.
    * @module model/VinculoEstabelecimentoAdquirentePersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>VinculoEstabelecimentoAdquirentePersist</code>.
-   * Objeto VinculoEstabelecimentoPersist
+   * {{{vinculo_estabelecimento_adquirente_persist_description}}}
    * @alias module:model/VinculoEstabelecimentoAdquirentePersist
    * @class
    * @param idEstabelecimento
@@ -63,19 +63,19 @@
 
 
   /**
-   * Apresenta o id do estabelecimento.
+   * {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Apresenta o id do adquirente.
+   * {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
    * @member {Integer} idAdquirente
    */
   exports.prototype['idAdquirente'] = undefined;
 
   /**
-   * Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
+   * {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
    * @member {String} codigoEstabelecimentoAdquirente
    */
   exports.prototype['codigoEstabelecimentoAdquirente'] = undefined;

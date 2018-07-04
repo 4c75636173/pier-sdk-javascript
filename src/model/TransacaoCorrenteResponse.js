@@ -18,12 +18,12 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TransacaoCorrenteResponse</code>.
-   * Representa\u00E7\u00E3o do recurso transacao
+   * {{{transacao_corrente_response_description}}}
    * @alias module:model/TransacaoCorrenteResponse
    * @class
    */
@@ -125,103 +125,103 @@
   exports.prototype['ultimaParcelaLancada'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+   * {{{transacao_corrente_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
+   * {{{transacao_corrente_response_id_tipo_registro_value}}}
    * @member {Integer} idTipoRegistro
    */
   exports.prototype['idTipoRegistro'] = undefined;
 
   /**
-   * Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
+   * {{{transacao_corrente_response_ordem_value}}}
    * @member {Integer} ordem
    */
   exports.prototype['ordem'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
+   * {{{transacao_corrente_response_id_transacao_value}}}
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
-   * Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_descricao_status_value}}}
    * @member {String} descricaoStatus
    */
   exports.prototype['descricaoStatus'] = undefined;
 
   /**
-   * Atributo que representa o valor da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_valor_dolar_value}}}
    * @member {Number} valorDolar
    */
   exports.prototype['valorDolar'] = undefined;
 
   /**
-   * Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Atributo que representa a data de envio da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_data_evento_value}}}
    * @member {String} dataEvento
    */
   exports.prototype['dataEvento'] = undefined;
 
   /**
-   * Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_estabelecimento_value}}}
    * @member {String} estabelecimento
    */
   exports.prototype['estabelecimento'] = undefined;
 
   /**
-   * Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
+   * {{{transacao_corrente_response_flag_credito_value}}}
    * @member {Integer} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_tipo_estabelecimento_value}}}
    * @member {String} tipoEstabelecimento
    */
   exports.prototype['tipoEstabelecimento'] = undefined;
 
   /**
-   * Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
+   * {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
    * @member {Integer} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;

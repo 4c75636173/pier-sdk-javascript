@@ -18,12 +18,12 @@
   /**
    * The CompraResponse model module.
    * @module model/CompraResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CompraResponse</code>.
-   * Objeto de Compra
+   * {{{compra_response_description}}}
    * @alias module:model/CompraResponse
    * @class
    */
@@ -150,127 +150,127 @@
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da compra.
+   * {{{compra_response_id_compra_value}}}
    * @member {Integer} idCompra
    */
   exports.prototype['idCompra'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{compra_response_status_value}}}
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data da compra.
+   * {{{compra_response_data_compra_value}}}
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * Valor total da compra.
+   * {{{compra_response_valor_total_compra_value}}}
    * @member {Number} valorTotalCompra
    */
   exports.prototype['valorTotalCompra'] = undefined;
 
   /**
-   * Valor da parcela da compra.
+   * {{{compra_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Valor da primeira parcela da compra.
+   * {{{compra_response_primeira_parcela_value}}}
    * @member {Number} primeiraParcela
    */
   exports.prototype['primeiraParcela'] = undefined;
 
   /**
-   * N\u00FAmero de parcelas da compra.
+   * {{{compra_response_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * N\u00FAmero de parcelas antecip\u00E1veis da compra.
+   * {{{compra_response_numero_parcelas_antecipaveis_value}}}
    * @member {Integer} numeroParcelasAntecipaveis
    */
   exports.prototype['numeroParcelasAntecipaveis'] = undefined;
 
   /**
-   * Nome do estabelecimento da compra.
+   * {{{compra_response_nome_estabelecimento_value}}}
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Tipo de transa\u00E7\u00E3o da compra.
+   * {{{compra_response_tipo_origem_transacao_value}}}
    * @member {String} tipoOrigemTransacao
    */
   exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
-   * Cidade onde a compra foi realizada.
+   * {{{compra_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Pa\u00EDs onde a compra foi realizada.
+   * {{{compra_response_pais_value}}}
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{compra_response_latitude_value}}}
    * @member {String} latitude
    */
   exports.prototype['latitude'] = undefined;
 
   /**
-   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{compra_response_longitude_value}}}
    * @member {String} longitude
    */
   exports.prototype['longitude'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{compra_response_id_grupo_m_c_c_value}}}
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{compra_response_descricao_grupo_m_c_c_value}}}
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
+   * {{{compra_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+   * {{{compra_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do produto da compra.
+   * {{{compra_response_descricao_produto_value}}}
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
 
   /**
-   * N\u00FAmero do cart\u00E3o da compra.
+   * {{{compra_response_cartao_value}}}
    * @member {String} cartao
    */
   exports.prototype['cartao'] = undefined;
 
   /**
-   * Nome do portador do cart\u00E3o da compra.
+   * {{{compra_response_nome_portador_cartao_value}}}
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;

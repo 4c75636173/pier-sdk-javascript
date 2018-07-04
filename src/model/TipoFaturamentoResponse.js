@@ -18,12 +18,12 @@
   /**
    * The TipoFaturamentoResponse model module.
    * @module model/TipoFaturamentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoFaturamentoResponse</code>.
-   * Objeto Faturamento
+   * {{{tipo_faturamento_response_description}}}
    * @alias module:model/TipoFaturamentoResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+   * {{{tipo_faturamento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Desci\u00E7\u00E3o do tipo de faturamento.
+   * {{{tipo_faturamento_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
    * @member {Boolean} flagApenasDemonstrativo
    */
   exports.prototype['flagApenasDemonstrativo'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+   * {{{tipo_faturamento_response_id_convenio_value}}}
    * @member {Integer} idConvenio
    */
   exports.prototype['idConvenio'] = undefined;

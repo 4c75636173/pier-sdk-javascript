@@ -18,12 +18,12 @@
   /**
    * The CampoCodificadoDescricaoResponse model module.
    * @module model/CampoCodificadoDescricaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CampoCodificadoDescricaoResponse</code>.
-   * Objeto Campo Condificado
+   * {{{campo_codificado_descricao_response_description}}}
    * @alias module:model/CampoCodificadoDescricaoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
+   * {{{campo_codificado_descricao_response_codigo_value}}}
    * @member {Integer} codigo
    */
   exports.prototype['codigo'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do campo codificado.
+   * {{{campo_codificado_descricao_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

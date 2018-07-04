@@ -18,12 +18,12 @@
   /**
    * The DocumentoResponse model module.
    * @module model/DocumentoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DocumentoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
+   * {{{documento_response_description}}}
    * @alias module:model/DocumentoResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * ID do Documento.
+   * {{{documento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_response_id_template_documento_value}}}
    * @member {Integer} idTemplateDocumento
    */
   exports.prototype['idTemplateDocumento'] = undefined;
 
   /**
-   * Nome do Documento.
+   * {{{documento_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Extens\u00E3o do Documento.
+   * {{{documento_response_extensao_value}}}
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;

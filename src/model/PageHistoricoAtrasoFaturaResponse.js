@@ -18,12 +18,12 @@
   /**
    * The PageHistoricoAtrasoFaturaResponse model module.
    * @module model/PageHistoricoAtrasoFaturaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageHistoricoAtrasoFaturaResponse</code>.
-   * Lista historicos atraso pagamento
+   * {{{page_historico_atraso_fatura_response_description}}}
    * @alias module:model/PageHistoricoAtrasoFaturaResponse
    * @class
    */

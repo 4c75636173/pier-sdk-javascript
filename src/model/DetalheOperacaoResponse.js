@@ -18,12 +18,12 @@
   /**
    * The DetalheOperacaoResponse model module.
    * @module model/DetalheOperacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DetalheOperacaoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso Operacao
+   * {{{detalhe_operacao_response_description}}}
    * @alias module:model/DetalheOperacaoResponse
    * @class
    */
@@ -124,115 +124,115 @@
 
 
   /**
-   * C\u00F3digo que identifica a opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_id_operacao_value}}}
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+   * {{{detalhe_operacao_response_codigo_processamento_value}}}
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+   * {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
    * @member {String} codigoProcessamentoCancelamento
    */
   exports.prototype['codigoProcessamentoCancelamento'] = undefined;
 
   /**
-   * Nome da opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_nome_operacao_value}}}
    * @member {String} nomeOperacao
    */
   exports.prototype['nomeOperacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o da opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_descricao_operacao_value}}}
    * @member {String} descricaoOperacao
    */
   exports.prototype['descricaoOperacao'] = undefined;
 
   /**
-   * Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_plano_minimo_value}}}
    * @member {Integer} planoMinimo
    */
   exports.prototype['planoMinimo'] = undefined;
 
   /**
-   * Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_plano_maximo_value}}}
    * @member {Integer} planoMaximo
    */
   exports.prototype['planoMaximo'] = undefined;
 
   /**
-   *  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_valor_minimo_value}}}
    * @member {Number} valorMinimo
    */
   exports.prototype['valorMinimo'] = undefined;
 
   /**
-   *  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_valor_maximo_value}}}
    * @member {Number} valorMaximo
    */
   exports.prototype['valorMaximo'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00E7a de juros
+   * {{{detalhe_operacao_response_flag_cobra_juros_value}}}
    * @member {Boolean} flagCobraJuros
    */
   exports.prototype['flagCobraJuros'] = undefined;
 
   /**
-   * Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
+   * {{{detalhe_operacao_response_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00E7a de tarifas
+   * {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
    * @member {Boolean} flagCobraTarifa
    */
   exports.prototype['flagCobraTarifa'] = undefined;
 
   /**
-   * Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
+   * {{{detalhe_operacao_response_taxa_tarifa_value}}}
    * @member {Number} taxaTarifa
    */
   exports.prototype['taxaTarifa'] = undefined;
 
   /**
-   * Valor da taxa de abertura de conta
+   * {{{detalhe_operacao_response_valor_tac_value}}}
    * @member {Number} valorTac
    */
   exports.prototype['valorTac'] = undefined;
 
   /**
-   * Percentual da taxa de abertura de conta
+   * {{{detalhe_operacao_response_percentual_tac_value}}}
    * @member {Number} percentualTac
    */
   exports.prototype['percentualTac'] = undefined;
 
   /**
-   * Valor da opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_valor_operacao_value}}}
    * @member {Number} valorOperacao
    */
   exports.prototype['valorOperacao'] = undefined;
 
   /**
-   * Quantidade de meses para car\u00EAncia
+   * {{{detalhe_operacao_response_carencia_value}}}
    * @member {Integer} carencia
    */
   exports.prototype['carencia'] = undefined;
 
   /**
-   * Valor excedente permitido para opera\u00E7\u00E3o
+   * {{{detalhe_operacao_response_excedente_permitido_value}}}
    * @member {Number} excedentePermitido
    */
   exports.prototype['excedentePermitido'] = undefined;
 
   /**
-   * Permitir transa\u00E7\u00F5es parceladas
+   * {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
    * @member {Boolean} flagPermitirParcelamento
    */
   exports.prototype['flagPermitirParcelamento'] = undefined;

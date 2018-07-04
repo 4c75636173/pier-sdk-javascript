@@ -18,12 +18,12 @@
   /**
    * The MaquinetaUpdate model module.
    * @module model/MaquinetaUpdate
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>MaquinetaUpdate</code>.
-   * Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
+   * {{{maquineta_update_description}}}
    * @alias module:model/MaquinetaUpdate
    * @class
    * @param idTerminal
@@ -68,25 +68,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+   * {{{maquineta_update_id_terminal_value}}}
    * @member {Integer} idTerminal
    */
   exports.prototype['idTerminal'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
+   * {{{maquineta_update_id_tipo_maquineta_value}}}
    * @member {Integer} idTipoMaquineta
    */
   exports.prototype['idTipoMaquineta'] = undefined;
 
   /**
-   * Valor de Manuten\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_update_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Data da implanta\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_update_data_hora_implantacao_value}}}
    * @member {String} dataHoraImplantacao
    */
   exports.prototype['dataHoraImplantacao'] = undefined;

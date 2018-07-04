@@ -18,16 +18,25 @@
   /**
    * The OperacaoCredorPersist model module.
    * @module model/OperacaoCredorPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>OperacaoCredorPersist</code>.
-   * Objeto OperacaoCredor
+   * {{{operacao_credor_persist_description}}}
    * @alias module:model/OperacaoCredorPersist
    * @class
+   * @param idOperacao
+   * @param idGrupoEconomico
+   * @param idsProduto
+   * @param planoMinimo
+   * @param planoMaximo
    */
-  var exports = function() {
+  var exports = function(idOperacao, idGrupoEconomico, idsProduto, planoMinimo, planoMaximo) {
+
+    this['idOperacao'] = idOperacao;
+    this['idGrupoEconomico'] = idGrupoEconomico;
+    this['idsProduto'] = idsProduto;
 
 
 
@@ -35,12 +44,8 @@
 
 
 
-
-
-
-
-
-
+    this['planoMinimo'] = planoMinimo;
+    this['planoMaximo'] = planoMaximo;
   };
 
   /**
@@ -57,8 +62,8 @@
       if (data.hasOwnProperty('idOperacao')) {
         obj['idOperacao'] = ApiClient.convertToType(data['idOperacao'], 'Integer');
       }
-      if (data.hasOwnProperty('idCredor')) {
-        obj['idCredor'] = ApiClient.convertToType(data['idCredor'], 'Integer');
+      if (data.hasOwnProperty('idGrupoEconomico')) {
+        obj['idGrupoEconomico'] = ApiClient.convertToType(data['idGrupoEconomico'], 'Integer');
       }
       if (data.hasOwnProperty('idsProduto')) {
         obj['idsProduto'] = ApiClient.convertToType(data['idsProduto'], ['Integer']);
@@ -96,73 +101,73 @@
 
 
   /**
-   * Apresenta o id da Opera\u00E7\u00E3o.
+   * {{{operacao_credor_persist_id_operacao_value}}}
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * Apresenta o id do Credor.
-   * @member {Integer} idCredor
+   * {{{operacao_credor_persist_id_grupo_economico_value}}}
+   * @member {Integer} idGrupoEconomico
    */
-  exports.prototype['idCredor'] = undefined;
+  exports.prototype['idGrupoEconomico'] = undefined;
 
   /**
-   * Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.
+   * {{{operacao_credor_persist_ids_produto_value}}}
    * @member {Array.<Integer>} idsProduto
    */
   exports.prototype['idsProduto'] = undefined;
 
   /**
-   * Remunera\u00E7\u00E3o Percentual.
+   * {{{operacao_credor_persist_remuneracao_percentual_value}}}
    * @member {Number} remuneracaoPercentual
    */
   exports.prototype['remuneracaoPercentual'] = undefined;
 
   /**
-   * Remunera\u00E7\u00E3o Fixa.
+   * {{{operacao_credor_persist_remuneracao_fixa_value}}}
    * @member {Number} remuneracaoFixa
    */
   exports.prototype['remuneracaoFixa'] = undefined;
 
   /**
-   * Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).
+   * {{{operacao_credor_persist_periodicidade_value}}}
    * @member {module:model/OperacaoCredorPersist.PeriodicidadeEnum} periodicidade
    */
   exports.prototype['periodicidade'] = undefined;
 
   /**
-   * Vencimento da primeira parcela.
+   * {{{operacao_credor_persist_vencimento_primeira_parcela_value}}}
    * @member {Integer} vencimentoPrimeiraParcela
    */
   exports.prototype['vencimentoPrimeiraParcela'] = undefined;
 
   /**
-   * Dias afastamento.
+   * {{{operacao_credor_persist_dias_afastamento_value}}}
    * @member {Integer} diasAfastamento
    */
   exports.prototype['diasAfastamento'] = undefined;
 
   /**
-   * Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).
+   * {{{operacao_credor_persist_fator_multiplicador_value}}}
    * @member {module:model/OperacaoCredorPersist.FatorMultiplicadorEnum} fatorMultiplicador
    */
   exports.prototype['fatorMultiplicador'] = undefined;
 
   /**
-   * Flag taxa fixada.
+   * {{{operacao_credor_persist_flag_taxa_fixada_value}}}
    * @member {Boolean} flagTaxaFixada
    */
   exports.prototype['flagTaxaFixada'] = undefined;
 
   /**
-   * Plano m\u00EDnimo da regra.
+   * {{{operacao_credor_persist_plano_minimo_value}}}
    * @member {Integer} planoMinimo
    */
   exports.prototype['planoMinimo'] = undefined;
 
   /**
-   * Plano m\u00E1ximo da regra.
+   * {{{operacao_credor_persist_plano_maximo_value}}}
    * @member {Integer} planoMaximo
    */
   exports.prototype['planoMaximo'] = undefined;

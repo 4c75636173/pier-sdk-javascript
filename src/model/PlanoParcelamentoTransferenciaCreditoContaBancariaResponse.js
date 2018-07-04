@@ -18,12 +18,12 @@
   /**
    * The PlanoParcelamentoTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoTransferenciaCreditoContaBancariaResponse</code>.
-   * Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
    * @alias module:model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}
    * @member {String} numeroMascaradoCartao
    */
   exports.prototype['numeroMascaradoCartao'] = undefined;
 
   /**
-   * Data de vencimento da primeira parcela.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}
    * @member {String} vencimentoPrimeiraParcela
    */
   exports.prototype['vencimentoPrimeiraParcela'] = undefined;
 
   /**
-   * Valor da solicita\u00E7\u00E3o de saque.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00FAmero de meses para car\u00EAncia.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}
    * @member {Integer} numeroMesesCarencia
    */
   exports.prototype['numeroMesesCarencia'] = undefined;
 
   /**
-   * Lista com os planos de parcelamento.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}
    * @member {Array.<module:model/ParcelamentoTransferenciaResponse>} parcelas
    */
   exports.prototype['parcelas'] = undefined;

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador da Plataforma | [optional] 
-**nome** | **String** | Nome da Plataforma | [optional] 
+**id** | **Integer** | {{{plataforma_mobile_response_id_value}}} | [optional] 
+**nome** | **String** | {{{plataforma_mobile_response_nome_value}}} | [optional] 
 
 

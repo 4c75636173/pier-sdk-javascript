@@ -18,12 +18,12 @@
   /**
    * The IntegracaoEmissorResponse model module.
    * @module model/IntegracaoEmissorResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>IntegracaoEmissorResponse</code>.
-   * Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
+   * {{{integracao_emissor_response_description}}}
    * @alias module:model/IntegracaoEmissorResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
+   * {{{integracao_emissor_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{integracao_emissor_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
+   * {{{integracao_emissor_response_id_arquivo_value}}}
    * @member {Integer} idArquivo
    */
   exports.prototype['idArquivo'] = undefined;
 
   /**
-   * Status do registro.
+   * {{{integracao_emissor_response_status_value}}}
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data de inclus\u00E3o do registro.
+   * {{{integracao_emissor_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data da ultima altera\u00E7\u00E3o do registro.
+   * {{{integracao_emissor_response_data_alteracao_value}}}
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;

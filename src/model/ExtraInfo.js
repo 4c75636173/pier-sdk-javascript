@@ -18,7 +18,7 @@
   /**
    * The ExtraInfo model module.
    * @module model/ExtraInfo
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**

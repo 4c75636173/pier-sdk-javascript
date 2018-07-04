@@ -18,12 +18,12 @@
   /**
    * The CancelamentoTransacaoPorIdCartaoRequest model module.
    * @module model/CancelamentoTransacaoPorIdCartaoRequest
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CancelamentoTransacaoPorIdCartaoRequest</code>.
-   * Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o por idCartao
+   * {{{cancelamento_transacao_por_id_cartao_request_description}}}
    * @alias module:model/CancelamentoTransacaoPorIdCartaoRequest
    * @class
    * @param nsuOrigem
@@ -98,61 +98,61 @@
 
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+   * {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
+   * {{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}}
    * @member {String} nsuOrigemTransacaoCancelada
    */
   exports.prototype['nsuOrigemTransacaoCancelada'] = undefined;
 
   /**
-   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}}
    * @member {String} dataHoraTransacaoCancelada
    */
   exports.prototype['dataHoraTransacaoCancelada'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
+   * {{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}}
    * @member {String} nsuAutorizacaoTransacaoCancelada
    */
   exports.prototype['nsuAutorizacaoTransacaoCancelada'] = undefined;
 
   /**
-   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
+   * {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+   * {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    * @member {String} dataHoraTerminal
    */
   exports.prototype['dataHoraTerminal'] = undefined;
 
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;
 
   /**
-   * N\u00FAmero de Parcelas.
+   * {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idProduto** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id). | [optional] 
-**idOperacao** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id). | [optional] 
-**codigoProcessamento** | **String** | C\u00F3digo de processamento. | [optional] 
-**codigoMCC** | **Integer** | C\u00F3digo MCC. | [optional] 
+**idProduto** | **Integer** | {{{vinculo_operacao_response_id_produto_value}}} | [optional] 
+**idOperacao** | **Integer** | {{{vinculo_operacao_response_id_operacao_value}}} | [optional] 
+**codigoProcessamento** | **String** | {{{vinculo_operacao_response_codigo_processamento_value}}} | [optional] 
+**codigoMCC** | **Integer** | {{{vinculo_operacao_response_codigo_m_c_c_value}}} | [optional] 
 
 

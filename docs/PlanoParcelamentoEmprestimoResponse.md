@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**numeroParcelas** | **Integer** | N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento | [optional] 
-**valorParcelas** | **Number** | Valor da parcela | [optional] 
-**taxaJuros** | **Number** | Taxa de juros aplicado no empr\u00E9stimo/financiamento | [optional] 
-**valorTributosIOF** | **Number** | valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras | [optional] 
-**valorPercentualCET** | **Number** | valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento | [optional] 
+**numeroParcelas** | **Integer** | {{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}} | [optional] 
+**valorParcelas** | **Number** | {{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}} | [optional] 
+**taxaJuros** | **Number** | {{{plano_parcelamento_emprestimo_response_taxa_juros_value}}} | [optional] 
+**valorTributosIOF** | **Number** | {{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}} | [optional] 
+**valorPercentualCET** | **Number** | {{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}} | [optional] 
 
 

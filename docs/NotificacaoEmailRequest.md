@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idTemplateNotificacao** | **Integer** | ID para o template da notifica\u00E7\u00E3o. | [optional] 
-**destinatarios** | **[String]** | Lista de email(s) do(s) destinat\u00E1rio(s). | [optional] 
-**anexos** | [**[AnexoNotificacaoEmailRequest]**](AnexoNotificacaoEmailRequest.md) | Lista de ids dos anexos a serem enviados. | [optional] 
-**parametrosConteudo** | **{String: Object}** | Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o. | [optional] 
+**idTemplateNotificacao** | **Integer** | {{{notificacao_email_request_id_template_notificacao_value}}} | [optional] 
+**destinatarios** | **[String]** | {{{notificacao_email_request_destinatarios_value}}} | [optional] 
+**anexos** | [**[AnexoNotificacaoEmailRequest]**](AnexoNotificacaoEmailRequest.md) | {{{notificacao_email_request_anexos_value}}} | [optional] 
+**parametrosConteudo** | **{String: Object}** | {{{notificacao_email_request_parametros_conteudo_value}}} | [optional] 
 
 

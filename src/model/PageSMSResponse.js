@@ -18,12 +18,12 @@
   /**
    * The PageSMSResponse model module.
    * @module model/PageSMSResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageSMSResponse</code>.
-   * Lista de SMS
+   * {{{page_s_m_s_response_description}}}
    * @alias module:model/PageSMSResponse
    * @class
    */

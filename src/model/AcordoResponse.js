@@ -18,12 +18,12 @@
   /**
    * The AcordoResponse model module.
    * @module model/AcordoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AcordoResponse</code>.
-   * Objeto Acordo
+   * {{{acordo_response_description}}}
    * @alias module:model/AcordoResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+   * {{{acordo_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+   * {{{acordo_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Status do acordo.
+   * {{{acordo_response_status_acordo_value}}}
    * @member {Integer} statusAcordo
    */
   exports.prototype['statusAcordo'] = undefined;
 
   /**
-   * Valor do Acordo.
+   * {{{acordo_response_valor_acordo_value}}}
    * @member {Number} valorAcordo
    */
   exports.prototype['valorAcordo'] = undefined;
 
   /**
-   * Data e Hora do acordo.
+   * {{{acordo_response_data_acordo_value}}}
    * @member {String} dataAcordo
    */
   exports.prototype['dataAcordo'] = undefined;
 
   /**
-   * Quantidade de parcelas do acordo.
+   * {{{acordo_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Saldo atual final.
+   * {{{acordo_response_saldo_atual_final_value}}}
    * @member {Number} saldoAtualFinal
    */
   exports.prototype['saldoAtualFinal'] = undefined;
 
   /**
-   * Dias em atraso.
+   * {{{acordo_response_dias_em_atraso_value}}}
    * @member {Integer} diasEmAtraso
    */
   exports.prototype['diasEmAtraso'] = undefined;

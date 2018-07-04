@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | ID do Template do Documento. | [optional] 
-**idTipoTemplate** | **Integer** | ID do Tipo de Template. | [optional] 
+**id** | **Integer** | {{{documento_template_response_id_value}}} | [optional] 
+**idTipoTemplate** | **Integer** | {{{documento_template_response_id_tipo_template_value}}} | [optional] 
 
 

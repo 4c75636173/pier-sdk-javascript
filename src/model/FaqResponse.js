@@ -18,12 +18,12 @@
   /**
    * The FaqResponse model module.
    * @module model/FaqResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>FaqResponse</code>.
-   * Objeto FAQ
+   * {{{faq_response_description}}}
    * @alias module:model/FaqResponse
    * @class
    */
@@ -76,43 +76,43 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+   * {{{faq_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Conte\u00FAdo da pergunta.
+   * {{{faq_response_pergunta_value}}}
    * @member {String} pergunta
    */
   exports.prototype['pergunta'] = undefined;
 
   /**
-   * Conte\u00FAdo da resposta.
+   * {{{faq_response_resposta_value}}}
    * @member {String} resposta
    */
   exports.prototype['resposta'] = undefined;
 
   /**
-   * N\u00EDvel de relev\u00E2ncia da pergunta.
+   * {{{faq_response_relevancia_value}}}
    * @member {Integer} relevancia
    */
   exports.prototype['relevancia'] = undefined;
 
   /**
-   * Plataforma em que a FAQ se encaixa.
+   * {{{faq_response_plataforma_value}}}
    * @member {String} plataforma
    */
   exports.prototype['plataforma'] = undefined;
 
   /**
-   * Categoria de assunto do qual a FAQ se trata.
+   * {{{faq_response_categoria_value}}}
    * @member {String} categoria
    */
   exports.prototype['categoria'] = undefined;
 
   /**
-   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
+   * {{{faq_response_status_value}}}
    * @member {module:model/FaqResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

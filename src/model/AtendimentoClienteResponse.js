@@ -18,12 +18,12 @@
   /**
    * The AtendimentoClienteResponse model module.
    * @module model/AtendimentoClienteResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AtendimentoClienteResponse</code>.
-   * Objeto AtendimentoCliente
+   * {{{atendimento_cliente_response_description}}}
    * @alias module:model/AtendimentoClienteResponse
    * @class
    */
@@ -104,85 +104,85 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
+   * {{{atendimento_cliente_response_id_atendimento_value}}}
    * @member {Integer} idAtendimento
    */
   exports.prototype['idAtendimento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+   * {{{atendimento_cliente_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+   * {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
    * @member {Integer} idTipoAtendimento
    */
   exports.prototype['idTipoAtendimento'] = undefined;
 
   /**
-   * Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
+   * {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
    * @member {String} descricaoTipoAtendimento
    */
   exports.prototype['descricaoTipoAtendimento'] = undefined;
 
   /**
-   * Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+   * {{{atendimento_cliente_response_conteudo_atendimento_value}}}
    * @member {String} conteudoAtendimento
    */
   exports.prototype['conteudoAtendimento'] = undefined;
 
   /**
-   * Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+   * {{{atendimento_cliente_response_detalhes_atendimento_value}}}
    * @member {String} detalhesAtendimento
    */
   exports.prototype['detalhesAtendimento'] = undefined;
 
   /**
-   * Apresenta o nome do Atendente que registrou o Atendimento.
+   * {{{atendimento_cliente_response_nome_atendente_value}}}
    * @member {String} nomeAtendente
    */
   exports.prototype['nomeAtendente'] = undefined;
 
   /**
-   * Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
+   * {{{atendimento_cliente_response_nome_sistema_value}}}
    * @member {String} nomeSistema
    */
   exports.prototype['nomeSistema'] = undefined;
 
   /**
-   * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+   * {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
    * @member {String} dataHoraInicioAtendimento
    */
   exports.prototype['dataHoraInicioAtendimento'] = undefined;
 
   /**
-   * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+   * {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
    * @member {String} dataHoraFimAtendimento
    */
   exports.prototype['dataHoraFimAtendimento'] = undefined;
 
   /**
-   * Apresenta a data e hora em que o Atendimento foi realizado.
+   * {{{atendimento_cliente_response_data_atendimento_value}}}
    * @member {String} dataAtendimento
    */
   exports.prototype['dataAtendimento'] = undefined;
 
   /**
-   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
+   * {{{atendimento_cliente_response_data_agendamento_value}}}
    * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
+   * {{{atendimento_cliente_response_data_processamento_value}}}
    * @member {String} dataProcessamento
    */
   exports.prototype['dataProcessamento'] = undefined;
 
   /**
-   * Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
+   * {{{atendimento_cliente_response_flag_processamento_value}}}
    * @member {Integer} flagProcessamento
    */
   exports.prototype['flagProcessamento'] = undefined;

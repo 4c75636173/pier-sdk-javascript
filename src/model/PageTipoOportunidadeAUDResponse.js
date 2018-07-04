@@ -18,12 +18,12 @@
   /**
    * The PageTipoOportunidadeAUDResponse model module.
    * @module model/PageTipoOportunidadeAUDResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTipoOportunidadeAUDResponse</code>.
-   * Lista de auditorias dos tipos oportunidades
+   * {{{page_tipo_oportunidade_a_u_d_response_description}}}
    * @alias module:model/PageTipoOportunidadeAUDResponse
    * @class
    */

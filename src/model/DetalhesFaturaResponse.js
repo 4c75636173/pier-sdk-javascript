@@ -18,12 +18,12 @@
   /**
    * The DetalhesFaturaResponse model module.
    * @module model/DetalhesFaturaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DetalhesFaturaResponse</code>.
-   * Objeto contendo os detalhes de uma fatura
+   * {{{detalhes_fatura_response_description}}}
    * @alias module:model/DetalhesFaturaResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Apresenta os detalhes da fatura
+   * {{{detalhes_fatura_response_fatura_value}}}
    * @member {module:model/FaturaFechadaResponse} fatura
    */
   exports.prototype['fatura'] = undefined;
 
   /**
-   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+   * {{{detalhes_fatura_response_transacoes_value}}}
    * @member {Array.<module:model/TransacoesCorrentesResponse>} transacoes
    */
   exports.prototype['transacoes'] = undefined;

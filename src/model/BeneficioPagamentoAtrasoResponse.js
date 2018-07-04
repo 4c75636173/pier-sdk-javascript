@@ -18,11 +18,12 @@
   /**
    * The BeneficioPagamentoAtrasoResponse model module.
    * @module model/BeneficioPagamentoAtrasoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>BeneficioPagamentoAtrasoResponse</code>.
+   * {{{beneficio_pagamento_atraso_response_description}}}
    * @alias module:model/BeneficioPagamentoAtrasoResponse
    * @class
    */
@@ -51,7 +52,7 @@
 
 
   /**
-   * Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
+   * {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
    * @member {String} dataBeneficio
    */
   exports.prototype['dataBeneficio'] = undefined;

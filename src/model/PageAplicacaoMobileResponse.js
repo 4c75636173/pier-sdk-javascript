@@ -18,12 +18,12 @@
   /**
    * The PageAplicacaoMobileResponse model module.
    * @module model/PageAplicacaoMobileResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageAplicacaoMobileResponse</code>.
-   * Lista de Aplicacoes Mobile
+   * {{{page_aplicacao_mobile_response_description}}}
    * @alias module:model/PageAplicacaoMobileResponse
    * @class
    */

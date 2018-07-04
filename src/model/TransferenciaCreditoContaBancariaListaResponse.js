@@ -18,12 +18,12 @@
   /**
    * The TransferenciaCreditoContaBancariaListaResponse model module.
    * @module model/TransferenciaCreditoContaBancariaListaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TransferenciaCreditoContaBancariaListaResponse</code>.
-   * Listagem de Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+   * {{{transferencia_credito_conta_bancaria_lista_response_description}}}
    * @alias module:model/TransferenciaCreditoContaBancariaListaResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}
    * @member {Integer} idTransferencia
    */
   exports.prototype['idTransferencia'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Valor da transfer\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}
    * @member {Number} valorCompra
    */
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+   * {{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}
    * @member {Number} valorContrato
    */
   exports.prototype['valorContrato'] = undefined;
 
   /**
-   * Data da transfer\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * C\u00F3digo de status de processamento.
+   * {{{transferencia_credito_conta_bancaria_lista_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Status Processamento.
+   * {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}
    * @member {String} statusProcessamento
    */
   exports.prototype['statusProcessamento'] = undefined;

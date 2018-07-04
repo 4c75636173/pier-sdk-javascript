@@ -18,12 +18,12 @@
   /**
    * The HistoricoImpressaoCartaoResponse model module.
    * @module model/HistoricoImpressaoCartaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>HistoricoImpressaoCartaoResponse</code>.
-   * Hist\u00F3rico Impress\u00E3o Cart\u00E3o
+   * {{{historico_impressao_cartao_response_description}}}
    * @alias module:model/HistoricoImpressaoCartaoResponse
    * @class
    * @param id
@@ -71,31 +71,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).
+   * {{{historico_impressao_cartao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
+   * {{{historico_impressao_cartao_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).
+   * {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
    * @member {Integer} idStatusImpressaoCartao
    */
   exports.prototype['idStatusImpressaoCartao'] = undefined;
 
   /**
-   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.
+   * {{{historico_impressao_cartao_response_mensagem_historico_value}}}
    * @member {String} mensagemHistorico
    */
   exports.prototype['mensagemHistorico'] = undefined;
 
   /**
-   * Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.
+   * {{{historico_impressao_cartao_response_data_historico_value}}}
    * @member {String} dataHistorico
    */
   exports.prototype['dataHistorico'] = undefined;

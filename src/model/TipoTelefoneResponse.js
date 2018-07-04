@@ -18,12 +18,12 @@
   /**
    * The TipoTelefoneResponse model module.
    * @module model/TipoTelefoneResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TipoTelefoneResponse</code>.
-   * ObjetoTipoTelefone
+   * {{{tipo_telefone_response_description}}}
    * @alias module:model/TipoTelefoneResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * {{{tipo_telefone_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Tipo do Telefone
+   * {{{tipo_telefone_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The TransacaoPayQueryResponse model module.
    * @module model/TransacaoPayQueryResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>TransacaoPayQueryResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o
+   * {{{transacao_pay_query_response_description}}}
    * @alias module:model/TransacaoPayQueryResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Resultado de consulta de conta
+   * {{{transacao_pay_query_response_codigo_value}}}
    * @member {String} codigo
    */
   exports.prototype['codigo'] = undefined;
 
   /**
-   * Mensagem descrevendo resposta.
+   * {{{transacao_pay_query_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

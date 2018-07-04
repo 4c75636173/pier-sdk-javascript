@@ -18,12 +18,12 @@
   /**
    * The PessoaDetalheResponse model module.
    * @module model/PessoaDetalheResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PessoaDetalheResponse</code>.
-   * PessoaDetalheResponse
+   * {{{pessoa_detalhe_response_description}}}
    * @alias module:model/PessoaDetalheResponse
    * @class
    */
@@ -92,67 +92,67 @@
 
 
   /**
-   * C\u00F3digo identificador da pessoa
+   * {{{pessoa_detalhe_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o nome da m\u00E3e da pessoa fisica
+   * {{{pessoa_detalhe_response_nome_mae_value}}}
    * @member {String} nomeMae
    */
   exports.prototype['nomeMae'] = undefined;
 
   /**
-   * Id Estado civil da pessoa fisica
+   * {{{pessoa_detalhe_response_id_estado_civil_value}}}
    * @member {Integer} idEstadoCivil
    */
   exports.prototype['idEstadoCivil'] = undefined;
 
   /**
-   * Profiss\u00E3o da pessoa fisica
+   * {{{pessoa_detalhe_response_id_profissao_value}}}
    * @member {String} idProfissao
    */
   exports.prototype['idProfissao'] = undefined;
 
   /**
-   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+   * {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
    * @member {Integer} idNaturezaOcupacao
    */
   exports.prototype['idNaturezaOcupacao'] = undefined;
 
   /**
-   * Id Nacionalidade da pessoa fisica
+   * {{{pessoa_detalhe_response_id_nacionalidade_value}}}
    * @member {Integer} idNacionalidade
    */
   exports.prototype['idNacionalidade'] = undefined;
 
   /**
-   * N\u00FAmero do banco.
+   * {{{pessoa_detalhe_response_numero_banco_value}}}
    * @member {Integer} numeroBanco
    */
   exports.prototype['numeroBanco'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{pessoa_detalhe_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Email da pessoa fisica
+   * {{{pessoa_detalhe_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * {{{pessoa_detalhe_response_nome_empresa_value}}}
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;

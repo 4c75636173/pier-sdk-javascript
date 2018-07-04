@@ -18,12 +18,12 @@
   /**
    * The PageMaquinetaResponse model module.
    * @module model/PageMaquinetaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageMaquinetaResponse</code>.
-   * Lista de Maquinetas
+   * {{{page_maquineta_response_description}}}
    * @alias module:model/PageMaquinetaResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The PageTransacaoNaoProcessadaResponse model module.
    * @module model/PageTransacaoNaoProcessadaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTransacaoNaoProcessadaResponse</code>.
-   * Lista de Transa\u00E7\u00F5es nao Processadas
+   * {{{page_transacao_nao_processada_response_description}}}
    * @alias module:model/PageTransacaoNaoProcessadaResponse
    * @class
    */

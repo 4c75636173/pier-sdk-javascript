@@ -18,12 +18,12 @@
   /**
    * The ConfiguracaoRegistroCobrancaPersist model module.
    * @module model/ConfiguracaoRegistroCobrancaPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>ConfiguracaoRegistroCobrancaPersist</code>.
-   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
+   * {{{configuracao_registro_cobranca_persist_description}}}
    * @alias module:model/ConfiguracaoRegistroCobrancaPersist
    * @class
    * @param codigoBanco
@@ -44,6 +44,8 @@
 
 
     this['status'] = status;
+
+
   };
 
   /**
@@ -96,88 +98,106 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
+      if (data.hasOwnProperty('secret')) {
+        obj['secret'] = ApiClient.convertToType(data['secret'], 'String');
+      }
+      if (data.hasOwnProperty('clientID')) {
+        obj['clientID'] = ApiClient.convertToType(data['clientID'], 'String');
+      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00F3digo do Banco.
+   * {{{configuracao_registro_cobranca_persist_codigo_banco_value}}}
    * @member {Integer} codigoBanco
    */
   exports.prototype['codigoBanco'] = undefined;
 
   /**
-   * URL de acesso ao banco.
+   * {{{configuracao_registro_cobranca_persist_uri_value}}}
    * @member {String} uri
    */
   exports.prototype['uri'] = undefined;
 
   /**
-   * Caminho do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_persist_key_store_name_value}}}
    * @member {String} keyStoreName
    */
   exports.prototype['keyStoreName'] = undefined;
 
   /**
-   * Senha do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_persist_key_store_password_value}}}
    * @member {String} keyStorePassword
    */
   exports.prototype['keyStorePassword'] = undefined;
 
   /**
-   * Alias do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_persist_keystore_alias_value}}}
    * @member {String} keystoreAlias
    */
   exports.prototype['keystoreAlias'] = undefined;
 
   /**
-   * Senha da chave privada do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}}
    * @member {String} keyStorePrivateKeyPassword
    */
   exports.prototype['keyStorePrivateKeyPassword'] = undefined;
 
   /**
-   * Tipo do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_persist_type_keystore_value}}}
    * @member {String} typeKeystore
    */
   exports.prototype['typeKeystore'] = undefined;
 
   /**
-   * Caminho do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_persist_trust_store_name_value}}}
    * @member {String} trustStoreName
    */
   exports.prototype['trustStoreName'] = undefined;
 
   /**
-   * Senha do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_persist_trust_store_password_value}}}
    * @member {String} trustStorePassword
    */
   exports.prototype['trustStorePassword'] = undefined;
 
   /**
-   * Alias do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_persist_truststore_alias_value}}}
    * @member {String} truststoreAlias
    */
   exports.prototype['truststoreAlias'] = undefined;
 
   /**
-   * Tipo do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_persist_type_truststore_value}}}
    * @member {String} typeTruststore
    */
   exports.prototype['typeTruststore'] = undefined;
 
   /**
-   * URL adicional de acesso ao banco.
+   * {{{configuracao_registro_cobranca_persist_uri_adicional_value}}}
    * @member {String} uriAdicional
    */
   exports.prototype['uriAdicional'] = undefined;
 
   /**
-   * Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
+   * {{{configuracao_registro_cobranca_persist_status_value}}}
    * @member {module:model/ConfiguracaoRegistroCobrancaPersist.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
+
+  /**
+   * {{{configuracao_registro_cobranca_persist_secret_value}}}
+   * @member {String} secret
+   */
+  exports.prototype['secret'] = undefined;
+
+  /**
+   * {{{configuracao_registro_cobranca_persist_client_id_value}}}
+   * @member {String} clientID
+   */
+  exports.prototype['clientID'] = undefined;
 
 
   /**

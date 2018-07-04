@@ -18,11 +18,12 @@
   /**
    * The AjusteFinanceiroResponse model module.
    * @module model/AjusteFinanceiroResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AjusteFinanceiroResponse</code>.
+   * {{{ajuste_financeiro_response_description}}}
    * @alias module:model/AjusteFinanceiroResponse
    * @class
    */
@@ -75,43 +76,43 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
+   * {{{ajuste_financeiro_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
+   * {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
    * @member {Integer} idTipoAjuste
    */
   exports.prototype['idTipoAjuste'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
+   * {{{ajuste_financeiro_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Data do ajuste
+   * {{{ajuste_financeiro_response_data_ajuste_value}}}
    * @member {String} dataAjuste
    */
   exports.prototype['dataAjuste'] = undefined;
 
   /**
-   * Valor do ajuste
+   * {{{ajuste_financeiro_response_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{ajuste_financeiro_response_identificador_externo_value}}}
    * @member {String} identificadorExterno
    */
   exports.prototype['identificadorExterno'] = undefined;
 
   /**
-   * Status do ajuste.
+   * {{{ajuste_financeiro_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;

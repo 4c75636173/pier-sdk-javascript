@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador do plano de campanha | [optional] 
-**parcelas** | **Integer** | Quantidade de parcelas | [optional] 
-**taxa** | **Number** | Taxa de juros | [optional] 
-**usuario** | **String** | Nome do usu\u00E1rio | [optional] 
+**id** | **Integer** | {{{plano_campanha_response_id_value}}} | [optional] 
+**parcelas** | **Integer** | {{{plano_campanha_response_parcelas_value}}} | [optional] 
+**taxa** | **Number** | {{{plano_campanha_response_taxa_value}}} | [optional] 
+**usuario** | **String** | {{{plano_campanha_response_usuario_value}}} | [optional] 
 
 

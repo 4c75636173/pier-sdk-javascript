@@ -18,12 +18,12 @@
   /**
    * The NotificacaoResponse model module.
    * @module model/NotificacaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>NotificacaoResponse</code>.
-   * Objeto Notifica\u00E7\u00E3o SMS
+   * {{{notificacao_response_description}}}
    * @alias module:model/NotificacaoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+   * {{{notificacao_response_protocolo_value}}}
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;
 
   /**
-   * Mensagem de resposta da solicita\u00E7\u00F5es de envio
+   * {{{notificacao_response_mensagem_value}}}
    * @member {String} mensagem
    */
   exports.prototype['mensagem'] = undefined;

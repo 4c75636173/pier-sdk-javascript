@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id) | [optional] 
-**nome** | **String** | Nome do Tipo do Endere\u00E7o | [optional] 
+**id** | **Integer** | {{{tipo_endereco_response_id_value}}} | [optional] 
+**nome** | **String** | {{{tipo_endereco_response_nome_value}}} | [optional] 
 
 

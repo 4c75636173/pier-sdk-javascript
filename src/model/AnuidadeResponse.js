@@ -18,12 +18,12 @@
   /**
    * The AnuidadeResponse model module.
    * @module model/AnuidadeResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AnuidadeResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de anuidade
+   * {{{anuidade_response_description}}}
    * @alias module:model/AnuidadeResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Identificador do Tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Valor do tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
+   * {{{anuidade_response_flag_anuidade_bonificada_value}}}
    * @member {Boolean} flagAnuidadeBonificada
    */
   exports.prototype['flagAnuidadeBonificada'] = undefined;

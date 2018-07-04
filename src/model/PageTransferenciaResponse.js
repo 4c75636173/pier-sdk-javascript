@@ -18,12 +18,12 @@
   /**
    * The PageTransferenciaResponse model module.
    * @module model/PageTransferenciaResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageTransferenciaResponse</code>.
-   * Lista de Transfer\u00EAncias
+   * {{{page_transferencia_response_description}}}
    * @alias module:model/PageTransferenciaResponse
    * @class
    */

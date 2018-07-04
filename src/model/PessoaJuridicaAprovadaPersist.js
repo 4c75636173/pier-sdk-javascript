@@ -1,29 +1,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './EnderecoAprovadoPersist', './PessoaPersist', './RefenciaComercialAprovadoPersist', './TelefonePessoaAprovadaPersist'], factory);
+    define(['../ApiClient', './EnderecoAprovadoPersistValue', './ReferenciaComercialAprovadoPersistValue', './SocioAprovadoPersistValue', './TelefonePessoaAprovadaPersistValue'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersist'), require('./PessoaPersist'), require('./RefenciaComercialAprovadoPersist'), require('./TelefonePessoaAprovadaPersist'));
+    module.exports = factory(require('../ApiClient'), require('./EnderecoAprovadoPersistValue'), require('./ReferenciaComercialAprovadoPersistValue'), require('./SocioAprovadoPersistValue'), require('./TelefonePessoaAprovadaPersistValue'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.PessoaJuridicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersist, root.Pier.PessoaPersist, root.Pier.RefenciaComercialAprovadoPersist, root.Pier.TelefonePessoaAprovadaPersist);
+    root.Pier.PessoaJuridicaAprovadaPersist = factory(root.Pier.ApiClient, root.Pier.EnderecoAprovadoPersistValue, root.Pier.ReferenciaComercialAprovadoPersistValue, root.Pier.SocioAprovadoPersistValue, root.Pier.TelefonePessoaAprovadaPersistValue);
   }
-}(this, function(ApiClient, EnderecoAprovadoPersist, PessoaPersist, RefenciaComercialAprovadoPersist, TelefonePessoaAprovadaPersist) {
+}(this, function(ApiClient, EnderecoAprovadoPersistValue, ReferenciaComercialAprovadoPersistValue, SocioAprovadoPersistValue, TelefonePessoaAprovadaPersistValue) {
   'use strict';
 
   /**
    * The PessoaJuridicaAprovadaPersist model module.
    * @module model/PessoaJuridicaAprovadaPersist
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PessoaJuridicaAprovadaPersist</code>.
-   * PessoaJuridicaAprovadaPersist
+   * {{{pessoa_juridica_aprovada_persist_description}}}
    * @alias module:model/PessoaJuridicaAprovadaPersist
    * @class
    * @param razaoSocial
@@ -46,6 +46,7 @@
     this['dataAberturaEmpresa'] = dataAberturaEmpresa;
     this['idOrigemComercial'] = idOrigemComercial;
     this['idProduto'] = idProduto;
+
 
 
 
@@ -95,6 +96,9 @@
       if (data.hasOwnProperty('idProduto')) {
         obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
+      if (data.hasOwnProperty('numeroBanco')) {
+        obj['numeroBanco'] = ApiClient.convertToType(data['numeroBanco'], 'Integer');
+      }
       if (data.hasOwnProperty('numeroAgencia')) {
         obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
       }
@@ -120,16 +124,16 @@
         obj['valorPontuacao'] = ApiClient.convertToType(data['valorPontuacao'], 'Integer');
       }
       if (data.hasOwnProperty('telefones')) {
-        obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersist]);
+        obj['telefones'] = ApiClient.convertToType(data['telefones'], [TelefonePessoaAprovadaPersistValue]);
       }
       if (data.hasOwnProperty('enderecos')) {
-        obj['enderecos'] = ApiClient.convertToType(data['enderecos'], [EnderecoAprovadoPersist]);
+        obj['enderecos'] = ApiClient.convertToType(data['enderecos'], [EnderecoAprovadoPersistValue]);
       }
       if (data.hasOwnProperty('socios')) {
-        obj['socios'] = ApiClient.convertToType(data['socios'], [PessoaPersist]);
+        obj['socios'] = ApiClient.convertToType(data['socios'], [SocioAprovadoPersistValue]);
       }
       if (data.hasOwnProperty('referenciasComerciais')) {
-        obj['referenciasComerciais'] = ApiClient.convertToType(data['referenciasComerciais'], [RefenciaComercialAprovadoPersist]);
+        obj['referenciasComerciais'] = ApiClient.convertToType(data['referenciasComerciais'], [ReferenciaComercialAprovadoPersistValue]);
       }
       if (data.hasOwnProperty('limiteGlobal')) {
         obj['limiteGlobal'] = ApiClient.convertToType(data['limiteGlobal'], 'Number');
@@ -146,133 +150,139 @@
 
 
   /**
-   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
+   * {{{pessoa_juridica_aprovada_persist_razao_social_value}}}
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
 
   /**
-   * Apresenta o nome fantasia da empresa.
+   * {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}}
    * @member {String} nomeFantasia
    */
   exports.prototype['nomeFantasia'] = undefined;
 
   /**
-   * N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+   * {{{pessoa_juridica_aprovada_persist_cnpj_value}}}
    * @member {String} cnpj
    */
   exports.prototype['cnpj'] = undefined;
 
   /**
-   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
+   * {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}}
    * @member {String} inscricaoEstadual
    */
   exports.prototype['inscricaoEstadual'] = undefined;
 
   /**
-   * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+   * {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}}
    * @member {String} dataAberturaEmpresa
    */
   exports.prototype['dataAberturaEmpresa'] = undefined;
 
   /**
-   * Id da origem comercial
+   * {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * Id do produto
+   * {{{pessoa_juridica_aprovada_persist_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{pessoa_juridica_aprovada_persist_numero_banco_value}}}
+   * @member {Integer} numeroBanco
+   */
+  exports.prototype['numeroBanco'] = undefined;
+
+  /**
+   * {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Email da empresa
+   * {{{pessoa_juridica_aprovada_persist_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Dia vencimento
+   * {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}}
    * @member {Integer} diaVencimento
    */
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Apresenta o valor da renda compravada
+   * {{{pessoa_juridica_aprovada_persist_valor_renda_value}}}
    * @member {Number} valorRenda
    */
   exports.prototype['valorRenda'] = undefined;
 
   /**
-   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}}
    * @member {String} canalEntrada
    */
   exports.prototype['canalEntrada'] = undefined;
 
   /**
-   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+   * {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}}
    * @member {Integer} valorPontuacao
    */
   exports.prototype['valorPontuacao'] = undefined;
 
   /**
-   * Apresenta os telefones da empresa
-   * @member {Array.<module:model/TelefonePessoaAprovadaPersist>} telefones
+   * {{{pessoa_juridica_aprovada_persist_telefones_value}}}
+   * @member {Array.<module:model/TelefonePessoaAprovadaPersistValue>} telefones
    */
   exports.prototype['telefones'] = undefined;
 
   /**
-   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
-   * @member {Array.<module:model/EnderecoAprovadoPersist>} enderecos
+   * {{{pessoa_juridica_aprovada_persist_enderecos_value}}}
+   * @member {Array.<module:model/EnderecoAprovadoPersistValue>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
 
   /**
-   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
-   * @member {Array.<module:model/PessoaPersist>} socios
+   * {{{pessoa_juridica_aprovada_persist_socios_value}}}
+   * @member {Array.<module:model/SocioAprovadoPersistValue>} socios
    */
   exports.prototype['socios'] = undefined;
 
   /**
-   * Apresenta os dados das refer\u00EAncias comerciais
-   * @member {Array.<module:model/RefenciaComercialAprovadoPersist>} referenciasComerciais
+   * {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}}
+   * @member {Array.<module:model/ReferenciaComercialAprovadoPersistValue>} referenciasComerciais
    */
   exports.prototype['referenciasComerciais'] = undefined;
 
   /**
-   * Valor do Limite Global
+   * {{{pessoa_juridica_aprovada_persist_limite_global_value}}}
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   * {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}}
    * @member {Number} limiteMaximo
    */
   exports.prototype['limiteMaximo'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+   * {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}}
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;

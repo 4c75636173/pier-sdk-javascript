@@ -18,12 +18,12 @@
   /**
    * The OportunidadeAUDResponse model module.
    * @module model/OportunidadeAUDResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>OportunidadeAUDResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso Oportunidades
+   * {{{oportunidade_a_u_d_response_description}}}
    * @alias module:model/OportunidadeAUDResponse
    * @class
    */
@@ -100,79 +100,79 @@
 
 
   /**
-   * C\u00F3digo identificador da oportunidade
+   * {{{oportunidade_a_u_d_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo oportunidade
+   * {{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
    * @member {Integer} idTipoOportunidade
    */
   exports.prototype['idTipoOportunidade'] = undefined;
 
   /**
-   * C\u00F3digo identificador do status oportunidade
+   * {{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}
    * @member {Integer} idStatusOportunidade
    */
   exports.prototype['idStatusOportunidade'] = undefined;
 
   /**
-   * Data cadastro da oportunidade.
+   * {{{oportunidade_a_u_d_response_data_cadastro_value}}}
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * Data atualiza\u00E7\u00E3o da oportunidade.
+   * {{{oportunidade_a_u_d_response_data_atualizacao_value}}}
    * @member {String} dataAtualizacao
    */
   exports.prototype['dataAtualizacao'] = undefined;
 
   /**
-   * N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+   * {{{oportunidade_a_u_d_response_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * In\u00EDcio da vig\u00EAncia da oportunidade
+   * {{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}
    * @member {String} dataInicioVigencia
    */
   exports.prototype['dataInicioVigencia'] = undefined;
 
   /**
-   * fim da vig\u00EAncia da oportunidade
+   * {{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}
    * @member {String} dataFimVigencia
    */
   exports.prototype['dataFimVigencia'] = undefined;
 
   /**
-   * Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+   * {{{oportunidade_a_u_d_response_flag_ativo_value}}}
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;
 
   /**
-   * Lista de detalhes da oportunidade
+   * {{{oportunidade_a_u_d_response_detalhes_value}}}
    * @member {Array.<module:model/CdtDetalheOportunidadeAUD>} detalhes
    */
   exports.prototype['detalhes'] = undefined;
 
   /**
-   * Data da auditoria
+   * {{{oportunidade_a_u_d_response_rev_date_value}}}
    * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 
   /**
-   * Tipo da auditoria
+   * {{{oportunidade_a_u_d_response_rev_type_value}}}
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Identificador da auditoria
+   * {{{oportunidade_a_u_d_response_rev_value}}}
    * @member {Integer} rev
    */
   exports.prototype['rev'] = undefined;

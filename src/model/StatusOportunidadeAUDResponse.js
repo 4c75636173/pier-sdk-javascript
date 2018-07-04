@@ -18,12 +18,12 @@
   /**
    * The StatusOportunidadeAUDResponse model module.
    * @module model/StatusOportunidadeAUDResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>StatusOportunidadeAUDResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD
+   * {{{status_oportunidade_a_u_d_response_description}}}
    * @alias module:model/StatusOportunidadeAUDResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo identificador da auditoria dos tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_value}}}
    * @member {Integer} rev
    */
   exports.prototype['rev'] = undefined;
 
   /**
-   * C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_type_value}}}
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_date_value}}}
    * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 
   /**
-   * C\u00F3digo identificador do StatusOportunidade
+   * {{{status_oportunidade_a_u_d_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador do TipoOportunidade
+   * {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
    * @member {Integer} idTipoOportunidade
    */
   exports.prototype['idTipoOportunidade'] = undefined;
 
   /**
-   * Nome do status oportunidade
+   * {{{status_oportunidade_a_u_d_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descricao do StatusOportunidade
+   * {{{status_oportunidade_a_u_d_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Flag que representa se o tipo oportunidade est\u00E1 ativo
+   * {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

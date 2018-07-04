@@ -18,12 +18,12 @@
   /**
    * The AplicacaoMobileResponse model module.
    * @module model/AplicacaoMobileResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>AplicacaoMobileResponse</code>.
-   * Aplicacao Mobile
+   * {{{aplicacao_mobile_response_description}}}
    * @alias module:model/AplicacaoMobileResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * Apresenta o identificador da aplicacao.
+   * {{{aplicacao_mobile_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o identificador da plataforma.
+   * {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
    * @member {Integer} idPlataformaMobile
    */
   exports.prototype['idPlataformaMobile'] = undefined;
 
   /**
-   * Apresenta o token da aplicacao.
+   * {{{aplicacao_mobile_response_token_value}}}
    * @member {String} token
    */
   exports.prototype['token'] = undefined;
 
   /**
-   * Apresenta a cor da mensagem da aplicacao.
+   * {{{aplicacao_mobile_response_cor_value}}}
    * @member {String} cor
    */
   exports.prototype['cor'] = undefined;
 
   /**
-   * Apresenta o som da mensagem da aplicacao
+   * {{{aplicacao_mobile_response_som_value}}}
    * @member {String} som
    */
   exports.prototype['som'] = undefined;
 
   /**
-   * Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
+   * {{{aplicacao_mobile_response_icone_value}}}
    * @member {String} icone
    */
   exports.prototype['icone'] = undefined;
 
   /**
-   * Apresenta o certificado da aplica\u00E7\u00E3o.
+   * {{{aplicacao_mobile_response_certificado_base64_value}}}
    * @member {String} certificadoBase64
    */
   exports.prototype['certificadoBase64'] = undefined;
 
   /**
-   * Apresenta a senha da aplica\u00E7\u00E3o.
+   * {{{aplicacao_mobile_response_senha_value}}}
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;

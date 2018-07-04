@@ -18,12 +18,12 @@
   /**
    * The CartaoImpressaoResponse model module.
    * @module model/CartaoImpressaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>CartaoImpressaoResponse</code>.
-   * Objeto Cart\u00E3o para Impresso
+   * {{{cartao_impressao_response_description}}}
    * @alias module:model/CartaoImpressaoResponse
    * @class
    */
@@ -144,145 +144,145 @@
 
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_impressao_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_impressao_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_impressao_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+   * {{{cartao_impressao_response_id_bandeira_value}}}
    * @member {Integer} idBandeira
    */
   exports.prototype['idBandeira'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+   * {{{cartao_impressao_response_id_tipo_cartao_value}}}
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero do cart\u00E3o.
+   * {{{cartao_impressao_response_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Apresenta o nome do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_response_nome_plastico_value}}}
    * @member {String} nomePlastico
    */
   exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
+   * {{{cartao_impressao_response_cvv2_value}}}
    * @member {String} cvv2
    */
   exports.prototype['cvv2'] = undefined;
 
   /**
-   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+   * {{{cartao_impressao_response_data_geracao_value}}}
    * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_impressao_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+   * {{{cartao_impressao_response_nome_origem_comercial_value}}}
    * @member {String} nomeOrigemComercial
    */
   exports.prototype['nomeOrigemComercial'] = undefined;
 
   /**
-   * Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empresa_value}}}
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_numero_conta_corente_value}}}
    * @member {String} numeroContaCorente
    */
   exports.prototype['numeroContaCorente'] = undefined;
 
   /**
-   * Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empresa_beneficio_value}}}
    * @member {String} nomeEmpresaBeneficio
    */
   exports.prototype['nomeEmpresaBeneficio'] = undefined;
 
   /**
-   * Apresenta o CPF do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+   * {{{cartao_impressao_response_tipo_portador_value}}}
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;
 
   /**
-   * Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empregador_value}}}
    * @member {String} nomeEmpregador
    */
   exports.prototype['nomeEmpregador'] = undefined;
 
   /**
-   * Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha1_value}}}
    * @member {String} trilha1
    */
   exports.prototype['trilha1'] = undefined;
 
   /**
-   * Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha2_value}}}
    * @member {String} trilha2
    */
   exports.prototype['trilha2'] = undefined;
 
   /**
-   * Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha_c_v_v1_value}}}
    * @member {String} trilhaCVV1
    */
   exports.prototype['trilhaCVV1'] = undefined;
 
   /**
-   * Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha_c_v_v2_value}}}
    * @member {String} trilhaCVV2
    */
   exports.prototype['trilhaCVV2'] = undefined;
 
   /**
-   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+   * {{{cartao_impressao_response_flag_virtual_value}}}
    * @member {Integer} flagVirtual
    */
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * Apresenta o numero da hash do cart\u00E3o 
+   * {{{cartao_impressao_response_numero_cartao_hash_value}}}
    * @member {Integer} numeroCartaoHash
    */
   exports.prototype['numeroCartaoHash'] = undefined;

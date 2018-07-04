@@ -18,16 +18,18 @@
   /**
    * The DadosCartaoImpressaoResponse model module.
    * @module model/DadosCartaoImpressaoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>DadosCartaoImpressaoResponse</code>.
-   * Objeto Cart\u00E3o para Impresso
+   * {{{dados_cartao_impressao_response_description}}}
    * @alias module:model/DadosCartaoImpressaoResponse
    * @class
    */
   var exports = function() {
+
+
 
 
 
@@ -234,298 +236,316 @@
       if (data.hasOwnProperty('senhaCriptografada')) {
         obj['senhaCriptografada'] = ApiClient.convertToType(data['senhaCriptografada'], 'String');
       }
+      if (data.hasOwnProperty('icvv')) {
+        obj['icvv'] = ApiClient.convertToType(data['icvv'], 'String');
+      }
+      if (data.hasOwnProperty('idStatusImpressao')) {
+        obj['idStatusImpressao'] = ApiClient.convertToType(data['idStatusImpressao'], 'Integer');
+      }
     }
     return obj;
   }
 
 
   /**
-   * O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{dados_cartao_impressao_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{dados_cartao_impressao_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{dados_cartao_impressao_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+   * {{{dados_cartao_impressao_response_id_bandeira_value}}}
    * @member {Integer} idBandeira
    */
   exports.prototype['idBandeira'] = undefined;
 
   /**
-   * O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_id_tipo_cartao_value}}}
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * O n\u00FAmero do cart\u00E3o.
+   * {{{dados_cartao_impressao_response_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * O nome do Portador do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_nome_plastico_value}}}
    * @member {String} nomePlastico
    */
   exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
+   * {{{dados_cartao_impressao_response_cvv2_value}}}
    * @member {String} cvv2
    */
   exports.prototype['cvv2'] = undefined;
 
   /**
-   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_data_geracao_value}}}
    * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * O CPF do Portador do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+   * {{{dados_cartao_impressao_response_tipo_portador_value}}}
    * @member {String} tipoPortador
    */
   exports.prototype['tipoPortador'] = undefined;
 
   /**
-   * Os dados da Trilha1, seguindo as regras de trilha do emissor.
+   * {{{dados_cartao_impressao_response_trilha1_value}}}
    * @member {String} trilha1
    */
   exports.prototype['trilha1'] = undefined;
 
   /**
-   * Os dados da Trilha2, seguindo as regras de trilha do emissor.
+   * {{{dados_cartao_impressao_response_trilha2_value}}}
    * @member {String} trilha2
    */
   exports.prototype['trilha2'] = undefined;
 
   /**
-   * Os dados da TrilhaCVV01, seguindo as regras de trilha do emissor.
+   * {{{dados_cartao_impressao_response_trilha_c_v_v1_value}}}
    * @member {String} trilhaCVV1
    */
   exports.prototype['trilhaCVV1'] = undefined;
 
   /**
-   * Os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
+   * {{{dados_cartao_impressao_response_trilha_c_v_v2_value}}}
    * @member {String} trilhaCVV2
    */
   exports.prototype['trilhaCVV2'] = undefined;
 
   /**
-   * O status que informa se o cart\u00E3o \u00E9 virtual 
+   * {{{dados_cartao_impressao_response_flag_virtual_value}}}
    * @member {Integer} flagVirtual
    */
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * Nome da Bandeira
+   * {{{dados_cartao_impressao_response_nome_bandeira_value}}}
    * @member {String} nomeBandeira
    */
   exports.prototype['nomeBandeira'] = undefined;
 
   /**
-   * Flag Indicativo de Titularidade da Conta
+   * {{{dados_cartao_impressao_response_flag_titular_value}}}
    * @member {Integer} flagTitular
    */
   exports.prototype['flagTitular'] = undefined;
 
   /**
-   * C\u00F3digo Sequencial do Cart\u00E3o
+   * {{{dados_cartao_impressao_response_sequencial_cartao_value}}}
    * @member {Integer} sequencialCartao
    */
   exports.prototype['sequencialCartao'] = undefined;
 
   /**
-   * Identificador do Status do Cart\u00E3o
+   * {{{dados_cartao_impressao_response_id_status_value}}}
    * @member {Integer} idStatus
    */
   exports.prototype['idStatus'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Status do Cart\u00E3o
+   * {{{dados_cartao_impressao_response_descricao_status_cartao_value}}}
    * @member {String} descricaoStatusCartao
    */
   exports.prototype['descricaoStatusCartao'] = undefined;
 
   /**
-   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
+   * {{{dados_cartao_impressao_response_data_status_value}}}
    * @member {String} dataStatus
    */
   exports.prototype['dataStatus'] = undefined;
 
   /**
-   * Identificador do Est\u00E1gio do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_id_estagio_value}}}
    * @member {Integer} idEstagio
    */
   exports.prototype['idEstagio'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
+   * {{{dados_cartao_impressao_response_descricao_estagio_value}}}
    * @member {String} descricaoEstagio
    */
   exports.prototype['descricaoEstagio'] = undefined;
 
   /**
-   * Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
+   * {{{dados_cartao_impressao_response_data_estagio_value}}}
    * @member {String} dataEstagio
    */
   exports.prototype['dataEstagio'] = undefined;
 
   /**
-   * N\u00FAmero do Bin do Cart\u00E3o
+   * {{{dados_cartao_impressao_response_numero_bin_value}}}
    * @member {String} numeroBin
    */
   exports.prototype['numeroBin'] = undefined;
 
   /**
-   * Identificador do Produto Associado a Conta
+   * {{{dados_cartao_impressao_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do produto
+   * {{{dados_cartao_impressao_response_descricao_produto_value}}}
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
 
   /**
-   * Identificador do Status da Conta
+   * {{{dados_cartao_impressao_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{dados_cartao_impressao_response_descricao_status_conta_value}}}
    * @member {Integer} descricaoStatusConta
    */
   exports.prototype['descricaoStatusConta'] = undefined;
 
   /**
-   * Data que o cart\u00E3o foi embossado
+   * {{{dados_cartao_impressao_response_data_embossing_value}}}
    * @member {String} dataEmbossing
    */
   exports.prototype['dataEmbossing'] = undefined;
 
   /**
-   * C\u00F3digo de desbloqueio do cart\u00E3o
+   * {{{dados_cartao_impressao_response_codigo_desbloqueio_value}}}
    * @member {String} codigoDesbloqueio
    */
   exports.prototype['codigoDesbloqueio'] = undefined;
 
   /**
-   * O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
+   * {{{dados_cartao_impressao_response_nome_pessoa_value}}}
    * @member {String} nomePessoa
    */
   exports.prototype['nomePessoa'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
+   * {{{dados_cartao_impressao_response_tipo_pessoa_value}}}
    * @member {String} tipoPessoa
    */
   exports.prototype['tipoPessoa'] = undefined;
 
   /**
-   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+   * {{{dados_cartao_impressao_response_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * Identificador do Endere\u00E7o do titular do cart\u00E3o
+   * {{{dados_cartao_impressao_response_id_endereco_value}}}
    * @member {Integer} idEndereco
    */
   exports.prototype['idEndereco'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * {{{dados_cartao_impressao_response_id_tipo_endereco_value}}}
    * @member {Integer} idTipoEndereco
    */
   exports.prototype['idTipoEndereco'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
+   * {{{dados_cartao_impressao_response_descricao_tipo_endereco_value}}}
    * @member {String} descricaoTipoEndereco
    */
   exports.prototype['descricaoTipoEndereco'] = undefined;
 
   /**
-   * O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+   * {{{dados_cartao_impressao_response_cep_value}}}
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
 
   /**
-   * Nome do Logradouro
+   * {{{dados_cartao_impressao_response_logradouro_value}}}
    * @member {String} logradouro
    */
   exports.prototype['logradouro'] = undefined;
 
   /**
-   * N\u00FAmero do endere\u00E7o
+   * {{{dados_cartao_impressao_response_numero_endereco_value}}}
    * @member {String} numeroEndereco
    */
   exports.prototype['numeroEndereco'] = undefined;
 
   /**
-   * Descri\u00E7oes complementares referente ao endere\u00E7o
+   * {{{dados_cartao_impressao_response_complemento_endereco_value}}}
    * @member {String} complementoEndereco
    */
   exports.prototype['complementoEndereco'] = undefined;
 
   /**
-   * Nome do bairro
+   * {{{dados_cartao_impressao_response_bairro_value}}}
    * @member {String} bairro
    */
   exports.prototype['bairro'] = undefined;
 
   /**
-   * Nome do cidade
+   * {{{dados_cartao_impressao_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Unidade federativa
+   * {{{dados_cartao_impressao_response_uf_value}}}
    * @member {String} uf
    */
   exports.prototype['uf'] = undefined;
 
   /**
-   * Nome do pa\u00EDs
+   * {{{dados_cartao_impressao_response_pais_value}}}
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Senha Criptografada
+   * {{{dados_cartao_impressao_response_senha_criptografada_value}}}
    * @member {String} senhaCriptografada
    */
   exports.prototype['senhaCriptografada'] = undefined;
+
+  /**
+   * {{{dados_cartao_impressao_response_icvv_value}}}
+   * @member {String} icvv
+   */
+  exports.prototype['icvv'] = undefined;
+
+  /**
+   * {{{dados_cartao_impressao_response_id_status_impressao_value}}}
+   * @member {Integer} idStatusImpressao
+   */
+  exports.prototype['idStatusImpressao'] = undefined;
 
 
 

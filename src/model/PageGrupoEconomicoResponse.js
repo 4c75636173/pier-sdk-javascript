@@ -18,12 +18,12 @@
   /**
    * The PageGrupoEconomicoResponse model module.
    * @module model/PageGrupoEconomicoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageGrupoEconomicoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos
+   * {{{page_grupo_economico_response_description}}}
    * @alias module:model/PageGrupoEconomicoResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The PageProdutoResponse model module.
    * @module model/PageProdutoResponse
-   * @version 2.57.0
+   * @version 2.66.1
    */
 
   /**
    * Constructs a new <code>PageProdutoResponse</code>.
-   * Lista de Produtos
+   * {{{page_produto_response_description}}}
    * @alias module:model/PageProdutoResponse
    * @class
    */
