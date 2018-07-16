@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** | E-mail usado para envio do c\u00F3digo de seguran\u00E7a. | [optional] 
-**codigoSeguranca** | **String** | Token para valida\u00E7\u00E3o. | [optional] 
+**email** | **String** | {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}} | [optional] 
+**codigoSeguranca** | **String** | {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}} | [optional] 
 
 

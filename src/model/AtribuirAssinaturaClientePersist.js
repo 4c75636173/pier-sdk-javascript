@@ -18,12 +18,12 @@
   /**
    * The AtribuirAssinaturaClientePersist model module.
    * @module model/AtribuirAssinaturaClientePersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AtribuirAssinaturaClientePersist</code>.
-   * Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
+   * {{{atribuir_assinatura_cliente_persist_description}}}
    * @alias module:model/AtribuirAssinaturaClientePersist
    * @class
    */
@@ -52,7 +52,7 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
+   * {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
    * @member {Integer} idArquivo
    */
   exports.prototype['idArquivo'] = undefined;

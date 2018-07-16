@@ -18,12 +18,12 @@
   /**
    * The PageTipoBoletoResponse model module.
    * @module model/PageTipoBoletoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoBoletoResponse</code>.
-   * Lista dos tipos de boletos
+   * {{{page_tipo_boleto_response_description}}}
    * @alias module:model/PageTipoBoletoResponse
    * @class
    */

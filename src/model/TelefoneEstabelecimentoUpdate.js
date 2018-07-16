@@ -18,12 +18,12 @@
   /**
    * The TelefoneEstabelecimentoUpdate model module.
    * @module model/TelefoneEstabelecimentoUpdate
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TelefoneEstabelecimentoUpdate</code>.
-   * Objeto Telefone
+   * {{{telefone_estabelecimento_update_description}}}
    * @alias module:model/TelefoneEstabelecimentoUpdate
    * @class
    * @param ddd
@@ -62,19 +62,19 @@
 
 
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_update_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_update_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_update_ramal_value}}}
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

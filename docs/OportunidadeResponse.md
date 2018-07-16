@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador da oportunidade | [optional] 
-**idTipoOportunidade** | **Integer** | C\u00F3digo identificador do tipo oportunidade | [optional] 
-**idStatusOportunidade** | **Integer** | C\u00F3digo identificador do status oportunidade | [optional] 
-**dataCadastro** | **String** | Data cadastro da oportunidade. | [optional] 
-**dataAtualizacao** | **String** | Data atualiza\u00E7\u00E3o da oportunidade. | [optional] 
-**numeroReceitaFederal** | **String** | N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade | [optional] 
-**dataInicioVigencia** | **String** | In\u00EDcio da vig\u00EAncia da oportunidade | [optional] 
-**dataFimVigencia** | **String** | Fim da vig\u00EAncia da oportunidade | [optional] 
-**flagAtivo** | **Boolean** | Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa | [optional] 
-**detalhes** | [**[DetalheOportunidadeResponse]**](DetalheOportunidadeResponse.md) | Lista de detalhes da oportunidade | [optional] 
+**id** | **Integer** | {{{oportunidade_response_id_value}}} | [optional] 
+**idTipoOportunidade** | **Integer** | {{{oportunidade_response_id_tipo_oportunidade_value}}} | [optional] 
+**idStatusOportunidade** | **Integer** | {{{oportunidade_response_id_status_oportunidade_value}}} | [optional] 
+**dataCadastro** | **String** | {{{oportunidade_response_data_cadastro_value}}} | [optional] 
+**dataAtualizacao** | **String** | {{{oportunidade_response_data_atualizacao_value}}} | [optional] 
+**numeroReceitaFederal** | **String** | {{{oportunidade_response_numero_receita_federal_value}}} | [optional] 
+**dataInicioVigencia** | **String** | {{{oportunidade_response_data_inicio_vigencia_value}}} | [optional] 
+**dataFimVigencia** | **String** | {{{oportunidade_response_data_fim_vigencia_value}}} | [optional] 
+**flagAtivo** | **Boolean** | {{{oportunidade_response_flag_ativo_value}}} | [optional] 
+**detalhes** | [**[DetalheOportunidadeResponse]**](DetalheOportunidadeResponse.md) | {{{oportunidade_response_detalhes_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The PageArquivoResponse model module.
    * @module model/PageArquivoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageArquivoResponse</code>.
-   * Lista arquivos armazenados na contig\u00EAncia
+   * {{{page_arquivo_response_description}}}
    * @alias module:model/PageArquivoResponse
    * @class
    */

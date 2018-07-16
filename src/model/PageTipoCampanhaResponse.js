@@ -18,12 +18,12 @@
   /**
    * The PageTipoCampanhaResponse model module.
    * @module model/PageTipoCampanhaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoCampanhaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de tipo de campanha
+   * {{{page_tipo_campanha_response_description}}}
    * @alias module:model/PageTipoCampanhaResponse
    * @class
    */

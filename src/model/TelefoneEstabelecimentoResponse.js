@@ -18,12 +18,12 @@
   /**
    * The TelefoneEstabelecimentoResponse model module.
    * @module model/TelefoneEstabelecimentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TelefoneEstabelecimentoResponse</code>.
-   * Objeto de Resposta de Telefone Estabelecimento
+   * {{{telefone_estabelecimento_response_description}}}
    * @alias module:model/TelefoneEstabelecimentoResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+   * {{{telefone_estabelecimento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.
+   * {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_response_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_response_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_response_ramal_value}}}
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

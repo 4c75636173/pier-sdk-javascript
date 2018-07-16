@@ -18,12 +18,12 @@
   /**
    * The PageTelefoneEstabelecimentoResponse model module.
    * @module model/PageTelefoneEstabelecimentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTelefoneEstabelecimentoResponse</code>.
-   * Lista de telefones Estabelecimento
+   * {{{page_telefone_estabelecimento_response_description}}}
    * @alias module:model/PageTelefoneEstabelecimentoResponse
    * @class
    */

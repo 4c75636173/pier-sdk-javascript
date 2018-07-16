@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Id da Configura\u00E7\u00E3o EMAIL. | [optional] 
-**host** | **String** | IP (Host) do servidor de e-mail. | [optional] 
-**port** | **String** | Porta usada pelo servidor de e-mail. | [optional] 
-**portTLSSTARTTLS** | **String** | Porta usada pelo servi\u00E7o TLS/STARTTLS. | [optional] 
-**portSSL** | **String** | Porta usada pelo servi\u00E7o SSL. | [optional] 
-**protocolo** | **String** | Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp). | [optional] 
-**requerAutenticacao** | **Boolean** | O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o. | [optional] 
-**requerSSL** | **Boolean** | O servi\u00E7o de e-mail requer SSL. | [optional] 
-**requerTLS** | **Boolean** | O servi\u00E7o de e-mail requer TLS. | [optional] 
-**usuario** | **String** | Usuario do servi\u00E7o de e-mail. | [optional] 
-**senha** | **String** | Senha de usu\u00E1rio do servi\u00E7o de e-mail. | [optional] 
-**dataInclusao** | **String** | Data de inclus\u00E3o. | [optional] 
-**dataAlteracao** | **String** | Data de altera\u00E7\u00E3o. | [optional] 
+**id** | **Integer** | {{{configuracao_email_response_id_value}}} | [optional] 
+**host** | **String** | {{{configuracao_email_response_host_value}}} | [optional] 
+**port** | **String** | {{{configuracao_email_response_port_value}}} | [optional] 
+**portTLSSTARTTLS** | **String** | {{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}} | [optional] 
+**portSSL** | **String** | {{{configuracao_email_response_port_s_s_l_value}}} | [optional] 
+**protocolo** | **String** | {{{configuracao_email_response_protocolo_value}}} | [optional] 
+**requerAutenticacao** | **Boolean** | {{{configuracao_email_response_requer_autenticacao_value}}} | [optional] 
+**requerSSL** | **Boolean** | {{{configuracao_email_response_requer_s_s_l_value}}} | [optional] 
+**requerTLS** | **Boolean** | {{{configuracao_email_response_requer_t_l_s_value}}} | [optional] 
+**usuario** | **String** | {{{configuracao_email_response_usuario_value}}} | [optional] 
+**senha** | **String** | {{{configuracao_email_response_senha_value}}} | [optional] 
+**dataInclusao** | **String** | {{{configuracao_email_response_data_inclusao_value}}} | [optional] 
+**dataAlteracao** | **String** | {{{configuracao_email_response_data_alteracao_value}}} | [optional] 
 
 

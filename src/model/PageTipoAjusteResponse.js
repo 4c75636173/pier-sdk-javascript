@@ -18,12 +18,12 @@
   /**
    * The PageTipoAjusteResponse model module.
    * @module model/PageTipoAjusteResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoAjusteResponse</code>.
-   * Lista dos tipos de ajustes
+   * {{{page_tipo_ajuste_response_description}}}
    * @alias module:model/PageTipoAjusteResponse
    * @class
    */

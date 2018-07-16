@@ -18,12 +18,12 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ContaDetalheResponse</code>.
-   * Objeto conta
+   * {{{conta_detalhe_response_description}}}
    * @alias module:model/ContaDetalheResponse
    * @class
    */
@@ -152,157 +152,157 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+   * {{{conta_detalhe_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+   * {{{conta_detalhe_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
+   * {{{conta_detalhe_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+   * {{{conta_detalhe_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+   * {{{conta_detalhe_response_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * Nome da origem comercial
+   * {{{conta_detalhe_response_nome_origem_comercial_value}}}
    * @member {String} nomeOrigemComercial
    */
   exports.prototype['nomeOrigemComercial'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id).
+   * {{{conta_detalhe_response_id_fantasia_basica_value}}}
    * @member {Integer} idFantasiaBasica
    */
   exports.prototype['idFantasiaBasica'] = undefined;
 
   /**
-   * Nome da Fantasia Basica
+   * {{{conta_detalhe_response_nome_fantasia_basica_value}}}
    * @member {String} nomeFantasiaBasica
    */
   exports.prototype['nomeFantasiaBasica'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+   * {{{conta_detalhe_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{conta_detalhe_response_status_conta_value}}}
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
 
   /**
-   * Apresenta o dia de vencimento.
+   * {{{conta_detalhe_response_dia_vencimento_value}}}
    * @member {Integer} diaVencimento
    */
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Apresenta o melhor dia de compra.
+   * {{{conta_detalhe_response_melhor_dia_compra_value}}}
    * @member {Integer} melhorDiaCompra
    */
   exports.prototype['melhorDiaCompra'] = undefined;
 
   /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+   * {{{conta_detalhe_response_data_status_conta_value}}}
    * @member {String} dataStatusConta
    */
   exports.prototype['dataStatusConta'] = undefined;
 
   /**
-   * Valor da renda comprovada.
+   * {{{conta_detalhe_response_valor_renda_value}}}
    * @member {Number} valorRenda
    */
   exports.prototype['valorRenda'] = undefined;
 
   /**
-   * Apresenta a data em que o cart\u00E3o foi gerado.
+   * {{{conta_detalhe_response_data_cadastro_value}}}
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+   * {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
    * @member {String} dataUltimaAlteracaoVencimento
    */
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
   /**
-   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+   * {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
    * @member {String} dataHoraUltimaCompra
    */
   exports.prototype['dataHoraUltimaCompra'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{conta_detalhe_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{conta_detalhe_response_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Forma de envio da fatura.
+   * {{{conta_detalhe_response_forma_envio_fatura_value}}}
    * @member {String} formaEnvioFatura
    */
   exports.prototype['formaEnvioFatura'] = undefined;
 
   /**
-   * Apresenta se a pessoa \u00E9 titular da conta.
+   * {{{conta_detalhe_response_titular_value}}}
    * @member {Boolean} titular
    */
   exports.prototype['titular'] = undefined;
 
   /**
-   * Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
+   * {{{conta_detalhe_response_limite_global_value}}}
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
+   * {{{conta_detalhe_response_limite_saque_global_value}}}
    * @member {Number} limiteSaqueGlobal
    */
   exports.prototype['limiteSaqueGlobal'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
+   * {{{conta_detalhe_response_saldo_disponivel_global_value}}}
    * @member {Number} saldoDisponivelGlobal
    */
   exports.prototype['saldoDisponivelGlobal'] = undefined;
 
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
    * @member {Number} saldoDisponivelSaque
    */
   exports.prototype['saldoDisponivelSaque'] = undefined;
 
   /**
-   * Apresenta a quantidade de dias que a conta esta em atraso
+   * {{{conta_detalhe_response_dias_atraso_value}}}
    * @member {Integer} diasAtraso
    */
   exports.prototype['diasAtraso'] = undefined;

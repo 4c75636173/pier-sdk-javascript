@@ -18,12 +18,12 @@
   /**
    * The PageJobResponse model module.
    * @module model/PageJobResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageJobResponse</code>.
-   * Lista de Jobs
+   * {{{page_job_response_description}}}
    * @alias module:model/PageJobResponse
    * @class
    */

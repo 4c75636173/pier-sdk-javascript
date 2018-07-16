@@ -18,12 +18,12 @@
   /**
    * The StatusCartaoResponse model module.
    * @module model/StatusCartaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>StatusCartaoResponse</code>.
-   * Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
+   * {{{status_cartao_response_description}}}
    * @alias module:model/StatusCartaoResponse
    * @class
    * @param id
@@ -74,37 +74,37 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
+   * {{{status_cartao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
+   * {{{status_cartao_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_desbloquear_value}}}
    * @member {Integer} permiteDesbloquear
    */
   exports.prototype['permiteDesbloquear'] = undefined;
 
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
    * @member {Integer} permiteAtribuirComoBloqueio
    */
   exports.prototype['permiteAtribuirComoBloqueio'] = undefined;
 
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
    * @member {Integer} permiteAtribuirComoCancelamento
    */
   exports.prototype['permiteAtribuirComoCancelamento'] = undefined;
 
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
    * @member {Integer} cobrarTarifaAoEmitirNovaVia
    */
   exports.prototype['cobrarTarifaAoEmitirNovaVia'] = undefined;

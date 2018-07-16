@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nome** | **String** | Nome da campanha. | [optional] 
-**idTipoCampanha** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha. | [optional] 
-**planosCampanhas** | [**[PlanoCampanhaPersist]**](PlanoCampanhaPersist.md) | Lista com os planos de campanha. | [optional] 
+**nome** | **String** | {{{campanha_persist_nome_value}}} | [optional] 
+**idTipoCampanha** | **Integer** | {{{campanha_persist_id_tipo_campanha_value}}} | [optional] 
+**planosCampanhas** | [**[PlanoCampanhaPersist]**](PlanoCampanhaPersist.md) | {{{campanha_persist_planos_campanhas_value}}} | [optional] 
 
 

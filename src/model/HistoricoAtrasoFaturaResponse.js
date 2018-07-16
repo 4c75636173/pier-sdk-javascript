@@ -18,12 +18,12 @@
   /**
    * The HistoricoAtrasoFaturaResponse model module.
    * @module model/HistoricoAtrasoFaturaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>HistoricoAtrasoFaturaResponse</code>.
-   * Hist\u00F3rico Pagamento Fatura Atraso
+   * {{{historico_atraso_fatura_response_description}}}
    * @alias module:model/HistoricoAtrasoFaturaResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Data vencimento fatura.
+   * {{{historico_atraso_fatura_response_data_vencimento_value}}}
    * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * Quantidade de dias em atraso.
+   * {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
    * @member {Integer} diasPagamentoAposVencimento
    */
   exports.prototype['diasPagamentoAposVencimento'] = undefined;

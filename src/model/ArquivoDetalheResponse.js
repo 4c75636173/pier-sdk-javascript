@@ -18,12 +18,12 @@
   /**
    * The ArquivoDetalheResponse model module.
    * @module model/ArquivoDetalheResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ArquivoDetalheResponse</code>.
-   * Objeto Response do arquivo.
+   * {{{arquivo_detalhe_response_description}}}
    * @alias module:model/ArquivoDetalheResponse
    * @class
    */
@@ -92,67 +92,67 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
+   * {{{arquivo_detalhe_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
+   * {{{arquivo_detalhe_response_id_tipo_arquivo_value}}}
    * @member {Integer} idTipoArquivo
    */
   exports.prototype['idTipoArquivo'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo do arquivo
+   * {{{arquivo_detalhe_response_nome_tipo_arquivo_value}}}
    * @member {String} nomeTipoArquivo
    */
   exports.prototype['nomeTipoArquivo'] = undefined;
 
   /**
-   * Conte\u00FAdo do arquivo convertido em Base 64
+   * {{{arquivo_detalhe_response_arquivo_value}}}
    * @member {String} arquivo
    */
   exports.prototype['arquivo'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
+   * {{{arquivo_detalhe_response_id_status_arquivo_value}}}
    * @member {Integer} idStatusArquivo
    */
   exports.prototype['idStatusArquivo'] = undefined;
 
   /**
-   * Desci\u00E7\u00E3o do status do arquivo
+   * {{{arquivo_detalhe_response_nome_status_arquivo_value}}}
    * @member {String} nomeStatusArquivo
    */
   exports.prototype['nomeStatusArquivo'] = undefined;
 
   /**
-   * Nome do arquivo
+   * {{{arquivo_detalhe_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Formato/Extens\u00E3o do arquivo
+   * {{{arquivo_detalhe_response_extensao_value}}}
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Data de inclus\u00E3o do arquivo.
+   * {{{arquivo_detalhe_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
+   * {{{arquivo_detalhe_response_data_alteracao_value}}}
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;
 
   /**
-   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
+   * {{{arquivo_detalhe_response_detalhes_value}}}
    * @member {Array.<module:model/ArquivoParametroResponse>} detalhes
    */
   exports.prototype['detalhes'] = undefined;

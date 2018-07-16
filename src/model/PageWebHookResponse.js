@@ -18,12 +18,12 @@
   /**
    * The PageWebHookResponse model module.
    * @module model/PageWebHookResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageWebHookResponse</code>.
-   * Lista de WebHooks
+   * {{{page_web_hook_response_description}}}
    * @alias module:model/PageWebHookResponse
    * @class
    */

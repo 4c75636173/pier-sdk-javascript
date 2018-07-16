@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**valorSolicitado** | **Number** | Valor do empr\u00E9stimo/financiamento | 
-**numeroParcelas** | **Integer** | N\u00FAmero total de parcelas do empr\u00E9stimo/financiamento | 
-**taxaJuros** | **Number** | Valor percentual da taxa de juros a ser aplicada | 
-**periodoTaxa** | **String** | Per\u00EDodo de aplica da taxa de juros | 
-**sistemaAmortizacao** | **String** | Sistema para amortiza\u00E7\u00E3o do valor das parcelas | 
-**numeroMesesCarencia** | **Integer** | N\u00FAmero de meses para cobran\u00E7a da primeira parcela | [optional] 
+**valorSolicitado** | **Number** | {{{emprestimo_pessoal_request_valor_solicitado_value}}} | 
+**numeroParcelas** | **Integer** | {{{emprestimo_pessoal_request_numero_parcelas_value}}} | 
+**taxaJuros** | **Number** | {{{emprestimo_pessoal_request_taxa_juros_value}}} | 
+**periodoTaxa** | **String** | {{{emprestimo_pessoal_request_periodo_taxa_value}}} | 
+**sistemaAmortizacao** | **String** | {{{emprestimo_pessoal_request_sistema_amortizacao_value}}} | 
+**numeroMesesCarencia** | **Integer** | {{{emprestimo_pessoal_request_numero_meses_carencia_value}}} | [optional] 
 
 

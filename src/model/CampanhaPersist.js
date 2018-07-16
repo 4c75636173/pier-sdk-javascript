@@ -18,12 +18,12 @@
   /**
    * The CampanhaPersist model module.
    * @module model/CampanhaPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CampanhaPersist</code>.
-   * Campanha
+   * {{{campanha_persist_description}}}
    * @alias module:model/CampanhaPersist
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * Nome da campanha.
+   * {{{campanha_persist_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
+   * {{{campanha_persist_id_tipo_campanha_value}}}
    * @member {Integer} idTipoCampanha
    */
   exports.prototype['idTipoCampanha'] = undefined;
 
   /**
-   * Lista com os planos de campanha.
+   * {{{campanha_persist_planos_campanhas_value}}}
    * @member {Array.<module:model/PlanoCampanhaPersist>} planosCampanhas
    */
   exports.prototype['planosCampanhas'] = undefined;

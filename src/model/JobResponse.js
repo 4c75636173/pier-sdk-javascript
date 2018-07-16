@@ -18,12 +18,12 @@
   /**
    * The JobResponse model module.
    * @module model/JobResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>JobResponse</code>.
-   * Job
+   * {{{job_response_description}}}
    * @alias module:model/JobResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * Identificador do Job
+   * {{{job_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descricao do Job
+   * {{{job_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Script Groovy do Job
+   * {{{job_response_groovy_value}}}
    * @member {String} groovy
    */
   exports.prototype['groovy'] = undefined;
 
   /**
-   * Cron do Job
+   * {{{job_response_cron_value}}}
    * @member {String} cron
    */
   exports.prototype['cron'] = undefined;
 
   /**
-   * Status do Job no agendador de tarefas
+   * {{{job_response_status_value}}}
    * @member {module:model/JobResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

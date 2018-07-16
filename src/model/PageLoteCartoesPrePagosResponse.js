@@ -18,12 +18,12 @@
   /**
    * The PageLoteCartoesPrePagosResponse model module.
    * @module model/PageLoteCartoesPrePagosResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageLoteCartoesPrePagosResponse</code>.
-   * Lista atendimento clientes
+   * {{{page_lote_cartoes_pre_pagos_response_description}}}
    * @alias module:model/PageLoteCartoesPrePagosResponse
    * @class
    */

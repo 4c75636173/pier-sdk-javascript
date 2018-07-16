@@ -18,12 +18,12 @@
   /**
    * The TerminalPersist model module.
    * @module model/TerminalPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TerminalPersist</code>.
-   * Objeto Terminal
+   * {{{terminal_persist_description}}}
    * @alias module:model/TerminalPersist
    * @class
    * @param idEstabelecimento
@@ -63,19 +63,19 @@
 
 
   /**
-   * Apresenta o id do estabelecimento.
+   * {{{terminal_persist_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
+   * {{{terminal_persist_flag_consulta_extrato_value}}}
    * @member {Boolean} flagConsultaExtrato
    */
   exports.prototype['flagConsultaExtrato'] = undefined;
 
   /**
-   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
+   * {{{terminal_persist_flag_terminal_virtual_value}}}
    * @member {Boolean} flagTerminalVirtual
    */
   exports.prototype['flagTerminalVirtual'] = undefined;

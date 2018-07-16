@@ -18,12 +18,12 @@
   /**
    * The TransacaoPaySecureRequest model module.
    * @module model/TransacaoPaySecureRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransacaoPaySecureRequest</code>.
-   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
+   * {{{transacao_pay_secure_request_description}}}
    * @alias module:model/TransacaoPaySecureRequest
    * @class
    * @param terminalRequisitante
@@ -110,85 +110,85 @@
 
 
   /**
-   * Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
+   * {{{transacao_pay_secure_request_data_hora_transacao_value}}}
    * @member {String} dataHoraTransacao
    */
   exports.prototype['dataHoraTransacao'] = undefined;
 
   /**
-   * Numero do cartao (criptografado)
+   * {{{transacao_pay_generic_request_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Id do cart\u00E3o
+   * {{{transacao_pay_generic_request_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Valor da transa\u00E7\u00E3o em moeda local
+   * {{{transacao_pay_secure_request_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
+   * {{{transacao_pay_secure_request_nsu_origem_value}}}
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
+   * {{{transacao_pay_secure_request_nome_portador_cartao_value}}}
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;
 
   /**
-   * Origem da transa\u00E7\u00E3o
+   * {{{transacao_pay_generic_request_origem_value}}}
    * @member {String} origem
    */
   exports.prototype['origem'] = undefined;
 
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_pay_secure_request_terminal_requisitante_value}}}
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;
 
   /**
-   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+   * {{{transacao_pay_secure_request_codigo_processamento_value}}}
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * Data de Validade do Cart\u00E3o. Ex: AAMM
+   * {{{transacao_pay_secure_request_data_validade_cartao_value}}}
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+   * {{{transacao_pay_secure_request_numero_estabelecimento_value}}}
    * @member {String} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * N\u00FAmero de Parcelas.
+   * {{{transacao_pay_secure_request_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
+   * {{{transacao_pay_secure_request_codigo_seguranca_cartao_value}}}
    * @member {String} codigoSegurancaCartao
    */
   exports.prototype['codigoSegurancaCartao'] = undefined;
 
   /**
-   * Tipo de ordena\u00E7\u00E3o dos registros.
+   * {{{global_menssagem_sort_sort}}}
    * @member {Array.<String>} sort
    */
   exports.prototype['sort'] = undefined;

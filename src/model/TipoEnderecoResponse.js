@@ -18,12 +18,12 @@
   /**
    * The TipoEnderecoResponse model module.
    * @module model/TipoEnderecoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoEnderecoResponse</code>.
-   * Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
+   * {{{tipo_endereco_response_description}}}
    * @alias module:model/TipoEnderecoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
+   * {{{tipo_endereco_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Tipo do Endere\u00E7o
+   * {{{tipo_endereco_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

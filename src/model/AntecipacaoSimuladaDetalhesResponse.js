@@ -18,12 +18,12 @@
   /**
    * The AntecipacaoSimuladaDetalhesResponse model module.
    * @module model/AntecipacaoSimuladaDetalhesResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AntecipacaoSimuladaDetalhesResponse</code>.
-   * Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
+   * {{{antecipacao_simulada_detalhes_response_description}}}
    * @alias module:model/AntecipacaoSimuladaDetalhesResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Quantidade de parcelas do plano de parcelamento simulado.
+   * {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Valor total das parcelas do plano de parcelamento.
+   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
    * @member {Number} valorParcelas
    */
   exports.prototype['valorParcelas'] = undefined;
 
   /**
-   * Valor do desconto para o plano de parcelamento.
+   * {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
    * @member {Number} valorDesconto
    */
   exports.prototype['valorDesconto'] = undefined;
 
   /**
-   * Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
+   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
    * @member {Number} valorParcelasDesconto
    */
   exports.prototype['valorParcelasDesconto'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PlanoParcelamentoEmprestimoResponse model module.
    * @module model/PlanoParcelamentoEmprestimoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoEmprestimoResponse</code>.
-   * Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
+   * {{{plano_parcelamento_emprestimo_response_description}}}
    * @alias module:model/PlanoParcelamentoEmprestimoResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
+   * {{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * Valor da parcela
+   * {{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}
    * @member {Number} valorParcelas
    */
   exports.prototype['valorParcelas'] = undefined;
 
   /**
-   * Taxa de juros aplicado no empr\u00E9stimo/financiamento
+   * {{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
+   * {{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}
    * @member {Number} valorTributosIOF
    */
   exports.prototype['valorTributosIOF'] = undefined;
 
   /**
-   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
+   * {{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}
    * @member {Number} valorPercentualCET
    */
   exports.prototype['valorPercentualCET'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The ContaHistoricoPagamentoResponse model module.
    * @module model/ContaHistoricoPagamentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ContaHistoricoPagamentoResponse</code>.
-   * Objeto ContaHistoricoPagamentoResponse
+   * {{{conta_historico_pagamento_response_description}}}
    * @alias module:model/ContaHistoricoPagamentoResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+   * {{{conta_historico_pagamento_response_id_pagamento_value}}}
    * @member {Integer} idPagamento
    */
   exports.prototype['idPagamento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+   * {{{conta_historico_pagamento_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+   * {{{conta_historico_pagamento_response_id_banco_value}}}
    * @member {Integer} idBanco
    */
   exports.prototype['idBanco'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+   * {{{conta_historico_pagamento_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Valor do Pagamento
+   * {{{conta_historico_pagamento_response_valor_pagamento_value}}}
    * @member {Number} valorPagamento
    */
   exports.prototype['valorPagamento'] = undefined;
 
   /**
-   * Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+   * {{{conta_historico_pagamento_response_data_hora_pagamento_value}}}
    * @member {String} dataHoraPagamento
    */
   exports.prototype['dataHoraPagamento'] = undefined;
 
   /**
-   * Data e Hora em que o registro do Pagamento foi cadastrado
+   * {{{conta_historico_pagamento_response_data_hora_entrada_pagamento_value}}}
    * @member {String} dataHoraEntradaPagamento
    */
   exports.prototype['dataHoraEntradaPagamento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
+   * {{{conta_historico_pagamento_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;

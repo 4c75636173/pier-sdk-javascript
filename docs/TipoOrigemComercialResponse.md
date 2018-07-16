@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial. | [optional] 
-**nome** | **String** | Nome do tipo de origem comercial | [optional] 
+**id** | **Integer** | {{{tipo_origem_comercial_response_id_value}}} | [optional] 
+**nome** | **String** | {{{tipo_origem_comercial_response_nome_value}}} | [optional] 
 
 

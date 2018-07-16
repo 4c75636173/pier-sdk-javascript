@@ -18,12 +18,12 @@
   /**
    * The AvisoViagemResponse model module.
    * @module model/AvisoViagemResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AvisoViagemResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso aviso viagens
+   * {{{aviso_viagem_response_description}}}
    * @alias module:model/AvisoViagemResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
+   * {{{aviso_viagem_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador do cart\u00E3o na base (id)
+   * {{{aviso_viagem_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Codigo identificador do pa\u00EDs na base (id)
+   * {{{aviso_viagem_response_codigo_pais_value}}}
    * @member {String} codigoPais
    */
   exports.prototype['codigoPais'] = undefined;
 
   /**
-   * Data inicio do aviso viagem
+   * {{{aviso_viagem_response_data_inicio_value}}}
    * @member {String} dataInicio
    */
   exports.prototype['dataInicio'] = undefined;
 
   /**
-   * Data fim do aviso viagem
+   * {{{aviso_viagem_response_data_fim_value}}}
    * @member {String} dataFim
    */
   exports.prototype['dataFim'] = undefined;
 
   /**
-   * Identifica se o aviso viagem esta ativo ou n\u00E3o
+   * {{{aviso_viagem_response_flag_ativo_value}}}
    * @member {Integer} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

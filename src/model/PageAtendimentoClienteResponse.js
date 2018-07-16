@@ -18,12 +18,12 @@
   /**
    * The PageAtendimentoClienteResponse model module.
    * @module model/PageAtendimentoClienteResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageAtendimentoClienteResponse</code>.
-   * Lista atendimento clientes
+   * {{{page_atendimento_cliente_response_description}}}
    * @alias module:model/PageAtendimentoClienteResponse
    * @class
    */

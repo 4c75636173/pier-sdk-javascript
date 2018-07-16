@@ -18,12 +18,12 @@
   /**
    * The TipoOportunidadeAUDResponse model module.
    * @module model/TipoOportunidadeAUDResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoOportunidadeAUDResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso TipoOportunidadeAUD
+   * {{{tipo_oportunidade_a_u_d_response_description}}}
    * @alias module:model/TipoOportunidadeAUDResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo identificador da auditoria dos tipos oportunidades
+   * {{{tipo_oportunidade_a_u_d_response_rev_value}}}
    * @member {Integer} rev
    */
   exports.prototype['rev'] = undefined;
 
   /**
-   * C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{tipo_oportunidade_a_u_d_response_rev_type_value}}}
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{tipo_oportunidade_a_u_d_response_rev_date_value}}}
    * @member {String} revDate
    */
   exports.prototype['revDate'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+   * {{{tipo_oportunidade_a_u_d_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+   * {{{tipo_oportunidade_a_u_d_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Atributo que representa se o tipo oportunidade est\u00E1 ativo
+   * {{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

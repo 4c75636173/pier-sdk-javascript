@@ -18,12 +18,12 @@
   /**
    * The PageOperadoraResponse model module.
    * @module model/PageOperadoraResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageOperadoraResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+   * {{{page_operadora_response_description}}}
    * @alias module:model/PageOperadoraResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The PageTransferenciaBancariaResponse model module.
    * @module model/PageTransferenciaBancariaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTransferenciaBancariaResponse</code>.
-   * Lista de Transfer\u00EAncias
+   * {{{page_transferencia_bancaria_response_description}}}
    * @alias module:model/PageTransferenciaBancariaResponse
    * @class
    */

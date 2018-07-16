@@ -18,12 +18,12 @@
   /**
    * The PlanoCampanhaPersist model module.
    * @module model/PlanoCampanhaPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PlanoCampanhaPersist</code>.
-   * PlanoCampanha
+   * {{{plano_campanha_persist_description}}}
    * @alias module:model/PlanoCampanhaPersist
    * @class
    */

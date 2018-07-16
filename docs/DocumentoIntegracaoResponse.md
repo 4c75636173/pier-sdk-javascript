@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | ID do Documento Integrado. | [optional] 
-**idTemplate** | **Integer** | ID do Template de Documento associado. | [optional] 
-**nome** | **String** | Nome do Documento. | [optional] 
+**id** | **Integer** | {{{documento_integracao_response_id_value}}} | [optional] 
+**idTemplate** | **Integer** | {{{documento_integracao_response_id_template_value}}} | [optional] 
+**nome** | **String** | {{{documento_integracao_response_nome_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The TransacoesCorrentesResponse model module.
    * @module model/TransacoesCorrentesResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransacoesCorrentesResponse</code>.
-   * Objeto transacoes correntes
+   * {{{transacoes_correntes_response_description}}}
    * @alias module:model/TransacoesCorrentesResponse
    * @class
    */
@@ -200,229 +200,229 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+   * {{{transacoes_correntes_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_id_tipo_transacao_value}}}
    * @member {Integer} idTipoTransacao
    */
   exports.prototype['idTipoTransacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_descricao_abreviada_value}}}
    * @member {String} descricaoAbreviada
    */
   exports.prototype['descricaoAbreviada'] = undefined;
 
   /**
-   * Status de Processamento da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_status_transacao_value}}}
    * @member {String} statusTransacao
    */
   exports.prototype['statusTransacao'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).
+   * {{{transacoes_correntes_response_id_evento_value}}}
    * @member {Integer} idEvento
    */
   exports.prototype['idEvento'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_tipo_evento_value}}}
    * @member {String} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
+   * {{{transacoes_correntes_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+   * {{{transacoes_correntes_response_cartao_mascarado_value}}}
    * @member {String} cartaoMascarado
    */
   exports.prototype['cartaoMascarado'] = undefined;
 
   /**
-   * Nome completo do Portador do Cart\u00E3o.
+   * {{{transacoes_correntes_response_nome_portador_value}}}
    * @member {String} nomePortador
    */
   exports.prototype['nomePortador'] = undefined;
 
   /**
-   * Data em que a Transa\u00E7\u00E3o foi realizada.
+   * {{{transacoes_correntes_response_data_transacao_value}}}
    * @member {String} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
 
   /**
-   * Data de Faturamento da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_data_faturamento_value}}}
    * @member {String} dataFaturamento
    */
   exports.prototype['dataFaturamento'] = undefined;
 
   /**
-   * Data de Vencimento da Fatura.
+   * {{{transacoes_correntes_response_data_vencimento_value}}}
    * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_modo_entrada_transacao_value}}}
    * @member {String} modoEntradaTransacao
    */
   exports.prototype['modoEntradaTransacao'] = undefined;
 
   /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
+   * {{{transacoes_correntes_response_valor_taxa_embarque_value}}}
    * @member {Number} valorTaxaEmbarque
    */
   exports.prototype['valorTaxaEmbarque'] = undefined;
 
   /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+   * {{{transacoes_correntes_response_valor_entrada_value}}}
    * @member {Number} valorEntrada
    */
   exports.prototype['valorEntrada'] = undefined;
 
   /**
-   * Valor da Transa\u00E7\u00E3o em Real (BRL).
+   * {{{transacoes_correntes_response_valor_b_r_l_value}}}
    * @member {Number} valorBRL
    */
   exports.prototype['valorBRL'] = undefined;
 
   /**
-   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
+   * {{{transacoes_correntes_response_valor_u_s_d_value}}}
    * @member {Number} valorUSD
    */
   exports.prototype['valorUSD'] = undefined;
 
   /**
-   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
+   * {{{transacoes_correntes_response_cotacao_u_s_d_value}}}
    * @member {Number} cotacaoUSD
    */
   exports.prototype['cotacaoUSD'] = undefined;
 
   /**
-   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
+   * {{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}
    * @member {String} dataCotacaoUSD
    */
   exports.prototype['dataCotacaoUSD'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
+   * {{{transacoes_correntes_response_codigo_moeda_origem_value}}}
    * @member {String} codigoMoedaOrigem
    */
   exports.prototype['codigoMoedaOrigem'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
+   * {{{transacoes_correntes_response_codigo_moeda_destino_value}}}
    * @member {String} codigoMoedaDestino
    */
   exports.prototype['codigoMoedaDestino'] = undefined;
 
   /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_codigo_autorizacao_value}}}
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
+   * {{{transacoes_correntes_response_codigo_referencia_value}}}
    * @member {String} codigoReferencia
    */
   exports.prototype['codigoReferencia'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_codigo_terminal_value}}}
    * @member {String} codigoTerminal
    */
   exports.prototype['codigoTerminal'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+   * {{{transacoes_correntes_response_codigo_m_c_c_value}}}
    * @member {Integer} codigoMCC
    */
   exports.prototype['codigoMCC'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacoes_correntes_response_grupo_m_c_c_value}}}
    * @member {Integer} grupoMCC
    */
   exports.prototype['grupoMCC'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}
    * @member {String} grupoDescricaoMCC
    */
   exports.prototype['grupoDescricaoMCC'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{transacoes_correntes_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Nome do Estabelecimento.
+   * {{{transacoes_correntes_response_nome_estabelecimento_value}}}
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Nome Fantasia do Estabelecimento.
+   * {{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}
    * @member {String} nomeFantasiaEstabelecimento
    */
   exports.prototype['nomeFantasiaEstabelecimento'] = undefined;
 
   /**
-   * Localidade do Estabelecimento.
+   * {{{transacoes_correntes_response_localidade_estabelecimento_value}}}
    * @member {String} localidadeEstabelecimento
    */
   exports.prototype['localidadeEstabelecimento'] = undefined;
 
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+   * {{{transacoes_correntes_response_plano_parcelamento_value}}}
    * @member {Integer} planoParcelamento
    */
   exports.prototype['planoParcelamento'] = undefined;
 
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+   * {{{transacoes_correntes_response_numero_parcela_value}}}
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
 
   /**
-   * Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+   * {{{transacoes_correntes_response_detalhes_transacao_value}}}
    * @member {String} detalhesTransacao
    */
   exports.prototype['detalhesTransacao'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+   * {{{transacoes_correntes_response_flag_credito_value}}}
    * @member {Integer} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+   * {{{transacoes_correntes_response_flag_faturado_value}}}
    * @member {Integer} flagFaturado
    */
   exports.prototype['flagFaturado'] = undefined;
 
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+   * {{{transacoes_correntes_response_flag_estorno_value}}}
    * @member {Integer} flagEstorno
    */
   exports.prototype['flagEstorno'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+   * {{{transacoes_correntes_response_id_transacao_estorno_value}}}
    * @member {Integer} idTransacaoEstorno
    */
   exports.prototype['idTransacaoEstorno'] = undefined;

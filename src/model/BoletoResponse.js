@@ -18,16 +18,20 @@
   /**
    * The BoletoResponse model module.
    * @module model/BoletoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>BoletoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do boleto de fatura
+   * {{{boleto_response_description}}}
    * @alias module:model/BoletoResponse
    * @class
    */
   var exports = function() {
+
+
+
+
 
 
 
@@ -162,190 +166,226 @@
       if (data.hasOwnProperty('linhaDigitavel')) {
         obj['linhaDigitavel'] = ApiClient.convertToType(data['linhaDigitavel'], 'String');
       }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
+      if (data.hasOwnProperty('idConta')) {
+        obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
+      }
+      if (data.hasOwnProperty('enderecoCobrancaBeneficiario')) {
+        obj['enderecoCobrancaBeneficiario'] = ApiClient.convertToType(data['enderecoCobrancaBeneficiario'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
     }
     return obj;
   }
 
 
   /**
-   * N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
+   * {{{boleto_response_numero_do_documento_value}}}
    * @member {String} numeroDoDocumento
    */
   exports.prototype['numeroDoDocumento'] = undefined;
 
   /**
-   * Data do processamento (emiss\u00E3o ou faturamento) do boleto
+   * {{{boleto_response_data_processamento_value}}}
    * @member {String} dataProcessamento
    */
   exports.prototype['dataProcessamento'] = undefined;
 
   /**
-   * Data do documento (impress\u00E3o)
+   * {{{boleto_response_data_documento_value}}}
    * @member {String} dataDocumento
    */
   exports.prototype['dataDocumento'] = undefined;
 
   /**
-   * Data do vencimento
+   * {{{boleto_response_data_vencimento_value}}}
    * @member {String} dataVencimento
    */
   exports.prototype['dataVencimento'] = undefined;
 
   /**
-   * Data do fechamento
+   * {{{boleto_response_data_fechamento_value}}}
    * @member {String} dataFechamento
    */
   exports.prototype['dataFechamento'] = undefined;
 
   /**
-   * Valor do Boleto.
+   * {{{boleto_response_valor_boleto_value}}}
    * @member {Number} valorBoleto
    */
   exports.prototype['valorBoleto'] = undefined;
 
   /**
-   * Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
+   * {{{boleto_response_nome_beneficiario_value}}}
    * @member {String} nomeBeneficiario
    */
   exports.prototype['nomeBeneficiario'] = undefined;
 
   /**
-   * Documento do Beneficiario.
+   * {{{boleto_response_documento_beneficiario_value}}}
    * @member {String} documentoBeneficiario
    */
   exports.prototype['documentoBeneficiario'] = undefined;
 
   /**
-   * Ag\u00EAncia.
+   * {{{boleto_response_agencia_value}}}
    * @member {String} agencia
    */
   exports.prototype['agencia'] = undefined;
 
   /**
-   * C\u00F3digo do benefici\u00E1rio
+   * {{{boleto_response_codigo_beneficiario_value}}}
    * @member {String} codigoBeneficiario
    */
   exports.prototype['codigoBeneficiario'] = undefined;
 
   /**
-   * N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+   * {{{boleto_response_numero_convenio_value}}}
    * @member {String} numeroConvenio
    */
   exports.prototype['numeroConvenio'] = undefined;
 
   /**
-   * D\u00EDgito do c\u00F3digo do benefici\u00E1rio
+   * {{{boleto_response_digito_codigo_beneficiario_value}}}
    * @member {String} digitoCodigoBeneficiario
    */
   exports.prototype['digitoCodigoBeneficiario'] = undefined;
 
   /**
-   * Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
+   * {{{boleto_response_carteira_value}}}
    * @member {String} carteira
    */
   exports.prototype['carteira'] = undefined;
 
   /**
-   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
+   * {{{boleto_response_nosso_numero_value}}}
    * @member {String} nossoNumero
    */
   exports.prototype['nossoNumero'] = undefined;
 
   /**
-   * D\u00EDgito do nosso n\u00FAmero
+   * {{{boleto_response_digito_nosso_numero_value}}}
    * @member {String} digitoNossoNumero
    */
   exports.prototype['digitoNossoNumero'] = undefined;
 
   /**
-   * Banco
+   * {{{boleto_response_banco_value}}}
    * @member {String} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")
+   * {{{boleto_response_aceite_value}}}
    * @member {Boolean} aceite
    */
   exports.prototype['aceite'] = undefined;
 
   /**
-   * Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")
+   * {{{boleto_response_especie_do_documento_value}}}
    * @member {String} especieDoDocumento
    */
   exports.prototype['especieDoDocumento'] = undefined;
 
   /**
-   * Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")
+   * {{{boleto_response_especie_value}}}
    * @member {String} especie
    */
   exports.prototype['especie'] = undefined;
 
   /**
-   * Instru\u00E7\u00F5es para o benefici\u00E1rio
+   * {{{boleto_response_instrucoes_value}}}
    * @member {Array.<String>} instrucoes
    */
   exports.prototype['instrucoes'] = undefined;
 
   /**
-   * Locais de pagamento
+   * {{{boleto_response_locais_de_pagamento_value}}}
    * @member {Array.<String>} locaisDePagamento
    */
   exports.prototype['locaisDePagamento'] = undefined;
 
   /**
-   * Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
+   * {{{boleto_response_nome_pagador_value}}}
    * @member {String} nomePagador
    */
   exports.prototype['nomePagador'] = undefined;
 
   /**
-   * Documento do pagador (CPF ou CNPJ)
+   * {{{boleto_response_documento_pagador_value}}}
    * @member {String} documentoPagador
    */
   exports.prototype['documentoPagador'] = undefined;
 
   /**
-   * Logradouro do pagador
+   * {{{boleto_response_logradouro_pagador_value}}}
    * @member {String} logradouroPagador
    */
   exports.prototype['logradouroPagador'] = undefined;
 
   /**
-   * Bairro do pagador
+   * {{{boleto_response_bairro_pagador_value}}}
    * @member {String} bairroPagador
    */
   exports.prototype['bairroPagador'] = undefined;
 
   /**
-   * CEP do pagador
+   * {{{boleto_response_cep_pagador_value}}}
    * @member {String} cepPagador
    */
   exports.prototype['cepPagador'] = undefined;
 
   /**
-   * Cidade do pagador
+   * {{{boleto_response_cidade_pagador_value}}}
    * @member {String} cidadePagador
    */
   exports.prototype['cidadePagador'] = undefined;
 
   /**
-   * Unidade federativa do pagador
+   * {{{boleto_response_uf_pagador_value}}}
    * @member {String} ufPagador
    */
   exports.prototype['ufPagador'] = undefined;
 
   /**
-   * Valor num\u00E9rico do c\u00F3digo de barras
+   * {{{boleto_response_codigo_de_barras_value}}}
    * @member {String} codigoDeBarras
    */
   exports.prototype['codigoDeBarras'] = undefined;
 
   /**
-   * Linha digit\u00E1vel formatada
+   * {{{boleto_response_linha_digitavel_value}}}
    * @member {String} linhaDigitavel
    */
   exports.prototype['linhaDigitavel'] = undefined;
+
+  /**
+   * {{{boleto_response_id_value}}}
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
+
+  /**
+   * {{{boleto_response_id_conta_value}}}
+   * @member {Integer} idConta
+   */
+  exports.prototype['idConta'] = undefined;
+
+  /**
+   * {{{boleto_response_endereco_cobranca_beneficiario_value}}}
+   * @member {String} enderecoCobrancaBeneficiario
+   */
+  exports.prototype['enderecoCobrancaBeneficiario'] = undefined;
+
+  /**
+   * {{{boleto_response_status_value}}}
+   * @member {Integer} status
+   */
+  exports.prototype['status'] = undefined;
 
 
 

@@ -18,12 +18,12 @@
   /**
    * The DocumentoDetalheResponse model module.
    * @module model/DocumentoDetalheResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DocumentoDetalheResponse</code>.
-   * Representa\u00E7\u00E3o da resposta para o detalhamento do documento
+   * {{{documento_detalhe_response_description}}}
    * @alias module:model/DocumentoDetalheResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * ID de identifica\u00E7\u00E3o do detalhamento do documento.
+   * {{{documento_detalhe_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Propriedade do detalhamento do documento.
+   * {{{documento_detalhe_response_propriedade_value}}}
    * @member {String} propriedade
    */
   exports.prototype['propriedade'] = undefined;
 
   /**
-   * Conte\u00FAdo do detalhamento do documento.
+   * {{{documento_detalhe_response_conteudo_value}}}
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;

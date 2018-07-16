@@ -18,12 +18,12 @@
   /**
    * The ValidaCartaoResponse model module.
    * @module model/ValidaCartaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ValidaCartaoResponse</code>.
-   * Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
+   * {{{valida_cartao_response_description}}}
    * @alias module:model/ValidaCartaoResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * Descri\u00E7\u00E3o do status do cart\u00E3o
+   * {{{valida_cartao_response_id_status_cartao_value}}}
    * @member {Integer} idStatusCartao
    */
   exports.prototype['idStatusCartao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status do cart\u00E3o
+   * {{{valida_cartao_response_status_cartao_value}}}
    * @member {String} statusCartao
    */
   exports.prototype['statusCartao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{valida_cartao_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{valida_cartao_response_status_conta_value}}}
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
 
   /**
-   * C\u00F3digo identificador da conta.
+   * {{{valida_cartao_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{valida_cartao_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{valida_cartao_response_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Criptograma de resposta
+   * {{{valida_cartao_response_criptograma_resposta_value}}}
    * @member {String} criptogramaResposta
    */
   exports.prototype['criptogramaResposta'] = undefined;

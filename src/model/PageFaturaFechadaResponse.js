@@ -18,12 +18,12 @@
   /**
    * The PageFaturaFechadaResponse model module.
    * @module model/PageFaturaFechadaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageFaturaFechadaResponse</code>.
-   * Lista de faturas
+   * {{{page_fatura_fechada_response_description}}}
    * @alias module:model/PageFaturaFechadaResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The TemplateNotificacaoResponse model module.
    * @module model/TemplateNotificacaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TemplateNotificacaoResponse</code>.
-   * Objeto de Notifica\u00E7\u00E3o EMAIL
+   * {{{template_notificacao_response_description}}}
    * @alias module:model/TemplateNotificacaoResponse
    * @class
    */
@@ -84,55 +84,55 @@
 
 
   /**
-   * C\u00F3digo Identificador.
+   * {{{template_notificacao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
+   * {{{template_notificacao_response_id_configuracao_email_value}}}
    * @member {Integer} idConfiguracaoEmail
    */
   exports.prototype['idConfiguracaoEmail'] = undefined;
 
   /**
-   * Tipo do layout de e-mail.
+   * {{{template_notificacao_response_tipo_layout_value}}}
    * @member {module:model/TemplateNotificacaoResponse.TipoLayoutEnum} tipoLayout
    */
   exports.prototype['tipoLayout'] = undefined;
 
   /**
-   * Tipo da notifica\u00E7\u00E3o.
+   * {{{template_notificacao_response_tipo_notificacao_value}}}
    * @member {module:model/TemplateNotificacaoResponse.TipoNotificacaoEnum} tipoNotificacao
    */
   exports.prototype['tipoNotificacao'] = undefined;
 
   /**
-   * Template padr\u00E3o.
+   * {{{template_notificacao_response_template_padrao_value}}}
    * @member {String} templatePadrao
    */
   exports.prototype['templatePadrao'] = undefined;
 
   /**
-   * Remetente.
+   * {{{template_notificacao_response_remetente_value}}}
    * @member {String} remetente
    */
   exports.prototype['remetente'] = undefined;
 
   /**
-   * Assunto do e-mail.
+   * {{{template_notificacao_response_assunto_value}}}
    * @member {String} assunto
    */
   exports.prototype['assunto'] = undefined;
 
   /**
-   * Data da inclus\u00E3o.
+   * {{{template_notificacao_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data altera\u00E7\u00E3o.
+   * {{{template_notificacao_response_data_alteracao_value}}}
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;

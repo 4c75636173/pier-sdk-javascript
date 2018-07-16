@@ -18,12 +18,12 @@
   /**
    * The PromotorResponse model module.
    * @module model/PromotorResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PromotorResponse</code>.
-   * Objeto Promotor
+   * {{{promotor_response_description}}}
    * @alias module:model/PromotorResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
+   * {{{promotor_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Promotor
+   * {{{promotor_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Data da Inclus\u00E3o
+   * {{{promotor_response_data_cadastro_value}}}
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+   * {{{promotor_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
+   * {{{promotor_response_id_usuario_value}}}
    * @member {Integer} idUsuario
    */
   exports.prototype['idUsuario'] = undefined;

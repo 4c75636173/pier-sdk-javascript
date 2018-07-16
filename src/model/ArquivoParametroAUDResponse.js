@@ -18,12 +18,12 @@
   /**
    * The ArquivoParametroAUDResponse model module.
    * @module model/ArquivoParametroAUDResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ArquivoParametroAUDResponse</code>.
-   * Objeto Response da auditoria dos par\u00E2metros do arquivo.
+   * {{{arquivo_parametro_a_u_d_response_description}}}
    * @alias module:model/ArquivoParametroAUDResponse
    * @class
    */
@@ -76,43 +76,43 @@
 
 
   /**
-   * Identificador da auditoria arquivo
+   * {{{arquivo_parametro_a_u_d_response_rev_value}}}
    * @member {Integer} rev
    */
   exports.prototype['rev'] = undefined;
 
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+   * {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Identificador do par\u00E2metro
+   * {{{arquivo_parametro_a_u_d_response_id_value}}}
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do par\u00E2metro
+   * {{{arquivo_parametro_a_u_d_response_parametro_value}}}
    * @member {String} parametro
    */
   exports.prototype['parametro'] = undefined;
 
   /**
-   * Conte\u00FAdo do par\u00E2metro
+   * {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Data de inclus\u00E3o do par\u00E2metro
+   * {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de altera\u00E7\u00E3o do par\u00E2metro
+   * {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
    * @member {String} dataHoraAlteracao
    */
   exports.prototype['dataHoraAlteracao'] = undefined;

@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idPessoa** | **Integer** | C\u00F3digo identificador da pessoa | [optional] 
-**nomeMae** | **String** | Apresenta o nome da m\u00E3e da pessoa fisica | [optional] 
-**idEstadoCivil** | **Integer** | Id Estado civil da pessoa fisica | [optional] 
-**idProfissao** | **String** | Profiss\u00E3o da pessoa fisica | [optional] 
-**idNaturezaOcupacao** | **Integer** | Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica | [optional] 
-**idNacionalidade** | **Integer** | Id Nacionalidade da pessoa fisica | [optional] 
-**numeroBanco** | **Integer** | N\u00FAmero do banco. | [optional] 
-**numeroAgencia** | **Integer** | N\u00FAmero da ag\u00EAncia. | [optional] 
-**numeroContaCorrente** | **String** | N\u00FAmero da conta corrente. | [optional] 
-**email** | **String** | Email da pessoa fisica | [optional] 
-**nomeEmpresa** | **String** | Nome que deve ser impresso no cart\u00E3o | [optional] 
+**idPessoa** | **Integer** | {{{pessoa_detalhe_response_id_pessoa_value}}} | [optional] 
+**nomeMae** | **String** | {{{pessoa_detalhe_response_nome_mae_value}}} | [optional] 
+**idEstadoCivil** | **Integer** | {{{pessoa_detalhe_response_id_estado_civil_value}}} | [optional] 
+**idProfissao** | **String** | {{{pessoa_detalhe_response_id_profissao_value}}} | [optional] 
+**idNaturezaOcupacao** | **Integer** | {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}} | [optional] 
+**idNacionalidade** | **Integer** | {{{pessoa_detalhe_response_id_nacionalidade_value}}} | [optional] 
+**numeroBanco** | **Integer** | {{{pessoa_detalhe_response_numero_banco_value}}} | [optional] 
+**numeroAgencia** | **Integer** | {{{pessoa_detalhe_response_numero_agencia_value}}} | [optional] 
+**numeroContaCorrente** | **String** | {{{pessoa_detalhe_response_numero_conta_corrente_value}}} | [optional] 
+**email** | **String** | {{{pessoa_detalhe_response_email_value}}} | [optional] 
+**nomeEmpresa** | **String** | {{{pessoa_detalhe_response_nome_empresa_value}}} | [optional] 
 
 

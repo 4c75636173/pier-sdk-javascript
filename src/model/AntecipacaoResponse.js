@@ -18,11 +18,12 @@
   /**
    * The AntecipacaoResponse model module.
    * @module model/AntecipacaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AntecipacaoResponse</code>.
+   * {{{antecipacao_response_description}}}
    * @alias module:model/AntecipacaoResponse
    * @class
    */
@@ -157,139 +158,139 @@
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da antecipa\u00E7\u00E3o
+   * {{{antecipacao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta
+   * {{{antecipacao_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da compra
+   * {{{antecipacao_response_id_compra_value}}}
    * @member {Integer} idCompra
    */
   exports.prototype['idCompra'] = undefined;
 
   /**
-   * Apresenta o numero total de parcelas da compra
+   * {{{antecipacao_response_quantidade_parcelas_total_value}}}
    * @member {Integer} quantidadeParcelasTotal
    */
   exports.prototype['quantidadeParcelasTotal'] = undefined;
 
   /**
-   * Apresenta o numero de parcelas antecipadas
+   * {{{antecipacao_response_quantidade_parcelas_antecipadas_value}}}
    * @member {Integer} quantidadeParcelasAntecipadas
    */
   exports.prototype['quantidadeParcelasAntecipadas'] = undefined;
 
   /**
-   * Apresenta o valor de cada parcela antecipadas
+   * {{{antecipacao_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Apresenta o valor total do desconto
+   * {{{antecipacao_response_valor_desconto_total_value}}}
    * @member {Number} valorDescontoTotal
    */
   exports.prototype['valorDescontoTotal'] = undefined;
 
   /**
-   * Apresenta o valor total com desconto
+   * {{{antecipacao_response_valor_total_com_desconto_value}}}
    * @member {Number} valorTotalComDesconto
    */
   exports.prototype['valorTotalComDesconto'] = undefined;
 
   /**
-   * Apresenta a taxa de desconto
+   * {{{antecipacao_response_taxa_desconto_value}}}
    * @member {Number} taxaDesconto
    */
   exports.prototype['taxaDesconto'] = undefined;
 
   /**
-   * Data da compra.
+   * {{{antecipacao_response_data_compra_value}}}
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{antecipacao_response_status_value}}}
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Nome do estabelecimento da compra.
+   * {{{antecipacao_response_nome_estabelecimento_value}}}
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Tipo de transa\u00E7\u00E3o da compra.
+   * {{{antecipacao_response_tipo_origem_transacao_value}}}
    * @member {String} tipoOrigemTransacao
    */
   exports.prototype['tipoOrigemTransacao'] = undefined;
 
   /**
-   * Cidade onde a compra foi realizada.
+   * {{{antecipacao_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Pa\u00EDs onde a compra foi realizada.
+   * {{{antecipacao_response_pais_value}}}
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_response_latitude_value}}}
    * @member {String} latitude
    */
   exports.prototype['latitude'] = undefined;
 
   /**
-   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_response_longitude_value}}}
    * @member {String} longitude
    */
   exports.prototype['longitude'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_response_id_grupo_m_c_c_value}}}
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_response_descricao_grupo_m_c_c_value}}}
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_response_descricao_produto_value}}}
    * @member {String} descricaoProduto
    */
   exports.prototype['descricaoProduto'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do estabelecimento da compra.
+   * {{{antecipacao_response_descricao_estabelecimento_value}}}
    * @member {String} descricaoEstabelecimento
    */
   exports.prototype['descricaoEstabelecimento'] = undefined;
 
   /**
-   * Nome fantasia do estabelecimento da compra.
+   * {{{antecipacao_response_nome_fantasia_estabelecimento_value}}}
    * @member {String} nomeFantasiaEstabelecimento
    */
   exports.prototype['nomeFantasiaEstabelecimento'] = undefined;

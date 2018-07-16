@@ -18,12 +18,12 @@
   /**
    * The TransacaoOnUsResponse model module.
    * @module model/TransacaoOnUsResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransacaoOnUsResponse</code>.
-   * Objeto de Resposta de Autoriza\u00E7\u00E3o
+   * {{{transacao_on_us_response_description}}}
    * @alias module:model/TransacaoOnUsResponse
    * @class
    * @param terminalRequisitante
@@ -77,43 +77,43 @@
 
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+   * {{{transacao_on_us_response_nsu_origem_value}}}
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_nsu_autorizacao_value}}}
    * @member {String} nsuAutorizacao
    */
   exports.prototype['nsuAutorizacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_plano_de_parcelamento_value}}}
    * @member {Array.<module:model/MapOfstringAndstring>} planoDeParcelamento
    */
   exports.prototype['planoDeParcelamento'] = undefined;
 
   /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
+   * {{{transacao_on_us_response_codigo_autorizacao_value}}}
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+   * {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
    * @member {String} numeroMascaradoCartao
    */
   exports.prototype['numeroMascaradoCartao'] = undefined;
 
   /**
-   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_nome_portador_cartao_value}}}
    * @member {String} nomePortadorCartao
    */
   exports.prototype['nomePortadorCartao'] = undefined;
 
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_on_us_response_terminal_requisitante_value}}}
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;

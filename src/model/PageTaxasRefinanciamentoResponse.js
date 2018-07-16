@@ -18,12 +18,12 @@
   /**
    * The PageTaxasRefinanciamentoResponse model module.
    * @module model/PageTaxasRefinanciamentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTaxasRefinanciamentoResponse</code>.
-   * Lista das taxas e tarifas
+   * {{{page_taxas_refinanciamento_response_description}}}
    * @alias module:model/PageTaxasRefinanciamentoResponse
    * @class
    */

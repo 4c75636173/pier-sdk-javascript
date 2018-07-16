@@ -18,12 +18,12 @@
   /**
    * The TransferenciaResponse model module.
    * @module model/TransferenciaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransferenciaResponse</code>.
-   * Objeto transferencia
+   * {{{transferencia_response_description}}}
    * @alias module:model/TransferenciaResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+   * {{{transferencia_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data estabelecida para ocorrer a transfer\u00EAncia.
+   * {{{transferencia_response_data_transferencia_value}}}
    * @member {String} dataTransferencia
    */
   exports.prototype['dataTransferencia'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+   * {{{transferencia_response_id_conta_origem_value}}}
    * @member {Integer} idContaOrigem
    */
   exports.prototype['idContaOrigem'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
+   * {{{transferencia_response_id_conta_destino_value}}}
    * @member {Integer} idContaDestino
    */
   exports.prototype['idContaDestino'] = undefined;
 
   /**
-   * Valor estabelecido para ser transferido.
+   * {{{transferencia_response_valor_transferencia_value}}}
    * @member {Number} valorTransferencia
    */
   exports.prototype['valorTransferencia'] = undefined;

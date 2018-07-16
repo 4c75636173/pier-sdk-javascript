@@ -18,12 +18,12 @@
   /**
    * The IntegrarArquivoRequest model module.
    * @module model/IntegrarArquivoRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>IntegrarArquivoRequest</code>.
-   * Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
+   * {{{integrar_arquivo_request_description}}}
    * @alias module:model/IntegrarArquivoRequest
    * @class
    */
@@ -52,7 +52,7 @@
 
 
   /**
-   * N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+   * {{{integrar_arquivo_request_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;

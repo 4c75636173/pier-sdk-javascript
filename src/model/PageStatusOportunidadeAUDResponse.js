@@ -18,12 +18,12 @@
   /**
    * The PageStatusOportunidadeAUDResponse model module.
    * @module model/PageStatusOportunidadeAUDResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageStatusOportunidadeAUDResponse</code>.
-   * Lista de auditorias dos status oportunidades
+   * {{{page_status_oportunidade_a_u_d_response_description}}}
    * @alias module:model/PageStatusOportunidadeAUDResponse
    * @class
    */

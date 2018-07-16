@@ -18,16 +18,17 @@
   /**
    * The EnderecoResponse model module.
    * @module model/EnderecoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>EnderecoResponse</code>.
-   * Objeto Endere\u00E7o
+   * {{{endereco_response_description}}}
    * @alias module:model/EnderecoResponse
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -98,94 +99,103 @@
       if (data.hasOwnProperty('dataUltimaAtualizacao')) {
         obj['dataUltimaAtualizacao'] = ApiClient.convertToType(data['dataUltimaAtualizacao'], 'String');
       }
+      if (data.hasOwnProperty('flagCorrespondencia')) {
+        obj['flagCorrespondencia'] = ApiClient.convertToType(data['flagCorrespondencia'], 'Boolean');
+      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+   * {{{endereco_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+   * {{{endereco_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * {{{endereco_response_id_tipo_endereco_value}}}
    * @member {Integer} idTipoEndereco
    */
   exports.prototype['idTipoEndereco'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+   * {{{endereco_response_cep_value}}}
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
 
   /**
-   * Apresenta o nome do Logradouro
+   * {{{endereco_response_logradouro_value}}}
    * @member {String} logradouro
    */
   exports.prototype['logradouro'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero do endere\u00E7o
+   * {{{endereco_response_numero_value}}}
    * @member {Integer} numero
    */
   exports.prototype['numero'] = undefined;
 
   /**
-   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * {{{endereco_response_complemento_value}}}
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
 
   /**
-   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+   * {{{endereco_response_ponto_referencia_value}}}
    * @member {String} pontoReferencia
    */
   exports.prototype['pontoReferencia'] = undefined;
 
   /**
-   * Apresenta nome do bairro
+   * {{{endereco_response_bairro_value}}}
    * @member {String} bairro
    */
   exports.prototype['bairro'] = undefined;
 
   /**
-   * Apresenta nome da cidade
+   * {{{endereco_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Apresenta sigla da Unidade Federativa
+   * {{{endereco_response_uf_value}}}
    * @member {String} uf
    */
   exports.prototype['uf'] = undefined;
 
   /**
-   * Apresenta nome do Pais
+   * {{{endereco_response_pais_value}}}
    * @member {String} pais
    */
   exports.prototype['pais'] = undefined;
 
   /**
-   * Apresenta a data em que fora cadastrado o Endere\u00E7o
+   * {{{endereco_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
+   * {{{endereco_response_data_ultima_atualizacao_value}}}
    * @member {String} dataUltimaAtualizacao
    */
   exports.prototype['dataUltimaAtualizacao'] = undefined;
+
+  /**
+   * {{{endereco_response_flag_correspondencia_value}}}
+   * @member {Boolean} flagCorrespondencia
+   */
+  exports.prototype['flagCorrespondencia'] = undefined;
 
 
 

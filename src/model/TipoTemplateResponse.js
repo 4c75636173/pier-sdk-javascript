@@ -18,12 +18,12 @@
   /**
    * The TipoTemplateResponse model module.
    * @module model/TipoTemplateResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoTemplateResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
+   * {{{tipo_template_response_description}}}
    * @alias module:model/TipoTemplateResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * ID do Tipo de Template.
+   * {{{tipo_template_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Tipo de Template.
+   * {{{tipo_template_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Tipo de Template.
+   * {{{tipo_template_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Sigla do Tipo de Template.
+   * {{{tipo_template_response_sigla_value}}}
    * @member {String} sigla
    */
   exports.prototype['sigla'] = undefined;

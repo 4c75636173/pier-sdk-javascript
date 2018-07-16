@@ -18,12 +18,12 @@
   /**
    * The PageOperacaoCredorResponse model module.
    * @module model/PageOperacaoCredorResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageOperacaoCredorResponse</code>.
-   * Lista de OperacaoCredor
+   * {{{page_operacao_credor_response_description}}}
    * @alias module:model/PageOperacaoCredorResponse
    * @class
    */

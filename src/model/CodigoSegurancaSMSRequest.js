@@ -18,12 +18,12 @@
   /**
    * The CodigoSegurancaSMSRequest model module.
    * @module model/CodigoSegurancaSMSRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CodigoSegurancaSMSRequest</code>.
-   * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_s_m_s_request_description}}}
    * @alias module:model/CodigoSegurancaSMSRequest
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00F3digo DDD do telefone (id).
+   * {{{codigo_seguranca_s_m_s_request_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{codigo_seguranca_s_m_s_request_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * Token para valida\u00E7\u00E3o.
+   * {{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}
    * @member {String} codigoSeguranca
    */
   exports.prototype['codigoSeguranca'] = undefined;

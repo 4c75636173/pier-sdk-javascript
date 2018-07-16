@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Telefone. | [optional] 
-**idTipoTelefone** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone. | [optional] 
-**idPessoa** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence. | [optional] 
-**ddd** | **String** | C\u00F3digo DDD do telefone. | [optional] 
-**telefone** | **String** | N\u00FAmero do telefone. | [optional] 
-**ramal** | **String** | N\u00FAmero do ramal. | [optional] 
-**status** | **Integer** | Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo | [optional] 
+**id** | **Integer** | {{{telefone_response_id_value}}} | [optional] 
+**idTipoTelefone** | **Integer** | {{{telefone_response_id_tipo_telefone_value}}} | [optional] 
+**idPessoa** | **Integer** | {{{telefone_response_id_pessoa_value}}} | [optional] 
+**ddd** | **String** | {{{telefone_response_ddd_value}}} | [optional] 
+**telefone** | **String** | {{{telefone_response_telefone_value}}} | [optional] 
+**ramal** | **String** | {{{telefone_response_ramal_value}}} | [optional] 
+**status** | **Integer** | {{{telefone_response_status_value}}} | [optional] 
 
 

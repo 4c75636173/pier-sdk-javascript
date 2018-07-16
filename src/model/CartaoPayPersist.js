@@ -18,12 +18,12 @@
   /**
    * The CartaoPayPersist model module.
    * @module model/CartaoPayPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CartaoPayPersist</code>.
-   * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
+   * {{{cartao_pay_persist_description}}}
    * @alias module:model/CartaoPayPersist
    * @class
    * @param numeroCartao
@@ -74,37 +74,37 @@
 
 
   /**
-   * N\u00FAmero do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_persist_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * CVV do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_cvv_value}}}
    * @member {String} cvv
    */
   exports.prototype['cvv'] = undefined;
 
   /**
-   * CPF do portador do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_persist_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Chave p\u00FAblica do dispositivo criptografada
+   * {{{cartao_pay_persist_chave_publica_device_value}}}
    * @member {String} chavePublicaDevice
    */
   exports.prototype['chavePublicaDevice'] = undefined;

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | ID de identifica\u00E7\u00E3o do detalhamento do documento. | [optional] 
-**propriedade** | **String** | Propriedade do detalhamento do documento. | [optional] 
-**conteudo** | **String** | Conte\u00FAdo do detalhamento do documento. | [optional] 
+**id** | **Integer** | {{{documento_detalhe_response_id_value}}} | [optional] 
+**propriedade** | **String** | {{{documento_detalhe_response_propriedade_value}}} | [optional] 
+**conteudo** | **String** | {{{documento_detalhe_response_conteudo_value}}} | [optional] 
 
 

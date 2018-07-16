@@ -18,12 +18,12 @@
   /**
    * The PagePortadorResponse model module.
    * @module model/PagePortadorResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PagePortadorResponse</code>.
-   * Lista de Portadores
+   * {{{page_portador_response_description}}}
    * @alias module:model/PagePortadorResponse
    * @class
    */

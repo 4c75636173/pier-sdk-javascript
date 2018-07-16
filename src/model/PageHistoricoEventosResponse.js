@@ -18,12 +18,12 @@
   /**
    * The PageHistoricoEventosResponse model module.
    * @module model/PageHistoricoEventosResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageHistoricoEventosResponse</code>.
-   * Lista de historivoEventos
+   * {{{page_historico_eventos_response_description}}}
    * @alias module:model/PageHistoricoEventosResponse
    * @class
    */

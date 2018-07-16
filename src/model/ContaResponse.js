@@ -18,12 +18,12 @@
   /**
    * The ContaResponse model module.
    * @module model/ContaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ContaResponse</code>.
-   * Objeto conta
+   * {{{conta_response_description}}}
    * @alias module:model/ContaResponse
    * @class
    */
@@ -92,67 +92,67 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
+   * {{{conta_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+   * {{{conta_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+   * {{{conta_response_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+   * {{{conta_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
+   * {{{conta_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Apresenta o dia de vencimento.
+   * {{{conta_response_dia_vencimento_value}}}
    * @member {Integer} diaVencimento
    */
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Apresenta o melhor dia de compra.
+   * {{{conta_response_melhor_dia_compra_value}}}
    * @member {Integer} melhorDiaCompra
    */
   exports.prototype['melhorDiaCompra'] = undefined;
 
   /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+   * {{{conta_response_data_status_conta_value}}}
    * @member {String} dataStatusConta
    */
   exports.prototype['dataStatusConta'] = undefined;
 
   /**
-   * Apresenta a data em que o cart\u00E3o foi gerado.
+   * {{{conta_response_data_cadastro_value}}}
    * @member {String} dataCadastro
    */
   exports.prototype['dataCadastro'] = undefined;
 
   /**
-   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
+   * {{{conta_response_data_ultima_alteracao_vencimento_value}}}
    * @member {String} dataUltimaAlteracaoVencimento
    */
   exports.prototype['dataUltimaAlteracaoVencimento'] = undefined;
 
   /**
-   * Apresenta o valor da renda comprovada
+   * {{{conta_response_valor_renda_value}}}
    * @member {Number} valorRenda
    */
   exports.prototype['valorRenda'] = undefined;

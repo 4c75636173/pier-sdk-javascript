@@ -18,12 +18,12 @@
   /**
    * The PageTipoFaturamentoPorContaResponse model module.
    * @module model/PageTipoFaturamentoPorContaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoFaturamentoPorContaResponse</code>.
-   * Lista de Tipos de Faturamentos por Conta
+   * {{{page_tipo_faturamento_por_conta_response_description}}}
    * @alias module:model/PageTipoFaturamentoPorContaResponse
    * @class
    */

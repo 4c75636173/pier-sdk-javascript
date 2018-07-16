@@ -18,12 +18,12 @@
   /**
    * The DocumentoTemplatePersist model module.
    * @module model/DocumentoTemplatePersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DocumentoTemplatePersist</code>.
-   * Representa\u00E7\u00E3o do template do documento.
+   * {{{documento_template_persist_description}}}
    * @alias module:model/DocumentoTemplatePersist
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * ID para o Tipo de Template vinculado ao template.
+   * {{{documento_template_persist_id_tipo_template_value}}}
    * @member {Integer} idTipoTemplate
    */
   exports.prototype['idTipoTemplate'] = undefined;
 
   /**
-   * Template para o conte\u00FAdo do documento.
+   * {{{documento_template_persist_template_value}}}
    * @member {String} template
    */
   exports.prototype['template'] = undefined;
 
   /**
-   * Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
+   * {{{documento_template_persist_integracoes_value}}}
    * @member {Array.<module:model/ReferenciaIdPersist>} integracoes
    */
   exports.prototype['integracoes'] = undefined;

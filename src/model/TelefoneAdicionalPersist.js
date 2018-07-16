@@ -18,12 +18,12 @@
   /**
    * The TelefoneAdicionalPersist model module.
    * @module model/TelefoneAdicionalPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TelefoneAdicionalPersist</code>.
-   * Objeto Telefone
+   * {{{telefone_adicional_persist_description}}}
    * @alias module:model/TelefoneAdicionalPersist
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * {{{telefone_adicional_persist_id_tipo_telefone_value}}}
    * @member {Integer} idTipoTelefone
    */
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * C\u00F3digo DDD do telefone (id).
+   * {{{telefone_adicional_persist_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_adicional_persist_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_adicional_persist_ramal_value}}}
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

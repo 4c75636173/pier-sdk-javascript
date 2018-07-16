@@ -18,12 +18,12 @@
   /**
    * The PageVinculoEstabelecimentoAdquirenteResponse model module.
    * @module model/PageVinculoEstabelecimentoAdquirenteResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageVinculoEstabelecimentoAdquirenteResponse</code>.
-   * Lista de VinculoEstabelecimentoAdquirente
+   * {{{page_vinculo_estabelecimento_adquirente_response_description}}}
    * @alias module:model/PageVinculoEstabelecimentoAdquirenteResponse
    * @class
    */

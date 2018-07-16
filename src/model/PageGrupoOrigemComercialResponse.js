@@ -18,12 +18,12 @@
   /**
    * The PageGrupoOrigemComercialResponse model module.
    * @module model/PageGrupoOrigemComercialResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageGrupoOrigemComercialResponse</code>.
-   * Listar grupos de origens comerciais
+   * {{{page_grupo_origem_comercial_response_description}}}
    * @alias module:model/PageGrupoOrigemComercialResponse
    * @class
    */

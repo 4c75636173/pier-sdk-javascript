@@ -18,12 +18,12 @@
   /**
    * The TipoEstabelecimentoResponse model module.
    * @module model/TipoEstabelecimentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoEstabelecimentoResponse</code>.
-   * Resposta do recurso de tipo de estabelecimento
+   * {{{tipo_estabelecimento_response_description}}}
    * @alias module:model/TipoEstabelecimentoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id).
+   * {{{tipo_estabelecimento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo de estabelecimento.
+   * {{{tipo_estabelecimento_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

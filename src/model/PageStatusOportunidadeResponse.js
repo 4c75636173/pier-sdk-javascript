@@ -18,12 +18,12 @@
   /**
    * The PageStatusOportunidadeResponse model module.
    * @module model/PageStatusOportunidadeResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageStatusOportunidadeResponse</code>.
-   * Lista de status oportunidades
+   * {{{page_status_oportunidade_response_description}}}
    * @alias module:model/PageStatusOportunidadeResponse
    * @class
    */

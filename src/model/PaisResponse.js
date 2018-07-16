@@ -18,12 +18,12 @@
   /**
    * The PaisResponse model module.
    * @module model/PaisResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PaisResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses
+   * {{{pais_response_description}}}
    * @alias module:model/PaisResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
+   * {{{pais_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo identificador do pa\u00EDs
+   * {{{pais_response_codigo_value}}}
    * @member {String} codigo
    */
   exports.prototype['codigo'] = undefined;
 
   /**
-   * Sigla do pa\u00EDs
+   * {{{pais_response_sigla_value}}}
    * @member {String} sigla
    */
   exports.prototype['sigla'] = undefined;
 
   /**
-   * Nome do pa\u00EDs
+   * {{{pais_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Continente no qual o pa\u00EDs faz parte
+   * {{{pais_response_continente_value}}}
    * @member {module:model/PaisResponse.ContinenteEnum} continente
    */
   exports.prototype['continente'] = undefined;
 
   /**
-   * Atributo que representa se o pa\u00EDs est\u00E1 ativo
+   * {{{pais_response_flag_ativo_value}}}
    * @member {Boolean} flagAtivo
    */
   exports.prototype['flagAtivo'] = undefined;

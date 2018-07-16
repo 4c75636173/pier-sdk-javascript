@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Identificador do Tipo de anuidade de b\u00F4nus de celular | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular | [optional] 
-**valor** | **Number** | Valor do tipo de anuidade de b\u00F4nus de celular | [optional] 
-**flagAnuidadeBonificada** | **Boolean** | Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada | [optional] 
+**id** | **Integer** | {{{anuidade_response_id_value}}} | [optional] 
+**descricao** | **String** | {{{anuidade_response_descricao_value}}} | [optional] 
+**valor** | **Number** | {{{anuidade_response_valor_value}}} | [optional] 
+**flagAnuidadeBonificada** | **Boolean** | {{{anuidade_response_flag_anuidade_bonificada_value}}} | [optional] 
 
 

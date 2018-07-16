@@ -18,12 +18,12 @@
   /**
    * The AdicionalPersist model module.
    * @module model/AdicionalPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AdicionalPersist</code>.
-   * Representa\u00E7\u00E3o da entrada do recurso de cadastrar adicionais
+   * {{{adicional_persist_description}}}
    * @alias module:model/AdicionalPersist
    * @class
    * @param nome
@@ -110,91 +110,91 @@
 
 
   /**
-   * Nome completo do Adicional.
+   * {{{adicional_persist_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
+   * {{{adicional_persist_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * N\u00FAmero do CPF ou CNPJ do Adicional.
+   * {{{adicional_persist_numero_receita_federal_value}}}
    * @member {String} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * Data de Nascimento do Adicional em formato yyyy-MM-dd.
+   * {{{adicional_persist_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+   * {{{adicional_persist_sexo_value}}}
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00FAmero do Documento de Identidade do Adicional.
+   * {{{adicional_persist_numero_identidade_value}}}
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
+   * {{{adicional_persist_orgao_expedidor_identidade_value}}}
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
-   * Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
+   * {{{adicional_persist_unidade_federativa_identidade_value}}}
    * @member {String} unidadeFederativaIdentidade
    */
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+   * {{{adicional_persist_data_emissao_identidade_value}}}
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional.
+   * {{{adicional_persist_id_estado_civil_value}}}
    * @member {Integer} idEstadoCivil
    */
   exports.prototype['idEstadoCivil'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional.
+   * {{{adicional_persist_id_profissao_value}}}
    * @member {Integer} idProfissao
    */
   exports.prototype['idProfissao'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.
+   * {{{adicional_persist_id_nacionalidade_value}}}
    * @member {Integer} idNacionalidade
    */
   exports.prototype['idNacionalidade'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+   * {{{adicional_persist_id_parentesco_value}}}
    * @member {Integer} idParentesco
    */
   exports.prototype['idParentesco'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
+   * {{{adicional_persist_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Lista de telefones do adicional.
+   * {{{adicional_persist_telefones_value}}}
    * @member {Array.<module:model/TelefoneAdicionalPersist>} telefones
    */
   exports.prototype['telefones'] = undefined;

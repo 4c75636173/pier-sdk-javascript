@@ -18,12 +18,12 @@
   /**
    * The CodigoSegurancaSMSPersist model module.
    * @module model/CodigoSegurancaSMSPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CodigoSegurancaSMSPersist</code>.
-   * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_s_m_s_persist_description}}}
    * @alias module:model/CodigoSegurancaSMSPersist
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * DDD do n\u00FAmero de telefone para envio do sms.
+   * {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone para envio do sms.
+   * {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;

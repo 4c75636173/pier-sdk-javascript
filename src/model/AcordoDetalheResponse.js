@@ -18,12 +18,12 @@
   /**
    * The AcordoDetalheResponse model module.
    * @module model/AcordoDetalheResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>AcordoDetalheResponse</code>.
-   * Objeto Acordo detalhado
+   * {{{acordo_detalhe_response_description}}}
    * @alias module:model/AcordoDetalheResponse
    * @class
    */
@@ -116,103 +116,103 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+   * {{{acordo_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+   * {{{acordo_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Status do acordo.
+   * {{{acordo_response_status_acordo_value}}}
    * @member {Integer} statusAcordo
    */
   exports.prototype['statusAcordo'] = undefined;
 
   /**
-   * Valor do Acordo.
+   * {{{acordo_response_valor_acordo_value}}}
    * @member {Number} valorAcordo
    */
   exports.prototype['valorAcordo'] = undefined;
 
   /**
-   * Data e Hora do acordo.
+   * {{{acordo_response_data_acordo_value}}}
    * @member {String} dataAcordo
    */
   exports.prototype['dataAcordo'] = undefined;
 
   /**
-   * Quantidade de parcelas do acordo.
+   * {{{acordo_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Saldo atual final.
+   * {{{acordo_response_saldo_atual_final_value}}}
    * @member {Number} saldoAtualFinal
    */
   exports.prototype['saldoAtualFinal'] = undefined;
 
   /**
-   * Dias em atraso.
+   * {{{acordo_response_dias_em_atraso_value}}}
    * @member {Integer} diasEmAtraso
    */
   exports.prototype['diasEmAtraso'] = undefined;
 
   /**
-   * Status da conta.
+   * {{{acordo_detalhe_response_status_conta_value}}}
    * @member {Integer} statusConta
    */
   exports.prototype['statusConta'] = undefined;
 
   /**
-   * Assessoria atual.
+   * {{{acordo_detalhe_response_assessoria_atual_value}}}
    * @member {String} assessoriaAtual
    */
   exports.prototype['assessoriaAtual'] = undefined;
 
   /**
-   * Total de pagamentos.
+   * {{{acordo_detalhe_response_total_pagamentos_value}}}
    * @member {Number} totalPagamentos
    */
   exports.prototype['totalPagamentos'] = undefined;
 
   /**
-   * Data do vencimento da cobran\u00E7a.
+   * {{{acordo_detalhe_response_data_vencimento_cobranca_value}}}
    * @member {String} dataVencimentoCobranca
    */
   exports.prototype['dataVencimentoCobranca'] = undefined;
 
   /**
-   * Data da quebra do acordo.
+   * {{{acordo_detalhe_response_data_quebra_acordo_value}}}
    * @member {String} dataQuebraAcordo
    */
   exports.prototype['dataQuebraAcordo'] = undefined;
 
   /**
-   * Valor da parcela 1.
+   * {{{acordo_detalhe_response_valor_parcela1_value}}}
    * @member {Number} valorParcela1
    */
   exports.prototype['valorParcela1'] = undefined;
 
   /**
-   * Valor da parcela N.
+   * {{{acordo_detalhe_response_valor_parcela_n_value}}}
    * @member {Number} valorParcelaN
    */
   exports.prototype['valorParcelaN'] = undefined;
 
   /**
-   * Parcela pedida.
+   * {{{acordo_detalhe_response_parcela_pedida_value}}}
    * @member {Integer} parcelaPedida
    */
   exports.prototype['parcelaPedida'] = undefined;
 
   /**
-   * Data de vencimento da parcela pedida.
+   * {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}
    * @member {String} vencimentoParcelaPedida
    */
   exports.prototype['vencimentoParcelaPedida'] = undefined;

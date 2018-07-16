@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Telefone. | [optional] 
-**idEstabelecimento** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento. | [optional] 
-**ddd** | **String** | C\u00F3digo DDD do telefone. | [optional] 
-**telefone** | **String** | N\u00FAmero do telefone. | [optional] 
-**ramal** | **String** | N\u00FAmero do ramal. | [optional] 
+**id** | **Integer** | {{{telefone_estabelecimento_response_id_value}}} | [optional] 
+**idEstabelecimento** | **Integer** | {{{telefone_estabelecimento_response_id_estabelecimento_value}}} | [optional] 
+**ddd** | **String** | {{{telefone_estabelecimento_response_ddd_value}}} | [optional] 
+**telefone** | **String** | {{{telefone_estabelecimento_response_telefone_value}}} | [optional] 
+**ramal** | **String** | {{{telefone_estabelecimento_response_ramal_value}}} | [optional] 
 
 

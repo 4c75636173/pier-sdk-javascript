@@ -18,12 +18,12 @@
   /**
    * The TransferenciaBancariaResponse model module.
    * @module model/TransferenciaBancariaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransferenciaBancariaResponse</code>.
-   * Transfer\u00EAncia banc\u00E1ria
+   * {{{transferencia_bancaria_response_description}}}
    * @alias module:model/TransferenciaBancariaResponse
    * @class
    */
@@ -193,205 +193,205 @@
   exports.prototype['nsuorigem'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_autorizacao_value}}}
    * @member {Integer} idAutorizacao
    */
   exports.prototype['idAutorizacao'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
+   * {{{transferencia_bancaria_response_id_transferencia_value}}}
    * @member {Integer} idTransferencia
    */
   exports.prototype['idTransferencia'] = undefined;
 
   /**
-   * C\u00F3digo da autoriza\u00E7\u00E3o
+   * {{{transferencia_bancaria_response_codigo_autorizacao_value}}}
    * @member {String} codigoAutorizacao
    */
   exports.prototype['codigoAutorizacao'] = undefined;
 
   /**
-   * Data da autoriza\u00E7\u00E3o
+   * {{{transferencia_bancaria_response_data_autorizacao_value}}}
    * @member {String} dataAutorizacao
    */
   exports.prototype['dataAutorizacao'] = undefined;
 
   /**
-   * Origem
+   * {{{transferencia_bancaria_response_origem_value}}}
    * @member {String} origem
    */
   exports.prototype['origem'] = undefined;
 
   /**
-   * Valor
+   * {{{transferencia_bancaria_response_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_operacao_value}}}
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * Terminal
+   * {{{transferencia_bancaria_response_terminal_value}}}
    * @member {String} terminal
    */
   exports.prototype['terminal'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Data da transfer\u00EAncia
+   * {{{transferencia_bancaria_response_data_compra_value}}}
    * @member {String} dataCompra
    */
   exports.prototype['dataCompra'] = undefined;
 
   /**
-   * Valor da transfer\u00EAncia
+   * {{{transferencia_bancaria_response_valor_compra_value}}}
    * @member {Number} valorCompra
    */
   exports.prototype['valorCompra'] = undefined;
 
   /**
-   * N\u00FAmero de parcelas
+   * {{{transferencia_bancaria_response_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * Valor da parcela
+   * {{{transferencia_bancaria_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
+   * {{{transferencia_bancaria_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * Data do movimento
+   * {{{transferencia_bancaria_response_data_movimento_value}}}
    * @member {String} dataMovimento
    */
   exports.prototype['dataMovimento'] = undefined;
 
   /**
-   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+   * {{{transferencia_bancaria_response_valor_contrato_value}}}
    * @member {Number} valorContrato
    */
   exports.prototype['valorContrato'] = undefined;
 
   /**
-   * Percentual de juros
+   * {{{transferencia_bancaria_response_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;
 
   /**
-   * Valor do IOF
+   * {{{transferencia_bancaria_response_valor_i_o_f_value}}}
    * @member {Number} valorIOF
    */
   exports.prototype['valorIOF'] = undefined;
 
   /**
-   * Valor da TAC
+   * {{{transferencia_bancaria_response_valor_t_a_c_value}}}
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * {{{transferencia_bancaria_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Valor da entrada (primeira parcela)
+   * {{{transferencia_bancaria_response_valor_entrada_value}}}
    * @member {Number} valorEntrada
    */
   exports.prototype['valorEntrada'] = undefined;
 
   /**
-   * Data do vencimento real da fatura
+   * {{{transferencia_bancaria_response_data_vencimento_real_value}}}
    * @member {String} dataVencimentoReal
    */
   exports.prototype['dataVencimentoReal'] = undefined;
 
   /**
-   * Dia do vencimento padr\u00E3o da fatura
+   * {{{transferencia_bancaria_response_data_vencimento_padrao_value}}}
    * @member {String} dataVencimentoPadrao
    */
   exports.prototype['dataVencimentoPadrao'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+   * {{{transferencia_bancaria_response_id_conta_portador_value}}}
    * @member {Integer} idContaPortador
    */
   exports.prototype['idContaPortador'] = undefined;
 
   /**
-   * Atributo que representa o numero do estabelecimento.
+   * {{{transferencia_bancaria_response_numero_estabelecimento_value}}}
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * Valor da taxa saque.
+   * {{{transferencia_bancaria_response_valor_taxa_saque_value}}}
    * @member {Number} valorTaxaSaque
    */
   exports.prototype['valorTaxaSaque'] = undefined;
 
   /**
-   * C\u00F3digo do Banco
+   * {{{transferencia_bancaria_response_banco_value}}}
    * @member {Integer} banco
    */
   exports.prototype['banco'] = undefined;
 
   /**
-   * N\u00FAmero da Ag\u00EAncia
+   * {{{transferencia_bancaria_response_numero_agencia_value}}}
    * @member {String} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * D\u00EDgito da Ag\u00EAncia
+   * {{{transferencia_bancaria_response_digito_agencia_value}}}
    * @member {String} digitoAgencia
    */
   exports.prototype['digitoAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da Conta
+   * {{{transferencia_bancaria_response_numero_conta_value}}}
    * @member {String} numeroConta
    */
   exports.prototype['numeroConta'] = undefined;
 
   /**
-   * D\u00EDgito da Conta
+   * {{{transferencia_bancaria_response_digito_conta_value}}}
    * @member {String} digitoConta
    */
   exports.prototype['digitoConta'] = undefined;
 
   /**
-   * Tipo da Conta
+   * {{{transferencia_bancaria_response_flag_conta_poupanca_value}}}
    * @member {Integer} flagContaPoupanca
    */
   exports.prototype['flagContaPoupanca'] = undefined;
 
   /**
-   * Documento do Favorecido
+   * {{{transferencia_bancaria_response_documento_favorecido_value}}}
    * @member {String} documentoFavorecido
    */
   exports.prototype['documentoFavorecido'] = undefined;
 
   /**
-   * Nome do Favorecido
+   * {{{transferencia_bancaria_response_nome_favorecido_value}}}
    * @member {String} nomeFavorecido
    */
   exports.prototype['nomeFavorecido'] = undefined;

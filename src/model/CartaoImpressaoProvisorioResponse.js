@@ -18,12 +18,12 @@
   /**
    * The CartaoImpressaoProvisorioResponse model module.
    * @module model/CartaoImpressaoProvisorioResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CartaoImpressaoProvisorioResponse</code>.
-   * Objeto cart\u00E3o provis\u00F3rio
+   * {{{cartao_impressao_provisorio_response_description}}}
    * @alias module:model/CartaoImpressaoProvisorioResponse
    * @class
    */
@@ -81,37 +81,37 @@
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_impressao_provisorio_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_impressao_provisorio_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero do cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Apresenta o nome do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
    * @member {String} nomePlastico
    */
   exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;

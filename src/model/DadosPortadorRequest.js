@@ -18,12 +18,12 @@
   /**
    * The DadosPortadorRequest model module.
    * @module model/DadosPortadorRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DadosPortadorRequest</code>.
-   * Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador.
+   * {{{dados_portador_request_description}}}
    * @alias module:model/DadosPortadorRequest
    * @class
    * @param cartao
@@ -84,49 +84,49 @@
 
 
   /**
-   * N\u00FAmero do cart\u00E3o.
+   * {{{dados_portador_request_cartao_value}}}
    * @member {String} cartao
    */
   exports.prototype['cartao'] = undefined;
 
   /**
-   * N\u00FAmero do CPF.
+   * {{{dados_portador_request_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Nome do portador.
+   * {{{dados_portador_request_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Data de nascimento do portador do cart\u00E3o.
+   * {{{dados_portador_request_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * CEP da resid\u00EAncia do portador da conta.
+   * {{{dados_portador_request_cep_residencial_value}}}
    * @member {String} cepResidencial
    */
   exports.prototype['cepResidencial'] = undefined;
 
   /**
-   * E-mail do portador do cart\u00E3o.
+   * {{{dados_portador_request_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * DDD do n\u00FAmero de telefone do portador do cart\u00E3o.
+   * {{{dados_portador_request_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone do portador do cart\u00E3o.
+   * {{{dados_portador_request_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;

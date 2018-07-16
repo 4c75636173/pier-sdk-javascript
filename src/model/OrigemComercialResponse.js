@@ -18,12 +18,12 @@
   /**
    * The OrigemComercialResponse model module.
    * @module model/OrigemComercialResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>OrigemComercialResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de origem comercial
+   * {{{origem_comercial_response_description}}}
    * @alias module:model/OrigemComercialResponse
    * @class
    */
@@ -152,157 +152,157 @@
 
 
   /**
-   * C\u00F3digo identificador do OrigemComercial
+   * {{{origem_comercial_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome da origem comercial
+   * {{{origem_comercial_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o completa do nome da Origem Comercial
+   * {{{origem_comercial_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * Produtos da origem comercial
+   * {{{origem_comercial_response_produtos_origem_value}}}
    * @member {Array.<module:model/ProdutoOrigemResponse>} produtosOrigem
    */
   exports.prototype['produtosOrigem'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Estabelecimento
+   * {{{origem_comercial_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo da Origem Comercial
+   * {{{origem_comercial_response_id_tipo_origem_comercial_value}}}
    * @member {Integer} idTipoOrigemComercial
    */
   exports.prototype['idTipoOrigemComercial'] = undefined;
 
   /**
-   * Nome do Tipo da Origem Comercial
+   * {{{origem_comercial_response_nome_tipo_origem_comercial_value}}}
    * @member {String} nomeTipoOrigemComercial
    */
   exports.prototype['nomeTipoOrigemComercial'] = undefined;
 
   /**
-   * Identificador do grupo da origem comercial
+   * {{{origem_comercial_response_id_grupo_origem_comercial_value}}}
    * @member {Integer} idGrupoOrigemComercial
    */
   exports.prototype['idGrupoOrigemComercial'] = undefined;
 
   /**
-   * Nome do grupo da origem comercial
+   * {{{origem_comercial_response_nome_grupo_origem_comercial_value}}}
    * @member {String} nomeGrupoOrigemComercial
    */
   exports.prototype['nomeGrupoOrigemComercial'] = undefined;
 
   /**
-   * Indica o status da origem comercial
+   * {{{origem_comercial_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+   * {{{origem_comercial_response_flag_pre_aprovado_value}}}
    * @member {Boolean} flagPreAprovado
    */
   exports.prototype['flagPreAprovado'] = undefined;
 
   /**
-   * Indica se permite aprova\u00E7\u00E3o imediata
+   * {{{origem_comercial_response_flag_aprovacao_imediata_value}}}
    * @member {Boolean} flagAprovacaoImediata
    */
   exports.prototype['flagAprovacaoImediata'] = undefined;
 
   /**
-   * Nome fantasia impresso no pl\u00E1stico
+   * {{{origem_comercial_response_nome_fantasia_plastico_value}}}
    * @member {String} nomeFantasiaPlastico
    */
   exports.prototype['nomeFantasiaPlastico'] = undefined;
 
   /**
-   * Indica se permite cart\u00E3o provis\u00F3rio
+   * {{{origem_comercial_response_flag_cartao_provisorio_value}}}
    * @member {Boolean} flagCartaoProvisorio
    */
   exports.prototype['flagCartaoProvisorio'] = undefined;
 
   /**
-   * Indica se permite cart\u00E3o definitivo
+   * {{{origem_comercial_response_flag_cartao_definitivo_value}}}
    * @member {Boolean} flagCartaoDefinitivo
    */
   exports.prototype['flagCartaoDefinitivo'] = undefined;
 
   /**
-   * Usu\u00E1rio para autentica\u00E7\u00E3o
+   * {{{origem_comercial_response_usuario_value}}}
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
 
   /**
-   * Senha para autentica\u00E7\u00E3o
+   * {{{origem_comercial_response_senha_value}}}
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;
 
   /**
-   * Indica se \u00E9 origem externa
+   * {{{origem_comercial_response_flag_origem_externa_value}}}
    * @member {Boolean} flagOrigemExterna
    */
   exports.prototype['flagOrigemExterna'] = undefined;
 
   /**
-   * Indica se h\u00E1 modifica\u00E7\u00E3o
+   * {{{origem_comercial_response_flag_modificado_value}}}
    * @member {Boolean} flagModificado
    */
   exports.prototype['flagModificado'] = undefined;
 
   /**
-   * Indica se envia fatura
+   * {{{origem_comercial_response_flag_envia_fatura_usuario_value}}}
    * @member {Boolean} flagEnviaFaturaUsuario
    */
   exports.prototype['flagEnviaFaturaUsuario'] = undefined;
 
   /**
-   * Indica se permite cr\u00E9dito de faturamento
+   * {{{origem_comercial_response_flag_credito_faturamento_value}}}
    * @member {Boolean} flagCreditoFaturamento
    */
   exports.prototype['flagCreditoFaturamento'] = undefined;
 
   /**
-   * Indica se concede limite provis\u00F3rio
+   * {{{origem_comercial_response_flag_concede_limite_provisorio_value}}}
    * @member {Boolean} flagConcedeLimiteProvisorio
    */
   exports.prototype['flagConcedeLimiteProvisorio'] = undefined;
 
   /**
-   * Indica se digitaliza documento
+   * {{{origem_comercial_response_flag_digitalizar_doc_value}}}
    * @member {Boolean} flagDigitalizarDoc
    */
   exports.prototype['flagDigitalizarDoc'] = undefined;
 
   /**
-   * Indica se realiza embossing em loja
+   * {{{origem_comercial_response_flag_embossing_loja_value}}}
    * @member {Boolean} flagEmbossingLoja
    */
   exports.prototype['flagEmbossingLoja'] = undefined;
 
   /**
-   * Indica se realiza consulta pr\u00E9via
+   * {{{origem_comercial_response_flag_consulta_previa_value}}}
    * @member {Boolean} flagConsultaPrevia
    */
   exports.prototype['flagConsultaPrevia'] = undefined;
 
   /**
-   * Tipo de pessoa
+   * {{{origem_comercial_response_tipo_pessoa_value}}}
    * @member {module:model/OrigemComercialResponse.TipoPessoaEnum} tipoPessoa
    */
   exports.prototype['tipoPessoa'] = undefined;

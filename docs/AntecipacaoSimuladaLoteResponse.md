@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**valorTotalAntecipado** | **Number** | Valor total antecipado. | [optional] 
-**valorTotalDesconto** | **Number** | Valor total do desconto. | [optional] 
-**valorTotalComDesconto** | **Number** | Valor total antecipado com o desconto. | [optional] 
-**antecipacoesSimuladas** | [**[AntecipacaoSimuladaResponse]**](AntecipacaoSimuladaResponse.md) | Antecipa\u00E7\u00F5es Simuladas. | [optional] 
+**valorTotalAntecipado** | **Number** | {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}} | [optional] 
+**valorTotalDesconto** | **Number** | {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}} | [optional] 
+**valorTotalComDesconto** | **Number** | {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}} | [optional] 
+**antecipacoesSimuladas** | [**[AntecipacaoSimuladaResponse]**](AntecipacaoSimuladaResponse.md) | {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}} | [optional] 
 
 

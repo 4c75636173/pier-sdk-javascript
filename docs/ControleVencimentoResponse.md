@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dataVencimento** | **String** |  Indica a data de vencimento das faturas | [optional] 
-**dataPrevistaCorte** | **String** |  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas | [optional] 
-**dataHoraRealizacaoCorte** | **String** | Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas | [optional] 
-**dataPrevistaFaturamento** | **String** | Indica a data prevista para a realiza\u00E7\u00E3o do faturamento | [optional] 
-**dataHoraRealizacaoFaturamento** | **String** | Indica a data e a hora que fora realizado o faturamento | [optional] 
-**dataRealVencimento** | **String** | Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento | [optional] 
+**dataVencimento** | **String** | {{{controle_vencimento_response_data_vencimento_value}}} | [optional] 
+**dataPrevistaCorte** | **String** | {{{controle_vencimento_response_data_prevista_corte_value}}} | [optional] 
+**dataHoraRealizacaoCorte** | **String** | {{{controle_vencimento_response_data_hora_realizacao_corte_value}}} | [optional] 
+**dataPrevistaFaturamento** | **String** | {{{controle_vencimento_response_data_prevista_faturamento_value}}} | [optional] 
+**dataHoraRealizacaoFaturamento** | **String** | {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}} | [optional] 
+**dataRealVencimento** | **String** | {{{controle_vencimento_response_data_real_vencimento_value}}} | [optional] 
 
 

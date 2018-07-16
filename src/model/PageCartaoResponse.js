@@ -18,12 +18,12 @@
   /**
    * The PageCartaoResponse model module.
    * @module model/PageCartaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageCartaoResponse</code>.
-   * Lista de Cart\u00F5es
+   * {{{page_cartao_response_description}}}
    * @alias module:model/PageCartaoResponse
    * @class
    */

@@ -18,12 +18,12 @@
   /**
    * The DadosCartaoResponse model module.
    * @module model/DadosCartaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DadosCartaoResponse</code>.
-   * Objeto Dados Cart\u00E3o
+   * {{{dados_cartao_response_description}}}
    * @alias module:model/DadosCartaoResponse
    * @class
    */
@@ -105,73 +105,73 @@
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * N\u00FAmero do cart\u00E3o.
+   * {{{dados_cartao_response_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Data de validade.
+   * {{{dados_cartao_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * CVV2 do cart\u00E3o.
+   * {{{dados_cartao_response_cvv2_value}}}
    * @member {String} cvv2
    */
   exports.prototype['cvv2'] = undefined;
 
   /**
-   * Nome do portador.
+   * {{{dados_cartao_response_nome_plastico_value}}}
    * @member {String} nomePlastico
    */
   exports.prototype['nomePlastico'] = undefined;
 
   /**
-   * Identificador da conta do portador.
+   * {{{dados_cartao_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Identificador da cart\u00E3o do portador.
+   * {{{dados_cartao_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{dados_cartao_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{dados_cartao_response_numero_conta_corente_value}}}
    * @member {String} numeroContaCorente
    */
   exports.prototype['numeroContaCorente'] = undefined;
 
   /**
-   * Status da conta do portador.
+   * {{{dados_cartao_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta do portador.
+   * {{{dados_cartao_response_status_conta_value}}}
    * @member {String} statusConta
    */
   exports.prototype['statusConta'] = undefined;
 
   /**
-   * Status do cart\u00E3o.
+   * {{{dados_cartao_response_id_status_cartao_value}}}
    * @member {Integer} idStatusCartao
    */
   exports.prototype['idStatusCartao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status do cart\u00E3o.
+   * {{{dados_cartao_response_status_cartao_value}}}
    * @member {String} statusCartao
    */
   exports.prototype['statusCartao'] = undefined;

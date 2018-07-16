@@ -18,12 +18,12 @@
   /**
    * The CartaoEmbossingResponse model module.
    * @module model/CartaoEmbossingResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CartaoEmbossingResponse</code>.
-   * Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
+   * {{{cartao_embossing_response_description}}}
    * @alias module:model/CartaoEmbossingResponse
    * @class
    */
@@ -88,61 +88,61 @@
 
 
   /**
-   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+   * {{{cartao_embossing_response_flag_virtual_value}}}
    * @member {Integer} flagVirtual
    */
   exports.prototype['flagVirtual'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_embossing_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_embossing_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_embossing_response_id_cartao_value}}}
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+   * {{{cartao_embossing_response_id_bandeira_value}}}
    * @member {Integer} idBandeira
    */
   exports.prototype['idBandeira'] = undefined;
 
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+   * {{{cartao_embossing_response_id_tipo_cartao_value}}}
    * @member {Integer} idTipoCartao
    */
   exports.prototype['idTipoCartao'] = undefined;
 
   /**
-   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+   * {{{cartao_embossing_response_data_geracao_value}}}
    * @member {String} dataGeracao
    */
   exports.prototype['dataGeracao'] = undefined;
 
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_embossing_response_data_validade_value}}}
    * @member {String} dataValidade
    */
   exports.prototype['dataValidade'] = undefined;
 
   /**
-   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+   * {{{cartao_embossing_response_nome_origem_comercial_value}}}
    * @member {String} nomeOrigemComercial
    */
   exports.prototype['nomeOrigemComercial'] = undefined;
 
   /**
-   * Apresenta o CPF do Portador do Cart\u00E3o.
+   * {{{cartao_embossing_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;

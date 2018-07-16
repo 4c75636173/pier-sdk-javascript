@@ -18,12 +18,12 @@
   /**
    * The PagePaisResponse model module.
    * @module model/PagePaisResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PagePaisResponse</code>.
-   * Lista de Pa\u00EDses
+   * {{{page_pais_response_description}}}
    * @alias module:model/PagePaisResponse
    * @class
    */

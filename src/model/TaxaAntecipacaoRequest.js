@@ -18,12 +18,12 @@
   /**
    * The TaxaAntecipacaoRequest model module.
    * @module model/TaxaAntecipacaoRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TaxaAntecipacaoRequest</code>.
-   * Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
+   * {{{taxa_antecipacao_request_description}}}
    * @alias module:model/TaxaAntecipacaoRequest
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
+   * {{{taxa_antecipacao_request_tipo_transacao_value}}}
    * @member {module:model/TaxaAntecipacaoRequest.TipoTransacaoEnum} tipoTransacao
    */
   exports.prototype['tipoTransacao'] = undefined;
 
   /**
-   * Valor da Taxa de Antecipa\u00E7\u00E3o.
+   * {{{taxa_antecipacao_request_valor_taxa_value}}}
    * @member {Number} valorTaxa
    */
   exports.prototype['valorTaxa'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PessoaFisicaAprovadaResponse</code>.
-   * PessoaFisicaAprovadaResponse
+   * {{{pessoa_fisica_aprovada_response_description}}}
    * @alias module:model/PessoaFisicaAprovadaResponse
    * @class
    * @param nome
@@ -186,193 +186,193 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)
+   * {{{pessoa_fisica_aprovada_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o nome completo da pessoa fisica.
+   * {{{pessoa_fisica_aprovada_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Apresenta o nome da m\u00E3e da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_nome_mae_value}}}
    * @member {String} nomeMae
    */
   exports.prototype['nomeMae'] = undefined;
 
   /**
-   * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
+   * {{{pessoa_fisica_aprovada_response_data_nascimento_value}}}
    * @member {String} dataNascimento
    */
   exports.prototype['dataNascimento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * {{{pessoa_fisica_aprovada_response_sexo_value}}}
    * @member {String} sexo
    */
   exports.prototype['sexo'] = undefined;
 
   /**
-   * N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
+   * {{{pessoa_fisica_aprovada_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * N\u00FAmero da identidade.
+   * {{{pessoa_fisica_aprovada_response_numero_identidade_value}}}
    * @member {String} numeroIdentidade
    */
   exports.prototype['numeroIdentidade'] = undefined;
 
   /**
-   * Org\u00E3o expedidor da Identidade.
+   * {{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}}
    * @member {String} orgaoExpedidorIdentidade
    */
   exports.prototype['orgaoExpedidorIdentidade'] = undefined;
 
   /**
-   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * {{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}}
    * @member {String} unidadeFederativaIdentidade
    */
   exports.prototype['unidadeFederativaIdentidade'] = undefined;
 
   /**
-   * Data emiss\u00E3o da Identidade no formato aaaa-MM-dd
+   * {{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}}
    * @member {String} dataEmissaoIdentidade
    */
   exports.prototype['dataEmissaoIdentidade'] = undefined;
 
   /**
-   * Id Estado civil da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_estado_civil_value}}}
    * @member {Integer} idEstadoCivil
    */
   exports.prototype['idEstadoCivil'] = undefined;
 
   /**
-   * Profiss\u00E3o da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_profissao_value}}}
    * @member {String} idProfissao
    */
   exports.prototype['idProfissao'] = undefined;
 
   /**
-   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}}
    * @member {Integer} idNaturezaOcupacao
    */
   exports.prototype['idNaturezaOcupacao'] = undefined;
 
   /**
-   * Id Nacionalidade da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}}
    * @member {Integer} idNacionalidade
    */
   exports.prototype['idNacionalidade'] = undefined;
 
   /**
-   * Id da origem comercial
+   * {{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * Id do produto
+   * {{{pessoa_fisica_aprovada_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{pessoa_fisica_aprovada_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Email da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Dia vencimento
+   * {{{pessoa_fisica_aprovada_response_dia_vencimento_value}}}
    * @member {Integer} diaVencimento
    */
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * {{{pessoa_fisica_aprovada_response_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Nome da empresa
+   * {{{pessoa_fisica_aprovada_response_nome_empresa_value}}}
    * @member {String} nomeEmpresa
    */
   exports.prototype['nomeEmpresa'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
+   * {{{pessoa_fisica_aprovada_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da proposta
+   * {{{pessoa_fisica_aprovada_response_id_proposta_value}}}
    * @member {Integer} idProposta
    */
   exports.prototype['idProposta'] = undefined;
 
   /**
-   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * {{{pessoa_fisica_aprovada_response_canal_entrada_value}}}
    * @member {String} canalEntrada
    */
   exports.prototype['canalEntrada'] = undefined;
 
   /**
-   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+   * {{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}}
    * @member {Integer} valorPontuacao
    */
   exports.prototype['valorPontuacao'] = undefined;
 
   /**
-   * Apresenta os telefones da empresa
+   * {{{pessoa_fisica_aprovada_response_telefones_value}}}
    * @member {Array.<module:model/TelefonePessoaAprovadaResponse>} telefones
    */
   exports.prototype['telefones'] = undefined;
 
   /**
-   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+   * {{{pessoa_fisica_aprovada_response_enderecos_value}}}
    * @member {Array.<module:model/EnderecoAprovadoResponse>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
 
   /**
-   * Valor do Limite Global
+   * {{{pessoa_fisica_aprovada_response_limite_global_value}}}
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   * {{{pessoa_fisica_aprovada_response_limite_maximo_value}}}
    * @member {Number} limiteMaximo
    */
   exports.prototype['limiteMaximo'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+   * {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;
 
   /**
-   * Valor do limite de margem consignado
+   * {{{pessoa_fisica_aprovada_response_limite_consignado_value}}}
    * @member {Number} limiteConsignado
    */
   exports.prototype['limiteConsignado'] = undefined;

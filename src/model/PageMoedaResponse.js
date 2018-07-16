@@ -18,12 +18,12 @@
   /**
    * The PageMoedaResponse model module.
    * @module model/PageMoedaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageMoedaResponse</code>.
-   * Lista dos tipos de ajustes
+   * {{{page_moeda_response_description}}}
    * @alias module:model/PageMoedaResponse
    * @class
    */

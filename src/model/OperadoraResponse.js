@@ -18,12 +18,12 @@
   /**
    * The OperadoraResponse model module.
    * @module model/OperadoraResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>OperadoraResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+   * {{{operadora_response_description}}}
    * @alias module:model/OperadoraResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * Identificador da operadora
+   * {{{operadora_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome da operadora
+   * {{{operadora_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

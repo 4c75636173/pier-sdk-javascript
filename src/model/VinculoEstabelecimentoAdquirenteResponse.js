@@ -18,12 +18,12 @@
   /**
    * The VinculoEstabelecimentoAdquirenteResponse model module.
    * @module model/VinculoEstabelecimentoAdquirenteResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>VinculoEstabelecimentoAdquirenteResponse</code>.
-   * Objeto de resposta do VinculoEstabelecimentoAdquirente
+   * {{{vinculo_estabelecimento_adquirente_response_description}}}
    * @alias module:model/VinculoEstabelecimentoAdquirenteResponse
    * @class
    */
@@ -76,43 +76,43 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
+   * {{{vinculo_estabelecimento_adquirente_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
    * @member {Integer} idEstabelecimento
    */
   exports.prototype['idEstabelecimento'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
+   * {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
    * @member {Integer} idAdquirente
    */
   exports.prototype['idAdquirente'] = undefined;
 
   /**
-   * C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
+   * {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
    * @member {String} codigoEstabelecimentoAdquirente
    */
   exports.prototype['codigoEstabelecimentoAdquirente'] = undefined;
 
   /**
-   * Data de cadastro do v\u00EDnculo.
+   * {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
    * @member {String} dataHoraCadastro
    */
   exports.prototype['dataHoraCadastro'] = undefined;
 
   /**
-   * Data de cadastro do v\u00EDnculo.
+   * {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
    * @member {String} mensagem
    */
   exports.prototype['mensagem'] = undefined;
 
   /**
-   * Data de cadastro do v\u00EDnculo.
+   * {{{vinculo_estabelecimento_adquirente_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The MaquinetaPersist model module.
    * @module model/MaquinetaPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>MaquinetaPersist</code>.
-   * Objeto Maquineta
+   * {{{maquineta_persist_description}}}
    * @alias module:model/MaquinetaPersist
    * @class
    * @param idTerminal
@@ -68,25 +68,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+   * {{{maquineta_persist_id_terminal_value}}}
    * @member {Integer} idTerminal
    */
   exports.prototype['idTerminal'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
+   * {{{maquineta_persist_id_tipo_maquineta_value}}}
    * @member {Integer} idTipoMaquineta
    */
   exports.prototype['idTipoMaquineta'] = undefined;
 
   /**
-   * Valor de Manuten\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_persist_valor_value}}}
    * @member {Number} valor
    */
   exports.prototype['valor'] = undefined;
 
   /**
-   * Data da implanta\u00E7\u00E3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * {{{maquineta_persist_data_hora_implantacao_value}}}
    * @member {String} dataHoraImplantacao
    */
   exports.prototype['dataHoraImplantacao'] = undefined;

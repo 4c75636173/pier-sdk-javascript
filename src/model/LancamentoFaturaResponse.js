@@ -18,12 +18,12 @@
   /**
    * The LancamentoFaturaResponse model module.
    * @module model/LancamentoFaturaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>LancamentoFaturaResponse</code>.
-   * Fatura futura
+   * {{{lancamento_fatura_response_description}}}
    * @alias module:model/LancamentoFaturaResponse
    * @class
    */
@@ -148,151 +148,151 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+   * {{{lancamento_fatura_response_id_transacao_value}}}
    * @member {Integer} idTransacao
    */
   exports.prototype['idTransacao'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
+   * {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
    * @member {String} descricaoTipoTransacao
    */
   exports.prototype['descricaoTipoTransacao'] = undefined;
 
   /**
-   * C\u00F3digo identificador do tipo do evento
+   * {{{lancamento_fatura_response_id_tipo_evento_value}}}
    * @member {Integer} idTipoEvento
    */
   exports.prototype['idTipoEvento'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo do evento
+   * {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
    * @member {String} descricaoTipoEvento
    */
   exports.prototype['descricaoTipoEvento'] = undefined;
 
   /**
-   * C\u00F3digo identificador do evento
+   * {{{lancamento_fatura_response_id_evento_value}}}
    * @member {Integer} idEvento
    */
   exports.prototype['idEvento'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{lancamento_fatura_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o complementar do evento
+   * {{{lancamento_fatura_response_complemento_value}}}
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
 
   /**
-   * Valor em reais
+   * {{{lancamento_fatura_response_valor_b_r_l_value}}}
    * @member {Number} valorBRL
    */
   exports.prototype['valorBRL'] = undefined;
 
   /**
-   * Valor em dolar
+   * {{{lancamento_fatura_response_valor_u_s_d_value}}}
    * @member {Number} valorUSD
    */
   exports.prototype['valorUSD'] = undefined;
 
   /**
-   * N\u00FAmero da parcela
+   * {{{lancamento_fatura_response_numero_parcela_value}}}
    * @member {Integer} numeroParcela
    */
   exports.prototype['numeroParcela'] = undefined;
 
   /**
-   * Quantidade de parcelas
+   * {{{lancamento_fatura_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Data da transa\u00E7\u00E3o
+   * {{{lancamento_fatura_response_data_hora_transacao_value}}}
    * @member {String} dataHoraTransacao
    */
   exports.prototype['dataHoraTransacao'] = undefined;
 
   /**
-   * Nome do estabelecimento
+   * {{{lancamento_fatura_response_nome_estabelecimento_value}}}
    * @member {String} nomeEstabelecimento
    */
   exports.prototype['nomeEstabelecimento'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do estabelecimento
+   * {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
    * @member {String} descricaoEstabelecimento
    */
   exports.prototype['descricaoEstabelecimento'] = undefined;
 
   /**
-   * Nome fantasia do estabelecimento
+   * {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
    * @member {String} nomeFantasiaEstabelecimento
    */
   exports.prototype['nomeFantasiaEstabelecimento'] = undefined;
 
   /**
-   * Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
+   * {{{lancamento_fatura_response_flag_credito_value}}}
    * @member {Boolean} flagCredito
    */
   exports.prototype['flagCredito'] = undefined;
 
   /**
-   * C\u00F3digo identificador do MCC (Merchant Category Codes)
+   * {{{lancamento_fatura_response_id_m_c_c_value}}}
    * @member {Integer} idMCC
    */
   exports.prototype['idMCC'] = undefined;
 
   /**
-   * C\u00F3digo identificador do grupo MCC
+   * {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
    * @member {Integer} idGrupoMCC
    */
   exports.prototype['idGrupoMCC'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do grupo MCC
+   * {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
    * @member {String} descricaoGrupoMCC
    */
   exports.prototype['descricaoGrupoMCC'] = undefined;
 
   /**
-   * Indica se o portador do cart\u00E3o \u00E9 o titular da conta
+   * {{{lancamento_fatura_response_titular_value}}}
    * @member {Boolean} titular
    */
   exports.prototype['titular'] = undefined;
 
   /**
-   * Nome impresso no cart\u00E3o
+   * {{{lancamento_fatura_response_nome_portador_value}}}
    * @member {String} nomePortador
    */
   exports.prototype['nomePortador'] = undefined;
 
   /**
-   * N\u00FAmero do cart\u00E3o mascarado
+   * {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
    * @member {String} numeroCartaoMascarado
    */
   exports.prototype['numeroCartaoMascarado'] = undefined;
 
   /**
-   * Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
+   * {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
    * @member {Boolean} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;
 
   /**
-   * Valor da taxa de embarque
+   * {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
    * @member {Number} valorTaxaEmbarque
    */
   exports.prototype['valorTaxaEmbarque'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
+   * {{{lancamento_fatura_response_descricao_abreviada_value}}}
    * @member {String} descricaoAbreviada
    */
   exports.prototype['descricaoAbreviada'] = undefined;

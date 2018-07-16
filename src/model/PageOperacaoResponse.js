@@ -18,12 +18,12 @@
   /**
    * The PageOperacaoResponse model module.
    * @module model/PageOperacaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageOperacaoResponse</code>.
-   * Lista de Opera\u00E7\u00F5es
+   * {{{page_operacao_response_description}}}
    * @alias module:model/PageOperacaoResponse
    * @class
    */

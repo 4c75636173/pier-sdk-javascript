@@ -18,12 +18,12 @@
   /**
    * The PageTipoFaturamentoResponse model module.
    * @module model/PageTipoFaturamentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoFaturamentoResponse</code>.
-   * Lista de Tipos de Faturamentos
+   * {{{page_tipo_faturamento_response_description}}}
    * @alias module:model/PageTipoFaturamentoResponse
    * @class
    */

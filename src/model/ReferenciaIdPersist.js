@@ -18,12 +18,12 @@
   /**
    * The ReferenciaIdPersist model module.
    * @module model/ReferenciaIdPersist
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ReferenciaIdPersist</code>.
-   * Representa\u00E7\u00E3o de objeto de refer\u00EAncia por Id.
+   * {{{referencia_id_persist_description}}}
    * @alias module:model/ReferenciaIdPersist
    * @class
    */

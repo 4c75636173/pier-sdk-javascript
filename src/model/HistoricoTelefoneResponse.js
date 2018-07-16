@@ -18,12 +18,12 @@
   /**
    * The HistoricoTelefoneResponse model module.
    * @module model/HistoricoTelefoneResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>HistoricoTelefoneResponse</code>.
-   * Objeto de resposta para historico de telefones
+   * {{{historico_telefone_response_description}}}
    * @alias module:model/HistoricoTelefoneResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
+   * {{{historico_telefone_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o N\u00FAmero do telefone.
+   * {{{historico_telefone_response_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * Apresenta o id do tipo do telefone.
+   * {{{historico_telefone_response_id_tipo_telefone_value}}}
    * @member {Integer} idTipoTelefone
    */
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * Apresenta a descri\u00E7\u00E3o do tipo do telefone.
+   * {{{historico_telefone_response_tipo_telefone_value}}}
    * @member {String} tipoTelefone
    */
   exports.prototype['tipoTelefone'] = undefined;
 
   /**
-   * Apresenta a data que o telefone fora alterado.
+   * {{{historico_telefone_response_data_modificacao_value}}}
    * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;

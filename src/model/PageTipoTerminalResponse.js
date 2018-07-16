@@ -18,12 +18,12 @@
   /**
    * The PageTipoTerminalResponse model module.
    * @module model/PageTipoTerminalResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTipoTerminalResponse</code>.
-   * Lista dos tipos de terminais
+   * {{{page_tipo_terminal_response_description}}}
    * @alias module:model/PageTipoTerminalResponse
    * @class
    */

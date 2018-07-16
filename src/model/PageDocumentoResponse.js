@@ -18,12 +18,12 @@
   /**
    * The PageDocumentoResponse model module.
    * @module model/PageDocumentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageDocumentoResponse</code>.
-   * Lista documento
+   * {{{page_documento_response_description}}}
    * @alias module:model/PageDocumentoResponse
    * @class
    */

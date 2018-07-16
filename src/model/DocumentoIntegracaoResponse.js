@@ -18,12 +18,12 @@
   /**
    * The DocumentoIntegracaoResponse model module.
    * @module model/DocumentoIntegracaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DocumentoIntegracaoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
+   * {{{documento_integracao_response_description}}}
    * @alias module:model/DocumentoIntegracaoResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * ID do Documento Integrado.
+   * {{{documento_integracao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_integracao_response_id_template_value}}}
    * @member {Integer} idTemplate
    */
   exports.prototype['idTemplate'] = undefined;
 
   /**
-   * Nome do Documento.
+   * {{{documento_integracao_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

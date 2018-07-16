@@ -18,12 +18,12 @@
   /**
    * The GrupoOrigemComercialResponse model module.
    * @module model/GrupoOrigemComercialResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>GrupoOrigemComercialResponse</code>.
-   * Objeto de resposta do grupo de origem comercial
+   * {{{grupo_origem_comercial_response_description}}}
    * @alias module:model/GrupoOrigemComercialResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.
+   * {{{grupo_origem_comercial_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do grupo da origem comercial
+   * {{{grupo_origem_comercial_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;

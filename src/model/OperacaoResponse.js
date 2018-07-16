@@ -18,12 +18,12 @@
   /**
    * The OperacaoResponse model module.
    * @module model/OperacaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>OperacaoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso Operacao
+   * {{{operacao_response_description}}}
    * @alias module:model/OperacaoResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo que identifica a opera\u00E7\u00E3o
+   * {{{operacao_response_id_operacao_value}}}
    * @member {Integer} idOperacao
    */
   exports.prototype['idOperacao'] = undefined;
 
   /**
-   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+   * {{{operacao_response_codigo_processamento_value}}}
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+   * {{{operacao_response_codigo_processamento_cancelamento_value}}}
    * @member {String} codigoProcessamentoCancelamento
    */
   exports.prototype['codigoProcessamentoCancelamento'] = undefined;
 
   /**
-   * Nome da opera\u00E7\u00E3o
+   * {{{operacao_response_nome_operacao_value}}}
    * @member {String} nomeOperacao
    */
   exports.prototype['nomeOperacao'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00E7a de juros
+   * {{{operacao_response_flag_cobra_juros_value}}}
    * @member {Boolean} flagCobraJuros
    */
   exports.prototype['flagCobraJuros'] = undefined;
 
   /**
-   * Flag indicativa para crobran\u00E7a de tarifas
+   * {{{operacao_response_flag_cobra_tarifa_value}}}
    * @member {Boolean} flagCobraTarifa
    */
   exports.prototype['flagCobraTarifa'] = undefined;
 
   /**
-   * Quantidade de meses para car\u00EAncia
+   * {{{operacao_response_carencia_value}}}
    * @member {Integer} carencia
    */
   exports.prototype['carencia'] = undefined;
 
   /**
-   * Permitir transa\u00E7\u00F5es parceladas
+   * {{{operacao_response_flag_permitir_parcelamento_value}}}
    * @member {Boolean} flagPermitirParcelamento
    */
   exports.prototype['flagPermitirParcelamento'] = undefined;

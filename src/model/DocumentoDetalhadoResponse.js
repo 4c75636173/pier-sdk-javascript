@@ -18,12 +18,12 @@
   /**
    * The DocumentoDetalhadoResponse model module.
    * @module model/DocumentoDetalhadoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DocumentoDetalhadoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta para o recurso de Documento
+   * {{{documento_detalhado_response_description}}}
    * @alias module:model/DocumentoDetalhadoResponse
    * @class
    */
@@ -72,37 +72,37 @@
 
 
   /**
-   * ID do Documento.
+   * {{{documento_detalhado_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_detalhado_response_id_template_documento_value}}}
    * @member {Integer} idTemplateDocumento
    */
   exports.prototype['idTemplateDocumento'] = undefined;
 
   /**
-   * Nome do Documento.
+   * {{{documento_detalhado_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Representa\u00E7\u00E3o do documento em Base64.
+   * {{{documento_detalhado_response_documento_value}}}
    * @member {String} documento
    */
   exports.prototype['documento'] = undefined;
 
   /**
-   * Extens\u00E3o do Documento.
+   * {{{documento_detalhado_response_extensao_value}}}
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Detalhamento do documento.
+   * {{{documento_detalhado_response_documento_detalhes_value}}}
    * @member {Array.<module:model/DocumentoDetalheResponse>} documentoDetalhes
    */
   exports.prototype['documentoDetalhes'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The PageBaseResponse model module.
    * @module model/PageBaseResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageBaseResponse</code>.
-   * Lista de Bases
+   * {{{page_base_response_description}}}
    * @alias module:model/PageBaseResponse
    * @class
    */

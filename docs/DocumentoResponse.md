@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | ID do Documento. | [optional] 
-**idTemplateDocumento** | **Integer** | ID do Template de Documento associado. | [optional] 
-**nome** | **String** | Nome do Documento. | [optional] 
-**extensao** | **String** | Extens\u00E3o do Documento. | [optional] 
+**id** | **Integer** | {{{documento_response_id_value}}} | [optional] 
+**idTemplateDocumento** | **Integer** | {{{documento_response_id_template_documento_value}}} | [optional] 
+**nome** | **String** | {{{documento_response_nome_value}}} | [optional] 
+**extensao** | **String** | {{{documento_response_extensao_value}}} | [optional] 
 
 

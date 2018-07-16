@@ -18,12 +18,12 @@
   /**
    * The CancelamentoTransacaoOnUsRequest model module.
    * @module model/CancelamentoTransacaoOnUsRequest
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CancelamentoTransacaoOnUsRequest</code>.
-   * Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o
+   * {{{cancelamento_transacao_on_us_request_description}}}
    * @alias module:model/CancelamentoTransacaoOnUsRequest
    * @class
    * @param nsuAutorizacaoTransacaoCancelada
@@ -103,67 +103,67 @@
 
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
+   * {{{cancelamento_transacao_on_us_request_nsu_autorizacao_transacao_cancelada_value}}}
    * @member {String} nsuAutorizacaoTransacaoCancelada
    */
   exports.prototype['nsuAutorizacaoTransacaoCancelada'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+   * {{{transacao_on_us_request_nsu_origem_value}}}
    * @member {String} nsuOrigem
    */
   exports.prototype['nsuOrigem'] = undefined;
 
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
+   * {{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}
    * @member {String} nsuOrigemTransacaoCancelada
    */
   exports.prototype['nsuOrigemTransacaoCancelada'] = undefined;
 
   /**
-   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_request_codigo_processamento_value}}}
    * @member {String} codigoProcessamento
    */
   exports.prototype['codigoProcessamento'] = undefined;
 
   /**
-   * Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}
    * @member {String} dataHoraTransacaoCancelada
    */
   exports.prototype['dataHoraTransacaoCancelada'] = undefined;
 
   /**
-   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
+   * {{{transacao_on_us_request_valor_transacao_value}}}
    * @member {Number} valorTransacao
    */
   exports.prototype['valorTransacao'] = undefined;
 
   /**
-   * N\u00FAmero Real do Cart\u00E3o.
+   * {{{transacao_on_us_request_numero_real_cartao_value}}}
    * @member {String} numeroRealCartao
    */
   exports.prototype['numeroRealCartao'] = undefined;
 
   /**
-   * Data de Validade do Cart\u00E3o. Ex: AAMM
+   * {{{transacao_on_us_request_data_validade_cartao_value}}}
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
+   * {{{transacao_on_us_request_numero_estabelecimento_value}}}
    * @member {Integer} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_request_data_hora_terminal_value}}}
    * @member {String} dataHoraTerminal
    */
   exports.prototype['dataHoraTerminal'] = undefined;
 
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_on_us_request_terminal_requisitante_value}}}
    * @member {String} terminalRequisitante
    */
   exports.prototype['terminalRequisitante'] = undefined;

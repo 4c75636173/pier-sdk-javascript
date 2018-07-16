@@ -18,12 +18,12 @@
   /**
    * The NotificacaoSMSResponse model module.
    * @module model/NotificacaoSMSResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>NotificacaoSMSResponse</code>.
-   * Objeto SMS
+   * {{{notificacao_s_m_s_response_description}}}
    * @alias module:model/NotificacaoSMSResponse
    * @class
    * @param status
@@ -128,103 +128,103 @@
 
 
   /**
-   * C\u00F3digo Identificador.
+   * {{{notificacao_s_m_s_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00FAmero sequencial \u00FAnico.
+   * {{{notificacao_s_m_s_response_nsu_value}}}
    * @member {Integer} nsu
    */
   exports.prototype['nsu'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
+   * {{{notificacao_s_m_s_response_id_emissor_value}}}
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * TipoEvento de notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_tipo_evento_value}}}
    * @member {module:model/NotificacaoSMSResponse.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * Status de envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_status_value}}}
    * @member {module:model/NotificacaoSMSResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_descricao_status_value}}}
    * @member {String} descricaoStatus
    */
   exports.prototype['descricaoStatus'] = undefined;
 
   /**
-   * C\u00F3digo identificado da pessoa
+   * {{{notificacao_s_m_s_response_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * C\u00F3digo identificador da conta
+   * {{{notificacao_s_m_s_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+   * {{{notificacao_s_m_s_response_celular_value}}}
    * @member {String} celular
    */
   exports.prototype['celular'] = undefined;
 
   /**
-   * Apresenta a operadora do celular a ser eviado o SMS
+   * {{{notificacao_s_m_s_response_operadora_value}}}
    * @member {String} operadora
    */
   exports.prototype['operadora'] = undefined;
 
   /**
-   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
+   * {{{notificacao_s_m_s_response_conteudo_value}}}
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
+   * {{{notificacao_s_m_s_response_resposta_value}}}
    * @member {String} resposta
    */
   exports.prototype['resposta'] = undefined;
 
   /**
-   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_data_agendamento_value}}}
    * @member {String} dataAgendamento
    */
   exports.prototype['dataAgendamento'] = undefined;
 
   /**
-   * Quantidade de tentativas e envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
    * @member {Integer} quantidadeTentativasEnvio
    */
   exports.prototype['quantidadeTentativasEnvio'] = undefined;
 
   /**
-   * Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+   * {{{notificacao_s_m_s_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Apresenta a data e em que o Stattjus do registro foi modificado
+   * {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
    * @member {String} dataAlteracaoStatus
    */
   exports.prototype['dataAlteracaoStatus'] = undefined;
 
   /**
-   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+   * {{{notificacao_s_m_s_response_protocolo_value}}}
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;

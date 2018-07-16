@@ -18,12 +18,12 @@
   /**
    * The DispositivoResponse model module.
    * @module model/DispositivoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DispositivoResponse</code>.
-   * Dispositivo Mobile
+   * {{{dispositivo_response_description}}}
    * @alias module:model/DispositivoResponse
    * @class
    */
@@ -64,25 +64,25 @@
 
 
   /**
-   * Identificador do dispositivo.
+   * {{{dispositivo_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Token do dispositivo.
+   * {{{dispositivo_response_token_value}}}
    * @member {String} token
    */
   exports.prototype['token'] = undefined;
 
   /**
-   * Identificador da Aplica\u00E7\u00E3o.
+   * {{{dispositivo_response_id_aplicacao_mobile_value}}}
    * @member {Integer} idAplicacaoMobile
    */
   exports.prototype['idAplicacaoMobile'] = undefined;
 
   /**
-   * Identificador do usu\u00E1rio.
+   * {{{dispositivo_response_id_usuario_value}}}
    * @member {Integer} idUsuario
    */
   exports.prototype['idUsuario'] = undefined;

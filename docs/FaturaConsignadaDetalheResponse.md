@@ -3,53 +3,53 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador da fatura. | [optional] 
-**idConta** | **Integer** | C\u00F3digo identificador da conta (id). | [optional] 
-**limiteGlobal** | **Number** | Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui. | 
-**flagEmiteFatura** | **Integer** | C\u00F3digo identificador da conta a qual a fatura se refere. | [optional] 
-**limiteCompra** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais. | 
-**dataVencimentoFatura** | **String** | Data de vencimento da fatura. | [optional] 
-**limiteParcelado** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas. | 
-**limiteParcelas** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade. | 
-**valorTotalFatura** | **Number** | Valor para pagamento total da fatura. | [optional] 
-**valorFaturaAnterior** | **Number** | Valor total da fatura anterior. | [optional] 
-**valorPagamentoMinimo** | **Number** | Valor m\u00EDnimo para pagamento da fatura. | [optional] 
-**valorPagamentoConsignado** | **Number** | Valor da fatura pago atrav\u00E9s de desconto em folha. | [optional] 
-**limiteSaqueGlobal** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional. | 
-**valorPagamentoComplementar** | **Number** | Valor complementar para considerar o pagamento m\u00EDnimo da fatura. | [optional] 
-**limiteSaquePeriodo** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento. | 
-**totalComprasNacionais** | **Number** | Valor total das compras nacionais lan\u00E7adas na fatura. | [optional] 
-**limiteConsignado** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos. | 
-**totalComprasInternacionas** | **Number** | Valor total das compras internacionais lan\u00E7adas na fatura. | [optional] 
-**limiteInternacionalCompra** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais. | 
-**totalSaquesNacionais** | **Number** | Valor total dos saques nacionais lan\u00E7ados na fatura. | [optional] 
-**limiteInternacionalParcelado** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas. | 
-**totalSaquesInternacionais** | **Number** | Valor total dos saques internacionais lan\u00E7ados na fatura. | [optional] 
-**limiteInternacionalParcelas** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade. | 
-**totalDebitosNacionais** | **Number** | Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura. | [optional] 
-**limiteInternacionalSaqueGlobal** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional. | 
-**totalDebitosRecorrentes** | **Number** | Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura. | [optional] 
-**limiteInternacionalSaquePeriodo** | **Number** | Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento. | 
-**totalDebitosInternacionais** | **Number** | Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura. | [optional] 
-**saldoDisponivelGlobal** | **Number** | Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es. | 
-**totalDebitosDiversosNacionais** | **Number** | Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura. | [optional] 
-**saldoDisponivelCompra** | **Number** | Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional. | 
-**totalDebitosOpcionais** | **Number** | Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura. | [optional] 
-**saldoDisponivelParcelado** | **Number** | Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional. | 
-**totalPagamentos** | **Number** | Valor total dos pagamentos lan\u00E7ados na fatura. | [optional] 
-**saldoDisponivelParcelas** | **Number** | Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento. | 
-**totalCreditosNacionais** | **Number** | Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura. | [optional] 
-**totalAjustes** | **Number** | Valor total dos ajustes lan\u00E7ados na fatura. | [optional] 
-**totalTarifas** | **Number** | Valor total das tarifas lan\u00E7adas na fatura. | [optional] 
-**totalMulta** | **Number** | Valor total da multa lan\u00E7ada na fatura. | [optional] 
-**saldoDisponivelSaque** | **Number** | Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional. | 
-**totalJuros** | **Number** | Valor total dos juros de mora lan\u00E7ados na fatura. | [optional] 
-**saldoPontosFidelidade** | **Number** | Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui. | 
-**taxaRotativo** | **Number** | Valor percentual da taxa de juros rotativos. | [optional] 
-**saldoDisponivelCompraInternacional** | **Number** | Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional. | 
-**taxaSaque** | **Number** | Valor percentual da taxa de saque. | [optional] 
-**saldoDisponivelSaqueInternacional** | **Number** | Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional. | 
-**taxaMaximaProximoPeriodo** | **Number** | Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo. | [optional] 
-**totalServicos** | **Number** | Apresenta a soma de todos os seguros cobrados na fatura do cliente. | 
+**id** | **Integer** | {{{fatura_consignada_detalhe_response_id_value}}} | [optional] 
+**idConta** | **Integer** | {{{fatura_consignada_detalhe_response_id_conta_value}}} | [optional] 
+**limiteGlobal** | **Number** | {{{fatura_consignada_detalhe_response_limite_global_value}}} | 
+**flagEmiteFatura** | **Integer** | {{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}} | [optional] 
+**limiteCompra** | **Number** | {{{fatura_consignada_detalhe_response_limite_compra_value}}} | 
+**dataVencimentoFatura** | **String** | {{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}} | [optional] 
+**limiteParcelado** | **Number** | {{{fatura_consignada_detalhe_response_limite_parcelado_value}}} | 
+**limiteParcelas** | **Number** | {{{fatura_consignada_detalhe_response_limite_parcelas_value}}} | 
+**valorTotalFatura** | **Number** | {{{fatura_consignada_detalhe_response_valor_total_fatura_value}}} | [optional] 
+**valorFaturaAnterior** | **Number** | {{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}} | [optional] 
+**valorPagamentoMinimo** | **Number** | {{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}} | [optional] 
+**valorPagamentoConsignado** | **Number** | {{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}} | [optional] 
+**limiteSaqueGlobal** | **Number** | {{{fatura_consignada_detalhe_response_limite_saque_global_value}}} | 
+**valorPagamentoComplementar** | **Number** | {{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}} | [optional] 
+**limiteSaquePeriodo** | **Number** | {{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}} | 
+**totalComprasNacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}} | [optional] 
+**limiteConsignado** | **Number** | {{{fatura_consignada_detalhe_response_limite_consignado_value}}} | 
+**totalComprasInternacionas** | **Number** | {{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}} | [optional] 
+**limiteInternacionalCompra** | **Number** | {{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}} | 
+**totalSaquesNacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}} | [optional] 
+**limiteInternacionalParcelado** | **Number** | {{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}} | 
+**totalSaquesInternacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}} | [optional] 
+**limiteInternacionalParcelas** | **Number** | {{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}} | 
+**totalDebitosNacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}} | [optional] 
+**limiteInternacionalSaqueGlobal** | **Number** | {{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}} | 
+**totalDebitosRecorrentes** | **Number** | {{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}} | [optional] 
+**limiteInternacionalSaquePeriodo** | **Number** | {{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}} | 
+**totalDebitosInternacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}} | [optional] 
+**saldoDisponivelGlobal** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}} | 
+**totalDebitosDiversosNacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}} | [optional] 
+**saldoDisponivelCompra** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}} | 
+**totalDebitosOpcionais** | **Number** | {{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}} | [optional] 
+**saldoDisponivelParcelado** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}} | 
+**totalPagamentos** | **Number** | {{{fatura_consignada_detalhe_response_total_pagamentos_value}}} | [optional] 
+**saldoDisponivelParcelas** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}} | 
+**totalCreditosNacionais** | **Number** | {{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}} | [optional] 
+**totalAjustes** | **Number** | {{{fatura_consignada_detalhe_response_total_ajustes_value}}} | [optional] 
+**totalTarifas** | **Number** | {{{fatura_consignada_detalhe_response_total_tarifas_value}}} | [optional] 
+**totalMulta** | **Number** | {{{fatura_consignada_detalhe_response_total_multa_value}}} | [optional] 
+**saldoDisponivelSaque** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}} | 
+**totalJuros** | **Number** | {{{fatura_consignada_detalhe_response_total_juros_value}}} | [optional] 
+**saldoPontosFidelidade** | **Number** | {{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}} | 
+**taxaRotativo** | **Number** | {{{fatura_consignada_detalhe_response_taxa_rotativo_value}}} | [optional] 
+**saldoDisponivelCompraInternacional** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}} | 
+**taxaSaque** | **Number** | {{{fatura_consignada_detalhe_response_taxa_saque_value}}} | [optional] 
+**saldoDisponivelSaqueInternacional** | **Number** | {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}} | 
+**taxaMaximaProximoPeriodo** | **Number** | {{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}} | [optional] 
+**totalServicos** | **Number** | {{{fatura_consignada_detalhe_response_total_servicos_value}}} | 
 
 

@@ -18,12 +18,12 @@
   /**
    * The PlanoParcelamentoResponse model module.
    * @module model/PlanoParcelamentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PlanoParcelamentoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
+   * {{{plano_parcelamento_response_description}}}
    * @alias module:model/PlanoParcelamentoResponse
    * @class
    */
@@ -128,121 +128,121 @@
 
 
   /**
-   * Identificador do parcelamento
+   * {{{plano_parcelamento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data de fechamento da fatura
+   * {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
    * @member {String} dataFechamentoFatura
    */
   exports.prototype['dataFechamentoFatura'] = undefined;
 
   /**
-   * Data de vencimento padr\u00E3o
+   * {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
    * @member {String} dataVencimentoPadrao
    */
   exports.prototype['dataVencimentoPadrao'] = undefined;
 
   /**
-   * Valor total da fatura
+   * {{{plano_parcelamento_response_valor_total_fatura_value}}}
    * @member {Number} valorTotalFatura
    */
   exports.prototype['valorTotalFatura'] = undefined;
 
   /**
-   * Quantidade de parcelas
+   * {{{plano_parcelamento_response_quantidade_parcelas_value}}}
    * @member {Integer} quantidadeParcelas
    */
   exports.prototype['quantidadeParcelas'] = undefined;
 
   /**
-   * Valor da parcela
+   * {{{plano_parcelamento_response_valor_parcela_value}}}
    * @member {Number} valorParcela
    */
   exports.prototype['valorParcela'] = undefined;
 
   /**
-   * Valor de entrada
+   * {{{plano_parcelamento_response_valor_entrada_value}}}
    * @member {Number} valorEntrada
    */
   exports.prototype['valorEntrada'] = undefined;
 
   /**
-   * Taxa de refinanciamento
+   * {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
    * @member {Number} taxaRefinanciamento
    */
   exports.prototype['taxaRefinanciamento'] = undefined;
 
   /**
-   * Custo efetivo total
+   * {{{plano_parcelamento_response_custo_efetivo_total_value}}}
    * @member {Number} custoEfetivoTotal
    */
   exports.prototype['custoEfetivoTotal'] = undefined;
 
   /**
-   * Valor total de refinanciamento
+   * {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
    * @member {Number} valorTotalRefinanciamento
    */
   exports.prototype['valorTotalRefinanciamento'] = undefined;
 
   /**
-   * Valor do IOF
+   * {{{plano_parcelamento_response_valor_i_o_f_value}}}
    * @member {Number} valorIOF
    */
   exports.prototype['valorIOF'] = undefined;
 
   /**
-   * Valor do TAC
+   * {{{plano_parcelamento_response_valor_t_a_c_value}}}
    * @member {Number} valorTAC
    */
   exports.prototype['valorTAC'] = undefined;
 
   /**
-   * Status da ades\u00E3o
+   * {{{plano_parcelamento_response_status_adesao_value}}}
    * @member {Integer} statusAdesao
    */
   exports.prototype['statusAdesao'] = undefined;
 
   /**
-   * Data de inclus\u00E3o
+   * {{{plano_parcelamento_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data de processamento da ades\u00E3o
+   * {{{plano_parcelamento_response_data_processamento_adesao_value}}}
    * @member {String} dataProcessamentoAdesao
    */
   exports.prototype['dataProcessamentoAdesao'] = undefined;
 
   /**
-   * Identificador da conta
+   * {{{plano_parcelamento_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+   * {{{plano_parcelamento_response_id_servico_tipo_value}}}
    * @member {Integer} idServicoTipo
    */
   exports.prototype['idServicoTipo'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo de servi\u00E7o
+   * {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
    * @member {String} descricaoServicoTipo
    */
   exports.prototype['descricaoServicoTipo'] = undefined;
 
   /**
-   * Indica se a fatura foi com entrada
+   * {{{plano_parcelamento_response_com_entrada_value}}}
    * @member {Boolean} comEntrada
    */
   exports.prototype['comEntrada'] = undefined;
 
   /**
-   * Nome da campanha
+   * {{{plano_parcelamento_response_nome_campanha_value}}}
    * @member {String} nomeCampanha
    */
   exports.prototype['nomeCampanha'] = undefined;

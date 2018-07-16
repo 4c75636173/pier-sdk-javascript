@@ -18,12 +18,12 @@
   /**
    * The EmprestimoPessoalResponse model module.
    * @module model/EmprestimoPessoalResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>EmprestimoPessoalResponse</code>.
-   * Resposta do recurso de simular empr\u00E9stimos/financiamentos
+   * {{{emprestimo_pessoal_response_description}}}
    * @alias module:model/EmprestimoPessoalResponse
    * @class
    */
@@ -89,49 +89,49 @@
   exports.prototype['planosParcelamentos'] = undefined;
 
   /**
-   * Valor solicitado do empr\u00E9stimo/financiamento
+   * {{{emprestimo_pessoal_response_valor_solicitado_value}}}
    * @member {Number} valorSolicitado
    */
   exports.prototype['valorSolicitado'] = undefined;
 
   /**
-   * Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
+   * {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
    * @member {Number} valorMaximoSolicitacao
    */
   exports.prototype['valorMaximoSolicitacao'] = undefined;
 
   /**
-   * N\u00FAmero de parcelas solicitado
+   * {{{emprestimo_pessoal_response_numero_parcelas_value}}}
    * @member {Integer} numeroParcelas
    */
   exports.prototype['numeroParcelas'] = undefined;
 
   /**
-   * Limite m\u00E1ximo de parcela permitido
+   * {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
    * @member {Number} valorMaximoParcela
    */
   exports.prototype['valorMaximoParcela'] = undefined;
 
   /**
-   * Data do desconto da primeira parcela
+   * {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
    * @member {String} dataPrimeiraParcela
    */
   exports.prototype['dataPrimeiraParcela'] = undefined;
 
   /**
-   * Per\u00EDodo de aplica da taxa de juros
+   * {{{emprestimo_pessoal_response_periodo_taxa_value}}}
    * @member {String} periodoTaxa
    */
   exports.prototype['periodoTaxa'] = undefined;
 
   /**
-   * Sistema para amortiza\u00E7\u00E3o do valor das parcelas
+   * {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
    * @member {String} sistemaAmortizacao
    */
   exports.prototype['sistemaAmortizacao'] = undefined;
 
   /**
-   * Valor percentual da taxa de juros a ser aplicada
+   * {{{emprestimo_pessoal_response_taxa_juros_value}}}
    * @member {Number} taxaJuros
    */
   exports.prototype['taxaJuros'] = undefined;

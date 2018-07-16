@@ -18,12 +18,12 @@
   /**
    * The EstabelecimentoResponse model module.
    * @module model/EstabelecimentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>EstabelecimentoResponse</code>.
-   * Objeto Estabelecimento
+   * {{{estabelecimento_response_description}}}
    * @alias module:model/EstabelecimentoResponse
    * @class
    */
@@ -216,253 +216,253 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+   * {{{estabelecimento_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+   * {{{estabelecimento_response_numero_estabelecimento_value}}}
    * @member {String} numeroEstabelecimento
    */
   exports.prototype['numeroEstabelecimento'] = undefined;
 
   /**
-   * Indica se \u00E9 matriz ou filial.
+   * {{{estabelecimento_response_flag_matriz_value}}}
    * @member {Integer} flagMatriz
    */
   exports.prototype['flagMatriz'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+   * {{{estabelecimento_response_id_grupo_economico_value}}}
    * @member {Integer} idGrupoEconomico
    */
   exports.prototype['idGrupoEconomico'] = undefined;
 
   /**
-   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
+   * {{{estabelecimento_response_numero_receita_federal_value}}}
    * @member {Integer} numeroReceitaFederal
    */
   exports.prototype['numeroReceitaFederal'] = undefined;
 
   /**
-   * Nome do Estabelecimento.
+   * {{{estabelecimento_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Raz\u00E3o Social do Estabelecimento.
+   * {{{estabelecimento_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;
 
   /**
-   * T\u00EDtulo Comercial do Estabelecimento.
+   * {{{estabelecimento_response_nome_fantasia_value}}}
    * @member {String} nomeFantasia
    */
   exports.prototype['nomeFantasia'] = undefined;
 
   /**
-   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
+   * {{{estabelecimento_response_cep_value}}}
    * @member {String} cep
    */
   exports.prototype['cep'] = undefined;
 
   /**
-   * Nome do Logradouro.
+   * {{{estabelecimento_response_nome_logradouro_value}}}
    * @member {String} nomeLogradouro
    */
   exports.prototype['nomeLogradouro'] = undefined;
 
   /**
-   * N\u00FAmero do endere\u00E7o.
+   * {{{estabelecimento_response_numero_endereco_value}}}
    * @member {String} numeroEndereco
    */
   exports.prototype['numeroEndereco'] = undefined;
 
   /**
-   * Nome do bairro do endere\u00E7o.
+   * {{{estabelecimento_response_bairro_value}}}
    * @member {String} bairro
    */
   exports.prototype['bairro'] = undefined;
 
   /**
-   * Nome da cidade do endere\u00E7o.
+   * {{{estabelecimento_response_cidade_value}}}
    * @member {String} cidade
    */
   exports.prototype['cidade'] = undefined;
 
   /**
-   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * {{{estabelecimento_response_complemento_value}}}
    * @member {String} complemento
    */
   exports.prototype['complemento'] = undefined;
 
   /**
-   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * {{{estabelecimento_response_uf_value}}}
    * @member {String} uf
    */
   exports.prototype['uf'] = undefined;
 
   /**
-   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
+   * {{{estabelecimento_response_cep2_value}}}
    * @member {String} cep2
    */
   exports.prototype['cep2'] = undefined;
 
   /**
-   * Nome do Logradouro .
+   * {{{estabelecimento_response_nome_logradouro2_value}}}
    * @member {String} nomeLogradouro2
    */
   exports.prototype['nomeLogradouro2'] = undefined;
 
   /**
-   * N\u00FAmero do endere\u00E7o.
+   * {{{estabelecimento_response_numero_endereco2_value}}}
    * @member {String} numeroEndereco2
    */
   exports.prototype['numeroEndereco2'] = undefined;
 
   /**
-   * Nome do bairro do endere\u00E7o.
+   * {{{estabelecimento_response_bairro2_value}}}
    * @member {String} bairro2
    */
   exports.prototype['bairro2'] = undefined;
 
   /**
-   * Nome da cidade do endere\u00E7o.
+   * {{{estabelecimento_response_cidade2_value}}}
    * @member {String} cidade2
    */
   exports.prototype['cidade2'] = undefined;
 
   /**
-   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * {{{estabelecimento_response_complemento2_value}}}
    * @member {String} complemento2
    */
   exports.prototype['complemento2'] = undefined;
 
   /**
-   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * {{{estabelecimento_response_uf2_value}}}
    * @member {String} uf2
    */
   exports.prototype['uf2'] = undefined;
 
   /**
-   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
+   * {{{estabelecimento_response_obs_value}}}
    * @member {String} obs
    */
   exports.prototype['obs'] = undefined;
 
   /**
-   * Nome da pessoa para contato com o Estabelecimento.
+   * {{{estabelecimento_response_contato_value}}}
    * @member {String} contato
    */
   exports.prototype['contato'] = undefined;
 
   /**
-   * E-mail da pessoa para contato com o Estabelecimento.
+   * {{{estabelecimento_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
    * @member {Integer} flagArquivoSecrFazenda
    */
   exports.prototype['flagArquivoSecrFazenda'] = undefined;
 
   /**
-   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+   * {{{estabelecimento_response_flag_cartao_digitado_value}}}
    * @member {Integer} flagCartaoDigitado
    */
   exports.prototype['flagCartaoDigitado'] = undefined;
 
   /**
-   * Indica se o estabelecimento est\u00E1 inativo.
+   * {{{estabelecimento_response_inativo_value}}}
    * @member {Integer} inativo
    */
   exports.prototype['inativo'] = undefined;
 
   /**
-   * C\u00F3digo identificador da moeda.
+   * {{{estabelecimento_response_id_moeda_value}}}
    * @member {Integer} idMoeda
    */
   exports.prototype['idMoeda'] = undefined;
 
   /**
-   * Identificador de Pa\u00EDs.
+   * {{{estabelecimento_response_id_pais_value}}}
    * @member {Integer} idPais
    */
   exports.prototype['idPais'] = undefined;
 
   /**
-   * N\u00FAmero do associado ao SPCBrasil.
+   * {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
    * @member {Integer} associadoSPCBrasil
    */
   exports.prototype['associadoSPCBrasil'] = undefined;
 
   /**
-   * C\u00F3digo de Categoria de Mercado.
+   * {{{estabelecimento_response_mcc_value}}}
    * @member {Integer} mcc
    */
   exports.prototype['mcc'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+   * {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
    * @member {Integer} idTipoEstabelecimento
    */
   exports.prototype['idTipoEstabelecimento'] = undefined;
 
   /**
-   * Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).
+   * {{{estabelecimento_response_correspondencia_value}}}
    * @member {Integer} correspondencia
    */
   exports.prototype['correspondencia'] = undefined;
 
   /**
-   * Cargo do contato do estabelecimento.
+   * {{{estabelecimento_response_cargo_contato_value}}}
    * @member {String} cargoContato
    */
   exports.prototype['cargoContato'] = undefined;
 
   /**
-   * Tipo do regime de pagamento do estabelecimento.
+   * {{{estabelecimento_response_tipo_pagamento_value}}}
    * @member {module:model/EstabelecimentoResponse.TipoPagamentoEnum} tipoPagamento
    */
   exports.prototype['tipoPagamento'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00FAmero um.
+   * {{{estabelecimento_response_consulta_value}}}
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta
    */
   exports.prototype['consulta'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00FAmero dois.
+   * {{{estabelecimento_response_consulta2_value}}}
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta2
    */
   exports.prototype['consulta2'] = undefined;
 
   /**
-   * Consulta de cadastro n\u00FAmero tr\u00EAs.
+   * {{{estabelecimento_response_consulta3_value}}}
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO} consulta3
    */
   exports.prototype['consulta3'] = undefined;
 
   /**
-   * Terminal do estabelecimento.
+   * {{{estabelecimento_response_terminal_value}}}
    * @member {String} terminal
    */
   exports.prototype['terminal'] = undefined;
 
   /**
-   * Data de Cadastro do Estabelecimento.
+   * {{{estabelecimento_response_data_cadastramento_value}}}
    * @member {String} dataCadastramento
    */
   exports.prototype['dataCadastramento'] = undefined;
 
   /**
-   * Usu\u00E1rio da aplica\u00E7\u00E3o.
+   * {{{estabelecimento_response_usuario_value}}}
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;

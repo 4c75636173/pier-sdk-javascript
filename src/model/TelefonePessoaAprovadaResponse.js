@@ -18,12 +18,12 @@
   /**
    * The TelefonePessoaAprovadaResponse model module.
    * @module model/TelefonePessoaAprovadaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TelefonePessoaAprovadaResponse</code>.
-   * Objeto Telefone Pessoa Aprovada
+   * {{{telefone_pessoa_aprovada_response_description}}}
    * @alias module:model/TelefonePessoaAprovadaResponse
    * @class
    */
@@ -68,31 +68,31 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+   * {{{telefone_pessoa_aprovada_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * {{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}
    * @member {Integer} idTipoTelefone
    */
   exports.prototype['idTipoTelefone'] = undefined;
 
   /**
-   * C\u00F3digo DDD do telefone (id).
+   * {{{telefone_pessoa_aprovada_response_ddd_value}}}
    * @member {String} ddd
    */
   exports.prototype['ddd'] = undefined;
 
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_pessoa_aprovada_response_telefone_value}}}
    * @member {String} telefone
    */
   exports.prototype['telefone'] = undefined;
 
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_pessoa_aprovada_response_ramal_value}}}
    * @member {String} ramal
    */
   exports.prototype['ramal'] = undefined;

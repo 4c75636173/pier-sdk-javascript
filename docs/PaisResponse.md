@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo identificador \u00FAnico do pa\u00EDs na base | [optional] 
-**codigo** | **String** | C\u00F3digo identificador do pa\u00EDs | [optional] 
-**sigla** | **String** | Sigla do pa\u00EDs | [optional] 
-**descricao** | **String** | Nome do pa\u00EDs | [optional] 
-**continente** | **String** | Continente no qual o pa\u00EDs faz parte | [optional] 
-**flagAtivo** | **Boolean** | Atributo que representa se o pa\u00EDs est\u00E1 ativo | [optional] 
+**id** | **Integer** | {{{pais_response_id_value}}} | [optional] 
+**codigo** | **String** | {{{pais_response_codigo_value}}} | [optional] 
+**sigla** | **String** | {{{pais_response_sigla_value}}} | [optional] 
+**descricao** | **String** | {{{pais_response_descricao_value}}} | [optional] 
+**continente** | **String** | {{{pais_response_continente_value}}} | [optional] 
+**flagAtivo** | **Boolean** | {{{pais_response_flag_ativo_value}}} | [optional] 
 
 

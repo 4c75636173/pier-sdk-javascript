@@ -18,12 +18,12 @@
   /**
    * The ProdutoResponse model module.
    * @module model/ProdutoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ProdutoResponse</code>.
-   * Produto
+   * {{{produto_response_description}}}
    * @alias module:model/ProdutoResponse
    * @class
    * @param id
@@ -67,25 +67,25 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{produto_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do Nome do Produto.
+   * {{{produto_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+   * {{{produto_response_status_value}}}
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+   * {{{produto_response_id_fantasia_basica_value}}}
    * @member {Integer} idFantasiaBasica
    */
   exports.prototype['idFantasiaBasica'] = undefined;

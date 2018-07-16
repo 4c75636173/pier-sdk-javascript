@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chave** | **String** | Valor da propriedade do Documento. | [optional] 
-**valor** | **String** | Valor da propriedade do Documento. | [optional] 
-**detalhesTipo** | **String** | Tipo da propriedade do Documento. | [optional] 
-**flagIndice** | **Boolean** | Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false) | [optional] 
+**chave** | **String** | {{{propriedade_documento_request_chave_value}}} | [optional] 
+**valor** | **String** | {{{propriedade_documento_request_valor_value}}} | [optional] 
+**detalhesTipo** | **String** | {{{propriedade_documento_request_detalhes_tipo_value}}} | [optional] 
+**flagIndice** | **Boolean** | {{{propriedade_documento_request_flag_indice_value}}} | [optional] 
 
 

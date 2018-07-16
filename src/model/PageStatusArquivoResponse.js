@@ -18,12 +18,12 @@
   /**
    * The PageStatusArquivoResponse model module.
    * @module model/PageStatusArquivoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageStatusArquivoResponse</code>.
-   * Lista status de arquivos cadastrados no sistema
+   * {{{page_status_arquivo_response_description}}}
    * @alias module:model/PageStatusArquivoResponse
    * @class
    */

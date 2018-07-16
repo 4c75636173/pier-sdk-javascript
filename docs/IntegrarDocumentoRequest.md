@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idTemplate** | **Integer** | Identificador do template de documento | [optional] 
-**arquivo** | **String** | Conte\u00FAdo do arquivo convertido em Base 64 | [optional] 
-**nome** | **String** | Nome do arquivo. | [optional] 
-**propriedades** | [**[PropriedadeDocumentoRequest]**](PropriedadeDocumentoRequest.md) | Lista de par\u00E2metros para montagem do documento. | [optional] 
+**idTemplate** | **Integer** | {{{integrar_documento_request_id_template_value}}} | [optional] 
+**arquivo** | **String** | {{{integrar_documento_request_arquivo_value}}} | [optional] 
+**nome** | **String** | {{{integrar_documento_request_nome_value}}} | [optional] 
+**propriedades** | [**[PropriedadeDocumentoRequest]**](PropriedadeDocumentoRequest.md) | {{{integrar_documento_request_propriedades_value}}} | [optional] 
 
 

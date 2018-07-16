@@ -18,12 +18,12 @@
   /**
    * The TipoResolucaoResponse model module.
    * @module model/TipoResolucaoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoResolucaoResponse</code>.
-   * Objeto de resposta de Tipo Resolu\u00E7\u00E3o
+   * {{{tipo_resolucao_response_description}}}
    * @alias module:model/TipoResolucaoResponse
    * @class
    */
@@ -56,13 +56,13 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+   * {{{tipo_resolucao_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+   * {{{tipo_resolucao_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

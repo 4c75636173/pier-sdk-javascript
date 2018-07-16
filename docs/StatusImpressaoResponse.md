@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | Id do est\u00E1gio cart\u00E3o | [optional] 
-**nome** | **String** | Nome do status impress\u00E3o | [optional] 
+**id** | **Integer** | {{{status_impressao_response_id_value}}} | [optional] 
+**nome** | **String** | {{{status_impressao_response_nome_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The PessoaJuridicaAprovadaResponse model module.
    * @module model/PessoaJuridicaAprovadaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PessoaJuridicaAprovadaResponse</code>.
-   * PessoaJuridicaAprovadaPersist
+   * {{{pessoa_juridica_aprovada_response_description}}}
    * @alias module:model/PessoaJuridicaAprovadaResponse
    * @class
    * @param limiteGlobal
@@ -31,6 +31,7 @@
    * @param limiteParcelas
    */
   var exports = function(limiteGlobal, limiteMaximo, limiteParcelas) {
+
 
 
 
@@ -93,6 +94,9 @@
       if (data.hasOwnProperty('idProduto')) {
         obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
+      if (data.hasOwnProperty('numeroBanco')) {
+        obj['numeroBanco'] = ApiClient.convertToType(data['numeroBanco'], 'Integer');
+      }
       if (data.hasOwnProperty('numeroAgencia')) {
         obj['numeroAgencia'] = ApiClient.convertToType(data['numeroAgencia'], 'Integer');
       }
@@ -147,145 +151,151 @@
 
 
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
+   * {{{pessoa_juridica_aprovada_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
+   * {{{pessoa_juridica_aprovada_response_razao_social_value}}}
    * @member {String} razaoSocial
    */
   exports.prototype['razaoSocial'] = undefined;
 
   /**
-   * Apresenta o nome fantasia da empresa.
+   * {{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}
    * @member {String} nomeFantasia
    */
   exports.prototype['nomeFantasia'] = undefined;
 
   /**
-   * N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+   * {{{pessoa_juridica_aprovada_response_cnpj_value}}}
    * @member {String} cnpj
    */
   exports.prototype['cnpj'] = undefined;
 
   /**
-   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
+   * {{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}
    * @member {String} inscricaoEstadual
    */
   exports.prototype['inscricaoEstadual'] = undefined;
 
   /**
-   * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
+   * {{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}
    * @member {String} dataAberturaEmpresa
    */
   exports.prototype['dataAberturaEmpresa'] = undefined;
 
   /**
-   * Id da origem comercial
+   * {{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}
    * @member {Integer} idOrigemComercial
    */
   exports.prototype['idOrigemComercial'] = undefined;
 
   /**
-   * Id do produto
+   * {{{pessoa_juridica_aprovada_response_id_produto_value}}}
    * @member {Integer} idProduto
    */
   exports.prototype['idProduto'] = undefined;
 
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{pessoa_juridica_aprovada_response_numero_banco_value}}}
+   * @member {Integer} numeroBanco
+   */
+  exports.prototype['numeroBanco'] = undefined;
+
+  /**
+   * {{{pessoa_juridica_aprovada_response_numero_agencia_value}}}
    * @member {Integer} numeroAgencia
    */
   exports.prototype['numeroAgencia'] = undefined;
 
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}
    * @member {String} numeroContaCorrente
    */
   exports.prototype['numeroContaCorrente'] = undefined;
 
   /**
-   * Email da empresa
+   * {{{pessoa_juridica_aprovada_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Dia vencimento
+   * {{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}
    * @member {Integer} diaVencimento
    */
   exports.prototype['diaVencimento'] = undefined;
 
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * {{{pessoa_juridica_aprovada_response_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
+   * {{{pessoa_juridica_aprovada_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da proposta
+   * {{{pessoa_juridica_aprovada_response_id_proposta_value}}}
    * @member {Integer} idProposta
    */
   exports.prototype['idProposta'] = undefined;
 
   /**
-   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * {{{pessoa_juridica_aprovada_response_canal_entrada_value}}}
    * @member {String} canalEntrada
    */
   exports.prototype['canalEntrada'] = undefined;
 
   /**
-   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+   * {{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}
    * @member {Integer} valorPontuacao
    */
   exports.prototype['valorPontuacao'] = undefined;
 
   /**
-   * Apresenta os telefones da empresa
+   * {{{pessoa_juridica_aprovada_response_telefones_value}}}
    * @member {Array.<module:model/TelefonePessoaAprovadaResponse>} telefones
    */
   exports.prototype['telefones'] = undefined;
 
   /**
-   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+   * {{{pessoa_juridica_aprovada_response_enderecos_value}}}
    * @member {Array.<module:model/EnderecoAprovadoResponse>} enderecos
    */
   exports.prototype['enderecos'] = undefined;
 
   /**
-   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
+   * {{{pessoa_juridica_aprovada_response_socios_value}}}
    * @member {Array.<module:model/SocioAprovadoResponse>} socios
    */
   exports.prototype['socios'] = undefined;
 
   /**
-   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
+   * {{{pessoa_juridica_aprovada_response_referencias_value}}}
    * @member {Array.<module:model/ReferenciaComercialAprovadoResponse>} referencias
    */
   exports.prototype['referencias'] = undefined;
 
   /**
-   * Valor do Limite Global
+   * {{{pessoa_juridica_aprovada_response_limite_global_value}}}
    * @member {Number} limiteGlobal
    */
   exports.prototype['limiteGlobal'] = undefined;
 
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   * {{{pessoa_juridica_aprovada_response_limite_maximo_value}}}
    * @member {Number} limiteMaximo
    */
   exports.prototype['limiteMaximo'] = undefined;
 
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+   * {{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}
    * @member {Number} limiteParcelas
    */
   exports.prototype['limiteParcelas'] = undefined;

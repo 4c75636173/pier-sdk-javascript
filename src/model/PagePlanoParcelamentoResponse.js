@@ -18,12 +18,12 @@
   /**
    * The PagePlanoParcelamentoResponse model module.
    * @module model/PagePlanoParcelamentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PagePlanoParcelamentoResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
+   * {{{page_plano_parcelamento_response_description}}}
    * @alias module:model/PagePlanoParcelamentoResponse
    * @class
    */

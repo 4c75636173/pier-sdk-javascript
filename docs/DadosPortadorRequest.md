@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartao** | **String** | N\u00FAmero do cart\u00E3o. | 
-**cpf** | **String** | N\u00FAmero do CPF. | 
-**nome** | **String** | Nome do portador. | [optional] 
-**dataNascimento** | **String** | Data de nascimento do portador do cart\u00E3o. | [optional] 
-**cepResidencial** | **String** | CEP da resid\u00EAncia do portador da conta. | 
-**email** | **String** | E-mail do portador do cart\u00E3o. | 
-**ddd** | **String** | DDD do n\u00FAmero de telefone do portador do cart\u00E3o. | [optional] 
-**telefone** | **String** | N\u00FAmero do telefone do portador do cart\u00E3o. | [optional] 
+**cartao** | **String** | {{{dados_portador_request_cartao_value}}} | 
+**cpf** | **String** | {{{dados_portador_request_cpf_value}}} | 
+**nome** | **String** | {{{dados_portador_request_nome_value}}} | [optional] 
+**dataNascimento** | **String** | {{{dados_portador_request_data_nascimento_value}}} | [optional] 
+**cepResidencial** | **String** | {{{dados_portador_request_cep_residencial_value}}} | 
+**email** | **String** | {{{dados_portador_request_email_value}}} | 
+**ddd** | **String** | {{{dados_portador_request_ddd_value}}} | [optional] 
+**telefone** | **String** | {{{dados_portador_request_telefone_value}}} | [optional] 
 
 

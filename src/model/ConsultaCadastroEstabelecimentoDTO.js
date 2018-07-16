@@ -18,11 +18,12 @@
   /**
    * The ConsultaCadastroEstabelecimentoDTO model module.
    * @module model/ConsultaCadastroEstabelecimentoDTO
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ConsultaCadastroEstabelecimentoDTO</code>.
+   * {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
    * @alias module:model/ConsultaCadastroEstabelecimentoDTO
    * @class
    */
@@ -59,19 +60,19 @@
 
 
   /**
-   * Data hora de cadastro.
+   * {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
    * @member {String} dataHoraConsulta
    */
   exports.prototype['dataHoraConsulta'] = undefined;
 
   /**
-   * Status da consulta (1 - OK, 2 - NOK).
+   * {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO).
+   * {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
    * @member {module:model/ConsultaCadastroEstabelecimentoDTO.TipoEntidadeEnum} tipoEntidade
    */
   exports.prototype['tipoEntidade'] = undefined;

@@ -18,12 +18,12 @@
   /**
    * The WebHookResponse model module.
    * @module model/WebHookResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>WebHookResponse</code>.
-   * Representa\u00E7\u00E3o do recurso WebHook
+   * {{{web_hook_response_description}}}
    * @alias module:model/WebHookResponse
    * @class
    * @param id
@@ -73,31 +73,31 @@
 
 
   /**
-   * Id do WebHook
+   * {{{web_hook_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * TipoEvento a ser chamado pelo WebHook
+   * {{{web_hook_response_tipo_evento_value}}}
    * @member {module:model/WebHookResponse.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * M\u00E9todo que a ser chamado pelo WebHook
+   * {{{web_hook_response_metodo_value}}}
    * @member {module:model/WebHookResponse.MetodoEnum} metodo
    */
   exports.prototype['metodo'] = undefined;
 
   /**
-   * URL que a ser consumida pelo WebHook
+   * {{{web_hook_response_url_value}}}
    * @member {String} url
    */
   exports.prototype['url'] = undefined;
 
   /**
-   * Status do WebHook
+   * {{{web_hook_response_status_value}}}
    * @member {module:model/WebHookResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

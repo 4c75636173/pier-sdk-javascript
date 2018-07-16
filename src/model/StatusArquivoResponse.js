@@ -18,12 +18,12 @@
   /**
    * The StatusArquivoResponse model module.
    * @module model/StatusArquivoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>StatusArquivoResponse</code>.
-   * Objeto Response do status arquivo.
+   * {{{status_arquivo_response_description}}}
    * @alias module:model/StatusArquivoResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do status do arquivo
+   * {{{status_arquivo_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_descricao_value}}}
    * @member {String} descricao
    */
   exports.prototype['descricao'] = undefined;

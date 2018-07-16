@@ -18,12 +18,12 @@
   /**
    * The PageFaqResponse model module.
    * @module model/PageFaqResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageFaqResponse</code>.
-   * Lista de FAQs
+   * {{{page_faq_response_description}}}
    * @alias module:model/PageFaqResponse
    * @class
    */

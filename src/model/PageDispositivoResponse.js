@@ -18,12 +18,12 @@
   /**
    * The PageDispositivoResponse model module.
    * @module model/PageDispositivoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageDispositivoResponse</code>.
-   * Lista de Dispositivos
+   * {{{page_dispositivo_response_description}}}
    * @alias module:model/PageDispositivoResponse
    * @class
    */

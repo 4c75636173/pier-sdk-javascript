@@ -18,12 +18,12 @@
   /**
    * The TipoFaturamentoPorContaResponse model module.
    * @module model/TipoFaturamentoPorContaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TipoFaturamentoPorContaResponse</code>.
-   * Objeto Faturamento
+   * {{{tipo_faturamento_por_conta_response_description}}}
    * @alias module:model/TipoFaturamentoPorContaResponse
    * @class
    */
@@ -55,8 +55,8 @@
       if (data.hasOwnProperty('idConta')) {
         obj['idConta'] = ApiClient.convertToType(data['idConta'], 'Integer');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'Boolean');
+      if (data.hasOwnProperty('ativo')) {
+        obj['ativo'] = ApiClient.convertToType(data['ativo'], 'Boolean');
       }
       if (data.hasOwnProperty('idTipoFaturamento')) {
         obj['idTipoFaturamento'] = ApiClient.convertToType(data['idTipoFaturamento'], 'Integer');
@@ -76,43 +76,43 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+   * {{{tipo_faturamento_por_conta_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
+   * {{{tipo_faturamento_por_conta_response_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
-   * @member {Boolean} status
+   * {{{tipo_faturamento_por_conta_response_status_value}}}
+   * @member {Boolean} ativo
    */
-  exports.prototype['status'] = undefined;
+  exports.prototype['ativo'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
+   * {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
    * @member {Integer} idTipoFaturamento
    */
   exports.prototype['idTipoFaturamento'] = undefined;
 
   /**
-   * Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
+   * {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
+   * {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
    * @member {String} dataHoraCancelamento
    */
   exports.prototype['dataHoraCancelamento'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
+   * {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
    * @member {String} modificadoPor
    */
   exports.prototype['modificadoPor'] = undefined;

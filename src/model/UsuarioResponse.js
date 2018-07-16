@@ -18,12 +18,12 @@
   /**
    * The UsuarioResponse model module.
    * @module model/UsuarioResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>UsuarioResponse</code>.
-   * Representa\u00E7\u00E3o do recurso Usuario
+   * {{{usuario_response_description}}}
    * @alias module:model/UsuarioResponse
    * @class
    * @param login
@@ -37,6 +37,7 @@
 
 
     this['email'] = email;
+
 
 
 
@@ -84,70 +85,79 @@
       if (data.hasOwnProperty('tentativasIncorretas')) {
         obj['tentativasIncorretas'] = ApiClient.convertToType(data['tentativasIncorretas'], 'Integer');
       }
+      if (data.hasOwnProperty('bloquearAcesso')) {
+        obj['bloquearAcesso'] = ApiClient.convertToType(data['bloquearAcesso'], 'Boolean');
+      }
     }
     return obj;
   }
 
 
   /**
-   * Id do Usu\u00E1rio
+   * {{{usuario_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do Usu\u00E1rio
+   * {{{usuario_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Login do Usu\u00E1rio
+   * {{{usuario_response_login_value}}}
    * @member {String} login
    */
   exports.prototype['login'] = undefined;
 
   /**
-   * Id do emissor do usu\u00E1rio
+   * {{{usuario_response_id_emissor_value}}}
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * CPF do Usu\u00E1rio
+   * {{{usuario_response_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * Email do Usu\u00E1rio
+   * {{{usuario_response_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * Status do Usu\u00E1rio
+   * {{{usuario_response_status_value}}}
    * @member {module:model/UsuarioResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data de cria\u00E7\u00E3o do Usu\u00E1rio
+   * {{{usuario_response_data_criacao_value}}}
    * @member {String} dataCriacao
    */
   exports.prototype['dataCriacao'] = undefined;
 
   /**
-   * Data de modifica\u00E7\u00E3o do Usu\u00E1rio
+   * {{{usuario_response_data_modificacao_value}}}
    * @member {String} dataModificacao
    */
   exports.prototype['dataModificacao'] = undefined;
 
   /**
-   * N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
+   * {{{usuario_response_tentativas_incorretas_value}}}
    * @member {Integer} tentativasIncorretas
    */
   exports.prototype['tentativasIncorretas'] = undefined;
+
+  /**
+   * {{{usuario_response_bloquear_acesso_descricao}}}
+   * @member {Boolean} bloquearAcesso
+   */
+  exports.prototype['bloquearAcesso'] = undefined;
 
 
   /**

@@ -18,12 +18,12 @@
   /**
    * The ArquivoAUDResponse model module.
    * @module model/ArquivoAUDResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ArquivoAUDResponse</code>.
-   * Objeto Response da auditoria do arquivo.
+   * {{{arquivo_a_u_d_response_description}}}
    * @alias module:model/ArquivoAUDResponse
    * @class
    */
@@ -100,79 +100,79 @@
 
 
   /**
-   * Identificador da auditoria arquivo
+   * {{{arquivo_a_u_d_response_rev_value}}}
    * @member {Integer} rev
    */
   exports.prototype['rev'] = undefined;
 
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
+   * {{{arquivo_a_u_d_response_rev_type_value}}}
    * @member {Integer} revType
    */
   exports.prototype['revType'] = undefined;
 
   /**
-   * Identificador do arquivo auditado
+   * {{{arquivo_a_u_d_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Nome do arquivo auditado
+   * {{{arquivo_a_u_d_response_nome_value}}}
    * @member {String} nome
    */
   exports.prototype['nome'] = undefined;
 
   /**
-   * Identificador da resposta da Acesso Digital
+   * {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
    * @member {String} idRespostaAcessoDigital
    */
   exports.prototype['idRespostaAcessoDigital'] = undefined;
 
   /**
-   * Data de resposta da Acesso Digital
+   * {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
    * @member {String} dataHoraRespostaAcessoDigital
    */
   exports.prototype['dataHoraRespostaAcessoDigital'] = undefined;
 
   /**
-   * Identificador da resposta da Neurotech
+   * {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
    * @member {String} idRespostaNeurotech
    */
   exports.prototype['idRespostaNeurotech'] = undefined;
 
   /**
-   * Data de resposta da Neurotech
+   * {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
    * @member {String} dataHoraRespostaNeurotech
    */
   exports.prototype['dataHoraRespostaNeurotech'] = undefined;
 
   /**
-   * Uri de acesso
+   * {{{arquivo_a_u_d_response_uri_value}}}
    * @member {String} uri
    */
   exports.prototype['uri'] = undefined;
 
   /**
-   * Data de inclus\u00E3o do arquivo auditado
+   * {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
    * @member {String} dataHoraInclusao
    */
   exports.prototype['dataHoraInclusao'] = undefined;
 
   /**
-   * Data de altera\u00E7\u00E3o do arquivo auditado
+   * {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
    * @member {String} dataHoraAlteracao
    */
   exports.prototype['dataHoraAlteracao'] = undefined;
 
   /**
-   * Extens\u00E3o do arquivo auditado
+   * {{{arquivo_a_u_d_response_extensao_value}}}
    * @member {String} extensao
    */
   exports.prototype['extensao'] = undefined;
 
   /**
-   * Lista  de par\u00E2metros do arquivo auditado
+   * {{{arquivo_a_u_d_response_parametros_value}}}
    * @member {Array.<module:model/ArquivoParametroAUDResponse>} parametros
    */
   exports.prototype['parametros'] = undefined;

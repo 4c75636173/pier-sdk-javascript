@@ -18,12 +18,12 @@
   /**
    * The HistoricoAssessoriaResponse model module.
    * @module model/HistoricoAssessoriaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>HistoricoAssessoriaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
+   * {{{historico_assessoria_response_description}}}
    * @alias module:model/HistoricoAssessoriaResponse
    * @class
    */
@@ -60,19 +60,19 @@
 
 
   /**
-   * Apresenta a data e hora do hist\u00F3rico
+   * {{{historico_assessoria_response_data_hora_historico_value}}}
    * @member {String} dataHoraHistorico
    */
   exports.prototype['dataHoraHistorico'] = undefined;
 
   /**
-   * Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
+   * {{{historico_assessoria_response_tipo_historico_value}}}
    * @member {String} tipoHistorico
    */
   exports.prototype['tipoHistorico'] = undefined;
 
   /**
-   * Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
+   * {{{historico_assessoria_response_nome_assessoria_value}}}
    * @member {String} nomeAssessoria
    */
   exports.prototype['nomeAssessoria'] = undefined;

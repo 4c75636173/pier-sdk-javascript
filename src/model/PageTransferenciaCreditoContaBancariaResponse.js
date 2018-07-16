@@ -18,12 +18,12 @@
   /**
    * The PageTransferenciaCreditoContaBancariaResponse model module.
    * @module model/PageTransferenciaCreditoContaBancariaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageTransferenciaCreditoContaBancariaResponse</code>.
-   * Lista de Transfer\u00EAncias de cr\u00E9dito conta banc\u00E1ria
+   * {{{page_transferencia_credito_conta_bancaria_response_description}}}
    * @alias module:model/PageTransferenciaCreditoContaBancariaResponse
    * @class
    */

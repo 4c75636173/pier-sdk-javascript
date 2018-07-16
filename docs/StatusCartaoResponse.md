@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id)  | 
-**nome** | **String** | Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o. | 
-**permiteDesbloquear** | **Integer** | Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
-**permiteAtribuirComoBloqueio** | **Integer** | Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
-**permiteAtribuirComoCancelamento** | **Integer** | Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
-**cobrarTarifaAoEmitirNovaVia** | **Integer** | Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo. | [optional] 
+**id** | **Integer** | {{{status_cartao_response_id_value}}} | 
+**nome** | **String** | {{{status_cartao_response_nome_value}}} | 
+**permiteDesbloquear** | **Integer** | {{{status_cartao_response_permite_desbloquear_value}}} | [optional] 
+**permiteAtribuirComoBloqueio** | **Integer** | {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}} | [optional] 
+**permiteAtribuirComoCancelamento** | **Integer** | {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}} | [optional] 
+**cobrarTarifaAoEmitirNovaVia** | **Integer** | {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}} | [optional] 
 
 

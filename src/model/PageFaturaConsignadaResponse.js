@@ -18,12 +18,12 @@
   /**
    * The PageFaturaConsignadaResponse model module.
    * @module model/PageFaturaConsignadaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageFaturaConsignadaResponse</code>.
-   * Lista de faturas
+   * {{{page_fatura_consignada_response_description}}}
    * @alias module:model/PageFaturaConsignadaResponse
    * @class
    */

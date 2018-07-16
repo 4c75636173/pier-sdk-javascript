@@ -18,12 +18,12 @@
   /**
    * The PageConfiguracaoRotativoResponse model module.
    * @module model/PageConfiguracaoRotativoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageConfiguracaoRotativoResponse</code>.
-   * Listar Configura\u00E7\u00E3o Rotativo
+   * {{{page_configuracao_rotativo_response_description}}}
    * @alias module:model/PageConfiguracaoRotativoResponse
    * @class
    */

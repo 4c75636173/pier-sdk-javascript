@@ -18,12 +18,12 @@
   /**
    * The PageEstabelecimentoResponse model module.
    * @module model/PageEstabelecimentoResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageEstabelecimentoResponse</code>.
-   * Lista de estabelecimentos
+   * {{{page_estabelecimento_response_description}}}
    * @alias module:model/PageEstabelecimentoResponse
    * @class
    */

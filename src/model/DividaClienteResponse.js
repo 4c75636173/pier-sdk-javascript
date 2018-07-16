@@ -18,12 +18,12 @@
   /**
    * The DividaClienteResponse model module.
    * @module model/DividaClienteResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>DividaClienteResponse</code>.
-   * D\u00EDvida do cliente
+   * {{{divida_cliente_response_description}}}
    * @alias module:model/DividaClienteResponse
    * @class
    */
@@ -116,103 +116,103 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * {{{divida_cliente_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
    * @member {String} dataVencimentoFaturaAtraso
    */
   exports.prototype['dataVencimentoFaturaAtraso'] = undefined;
 
   /**
-   * Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_quantidade_dias_atraso_value}}}
    * @member {Integer} quantidadeDiasAtraso
    */
   exports.prototype['quantidadeDiasAtraso'] = undefined;
 
   /**
-   * Data de vencimento do acordo
+   * {{{divida_cliente_response_data_vencimento_acordo_value}}}
    * @member {String} dataVencimentoAcordo
    */
   exports.prototype['dataVencimentoAcordo'] = undefined;
 
   /**
-   * Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
+   * {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
    * @member {Integer} quantidadeDiasAtrasoCorrigido
    */
   exports.prototype['quantidadeDiasAtrasoCorrigido'] = undefined;
 
   /**
-   * Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_valor_saldo_devedor_value}}}
    * @member {Number} valorSaldoDevedor
    */
   exports.prototype['valorSaldoDevedor'] = undefined;
 
   /**
-   * Percentual de corre\u00E7\u00E3o
+   * {{{divida_cliente_response_taxa_correcao_value}}}
    * @member {Number} taxaCorrecao
    */
   exports.prototype['taxaCorrecao'] = undefined;
 
   /**
-   * Valor da corre\u00E7\u00E3o
+   * {{{divida_cliente_response_valor_correcao_value}}}
    * @member {Number} valorCorrecao
    */
   exports.prototype['valorCorrecao'] = undefined;
 
   /**
-   * Valor do IOF devido
+   * {{{divida_cliente_response_valor_i_o_f_value}}}
    * @member {Number} valorIOF
    */
   exports.prototype['valorIOF'] = undefined;
 
   /**
-   * Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
+   * {{{divida_cliente_response_valor_saldo_corrigido_value}}}
    * @member {Number} valorSaldoCorrigido
    */
   exports.prototype['valorSaldoCorrigido'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
+   * {{{divida_cliente_response_id_status_conta_value}}}
    * @member {Integer} idStatusConta
    */
   exports.prototype['idStatusConta'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{divida_cliente_response_descricao_status_conta_value}}}
    * @member {String} descricaoStatusConta
    */
   exports.prototype['descricaoStatusConta'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
+   * {{{divida_cliente_response_id_status_acordo_value}}}
    * @member {Integer} idStatusAcordo
    */
   exports.prototype['idStatusAcordo'] = undefined;
 
   /**
-   * Descri\u00E7\u00E3o do status do acordo
+   * {{{divida_cliente_response_descricao_status_acordo_value}}}
    * @member {String} descricaoStatusAcordo
    */
   exports.prototype['descricaoStatusAcordo'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
+   * {{{divida_cliente_response_id_escritorio_cobranca_value}}}
    * @member {Integer} idEscritorioCobranca
    */
   exports.prototype['idEscritorioCobranca'] = undefined;
 
   /**
-   * Nome do escrit\u00F3rio de cobran\u00E7a
+   * {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
    * @member {String} nomeEscritorioCobranca
    */
   exports.prototype['nomeEscritorioCobranca'] = undefined;
 
   /**
-   * Email do devedor
+   * {{{divida_cliente_response_email_pessoa_conta_value}}}
    * @member {String} emailPessoaConta
    */
   exports.prototype['emailPessoaConta'] = undefined;

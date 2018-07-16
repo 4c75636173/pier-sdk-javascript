@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nsuOrigem** | **String** | N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou. | 
-**nsuOrigemTransacaoCancelada** | **String** | N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada. | 
-**codigoProcessamento** | **String** | C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o. | 
-**dataHoraTransacaoCancelada** | **String** | Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 | 
-**valorTransacao** | **Number** | Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos. | 
-**numeroRealCartao** | **String** | N\u00FAmero Real do Cart\u00E3o. | 
-**dataValidadeCartao** | **String** | Data de Validade do Cart\u00E3o. Ex: AAMM | 
-**numeroEstabelecimento** | **Integer** | N\u00FAmero do Estabelecimento (N\u00FAmero+DV). | 
-**dataHoraTerminal** | **String** | Apresenta a data e hora local da consulta yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 | 
-**terminalRequisitante** | **String** | Apresenta a identifica\u00E7\u00E3o do terminal requisitante | 
+**nsuOrigem** | **String** | {{{transacao_on_us_request_nsu_origem_value}}} | 
+**nsuOrigemTransacaoCancelada** | **String** | {{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}} | 
+**codigoProcessamento** | **String** | {{{transacao_on_us_request_codigo_processamento_value}}} | 
+**dataHoraTransacaoCancelada** | **String** | {{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}} | 
+**valorTransacao** | **Number** | {{{transacao_on_us_request_valor_transacao_value}}} | 
+**numeroRealCartao** | **String** | {{{transacao_on_us_request_numero_real_cartao_value}}} | 
+**dataValidadeCartao** | **String** | {{{transacao_on_us_request_data_validade_cartao_value}}} | 
+**numeroEstabelecimento** | **Integer** | {{{transacao_on_us_request_numero_estabelecimento_value}}} | 
+**dataHoraTerminal** | **String** | {{{transacao_on_us_request_data_hora_terminal_value}}} | 
+**terminalRequisitante** | **String** | {{{transacao_on_us_request_terminal_requisitante_value}}} | 
 
 

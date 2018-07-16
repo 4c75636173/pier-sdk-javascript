@@ -18,12 +18,12 @@
   /**
    * The PageArquivoAUDResponse model module.
    * @module model/PageArquivoAUDResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageArquivoAUDResponse</code>.
-   * Lista de auditorias do arquivo
+   * {{{page_arquivo_a_u_d_response_description}}}
    * @alias module:model/PageArquivoAUDResponse
    * @class
    */

@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idTransferencia** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da transferencia. | [optional] 
-**idConta** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o da conta. | [optional] 
-**idCartao** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o. | [optional] 
-**valorCompra** | **Number** | Valor da transfer\u00EAncia. | [optional] 
-**valorContrato** | **Number** | Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque. | [optional] 
-**dataCompra** | **String** | Data da transfer\u00EAncia. | [optional] 
-**status** | **Integer** | C\u00F3digo de status de processamento. | [optional] 
-**statusProcessamento** | **String** | Status Processamento. | [optional] 
+**idTransferencia** | **Integer** | {{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}} | [optional] 
+**idConta** | **Integer** | {{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}} | [optional] 
+**idCartao** | **Integer** | {{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}} | [optional] 
+**valorCompra** | **Number** | {{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}} | [optional] 
+**valorContrato** | **Number** | {{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}} | [optional] 
+**dataCompra** | **String** | {{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}} | [optional] 
+**status** | **Integer** | {{{transferencia_credito_conta_bancaria_lista_response_status_value}}} | [optional] 
+**statusProcessamento** | **String** | {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}} | [optional] 
 
 

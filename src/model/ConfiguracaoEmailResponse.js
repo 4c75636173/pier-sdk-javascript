@@ -18,12 +18,12 @@
   /**
    * The ConfiguracaoEmailResponse model module.
    * @module model/ConfiguracaoEmailResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ConfiguracaoEmailResponse</code>.
-   * Objeto Configura\u00E7\u00E3o EMAIL
+   * {{{configuracao_email_response_description}}}
    * @alias module:model/ConfiguracaoEmailResponse
    * @class
    */
@@ -100,79 +100,79 @@
 
 
   /**
-   * Id da Configura\u00E7\u00E3o EMAIL.
+   * {{{configuracao_email_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * IP (Host) do servidor de e-mail.
+   * {{{configuracao_email_response_host_value}}}
    * @member {String} host
    */
   exports.prototype['host'] = undefined;
 
   /**
-   * Porta usada pelo servidor de e-mail.
+   * {{{configuracao_email_response_port_value}}}
    * @member {String} port
    */
   exports.prototype['port'] = undefined;
 
   /**
-   * Porta usada pelo servi\u00E7o TLS/STARTTLS.
+   * {{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}
    * @member {String} portTLSSTARTTLS
    */
   exports.prototype['portTLSSTARTTLS'] = undefined;
 
   /**
-   * Porta usada pelo servi\u00E7o SSL.
+   * {{{configuracao_email_response_port_s_s_l_value}}}
    * @member {String} portSSL
    */
   exports.prototype['portSSL'] = undefined;
 
   /**
-   * Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).
+   * {{{configuracao_email_response_protocolo_value}}}
    * @member {String} protocolo
    */
   exports.prototype['protocolo'] = undefined;
 
   /**
-   * O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
+   * {{{configuracao_email_response_requer_autenticacao_value}}}
    * @member {Boolean} requerAutenticacao
    */
   exports.prototype['requerAutenticacao'] = undefined;
 
   /**
-   * O servi\u00E7o de e-mail requer SSL.
+   * {{{configuracao_email_response_requer_s_s_l_value}}}
    * @member {Boolean} requerSSL
    */
   exports.prototype['requerSSL'] = undefined;
 
   /**
-   * O servi\u00E7o de e-mail requer TLS.
+   * {{{configuracao_email_response_requer_t_l_s_value}}}
    * @member {Boolean} requerTLS
    */
   exports.prototype['requerTLS'] = undefined;
 
   /**
-   * Usuario do servi\u00E7o de e-mail.
+   * {{{configuracao_email_response_usuario_value}}}
    * @member {String} usuario
    */
   exports.prototype['usuario'] = undefined;
 
   /**
-   * Senha de usu\u00E1rio do servi\u00E7o de e-mail.
+   * {{{configuracao_email_response_senha_value}}}
    * @member {String} senha
    */
   exports.prototype['senha'] = undefined;
 
   /**
-   * Data de inclus\u00E3o.
+   * {{{configuracao_email_response_data_inclusao_value}}}
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
 
   /**
-   * Data de altera\u00E7\u00E3o.
+   * {{{configuracao_email_response_data_alteracao_value}}}
    * @member {String} dataAlteracao
    */
   exports.prototype['dataAlteracao'] = undefined;

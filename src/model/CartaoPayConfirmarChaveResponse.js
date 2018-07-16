@@ -18,12 +18,12 @@
   /**
    * The CartaoPayConfirmarChaveResponse model module.
    * @module model/CartaoPayConfirmarChaveResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>CartaoPayConfirmarChaveResponse</code>.
-   * Resposta da requisi\u00E7\u00E3o para confirma\u00E7\u00E3o da chave de criptograma
+   * {{{cartao_pay_confirmar_chave_response_description}}}
    * @alias module:model/CartaoPayConfirmarChaveResponse
    * @class
    */
@@ -84,55 +84,55 @@
 
 
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_pay_base_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * N\u00FAmero do cart\u00E3o real criptografado
+   * {{{cartao_pay_base_response_numero_cartao_value}}}
    * @member {String} numeroCartao
    */
   exports.prototype['numeroCartao'] = undefined;
 
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_base_response_data_validade_cartao_value}}}
    * @member {String} dataValidadeCartao
    */
   exports.prototype['dataValidadeCartao'] = undefined;
 
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_base_response_nome_impresso_value}}}
    * @member {String} nomeImpresso
    */
   exports.prototype['nomeImpresso'] = undefined;
 
   /**
-   * Identificador do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_id_entidade_value}}}
    * @member {Integer} idEntidade
    */
   exports.prototype['idEntidade'] = undefined;
 
   /**
-   * Nome do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_nome_entidade_value}}}
    * @member {String} nomeEntidade
    */
   exports.prototype['nomeEntidade'] = undefined;
 
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_base_response_status_value}}}
    * @member {module:model/CartaoPayConfirmarChaveResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
   /**
-   * Data de validade da chave do criptograma
+   * {{{cartao_pay_response_data_validade_chave_criptograma_value}}}
    * @member {String} dataValidadeChaveCriptograma
    */
   exports.prototype['dataValidadeChaveCriptograma'] = undefined;
 
   /**
-   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
+   * {{{cartao_pay_confirmar_chave_response_chave_criptograma_value}}}
    * @member {String} chaveCriptograma
    */
   exports.prototype['chaveCriptograma'] = undefined;

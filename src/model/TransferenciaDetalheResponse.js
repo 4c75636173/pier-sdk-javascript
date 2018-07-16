@@ -18,12 +18,12 @@
   /**
    * The TransferenciaDetalheResponse model module.
    * @module model/TransferenciaDetalheResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>TransferenciaDetalheResponse</code>.
-   * Objeto transferencia
+   * {{{transferencia_detalhe_response_description}}}
    * @alias module:model/TransferenciaDetalheResponse
    * @class
    */
@@ -80,49 +80,49 @@
 
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+   * {{{transferencia_detalhe_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * Data estabelecida para ocorrer a transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_data_transferencia_value}}}
    * @member {String} dataTransferencia
    */
   exports.prototype['dataTransferencia'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+   * {{{transferencia_detalhe_response_id_conta_origem_value}}}
    * @member {Integer} idContaOrigem
    */
   exports.prototype['idContaOrigem'] = undefined;
 
   /**
-   * Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_nome_pessoa_origem_value}}}
    * @member {String} nomePessoaOrigem
    */
   exports.prototype['nomePessoaOrigem'] = undefined;
 
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
+   * {{{transferencia_detalhe_response_id_conta_destino_value}}}
    * @member {Integer} idContaDestino
    */
   exports.prototype['idContaDestino'] = undefined;
 
   /**
-   * Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_nome_pessoa_destino_value}}}
    * @member {String} nomePessoaDestino
    */
   exports.prototype['nomePessoaDestino'] = undefined;
 
   /**
-   * Valor estabelecido para ser transferido.
+   * {{{transferencia_detalhe_response_valor_transferencia_value}}}
    * @member {Number} valorTransferencia
    */
   exports.prototype['valorTransferencia'] = undefined;
 
   /**
-   * Valor estabelecido da tarifa para a transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_valor_tarifa_value}}}
    * @member {Number} valorTarifa
    */
   exports.prototype['valorTarifa'] = undefined;

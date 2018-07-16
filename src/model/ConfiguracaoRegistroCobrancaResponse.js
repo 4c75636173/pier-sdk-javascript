@@ -18,16 +18,18 @@
   /**
    * The ConfiguracaoRegistroCobrancaResponse model module.
    * @module model/ConfiguracaoRegistroCobrancaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>ConfiguracaoRegistroCobrancaResponse</code>.
-   * Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
+   * {{{configuracao_registro_cobranca_response_description}}}
    * @alias module:model/ConfiguracaoRegistroCobrancaResponse
    * @class
+   * @param secret
+   * @param clientID
    */
-  var exports = function() {
+  var exports = function(secret, clientID) {
 
 
 
@@ -44,6 +46,8 @@
 
 
 
+    this['secret'] = secret;
+    this['clientID'] = clientID;
   };
 
   /**
@@ -102,100 +106,118 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
+      if (data.hasOwnProperty('secret')) {
+        obj['secret'] = ApiClient.convertToType(data['secret'], 'String');
+      }
+      if (data.hasOwnProperty('clientID')) {
+        obj['clientID'] = ApiClient.convertToType(data['clientID'], 'String');
+      }
     }
     return obj;
   }
 
 
   /**
-   * C\u00F3digo identificador da configura\u00E7\u00E3o.
+   * {{{configuracao_registro_cobranca_response_id_value}}}
    * @member {Integer} id
    */
   exports.prototype['id'] = undefined;
 
   /**
-   * C\u00F3digo do emissor.
+   * {{{configuracao_registro_cobranca_response_id_emissor_value}}}
    * @member {Integer} idEmissor
    */
   exports.prototype['idEmissor'] = undefined;
 
   /**
-   * C\u00F3digo do Banco.
+   * {{{configuracao_registro_cobranca_response_codigo_banco_value}}}
    * @member {Integer} codigoBanco
    */
   exports.prototype['codigoBanco'] = undefined;
 
   /**
-   * URL de acesso ao banco.
+   * {{{configuracao_registro_cobranca_response_uri_value}}}
    * @member {String} uri
    */
   exports.prototype['uri'] = undefined;
 
   /**
-   * Caminho do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_response_key_store_name_value}}}
    * @member {String} keyStoreName
    */
   exports.prototype['keyStoreName'] = undefined;
 
   /**
-   * Senha do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_response_key_store_password_value}}}
    * @member {String} keyStorePassword
    */
   exports.prototype['keyStorePassword'] = undefined;
 
   /**
-   * Alias do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_response_keystore_alias_value}}}
    * @member {String} keystoreAlias
    */
   exports.prototype['keystoreAlias'] = undefined;
 
   /**
-   * Senha da chave privada do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}
    * @member {String} keyStorePrivateKeyPassword
    */
   exports.prototype['keyStorePrivateKeyPassword'] = undefined;
 
   /**
-   * Tipo do certificado digital do emissor.
+   * {{{configuracao_registro_cobranca_response_type_keystore_value}}}
    * @member {String} typeKeystore
    */
   exports.prototype['typeKeystore'] = undefined;
 
   /**
-   * Caminho do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_response_trust_store_name_value}}}
    * @member {String} trustStoreName
    */
   exports.prototype['trustStoreName'] = undefined;
 
   /**
-   * Senha do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_response_trust_store_password_value}}}
    * @member {String} trustStorePassword
    */
   exports.prototype['trustStorePassword'] = undefined;
 
   /**
-   * Alias do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_response_truststore_alias_value}}}
    * @member {String} truststoreAlias
    */
   exports.prototype['truststoreAlias'] = undefined;
 
   /**
-   * Tipo do certificado digital do banco.
+   * {{{configuracao_registro_cobranca_response_type_truststore_value}}}
    * @member {String} typeTruststore
    */
   exports.prototype['typeTruststore'] = undefined;
 
   /**
-   * URL adicional de acesso ao banco.
+   * {{{configuracao_registro_cobranca_response_uri_adicional_value}}}
    * @member {String} uriAdicional
    */
   exports.prototype['uriAdicional'] = undefined;
 
   /**
-   * Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
+   * {{{configuracao_registro_cobranca_response_status_value}}}
    * @member {module:model/ConfiguracaoRegistroCobrancaResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
+
+  /**
+   * {{{configuracao_registro_cobranca_persist_secret_value}}}
+   * @member {module:model/ConfiguracaoRegistroCobrancaResponse.SecretEnum} secret
+   */
+  exports.prototype['secret'] = undefined;
+
+  /**
+   * {{{configuracao_registro_cobranca_persist_client_id_value}}}
+   * @member {module:model/ConfiguracaoRegistroCobrancaResponse.ClientIDEnum} clientID
+   */
+  exports.prototype['clientID'] = undefined;
 
 
   /**
@@ -204,6 +226,40 @@
    * @readonly
    */
   exports.StatusEnum = { 
+    /**
+     * value: INATIVO
+     * @const
+     */
+    INATIVO: "INATIVO",
+    
+    /**
+     * value: ATIVO
+     * @const
+     */
+    ATIVO: "ATIVO"
+  };  /**
+   * Allowed values for the <code>secret</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.SecretEnum = { 
+    /**
+     * value: INATIVO
+     * @const
+     */
+    INATIVO: "INATIVO",
+    
+    /**
+     * value: ATIVO
+     * @const
+     */
+    ATIVO: "ATIVO"
+  };  /**
+   * Allowed values for the <code>clientID</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ClientIDEnum = { 
     /**
      * value: INATIVO
      * @const

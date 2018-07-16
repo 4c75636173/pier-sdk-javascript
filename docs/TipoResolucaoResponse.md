@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Integer** | C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o | [optional] 
-**descricao** | **String** | Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o | [optional] 
+**id** | **Integer** | {{{tipo_resolucao_response_id_value}}} | [optional] 
+**descricao** | **String** | {{{tipo_resolucao_response_descricao_value}}} | [optional] 
 
 

@@ -18,12 +18,12 @@
   /**
    * The PageHistoricoAssessoriaResponse model module.
    * @module model/PageHistoricoAssessoriaResponse
-   * @version 2.57.0
+   * @version 2.68.0
    */
 
   /**
    * Constructs a new <code>PageHistoricoAssessoriaResponse</code>.
-   * Lista de Historicos Assessorias
+   * {{{page_historico_assessoria_response_description}}}
    * @alias module:model/PageHistoricoAssessoriaResponse
    * @class
    */
