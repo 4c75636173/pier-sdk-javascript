@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT24**](GlobaltagwebhookApi.md#alterarUsingPUT24) | **PUT** /api/webhooks/{id} | {{{web_hook_resource_alterar}}}
-[**consultarUsingGET52**](GlobaltagwebhookApi.md#consultarUsingGET52) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
+[**consultarUsingGET53**](GlobaltagwebhookApi.md#consultarUsingGET53) | **GET** /api/webhooks/{id} | {{{web_hook_resource_consultar}}}
 [**listarUsingGET66**](GlobaltagwebhookApi.md#listarUsingGET66) | **GET** /api/webhooks | {{{web_hook_resource_listar}}}
 [**salvarUsingPOST35**](GlobaltagwebhookApi.md#salvarUsingPOST35) | **POST** /api/webhooks | {{{web_hook_resource_salvar}}}
 
@@ -63,9 +63,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET52"></a>
-# **consultarUsingGET52**
-> WebHookResponse consultarUsingGET52(id)
+<a name="consultarUsingGET53"></a>
+# **consultarUsingGET53**
+> WebHookResponse consultarUsingGET53(id)
 
 {{{web_hook_resource_consultar}}}
 
@@ -87,7 +87,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET52(id, callback);
+api.consultarUsingGET53(id, callback);
 ```
 
 ### Parameters

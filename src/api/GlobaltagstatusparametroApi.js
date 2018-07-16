@@ -18,7 +18,7 @@
   /**
    * globaltagstatusparametro service.
    * @module api/GlobaltagstatusparametroApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET35 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET35Callback
+     * Callback function to receive the result of the consultarUsingGET36 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * {{{status_conta_resource_consultar}}}
      * {{{status_conta_resource_consultar_notes}}}
      * @param {Integer} id {{{status_conta_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusContaResponse}
      */
-    this.consultarUsingGET35 = function(id, callback) {
+    this.consultarUsingGET36 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET35";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET36 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback
+     * Callback function to receive the result of the consultarUsingGET37 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET37Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * {{{status_impressao_resource_consultar}}}
      * {{{status_impressao_resource_consultar_notes}}}
      * @param {Integer} id {{{status_impressao_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressaoResponse}
      */
-    this.consultarUsingGET36 = function(id, callback) {
+    this.consultarUsingGET37 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
       }
 
 

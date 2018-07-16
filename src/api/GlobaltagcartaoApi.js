@@ -18,7 +18,7 @@
   /**
    * globaltagcartao service.
    * @module api/GlobaltagcartaoApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -695,8 +695,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET9 operation.
-     * @callback module:api/GlobaltagcartaoApi~consultarUsingGET9Callback
+     * Callback function to receive the result of the consultarUsingGET10 operation.
+     * @callback module:api/GlobaltagcartaoApi~consultarUsingGET10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -708,16 +708,16 @@
      * @param {Integer} id {{{cartao_resource_consultar_param_id}}}
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization Authorization
-     * @param {module:api/GlobaltagcartaoApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcartaoApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoDetalheResponse}
      */
-    this.consultarUsingGET9 = function(id, opts, callback) {
+    this.consultarUsingGET10 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
       }
 
 

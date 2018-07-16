@@ -18,7 +18,7 @@
   /**
    * globaltagwebhook service.
    * @module api/GlobaltagwebhookApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -89,8 +89,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET52 operation.
-     * @callback module:api/GlobaltagwebhookApi~consultarUsingGET52Callback
+     * Callback function to receive the result of the consultarUsingGET53 operation.
+     * @callback module:api/GlobaltagwebhookApi~consultarUsingGET53Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -100,15 +100,15 @@
      * {{{web_hook_resource_consultar}}}
      * {{{web_hook_resource_consultar_notes}}}
      * @param {Integer} id {{{web_hook_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagwebhookApi~consultarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagwebhookApi~consultarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.consultarUsingGET52 = function(id, callback) {
+    this.consultarUsingGET53 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET52";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET53";
       }
 
 

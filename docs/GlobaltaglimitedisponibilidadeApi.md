@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT9**](GlobaltaglimitedisponibilidadeApi.md#alterarUsingPUT9) | **PUT** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_alterar}}}
-[**consultarUsingGET22**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET22) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**consultarUsingGET23**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET23) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
 
 
 <a name="alterarUsingPUT9"></a>
@@ -82,9 +82,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> LimiteDisponibilidadeResponse consultarUsingGET22(idConta)
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> LimiteDisponibilidadeResponse consultarUsingGET23(idConta)
 
 {{{limite_disponibilidade_resource_consultar}}}
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(idConta, callback);
+api.consultarUsingGET23(idConta, callback);
 ```
 
 ### Parameters

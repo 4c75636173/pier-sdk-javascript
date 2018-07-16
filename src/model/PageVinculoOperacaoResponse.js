@@ -18,7 +18,7 @@
   /**
    * The PageVinculoOperacaoResponse model module.
    * @module model/PageVinculoOperacaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

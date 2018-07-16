@@ -18,7 +18,7 @@
   /**
    * The TelefoneEstabelecimentoUpdate model module.
    * @module model/TelefoneEstabelecimentoUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

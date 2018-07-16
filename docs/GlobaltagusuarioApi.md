@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**ativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#ativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
 [**atualizarUsingPUT2**](GlobaltagusuarioApi.md#atualizarUsingPUT2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultarContasVinculadasUsingGET**](GlobaltagusuarioApi.md#consultarContasVinculadasUsingGET) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultarUsingGET14**](GlobaltagusuarioApi.md#consultarUsingGET14) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultarUsingGET50**](GlobaltagusuarioApi.md#consultarUsingGET50) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultarUsingGET15**](GlobaltagusuarioApi.md#consultarUsingGET15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultarUsingGET51**](GlobaltagusuarioApi.md#consultarUsingGET51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#desativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
 [**listarUsingGET62**](GlobaltagusuarioApi.md#listarUsingGET62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperarSenhaUsingPOST**](GlobaltagusuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
@@ -319,9 +319,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> PageControleSegurancaDispositivoResponse consultarUsingGET14(idUsuario, opts)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> PageControleSegurancaDispositivoResponse consultarUsingGET15(idUsuario, opts)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -348,7 +348,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(idUsuario, opts, callback);
+api.consultarUsingGET15(idUsuario, opts, callback);
 ```
 
 ### Parameters
@@ -373,9 +373,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET50"></a>
-# **consultarUsingGET50**
-> UsuarioResponse consultarUsingGET50(id)
+<a name="consultarUsingGET51"></a>
+# **consultarUsingGET51**
+> UsuarioResponse consultarUsingGET51(id)
 
 {{{usuario_resource_consultar}}}
 
@@ -397,7 +397,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET50(id, callback);
+api.consultarUsingGET51(id, callback);
 ```
 
 ### Parameters

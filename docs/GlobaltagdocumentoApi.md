@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT21**](GlobaltagdocumentoApi.md#alterarUsingPUT21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
 [**atualizarUsingPUT3**](GlobaltagdocumentoApi.md#atualizarUsingPUT3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultarUsingGET16**](GlobaltagdocumentoApi.md#consultarUsingGET16) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultarUsingGET46**](GlobaltagdocumentoApi.md#consultarUsingGET46) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultarUsingGET18**](GlobaltagdocumentoApi.md#consultarUsingGET18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultarUsingGET47**](GlobaltagdocumentoApi.md#consultarUsingGET47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrarUsingPOST1**](GlobaltagdocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
 [**listarUsingGET21**](GlobaltagdocumentoApi.md#listarUsingGET21) | **GET** /api/documentos | {{{documento_resource_listar}}}
 [**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
@@ -116,9 +116,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET16"></a>
-# **consultarUsingGET16**
-> DocumentoDetalhadoResponse consultarUsingGET16(id)
+<a name="consultarUsingGET17"></a>
+# **consultarUsingGET17**
+> DocumentoDetalhadoResponse consultarUsingGET17(id)
 
 {{{documento_resource_consultar}}}
 
@@ -140,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET16(id, callback);
+api.consultarUsingGET17(id, callback);
 ```
 
 ### Parameters
@@ -162,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> DocumentoTemplateResponse consultarUsingGET17(id)
+<a name="consultarUsingGET18"></a>
+# **consultarUsingGET18**
+> DocumentoTemplateResponse consultarUsingGET18(id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(id, callback);
+api.consultarUsingGET18(id, callback);
 ```
 
 ### Parameters
@@ -208,9 +208,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET46"></a>
-# **consultarUsingGET46**
-> TipoTemplateResponse consultarUsingGET46(id)
+<a name="consultarUsingGET47"></a>
+# **consultarUsingGET47**
+> TipoTemplateResponse consultarUsingGET47(id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -232,7 +232,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET46(id, callback);
+api.consultarUsingGET47(id, callback);
 ```
 
 ### Parameters

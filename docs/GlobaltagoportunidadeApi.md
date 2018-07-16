@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**alterarUsingPUT12**](GlobaltagoportunidadeApi.md#alterarUsingPUT12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterarUsingPUT20**](GlobaltagoportunidadeApi.md#alterarUsingPUT20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultarStatusUsingGET**](GlobaltagoportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultarUsingGET25**](GlobaltagoportunidadeApi.md#consultarUsingGET25) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultarUsingGET44**](GlobaltagoportunidadeApi.md#consultarUsingGET44) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultarUsingGET26**](GlobaltagoportunidadeApi.md#consultarUsingGET26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultarUsingGET45**](GlobaltagoportunidadeApi.md#consultarUsingGET45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listarAuditoriasStatusUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listarAuditoriasUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listarAuditoriasUsingGET1**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET25"></a>
-# **consultarUsingGET25**
-> OportunidadeResponse consultarUsingGET25(id)
+<a name="consultarUsingGET26"></a>
+# **consultarUsingGET26**
+> OportunidadeResponse consultarUsingGET26(id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET25(id, callback);
+api.consultarUsingGET26(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET44"></a>
-# **consultarUsingGET44**
-> TipoOportunidadeResponse consultarUsingGET44(id)
+<a name="consultarUsingGET45"></a>
+# **consultarUsingGET45**
+> TipoOportunidadeResponse consultarUsingGET45(id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET44(id, callback);
+api.consultarUsingGET45(id, callback);
 ```
 
 ### Parameters

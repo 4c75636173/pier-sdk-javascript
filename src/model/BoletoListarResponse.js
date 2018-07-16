@@ -18,7 +18,7 @@
   /**
    * The BoletoListarResponse model module.
    * @module model/BoletoListarResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

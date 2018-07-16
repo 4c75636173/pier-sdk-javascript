@@ -18,7 +18,7 @@
   /**
    * The ControleSegurancaDispositivoResponse model module.
    * @module model/ControleSegurancaDispositivoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

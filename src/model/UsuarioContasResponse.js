@@ -18,7 +18,7 @@
   /**
    * The UsuarioContasResponse model module.
    * @module model/UsuarioContasResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

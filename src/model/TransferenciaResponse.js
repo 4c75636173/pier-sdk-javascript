@@ -18,7 +18,7 @@
   /**
    * The TransferenciaResponse model module.
    * @module model/TransferenciaResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

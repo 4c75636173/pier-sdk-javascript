@@ -18,7 +18,7 @@
   /**
    * globaltagusuario service.
    * @module api/GlobaltagusuarioApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -343,8 +343,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageControleSegurancaDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -358,16 +358,16 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageControleSegurancaDispositivoResponse}
      */
-    this.consultarUsingGET14 = function(idUsuario, opts, callback) {
+    this.consultarUsingGET15 = function(idUsuario, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idUsuario' is set
       if (idUsuario == undefined || idUsuario == null) {
-        throw "Missing the required parameter 'idUsuario' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'idUsuario' when calling consultarUsingGET15";
       }
 
 
@@ -397,8 +397,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET50 operation.
-     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET50Callback
+     * Callback function to receive the result of the consultarUsingGET51 operation.
+     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET51Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -408,15 +408,15 @@
      * {{{usuario_resource_consultar}}}
      * {{{usuario_resource_consultar_notes}}}
      * @param {Integer} id {{{usuario_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET50 = function(id, callback) {
+    this.consultarUsingGET51 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET50";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET51";
       }
 
 

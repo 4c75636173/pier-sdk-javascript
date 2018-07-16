@@ -18,7 +18,7 @@
   /**
    * globaltagdocumento service.
    * @module api/GlobaltagdocumentoApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -137,8 +137,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET16 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET16Callback
+     * Callback function to receive the result of the consultarUsingGET17 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -148,15 +148,15 @@
      * {{{documento_resource_consultar}}}
      * {{{documento_resource_consultar_notes}}}
      * @param {Integer} id {{{documento_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.consultarUsingGET16 = function(id, callback) {
+    this.consultarUsingGET17 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
       }
 
 
@@ -183,8 +183,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET18 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -194,15 +194,15 @@
      * {{{documento_template_resource_consultar}}}
      * {{{documento_template_resource_consultar_notes}}}
      * @param {Integer} id {{{documento_template_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET18 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
       }
 
 
@@ -229,8 +229,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET46 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET46Callback
+     * Callback function to receive the result of the consultarUsingGET47 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -240,15 +240,15 @@
      * {{{tipo_template_resource_consultar}}}
      * {{{tipo_template_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_template_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.consultarUsingGET46 = function(id, callback) {
+    this.consultarUsingGET47 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET46";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET47";
       }
 
 

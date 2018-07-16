@@ -18,7 +18,7 @@
   /**
    * The PageCompraContestadaTransacaoResponse model module.
    * @module model/PageCompraContestadaTransacaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

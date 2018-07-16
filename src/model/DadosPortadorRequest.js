@@ -18,7 +18,7 @@
   /**
    * The DadosPortadorRequest model module.
    * @module model/DadosPortadorRequest
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

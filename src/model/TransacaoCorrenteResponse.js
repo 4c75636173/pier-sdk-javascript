@@ -18,7 +18,7 @@
   /**
    * The TransacaoCorrenteResponse model module.
    * @module model/TransacaoCorrenteResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -113,6 +114,9 @@
       }
       if (data.hasOwnProperty('flagSolicitouContestacao')) {
         obj['flagSolicitouContestacao'] = ApiClient.convertToType(data['flagSolicitouContestacao'], 'Integer');
+      }
+      if (data.hasOwnProperty('tipoTransacao')) {
+        obj['tipoTransacao'] = ApiClient.convertToType(data['tipoTransacao'], 'Integer');
       }
     }
     return obj;
@@ -225,6 +229,12 @@
    * @member {Integer} flagSolicitouContestacao
    */
   exports.prototype['flagSolicitouContestacao'] = undefined;
+
+  /**
+   * {{{transacao_corrente_response_tipo_transacao_value}}}
+   * @member {Integer} tipoTransacao
+   */
+  exports.prototype['tipoTransacao'] = undefined;
 
 
 

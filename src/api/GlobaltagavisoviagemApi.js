@@ -18,7 +18,7 @@
   /**
    * globaltagavisoviagem service.
    * @module api/GlobaltagavisoviagemApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/GlobaltagavisoviagemApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/GlobaltagavisoviagemApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AvisoViagemResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{aviso_viagem_resource_consultar}}}
      * {{{aviso_viagem_resource_consultar_notes}}}
      * @param {Integer} id {{{aviso_viagem_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagavisoviagemApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagavisoviagemApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AvisoViagemResponse}
      */
-    this.consultarUsingGET6 = function(id, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 

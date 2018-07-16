@@ -18,7 +18,7 @@
   /**
    * globaltagarquivo service.
    * @module api/GlobaltagarquivoApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET4 operation.
-     * @callback module:api/GlobaltagarquivoApi~consultarUsingGET4Callback
+     * Callback function to receive the result of the consultarUsingGET5 operation.
+     * @callback module:api/GlobaltagarquivoApi~consultarUsingGET5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ArquivoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{arquivo_resource_consultar}}}
      * {{{arquivo_resource_consultar_notes}}}
      * @param {Integer} id {{{arquivo_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagarquivoApi~consultarUsingGET4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagarquivoApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ArquivoDetalheResponse}
      */
-    this.consultarUsingGET4 = function(id, callback) {
+    this.consultarUsingGET5 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET4";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
       }
 
 

@@ -18,7 +18,7 @@
   /**
    * globaltagajustefinanceiro service.
    * @module api/GlobaltagajustefinanceiroApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -106,8 +106,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET2 operation.
-     * @callback module:api/GlobaltagajustefinanceiroApi~consultarUsingGET2Callback
+     * Callback function to receive the result of the consultarUsingGET3 operation.
+     * @callback module:api/GlobaltagajustefinanceiroApi~consultarUsingGET3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AjusteFinanceiroResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -117,15 +117,15 @@
      * {{{ajuste_financeiro_resource_consultar}}}
      * {{{ajuste_financeiro_resource_consultar_notes}}}
      * @param {Integer} id {{{ajuste_financeiro_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagajustefinanceiroApi~consultarUsingGET2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagajustefinanceiroApi~consultarUsingGET3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AjusteFinanceiroResponse}
      */
-    this.consultarUsingGET2 = function(id, callback) {
+    this.consultarUsingGET3 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET2";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET3";
       }
 
 

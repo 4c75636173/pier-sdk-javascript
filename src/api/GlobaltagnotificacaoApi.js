@@ -18,7 +18,7 @@
   /**
    * globaltagnotificacao service.
    * @module api/GlobaltagnotificacaoApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

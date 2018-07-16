@@ -18,7 +18,7 @@
   /**
    * The TipoOrigemComercialResponse model module.
    * @module model/TipoOrigemComercialResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * globaltagpay service.
    * @module api/GlobaltagpayApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -204,8 +204,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET8 operation.
-     * @callback module:api/GlobaltagpayApi~consultarUsingGET8Callback
+     * Callback function to receive the result of the consultarUsingGET9 operation.
+     * @callback module:api/GlobaltagpayApi~consultarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -216,20 +216,20 @@
      * {{{cartao_pay_resource_consultar_notes}}}
      * @param {String} deviceId {{{cartao_pay_resource_consultar_param_device_id}}}
      * @param {Integer} id {{{cartao_pay_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagpayApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpayApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayDetalheResponse}
      */
-    this.consultarUsingGET8 = function(deviceId, id, callback) {
+    this.consultarUsingGET9 = function(deviceId, id, callback) {
       var postBody = null;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET8";
+        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET9";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
       }
 
 

@@ -18,7 +18,7 @@
   /**
    * The PageTokenResponse model module.
    * @module model/PageTokenResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

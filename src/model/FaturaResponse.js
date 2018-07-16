@@ -18,7 +18,7 @@
   /**
    * The FaturaResponse model module.
    * @module model/FaturaResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

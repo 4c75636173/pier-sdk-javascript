@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobilePersistValue model module.
    * @module model/AplicacaoMobilePersistValue
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

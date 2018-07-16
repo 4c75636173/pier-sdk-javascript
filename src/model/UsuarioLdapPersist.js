@@ -18,7 +18,7 @@
   /**
    * The UsuarioLdapPersist model module.
    * @module model/UsuarioLdapPersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

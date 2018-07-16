@@ -18,7 +18,7 @@
   /**
    * The OrigemComercialPersist model module.
    * @module model/OrigemComercialPersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PermissaoPersist model module.
    * @module model/PermissaoPersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

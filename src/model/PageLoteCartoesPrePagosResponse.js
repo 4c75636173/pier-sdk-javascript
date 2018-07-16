@@ -18,7 +18,7 @@
   /**
    * The PageLoteCartoesPrePagosResponse model module.
    * @module model/PageLoteCartoesPrePagosResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

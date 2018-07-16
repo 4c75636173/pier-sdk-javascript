@@ -18,7 +18,7 @@
   /**
    * The UsuarioSenhaFortePersistencia model module.
    * @module model/UsuarioSenhaFortePersistencia
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

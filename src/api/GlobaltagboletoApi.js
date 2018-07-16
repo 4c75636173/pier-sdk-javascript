@@ -18,7 +18,7 @@
   /**
    * globaltagboleto service.
    * @module api/GlobaltagboletoApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET33 operation.
-     * @callback module:api/GlobaltagboletoApi~consultarUsingGET33Callback
+     * Callback function to receive the result of the consultarUsingGET34 operation.
+     * @callback module:api/GlobaltagboletoApi~consultarUsingGET34Callback
      * @param {String} error Error message, if any.
      * @param {module:model/BoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{boleto_resource_consultar}}}
      * {{{boleto_resource_consultar_notes}}}
      * @param {Integer} id {{{boleto_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagboletoApi~consultarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagboletoApi~consultarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BoletoResponse}
      */
-    this.consultarUsingGET33 = function(id, callback) {
+    this.consultarUsingGET34 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET33";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET34";
       }
 
 

@@ -18,7 +18,7 @@
   /**
    * The PermissaoResponse model module.
    * @module model/PermissaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

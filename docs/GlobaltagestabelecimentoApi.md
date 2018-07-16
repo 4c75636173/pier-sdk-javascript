@@ -12,17 +12,17 @@ Method | HTTP request | Description
 [**alterarUsingPUT6**](GlobaltagestabelecimentoApi.md#alterarUsingPUT6) | **PUT** /api/estabelecimentos/{id} | {{{estabelecimento_resource_alterar}}}
 [**alterarUsingPUT8**](GlobaltagestabelecimentoApi.md#alterarUsingPUT8) | **PUT** /api/grupos-economicos/{id} | {{{grupo_economico_resource_alterar}}}
 [**cadastrarOrigemComercialUsingPOST**](GlobaltagestabelecimentoApi.md#cadastrarOrigemComercialUsingPOST) | **POST** /api/origens-comerciais | {{{origem_comercial_resource_cadastrar_origem_comercial}}}
-[**cadastrarUsingPOST2**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST2) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
-[**cadastrarUsingPOST3**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
+[**cadastrarUsingPOST3**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST3) | **POST** /api/estabelecimentos | {{{estabelecimento_resource_cadastrar}}}
+[**cadastrarUsingPOST4**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consultaOperacaoUsingGET**](GlobaltagestabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultarOrigemComercialUsingGET**](GlobaltagestabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultarUsingGET19**](GlobaltagestabelecimentoApi.md#consultarUsingGET19) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultarUsingGET21**](GlobaltagestabelecimentoApi.md#consultarUsingGET21) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultarUsingGET23**](GlobaltagestabelecimentoApi.md#consultarUsingGET23) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultarUsingGET37**](GlobaltagestabelecimentoApi.md#consultarUsingGET37) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultarUsingGET39**](GlobaltagestabelecimentoApi.md#consultarUsingGET39) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultarUsingGET51**](GlobaltagestabelecimentoApi.md#consultarUsingGET51) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultarUsingGET20**](GlobaltagestabelecimentoApi.md#consultarUsingGET20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultarUsingGET25**](GlobaltagestabelecimentoApi.md#consultarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultarUsingGET38**](GlobaltagestabelecimentoApi.md#consultarUsingGET38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultarUsingGET52**](GlobaltagestabelecimentoApi.md#consultarUsingGET52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitarVinculoUsingPOST1**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -441,9 +441,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="cadastrarUsingPOST2"></a>
-# **cadastrarUsingPOST2**
-> EstabelecimentoResponse cadastrarUsingPOST2(persist)
+<a name="cadastrarUsingPOST3"></a>
+# **cadastrarUsingPOST3**
+> EstabelecimentoResponse cadastrarUsingPOST3(persist)
 
 {{{estabelecimento_resource_cadastrar}}}
 
@@ -465,7 +465,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cadastrarUsingPOST2(persist, callback);
+api.cadastrarUsingPOST3(persist, callback);
 ```
 
 ### Parameters
@@ -487,9 +487,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="cadastrarUsingPOST3"></a>
-# **cadastrarUsingPOST3**
-> GrupoEconomicoResponse cadastrarUsingPOST3(grupoEconomicoDTO)
+<a name="cadastrarUsingPOST4"></a>
+# **cadastrarUsingPOST4**
+> GrupoEconomicoResponse cadastrarUsingPOST4(grupoEconomicoDTO)
 
 {{{grupo_economico_resource_cadastrar}}}
 
@@ -511,7 +511,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cadastrarUsingPOST3(grupoEconomicoDTO, callback);
+api.cadastrarUsingPOST4(grupoEconomicoDTO, callback);
 ```
 
 ### Parameters
@@ -625,9 +625,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> EstabelecimentoResponse consultarUsingGET19(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> EstabelecimentoResponse consultarUsingGET20(id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -649,7 +649,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET19(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -671,9 +671,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> GrupoEconomicoResponse consultarUsingGET21(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> GrupoEconomicoResponse consultarUsingGET22(id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -695,7 +695,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(id, callback);
+api.consultarUsingGET22(id, callback);
 ```
 
 ### Parameters
@@ -717,9 +717,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> MaquinetaResponse consultarUsingGET23(id)
+<a name="consultarUsingGET24"></a>
+# **consultarUsingGET24**
+> MaquinetaResponse consultarUsingGET24(id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -741,7 +741,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(id, callback);
+api.consultarUsingGET24(id, callback);
 ```
 
 ### Parameters
@@ -763,9 +763,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> OperacaoCredorResponse consultarUsingGET24(id)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> OperacaoCredorResponse consultarUsingGET25(id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -787,7 +787,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(id, callback);
+api.consultarUsingGET25(id, callback);
 ```
 
 ### Parameters
@@ -809,9 +809,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET37"></a>
-# **consultarUsingGET37**
-> TelefoneEstabelecimentoResponse consultarUsingGET37(id)
+<a name="consultarUsingGET38"></a>
+# **consultarUsingGET38**
+> TelefoneEstabelecimentoResponse consultarUsingGET38(id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -833,7 +833,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET37(id, callback);
+api.consultarUsingGET38(id, callback);
 ```
 
 ### Parameters
@@ -855,9 +855,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET39"></a>
-# **consultarUsingGET39**
-> TerminalResponse consultarUsingGET39(id)
+<a name="consultarUsingGET40"></a>
+# **consultarUsingGET40**
+> TerminalResponse consultarUsingGET40(id)
 
 {{{terminal_resource_consultar}}}
 
@@ -879,7 +879,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET39(id, callback);
+api.consultarUsingGET40(id, callback);
 ```
 
 ### Parameters
@@ -901,9 +901,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET51"></a>
-# **consultarUsingGET51**
-> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET51(id)
+<a name="consultarUsingGET52"></a>
+# **consultarUsingGET52**
+> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52(id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -925,7 +925,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET51(id, callback);
+api.consultarUsingGET52(id, callback);
 ```
 
 ### Parameters

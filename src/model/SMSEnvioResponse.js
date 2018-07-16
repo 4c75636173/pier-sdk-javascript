@@ -18,7 +18,7 @@
   /**
    * The SMSEnvioResponse model module.
    * @module model/SMSEnvioResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -69,6 +70,9 @@
       }
       if (data.hasOwnProperty('dataInclusao')) {
         obj['dataInclusao'] = ApiClient.convertToType(data['dataInclusao'], 'String');
+      }
+      if (data.hasOwnProperty('cpf')) {
+        obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
       }
     }
     return obj;
@@ -116,6 +120,12 @@
    * @member {String} dataInclusao
    */
   exports.prototype['dataInclusao'] = undefined;
+
+  /**
+   * {{{sms_envio_response_cpf_value}}}
+   * @member {String} cpf
+   */
+  exports.prototype['cpf'] = undefined;
 
 
 

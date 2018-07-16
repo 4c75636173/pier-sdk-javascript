@@ -18,7 +18,7 @@
   /**
    * globaltaggrupochageback service.
    * @module api/GlobaltaggrupochagebackApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

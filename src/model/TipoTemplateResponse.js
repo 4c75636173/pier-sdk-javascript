@@ -18,7 +18,7 @@
   /**
    * The TipoTemplateResponse model module.
    * @module model/TipoTemplateResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

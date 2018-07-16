@@ -18,7 +18,7 @@
   /**
    * The TerminalPersist model module.
    * @module model/TerminalPersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

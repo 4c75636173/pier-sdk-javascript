@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AjusteFinanceiroResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/ContaDetalheResponse', '../model/TransferenciaDetalheResponse', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageContaResponse', '../model/PageTransacaoProcessadaNaoProcessadaResponse', '../model/PageTransferenciaResponse', '../model/ContaPersistValue', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse'], factory);
+    define(['../ApiClient', '../model/AjusteFinanceiroResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/AdesaoPagamentoSabadoResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/ContaDetalheResponse', '../model/TransferenciaDetalheResponse', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageContaResponse', '../model/PageTransacaoProcessadaNaoProcessadaResponse', '../model/PageTransferenciaResponse', '../model/ContaPersistValue', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AjusteFinanceiroResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/ContaDetalheResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageContaResponse'), require('../model/PageTransacaoProcessadaNaoProcessadaResponse'), require('../model/PageTransferenciaResponse'), require('../model/ContaPersistValue'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AjusteFinanceiroResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/AdesaoPagamentoSabadoResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/ContaDetalheResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageContaResponse'), require('../model/PageTransacaoProcessadaNaoProcessadaResponse'), require('../model/PageTransferenciaResponse'), require('../model/ContaPersistValue'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagcontaApi = factory(root.Pier.ApiClient, root.Pier.AjusteFinanceiroResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.ContaDetalheResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageContaResponse, root.Pier.PageTransacaoProcessadaNaoProcessadaResponse, root.Pier.PageTransferenciaResponse, root.Pier.ContaPersistValue, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse);
+    root.Pier.GlobaltagcontaApi = factory(root.Pier.ApiClient, root.Pier.AjusteFinanceiroResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.AdesaoPagamentoSabadoResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.ContaDetalheResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageContaResponse, root.Pier.PageTransacaoProcessadaNaoProcessadaResponse, root.Pier.PageTransferenciaResponse, root.Pier.ContaPersistValue, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, AjusteFinanceiroResponse, AlterarProdutoRequest, ContaResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, PageTaxasRefinanciamentoResponse, ContaDetalheResponse, TransferenciaDetalheResponse, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageTransacoesCorrentesResponse, PageContaResponse, PageTransacaoProcessadaNaoProcessadaResponse, PageTransferenciaResponse, ContaPersistValue, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse) {
+}(this, function(ApiClient, AjusteFinanceiroResponse, AlterarProdutoRequest, ContaResponse, AdesaoPagamentoSabadoResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, PageTaxasRefinanciamentoResponse, ContaDetalheResponse, TransferenciaDetalheResponse, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageTransacoesCorrentesResponse, PageContaResponse, PageTransacaoProcessadaNaoProcessadaResponse, PageTransferenciaResponse, ContaPersistValue, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse) {
   'use strict';
 
   /**
    * globaltagconta service.
    * @module api/GlobaltagcontaApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -456,6 +456,52 @@
     }
 
     /**
+     * Callback function to receive the result of the cadastrarUsingPOST operation.
+     * @callback module:api/GlobaltagcontaApi~cadastrarUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AdesaoPagamentoSabadoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+     * {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+     * @param {Integer} id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+     * @param {module:api/GlobaltagcontaApi~cadastrarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/AdesaoPagamentoSabadoResponse}
+     */
+    this.cadastrarUsingPOST = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling cadastrarUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'id': id
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AdesaoPagamentoSabadoResponse;
+
+      return this.apiClient.callApi(
+        '/api/adesoes-pagamentos-sabados', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the cancelarUsingPOST1 operation.
      * @callback module:api/GlobaltagcontaApi~cancelarUsingPOST1Callback
      * @param {String} error Error message, if any.
@@ -729,8 +775,61 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/GlobaltagcontaApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET1 operation.
+     * @callback module:api/GlobaltagcontaApi~consultarUsingGET1Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AdesaoPagamentoSabadoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{aderir_pagamento_sabado_recurso_consultar}}}
+     * {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+     * @param {Integer} id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+     * @param {String} dataVencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+     * @param {module:api/GlobaltagcontaApi~consultarUsingGET1Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/AdesaoPagamentoSabadoResponse}
+     */
+    this.consultarUsingGET1 = function(id, dataVencimento, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarUsingGET1";
+      }
+
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling consultarUsingGET1";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'id': id,
+        'dataVencimento': dataVencimento
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AdesaoPagamentoSabadoResponse;
+
+      return this.apiClient.callApi(
+        '/api/adesoes-pagamentos-sabados', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/GlobaltagcontaApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -742,16 +841,16 @@
      * @param {Integer} id {{{conta_resource_consultar_param_id}}}
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization Authorization
-     * @param {module:api/GlobaltagcontaApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaDetalheResponse}
      */
-    this.consultarUsingGET13 = function(id, opts, callback) {
+    this.consultarUsingGET14 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -779,8 +878,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET48 operation.
-     * @callback module:api/GlobaltagcontaApi~consultarUsingGET48Callback
+     * Callback function to receive the result of the consultarUsingGET49 operation.
+     * @callback module:api/GlobaltagcontaApi~consultarUsingGET49Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -791,20 +890,20 @@
      * {{{transferencia_resource_consultar_notes}}}
      * @param {Integer} id {{{transferencia_resource_consultar_param_id_conta}}}
      * @param {Integer} idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
-     * @param {module:api/GlobaltagcontaApi~consultarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~consultarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaDetalheResponse}
      */
-    this.consultarUsingGET48 = function(id, idTransferencia, callback) {
+    this.consultarUsingGET49 = function(id, idTransferencia, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET48";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET49";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET49";
       }
 
 
@@ -1413,6 +1512,7 @@
      * @param {String} opts.dataInicio {{{transacoes_processadas_request_data_inicio_value}}}
      * @param {String} opts.dataFim {{{transacoes_processadas_request_data_fim_value}}}
      * @param {Integer} opts.idTipoTransacao {{{transacoes_processadas_request_tipo_transacao}}}
+     * @param {Integer} opts.recuperaEncargos {{{transacoes_processadas_request_recupera_encargos}}}
      * @param {module:api/GlobaltagcontaApi~listarProcessadasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransacoesCorrentesResponse}
      */
@@ -1436,7 +1536,8 @@
         'dataVencimento': opts['dataVencimento'],
         'dataInicio': opts['dataInicio'],
         'dataFim': opts['dataFim'],
-        'idTipoTransacao': opts['idTipoTransacao']
+        'idTipoTransacao': opts['idTipoTransacao'],
+        'recuperaEncargos': opts['recuperaEncargos']
       };
       var headerParams = {
       };

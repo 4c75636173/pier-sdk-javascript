@@ -18,7 +18,7 @@
   /**
    * The PageTipoOrigemComercialResponse model module.
    * @module model/PageTipoOrigemComercialResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

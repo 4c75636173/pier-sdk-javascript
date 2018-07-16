@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](GlobaltagcartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | {{{cartao_resource_consultar_limite_disponibilidade}}}
 [**consultarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 [**consultarPortadorUsingGET**](GlobaltagcartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | {{{cartao_resource_consultar_portador}}}
-[**consultarUsingGET9**](GlobaltagcartaoApi.md#consultarUsingGET9) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**consultarUsingGET10**](GlobaltagcartaoApi.md#consultarUsingGET10) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
 [**desbloquearSenhaIncorretaUsingPOST**](GlobaltagcartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | {{{cartao_resource_desbloquear_senha_incorreta}}}
 [**desbloquearUsingPOST**](GlobaltagcartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | {{{cartao_resource_desbloquear}}}
 [**gerarLotesCartoesPrePagosUsingPOST**](GlobaltagcartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -661,9 +661,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> CartaoDetalheResponse consultarUsingGET9(id, opts)
+<a name="consultarUsingGET10"></a>
+# **consultarUsingGET10**
+> CartaoDetalheResponse consultarUsingGET10(id, opts)
 
 {{{cartao_resource_consultar}}}
 
@@ -688,7 +688,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(id, opts, callback);
+api.consultarUsingGET10(id, opts, callback);
 ```
 
 ### Parameters

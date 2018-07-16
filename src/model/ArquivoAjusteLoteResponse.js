@@ -18,7 +18,7 @@
   /**
    * The ArquivoAjusteLoteResponse model module.
    * @module model/ArquivoAjusteLoteResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET26**](GlobaltagparametroemissorApi.md#consultarUsingGET26) | **GET** /api/parametros-emissor/{codigo} | {{{parametro_emissor_recurso}}}
+[**consultarUsingGET27**](GlobaltagparametroemissorApi.md#consultarUsingGET27) | **GET** /api/parametros-emissor/{codigo} | {{{parametro_emissor_recurso}}}
 
 
-<a name="consultarUsingGET26"></a>
-# **consultarUsingGET26**
-> ParametroEmissorResponse consultarUsingGET26(codigo)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> ParametroEmissorResponse consultarUsingGET27(codigo)
 
 {{{parametro_emissor_recurso}}}
 
@@ -31,7 +31,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(codigo, callback);
+api.consultarUsingGET27(codigo, callback);
 ```
 
 ### Parameters

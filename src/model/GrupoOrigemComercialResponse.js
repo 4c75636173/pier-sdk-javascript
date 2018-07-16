@@ -18,7 +18,7 @@
   /**
    * The GrupoOrigemComercialResponse model module.
    * @module model/GrupoOrigemComercialResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

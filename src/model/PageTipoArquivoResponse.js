@@ -18,7 +18,7 @@
   /**
    * The PageTipoArquivoResponse model module.
    * @module model/PageTipoArquivoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The AdicionalUpdate model module.
    * @module model/AdicionalUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

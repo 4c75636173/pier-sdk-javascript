@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | {{{estagio_cartao_resource_consultar_estagio_cartao}}}
 [**consultarStatusCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | {{{status_cartao_resource_consultar_status_cartao}}}
-[**consultarUsingGET35**](GlobaltagstatusparametroApi.md#consultarUsingGET35) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
-[**consultarUsingGET36**](GlobaltagstatusparametroApi.md#consultarUsingGET36) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
+[**consultarUsingGET36**](GlobaltagstatusparametroApi.md#consultarUsingGET36) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
+[**consultarUsingGET37**](GlobaltagstatusparametroApi.md#consultarUsingGET37) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
 [**listarEstagiosCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | {{{estagio_cartao_resource_listar_estagios_cartoes}}}
 [**listarStatusCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | {{{status_cartao_resource_listar_status_cartoes}}}
 [**listarTiposEventosTransacoesUsingGET**](GlobaltagstatusparametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | {{{enum_resource_listar_tipos_eventos_transacoes}}}
@@ -107,9 +107,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET35"></a>
-# **consultarUsingGET35**
-> StatusContaResponse consultarUsingGET35(id)
+<a name="consultarUsingGET36"></a>
+# **consultarUsingGET36**
+> StatusContaResponse consultarUsingGET36(id)
 
 {{{status_conta_resource_consultar}}}
 
@@ -131,7 +131,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET35(id, callback);
+api.consultarUsingGET36(id, callback);
 ```
 
 ### Parameters
@@ -153,9 +153,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET36"></a>
-# **consultarUsingGET36**
-> StatusImpressaoResponse consultarUsingGET36(id)
+<a name="consultarUsingGET37"></a>
+# **consultarUsingGET37**
+> StatusImpressaoResponse consultarUsingGET37(id)
 
 {{{status_impressao_resource_consultar}}}
 
@@ -177,7 +177,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET36(id, callback);
+api.consultarUsingGET37(id, callback);
 ```
 
 ### Parameters

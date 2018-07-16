@@ -18,7 +18,7 @@
   /**
    * globaltagparametroemissor service.
    * @module api/GlobaltagparametroemissorApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/GlobaltagparametroemissorApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/GlobaltagparametroemissorApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ParametroEmissorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{parametro_emissor_recurso}}}
      * {{{parametro_emissor_recurso_notas}}}
      * @param {String} codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
-     * @param {module:api/GlobaltagparametroemissorApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagparametroemissorApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ParametroEmissorResponse}
      */
-    this.consultarUsingGET26 = function(codigo, callback) {
+    this.consultarUsingGET27 = function(codigo, callback) {
       var postBody = null;
 
       // verify the required parameter 'codigo' is set
       if (codigo == undefined || codigo == null) {
-        throw "Missing the required parameter 'codigo' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'codigo' when calling consultarUsingGET27";
       }
 
 

@@ -18,7 +18,7 @@
   /**
    * The PageTipoChaveResponse model module.
    * @module model/PageTipoChaveResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

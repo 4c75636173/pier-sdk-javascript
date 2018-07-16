@@ -18,7 +18,7 @@
   /**
    * The TipoEnderecoResponse model module.
    * @module model/TipoEnderecoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

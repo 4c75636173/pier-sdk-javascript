@@ -18,7 +18,7 @@
   /**
    * The PushFCMGCMPersistValue model module.
    * @module model/PushFCMGCMPersistValue
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageBaseResponse model module.
    * @module model/PageBaseResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

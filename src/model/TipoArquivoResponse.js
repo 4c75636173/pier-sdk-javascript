@@ -18,7 +18,7 @@
   /**
    * The TipoArquivoResponse model module.
    * @module model/TipoArquivoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

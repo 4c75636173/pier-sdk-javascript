@@ -18,7 +18,7 @@
   /**
    * globaltagcadastrogeral service.
    * @module api/GlobaltagcadastrogeralApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -286,8 +286,8 @@
     }
 
     /**
-     * Callback function to receive the result of the cadastrarUsingPOST1 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~cadastrarUsingPOST1Callback
+     * Callback function to receive the result of the cadastrarUsingPOST2 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~cadastrarUsingPOST2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -297,15 +297,15 @@
      * {{{configuracao_registro_cobranca_resource_cadastrar}}}
      * {{{configuracao_registro_cobranca_resource_cadastrar_notes}}}
      * @param {module:model/ConfiguracaoRegistroCobrancaPersist} configuracaoPersist configuracaoPersist
-     * @param {module:api/GlobaltagcadastrogeralApi~cadastrarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~cadastrarUsingPOST2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
      */
-    this.cadastrarUsingPOST1 = function(configuracaoPersist, callback) {
+    this.cadastrarUsingPOST2 = function(configuracaoPersist, callback) {
       var postBody = configuracaoPersist;
 
       // verify the required parameter 'configuracaoPersist' is set
       if (configuracaoPersist == undefined || configuracaoPersist == null) {
-        throw "Missing the required parameter 'configuracaoPersist' when calling cadastrarUsingPOST1";
+        throw "Missing the required parameter 'configuracaoPersist' when calling cadastrarUsingPOST2";
       }
 
 
@@ -528,8 +528,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -539,15 +539,15 @@
      * {{{configuracao_registro_cobranca_resource_consultar}}}
      * {{{configuracao_registro_cobranca_resource_consultar_notes}}}
      * @param {Integer} id {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
      */
-    this.consultarUsingGET10 = function(id, callback) {
+    this.consultarUsingGET11 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -574,8 +574,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -585,15 +585,15 @@
      * {{{configuracao_rotativo_resource_consultar}}}
      * {{{configuracao_rotativo_resource_consultar_notes}}}
      * @param {Integer} id {{{configuracao_rotativo_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -620,8 +620,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET31 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET31Callback
+     * Callback function to receive the result of the consultarUsingGET32 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET32Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -631,15 +631,15 @@
      * {{{produto_resource_consultar}}}
      * {{{produto_resource_consultar_notes}}}
      * @param {Integer} id {{{produto_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ProdutoDetalhesResponse}
      */
-    this.consultarUsingGET31 = function(id, callback) {
+    this.consultarUsingGET32 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET31";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
       }
 
 
@@ -666,8 +666,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET40 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET40Callback
+     * Callback function to receive the result of the consultarUsingGET41 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoAjusteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -677,15 +677,15 @@
      * {{{tipo_transacoes_ajuste_resource_consultar}}}
      * {{{tipo_transacoes_ajuste_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoAjusteResponse}
      */
-    this.consultarUsingGET40 = function(id, callback) {
+    this.consultarUsingGET41 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET41";
       }
 
 
@@ -712,8 +712,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET41 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback
+     * Callback function to receive the result of the consultarUsingGET42 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoBoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -729,10 +729,10 @@
      * @param {Integer} opts.id {{{tipo_boleto_request_id_value}}}
      * @param {String} opts.descricao {{{tipo_boleto_request_descricao_value}}}
      * @param {Integer} opts.banco {{{tipo_boleto_request_banco_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoBoletoResponse}
      */
-    this.consultarUsingGET41 = function(opts, callback) {
+    this.consultarUsingGET42 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -765,8 +765,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET42 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback
+     * Callback function to receive the result of the consultarUsingGET43 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -776,15 +776,15 @@
      * {{{tipo_endereco_resource_consultar}}}
      * {{{tipo_endereco_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_endereco_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEnderecoResponse}
      */
-    this.consultarUsingGET42 = function(id, callback) {
+    this.consultarUsingGET43 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET42";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
       }
 
 
@@ -811,8 +811,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET43 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback
+     * Callback function to receive the result of the consultarUsingGET44 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -824,25 +824,25 @@
      * @param {Integer} idCartao {{{tipo_operacao_resource_consultar_param_id_cartao}}}
      * @param {Integer} idEstabelecimento {{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}
      * @param {String} codigoProcessamento {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOperacaoResponse}
      */
-    this.consultarUsingGET43 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
+    this.consultarUsingGET44 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
       var postBody = null;
 
       // verify the required parameter 'idCartao' is set
       if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET43";
+        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET44";
       }
 
       // verify the required parameter 'idEstabelecimento' is set
       if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET43";
+        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET44";
       }
 
       // verify the required parameter 'codigoProcessamento' is set
       if (codigoProcessamento == undefined || codigoProcessamento == null) {
-        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET43";
+        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET44";
       }
 
 
@@ -871,8 +871,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET45 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET45Callback
+     * Callback function to receive the result of the consultarUsingGET46 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -882,15 +882,15 @@
      * {{{tipo_telefone_resource_consultar}}}
      * {{{tipo_telefone_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_telefone_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTelefoneResponse}
      */
-    this.consultarUsingGET45 = function(id, callback) {
+    this.consultarUsingGET46 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET45";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET46";
       }
 
 
@@ -917,8 +917,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET5 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET5Callback
+     * Callback function to receive the result of the consultarUsingGET6 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AtendimentoClienteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -928,15 +928,15 @@
      * {{{atendimento_cliente_resource_consultar}}}
      * {{{atendimento_cliente_resource_consultar_notes}}}
      * @param {Integer} id {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AtendimentoClienteResponse}
      */
-    this.consultarUsingGET5 = function(id, callback) {
+    this.consultarUsingGET6 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
       }
 
 
@@ -963,8 +963,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/BancoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -974,15 +974,15 @@
      * {{{banco_resource_consultar}}}
      * {{{banco_resource_consultar_notes}}}
      * @param {Integer} id {{{banco_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BancoResponse}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 

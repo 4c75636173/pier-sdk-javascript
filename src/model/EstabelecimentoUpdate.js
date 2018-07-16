@@ -18,7 +18,7 @@
   /**
    * The EstabelecimentoUpdate model module.
    * @module model/EstabelecimentoUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

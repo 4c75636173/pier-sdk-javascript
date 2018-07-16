@@ -18,7 +18,7 @@
   /**
    * The CdtTipoResolucaoContestacao model module.
    * @module model/CdtTipoResolucaoContestacao
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

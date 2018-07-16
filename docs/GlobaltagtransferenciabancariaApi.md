@@ -4,20 +4,72 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**atualizarTaxasJurosContasUsingPUT**](GlobaltagtransferenciabancariaApi.md#atualizarTaxasJurosContasUsingPUT) | **PUT** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
 [**atualizarUsingPUT1**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
 [**cancelarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#cancelarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar | {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
 [**confirmarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#confirmarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar | {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria}}}
+[**consultarTaxasJurosContasUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTaxasJurosContasUsingGET) | **GET** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
 [**consultarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
-[**consultarUsingGET12**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET12) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
-[**consultarUsingGET47**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET47) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
+[**consultarUsingGET13**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET13) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
+[**consultarUsingGET48**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
 [**listarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
 [**listarUsingGET16**](GlobaltagtransferenciabancariaApi.md#listarUsingGET16) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
 [**listarUsingGET59**](GlobaltagtransferenciabancariaApi.md#listarUsingGET59) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
+[**salvarTaxasJurosContasUsingPOST**](GlobaltagtransferenciabancariaApi.md#salvarTaxasJurosContasUsingPOST) | **POST** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
 [**salvarUsingPOST7**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
 [**simularTransferenciaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
 [**transferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferencia_credito_conta_bancaria}}}
 [**transferirUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferir}}}
 
+
+<a name="atualizarTaxasJurosContasUsingPUT"></a>
+# **atualizarTaxasJurosContasUsingPUT**
+> TaxaJurosContaResponse atualizarTaxasJurosContasUsingPUT(id, update)
+
+{{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagtransferenciabancariaApi()
+
+var id = 789; // {Integer} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+
+var update = new Pier.TaxaJurosContaPersistValue(); // {TaxaJurosContaPersistValue} update
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.atualizarTaxasJurosContasUsingPUT(id, update, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **update** | [**TaxaJurosContaPersistValue**](TaxaJurosContaPersistValue.md)| update | 
+
+### Return type
+
+[**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="atualizarUsingPUT1"></a>
 # **atualizarUsingPUT1**
@@ -160,6 +212,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="consultarTaxasJurosContasUsingGET"></a>
+# **consultarTaxasJurosContasUsingGET**
+> TaxaJurosContaResponse consultarTaxasJurosContasUsingGET(id, numeroMesesCarencia)
+
+{{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagtransferenciabancariaApi()
+
+var id = 789; // {Integer} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+
+var numeroMesesCarencia = 56; // {Integer} numeroMesesCarencia
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarTaxasJurosContasUsingGET(id, numeroMesesCarencia, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **numeroMesesCarencia** | **Integer**| numeroMesesCarencia | 
+
+### Return type
+
+[**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="consultarTransferenciaBancariaUsingGET"></a>
 # **consultarTransferenciaBancariaUsingGET**
 > TransferenciaCreditoContaBancariaResponse consultarTransferenciaBancariaUsingGET(idTransferencia)
@@ -206,9 +307,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> ContaBancariaPortadorResponse consultarUsingGET12(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> ContaBancariaPortadorResponse consultarUsingGET13(id)
 
 {{{conta_bancaria_resource_consultar}}}
 
@@ -230,7 +331,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -252,9 +353,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET47"></a>
-# **consultarUsingGET47**
-> TransferenciaBancariaResponse consultarUsingGET47(id, idTransferencia, opts)
+<a name="consultarUsingGET48"></a>
+# **consultarUsingGET48**
+> TransferenciaBancariaResponse consultarUsingGET48(id, idTransferencia, opts)
 
 {{{transferencia_bancaria_resource_consultar}}}
 
@@ -281,7 +382,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET47(id, idTransferencia, opts, callback);
+api.consultarUsingGET48(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -481,6 +582,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageTransferenciaBancariaResponse**](PageTransferenciaBancariaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarTaxasJurosContasUsingPOST"></a>
+# **salvarTaxasJurosContasUsingPOST**
+> TaxaJurosContaResponse salvarTaxasJurosContasUsingPOST(id, persist)
+
+{{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+
+{{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagtransferenciabancariaApi()
+
+var id = 789; // {Integer} {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+
+var persist = new Pier.TaxaJurosContaPersistValue(); // {TaxaJurosContaPersistValue} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarTaxasJurosContasUsingPOST(id, persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}} | 
+ **persist** | [**TaxaJurosContaPersistValue**](TaxaJurosContaPersistValue.md)| persist | 
+
+### Return type
+
+[**TaxaJurosContaResponse**](TaxaJurosContaResponse.md)
 
 ### Authorization
 

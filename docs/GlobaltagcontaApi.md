@@ -11,13 +11,15 @@ Method | HTTP request | Description
 [**ativarAnuidadeUsingPOST**](GlobaltagcontaApi.md#ativarAnuidadeUsingPOST) | **POST** /api/contas/{id}/atribuir-anuidade | {{{conta_resource_ativar_anuidade}}}
 [**ativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#ativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/ativar-fatura-email | {{{conta_resource_ativar_envio_fatura_email}}}
 [**bloquearUsingPOST1**](GlobaltagcontaApi.md#bloquearUsingPOST1) | **POST** /api/contas/{id}/bloquear | {{{conta_resource_bloquear}}}
+[**cadastrarUsingPOST**](GlobaltagcontaApi.md#cadastrarUsingPOST) | **POST** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_cadastrar}}}
 [**cancelarUsingPOST1**](GlobaltagcontaApi.md#cancelarUsingPOST1) | **POST** /api/contas/{id}/cancelar | {{{conta_resource_cancelar}}}
 [**consultarBeneficioPagamentoAtrasoUsingGET**](GlobaltagcontaApi.md#consultarBeneficioPagamentoAtrasoUsingGET) | **GET** /api/contas/{id}/consultar-beneficio-pagamento-atraso | {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 [**consultarBoletoEmitidoUsingGET**](GlobaltagcontaApi.md#consultarBoletoEmitidoUsingGET) | **GET** /api/contas/{id}/consultar-dados-pagamento-fatura | {{{conta_resource_consultar_boleto_emitido}}}
 [**consultarDividaAtualizadaClienteUsingGET**](GlobaltagcontaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultarTaxasTarifasUsingGET**](GlobaltagcontaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
-[**consultarUsingGET13**](GlobaltagcontaApi.md#consultarUsingGET13) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultarUsingGET48**](GlobaltagcontaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultarUsingGET1**](GlobaltagcontaApi.md#consultarUsingGET1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
+[**consultarUsingGET14**](GlobaltagcontaApi.md#consultarUsingGET14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultarUsingGET49**](GlobaltagcontaApi.md#consultarUsingGET49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
 [**desativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerarBoletoRecargaUsingPOST**](GlobaltagcontaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerarCartaoEmbossingUsingPOST**](GlobaltagcontaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -431,6 +433,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="cadastrarUsingPOST"></a>
+# **cadastrarUsingPOST**
+> AdesaoPagamentoSabadoResponse cadastrarUsingPOST(id)
+
+{{{aderir_pagamento_sabado_recurso_cadastrar}}}
+
+{{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcontaApi()
+
+var id = 789; // {Integer} {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cadastrarUsingPOST(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}} | 
+
+### Return type
+
+[**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="cancelarUsingPOST1"></a>
 # **cancelarUsingPOST1**
 > ContaResponse cancelarUsingPOST1(id, idStatus, opts)
@@ -700,9 +748,58 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> ContaDetalheResponse consultarUsingGET13(id, opts)
+<a name="consultarUsingGET1"></a>
+# **consultarUsingGET1**
+> AdesaoPagamentoSabadoResponse consultarUsingGET1(id, dataVencimento)
+
+{{{aderir_pagamento_sabado_recurso_consultar}}}
+
+{{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcontaApi()
+
+var id = 789; // {Integer} {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+
+var dataVencimento = "dataVencimento_example"; // {String} {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET1(id, dataVencimento, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{aderir_pagamento_sabado_recurso_consultar_param_id}}} | 
+ **dataVencimento** | **String**| {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}} | 
+
+### Return type
+
+[**AdesaoPagamentoSabadoResponse**](AdesaoPagamentoSabadoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> ContaDetalheResponse consultarUsingGET14(id, opts)
 
 {{{conta_resource_consultar}}}
 
@@ -727,7 +824,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, opts, callback);
+api.consultarUsingGET14(id, opts, callback);
 ```
 
 ### Parameters
@@ -750,9 +847,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET48"></a>
-# **consultarUsingGET48**
-> TransferenciaDetalheResponse consultarUsingGET48(id, idTransferencia)
+<a name="consultarUsingGET49"></a>
+# **consultarUsingGET49**
+> TransferenciaDetalheResponse consultarUsingGET49(id, idTransferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -776,7 +873,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET48(id, idTransferencia, callback);
+api.consultarUsingGET49(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -1365,7 +1462,8 @@ var opts = {
   'dataVencimento': "dataVencimento_example", // {String} {{{transacoes_processadas_request_data_vencimento_value}}}
   'dataInicio': "dataInicio_example", // {String} {{{transacoes_processadas_request_data_inicio_value}}}
   'dataFim': "dataFim_example", // {String} {{{transacoes_processadas_request_data_fim_value}}}
-  'idTipoTransacao': 789 // {Integer} {{{transacoes_processadas_request_tipo_transacao}}}
+  'idTipoTransacao': 789, // {Integer} {{{transacoes_processadas_request_tipo_transacao}}}
+  'recuperaEncargos': 56 // {Integer} {{{transacoes_processadas_request_recupera_encargos}}}
 };
 
 var callback = function(error, data, response) {
@@ -1390,6 +1488,7 @@ Name | Type | Description  | Notes
  **dataInicio** | **String**| {{{transacoes_processadas_request_data_inicio_value}}} | [optional] 
  **dataFim** | **String**| {{{transacoes_processadas_request_data_fim_value}}} | [optional] 
  **idTipoTransacao** | **Integer**| {{{transacoes_processadas_request_tipo_transacao}}} | [optional] 
+ **recuperaEncargos** | **Integer**| {{{transacoes_processadas_request_recupera_encargos}}} | [optional] 
 
 ### Return type
 

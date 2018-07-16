@@ -18,7 +18,7 @@
   /**
    * The PageCompraContestadaCartaoResponse model module.
    * @module model/PageCompraContestadaCartaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

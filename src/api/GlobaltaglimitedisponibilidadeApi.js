@@ -18,7 +18,7 @@
   /**
    * globaltaglimitedisponibilidade service.
    * @module api/GlobaltaglimitedisponibilidadeApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -107,8 +107,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -118,15 +118,15 @@
      * {{{limite_disponibilidade_resource_consultar}}}
      * {{{limite_disponibilidade_resource_consultar_notes}}}
      * @param {Integer} idConta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
-     * @param {module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.consultarUsingGET22 = function(idConta, callback) {
+    this.consultarUsingGET23 = function(idConta, callback) {
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarUsingGET22";
+        throw "Missing the required parameter 'idConta' when calling consultarUsingGET23";
       }
 
 

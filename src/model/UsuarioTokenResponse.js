@@ -18,7 +18,7 @@
   /**
    * The UsuarioTokenResponse model module.
    * @module model/UsuarioTokenResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

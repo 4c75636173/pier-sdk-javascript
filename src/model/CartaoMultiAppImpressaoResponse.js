@@ -18,7 +18,7 @@
   /**
    * The CartaoMultiAppImpressaoResponse model module.
    * @module model/CartaoMultiAppImpressaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

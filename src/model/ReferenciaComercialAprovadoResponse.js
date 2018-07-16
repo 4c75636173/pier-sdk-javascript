@@ -18,7 +18,7 @@
   /**
    * The ReferenciaComercialAprovadoResponse model module.
    * @module model/ReferenciaComercialAprovadoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

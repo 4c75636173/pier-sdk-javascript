@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**atualizarChaveUsingPOST**](GlobaltagpayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
 [**atualizarUsingPUT**](GlobaltagpayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirmaAtualizacaoChaveUsingPOST**](GlobaltagpayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultarUsingGET8**](GlobaltagpayApi.md#consultarUsingGET8) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultarUsingGET9**](GlobaltagpayApi.md#consultarUsingGET9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listarCodigosRespostaUsingGET**](GlobaltagpayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listarModosEntradaUsingGET**](GlobaltagpayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listarOperacoesUsingGET**](GlobaltagpayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
@@ -170,9 +170,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> CartaoPayDetalheResponse consultarUsingGET8(deviceId, id)
+<a name="consultarUsingGET9"></a>
+# **consultarUsingGET9**
+> CartaoPayDetalheResponse consultarUsingGET9(deviceId, id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -196,7 +196,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(deviceId, id, callback);
+api.consultarUsingGET9(deviceId, id, callback);
 ```
 
 ### Parameters

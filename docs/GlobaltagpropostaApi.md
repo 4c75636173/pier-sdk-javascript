@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPOST**](GlobaltagpropostaApi.md#alterarUsingPOST) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultarUsingGET32**](GlobaltagpropostaApi.md#consultarUsingGET32) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultarUsingGET33**](GlobaltagpropostaApi.md#consultarUsingGET33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listarStatusPropostaUsingGET**](GlobaltagpropostaApi.md#listarStatusPropostaUsingGET) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
 [**listarUsingGET44**](GlobaltagpropostaApi.md#listarUsingGET44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
@@ -59,9 +59,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET32"></a>
-# **consultarUsingGET32**
-> PropostaResponse consultarUsingGET32(id)
+<a name="consultarUsingGET33"></a>
+# **consultarUsingGET33**
+> PropostaResponse consultarUsingGET33(id)
 
 {{{proposta_resource_consultar}}}
 
@@ -83,7 +83,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET32(id, callback);
+api.consultarUsingGET33(id, callback);
 ```
 
 ### Parameters

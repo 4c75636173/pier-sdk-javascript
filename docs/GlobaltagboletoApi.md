@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET33**](GlobaltagboletoApi.md#consultarUsingGET33) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultarUsingGET34**](GlobaltagboletoApi.md#consultarUsingGET34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviarBoletoEmailUsingPOST**](GlobaltagboletoApi.md#enviarBoletoEmailUsingPOST) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerarBoletoUsingPOST**](GlobaltagboletoApi.md#gerarBoletoUsingPOST) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
 [**listarUsingGET45**](GlobaltagboletoApi.md#listarUsingGET45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
@@ -12,9 +12,9 @@ Method | HTTP request | Description
 [**visualizarBoletoUsingGET**](GlobaltagboletoApi.md#visualizarBoletoUsingGET) | **GET** /api/boletos/{id}/arquivo.pdf | {{{boleto_resource_visualizar_boleto}}}
 
 
-<a name="consultarUsingGET33"></a>
-# **consultarUsingGET33**
-> BoletoResponse consultarUsingGET33(id)
+<a name="consultarUsingGET34"></a>
+# **consultarUsingGET34**
+> BoletoResponse consultarUsingGET34(id)
 
 {{{boleto_resource_consultar}}}
 
@@ -36,7 +36,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET33(id, callback);
+api.consultarUsingGET34(id, callback);
 ```
 
 ### Parameters

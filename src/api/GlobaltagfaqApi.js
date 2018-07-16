@@ -18,7 +18,7 @@
   /**
    * globaltagfaq service.
    * @module api/GlobaltagfaqApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/GlobaltagfaqApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET21 operation.
+     * @callback module:api/GlobaltagfaqApi~consultarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * {{{faq_resource_consultar}}}
      * {{{faq_resource_consultar_notes}}}
      * @param {Integer} id {{{faq_resource_consultar_param_id_faq}}}
-     * @param {module:api/GlobaltagfaqApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagfaqApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET21 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
       }
 
 

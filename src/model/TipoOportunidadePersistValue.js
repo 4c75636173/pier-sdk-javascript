@@ -18,7 +18,7 @@
   /**
    * The TipoOportunidadePersistValue model module.
    * @module model/TipoOportunidadePersistValue
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

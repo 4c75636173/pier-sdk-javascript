@@ -18,7 +18,7 @@
   /**
    * The PageTipoResolucaoContestacaoResponse model module.
    * @module model/PageTipoResolucaoContestacaoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

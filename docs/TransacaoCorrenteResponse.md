@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **tipoEstabelecimento** | **String** | {{{transacao_corrente_response_tipo_estabelecimento_value}}} | [optional] 
 **idGrupoMCC** | **Integer** | {{{transacao_corrente_response_id_grupo_m_c_c_value}}} | [optional] 
 **flagSolicitouContestacao** | **Integer** | {{{transacao_corrente_response_flag_solicitou_contestacao_value}}} | [optional] 
+**tipoTransacao** | **Integer** | {{{transacao_corrente_response_tipo_transacao_value}}} | [optional] 
 
 

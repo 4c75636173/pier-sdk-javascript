@@ -18,7 +18,7 @@
   /**
    * The LogAcessoUsuarioResposta model module.
    * @module model/LogAcessoUsuarioResposta
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

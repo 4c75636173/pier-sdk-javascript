@@ -18,7 +18,7 @@
   /**
    * The PageTipoDebitoRecorrenteResponse model module.
    * @module model/PageTipoDebitoRecorrenteResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

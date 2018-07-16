@@ -18,7 +18,7 @@
   /**
    * The PageTipoFaturamentoResponse model module.
    * @module model/PageTipoFaturamentoResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

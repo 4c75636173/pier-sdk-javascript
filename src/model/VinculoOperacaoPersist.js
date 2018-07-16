@@ -18,7 +18,7 @@
   /**
    * The VinculoOperacaoPersist model module.
    * @module model/VinculoOperacaoPersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

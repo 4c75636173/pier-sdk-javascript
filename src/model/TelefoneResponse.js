@@ -18,7 +18,7 @@
   /**
    * The TelefoneResponse model module.
    * @module model/TelefoneResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

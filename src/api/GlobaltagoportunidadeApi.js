@@ -18,7 +18,7 @@
   /**
    * globaltagoportunidade service.
    * @module api/GlobaltagoportunidadeApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -249,8 +249,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET25 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET25Callback
+     * Callback function to receive the result of the consultarUsingGET26 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -260,15 +260,15 @@
      * {{{oportunidade_resource_consultar}}}
      * {{{oportunidade_resource_consultar_notes}}}
      * @param {Integer} id {{{oportunidade_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.consultarUsingGET25 = function(id, callback) {
+    this.consultarUsingGET26 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET25";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
       }
 
 
@@ -295,8 +295,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET44 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET44Callback
+     * Callback function to receive the result of the consultarUsingGET45 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -306,15 +306,15 @@
      * {{{tipo_oportunidade_resource_consultar}}}
      * {{{tipo_oportunidade_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_oportunidade_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.consultarUsingGET44 = function(id, callback) {
+    this.consultarUsingGET45 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET44";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET45";
       }
 
 

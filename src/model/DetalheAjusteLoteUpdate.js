@@ -18,7 +18,7 @@
   /**
    * The DetalheAjusteLoteUpdate model module.
    * @module model/DetalheAjusteLoteUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

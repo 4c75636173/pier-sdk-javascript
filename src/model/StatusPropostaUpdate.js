@@ -18,7 +18,7 @@
   /**
    * The StatusPropostaUpdate model module.
    * @module model/StatusPropostaUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PageArquivoAjusteLoteResponse model module.
    * @module model/PageArquivoAjusteLoteResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

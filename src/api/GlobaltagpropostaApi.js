@@ -18,7 +18,7 @@
   /**
    * globaltagproposta service.
    * @module api/GlobaltagpropostaApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET32 operation.
-     * @callback module:api/GlobaltagpropostaApi~consultarUsingGET32Callback
+     * Callback function to receive the result of the consultarUsingGET33 operation.
+     * @callback module:api/GlobaltagpropostaApi~consultarUsingGET33Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PropostaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -96,15 +96,15 @@
      * {{{proposta_resource_consultar}}}
      * {{{proposta_resource_consultar_notes}}}
      * @param {Integer} id {{{proposta_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagpropostaApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpropostaApi~consultarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PropostaResponse}
      */
-    this.consultarUsingGET32 = function(id, callback) {
+    this.consultarUsingGET33 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET33";
       }
 
 

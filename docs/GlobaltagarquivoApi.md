@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET4**](GlobaltagarquivoApi.md#consultarUsingGET4) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultarUsingGET5**](GlobaltagarquivoApi.md#consultarUsingGET5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrarUsingPOST**](GlobaltagarquivoApi.md#integrarUsingPOST) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listarPorNumeroReceitaFederalUsingGET**](GlobaltagarquivoApi.md#listarPorNumeroReceitaFederalUsingGET) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listarStatusArquivosUsingGET**](GlobaltagarquivoApi.md#listarStatusArquivosUsingGET) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 [**salvarUsingPOST1**](GlobaltagarquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | {{{arquivo_resource_salvar}}}
 
 
-<a name="consultarUsingGET4"></a>
-# **consultarUsingGET4**
-> ArquivoDetalheResponse consultarUsingGET4(id)
+<a name="consultarUsingGET5"></a>
+# **consultarUsingGET5**
+> ArquivoDetalheResponse consultarUsingGET5(id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -38,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET4(id, callback);
+api.consultarUsingGET5(id, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The PlataformaMobileResponse model module.
    * @module model/PlataformaMobileResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

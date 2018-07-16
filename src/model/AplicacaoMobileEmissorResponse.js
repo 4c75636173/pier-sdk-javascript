@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobileEmissorResponse model module.
    * @module model/AplicacaoMobileEmissorResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

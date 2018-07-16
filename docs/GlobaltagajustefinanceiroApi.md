@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ajustarContaUsingPOST**](GlobaltagajustefinanceiroApi.md#ajustarContaUsingPOST) | **POST** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_ajustar_conta}}}
-[**consultarUsingGET2**](GlobaltagajustefinanceiroApi.md#consultarUsingGET2) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
+[**consultarUsingGET3**](GlobaltagajustefinanceiroApi.md#consultarUsingGET3) | **GET** /api/ajustes-financeiros/{id} | {{{ajuste_financeiro_resource_consultar}}}
 [**listarUsingGET2**](GlobaltagajustefinanceiroApi.md#listarUsingGET2) | **GET** /api/ajustes-financeiros | {{{ajuste_financeiro_resource_listar}}}
 
 
@@ -70,9 +70,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET2"></a>
-# **consultarUsingGET2**
-> AjusteFinanceiroResponse consultarUsingGET2(id)
+<a name="consultarUsingGET3"></a>
+# **consultarUsingGET3**
+> AjusteFinanceiroResponse consultarUsingGET3(id)
 
 {{{ajuste_financeiro_resource_consultar}}}
 
@@ -94,7 +94,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET2(id, callback);
+api.consultarUsingGET3(id, callback);
 ```
 
 ### Parameters

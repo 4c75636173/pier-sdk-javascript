@@ -18,7 +18,7 @@
   /**
    * The IntegracaoEmissorResponse model module.
    * @module model/IntegracaoEmissorResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

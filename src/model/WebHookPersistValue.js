@@ -18,7 +18,7 @@
   /**
    * The WebHookPersistValue model module.
    * @module model/WebHookPersistValue
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

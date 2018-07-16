@@ -18,7 +18,7 @@
   /**
    * The ValidaCVVRequest model module.
    * @module model/ValidaCVVRequest
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

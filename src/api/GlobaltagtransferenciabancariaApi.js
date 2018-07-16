@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ContaBancariaPortadorUpdateValue', '../model/ContaBancariaPortadorResponse', '../model/TransferenciaCreditoContaBancariaResponse', '../model/TransferenciaBancariaResponse', '../model/PageTransferenciaCreditoContaBancariaResponse', '../model/PageContaBancariaPortadorResponse', '../model/PageTransferenciaBancariaResponse', '../model/ContaBancariaPortadorPersistValue', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse', '../model/TransferenciaCreditoContaBancariaPersistValue', '../model/TransferenciaBancariaPersistValue'], factory);
+    define(['../ApiClient', '../model/TaxaJurosContaPersistValue', '../model/TaxaJurosContaResponse', '../model/ContaBancariaPortadorUpdateValue', '../model/ContaBancariaPortadorResponse', '../model/TransferenciaCreditoContaBancariaResponse', '../model/TransferenciaBancariaResponse', '../model/PageTransferenciaCreditoContaBancariaResponse', '../model/PageContaBancariaPortadorResponse', '../model/PageTransferenciaBancariaResponse', '../model/ContaBancariaPortadorPersistValue', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest', '../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse', '../model/TransferenciaCreditoContaBancariaPersistValue', '../model/TransferenciaBancariaPersistValue'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ContaBancariaPortadorUpdateValue'), require('../model/ContaBancariaPortadorResponse'), require('../model/TransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/PageTransferenciaCreditoContaBancariaResponse'), require('../model/PageContaBancariaPortadorResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/ContaBancariaPortadorPersistValue'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaCreditoContaBancariaPersistValue'), require('../model/TransferenciaBancariaPersistValue'));
+    module.exports = factory(require('../ApiClient'), require('../model/TaxaJurosContaPersistValue'), require('../model/TaxaJurosContaResponse'), require('../model/ContaBancariaPortadorUpdateValue'), require('../model/ContaBancariaPortadorResponse'), require('../model/TransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaBancariaResponse'), require('../model/PageTransferenciaCreditoContaBancariaResponse'), require('../model/PageContaBancariaPortadorResponse'), require('../model/PageTransferenciaBancariaResponse'), require('../model/ContaBancariaPortadorPersistValue'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaRequest'), require('../model/PlanoParcelamentoTransferenciaCreditoContaBancariaResponse'), require('../model/TransferenciaCreditoContaBancariaPersistValue'), require('../model/TransferenciaBancariaPersistValue'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagtransferenciabancariaApi = factory(root.Pier.ApiClient, root.Pier.ContaBancariaPortadorUpdateValue, root.Pier.ContaBancariaPortadorResponse, root.Pier.TransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.PageTransferenciaCreditoContaBancariaResponse, root.Pier.PageContaBancariaPortadorResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.ContaBancariaPortadorPersistValue, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaCreditoContaBancariaPersistValue, root.Pier.TransferenciaBancariaPersistValue);
+    root.Pier.GlobaltagtransferenciabancariaApi = factory(root.Pier.ApiClient, root.Pier.TaxaJurosContaPersistValue, root.Pier.TaxaJurosContaResponse, root.Pier.ContaBancariaPortadorUpdateValue, root.Pier.ContaBancariaPortadorResponse, root.Pier.TransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaBancariaResponse, root.Pier.PageTransferenciaCreditoContaBancariaResponse, root.Pier.PageContaBancariaPortadorResponse, root.Pier.PageTransferenciaBancariaResponse, root.Pier.ContaBancariaPortadorPersistValue, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, root.Pier.PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, root.Pier.TransferenciaCreditoContaBancariaPersistValue, root.Pier.TransferenciaBancariaPersistValue);
   }
-}(this, function(ApiClient, ContaBancariaPortadorUpdateValue, ContaBancariaPortadorResponse, TransferenciaCreditoContaBancariaResponse, TransferenciaBancariaResponse, PageTransferenciaCreditoContaBancariaResponse, PageContaBancariaPortadorResponse, PageTransferenciaBancariaResponse, ContaBancariaPortadorPersistValue, PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, TransferenciaCreditoContaBancariaPersistValue, TransferenciaBancariaPersistValue) {
+}(this, function(ApiClient, TaxaJurosContaPersistValue, TaxaJurosContaResponse, ContaBancariaPortadorUpdateValue, ContaBancariaPortadorResponse, TransferenciaCreditoContaBancariaResponse, TransferenciaBancariaResponse, PageTransferenciaCreditoContaBancariaResponse, PageContaBancariaPortadorResponse, PageTransferenciaBancariaResponse, ContaBancariaPortadorPersistValue, PlanoParcelamentoTransferenciaCreditoContaBancariaRequest, PlanoParcelamentoTransferenciaCreditoContaBancariaResponse, TransferenciaCreditoContaBancariaPersistValue, TransferenciaBancariaPersistValue) {
   'use strict';
 
   /**
    * globaltagtransferenciabancaria service.
    * @module api/GlobaltagtransferenciabancariaApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -31,6 +31,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the atualizarTaxasJurosContasUsingPUT operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~atualizarTaxasJurosContasUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TaxaJurosContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+     * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+     * @param {Integer} id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+     * @param {module:model/TaxaJurosContaPersistValue} update update
+     * @param {module:api/GlobaltagtransferenciabancariaApi~atualizarTaxasJurosContasUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TaxaJurosContaResponse}
+     */
+    this.atualizarTaxasJurosContasUsingPUT = function(id, update, callback) {
+      var postBody = update;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling atualizarTaxasJurosContasUsingPUT";
+      }
+
+      // verify the required parameter 'update' is set
+      if (update == undefined || update == null) {
+        throw "Missing the required parameter 'update' when calling atualizarTaxasJurosContasUsingPUT";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxaJurosContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/taxas-transferencias', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the atualizarUsingPUT1 operation.
@@ -177,6 +229,59 @@
     }
 
     /**
+     * Callback function to receive the result of the consultarTaxasJurosContasUsingGET operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarTaxasJurosContasUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TaxaJurosContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+     * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+     * @param {Integer} id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+     * @param {Integer} numeroMesesCarencia numeroMesesCarencia
+     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarTaxasJurosContasUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TaxaJurosContaResponse}
+     */
+    this.consultarTaxasJurosContasUsingGET = function(id, numeroMesesCarencia, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling consultarTaxasJurosContasUsingGET";
+      }
+
+      // verify the required parameter 'numeroMesesCarencia' is set
+      if (numeroMesesCarencia == undefined || numeroMesesCarencia == null) {
+        throw "Missing the required parameter 'numeroMesesCarencia' when calling consultarTaxasJurosContasUsingGET";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'numeroMesesCarencia': numeroMesesCarencia
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxaJurosContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/taxas-transferencias', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the consultarTransferenciaBancariaUsingGET operation.
      * @callback module:api/GlobaltagtransferenciabancariaApi~consultarTransferenciaBancariaUsingGETCallback
      * @param {String} error Error message, if any.
@@ -223,8 +328,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET12 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET12Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -234,15 +339,15 @@
      * {{{conta_bancaria_resource_consultar}}}
      * {{{conta_bancaria_resource_consultar_notes}}}
      * @param {Integer} id {{{conta_bancaria_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.consultarUsingGET12 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -269,8 +374,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET47 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET47Callback
+     * Callback function to receive the result of the consultarUsingGET48 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET48Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -283,21 +388,21 @@
      * @param {Integer} idTransferencia {{{transferencia_bancaria_resource_consultar_param_id_evento}}}
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET47 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET48 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET47";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET48";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET47";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48";
       }
 
 
@@ -498,6 +603,58 @@
 
       return this.apiClient.callApi(
         '/api/contas/{id}/transferencias-creditos-contas-bancarias', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarTaxasJurosContasUsingPOST operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~salvarTaxasJurosContasUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TaxaJurosContaResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+     * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+     * @param {Integer} id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+     * @param {module:model/TaxaJurosContaPersistValue} persist persist
+     * @param {module:api/GlobaltagtransferenciabancariaApi~salvarTaxasJurosContasUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/TaxaJurosContaResponse}
+     */
+    this.salvarTaxasJurosContasUsingPOST = function(id, persist, callback) {
+      var postBody = persist;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling salvarTaxasJurosContasUsingPOST";
+      }
+
+      // verify the required parameter 'persist' is set
+      if (persist == undefined || persist == null) {
+        throw "Missing the required parameter 'persist' when calling salvarTaxasJurosContasUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxaJurosContaResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/taxas-transferencias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

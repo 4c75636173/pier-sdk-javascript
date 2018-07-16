@@ -18,7 +18,7 @@
   /**
    * The AtribuirAssinaturaClientePersist model module.
    * @module model/AtribuirAssinaturaClientePersist
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

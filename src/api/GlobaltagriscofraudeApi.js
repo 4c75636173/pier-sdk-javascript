@@ -18,7 +18,7 @@
   /**
    * globaltagriscofraude service.
    * @module api/GlobaltagriscofraudeApi
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET34 operation.
-     * @callback module:api/GlobaltagriscofraudeApi~consultarUsingGET34Callback
+     * Callback function to receive the result of the consultarUsingGET35 operation.
+     * @callback module:api/GlobaltagriscofraudeApi~consultarUsingGET35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/RiscoFraudeDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{risco_fraude_resource_consultar}}}
      * {{{risco_fraude_resource_consultar_notes}}}
      * @param {Integer} id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
-     * @param {module:api/GlobaltagriscofraudeApi~consultarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagriscofraudeApi~consultarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/RiscoFraudeDetalhadoResponse}
      */
-    this.consultarUsingGET34 = function(id, callback) {
+    this.consultarUsingGET35 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET34";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET35";
       }
 
 

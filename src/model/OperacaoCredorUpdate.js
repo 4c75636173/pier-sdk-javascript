@@ -18,7 +18,7 @@
   /**
    * The OperacaoCredorUpdate model module.
    * @module model/OperacaoCredorUpdate
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

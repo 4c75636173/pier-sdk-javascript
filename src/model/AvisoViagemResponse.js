@@ -18,7 +18,7 @@
   /**
    * The AvisoViagemResponse model module.
    * @module model/AvisoViagemResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The BoletoRequest model module.
    * @module model/BoletoRequest
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

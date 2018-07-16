@@ -18,7 +18,7 @@
   /**
    * The AcordoDetalheResponse model module.
    * @module model/AcordoDetalheResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

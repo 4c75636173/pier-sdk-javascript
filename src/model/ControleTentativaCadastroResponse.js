@@ -18,7 +18,7 @@
   /**
    * The ControleTentativaCadastroResponse model module.
    * @module model/ControleTentativaCadastroResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The UsuarioldapUpdateObjectDescription model module.
    * @module model/UsuarioldapUpdateObjectDescription
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

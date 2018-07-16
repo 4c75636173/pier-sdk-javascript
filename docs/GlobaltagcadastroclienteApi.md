@@ -12,12 +12,12 @@ Method | HTTP request | Description
 [**atribuirAssinaturaClienteUsingPOST**](GlobaltagcadastroclienteApi.md#atribuirAssinaturaClienteUsingPOST) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
 [**atualizarEnderecoDeCorrespondenciaUsingPUT**](GlobaltagcadastroclienteApi.md#atualizarEnderecoDeCorrespondenciaUsingPUT) | **PUT** /api/enderecos/{id}/alterar-endereco-correspondencia | {{{endereco_resource_atualizar_correspondencia}}}
 [**atualizarUsingPOST**](GlobaltagcadastroclienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | {{{integracao_emissor_resource_atualizar}}}
-[**cadastrarUsingPOST**](GlobaltagcadastroclienteApi.md#cadastrarUsingPOST) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
-[**consultarUsingGET1**](GlobaltagcadastroclienteApi.md#consultarUsingGET1) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
-[**consultarUsingGET18**](GlobaltagcadastroclienteApi.md#consultarUsingGET18) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
-[**consultarUsingGET29**](GlobaltagcadastroclienteApi.md#consultarUsingGET29) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
-[**consultarUsingGET30**](GlobaltagcadastroclienteApi.md#consultarUsingGET30) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
-[**consultarUsingGET38**](GlobaltagcadastroclienteApi.md#consultarUsingGET38) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
+[**cadastrarUsingPOST1**](GlobaltagcadastroclienteApi.md#cadastrarUsingPOST1) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
+[**consultarUsingGET19**](GlobaltagcadastroclienteApi.md#consultarUsingGET19) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
+[**consultarUsingGET2**](GlobaltagcadastroclienteApi.md#consultarUsingGET2) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
+[**consultarUsingGET30**](GlobaltagcadastroclienteApi.md#consultarUsingGET30) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
+[**consultarUsingGET31**](GlobaltagcadastroclienteApi.md#consultarUsingGET31) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
+[**consultarUsingGET39**](GlobaltagcadastroclienteApi.md#consultarUsingGET39) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
 [**inativarUsingPOST**](GlobaltagcadastroclienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | {{{adicional_resource_inativar}}}
 [**listarSociosUsingGET**](GlobaltagcadastroclienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | {{{conta_pessoa_resource_listar_socios}}}
 [**listarUsingGET1**](GlobaltagcadastroclienteApi.md#listarUsingGET1) | **GET** /api/contas/{id}/adicionais | {{{adicional_resource_listar}}}
@@ -499,9 +499,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="cadastrarUsingPOST"></a>
-# **cadastrarUsingPOST**
-> AdicionalDetalheResponse cadastrarUsingPOST(id, persist)
+<a name="cadastrarUsingPOST1"></a>
+# **cadastrarUsingPOST1**
+> AdicionalDetalheResponse cadastrarUsingPOST1(id, persist)
 
 {{{adicional_resource_cadastrar}}}
 
@@ -525,7 +525,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cadastrarUsingPOST(id, persist, callback);
+api.cadastrarUsingPOST1(id, persist, callback);
 ```
 
 ### Parameters
@@ -548,9 +548,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET1"></a>
-# **consultarUsingGET1**
-> AdicionalDetalheResponse consultarUsingGET1(id, idPessoa)
+<a name="consultarUsingGET19"></a>
+# **consultarUsingGET19**
+> EnderecoResponse consultarUsingGET19(id)
+
+{{{endereco_resource_consultar}}}
+
+{{{endereco_resource_consultar_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcadastroclienteApi()
+
+var id = 789; // {Integer} {{{endereco_resource_consultar_param_id}}}
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET19(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET2"></a>
+# **consultarUsingGET2**
+> AdicionalDetalheResponse consultarUsingGET2(id, idPessoa)
 
 {{{adicional_resource_consultar}}}
 
@@ -574,7 +620,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET1(id, idPessoa, callback);
+api.consultarUsingGET2(id, idPessoa, callback);
 ```
 
 ### Parameters
@@ -597,55 +643,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET18"></a>
-# **consultarUsingGET18**
-> EnderecoResponse consultarUsingGET18(id)
-
-{{{endereco_resource_consultar}}}
-
-{{{endereco_resource_consultar_notes}}}
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.GlobaltagcadastroclienteApi()
-
-var id = 789; // {Integer} {{{endereco_resource_consultar_param_id}}}
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET18(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET29"></a>
-# **consultarUsingGET29**
-> PessoaDetalheResponse consultarUsingGET29(id)
+<a name="consultarUsingGET30"></a>
+# **consultarUsingGET30**
+> PessoaDetalheResponse consultarUsingGET30(id)
 
 {{{pessoa_detalhe_resource_consultar}}}
 
@@ -667,7 +667,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET29(id, callback);
+api.consultarUsingGET30(id, callback);
 ```
 
 ### Parameters
@@ -689,9 +689,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET30"></a>
-# **consultarUsingGET30**
-> PessoaResponse consultarUsingGET30(id)
+<a name="consultarUsingGET31"></a>
+# **consultarUsingGET31**
+> PessoaResponse consultarUsingGET31(id)
 
 {{{pessoa_resource_consultar}}}
 
@@ -713,7 +713,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET30(id, callback);
+api.consultarUsingGET31(id, callback);
 ```
 
 ### Parameters
@@ -735,9 +735,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET38"></a>
-# **consultarUsingGET38**
-> TelefoneResponse consultarUsingGET38(id)
+<a name="consultarUsingGET39"></a>
+# **consultarUsingGET39**
+> TelefoneResponse consultarUsingGET39(id)
 
 {{{telefone_resource_consultar}}}
 
@@ -759,7 +759,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET38(id, callback);
+api.consultarUsingGET39(id, callback);
 ```
 
 ### Parameters

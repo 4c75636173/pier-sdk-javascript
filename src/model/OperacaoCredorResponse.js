@@ -18,7 +18,7 @@
   /**
    * The OperacaoCredorResponse model module.
    * @module model/OperacaoCredorResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

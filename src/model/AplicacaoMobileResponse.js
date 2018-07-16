@@ -18,7 +18,7 @@
   /**
    * The AplicacaoMobileResponse model module.
    * @module model/AplicacaoMobileResponse
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**

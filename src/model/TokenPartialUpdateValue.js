@@ -18,7 +18,7 @@
   /**
    * The TokenPartialUpdateValue model module.
    * @module model/TokenPartialUpdateValue
-   * @version 2.66.1
+   * @version 2.68.0
    */
 
   /**
