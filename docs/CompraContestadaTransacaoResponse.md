@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **dataContestacao** | **Date** |  | [optional] 
 **dataEnvioCB** | **String** |  | [optional] 
 **dataTransacao** | **Date** |  | [optional] 
+**historico** | **String** |  | [optional] 
 **idCompraContestada** | **Integer** |  | [optional] 
 **internacional** | **Integer** |  | [optional] 
 **mcc** | **String** |  | [optional] 

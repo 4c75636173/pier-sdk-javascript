@@ -18,7 +18,7 @@
   /**
    * The MaquinetaPersist model module.
    * @module model/MaquinetaPersist
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

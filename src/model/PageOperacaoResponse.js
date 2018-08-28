@@ -18,7 +18,7 @@
   /**
    * The PageOperacaoResponse model module.
    * @module model/PageOperacaoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

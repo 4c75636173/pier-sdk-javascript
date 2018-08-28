@@ -18,7 +18,7 @@
   /**
    * globaltagplataformamobile service.
    * @module api/GlobaltagplataformamobileApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET40 operation.
-     * @callback module:api/GlobaltagplataformamobileApi~listarUsingGET40Callback
+     * Callback function to receive the result of the listarUsingGET42 operation.
+     * @callback module:api/GlobaltagplataformamobileApi~listarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -100,10 +100,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {String} opts.nome {{{plataforma_mobile_request_nome_value}}}
-     * @param {module:api/GlobaltagplataformamobileApi~listarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagplataformamobileApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePlataformaMobileResponse}
      */
-    this.listarUsingGET40 = function(opts, callback) {
+    this.listarUsingGET42 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -134,8 +134,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST26 operation.
-     * @callback module:api/GlobaltagplataformamobileApi~salvarUsingPOST26Callback
+     * Callback function to receive the result of the salvarUsingPOST27 operation.
+     * @callback module:api/GlobaltagplataformamobileApi~salvarUsingPOST27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PlataformaMobileResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -145,15 +145,15 @@
      * {{{plataforma_mobile_resource_salvar}}}
      * {{{plataforma_mobile_resource_salvar_notes}}}
      * @param {module:model/PlataformaMobilePersistValue} persist persist
-     * @param {module:api/GlobaltagplataformamobileApi~salvarUsingPOST26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagplataformamobileApi~salvarUsingPOST27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PlataformaMobileResponse}
      */
-    this.salvarUsingPOST26 = function(persist, callback) {
+    this.salvarUsingPOST27 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST26";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST27";
       }
 
 

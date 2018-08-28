@@ -18,7 +18,7 @@
   /**
    * The ContaDebitoRecorrentePersistValue model module.
    * @module model/ContaDebitoRecorrentePersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

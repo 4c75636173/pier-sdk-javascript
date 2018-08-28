@@ -18,7 +18,7 @@
   /**
    * The PushAPNSPersistValue model module.
    * @module model/PushAPNSPersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -138,19 +138,19 @@
   exports.prototype['conteudo'] = undefined;
 
   /**
-   * {{{push_a_p_n_s_persist_tipo_evento_value}}}
+   * {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
    * @member {module:model/PushAPNSPersistValue.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
-   * {{{push_a_p_n_s_persist_icone_value}}}
+   * {{{push_f_c_m_g_c_m_persist_icone_value}}}
    * @member {String} icone
    */
   exports.prototype['icone'] = undefined;
 
   /**
-   * {{{push_a_p_n_s_persist_som_value}}}
+   * {{{push_f_c_m_g_c_m_persist_som_value}}}
    * @member {String} som
    */
   exports.prototype['som'] = undefined;
@@ -178,7 +178,13 @@
      * value: OUTROS
      * @const
      */
-    OUTROS: "OUTROS"
+    OUTROS: "OUTROS",
+    
+    /**
+     * value: OTP_3D_SECURE
+     * @const
+     */
+    OTP_3D_SECURE: "OTP_3D_SECURE"
   };
 
   return exports;

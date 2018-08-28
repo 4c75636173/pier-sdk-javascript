@@ -18,7 +18,7 @@
   /**
    * The DetalheAjusteLoteResponse model module.
    * @module model/DetalheAjusteLoteResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

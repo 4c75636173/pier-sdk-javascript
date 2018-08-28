@@ -18,7 +18,7 @@
   /**
    * The PagePerfilResponse model module.
    * @module model/PagePerfilResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

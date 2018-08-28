@@ -18,7 +18,7 @@
   /**
    * The CompraContestadaTransacaoResponse model module.
    * @module model/CompraContestadaTransacaoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -109,6 +110,9 @@
       }
       if (data.hasOwnProperty('dataTransacao')) {
         obj['dataTransacao'] = ApiClient.convertToType(data['dataTransacao'], 'Date');
+      }
+      if (data.hasOwnProperty('historico')) {
+        obj['historico'] = ApiClient.convertToType(data['historico'], 'String');
       }
       if (data.hasOwnProperty('idCompraContestada')) {
         obj['idCompraContestada'] = ApiClient.convertToType(data['idCompraContestada'], 'Integer');
@@ -234,6 +238,11 @@
    * @member {Date} dataTransacao
    */
   exports.prototype['dataTransacao'] = undefined;
+
+  /**
+   * @member {String} historico
+   */
+  exports.prototype['historico'] = undefined;
 
   /**
    * @member {Integer} idCompraContestada

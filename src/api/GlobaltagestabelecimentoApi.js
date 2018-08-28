@@ -18,7 +18,7 @@
   /**
    * globaltagestabelecimento service.
    * @module api/GlobaltagestabelecimentoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -624,8 +624,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET20 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET20Callback
+     * Callback function to receive the result of the consultarUsingGET22 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/EstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -635,15 +635,15 @@
      * {{{estabelecimento_resource_consultar}}}
      * {{{estabelecimento_resource_consultar_notes}}}
      * @param {Integer} id {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/EstabelecimentoResponse}
      */
-    this.consultarUsingGET20 = function(id, callback) {
+    this.consultarUsingGET22 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
       }
 
 
@@ -670,8 +670,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET22 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET22Callback
+     * Callback function to receive the result of the consultarUsingGET24 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET24Callback
      * @param {String} error Error message, if any.
      * @param {module:model/GrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -681,15 +681,15 @@
      * {{{grupo_economico_resource_consultar}}}
      * {{{grupo_economico_resource_consultar_notes}}}
      * @param {Integer} id {{{grupo_economico_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/GrupoEconomicoResponse}
      */
-    this.consultarUsingGET22 = function(id, callback) {
+    this.consultarUsingGET24 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET22";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
       }
 
 
@@ -716,8 +716,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET24 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET24Callback
+     * Callback function to receive the result of the consultarUsingGET26 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/MaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -727,15 +727,15 @@
      * {{{maquineta_resource_consultar}}}
      * {{{maquineta_resource_consultar_notes}}}
      * @param {Integer} id {{{maquineta_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET24Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
      */
-    this.consultarUsingGET24 = function(id, callback) {
+    this.consultarUsingGET26 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET24";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
       }
 
 
@@ -762,8 +762,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET25 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET25Callback
+     * Callback function to receive the result of the consultarUsingGET27 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -773,15 +773,15 @@
      * {{{operacao_credor_resource_consultar}}}
      * {{{operacao_credor_resource_consultar_notes}}}
      * @param {Integer} id {{{operacao_credor_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
      */
-    this.consultarUsingGET25 = function(id, callback) {
+    this.consultarUsingGET27 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET25";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET27";
       }
 
 
@@ -808,8 +808,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET38 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET38Callback
+     * Callback function to receive the result of the consultarUsingGET40 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET40Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -819,15 +819,15 @@
      * {{{telefone_estabelecimento_resource_consultar}}}
      * {{{telefone_estabelecimento_resource_consultar_notes}}}
      * @param {Integer} id {{{telefone_estabelecimento_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.consultarUsingGET38 = function(id, callback) {
+    this.consultarUsingGET40 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET38";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
       }
 
 
@@ -854,8 +854,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET40 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET40Callback
+     * Callback function to receive the result of the consultarUsingGET42 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET42Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -865,15 +865,15 @@
      * {{{terminal_resource_consultar}}}
      * {{{terminal_resource_consultar_notes}}}
      * @param {Integer} id {{{terminal_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET40Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.consultarUsingGET40 = function(id, callback) {
+    this.consultarUsingGET42 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET40";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET42";
       }
 
 
@@ -900,8 +900,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET52 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET52Callback
+     * Callback function to receive the result of the consultarUsingGET54 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~consultarUsingGET54Callback
      * @param {String} error Error message, if any.
      * @param {module:model/VinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -911,15 +911,15 @@
      * {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
      * {{{vinculo_estabelecimento_adquirente_resource_consultar_notes}}}
      * @param {Integer} id {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~consultarUsingGET54Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}
      */
-    this.consultarUsingGET52 = function(id, callback) {
+    this.consultarUsingGET54 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET52";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET54";
       }
 
 
@@ -1574,8 +1574,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET25 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET25Callback
+     * Callback function to receive the result of the listarUsingGET26 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET26Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1623,10 +1623,10 @@
      * @param {String} opts.cidade2 {{{estabelecimento_request_cidade2_value}}}
      * @param {String} opts.uf2 {{{estabelecimento_request_uf2_value}}}
      * @param {Integer} opts.flagMatriz {{{estabelecimento_request_flag_matriz_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageEstabelecimentoResponse}
      */
-    this.listarUsingGET25 = function(opts, callback) {
+    this.listarUsingGET26 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1691,8 +1691,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET28 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET28Callback
+     * Callback function to receive the result of the listarUsingGET29 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET29Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoEconomicoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1730,10 +1730,10 @@
      * @param {Number} opts.taxaBanco {{{grupo_economico_request_taxa_banco_value}}}
      * @param {Number} opts.limiteRAV {{{grupo_economico_request_limite_r_a_v_value}}}
      * @param {Integer} opts.idCredorRAV {{{grupo_economico_request_id_credor_r_a_v_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoEconomicoResponse}
      */
-    this.listarUsingGET28 = function(opts, callback) {
+    this.listarUsingGET29 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1788,8 +1788,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET29 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET29Callback
+     * Callback function to receive the result of the listarUsingGET30 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoOrigemComercialResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1803,10 +1803,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {String} opts.nome {{{grupo_origem_comercial_request_nome_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET29Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoOrigemComercialResponse}
      */
-    this.listarUsingGET29 = function(opts, callback) {
+    this.listarUsingGET30 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1837,8 +1837,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET32 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET32Callback
+     * Callback function to receive the result of the listarUsingGET33 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET33Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1852,10 +1852,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.idEstabelecimento {{{maquineta_request_id_estabelecimento_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMaquinetaResponse}
      */
-    this.listarUsingGET32 = function(opts, callback) {
+    this.listarUsingGET33 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1886,8 +1886,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET33 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET33Callback
+     * Callback function to receive the result of the listarUsingGET34 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET34Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageMoedaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1903,10 +1903,10 @@
      * @param {String} opts.codigoMoeda {{{moeda_request_codigo_moeda_value}}}
      * @param {String} opts.simbolo {{{moeda_request_simbolo_value}}}
      * @param {String} opts.descricao {{{moeda_request_descricao_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageMoedaResponse}
      */
-    this.listarUsingGET33 = function(opts, callback) {
+    this.listarUsingGET34 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1939,8 +1939,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET34 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET34Callback
+     * Callback function to receive the result of the listarUsingGET35 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1956,10 +1956,10 @@
      * @param {Integer} opts.idOperacao {{{operacao_credor_request_id_operacao_value}}}
      * @param {Integer} opts.idCredor {{{operacao_credor_request_id_credor_value}}}
      * @param {Integer} opts.idProduto {{{operacao_credor_request_id_produto_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOperacaoCredorResponse}
      */
-    this.listarUsingGET34 = function(opts, callback) {
+    this.listarUsingGET35 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1992,8 +1992,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET49 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET49Callback
+     * Callback function to receive the result of the listarUsingGET52 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET52Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2007,10 +2007,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.idEstabelecimento {{{telefone_estabelecimento_request_id_estabelecimento_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTelefoneEstabelecimentoResponse}
      */
-    this.listarUsingGET49 = function(opts, callback) {
+    this.listarUsingGET52 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2041,8 +2041,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET51 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET51Callback
+     * Callback function to receive the result of the listarUsingGET54 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET54Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2059,10 +2059,10 @@
      * @param {String} opts.terminal {{{terminal_request_terminal_value}}}
      * @param {Integer} opts.numeroEstabelecimento {{{terminal_request_numero_estabelecimento_value}}}
      * @param {Integer} opts.idEstabelecimento {{{terminal_request_id_estabelecimento_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET54Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTerminalResponse}
      */
-    this.listarUsingGET51 = function(opts, callback) {
+    this.listarUsingGET54 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2096,8 +2096,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET64 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET64Callback
+     * Callback function to receive the result of the listarUsingGET67 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET67Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2113,10 +2113,10 @@
      * @param {Integer} opts.idAdquirente {{{vinculo_estabelecimento_adquirente_request_id_adquirente_value}}}
      * @param {Integer} opts.idEstabelecimento {{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}}
      * @param {String} opts.codigoEstabelecimentoAdquirente {{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET64Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET67Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoEstabelecimentoAdquirenteResponse}
      */
-    this.listarUsingGET64 = function(opts, callback) {
+    this.listarUsingGET67 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2149,8 +2149,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET65 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET65Callback
+     * Callback function to receive the result of the listarUsingGET68 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~listarUsingGET68Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageVinculoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2167,16 +2167,16 @@
      * @param {Integer} opts.idProduto {{{vinculo_operacao_request_id_produto_value}}}
      * @param {Integer} opts.idOperacao {{{vinculo_operacao_request_id_operacao_value}}}
      * @param {Integer} opts.codigoMCC {{{vinculo_operacao_request_codigo_m_c_c_value}}}
-     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET65Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~listarUsingGET68Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageVinculoOperacaoResponse}
      */
-    this.listarUsingGET65 = function(id, opts, callback) {
+    this.listarUsingGET68 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET65";
+        throw "Missing the required parameter 'id' when calling listarUsingGET68";
       }
 
 
@@ -2209,8 +2209,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST19 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST19Callback
+     * Callback function to receive the result of the salvarUsingPOST20 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/MaquinetaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2220,15 +2220,15 @@
      * {{{maquineta_resource_salvar}}}
      * {{{maquineta_resource_salvar_notes}}}
      * @param {module:model/MaquinetaPersist} maquinetaPersist maquinetaPersist
-     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/MaquinetaResponse}
      */
-    this.salvarUsingPOST19 = function(maquinetaPersist, callback) {
+    this.salvarUsingPOST20 = function(maquinetaPersist, callback) {
       var postBody = maquinetaPersist;
 
       // verify the required parameter 'maquinetaPersist' is set
       if (maquinetaPersist == undefined || maquinetaPersist == null) {
-        throw "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST19";
+        throw "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST20";
       }
 
 
@@ -2254,8 +2254,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST20 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST20Callback
+     * Callback function to receive the result of the salvarUsingPOST21 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OperacaoCredorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2265,15 +2265,15 @@
      * {{{operacao_credor_resource_salvar}}}
      * {{{operacao_credor_resource_salvar_notes}}}
      * @param {module:model/OperacaoCredorPersist} operacaoCredorPersist operacaoCredorPersist
-     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OperacaoCredorResponse}
      */
-    this.salvarUsingPOST20 = function(operacaoCredorPersist, callback) {
+    this.salvarUsingPOST21 = function(operacaoCredorPersist, callback) {
       var postBody = operacaoCredorPersist;
 
       // verify the required parameter 'operacaoCredorPersist' is set
       if (operacaoCredorPersist == undefined || operacaoCredorPersist == null) {
-        throw "Missing the required parameter 'operacaoCredorPersist' when calling salvarUsingPOST20";
+        throw "Missing the required parameter 'operacaoCredorPersist' when calling salvarUsingPOST21";
       }
 
 
@@ -2299,8 +2299,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST27 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST27Callback
+     * Callback function to receive the result of the salvarUsingPOST28 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TelefoneEstabelecimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2310,15 +2310,15 @@
      * {{{telefone_estabelecimento_resource_salvar}}}
      * {{{telefone_estabelecimento_resource_salvar_notes}}}
      * @param {module:model/TelefoneEstabelecimentoPersist} telefoneEstabelecimentoPersist telefoneEstabelecimentoPersist
-     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TelefoneEstabelecimentoResponse}
      */
-    this.salvarUsingPOST27 = function(telefoneEstabelecimentoPersist, callback) {
+    this.salvarUsingPOST28 = function(telefoneEstabelecimentoPersist, callback) {
       var postBody = telefoneEstabelecimentoPersist;
 
       // verify the required parameter 'telefoneEstabelecimentoPersist' is set
       if (telefoneEstabelecimentoPersist == undefined || telefoneEstabelecimentoPersist == null) {
-        throw "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST27";
+        throw "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST28";
       }
 
 
@@ -2344,8 +2344,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST29 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST29Callback
+     * Callback function to receive the result of the salvarUsingPOST30 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST30Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TerminalResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2355,15 +2355,15 @@
      * {{{terminal_resource_salvar}}}
      * {{{terminal_resource_salvar_notes}}}
      * @param {module:model/TerminalPersist} terminalPersist terminalPersist
-     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST29Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST30Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TerminalResponse}
      */
-    this.salvarUsingPOST29 = function(terminalPersist, callback) {
+    this.salvarUsingPOST30 = function(terminalPersist, callback) {
       var postBody = terminalPersist;
 
       // verify the required parameter 'terminalPersist' is set
       if (terminalPersist == undefined || terminalPersist == null) {
-        throw "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST29";
+        throw "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST30";
       }
 
 
@@ -2389,8 +2389,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST34 operation.
-     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST34Callback
+     * Callback function to receive the result of the salvarUsingPOST35 operation.
+     * @callback module:api/GlobaltagestabelecimentoApi~salvarUsingPOST35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/VinculoEstabelecimentoAdquirenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2400,15 +2400,15 @@
      * {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
      * {{{vinculo_estabelecimento_adquirente_resource_salvar_notes}}}
      * @param {module:model/VinculoEstabelecimentoAdquirentePersist} vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
-     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagestabelecimentoApi~salvarUsingPOST35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/VinculoEstabelecimentoAdquirenteResponse}
      */
-    this.salvarUsingPOST34 = function(vinculoEstabelecimentoAdquirentePersist, callback) {
+    this.salvarUsingPOST35 = function(vinculoEstabelecimentoAdquirentePersist, callback) {
       var postBody = vinculoEstabelecimentoAdquirentePersist;
 
       // verify the required parameter 'vinculoEstabelecimentoAdquirentePersist' is set
       if (vinculoEstabelecimentoAdquirentePersist == undefined || vinculoEstabelecimentoAdquirentePersist == null) {
-        throw "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST34";
+        throw "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST35";
       }
 
 

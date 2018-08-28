@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ativarUsingPOST**](GlobaltagdispositivoApi.md#ativarUsingPOST) | **POST** /api/dispositivos/{id}/ativar-dispositivo | {{{dispositivo_resource_ativar}}}
 [**desativarUsingPOST**](GlobaltagdispositivoApi.md#desativarUsingPOST) | **POST** /api/dispositivos/{id}/desativar-dispositivo | {{{dispositivo_resource_desativar}}}
-[**listarUsingGET20**](GlobaltagdispositivoApi.md#listarUsingGET20) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
-[**salvarUsingPOST10**](GlobaltagdispositivoApi.md#salvarUsingPOST10) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
+[**listarUsingGET21**](GlobaltagdispositivoApi.md#listarUsingGET21) | **GET** /api/dispositivos | {{{dispositivo_resource_listar}}}
+[**salvarUsingPOST11**](GlobaltagdispositivoApi.md#salvarUsingPOST11) | **POST** /api/dispositivos | {{{dispositivo_resource_salvar}}}
 
 
 <a name="ativarUsingPOST"></a>
@@ -102,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET20"></a>
-# **listarUsingGET20**
-> PageDispositivoResponse listarUsingGET20(opts)
+<a name="listarUsingGET21"></a>
+# **listarUsingGET21**
+> PageDispositivoResponse listarUsingGET21(opts)
 
 {{{dispositivo_resource_listar}}}
 
@@ -134,7 +134,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET20(opts, callback);
+api.listarUsingGET21(opts, callback);
 ```
 
 ### Parameters
@@ -163,9 +163,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST10"></a>
-# **salvarUsingPOST10**
-> DispositivoResponse salvarUsingPOST10(persist)
+<a name="salvarUsingPOST11"></a>
+# **salvarUsingPOST11**
+> DispositivoResponse salvarUsingPOST11(persist)
 
 {{{dispositivo_resource_salvar}}}
 
@@ -187,7 +187,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST10(persist, callback);
+api.salvarUsingPOST11(persist, callback);
 ```
 
 ### Parameters

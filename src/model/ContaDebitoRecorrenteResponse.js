@@ -18,7 +18,7 @@
   /**
    * The ContaDebitoRecorrenteResponse model module.
    * @module model/ContaDebitoRecorrenteResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

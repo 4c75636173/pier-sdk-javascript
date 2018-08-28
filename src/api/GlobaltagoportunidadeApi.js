@@ -18,7 +18,7 @@
   /**
    * globaltagoportunidade service.
    * @module api/GlobaltagoportunidadeApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -249,8 +249,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET26 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET26Callback
+     * Callback function to receive the result of the consultarUsingGET28 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -260,15 +260,15 @@
      * {{{oportunidade_resource_consultar}}}
      * {{{oportunidade_resource_consultar_notes}}}
      * @param {Integer} id {{{oportunidade_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.consultarUsingGET26 = function(id, callback) {
+    this.consultarUsingGET28 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET26";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET28";
       }
 
 
@@ -295,8 +295,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET45 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET45Callback
+     * Callback function to receive the result of the consultarUsingGET47 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~consultarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -306,15 +306,15 @@
      * {{{tipo_oportunidade_resource_consultar}}}
      * {{{tipo_oportunidade_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_oportunidade_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~consultarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.consultarUsingGET45 = function(id, callback) {
+    this.consultarUsingGET47 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET45";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET47";
       }
 
 
@@ -590,8 +590,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET35 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~listarUsingGET35Callback
+     * Callback function to receive the result of the listarUsingGET36 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~listarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -611,10 +611,10 @@
      * @param {String} opts.dataInicioVigencia {{{oportunidade_request_data_inicio_vigencia_value}}}
      * @param {String} opts.dataFimVigencia {{{oportunidade_request_data_fim_vigencia_value}}}
      * @param {Boolean} opts.flagAtivo {{{oportunidade_request_flag_ativo_value}}}
-     * @param {module:api/GlobaltagoportunidadeApi~listarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~listarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageOportunidadeResponse}
      */
-    this.listarUsingGET35 = function(opts, callback) {
+    this.listarUsingGET36 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -651,8 +651,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET55 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~listarUsingGET55Callback
+     * Callback function to receive the result of the listarUsingGET58 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~listarUsingGET58Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -667,10 +667,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {String} opts.descricao {{{tipo_oportunidade_request_descricao_value}}}
      * @param {Boolean} opts.flagAtivo {{{tipo_oportunidade_request_flag_ativo_value}}}
-     * @param {module:api/GlobaltagoportunidadeApi~listarUsingGET55Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~listarUsingGET58Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoOportunidadeResponse}
      */
-    this.listarUsingGET55 = function(opts, callback) {
+    this.listarUsingGET58 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -754,8 +754,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST21 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~salvarUsingPOST21Callback
+     * Callback function to receive the result of the salvarUsingPOST22 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~salvarUsingPOST22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/OportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -765,15 +765,15 @@
      * {{{oportunidade_resource_salvar}}}
      * {{{oportunidade_resource_salvar_notes}}}
      * @param {module:model/OportunidadePersistValue} persist persist
-     * @param {module:api/GlobaltagoportunidadeApi~salvarUsingPOST21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~salvarUsingPOST22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/OportunidadeResponse}
      */
-    this.salvarUsingPOST21 = function(persist, callback) {
+    this.salvarUsingPOST22 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST21";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST22";
       }
 
 
@@ -799,8 +799,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST30 operation.
-     * @callback module:api/GlobaltagoportunidadeApi~salvarUsingPOST30Callback
+     * Callback function to receive the result of the salvarUsingPOST31 operation.
+     * @callback module:api/GlobaltagoportunidadeApi~salvarUsingPOST31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOportunidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -810,15 +810,15 @@
      * {{{tipo_oportunidade_resource_salvar}}}
      * {{{tipo_oportunidade_resource_salvar_notes}}}
      * @param {module:model/TipoOportunidadePersistValue} persist persist
-     * @param {module:api/GlobaltagoportunidadeApi~salvarUsingPOST30Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagoportunidadeApi~salvarUsingPOST31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOportunidadeResponse}
      */
-    this.salvarUsingPOST30 = function(persist, callback) {
+    this.salvarUsingPOST31 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST30";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST31";
       }
 
 

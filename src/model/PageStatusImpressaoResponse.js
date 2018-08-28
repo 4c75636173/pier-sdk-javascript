@@ -18,7 +18,7 @@
   /**
    * The PageStatusImpressaoResponse model module.
    * @module model/PageStatusImpressaoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

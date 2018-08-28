@@ -18,7 +18,7 @@
   /**
    * The PessoaFisicaAprovadaResponse model module.
    * @module model/PessoaFisicaAprovadaResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

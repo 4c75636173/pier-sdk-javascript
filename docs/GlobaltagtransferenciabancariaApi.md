@@ -5,18 +5,18 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarTaxasJurosContasUsingPUT**](GlobaltagtransferenciabancariaApi.md#atualizarTaxasJurosContasUsingPUT) | **PUT** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
-[**atualizarUsingPUT1**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT1) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
+[**atualizarUsingPUT2**](GlobaltagtransferenciabancariaApi.md#atualizarUsingPUT2) | **PUT** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_atualizar}}}
 [**cancelarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#cancelarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar | {{{transferencia_bancaria_resource_cancelar_transferencia_credito_conta_bancaria}}}
 [**confirmarTransferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#confirmarTransferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar | {{{transferencia_bancaria_resource_confirmar_transferencia_credito_conta_bancaria}}}
 [**consultarTaxasJurosContasUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTaxasJurosContasUsingGET) | **GET** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
 [**consultarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#consultarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias/{idTransferencia} | {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
-[**consultarUsingGET13**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET13) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
-[**consultarUsingGET48**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET48) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
+[**consultarUsingGET15**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET15) | **GET** /api/contas-bancarias-portador/{id} | {{{conta_bancaria_resource_consultar}}}
+[**consultarUsingGET50**](GlobaltagtransferenciabancariaApi.md#consultarUsingGET50) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia} | {{{transferencia_bancaria_resource_consultar}}}
 [**listarTransferenciaBancariaUsingGET**](GlobaltagtransferenciabancariaApi.md#listarTransferenciaBancariaUsingGET) | **GET** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
-[**listarUsingGET16**](GlobaltagtransferenciabancariaApi.md#listarUsingGET16) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
-[**listarUsingGET59**](GlobaltagtransferenciabancariaApi.md#listarUsingGET59) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
+[**listarUsingGET17**](GlobaltagtransferenciabancariaApi.md#listarUsingGET17) | **GET** /api/contas-bancarias-portador | {{{conta_bancaria_resource_listar}}}
+[**listarUsingGET62**](GlobaltagtransferenciabancariaApi.md#listarUsingGET62) | **GET** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_listar}}}
 [**salvarTaxasJurosContasUsingPOST**](GlobaltagtransferenciabancariaApi.md#salvarTaxasJurosContasUsingPOST) | **POST** /api/contas/{id}/taxas-transferencias | {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
-[**salvarUsingPOST7**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST7) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
+[**salvarUsingPOST8**](GlobaltagtransferenciabancariaApi.md#salvarUsingPOST8) | **POST** /api/contas-bancarias-portador | {{{conta_bancaria_resource_salvar}}}
 [**simularTransferenciaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#simularTransferenciaBancariaUsingPOST) | **POST** /api/simular-transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_simular_transferencia_bancaria}}}
 [**transferenciaCreditoContaBancariaUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferenciaCreditoContaBancariaUsingPOST) | **POST** /api/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferencia_credito_conta_bancaria}}}
 [**transferirUsingPOST**](GlobaltagtransferenciabancariaApi.md#transferirUsingPOST) | **POST** /api/contas/{id}/transferencias-creditos-contas-bancarias | {{{transferencia_bancaria_resource_transferir}}}
@@ -71,9 +71,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT1"></a>
-# **atualizarUsingPUT1**
-> ContaBancariaPortadorResponse atualizarUsingPUT1(id, update)
+<a name="atualizarUsingPUT2"></a>
+# **atualizarUsingPUT2**
+> ContaBancariaPortadorResponse atualizarUsingPUT2(id, update)
 
 {{{conta_bancaria_resource_atualizar}}}
 
@@ -97,7 +97,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT1(id, update, callback);
+api.atualizarUsingPUT2(id, update, callback);
 ```
 
 ### Parameters
@@ -307,9 +307,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET13"></a>
-# **consultarUsingGET13**
-> ContaBancariaPortadorResponse consultarUsingGET13(id)
+<a name="consultarUsingGET15"></a>
+# **consultarUsingGET15**
+> ContaBancariaPortadorResponse consultarUsingGET15(id)
 
 {{{conta_bancaria_resource_consultar}}}
 
@@ -331,7 +331,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET13(id, callback);
+api.consultarUsingGET15(id, callback);
 ```
 
 ### Parameters
@@ -353,9 +353,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET48"></a>
-# **consultarUsingGET48**
-> TransferenciaBancariaResponse consultarUsingGET48(id, idTransferencia, opts)
+<a name="consultarUsingGET50"></a>
+# **consultarUsingGET50**
+> TransferenciaBancariaResponse consultarUsingGET50(id, idTransferencia, opts)
 
 {{{transferencia_bancaria_resource_consultar}}}
 
@@ -382,7 +382,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET48(id, idTransferencia, opts, callback);
+api.consultarUsingGET50(id, idTransferencia, opts, callback);
 ```
 
 ### Parameters
@@ -465,9 +465,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET16"></a>
-# **listarUsingGET16**
-> PageContaBancariaPortadorResponse listarUsingGET16(opts)
+<a name="listarUsingGET17"></a>
+# **listarUsingGET17**
+> PageContaBancariaPortadorResponse listarUsingGET17(opts)
 
 {{{conta_bancaria_resource_listar}}}
 
@@ -502,7 +502,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET16(opts, callback);
+api.listarUsingGET17(opts, callback);
 ```
 
 ### Parameters
@@ -536,9 +536,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET59"></a>
-# **listarUsingGET59**
-> PageTransferenciaBancariaResponse listarUsingGET59(id, opts)
+<a name="listarUsingGET62"></a>
+# **listarUsingGET62**
+> PageTransferenciaBancariaResponse listarUsingGET62(id, opts)
 
 {{{transferencia_bancaria_resource_listar}}}
 
@@ -566,7 +566,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET59(id, opts, callback);
+api.listarUsingGET62(id, opts, callback);
 ```
 
 ### Parameters
@@ -641,9 +641,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST7"></a>
-# **salvarUsingPOST7**
-> ContaBancariaPortadorResponse salvarUsingPOST7(persist)
+<a name="salvarUsingPOST8"></a>
+# **salvarUsingPOST8**
+> ContaBancariaPortadorResponse salvarUsingPOST8(persist)
 
 {{{conta_bancaria_resource_salvar}}}
 
@@ -665,7 +665,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST7(persist, callback);
+api.salvarUsingPOST8(persist, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The EmissorPierResponse model module.
    * @module model/EmissorPierResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

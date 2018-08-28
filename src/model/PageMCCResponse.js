@@ -18,7 +18,7 @@
   /**
    * The PageMCCResponse model module.
    * @module model/PageMCCResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**aderirDebitoRecorrenteUsingPOST**](GlobaltagdebitorecorrenteApi.md#aderirDebitoRecorrenteUsingPOST) | **POST** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_aderir}}}
 [**cancelarDebitoRecorrenteUsingPOST**](GlobaltagdebitorecorrenteApi.md#cancelarDebitoRecorrenteUsingPOST) | **POST** /api/debitos-recorrentes/{id}/cancelar | {{{conta_debito_recorrente_resource_cancelar}}}
-[**listarUsingGET17**](GlobaltagdebitorecorrenteApi.md#listarUsingGET17) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
-[**listarUsingGET53**](GlobaltagdebitorecorrenteApi.md#listarUsingGET53) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
+[**listarUsingGET18**](GlobaltagdebitorecorrenteApi.md#listarUsingGET18) | **GET** /api/debitos-recorrentes | {{{conta_debito_recorrente_resource_listar}}}
+[**listarUsingGET56**](GlobaltagdebitorecorrenteApi.md#listarUsingGET56) | **GET** /api/tipos-debitos-recorrentes | {{{tipo_debito_recorrente_resource_listar}}}
 
 
 <a name="aderirDebitoRecorrenteUsingPOST"></a>
@@ -105,9 +105,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET17"></a>
-# **listarUsingGET17**
-> PageContaDebitoRecorrenteResponse listarUsingGET17(idConta, opts)
+<a name="listarUsingGET18"></a>
+# **listarUsingGET18**
+> PageContaDebitoRecorrenteResponse listarUsingGET18(idConta, opts)
 
 {{{conta_debito_recorrente_resource_listar}}}
 
@@ -139,7 +139,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET17(idConta, opts, callback);
+api.listarUsingGET18(idConta, opts, callback);
 ```
 
 ### Parameters
@@ -169,9 +169,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET53"></a>
-# **listarUsingGET53**
-> PageTipoDebitoRecorrenteResponse listarUsingGET53(opts)
+<a name="listarUsingGET56"></a>
+# **listarUsingGET56**
+> PageTipoDebitoRecorrenteResponse listarUsingGET56(opts)
 
 {{{tipo_debito_recorrente_resource_listar}}}
 
@@ -200,7 +200,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET53(opts, callback);
+api.listarUsingGET56(opts, callback);
 ```
 
 ### Parameters

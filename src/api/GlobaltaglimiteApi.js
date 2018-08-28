@@ -18,7 +18,7 @@
   /**
    * globaltaglimite service.
    * @module api/GlobaltaglimiteApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -45,7 +45,6 @@
      * {{{conta_resource_listar_historico_alteracoes_limites_notes}}}
      * @param {Integer} id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -71,7 +70,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };

@@ -18,7 +18,7 @@
   /**
    * The PageGrupoEconomicoResponse model module.
    * @module model/PageGrupoEconomicoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

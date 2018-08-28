@@ -18,7 +18,7 @@
   /**
    * globaltagwebhook service.
    * @module api/GlobaltagwebhookApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -89,8 +89,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET53 operation.
-     * @callback module:api/GlobaltagwebhookApi~consultarUsingGET53Callback
+     * Callback function to receive the result of the consultarUsingGET55 operation.
+     * @callback module:api/GlobaltagwebhookApi~consultarUsingGET55Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -100,15 +100,15 @@
      * {{{web_hook_resource_consultar}}}
      * {{{web_hook_resource_consultar_notes}}}
      * @param {Integer} id {{{web_hook_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagwebhookApi~consultarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagwebhookApi~consultarUsingGET55Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.consultarUsingGET53 = function(id, callback) {
+    this.consultarUsingGET55 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET53";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET55";
       }
 
 
@@ -135,8 +135,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET66 operation.
-     * @callback module:api/GlobaltagwebhookApi~listarUsingGET66Callback
+     * Callback function to receive the result of the listarUsingGET69 operation.
+     * @callback module:api/GlobaltagwebhookApi~listarUsingGET69Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageWebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -153,10 +153,10 @@
      * @param {module:model/String} opts.tipoEvento {{{web_hook_request_tipo_evento_value}}}
      * @param {module:model/String} opts.metodo {{{web_hook_request_metodo_value}}}
      * @param {String} opts.url {{{web_hook_request_url_value}}}
-     * @param {module:api/GlobaltagwebhookApi~listarUsingGET66Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagwebhookApi~listarUsingGET69Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageWebHookResponse}
      */
-    this.listarUsingGET66 = function(opts, callback) {
+    this.listarUsingGET69 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -190,8 +190,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST35 operation.
-     * @callback module:api/GlobaltagwebhookApi~salvarUsingPOST35Callback
+     * Callback function to receive the result of the salvarUsingPOST36 operation.
+     * @callback module:api/GlobaltagwebhookApi~salvarUsingPOST36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/WebHookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -201,15 +201,15 @@
      * {{{web_hook_resource_salvar}}}
      * {{{web_hook_resource_salvar_notes}}}
      * @param {module:model/WebHookPersistValue} webhook webhook
-     * @param {module:api/GlobaltagwebhookApi~salvarUsingPOST35Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagwebhookApi~salvarUsingPOST36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/WebHookResponse}
      */
-    this.salvarUsingPOST35 = function(webhook, callback) {
+    this.salvarUsingPOST36 = function(webhook, callback) {
       var postBody = webhook;
 
       // verify the required parameter 'webhook' is set
       if (webhook == undefined || webhook == null) {
-        throw "Missing the required parameter 'webhook' when calling salvarUsingPOST35";
+        throw "Missing the required parameter 'webhook' when calling salvarUsingPOST36";
       }
 
 

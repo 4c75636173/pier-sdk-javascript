@@ -18,7 +18,7 @@
   /**
    * The DispositivoResponse model module.
    * @module model/DispositivoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

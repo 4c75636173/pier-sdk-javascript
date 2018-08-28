@@ -18,7 +18,7 @@
   /**
    * The PageCodigoChargebackResponse model module.
    * @module model/PageCodigoChargebackResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

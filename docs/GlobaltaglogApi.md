@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**salvarUsingPOST18**](GlobaltaglogApi.md#salvarUsingPOST18) | **POST** /api/logs/log-acessos-usuario | {{{log_acesso_usuario_recurso_salvar}}}
+[**salvarUsingPOST19**](GlobaltaglogApi.md#salvarUsingPOST19) | **POST** /api/logs/log-acessos-usuario | {{{log_acesso_usuario_recurso_salvar}}}
 
 
-<a name="salvarUsingPOST18"></a>
-# **salvarUsingPOST18**
-> LogAcessoUsuarioResposta salvarUsingPOST18(logAcessoUsuarioPersist)
+<a name="salvarUsingPOST19"></a>
+# **salvarUsingPOST19**
+> LogAcessoUsuarioResposta salvarUsingPOST19(logAcessoUsuarioPersist)
 
 {{{log_acesso_usuario_recurso_salvar}}}
 
@@ -31,7 +31,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST18(logAcessoUsuarioPersist, callback);
+api.salvarUsingPOST19(logAcessoUsuarioPersist, callback);
 ```
 
 ### Parameters

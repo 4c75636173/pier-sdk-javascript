@@ -18,7 +18,7 @@
   /**
    * The ParametroProdutoResponse model module.
    * @module model/ParametroProdutoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -26,14 +26,16 @@
    * {{{parametro_produto_response_description}}}
    * @alias module:model/ParametroProdutoResponse
    * @class
+   * @param id
    * @param idProduto
    * @param tipoOrigemTransacao
    * @param descricao
    * @param valorParametro
    * @param dataValidade
    */
-  var exports = function(idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade) {
+  var exports = function(id, idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade) {
 
+    this['id'] = id;
     this['idProduto'] = idProduto;
     this['tipoOrigemTransacao'] = tipoOrigemTransacao;
     this['descricao'] = descricao;
@@ -52,6 +54,9 @@
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Integer');
+      }
       if (data.hasOwnProperty('idProduto')) {
         obj['idProduto'] = ApiClient.convertToType(data['idProduto'], 'Integer');
       }
@@ -71,6 +76,12 @@
     return obj;
   }
 
+
+  /**
+   * {{{parametro_produto_response_id_value}}}
+   * @member {Integer} id
+   */
+  exports.prototype['id'] = undefined;
 
   /**
    * {{{parametro_produto_response_id_produto_value}}}

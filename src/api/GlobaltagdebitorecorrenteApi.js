@@ -18,7 +18,7 @@
   /**
    * globaltagdebitorecorrente service.
    * @module api/GlobaltagdebitorecorrenteApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -130,8 +130,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET17 operation.
-     * @callback module:api/GlobaltagdebitorecorrenteApi~listarUsingGET17Callback
+     * Callback function to receive the result of the listarUsingGET18 operation.
+     * @callback module:api/GlobaltagdebitorecorrenteApi~listarUsingGET18Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaDebitoRecorrenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -150,16 +150,16 @@
      * @param {String} opts.dataHoraFim {{{conta_debito_recorrente_request_data_hora_fim_value}}}
      * @param {Boolean} opts.ativo {{{conta_debito_recorrente_request_ativo_value}}}
      * @param {String} opts.dataHoraUltimoPagamento {{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}}
-     * @param {module:api/GlobaltagdebitorecorrenteApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdebitorecorrenteApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaDebitoRecorrenteResponse}
      */
-    this.listarUsingGET17 = function(idConta, opts, callback) {
+    this.listarUsingGET18 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET17";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET18";
       }
 
 
@@ -194,8 +194,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET53 operation.
-     * @callback module:api/GlobaltagdebitorecorrenteApi~listarUsingGET53Callback
+     * Callback function to receive the result of the listarUsingGET56 operation.
+     * @callback module:api/GlobaltagdebitorecorrenteApi~listarUsingGET56Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoDebitoRecorrenteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -212,10 +212,10 @@
      * @param {String} opts.descricao {{{tipo_debito_recorrente_request_descricao_value}}}
      * @param {Number} opts.valor {{{tipo_debito_recorrente_request_valor_value}}}
      * @param {Boolean} opts.flagAtivo {{{tipo_debito_recorrente_request_flag_ativo_value}}}
-     * @param {module:api/GlobaltagdebitorecorrenteApi~listarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdebitorecorrenteApi~listarUsingGET56Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoDebitoRecorrenteResponse}
      */
-    this.listarUsingGET53 = function(opts, callback) {
+    this.listarUsingGET56 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

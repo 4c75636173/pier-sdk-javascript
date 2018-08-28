@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoDetalheResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaResponse', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PageCodigoSegurancaResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailRequest', '../model/PushFCMGCMPersistValue', '../model/NotificacaoResponse', '../model/PushAPNSPersistValue', '../model/SMSPersistValue', '../model/CodigoSegurancaEMAILPersist', '../model/CodigoSegurancaSMSRequest'], factory);
+    define(['../ApiClient', '../model/ConfiguracaoEmailResponse', '../model/ConfiguracaoEmailPersist', '../model/TemplateNotificacaoDetalheResponse', '../model/NotificacaoSMSResponse', '../model/CodigoSegurancaResponse', '../model/Secure3dRequest', '../model/CodigoSegurancaSMSPersist', '../model/PageConfiguracaoEmailResponse', '../model/PageCodigoSegurancaResponse', '../model/PagePushResponse', '../model/PageSMSResponse', '../model/PageTemplateNotificacaoResponse', '../model/NotificacaoEmailRequest', '../model/PushFCMGCMPersistValue', '../model/NotificacaoResponse', '../model/PushAPNSPersistValue', '../model/SMSPersistValue', '../model/CodigoSegurancaEMAILPersist', '../model/CodigoSegurancaSMSRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoDetalheResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaResponse'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PageCodigoSegurancaResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailRequest'), require('../model/PushFCMGCMPersistValue'), require('../model/NotificacaoResponse'), require('../model/PushAPNSPersistValue'), require('../model/SMSPersistValue'), require('../model/CodigoSegurancaEMAILPersist'), require('../model/CodigoSegurancaSMSRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConfiguracaoEmailResponse'), require('../model/ConfiguracaoEmailPersist'), require('../model/TemplateNotificacaoDetalheResponse'), require('../model/NotificacaoSMSResponse'), require('../model/CodigoSegurancaResponse'), require('../model/Secure3dRequest'), require('../model/CodigoSegurancaSMSPersist'), require('../model/PageConfiguracaoEmailResponse'), require('../model/PageCodigoSegurancaResponse'), require('../model/PagePushResponse'), require('../model/PageSMSResponse'), require('../model/PageTemplateNotificacaoResponse'), require('../model/NotificacaoEmailRequest'), require('../model/PushFCMGCMPersistValue'), require('../model/NotificacaoResponse'), require('../model/PushAPNSPersistValue'), require('../model/SMSPersistValue'), require('../model/CodigoSegurancaEMAILPersist'), require('../model/CodigoSegurancaSMSRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagnotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoDetalheResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaResponse, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PageCodigoSegurancaResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailRequest, root.Pier.PushFCMGCMPersistValue, root.Pier.NotificacaoResponse, root.Pier.PushAPNSPersistValue, root.Pier.SMSPersistValue, root.Pier.CodigoSegurancaEMAILPersist, root.Pier.CodigoSegurancaSMSRequest);
+    root.Pier.GlobaltagnotificacaoApi = factory(root.Pier.ApiClient, root.Pier.ConfiguracaoEmailResponse, root.Pier.ConfiguracaoEmailPersist, root.Pier.TemplateNotificacaoDetalheResponse, root.Pier.NotificacaoSMSResponse, root.Pier.CodigoSegurancaResponse, root.Pier.Secure3dRequest, root.Pier.CodigoSegurancaSMSPersist, root.Pier.PageConfiguracaoEmailResponse, root.Pier.PageCodigoSegurancaResponse, root.Pier.PagePushResponse, root.Pier.PageSMSResponse, root.Pier.PageTemplateNotificacaoResponse, root.Pier.NotificacaoEmailRequest, root.Pier.PushFCMGCMPersistValue, root.Pier.NotificacaoResponse, root.Pier.PushAPNSPersistValue, root.Pier.SMSPersistValue, root.Pier.CodigoSegurancaEMAILPersist, root.Pier.CodigoSegurancaSMSRequest);
   }
-}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoDetalheResponse, NotificacaoSMSResponse, CodigoSegurancaResponse, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PageCodigoSegurancaResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailRequest, PushFCMGCMPersistValue, NotificacaoResponse, PushAPNSPersistValue, SMSPersistValue, CodigoSegurancaEMAILPersist, CodigoSegurancaSMSRequest) {
+}(this, function(ApiClient, ConfiguracaoEmailResponse, ConfiguracaoEmailPersist, TemplateNotificacaoDetalheResponse, NotificacaoSMSResponse, CodigoSegurancaResponse, Secure3dRequest, CodigoSegurancaSMSPersist, PageConfiguracaoEmailResponse, PageCodigoSegurancaResponse, PagePushResponse, PageSMSResponse, PageTemplateNotificacaoResponse, NotificacaoEmailRequest, PushFCMGCMPersistValue, NotificacaoResponse, PushAPNSPersistValue, SMSPersistValue, CodigoSegurancaEMAILPersist, CodigoSegurancaSMSRequest) {
   'use strict';
 
   /**
    * globaltagnotificacao service.
    * @module api/GlobaltagnotificacaoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -380,6 +380,51 @@
 
       return this.apiClient.callApi(
         '/api/templates-notificacoes/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the enviarOTPUsingPOST operation.
+     * @callback module:api/GlobaltagnotificacaoApi~enviarOTPUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{notificacao_resource_3d_secure}}}
+     * {{{notificacao_resource_3d_secure_notes}}}
+     * @param {module:model/Secure3dRequest} secure3dRequest secure3dRequest
+     * @param {module:api/GlobaltagnotificacaoApi~enviarOTPUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {Object}
+     */
+    this.enviarOTPUsingPOST = function(secure3dRequest, callback) {
+      var postBody = secure3dRequest;
+
+      // verify the required parameter 'secure3dRequest' is set
+      if (secure3dRequest == undefined || secure3dRequest == null) {
+        throw "Missing the required parameter 'secure3dRequest' when calling enviarOTPUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/api/notificacoes/3d-secure', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

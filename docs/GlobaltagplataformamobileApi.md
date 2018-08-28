@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarUsingPUT1**](GlobaltagplataformamobileApi.md#atualizarUsingPUT1) | **PUT** /api/plataformas-mobile/{id} | {{{plataforma_mobile_resource_atualizar}}}
-[**listarUsingGET40**](GlobaltagplataformamobileApi.md#listarUsingGET40) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
-[**salvarUsingPOST26**](GlobaltagplataformamobileApi.md#salvarUsingPOST26) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
+[**listarUsingGET42**](GlobaltagplataformamobileApi.md#listarUsingGET42) | **GET** /api/plataformas-mobile | {{{plataforma_mobile_resource_listar}}}
+[**salvarUsingPOST27**](GlobaltagplataformamobileApi.md#salvarUsingPOST27) | **POST** /api/plataformas-mobile | {{{plataforma_mobile_resource_salvar}}}
 
 
 <a name="atualizarUsingPUT1"></a>
@@ -58,9 +58,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET40"></a>
-# **listarUsingGET40**
-> PagePlataformaMobileResponse listarUsingGET40(opts)
+<a name="listarUsingGET42"></a>
+# **listarUsingGET42**
+> PagePlataformaMobileResponse listarUsingGET42(opts)
 
 {{{plataforma_mobile_resource_listar}}}
 
@@ -86,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET40(opts, callback);
+api.listarUsingGET42(opts, callback);
 ```
 
 ### Parameters
@@ -111,9 +111,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST26"></a>
-# **salvarUsingPOST26**
-> PlataformaMobileResponse salvarUsingPOST26(persist)
+<a name="salvarUsingPOST27"></a>
+# **salvarUsingPOST27**
+> PlataformaMobileResponse salvarUsingPOST27(persist)
 
 {{{plataforma_mobile_resource_salvar}}}
 
@@ -135,7 +135,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST26(persist, callback);
+api.salvarUsingPOST27(persist, callback);
 ```
 
 ### Parameters

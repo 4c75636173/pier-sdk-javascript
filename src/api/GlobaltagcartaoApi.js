@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/CartaoResponse', '../model/EstagioCartaoUpdate', '../model/HistoricoImpressaoCartaoResponse', '../model/DadosCartaoImpressaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/CartaoMultiAppImpressaoResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCVVRequest', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
+    define(['../ApiClient', '../model/CartaoResponse', '../model/EstagioCartaoUpdate', '../model/HistoricoImpressaoCartaoResponse', '../model/DadosCartaoImpressaoResponse', '../model/DadosCartaoResponse', '../model/LimiteDisponibilidadeResponse', '../model/LoteCartoesPrePagosResponse', '../model/PortadorResponse', '../model/CartaoDetalheResponse', '../model/VinculoCartoesResponse', '../model/CartaoMultiAppPersistValue', '../model/CartaoMultiAppImpressaoResponse', '../model/PageLoteCartoesPrePagosResponse', '../model/PageCartaoResponse', '../model/ValidaCVVRequest', '../model/ValidaCartaoResponse', '../model/ValidaSenhaCartaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CartaoResponse'), require('../model/EstagioCartaoUpdate'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/DadosCartaoImpressaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/CartaoMultiAppImpressaoResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCVVRequest'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CartaoResponse'), require('../model/EstagioCartaoUpdate'), require('../model/HistoricoImpressaoCartaoResponse'), require('../model/DadosCartaoImpressaoResponse'), require('../model/DadosCartaoResponse'), require('../model/LimiteDisponibilidadeResponse'), require('../model/LoteCartoesPrePagosResponse'), require('../model/PortadorResponse'), require('../model/CartaoDetalheResponse'), require('../model/VinculoCartoesResponse'), require('../model/CartaoMultiAppPersistValue'), require('../model/CartaoMultiAppImpressaoResponse'), require('../model/PageLoteCartoesPrePagosResponse'), require('../model/PageCartaoResponse'), require('../model/ValidaCVVRequest'), require('../model/ValidaCartaoResponse'), require('../model/ValidaSenhaCartaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagcartaoApi = factory(root.Pier.ApiClient, root.Pier.CartaoResponse, root.Pier.EstagioCartaoUpdate, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.DadosCartaoImpressaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.CartaoMultiAppImpressaoResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCVVRequest, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
+    root.Pier.GlobaltagcartaoApi = factory(root.Pier.ApiClient, root.Pier.CartaoResponse, root.Pier.EstagioCartaoUpdate, root.Pier.HistoricoImpressaoCartaoResponse, root.Pier.DadosCartaoImpressaoResponse, root.Pier.DadosCartaoResponse, root.Pier.LimiteDisponibilidadeResponse, root.Pier.LoteCartoesPrePagosResponse, root.Pier.PortadorResponse, root.Pier.CartaoDetalheResponse, root.Pier.VinculoCartoesResponse, root.Pier.CartaoMultiAppPersistValue, root.Pier.CartaoMultiAppImpressaoResponse, root.Pier.PageLoteCartoesPrePagosResponse, root.Pier.PageCartaoResponse, root.Pier.ValidaCVVRequest, root.Pier.ValidaCartaoResponse, root.Pier.ValidaSenhaCartaoResponse);
   }
-}(this, function(ApiClient, CartaoResponse, EstagioCartaoUpdate, HistoricoImpressaoCartaoResponse, DadosCartaoImpressaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, CartaoMultiAppImpressaoResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCVVRequest, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
+}(this, function(ApiClient, CartaoResponse, EstagioCartaoUpdate, HistoricoImpressaoCartaoResponse, DadosCartaoImpressaoResponse, DadosCartaoResponse, LimiteDisponibilidadeResponse, LoteCartoesPrePagosResponse, PortadorResponse, CartaoDetalheResponse, VinculoCartoesResponse, CartaoMultiAppPersistValue, CartaoMultiAppImpressaoResponse, PageLoteCartoesPrePagosResponse, PageCartaoResponse, ValidaCVVRequest, ValidaCartaoResponse, ValidaSenhaCartaoResponse) {
   'use strict';
 
   /**
    * globaltagcartao service.
    * @module api/GlobaltagcartaoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -45,13 +45,10 @@
      * {{{cartao_resource_alterar_alterar_senha_notes}}}
      * @param {Integer} id {{{cartao_resource_alterar_alterar_senha_param_id}}}
      * @param {String} senha {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~alterarAlterarSenhaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.alterarAlterarSenhaUsingPUT = function(id, senha, opts, callback) {
-      opts = opts || {};
+    this.alterarAlterarSenhaUsingPUT = function(id, senha, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -71,7 +68,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization'],
         'senha': senha
       };
       var formParams = {
@@ -102,13 +98,10 @@
      * {{{cartao_resource_alterar_estagio_notes}}}
      * @param {Integer} id {{{cartao_resource_alterar_estagio_param_id}}}
      * @param {module:model/EstagioCartaoUpdate} update {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~alterarEstagioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.alterarEstagioUsingPOST = function(id, update, opts, callback) {
-      opts = opts || {};
+    this.alterarEstagioUsingPOST = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
@@ -128,7 +121,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -158,13 +150,10 @@
      * {{{cartao_resource_alterar_status_impressao_notes}}}
      * @param {Integer} id {{{cartao_resource_alterar_status_impressao_param_id}}}
      * @param {Integer} idStatusImpressao {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~alterarStatusImpressaoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/HistoricoImpressaoCartaoResponse}
      */
-    this.alterarStatusImpressaoUsingPUT = function(id, idStatusImpressao, opts, callback) {
-      opts = opts || {};
+    this.alterarStatusImpressaoUsingPUT = function(id, idStatusImpressao, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -185,7 +174,6 @@
         'id_status_impressao': idStatusImpressao
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -215,13 +203,10 @@
      * {{{cartao_resource_atribuir_pessoa_notes}}}
      * @param {Integer} id {{{cartao_resource_atribuir_pessoa_param_id_cartao}}}
      * @param {Integer} idPessoa {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~atribuirPessoaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.atribuirPessoaUsingPUT = function(id, idPessoa, opts, callback) {
-      opts = opts || {};
+    this.atribuirPessoaUsingPUT = function(id, idPessoa, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -242,7 +227,6 @@
         'id_pessoa': idPessoa
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -273,13 +257,10 @@
      * @param {Integer} id {{{cartao_resource_bloquear_param_id}}}
      * @param {Integer} idStatus {{{cartao_resource_bloquear_param_id_status}}}
      * @param {String} observacao {{{cartao_resource_bloquear_param_observacao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~bloquearUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.bloquearUsingPOST = function(id, idStatus, observacao, opts, callback) {
-      opts = opts || {};
+    this.bloquearUsingPOST = function(id, idStatus, observacao, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -306,7 +287,6 @@
         'observacao': observacao
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -336,13 +316,10 @@
      * {{{cartao_resource_cadastrar_alterar_senha_notes}}}
      * @param {Integer} id {{{cartao_resource_cadastrar_alterar_senha_param_id}}}
      * @param {String} senha {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~cadastrarAlterarSenhaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.cadastrarAlterarSenhaUsingPOST = function(id, senha, opts, callback) {
-      opts = opts || {};
+    this.cadastrarAlterarSenhaUsingPOST = function(id, senha, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -362,7 +339,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization'],
         'senha': senha
       };
       var formParams = {
@@ -394,13 +370,10 @@
      * @param {Integer} id {{{cartao_resource_cancelar_param_id}}}
      * @param {Integer} idStatus {{{cartao_resource_cancelar_param_id_status}}}
      * @param {String} observacao {{{cartao_resource_cancelar_param_observacao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~cancelarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.cancelarUsingPOST = function(id, idStatus, observacao, opts, callback) {
-      opts = opts || {};
+    this.cancelarUsingPOST = function(id, idStatus, observacao, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -427,7 +400,6 @@
         'observacao': observacao
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -456,13 +428,10 @@
      * {{{cartao_resource_consultar_cartao_impressao}}}
      * {{{cartao_resource_consultar_cartao_impressao_notes}}}
      * @param {Integer} id {{{cartao_resource_consultar_cartao_impressao_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~consultarCartaoImpressaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DadosCartaoImpressaoResponse}
      */
-    this.consultarCartaoImpressaoUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarCartaoImpressaoUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -477,7 +446,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -506,13 +474,10 @@
      * {{{cartao_resource_consultar_dados_reais_cartao}}}
      * {{{cartao_resource_consultar_dados_reais_cartao_notes}}}
      * @param {Integer} id id
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~consultarDadosReaisCartaoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DadosCartaoResponse}
      */
-    this.consultarDadosReaisCartaoUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarDadosReaisCartaoUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -527,7 +492,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -556,13 +520,10 @@
      * {{{cartao_resource_consultar_limite_disponibilidade}}}
      * {{{cartao_resource_consultar_limite_disponibilidade_notes}}}
      * @param {Integer} id {{{cartao_resource_consultar_limite_disponibilidade_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~consultarLimiteDisponibilidadeUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.consultarLimiteDisponibilidadeUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarLimiteDisponibilidadeUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -577,7 +538,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -606,13 +566,10 @@
      * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
      * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_notes}}}
      * @param {Integer} id {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~consultarLotesCartoesPrePagosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LoteCartoesPrePagosResponse}
      */
-    this.consultarLotesCartoesPrePagosUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarLotesCartoesPrePagosUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -627,7 +584,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -656,13 +612,10 @@
      * {{{cartao_resource_consultar_portador}}}
      * {{{cartao_resource_consultar_portador_notes}}}
      * @param {Integer} id {{{cartao_resource_consultar_portador_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~consultarPortadorUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PortadorResponse}
      */
-    this.consultarPortadorUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarPortadorUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -677,7 +630,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -695,8 +647,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET10 operation.
-     * @callback module:api/GlobaltagcartaoApi~consultarUsingGET10Callback
+     * Callback function to receive the result of the consultarUsingGET12 operation.
+     * @callback module:api/GlobaltagcartaoApi~consultarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -706,18 +658,15 @@
      * {{{cartao_resource_consultar}}}
      * {{{cartao_resource_consultar_notes}}}
      * @param {Integer} id {{{cartao_resource_consultar_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
-     * @param {module:api/GlobaltagcartaoApi~consultarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcartaoApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoDetalheResponse}
      */
-    this.consultarUsingGET10 = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarUsingGET12 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET10";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
       }
 
 
@@ -727,7 +676,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -745,6 +693,51 @@
     }
 
     /**
+     * Callback function to receive the result of the criarCartoesMultiAppUsingPOST operation.
+     * @callback module:api/GlobaltagcartaoApi~criarCartoesMultiAppUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/VinculoCartoesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{conta_resource_cadastrar_cartao_multiapp}}}
+     * {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+     * @param {module:model/CartaoMultiAppPersistValue} cartaoMultiAppPersist cartaoMultiAppPersist
+     * @param {module:api/GlobaltagcartaoApi~criarCartoesMultiAppUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/VinculoCartoesResponse}
+     */
+    this.criarCartoesMultiAppUsingPOST = function(cartaoMultiAppPersist, callback) {
+      var postBody = cartaoMultiAppPersist;
+
+      // verify the required parameter 'cartaoMultiAppPersist' is set
+      if (cartaoMultiAppPersist == undefined || cartaoMultiAppPersist == null) {
+        throw "Missing the required parameter 'cartaoMultiAppPersist' when calling criarCartoesMultiAppUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = VinculoCartoesResponse;
+
+      return this.apiClient.callApi(
+        '/api/cartoes/gerar-cartoes-multiapp', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the desbloquearSenhaIncorretaUsingPOST operation.
      * @callback module:api/GlobaltagcartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback
      * @param {String} error Error message, if any.
@@ -756,13 +749,10 @@
      * {{{cartao_resource_desbloquear_senha_incorreta}}}
      * {{{cartao_resource_desbloquear_senha_incorreta_notes}}}
      * @param {Integer} id {{{cartao_resource_desbloquear_senha_incorreta_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~desbloquearSenhaIncorretaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.desbloquearSenhaIncorretaUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.desbloquearSenhaIncorretaUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -777,7 +767,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -806,13 +795,10 @@
      * {{{cartao_resource_desbloquear}}}
      * {{{cartao_resource_desbloquear_notes}}}
      * @param {Integer} id {{{cartao_resource_desbloquear_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~desbloquearUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.desbloquearUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.desbloquearUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -827,7 +813,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -856,7 +841,6 @@
      * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
      * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Integer} opts.idOrigemComercial {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}}
      * @param {Integer} opts.idProduto {{{lote_cartoes_pre_pagos_persist_id_produto_value}}}
      * @param {Integer} opts.idTipoCartao {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}}
@@ -884,7 +868,6 @@
         'identificadorExterno': opts['identificadorExterno']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -913,13 +896,10 @@
      * {{{cartao_resource_gerar_nova_via_multiplo}}}
      * {{{cartao_resource_gerar_nova_via_multiplo_notes}}}
      * @param {Integer} id {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~gerarNovaViaCartaoMultiAppUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoMultiAppImpressaoResponse}
      */
-    this.gerarNovaViaCartaoMultiAppUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.gerarNovaViaCartaoMultiAppUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -934,7 +914,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -963,13 +942,10 @@
      * {{{cartao_resource_gerar_nova_via}}}
      * {{{cartao_resource_gerar_nova_via_notes}}}
      * @param {Integer} id {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~gerarNovaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.gerarNovaViaUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.gerarNovaViaUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -984,7 +960,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1013,13 +988,10 @@
      * {{{cartao_resource_lancar_tarifa_segunda_via}}}
      * {{{cartao_resource_lancar_tarifa_segunda_via_notes}}}
      * @param {Integer} id {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~lancarTarifaSegundaViaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.lancarTarifaSegundaViaUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.lancarTarifaSegundaViaUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1034,7 +1006,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1063,7 +1034,6 @@
      * {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
      * {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1103,7 +1073,6 @@
         'identificadorExterno': opts['identificadorExterno']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1121,8 +1090,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET11 operation.
-     * @callback module:api/GlobaltagcartaoApi~listarUsingGET11Callback
+     * Callback function to receive the result of the listarUsingGET12 operation.
+     * @callback module:api/GlobaltagcartaoApi~listarUsingGET12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1132,7 +1101,6 @@
      * {{{cartao_resource_listar}}}
      * {{{cartao_resource_listar_notes}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1154,10 +1122,11 @@
      * @param {Integer} opts.flagProvisorio {{{cartao_request_flag_provisorio_value}}}
      * @param {String} opts.codigoDesbloqueio {{{cartao_request_codigo_desbloqueio_value}}}
      * @param {Integer} opts.sequencialCartao {{{cartao_request_sequencial_cartao_value}}}
-     * @param {module:api/GlobaltagcartaoApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Integer} opts.identificadorExterno {{{cartao_request_identificador_externo_value}}}
+     * @param {module:api/GlobaltagcartaoApi~listarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoResponse}
      */
-    this.listarUsingGET11 = function(opts, callback) {
+    this.listarUsingGET12 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1185,10 +1154,10 @@
         'flagImpressaoOrigemComercial': opts['flagImpressaoOrigemComercial'],
         'flagProvisorio': opts['flagProvisorio'],
         'codigoDesbloqueio': opts['codigoDesbloqueio'],
-        'sequencialCartao': opts['sequencialCartao']
+        'sequencialCartao': opts['sequencialCartao'],
+        'identificadorExterno': opts['identificadorExterno']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1217,13 +1186,10 @@
      * {{{cartao_resource_reativar}}}
      * {{{cartao_resource_reativar_notes}}}
      * @param {Integer} id {{{cartao_resource_reativar_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~reativarUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoResponse}
      */
-    this.reativarUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.reativarUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1238,7 +1204,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1268,13 +1233,10 @@
      * {{{cartao_resource_validar_c_v_v_notes}}}
      * @param {Integer} id {{{cartao_resource_validar_c_v_v_param_id}}}
      * @param {module:model/ValidaCVVRequest} validaCVV validaCVV
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarCVVUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.validarCVVUsingPOST = function(id, validaCVV, opts, callback) {
-      opts = opts || {};
+    this.validarCVVUsingPOST = function(id, validaCVV, callback) {
       var postBody = validaCVV;
 
       // verify the required parameter 'id' is set
@@ -1294,7 +1256,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1326,13 +1287,10 @@
      * @param {String} nomePortador {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}
      * @param {String} dataValidade {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}
      * @param {String} codigoSeguranca {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarDadosImpressosBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaCartaoResponse}
      */
-    this.validarDadosImpressosBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts, callback) {
-      opts = opts || {};
+    this.validarDadosImpressosBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
       var postBody = null;
 
       // verify the required parameter 'numeroCartao' is set
@@ -1365,7 +1323,6 @@
         'codigo_seguranca': codigoSeguranca
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1397,13 +1354,10 @@
      * @param {String} nomePortador {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}
      * @param {String} dataValidade {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}
      * @param {String} codigoSeguranca {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarDadosImpressosNaoBandeiradoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaCartaoResponse}
      */
-    this.validarDadosImpressosNaoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts, callback) {
-      opts = opts || {};
+    this.validarDadosImpressosNaoBandeiradoUsingGET = function(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback) {
       var postBody = null;
 
       // verify the required parameter 'numeroCartao' is set
@@ -1436,7 +1390,6 @@
         'codigo_seguranca': codigoSeguranca
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1466,13 +1419,10 @@
      * {{{cartao_resource_validar_de55_cartao_mastercard_notes}}}
      * @param {String} numeroCartao {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}
      * @param {String} criptograma {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarDe55CartaoMastercardUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaCartaoResponse}
      */
-    this.validarDe55CartaoMastercardUsingGET = function(numeroCartao, criptograma, opts, callback) {
-      opts = opts || {};
+    this.validarDe55CartaoMastercardUsingGET = function(numeroCartao, criptograma, callback) {
       var postBody = null;
 
       // verify the required parameter 'numeroCartao' is set
@@ -1493,7 +1443,6 @@
         'criptograma': criptograma
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1523,13 +1472,10 @@
      * {{{cartao_resource_validar_senha_notes}}}
      * @param {Integer} id {{{cartao_resource_validar_senha_param_id}}}
      * @param {String} senha {{{cartao_resource_validar_senha_param_senha}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarSenhaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaSenhaCartaoResponse}
      */
-    this.validarSenhaUsingGET = function(id, senha, opts, callback) {
-      opts = opts || {};
+    this.validarSenhaUsingGET = function(id, senha, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1549,7 +1495,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization'],
         'senha': senha
       };
       var formParams = {
@@ -1581,13 +1526,10 @@
      * @param {String} numeroCartao {{{cartao_resource_validar_tarja_param_numero_cartao}}}
      * @param {String} trilha1 {{{cartao_resource_validar_tarja_param_trilha1}}}
      * @param {String} trilha2 {{{cartao_resource_validar_tarja_param_trilha2}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcartaoApi~validarTarjaUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ValidaCartaoResponse}
      */
-    this.validarTarjaUsingGET = function(numeroCartao, trilha1, trilha2, opts, callback) {
-      opts = opts || {};
+    this.validarTarjaUsingGET = function(numeroCartao, trilha1, trilha2, callback) {
       var postBody = null;
 
       // verify the required parameter 'numeroCartao' is set
@@ -1614,7 +1556,6 @@
         'trilha2': trilha2
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };

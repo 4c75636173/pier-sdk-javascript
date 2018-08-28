@@ -18,7 +18,7 @@
   /**
    * The TipoCampanhaResponse model module.
    * @module model/TipoCampanhaResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

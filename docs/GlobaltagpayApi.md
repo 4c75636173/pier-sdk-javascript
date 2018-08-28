@@ -5,16 +5,16 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**atualizarChaveUsingPOST**](GlobaltagpayApi.md#atualizarChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/atualizar-chave | {{{cartao_pay_resource_atualizar_chave}}}
-[**atualizarUsingPUT**](GlobaltagpayApi.md#atualizarUsingPUT) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
+[**atualizarUsingPUT1**](GlobaltagpayApi.md#atualizarUsingPUT1) | **PUT** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_atualizar}}}
 [**confirmaAtualizacaoChaveUsingPOST**](GlobaltagpayApi.md#confirmaAtualizacaoChaveUsingPOST) | **POST** /api/cartoes-tokenizados/{id}/confirmar-chave | {{{cartao_pay_resource_confirma_atualizacao_chave}}}
-[**consultarUsingGET9**](GlobaltagpayApi.md#consultarUsingGET9) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
+[**consultarUsingGET11**](GlobaltagpayApi.md#consultarUsingGET11) | **GET** /api/cartoes-tokenizados/{id} | {{{cartao_pay_resource_consultar}}}
 [**listarCodigosRespostaUsingGET**](GlobaltagpayApi.md#listarCodigosRespostaUsingGET) | **GET** /api/codigos-resposta | {{{enum_pay_resource_listar_codigos_resposta}}}
 [**listarModosEntradaUsingGET**](GlobaltagpayApi.md#listarModosEntradaUsingGET) | **GET** /api/modos-entrada | {{{enum_pay_resource_listar_modos_entrada}}}
 [**listarOperacoesUsingGET**](GlobaltagpayApi.md#listarOperacoesUsingGET) | **GET** /api/operacoes | {{{enum_pay_resource_listar_operacoes}}}
 [**listarTiposTerminaisUsingGET**](GlobaltagpayApi.md#listarTiposTerminaisUsingGET) | **GET** /api/tipos-terminais | {{{enum_pay_resource_listar_tipos_terminais}}}
 [**listarTiposTransacoesUsingGET**](GlobaltagpayApi.md#listarTiposTransacoesUsingGET) | **GET** /api/tipos-transacoes | {{{enum_pay_resource_listar_tipos_transacoes}}}
-[**listarUsingGET10**](GlobaltagpayApi.md#listarUsingGET10) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
-[**salvarUsingPOST5**](GlobaltagpayApi.md#salvarUsingPOST5) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
+[**listarUsingGET11**](GlobaltagpayApi.md#listarUsingGET11) | **GET** /api/cartoes-tokenizados | {{{cartao_pay_resource_listar}}}
+[**salvarUsingPOST6**](GlobaltagpayApi.md#salvarUsingPOST6) | **POST** /api/cartoes-tokenizados | {{{cartao_pay_resource_salvar}}}
 
 
 <a name="atualizarChaveUsingPOST"></a>
@@ -66,9 +66,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT"></a>
-# **atualizarUsingPUT**
-> CartaoPayResponse atualizarUsingPUT(deviceId, id, update)
+<a name="atualizarUsingPUT1"></a>
+# **atualizarUsingPUT1**
+> CartaoPayResponse atualizarUsingPUT1(deviceId, id, update)
 
 {{{cartao_pay_resource_atualizar}}}
 
@@ -94,7 +94,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT(deviceId, id, update, callback);
+api.atualizarUsingPUT1(deviceId, id, update, callback);
 ```
 
 ### Parameters
@@ -170,9 +170,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET9"></a>
-# **consultarUsingGET9**
-> CartaoPayDetalheResponse consultarUsingGET9(deviceId, id)
+<a name="consultarUsingGET11"></a>
+# **consultarUsingGET11**
+> CartaoPayDetalheResponse consultarUsingGET11(deviceId, id)
 
 {{{cartao_pay_resource_consultar}}}
 
@@ -196,7 +196,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET9(deviceId, id, callback);
+api.consultarUsingGET11(deviceId, id, callback);
 ```
 
 ### Parameters
@@ -419,9 +419,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET10"></a>
-# **listarUsingGET10**
-> PageCartaoPayResponse listarUsingGET10(opts)
+<a name="listarUsingGET11"></a>
+# **listarUsingGET11**
+> PageCartaoPayResponse listarUsingGET11(opts)
 
 {{{cartao_pay_resource_listar}}}
 
@@ -449,7 +449,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET10(opts, callback);
+api.listarUsingGET11(opts, callback);
 ```
 
 ### Parameters
@@ -476,9 +476,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST5"></a>
-# **salvarUsingPOST5**
-> CartaoPayCadastroResponse salvarUsingPOST5(deviceId, persist)
+<a name="salvarUsingPOST6"></a>
+# **salvarUsingPOST6**
+> CartaoPayCadastroResponse salvarUsingPOST6(deviceId, persist)
 
 {{{cartao_pay_resource_salvar}}}
 
@@ -502,7 +502,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST5(deviceId, persist, callback);
+api.salvarUsingPOST6(deviceId, persist, callback);
 ```
 
 ### Parameters

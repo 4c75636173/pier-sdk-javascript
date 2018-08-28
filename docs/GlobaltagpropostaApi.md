@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPOST**](GlobaltagpropostaApi.md#alterarUsingPOST) | **POST** /api/propostas/{id}/alterar-status | {{{proposta_resource_alterar_status}}}
-[**consultarUsingGET33**](GlobaltagpropostaApi.md#consultarUsingGET33) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
+[**consultarUsingGET35**](GlobaltagpropostaApi.md#consultarUsingGET35) | **GET** /api/propostas/{id} | {{{proposta_resource_consultar}}}
 [**listarStatusPropostaUsingGET**](GlobaltagpropostaApi.md#listarStatusPropostaUsingGET) | **GET** /api/status-propostas | {{{proposta_resource_listar_status}}}
-[**listarUsingGET44**](GlobaltagpropostaApi.md#listarUsingGET44) | **GET** /api/propostas | {{{proposta_resource_listar}}}
+[**listarUsingGET46**](GlobaltagpropostaApi.md#listarUsingGET46) | **GET** /api/propostas | {{{proposta_resource_listar}}}
 
 
 <a name="alterarUsingPOST"></a>
@@ -59,9 +59,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET33"></a>
-# **consultarUsingGET33**
-> PropostaResponse consultarUsingGET33(id)
+<a name="consultarUsingGET35"></a>
+# **consultarUsingGET35**
+> PropostaResponse consultarUsingGET35(id)
 
 {{{proposta_resource_consultar}}}
 
@@ -83,7 +83,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET33(id, callback);
+api.consultarUsingGET35(id, callback);
 ```
 
 ### Parameters
@@ -160,9 +160,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET44"></a>
-# **listarUsingGET44**
-> PagePropostaResponse listarUsingGET44(opts)
+<a name="listarUsingGET46"></a>
+# **listarUsingGET46**
+> PagePropostaResponse listarUsingGET46(opts)
 
 {{{proposta_resource_listar}}}
 
@@ -188,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET44(opts, callback);
+api.listarUsingGET46(opts, callback);
 ```
 
 ### Parameters

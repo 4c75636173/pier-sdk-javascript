@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** | {{{parametro_produto_response_id_value}}} | 
 **idProduto** | **Integer** | {{{parametro_produto_response_id_produto_value}}} | 
 **tipoOrigemTransacao** | **String** | {{{parametro_produto_response_tipo_origem_transacao_value}}} | 
 **descricao** | **String** | {{{parametro_produto_response_descricao_value}}} | 

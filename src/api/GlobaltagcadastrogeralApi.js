@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ConvenioPersist', '../model/ConvenioResponse', '../model/CampanhaUpdateValue', '../model/CampanhaResponse', '../model/ConfiguracaoRegistroCobrancaPersist', '../model/ConfiguracaoRegistroCobrancaResponse', '../model/ConfiguracaoRotativoDetalheResponse', '../model/ConfiguracaoRotativoPersist', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/ProdutoDetalhesResponse', '../model/TipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/AtendimentoClienteResponse', '../model/BancoResponse', '../model/PageCampanhaResponse', '../model/PageContaDetalheResponse', '../model/PageConvenioResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageTipoCampanhaResponse', '../model/PageConfiguracaoRotativoResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageControleVencimentoResponse', '../model/PageAtendimentoClienteResponse', '../model/PageBancoResponse', '../model/CampanhaPersist'], factory);
+    define(['../ApiClient', '../model/ConvenioPersist', '../model/ConvenioResponse', '../model/ControleVencimentoResponse', '../model/VencimentoUpdate', '../model/CampanhaUpdateValue', '../model/CampanhaResponse', '../model/ConfiguracaoRegistroCobrancaPersist', '../model/ConfiguracaoRegistroCobrancaResponse', '../model/ConfiguracaoRotativoDetalheResponse', '../model/ConfiguracaoRotativoPersist', '../model/ParametroProdutoResponse', '../model/TaxaAntecipacaoRequest', '../model/ProdutoDetalhesResponse', '../model/TipoAjusteResponse', '../model/PageTipoBoletoResponse', '../model/TipoEnderecoResponse', '../model/TipoOperacaoResponse', '../model/TipoTelefoneResponse', '../model/AtendimentoClienteResponse', '../model/BancoResponse', '../model/PageCampanhaResponse', '../model/PageContaDetalheResponse', '../model/PageConvenioResponse', '../model/PageCampoCodificadoDescricaoResponse', '../model/PageFantasiaBasicaResponse', '../model/HistoricoTelefoneResponse', '../model/PageTipoCampanhaResponse', '../model/PageBancoResponse', '../model/PageConfiguracaoRotativoResponse', '../model/PagePortadorResponse', '../model/PageProdutoResponse', '../model/PagePromotorResponse', '../model/PageTipoAjusteResponse', '../model/PageTipoEnderecoResponse', '../model/PageTipoTelefoneResponse', '../model/PageControleVencimentoResponse', '../model/PageAtendimentoClienteResponse', '../model/CampanhaPersist'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ConvenioPersist'), require('../model/ConvenioResponse'), require('../model/CampanhaUpdateValue'), require('../model/CampanhaResponse'), require('../model/ConfiguracaoRegistroCobrancaPersist'), require('../model/ConfiguracaoRegistroCobrancaResponse'), require('../model/ConfiguracaoRotativoDetalheResponse'), require('../model/ConfiguracaoRotativoPersist'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/ProdutoDetalhesResponse'), require('../model/TipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/AtendimentoClienteResponse'), require('../model/BancoResponse'), require('../model/PageCampanhaResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageConvenioResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageTipoCampanhaResponse'), require('../model/PageConfiguracaoRotativoResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageControleVencimentoResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/PageBancoResponse'), require('../model/CampanhaPersist'));
+    module.exports = factory(require('../ApiClient'), require('../model/ConvenioPersist'), require('../model/ConvenioResponse'), require('../model/ControleVencimentoResponse'), require('../model/VencimentoUpdate'), require('../model/CampanhaUpdateValue'), require('../model/CampanhaResponse'), require('../model/ConfiguracaoRegistroCobrancaPersist'), require('../model/ConfiguracaoRegistroCobrancaResponse'), require('../model/ConfiguracaoRotativoDetalheResponse'), require('../model/ConfiguracaoRotativoPersist'), require('../model/ParametroProdutoResponse'), require('../model/TaxaAntecipacaoRequest'), require('../model/ProdutoDetalhesResponse'), require('../model/TipoAjusteResponse'), require('../model/PageTipoBoletoResponse'), require('../model/TipoEnderecoResponse'), require('../model/TipoOperacaoResponse'), require('../model/TipoTelefoneResponse'), require('../model/AtendimentoClienteResponse'), require('../model/BancoResponse'), require('../model/PageCampanhaResponse'), require('../model/PageContaDetalheResponse'), require('../model/PageConvenioResponse'), require('../model/PageCampoCodificadoDescricaoResponse'), require('../model/PageFantasiaBasicaResponse'), require('../model/HistoricoTelefoneResponse'), require('../model/PageTipoCampanhaResponse'), require('../model/PageBancoResponse'), require('../model/PageConfiguracaoRotativoResponse'), require('../model/PagePortadorResponse'), require('../model/PageProdutoResponse'), require('../model/PagePromotorResponse'), require('../model/PageTipoAjusteResponse'), require('../model/PageTipoEnderecoResponse'), require('../model/PageTipoTelefoneResponse'), require('../model/PageControleVencimentoResponse'), require('../model/PageAtendimentoClienteResponse'), require('../model/CampanhaPersist'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagcadastrogeralApi = factory(root.Pier.ApiClient, root.Pier.ConvenioPersist, root.Pier.ConvenioResponse, root.Pier.CampanhaUpdateValue, root.Pier.CampanhaResponse, root.Pier.ConfiguracaoRegistroCobrancaPersist, root.Pier.ConfiguracaoRegistroCobrancaResponse, root.Pier.ConfiguracaoRotativoDetalheResponse, root.Pier.ConfiguracaoRotativoPersist, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.ProdutoDetalhesResponse, root.Pier.TipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.AtendimentoClienteResponse, root.Pier.BancoResponse, root.Pier.PageCampanhaResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageConvenioResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageTipoCampanhaResponse, root.Pier.PageConfiguracaoRotativoResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageControleVencimentoResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.PageBancoResponse, root.Pier.CampanhaPersist);
+    root.Pier.GlobaltagcadastrogeralApi = factory(root.Pier.ApiClient, root.Pier.ConvenioPersist, root.Pier.ConvenioResponse, root.Pier.ControleVencimentoResponse, root.Pier.VencimentoUpdate, root.Pier.CampanhaUpdateValue, root.Pier.CampanhaResponse, root.Pier.ConfiguracaoRegistroCobrancaPersist, root.Pier.ConfiguracaoRegistroCobrancaResponse, root.Pier.ConfiguracaoRotativoDetalheResponse, root.Pier.ConfiguracaoRotativoPersist, root.Pier.ParametroProdutoResponse, root.Pier.TaxaAntecipacaoRequest, root.Pier.ProdutoDetalhesResponse, root.Pier.TipoAjusteResponse, root.Pier.PageTipoBoletoResponse, root.Pier.TipoEnderecoResponse, root.Pier.TipoOperacaoResponse, root.Pier.TipoTelefoneResponse, root.Pier.AtendimentoClienteResponse, root.Pier.BancoResponse, root.Pier.PageCampanhaResponse, root.Pier.PageContaDetalheResponse, root.Pier.PageConvenioResponse, root.Pier.PageCampoCodificadoDescricaoResponse, root.Pier.PageFantasiaBasicaResponse, root.Pier.HistoricoTelefoneResponse, root.Pier.PageTipoCampanhaResponse, root.Pier.PageBancoResponse, root.Pier.PageConfiguracaoRotativoResponse, root.Pier.PagePortadorResponse, root.Pier.PageProdutoResponse, root.Pier.PagePromotorResponse, root.Pier.PageTipoAjusteResponse, root.Pier.PageTipoEnderecoResponse, root.Pier.PageTipoTelefoneResponse, root.Pier.PageControleVencimentoResponse, root.Pier.PageAtendimentoClienteResponse, root.Pier.CampanhaPersist);
   }
-}(this, function(ApiClient, ConvenioPersist, ConvenioResponse, CampanhaUpdateValue, CampanhaResponse, ConfiguracaoRegistroCobrancaPersist, ConfiguracaoRegistroCobrancaResponse, ConfiguracaoRotativoDetalheResponse, ConfiguracaoRotativoPersist, ParametroProdutoResponse, TaxaAntecipacaoRequest, ProdutoDetalhesResponse, TipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, TipoOperacaoResponse, TipoTelefoneResponse, AtendimentoClienteResponse, BancoResponse, PageCampanhaResponse, PageContaDetalheResponse, PageConvenioResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageTipoCampanhaResponse, PageConfiguracaoRotativoResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageTipoAjusteResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageControleVencimentoResponse, PageAtendimentoClienteResponse, PageBancoResponse, CampanhaPersist) {
+}(this, function(ApiClient, ConvenioPersist, ConvenioResponse, ControleVencimentoResponse, VencimentoUpdate, CampanhaUpdateValue, CampanhaResponse, ConfiguracaoRegistroCobrancaPersist, ConfiguracaoRegistroCobrancaResponse, ConfiguracaoRotativoDetalheResponse, ConfiguracaoRotativoPersist, ParametroProdutoResponse, TaxaAntecipacaoRequest, ProdutoDetalhesResponse, TipoAjusteResponse, PageTipoBoletoResponse, TipoEnderecoResponse, TipoOperacaoResponse, TipoTelefoneResponse, AtendimentoClienteResponse, BancoResponse, PageCampanhaResponse, PageContaDetalheResponse, PageConvenioResponse, PageCampoCodificadoDescricaoResponse, PageFantasiaBasicaResponse, HistoricoTelefoneResponse, PageTipoCampanhaResponse, PageBancoResponse, PageConfiguracaoRotativoResponse, PagePortadorResponse, PageProdutoResponse, PagePromotorResponse, PageTipoAjusteResponse, PageTipoEnderecoResponse, PageTipoTelefoneResponse, PageControleVencimentoResponse, PageAtendimentoClienteResponse, CampanhaPersist) {
   'use strict';
 
   /**
    * globaltagcadastrogeral service.
    * @module api/GlobaltagcadastrogeralApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -79,6 +79,58 @@
 
       return this.apiClient.callApi(
         '/api/convenios/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the alterarCorteUsingPUT operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~alterarCorteUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ControleVencimentoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{vencimento_resource_alterar}}}
+     * {{{vencimento_resource_alterar_notes}}}
+     * @param {String} dataVencimento {{{fatura_resource_consultar_fatura_param_data_vencimento}}}
+     * @param {module:model/VencimentoUpdate} update update
+     * @param {module:api/GlobaltagcadastrogeralApi~alterarCorteUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ControleVencimentoResponse}
+     */
+    this.alterarCorteUsingPUT = function(dataVencimento, update, callback) {
+      var postBody = update;
+
+      // verify the required parameter 'dataVencimento' is set
+      if (dataVencimento == undefined || dataVencimento == null) {
+        throw "Missing the required parameter 'dataVencimento' when calling alterarCorteUsingPUT";
+      }
+
+      // verify the required parameter 'update' is set
+      if (update == undefined || update == null) {
+        throw "Missing the required parameter 'update' when calling alterarCorteUsingPUT";
+      }
+
+
+      var pathParams = {
+        'dataVencimento': dataVencimento
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ControleVencimentoResponse;
+
+      return this.apiClient.callApi(
+        '/api/vencimentos/{dataVencimento}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -528,8 +580,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET11 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback
+     * Callback function to receive the result of the consultarUsingGET13 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -539,15 +591,15 @@
      * {{{configuracao_registro_cobranca_resource_consultar}}}
      * {{{configuracao_registro_cobranca_resource_consultar_notes}}}
      * @param {Integer} id {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
      */
-    this.consultarUsingGET11 = function(id, callback) {
+    this.consultarUsingGET13 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
       }
 
 
@@ -574,8 +626,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET12 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET12Callback
+     * Callback function to receive the result of the consultarUsingGET14 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -585,15 +637,15 @@
      * {{{configuracao_rotativo_resource_consultar}}}
      * {{{configuracao_rotativo_resource_consultar_notes}}}
      * @param {Integer} id {{{configuracao_rotativo_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
      */
-    this.consultarUsingGET12 = function(id, callback) {
+    this.consultarUsingGET14 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET12";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
       }
 
 
@@ -620,8 +672,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET32 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET32Callback
+     * Callback function to receive the result of the consultarUsingGET34 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET34Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ProdutoDetalhesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -631,15 +683,15 @@
      * {{{produto_resource_consultar}}}
      * {{{produto_resource_consultar_notes}}}
      * @param {Integer} id {{{produto_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET32Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ProdutoDetalhesResponse}
      */
-    this.consultarUsingGET32 = function(id, callback) {
+    this.consultarUsingGET34 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET32";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET34";
       }
 
 
@@ -666,8 +718,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET41 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback
+     * Callback function to receive the result of the consultarUsingGET43 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoAjusteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -677,15 +729,15 @@
      * {{{tipo_transacoes_ajuste_resource_consultar}}}
      * {{{tipo_transacoes_ajuste_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoAjusteResponse}
      */
-    this.consultarUsingGET41 = function(id, callback) {
+    this.consultarUsingGET43 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET41";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
       }
 
 
@@ -712,8 +764,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET42 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback
+     * Callback function to receive the result of the consultarUsingGET44 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoBoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -729,10 +781,10 @@
      * @param {Integer} opts.id {{{tipo_boleto_request_id_value}}}
      * @param {String} opts.descricao {{{tipo_boleto_request_descricao_value}}}
      * @param {Integer} opts.banco {{{tipo_boleto_request_banco_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoBoletoResponse}
      */
-    this.consultarUsingGET42 = function(opts, callback) {
+    this.consultarUsingGET44 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -765,8 +817,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET43 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback
+     * Callback function to receive the result of the consultarUsingGET45 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -776,15 +828,15 @@
      * {{{tipo_endereco_resource_consultar}}}
      * {{{tipo_endereco_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_endereco_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoEnderecoResponse}
      */
-    this.consultarUsingGET43 = function(id, callback) {
+    this.consultarUsingGET45 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET43";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET45";
       }
 
 
@@ -811,8 +863,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET44 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback
+     * Callback function to receive the result of the consultarUsingGET46 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoOperacaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -824,25 +876,25 @@
      * @param {Integer} idCartao {{{tipo_operacao_resource_consultar_param_id_cartao}}}
      * @param {Integer} idEstabelecimento {{{tipo_operacao_resource_consultar_param_id_estabelecimento}}}
      * @param {String} codigoProcessamento {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoOperacaoResponse}
      */
-    this.consultarUsingGET44 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
+    this.consultarUsingGET46 = function(idCartao, idEstabelecimento, codigoProcessamento, callback) {
       var postBody = null;
 
       // verify the required parameter 'idCartao' is set
       if (idCartao == undefined || idCartao == null) {
-        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET44";
+        throw "Missing the required parameter 'idCartao' when calling consultarUsingGET46";
       }
 
       // verify the required parameter 'idEstabelecimento' is set
       if (idEstabelecimento == undefined || idEstabelecimento == null) {
-        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET44";
+        throw "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET46";
       }
 
       // verify the required parameter 'codigoProcessamento' is set
       if (codigoProcessamento == undefined || codigoProcessamento == null) {
-        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET44";
+        throw "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET46";
       }
 
 
@@ -871,8 +923,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET46 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback
+     * Callback function to receive the result of the consultarUsingGET48 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET48Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -882,15 +934,15 @@
      * {{{tipo_telefone_resource_consultar}}}
      * {{{tipo_telefone_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_telefone_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTelefoneResponse}
      */
-    this.consultarUsingGET46 = function(id, callback) {
+    this.consultarUsingGET48 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET46";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET48";
       }
 
 
@@ -917,8 +969,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET6 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET6Callback
+     * Callback function to receive the result of the consultarUsingGET7 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AtendimentoClienteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -928,15 +980,15 @@
      * {{{atendimento_cliente_resource_consultar}}}
      * {{{atendimento_cliente_resource_consultar_notes}}}
      * @param {Integer} id {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AtendimentoClienteResponse}
      */
-    this.consultarUsingGET6 = function(id, callback) {
+    this.consultarUsingGET7 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
       }
 
 
@@ -963,8 +1015,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET8 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET8Callback
+     * Callback function to receive the result of the consultarUsingGET9 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~consultarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/BancoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -974,15 +1026,15 @@
      * {{{banco_resource_consultar}}}
      * {{{banco_resource_consultar_notes}}}
      * @param {Integer} id {{{banco_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BancoResponse}
      */
-    this.consultarUsingGET8 = function(id, callback) {
+    this.consultarUsingGET9 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
       }
 
 
@@ -1542,8 +1594,55 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET14 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET14Callback
+     * Callback function to receive the result of the listarUsingGET10 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET10Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PageBancoResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{banco_resource_listar}}}
+     * {{{banco_resource_listar_notes}}}
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
+     * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
+     * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/PageBancoResponse}
+     */
+    this.listarUsingGET10 = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
+        'page': opts['page'],
+        'limit': opts['limit']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PageBancoResponse;
+
+      return this.apiClient.callApi(
+        '/api/bancos', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listarUsingGET15 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRegistroCobrancaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1556,10 +1655,10 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRegistroCobrancaResponse}
      */
-    this.listarUsingGET14 = function(opts, callback) {
+    this.listarUsingGET15 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1589,8 +1688,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET15 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET15Callback
+     * Callback function to receive the result of the listarUsingGET16 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageConfiguracaoRotativoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1604,10 +1703,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.idProduto {{{configuracao_rotativo_request_id_produto_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageConfiguracaoRotativoResponse}
      */
-    this.listarUsingGET15 = function(opts, callback) {
+    this.listarUsingGET16 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1638,8 +1737,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET41 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET41Callback
+     * Callback function to receive the result of the listarUsingGET43 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET43Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1662,10 +1761,10 @@
      * @param {Integer} opts.flagAtivo {{{portador_request_flag_ativo_value}}}
      * @param {String} opts.dataCadastroPortador {{{portador_request_data_cadastro_portador_value}}}
      * @param {String} opts.dataCancelamentoPortador {{{portador_request_data_cancelamento_portador_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET41Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePortadorResponse}
      */
-    this.listarUsingGET41 = function(opts, callback) {
+    this.listarUsingGET43 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1705,8 +1804,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET42 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET42Callback
+     * Callback function to receive the result of the listarUsingGET44 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET44Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageProdutoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1722,10 +1821,10 @@
      * @param {String} opts.nome {{{produto_request_nome_value}}}
      * @param {Integer} opts.status {{{produto_request_status_value}}}
      * @param {Integer} opts.idFantasiaBasica {{{produto_request_id_fantasia_basica_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET42Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageProdutoResponse}
      */
-    this.listarUsingGET42 = function(opts, callback) {
+    this.listarUsingGET44 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1758,8 +1857,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET43 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET43Callback
+     * Callback function to receive the result of the listarUsingGET45 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET45Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePromotorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1777,10 +1876,10 @@
      * @param {String} opts.dataCadastro {{{promotor_request_data_cadastro_value}}}
      * @param {Integer} opts.idEstabelecimento {{{promotor_request_id_estabelecimento_value}}}
      * @param {Integer} opts.idUsuario {{{promotor_request_id_usuario_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET43Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePromotorResponse}
      */
-    this.listarUsingGET43 = function(opts, callback) {
+    this.listarUsingGET45 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1815,8 +1914,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET52 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET52Callback
+     * Callback function to receive the result of the listarUsingGET55 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET55Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoAjusteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1831,10 +1930,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.id {{{tipo_ajuste_request_id_value}}}
      * @param {String} opts.descricao {{{tipo_ajuste_request_descricao_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET52Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET55Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoAjusteResponse}
      */
-    this.listarUsingGET52 = function(opts, callback) {
+    this.listarUsingGET55 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1866,8 +1965,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET54 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET54Callback
+     * Callback function to receive the result of the listarUsingGET57 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET57Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoEnderecoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1882,10 +1981,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.id {{{tipo_endereco_request_id_value}}}
      * @param {String} opts.nome {{{tipo_endereco_request_nome_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET54Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET57Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoEnderecoResponse}
      */
-    this.listarUsingGET54 = function(opts, callback) {
+    this.listarUsingGET57 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1917,8 +2016,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET56 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET56Callback
+     * Callback function to receive the result of the listarUsingGET59 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET59Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTelefoneResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1933,10 +2032,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.id {{{tipo_telefone_request_id_value}}}
      * @param {String} opts.nome {{{tipo_telefone_request_nome_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET56Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET59Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTelefoneResponse}
      */
-    this.listarUsingGET56 = function(opts, callback) {
+    this.listarUsingGET59 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1968,8 +2067,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET63 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET63Callback
+     * Callback function to receive the result of the listarUsingGET66 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET66Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageControleVencimentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1983,10 +2082,11 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {String} opts.dataVencimento {{{controle_vencimento_request_data_vencimento_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET63Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {String} opts.dataVencimentoFim {{{calendario_fatura_request_data_fim_value}}}
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET66Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageControleVencimentoResponse}
      */
-    this.listarUsingGET63 = function(opts, callback) {
+    this.listarUsingGET66 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1997,7 +2097,8 @@
         'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
-        'dataVencimento': opts['dataVencimento']
+        'dataVencimento': opts['dataVencimento'],
+        'dataVencimentoFim': opts['dataVencimentoFim']
       };
       var headerParams = {
       };
@@ -2017,8 +2118,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET7 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET7Callback
+     * Callback function to receive the result of the listarUsingGET8 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAtendimentoClienteResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2035,10 +2136,10 @@
      * @param {Integer} opts.idConta {{{atendimento_cliente_request_id_conta_value}}}
      * @param {String} opts.nomeAtendente {{{atendimento_cliente_request_nome_atendente_value}}}
      * @param {String} opts.dataAtendimento {{{atendimento_cliente_request_data_atendimento_value}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAtendimentoClienteResponse}
      */
-    this.listarUsingGET7 = function(opts, callback) {
+    this.listarUsingGET8 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -2066,53 +2167,6 @@
 
       return this.apiClient.callApi(
         '/api/atendimento-clientes', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listarUsingGET9 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~listarUsingGET9Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PageBancoResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * {{{banco_resource_listar}}}
-     * {{{banco_resource_listar_notes}}}
-     * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
-     * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
-     * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagcadastrogeralApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/PageBancoResponse}
-     */
-    this.listarUsingGET9 = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
-        'page': opts['page'],
-        'limit': opts['limit']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PageBancoResponse;
-
-      return this.apiClient.callApi(
-        '/api/bancos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2178,8 +2232,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST4 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~salvarUsingPOST4Callback
+     * Callback function to receive the result of the salvarUsingPOST5 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~salvarUsingPOST5Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CampanhaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2189,15 +2243,15 @@
      * {{{campanha_resource_salvar}}}
      * {{{campanha_resource_salvar_notes}}}
      * @param {module:model/CampanhaPersist} campanhaPersist campanhaPersist
-     * @param {module:api/GlobaltagcadastrogeralApi~salvarUsingPOST4Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CampanhaResponse}
      */
-    this.salvarUsingPOST4 = function(campanhaPersist, callback) {
+    this.salvarUsingPOST5 = function(campanhaPersist, callback) {
       var postBody = campanhaPersist;
 
       // verify the required parameter 'campanhaPersist' is set
       if (campanhaPersist == undefined || campanhaPersist == null) {
-        throw "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST4";
+        throw "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST5";
       }
 
 
@@ -2223,8 +2277,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST6 operation.
-     * @callback module:api/GlobaltagcadastrogeralApi~salvarUsingPOST6Callback
+     * Callback function to receive the result of the salvarUsingPOST7 operation.
+     * @callback module:api/GlobaltagcadastrogeralApi~salvarUsingPOST7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ConfiguracaoRotativoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -2234,15 +2288,15 @@
      * {{{configuracao_rotativo_resource_salvar}}}
      * {{{configuracao_rotativo_resource_salvar_notes}}}
      * @param {module:model/ConfiguracaoRotativoPersist} configuracaoRotativoPersist configuracaoRotativoPersist
-     * @param {module:api/GlobaltagcadastrogeralApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcadastrogeralApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ConfiguracaoRotativoDetalheResponse}
      */
-    this.salvarUsingPOST6 = function(configuracaoRotativoPersist, callback) {
+    this.salvarUsingPOST7 = function(configuracaoRotativoPersist, callback) {
       var postBody = configuracaoRotativoPersist;
 
       // verify the required parameter 'configuracaoRotativoPersist' is set
       if (configuracaoRotativoPersist == undefined || configuracaoRotativoPersist == null) {
-        throw "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST6";
+        throw "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST7";
       }
 
 

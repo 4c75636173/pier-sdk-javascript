@@ -18,7 +18,7 @@
   /**
    * The BoletoResponse model module.
    * @module model/BoletoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -177,6 +178,9 @@
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'Integer');
+      }
+      if (data.hasOwnProperty('boletoRegistrado')) {
+        obj['boletoRegistrado'] = ApiClient.convertToType(data['boletoRegistrado'], 'Boolean');
       }
     }
     return obj;
@@ -386,6 +390,12 @@
    * @member {Integer} status
    */
   exports.prototype['status'] = undefined;
+
+  /**
+   * {{{boleto_response_registrado_value}}}
+   * @member {Boolean} boletoRegistrado
+   */
+  exports.prototype['boletoRegistrado'] = undefined;
 
 
 

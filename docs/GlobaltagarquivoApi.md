@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET5**](GlobaltagarquivoApi.md#consultarUsingGET5) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
+[**consultarUsingGET6**](GlobaltagarquivoApi.md#consultarUsingGET6) | **GET** /api/arquivos/{id} | {{{arquivo_resource_consultar}}}
 [**integrarUsingPOST**](GlobaltagarquivoApi.md#integrarUsingPOST) | **POST** /api/arquivos/integrar | {{{arquivo_resource_integrar}}}
 [**listarPorNumeroReceitaFederalUsingGET**](GlobaltagarquivoApi.md#listarPorNumeroReceitaFederalUsingGET) | **GET** /api/arquivos-auditorias | {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
 [**listarStatusArquivosUsingGET**](GlobaltagarquivoApi.md#listarStatusArquivosUsingGET) | **GET** /api/status-arquivos | {{{arquivo_resource_listar_status_arquivos}}}
 [**listarTiposArquivosUsingGET**](GlobaltagarquivoApi.md#listarTiposArquivosUsingGET) | **GET** /api/tipos-arquivos | {{{arquivo_resource_listar_tipos_arquivos}}}
-[**listarUsingGET5**](GlobaltagarquivoApi.md#listarUsingGET5) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
-[**listarUsingGET6**](GlobaltagarquivoApi.md#listarUsingGET6) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
+[**listarUsingGET6**](GlobaltagarquivoApi.md#listarUsingGET6) | **GET** /api/arquivos/{id}/auditorias | {{{arquivo_a_u_d_resource_listar}}}
+[**listarUsingGET7**](GlobaltagarquivoApi.md#listarUsingGET7) | **GET** /api/arquivos | {{{arquivo_resource_listar}}}
 [**salvarUsingPOST1**](GlobaltagarquivoApi.md#salvarUsingPOST1) | **POST** /api/arquivos | {{{arquivo_resource_salvar}}}
 
 
-<a name="consultarUsingGET5"></a>
-# **consultarUsingGET5**
-> ArquivoDetalheResponse consultarUsingGET5(id)
+<a name="consultarUsingGET6"></a>
+# **consultarUsingGET6**
+> ArquivoDetalheResponse consultarUsingGET6(id)
 
 {{{arquivo_resource_consultar}}}
 
@@ -38,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET5(id, callback);
+api.consultarUsingGET6(id, callback);
 ```
 
 ### Parameters
@@ -268,9 +268,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET5"></a>
-# **listarUsingGET5**
-> PageArquivoAUDResponse listarUsingGET5(id, opts)
+<a name="listarUsingGET6"></a>
+# **listarUsingGET6**
+> PageArquivoAUDResponse listarUsingGET6(id, opts)
 
 {{{arquivo_a_u_d_resource_listar}}}
 
@@ -296,7 +296,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET5(id, opts, callback);
+api.listarUsingGET6(id, opts, callback);
 ```
 
 ### Parameters
@@ -320,9 +320,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET6"></a>
-# **listarUsingGET6**
-> PageArquivoResponse listarUsingGET6(opts)
+<a name="listarUsingGET7"></a>
+# **listarUsingGET7**
+> PageArquivoResponse listarUsingGET7(opts)
 
 {{{arquivo_resource_listar}}}
 
@@ -351,7 +351,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET6(opts, callback);
+api.listarUsingGET7(opts, callback);
 ```
 
 ### Parameters

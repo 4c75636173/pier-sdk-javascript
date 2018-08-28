@@ -8,15 +8,15 @@ Method | HTTP request | Description
 [**alterarSenhaUsingPUT**](GlobaltagusuarioApi.md#alterarSenhaUsingPUT) | **PUT** /api/usuarios/{id}/alterar-senha | {{{usuario_resource_alterar_senha}}}
 [**alterarUsingPUT23**](GlobaltagusuarioApi.md#alterarUsingPUT23) | **PUT** /api/usuarios/{id} | {{{usuario_resource_alterar}}}
 [**ativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#ativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/ativar-usuario | {{{usuario_resource_ativar_usuario}}}
-[**atualizarUsingPUT2**](GlobaltagusuarioApi.md#atualizarUsingPUT2) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
+[**atualizarUsingPUT3**](GlobaltagusuarioApi.md#atualizarUsingPUT3) | **PUT** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_atualizar}}}
 [**consultarContasVinculadasUsingGET**](GlobaltagusuarioApi.md#consultarContasVinculadasUsingGET) | **GET** /api/usuarios/{id}/vincular-contas | {{{usuario_recurso_listar_por_id_usuario}}}
-[**consultarUsingGET15**](GlobaltagusuarioApi.md#consultarUsingGET15) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
-[**consultarUsingGET51**](GlobaltagusuarioApi.md#consultarUsingGET51) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
+[**consultarUsingGET17**](GlobaltagusuarioApi.md#consultarUsingGET17) | **GET** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_consultar}}}
+[**consultarUsingGET53**](GlobaltagusuarioApi.md#consultarUsingGET53) | **GET** /api/usuarios/{id} | {{{usuario_resource_consultar}}}
 [**desativarUsuarioUsingPOST1**](GlobaltagusuarioApi.md#desativarUsuarioUsingPOST1) | **POST** /api/usuarios/{id}/desativar-usuario | {{{usuario_resource_desativar_usuario}}}
-[**listarUsingGET62**](GlobaltagusuarioApi.md#listarUsingGET62) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
+[**listarUsingGET65**](GlobaltagusuarioApi.md#listarUsingGET65) | **GET** /api/usuarios | {{{usuario_resource_listar}}}
 [**recuperarSenhaUsingPOST**](GlobaltagusuarioApi.md#recuperarSenhaUsingPOST) | **POST** /api/usuarios/{id}/recuperar-senha | {{{usuario_resource_recuperar_senha}}}
-[**salvarUsingPOST33**](GlobaltagusuarioApi.md#salvarUsingPOST33) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
-[**salvarUsingPOST9**](GlobaltagusuarioApi.md#salvarUsingPOST9) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvarUsingPOST10**](GlobaltagusuarioApi.md#salvarUsingPOST10) | **POST** /api/controles-seguranca-dispositivos | {{{controle_seguranca_dispositivo_salvar}}}
+[**salvarUsingPOST34**](GlobaltagusuarioApi.md#salvarUsingPOST34) | **POST** /api/usuarios | {{{usuario_resource_salvar}}}
 [**validarSenhaForteUsingPOST**](GlobaltagusuarioApi.md#validarSenhaForteUsingPOST) | **POST** /api/usuarios/validar-senha-forte | {{{usuario_resource_validar_senha_forte}}}
 [**validarSenhaLoginUsingPOST**](GlobaltagusuarioApi.md#validarSenhaLoginUsingPOST) | **POST** /api/usuarios/{login}/validar-senha | {{{usuario_resource_validar_senha_login}}}
 [**validarSenhaUsingGET1**](GlobaltagusuarioApi.md#validarSenhaUsingGET1) | **GET** /api/usuarios/{id}/validar-senha | {{{usuario_resource_validar_senha}}}
@@ -219,9 +219,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT2"></a>
-# **atualizarUsingPUT2**
-> ControleSegurancaDispositivoResponse atualizarUsingPUT2(update)
+<a name="atualizarUsingPUT3"></a>
+# **atualizarUsingPUT3**
+> ControleSegurancaDispositivoResponse atualizarUsingPUT3(update)
 
 {{{controle_seguranca_dispositivo_atualizar}}}
 
@@ -243,7 +243,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT2(update, callback);
+api.atualizarUsingPUT3(update, callback);
 ```
 
 ### Parameters
@@ -319,9 +319,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET15"></a>
-# **consultarUsingGET15**
-> PageControleSegurancaDispositivoResponse consultarUsingGET15(idUsuario, opts)
+<a name="consultarUsingGET17"></a>
+# **consultarUsingGET17**
+> PageControleSegurancaDispositivoResponse consultarUsingGET17(idUsuario, opts)
 
 {{{controle_seguranca_dispositivo_consultar}}}
 
@@ -348,7 +348,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET15(idUsuario, opts, callback);
+api.consultarUsingGET17(idUsuario, opts, callback);
 ```
 
 ### Parameters
@@ -373,9 +373,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET51"></a>
-# **consultarUsingGET51**
-> UsuarioResponse consultarUsingGET51(id)
+<a name="consultarUsingGET53"></a>
+# **consultarUsingGET53**
+> UsuarioResponse consultarUsingGET53(id)
 
 {{{usuario_resource_consultar}}}
 
@@ -397,7 +397,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET51(id, callback);
+api.consultarUsingGET53(id, callback);
 ```
 
 ### Parameters
@@ -465,9 +465,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET62"></a>
-# **listarUsingGET62**
-> PageUsuarioResponse listarUsingGET62(opts)
+<a name="listarUsingGET65"></a>
+# **listarUsingGET65**
+> PageUsuarioResponse listarUsingGET65(opts)
 
 {{{usuario_resource_listar}}}
 
@@ -496,7 +496,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET62(opts, callback);
+api.listarUsingGET65(opts, callback);
 ```
 
 ### Parameters
@@ -570,55 +570,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST33"></a>
-# **salvarUsingPOST33**
-> UsuarioResponse salvarUsingPOST33(persist)
-
-{{{usuario_resource_salvar}}}
-
-{{{usuario_resource_salvar_notes}}}
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.GlobaltagusuarioApi()
-
-var persist = new Pier.UsuarioPersistencia(); // {UsuarioPersistencia} persist
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.salvarUsingPOST33(persist, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **persist** | [**UsuarioPersistencia**](UsuarioPersistencia.md)| persist | 
-
-### Return type
-
-[**UsuarioResponse**](UsuarioResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="salvarUsingPOST9"></a>
-# **salvarUsingPOST9**
-> ControleSegurancaDispositivoResponse salvarUsingPOST9(persist)
+<a name="salvarUsingPOST10"></a>
+# **salvarUsingPOST10**
+> ControleSegurancaDispositivoResponse salvarUsingPOST10(persist)
 
 {{{controle_seguranca_dispositivo_salvar}}}
 
@@ -640,7 +594,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST9(persist, callback);
+api.salvarUsingPOST10(persist, callback);
 ```
 
 ### Parameters
@@ -652,6 +606,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ControleSegurancaDispositivoResponse**](ControleSegurancaDispositivoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="salvarUsingPOST34"></a>
+# **salvarUsingPOST34**
+> UsuarioResponse salvarUsingPOST34(persist)
+
+{{{usuario_resource_salvar}}}
+
+{{{usuario_resource_salvar_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagusuarioApi()
+
+var persist = new Pier.UsuarioPersistencia(); // {UsuarioPersistencia} persist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.salvarUsingPOST34(persist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **persist** | [**UsuarioPersistencia**](UsuarioPersistencia.md)| persist | 
+
+### Return type
+
+[**UsuarioResponse**](UsuarioResponse.md)
 
 ### Authorization
 

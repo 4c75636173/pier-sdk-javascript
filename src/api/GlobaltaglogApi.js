@@ -18,7 +18,7 @@
   /**
    * globaltaglog service.
    * @module api/GlobaltaglogApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST18 operation.
-     * @callback module:api/GlobaltaglogApi~salvarUsingPOST18Callback
+     * Callback function to receive the result of the salvarUsingPOST19 operation.
+     * @callback module:api/GlobaltaglogApi~salvarUsingPOST19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/LogAcessoUsuarioResposta} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{log_acesso_usuario_recurso_salvar}}}
      * {{{log_acesso_usuario_recurso_salvar_notas}}}
      * @param {module:model/LogAcessoUsuarioPersistencia} logAcessoUsuarioPersist logAcessoUsuarioPersist
-     * @param {module:api/GlobaltaglogApi~salvarUsingPOST18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaglogApi~salvarUsingPOST19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LogAcessoUsuarioResposta}
      */
-    this.salvarUsingPOST18 = function(logAcessoUsuarioPersist, callback) {
+    this.salvarUsingPOST19 = function(logAcessoUsuarioPersist, callback) {
       var postBody = logAcessoUsuarioPersist;
 
       // verify the required parameter 'logAcessoUsuarioPersist' is set
       if (logAcessoUsuarioPersist == undefined || logAcessoUsuarioPersist == null) {
-        throw "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST18";
+        throw "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST19";
       }
 
 

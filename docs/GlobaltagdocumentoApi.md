@@ -5,17 +5,17 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT21**](GlobaltagdocumentoApi.md#alterarUsingPUT21) | **PUT** /api/tipos-templates/{id} | {{{tipo_template_resource_alterar}}}
-[**atualizarUsingPUT3**](GlobaltagdocumentoApi.md#atualizarUsingPUT3) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
-[**consultarUsingGET17**](GlobaltagdocumentoApi.md#consultarUsingGET17) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
-[**consultarUsingGET18**](GlobaltagdocumentoApi.md#consultarUsingGET18) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
-[**consultarUsingGET47**](GlobaltagdocumentoApi.md#consultarUsingGET47) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
+[**atualizarUsingPUT4**](GlobaltagdocumentoApi.md#atualizarUsingPUT4) | **PUT** /api/templates-documentos/{id} | {{{documento_template_resource_atualizar}}}
+[**consultarUsingGET19**](GlobaltagdocumentoApi.md#consultarUsingGET19) | **GET** /api/documentos/{id} | {{{documento_resource_consultar}}}
+[**consultarUsingGET20**](GlobaltagdocumentoApi.md#consultarUsingGET20) | **GET** /api/templates-documentos/{id} | {{{documento_template_resource_consultar}}}
+[**consultarUsingGET49**](GlobaltagdocumentoApi.md#consultarUsingGET49) | **GET** /api/tipos-templates/{id} | {{{tipo_template_resource_consultar}}}
 [**integrarUsingPOST1**](GlobaltagdocumentoApi.md#integrarUsingPOST1) | **POST** /api/documentos/integrar | {{{documento_resource_integrar}}}
-[**listarUsingGET21**](GlobaltagdocumentoApi.md#listarUsingGET21) | **GET** /api/documentos | {{{documento_resource_listar}}}
-[**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
-[**listarUsingGET57**](GlobaltagdocumentoApi.md#listarUsingGET57) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
-[**salvarUsingPOST11**](GlobaltagdocumentoApi.md#salvarUsingPOST11) | **POST** /api/documentos | {{{documento_resource_salvar}}}
-[**salvarUsingPOST12**](GlobaltagdocumentoApi.md#salvarUsingPOST12) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
-[**salvarUsingPOST31**](GlobaltagdocumentoApi.md#salvarUsingPOST31) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
+[**listarUsingGET22**](GlobaltagdocumentoApi.md#listarUsingGET22) | **GET** /api/documentos | {{{documento_resource_listar}}}
+[**listarUsingGET23**](GlobaltagdocumentoApi.md#listarUsingGET23) | **GET** /api/templates-documentos | {{{documento_template_resource_listar}}}
+[**listarUsingGET60**](GlobaltagdocumentoApi.md#listarUsingGET60) | **GET** /api/tipos-templates | {{{tipo_template_resource_listar}}}
+[**salvarUsingPOST12**](GlobaltagdocumentoApi.md#salvarUsingPOST12) | **POST** /api/documentos | {{{documento_resource_salvar}}}
+[**salvarUsingPOST13**](GlobaltagdocumentoApi.md#salvarUsingPOST13) | **POST** /api/templates-documentos | {{{documento_template_resource_salvar}}}
+[**salvarUsingPOST32**](GlobaltagdocumentoApi.md#salvarUsingPOST32) | **POST** /api/tipos-templates | {{{tipo_template_resource_salvar}}}
 
 
 <a name="alterarUsingPUT21"></a>
@@ -67,9 +67,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="atualizarUsingPUT3"></a>
-# **atualizarUsingPUT3**
-> DocumentoTemplateResponse atualizarUsingPUT3(id, persist)
+<a name="atualizarUsingPUT4"></a>
+# **atualizarUsingPUT4**
+> DocumentoTemplateResponse atualizarUsingPUT4(id, persist)
 
 {{{documento_template_resource_atualizar}}}
 
@@ -93,7 +93,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atualizarUsingPUT3(id, persist, callback);
+api.atualizarUsingPUT4(id, persist, callback);
 ```
 
 ### Parameters
@@ -116,9 +116,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET17"></a>
-# **consultarUsingGET17**
-> DocumentoDetalhadoResponse consultarUsingGET17(id)
+<a name="consultarUsingGET19"></a>
+# **consultarUsingGET19**
+> DocumentoDetalhadoResponse consultarUsingGET19(id)
 
 {{{documento_resource_consultar}}}
 
@@ -140,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET17(id, callback);
+api.consultarUsingGET19(id, callback);
 ```
 
 ### Parameters
@@ -162,9 +162,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET18"></a>
-# **consultarUsingGET18**
-> DocumentoTemplateResponse consultarUsingGET18(id)
+<a name="consultarUsingGET20"></a>
+# **consultarUsingGET20**
+> DocumentoTemplateResponse consultarUsingGET20(id)
 
 {{{documento_template_resource_consultar}}}
 
@@ -186,7 +186,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET18(id, callback);
+api.consultarUsingGET20(id, callback);
 ```
 
 ### Parameters
@@ -208,9 +208,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET47"></a>
-# **consultarUsingGET47**
-> TipoTemplateResponse consultarUsingGET47(id)
+<a name="consultarUsingGET49"></a>
+# **consultarUsingGET49**
+> TipoTemplateResponse consultarUsingGET49(id)
 
 {{{tipo_template_resource_consultar}}}
 
@@ -232,7 +232,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET47(id, callback);
+api.consultarUsingGET49(id, callback);
 ```
 
 ### Parameters
@@ -300,9 +300,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET21"></a>
-# **listarUsingGET21**
-> PageDocumentoResponse listarUsingGET21(opts)
+<a name="listarUsingGET22"></a>
+# **listarUsingGET22**
+> PageDocumentoResponse listarUsingGET22(opts)
 
 {{{documento_resource_listar}}}
 
@@ -330,7 +330,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET21(opts, callback);
+api.listarUsingGET22(opts, callback);
 ```
 
 ### Parameters
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET22"></a>
-# **listarUsingGET22**
-> PageDocumentoTemplateResponse listarUsingGET22(opts)
+<a name="listarUsingGET23"></a>
+# **listarUsingGET23**
+> PageDocumentoTemplateResponse listarUsingGET23(opts)
 
 {{{documento_template_resource_listar}}}
 
@@ -385,7 +385,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET22(opts, callback);
+api.listarUsingGET23(opts, callback);
 ```
 
 ### Parameters
@@ -410,9 +410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET57"></a>
-# **listarUsingGET57**
-> PageTipoTemplateResponse listarUsingGET57(opts)
+<a name="listarUsingGET60"></a>
+# **listarUsingGET60**
+> PageTipoTemplateResponse listarUsingGET60(opts)
 
 {{{tipo_template_resource_listar}}}
 
@@ -437,7 +437,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET57(opts, callback);
+api.listarUsingGET60(opts, callback);
 ```
 
 ### Parameters
@@ -461,9 +461,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST11"></a>
-# **salvarUsingPOST11**
-> DocumentoDetalhadoResponse salvarUsingPOST11(persist)
+<a name="salvarUsingPOST12"></a>
+# **salvarUsingPOST12**
+> DocumentoDetalhadoResponse salvarUsingPOST12(persist)
 
 {{{documento_resource_salvar}}}
 
@@ -485,7 +485,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST11(persist, callback);
+api.salvarUsingPOST12(persist, callback);
 ```
 
 ### Parameters
@@ -507,9 +507,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST12"></a>
-# **salvarUsingPOST12**
-> DocumentoTemplateResponse salvarUsingPOST12(persist)
+<a name="salvarUsingPOST13"></a>
+# **salvarUsingPOST13**
+> DocumentoTemplateResponse salvarUsingPOST13(persist)
 
 {{{documento_template_resource_salvar}}}
 
@@ -531,7 +531,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST12(persist, callback);
+api.salvarUsingPOST13(persist, callback);
 ```
 
 ### Parameters
@@ -553,9 +553,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST31"></a>
-# **salvarUsingPOST31**
-> TipoTemplateResponse salvarUsingPOST31(persist)
+<a name="salvarUsingPOST32"></a>
+# **salvarUsingPOST32**
+> TipoTemplateResponse salvarUsingPOST32(persist)
 
 {{{tipo_template_resource_salvar}}}
 
@@ -577,7 +577,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST31(persist, callback);
+api.salvarUsingPOST32(persist, callback);
 ```
 
 ### Parameters

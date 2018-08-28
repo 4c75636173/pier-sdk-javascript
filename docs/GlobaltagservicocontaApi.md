@@ -30,7 +30,6 @@ var id = 789; // {Integer} {{{conta_resource_ativar_anuidade_param_id}}}
 var idAnuidade = 789; // {Integer} {{{anuidade_request_id_anuidade_value}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -56,7 +55,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **idAnuidade** | **Integer**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -80,7 +78,7 @@ No authorization required
 
 <a name="ativarEnvioFaturaEmailUsingPOST"></a>
 # **ativarEnvioFaturaEmailUsingPOST**
-> Object ativarEnvioFaturaEmailUsingPOST(id, opts)
+> Object ativarEnvioFaturaEmailUsingPOST(id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -94,9 +92,6 @@ var apiInstance = new Pier.GlobaltagservicocontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_ativar_envio_fatura_email_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -105,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.ativarEnvioFaturaEmailUsingPOST(id, opts, callback);
+api.ativarEnvioFaturaEmailUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -113,7 +108,6 @@ api.ativarEnvioFaturaEmailUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -130,7 +124,7 @@ No authorization required
 
 <a name="desativarEnvioFaturaEmailUsingPOST"></a>
 # **desativarEnvioFaturaEmailUsingPOST**
-> Object desativarEnvioFaturaEmailUsingPOST(id, opts)
+> Object desativarEnvioFaturaEmailUsingPOST(id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -144,9 +138,6 @@ var apiInstance = new Pier.GlobaltagservicocontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_desativar_envio_fatura_email_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -155,7 +146,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desativarEnvioFaturaEmailUsingPOST(id, opts, callback);
+api.desativarEnvioFaturaEmailUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -163,7 +154,6 @@ api.desativarEnvioFaturaEmailUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 

@@ -18,7 +18,7 @@
   /**
    * The UsuarioTokenPersistencia model module.
    * @module model/UsuarioTokenPersistencia
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

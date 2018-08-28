@@ -18,7 +18,7 @@
   /**
    * globaltagfaq service.
    * @module api/GlobaltagfaqApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -166,8 +166,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET21 operation.
-     * @callback module:api/GlobaltagfaqApi~consultarUsingGET21Callback
+     * Callback function to receive the result of the consultarUsingGET23 operation.
+     * @callback module:api/GlobaltagfaqApi~consultarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/FaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -177,15 +177,15 @@
      * {{{faq_resource_consultar}}}
      * {{{faq_resource_consultar_notes}}}
      * @param {Integer} id {{{faq_resource_consultar_param_id_faq}}}
-     * @param {module:api/GlobaltagfaqApi~consultarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagfaqApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/FaqResponse}
      */
-    this.consultarUsingGET21 = function(id, callback) {
+    this.consultarUsingGET23 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET21";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET23";
       }
 
 
@@ -212,8 +212,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET26 operation.
-     * @callback module:api/GlobaltagfaqApi~listarUsingGET26Callback
+     * Callback function to receive the result of the listarUsingGET27 operation.
+     * @callback module:api/GlobaltagfaqApi~listarUsingGET27Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageFaqResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -233,10 +233,10 @@
      * @param {String} opts.plataforma {{{faq_request_plataforma_value}}}
      * @param {String} opts.categoria {{{faq_request_categoria_value}}}
      * @param {module:model/String} opts.status {{{faq_request_status_value}}}
-     * @param {module:api/GlobaltagfaqApi~listarUsingGET26Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagfaqApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageFaqResponse}
      */
-    this.listarUsingGET26 = function(opts, callback) {
+    this.listarUsingGET27 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

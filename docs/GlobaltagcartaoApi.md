@@ -16,7 +16,8 @@ Method | HTTP request | Description
 [**consultarLimiteDisponibilidadeUsingGET**](GlobaltagcartaoApi.md#consultarLimiteDisponibilidadeUsingGET) | **GET** /api/cartoes/{id}/limites-disponibilidades | {{{cartao_resource_consultar_limite_disponibilidade}}}
 [**consultarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#consultarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos/{id} | {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 [**consultarPortadorUsingGET**](GlobaltagcartaoApi.md#consultarPortadorUsingGET) | **GET** /api/cartoes/{id}/portadores | {{{cartao_resource_consultar_portador}}}
-[**consultarUsingGET10**](GlobaltagcartaoApi.md#consultarUsingGET10) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**consultarUsingGET12**](GlobaltagcartaoApi.md#consultarUsingGET12) | **GET** /api/cartoes/{id} | {{{cartao_resource_consultar}}}
+[**criarCartoesMultiAppUsingPOST**](GlobaltagcartaoApi.md#criarCartoesMultiAppUsingPOST) | **POST** /api/cartoes/gerar-cartoes-multiapp | {{{conta_resource_cadastrar_cartao_multiapp}}}
 [**desbloquearSenhaIncorretaUsingPOST**](GlobaltagcartaoApi.md#desbloquearSenhaIncorretaUsingPOST) | **POST** /api/cartoes/{id}/desbloquear-senha-incorreta | {{{cartao_resource_desbloquear_senha_incorreta}}}
 [**desbloquearUsingPOST**](GlobaltagcartaoApi.md#desbloquearUsingPOST) | **POST** /api/cartoes/{id}/desbloquear | {{{cartao_resource_desbloquear}}}
 [**gerarLotesCartoesPrePagosUsingPOST**](GlobaltagcartaoApi.md#gerarLotesCartoesPrePagosUsingPOST) | **POST** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
@@ -24,7 +25,7 @@ Method | HTTP request | Description
 [**gerarNovaViaUsingPOST**](GlobaltagcartaoApi.md#gerarNovaViaUsingPOST) | **POST** /api/cartoes/{id}/gerar-nova-via | {{{cartao_resource_gerar_nova_via}}}
 [**lancarTarifaSegundaViaUsingPOST**](GlobaltagcartaoApi.md#lancarTarifaSegundaViaUsingPOST) | **POST** /api/cartoes/{id}/lancar-tarifa-reemissao | {{{cartao_resource_lancar_tarifa_segunda_via}}}
 [**listarLotesCartoesPrePagosUsingGET**](GlobaltagcartaoApi.md#listarLotesCartoesPrePagosUsingGET) | **GET** /api/cartoes/lotes-cartoes-pre-pagos | {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
-[**listarUsingGET11**](GlobaltagcartaoApi.md#listarUsingGET11) | **GET** /api/cartoes | {{{cartao_resource_listar}}}
+[**listarUsingGET12**](GlobaltagcartaoApi.md#listarUsingGET12) | **GET** /api/cartoes | {{{cartao_resource_listar}}}
 [**reativarUsingPOST**](GlobaltagcartaoApi.md#reativarUsingPOST) | **POST** /api/cartoes/{id}/reativar | {{{cartao_resource_reativar}}}
 [**validarCVVUsingPOST**](GlobaltagcartaoApi.md#validarCVVUsingPOST) | **POST** /api/cartoes/{id}/validar-cvv | {{{cartao_resource_validar_c_v_v}}}
 [**validarDadosImpressosBandeiradoUsingGET**](GlobaltagcartaoApi.md#validarDadosImpressosBandeiradoUsingGET) | **GET** /api/cartoes/validar-dados-impressos-bandeirados | {{{cartao_resource_validar_dados_impressos_bandeirado}}}
@@ -36,7 +37,7 @@ Method | HTTP request | Description
 
 <a name="alterarAlterarSenhaUsingPUT"></a>
 # **alterarAlterarSenhaUsingPUT**
-> &#39;String&#39; alterarAlterarSenhaUsingPUT(id, senha, opts)
+> &#39;String&#39; alterarAlterarSenhaUsingPUT(id, senha)
 
 {{{cartao_resource_alterar_alterar_senha}}}
 
@@ -52,9 +53,6 @@ var id = 789; // {Integer} {{{cartao_resource_alterar_alterar_senha_param_id}}}
 
 var senha = "senha_example"; // {String} {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -63,7 +61,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarAlterarSenhaUsingPUT(id, senha, opts, callback);
+api.alterarAlterarSenhaUsingPUT(id, senha, callback);
 ```
 
 ### Parameters
@@ -72,7 +70,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_alterar_alterar_senha_param_id}}} | 
  **senha** | **String**| {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -89,7 +86,7 @@ No authorization required
 
 <a name="alterarEstagioUsingPOST"></a>
 # **alterarEstagioUsingPOST**
-> CartaoResponse alterarEstagioUsingPOST(id, update, opts)
+> CartaoResponse alterarEstagioUsingPOST(id, update)
 
 {{{cartao_resource_alterar_estagio}}}
 
@@ -105,9 +102,6 @@ var id = 789; // {Integer} {{{cartao_resource_alterar_estagio_param_id}}}
 
 var update = new Pier.EstagioCartaoUpdate(); // {EstagioCartaoUpdate} {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -116,7 +110,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarEstagioUsingPOST(id, update, opts, callback);
+api.alterarEstagioUsingPOST(id, update, callback);
 ```
 
 ### Parameters
@@ -125,7 +119,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_alterar_estagio_param_id}}} | 
  **update** | [**EstagioCartaoUpdate**](EstagioCartaoUpdate.md)| {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -142,7 +135,7 @@ No authorization required
 
 <a name="alterarStatusImpressaoUsingPUT"></a>
 # **alterarStatusImpressaoUsingPUT**
-> HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT(id, idStatusImpressao, opts)
+> HistoricoImpressaoCartaoResponse alterarStatusImpressaoUsingPUT(id, idStatusImpressao)
 
 {{{cartao_resource_alterar_status_impressao}}}
 
@@ -158,9 +151,6 @@ var id = 789; // {Integer} {{{cartao_resource_alterar_status_impressao_param_id}
 
 var idStatusImpressao = 789; // {Integer} {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -169,7 +159,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarStatusImpressaoUsingPUT(id, idStatusImpressao, opts, callback);
+api.alterarStatusImpressaoUsingPUT(id, idStatusImpressao, callback);
 ```
 
 ### Parameters
@@ -178,7 +168,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_alterar_status_impressao_param_id}}} | 
  **idStatusImpressao** | **Integer**| {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -195,7 +184,7 @@ No authorization required
 
 <a name="atribuirPessoaUsingPUT"></a>
 # **atribuirPessoaUsingPUT**
-> CartaoResponse atribuirPessoaUsingPUT(id, idPessoa, opts)
+> CartaoResponse atribuirPessoaUsingPUT(id, idPessoa)
 
 {{{cartao_resource_atribuir_pessoa}}}
 
@@ -211,9 +200,6 @@ var id = 789; // {Integer} {{{cartao_resource_atribuir_pessoa_param_id_cartao}}}
 
 var idPessoa = 789; // {Integer} {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -222,7 +208,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.atribuirPessoaUsingPUT(id, idPessoa, opts, callback);
+api.atribuirPessoaUsingPUT(id, idPessoa, callback);
 ```
 
 ### Parameters
@@ -231,7 +217,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_atribuir_pessoa_param_id_cartao}}} | 
  **idPessoa** | **Integer**| {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -248,7 +233,7 @@ No authorization required
 
 <a name="bloquearUsingPOST"></a>
 # **bloquearUsingPOST**
-> CartaoResponse bloquearUsingPOST(id, idStatus, observacao, opts)
+> CartaoResponse bloquearUsingPOST(id, idStatus, observacao)
 
 {{{cartao_resource_bloquear}}}
 
@@ -266,9 +251,6 @@ var idStatus = 789; // {Integer} {{{cartao_resource_bloquear_param_id_status}}}
 
 var observacao = "observacao_example"; // {String} {{{cartao_resource_bloquear_param_observacao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -277,7 +259,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.bloquearUsingPOST(id, idStatus, observacao, opts, callback);
+api.bloquearUsingPOST(id, idStatus, observacao, callback);
 ```
 
 ### Parameters
@@ -287,7 +269,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{cartao_resource_bloquear_param_id}}} | 
  **idStatus** | **Integer**| {{{cartao_resource_bloquear_param_id_status}}} | 
  **observacao** | **String**| {{{cartao_resource_bloquear_param_observacao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -304,7 +285,7 @@ No authorization required
 
 <a name="cadastrarAlterarSenhaUsingPOST"></a>
 # **cadastrarAlterarSenhaUsingPOST**
-> &#39;String&#39; cadastrarAlterarSenhaUsingPOST(id, senha, opts)
+> &#39;String&#39; cadastrarAlterarSenhaUsingPOST(id, senha)
 
 {{{cartao_resource_cadastrar_alterar_senha}}}
 
@@ -320,9 +301,6 @@ var id = 789; // {Integer} {{{cartao_resource_cadastrar_alterar_senha_param_id}}
 
 var senha = "senha_example"; // {String} {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -331,7 +309,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cadastrarAlterarSenhaUsingPOST(id, senha, opts, callback);
+api.cadastrarAlterarSenhaUsingPOST(id, senha, callback);
 ```
 
 ### Parameters
@@ -340,7 +318,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_cadastrar_alterar_senha_param_id}}} | 
  **senha** | **String**| {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -357,7 +334,7 @@ No authorization required
 
 <a name="cancelarUsingPOST"></a>
 # **cancelarUsingPOST**
-> CartaoResponse cancelarUsingPOST(id, idStatus, observacao, opts)
+> CartaoResponse cancelarUsingPOST(id, idStatus, observacao)
 
 {{{cartao_resource_cancelar}}}
 
@@ -375,9 +352,6 @@ var idStatus = 789; // {Integer} {{{cartao_resource_cancelar_param_id_status}}}
 
 var observacao = "observacao_example"; // {String} {{{cartao_resource_cancelar_param_observacao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -386,7 +360,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancelarUsingPOST(id, idStatus, observacao, opts, callback);
+api.cancelarUsingPOST(id, idStatus, observacao, callback);
 ```
 
 ### Parameters
@@ -396,7 +370,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{cartao_resource_cancelar_param_id}}} | 
  **idStatus** | **Integer**| {{{cartao_resource_cancelar_param_id_status}}} | 
  **observacao** | **String**| {{{cartao_resource_cancelar_param_observacao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -413,7 +386,7 @@ No authorization required
 
 <a name="consultarCartaoImpressaoUsingGET"></a>
 # **consultarCartaoImpressaoUsingGET**
-> DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET(id, opts)
+> DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET(id)
 
 {{{cartao_resource_consultar_cartao_impressao}}}
 
@@ -427,9 +400,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_consultar_cartao_impressao_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -438,7 +408,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarCartaoImpressaoUsingGET(id, opts, callback);
+api.consultarCartaoImpressaoUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -446,7 +416,6 @@ api.consultarCartaoImpressaoUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_consultar_cartao_impressao_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -463,7 +432,7 @@ No authorization required
 
 <a name="consultarDadosReaisCartaoUsingGET"></a>
 # **consultarDadosReaisCartaoUsingGET**
-> DadosCartaoResponse consultarDadosReaisCartaoUsingGET(id, opts)
+> DadosCartaoResponse consultarDadosReaisCartaoUsingGET(id)
 
 {{{cartao_resource_consultar_dados_reais_cartao}}}
 
@@ -477,9 +446,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} id
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -488,7 +454,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarDadosReaisCartaoUsingGET(id, opts, callback);
+api.consultarDadosReaisCartaoUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -496,7 +462,6 @@ api.consultarDadosReaisCartaoUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| id | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -513,7 +478,7 @@ No authorization required
 
 <a name="consultarLimiteDisponibilidadeUsingGET"></a>
 # **consultarLimiteDisponibilidadeUsingGET**
-> LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET(id, opts)
+> LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET(id)
 
 {{{cartao_resource_consultar_limite_disponibilidade}}}
 
@@ -527,9 +492,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_consultar_limite_disponibilidade_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -538,7 +500,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarLimiteDisponibilidadeUsingGET(id, opts, callback);
+api.consultarLimiteDisponibilidadeUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -546,7 +508,6 @@ api.consultarLimiteDisponibilidadeUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_consultar_limite_disponibilidade_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -563,7 +524,7 @@ No authorization required
 
 <a name="consultarLotesCartoesPrePagosUsingGET"></a>
 # **consultarLotesCartoesPrePagosUsingGET**
-> LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET(id, opts)
+> LoteCartoesPrePagosResponse consultarLotesCartoesPrePagosUsingGET(id)
 
 {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
 
@@ -577,9 +538,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -588,7 +546,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarLotesCartoesPrePagosUsingGET(id, opts, callback);
+api.consultarLotesCartoesPrePagosUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -596,7 +554,6 @@ api.consultarLotesCartoesPrePagosUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -613,7 +570,7 @@ No authorization required
 
 <a name="consultarPortadorUsingGET"></a>
 # **consultarPortadorUsingGET**
-> PortadorResponse consultarPortadorUsingGET(id, opts)
+> PortadorResponse consultarPortadorUsingGET(id)
 
 {{{cartao_resource_consultar_portador}}}
 
@@ -627,9 +584,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_consultar_portador_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -638,7 +592,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarPortadorUsingGET(id, opts, callback);
+api.consultarPortadorUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -646,7 +600,6 @@ api.consultarPortadorUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_consultar_portador_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -661,9 +614,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET10"></a>
-# **consultarUsingGET10**
-> CartaoDetalheResponse consultarUsingGET10(id, opts)
+<a name="consultarUsingGET12"></a>
+# **consultarUsingGET12**
+> CartaoDetalheResponse consultarUsingGET12(id)
 
 {{{cartao_resource_consultar}}}
 
@@ -677,9 +630,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_consultar_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -688,7 +638,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET10(id, opts, callback);
+api.consultarUsingGET12(id, callback);
 ```
 
 ### Parameters
@@ -696,7 +646,6 @@ api.consultarUsingGET10(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_consultar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -711,9 +660,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="criarCartoesMultiAppUsingPOST"></a>
+# **criarCartoesMultiAppUsingPOST**
+> VinculoCartoesResponse criarCartoesMultiAppUsingPOST(cartaoMultiAppPersist)
+
+{{{conta_resource_cadastrar_cartao_multiapp}}}
+
+{{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcartaoApi()
+
+var cartaoMultiAppPersist = new Pier.CartaoMultiAppPersistValue(); // {CartaoMultiAppPersistValue} cartaoMultiAppPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.criarCartoesMultiAppUsingPOST(cartaoMultiAppPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cartaoMultiAppPersist** | [**CartaoMultiAppPersistValue**](CartaoMultiAppPersistValue.md)| cartaoMultiAppPersist | 
+
+### Return type
+
+[**VinculoCartoesResponse**](VinculoCartoesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="desbloquearSenhaIncorretaUsingPOST"></a>
 # **desbloquearSenhaIncorretaUsingPOST**
-> CartaoResponse desbloquearSenhaIncorretaUsingPOST(id, opts)
+> CartaoResponse desbloquearSenhaIncorretaUsingPOST(id)
 
 {{{cartao_resource_desbloquear_senha_incorreta}}}
 
@@ -727,9 +722,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_desbloquear_senha_incorreta_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -738,7 +730,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desbloquearSenhaIncorretaUsingPOST(id, opts, callback);
+api.desbloquearSenhaIncorretaUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -746,7 +738,6 @@ api.desbloquearSenhaIncorretaUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_desbloquear_senha_incorreta_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -763,7 +754,7 @@ No authorization required
 
 <a name="desbloquearUsingPOST"></a>
 # **desbloquearUsingPOST**
-> CartaoResponse desbloquearUsingPOST(id, opts)
+> CartaoResponse desbloquearUsingPOST(id)
 
 {{{cartao_resource_desbloquear}}}
 
@@ -777,9 +768,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_desbloquear_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -788,7 +776,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desbloquearUsingPOST(id, opts, callback);
+api.desbloquearUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -796,7 +784,6 @@ api.desbloquearUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_desbloquear_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -826,7 +813,6 @@ var Pier = require('Pier');
 var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'idOrigemComercial': 789, // {Integer} {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}}
   'idProduto': 789, // {Integer} {{{lote_cartoes_pre_pagos_persist_id_produto_value}}}
   'idTipoCartao': 789, // {Integer} {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}}
@@ -850,7 +836,6 @@ api.gerarLotesCartoesPrePagosUsingPOST(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| Authorization | [optional] 
  **idOrigemComercial** | **Integer**| {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}} | [optional] 
  **idProduto** | **Integer**| {{{lote_cartoes_pre_pagos_persist_id_produto_value}}} | [optional] 
  **idTipoCartao** | **Integer**| {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}} | [optional] 
@@ -874,7 +859,7 @@ No authorization required
 
 <a name="gerarNovaViaCartaoMultiAppUsingPOST"></a>
 # **gerarNovaViaCartaoMultiAppUsingPOST**
-> CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiAppUsingPOST(id, opts)
+> CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiAppUsingPOST(id)
 
 {{{cartao_resource_gerar_nova_via_multiplo}}}
 
@@ -888,9 +873,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -899,7 +881,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarNovaViaCartaoMultiAppUsingPOST(id, opts, callback);
+api.gerarNovaViaCartaoMultiAppUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -907,7 +889,6 @@ api.gerarNovaViaCartaoMultiAppUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_gerar_nova_via_param_id_cartao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -924,7 +905,7 @@ No authorization required
 
 <a name="gerarNovaViaUsingPOST"></a>
 # **gerarNovaViaUsingPOST**
-> CartaoResponse gerarNovaViaUsingPOST(id, opts)
+> CartaoResponse gerarNovaViaUsingPOST(id)
 
 {{{cartao_resource_gerar_nova_via}}}
 
@@ -938,9 +919,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -949,7 +927,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarNovaViaUsingPOST(id, opts, callback);
+api.gerarNovaViaUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -957,7 +935,6 @@ api.gerarNovaViaUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_gerar_nova_via_param_id_cartao}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -974,7 +951,7 @@ No authorization required
 
 <a name="lancarTarifaSegundaViaUsingPOST"></a>
 # **lancarTarifaSegundaViaUsingPOST**
-> Object lancarTarifaSegundaViaUsingPOST(id, opts)
+> Object lancarTarifaSegundaViaUsingPOST(id)
 
 {{{cartao_resource_lancar_tarifa_segunda_via}}}
 
@@ -988,9 +965,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -999,7 +973,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.lancarTarifaSegundaViaUsingPOST(id, opts, callback);
+api.lancarTarifaSegundaViaUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -1007,7 +981,6 @@ api.lancarTarifaSegundaViaUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1037,7 +1010,6 @@ var Pier = require('Pier');
 var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1067,7 +1039,6 @@ api.listarLotesCartoesPrePagosUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1095,9 +1066,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET11"></a>
-# **listarUsingGET11**
-> PageCartaoResponse listarUsingGET11(opts)
+<a name="listarUsingGET12"></a>
+# **listarUsingGET12**
+> PageCartaoResponse listarUsingGET12(opts)
 
 {{{cartao_resource_listar}}}
 
@@ -1110,7 +1081,6 @@ var Pier = require('Pier');
 var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1131,7 +1101,8 @@ var opts = {
   'flagImpressaoOrigemComercial': 56, // {Integer} {{{cartao_request_flag_impressao_origem_comercial_value}}}
   'flagProvisorio': 56, // {Integer} {{{cartao_request_flag_provisorio_value}}}
   'codigoDesbloqueio': "codigoDesbloqueio_example", // {String} {{{cartao_request_codigo_desbloqueio_value}}}
-  'sequencialCartao': 56 // {Integer} {{{cartao_request_sequencial_cartao_value}}}
+  'sequencialCartao': 56, // {Integer} {{{cartao_request_sequencial_cartao_value}}}
+  'identificadorExterno': 789 // {Integer} {{{cartao_request_identificador_externo_value}}}
 };
 
 var callback = function(error, data, response) {
@@ -1141,14 +1112,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET11(opts, callback);
+api.listarUsingGET12(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1170,6 +1140,7 @@ Name | Type | Description  | Notes
  **flagProvisorio** | **Integer**| {{{cartao_request_flag_provisorio_value}}} | [optional] 
  **codigoDesbloqueio** | **String**| {{{cartao_request_codigo_desbloqueio_value}}} | [optional] 
  **sequencialCartao** | **Integer**| {{{cartao_request_sequencial_cartao_value}}} | [optional] 
+ **identificadorExterno** | **Integer**| {{{cartao_request_identificador_externo_value}}} | [optional] 
 
 ### Return type
 
@@ -1186,7 +1157,7 @@ No authorization required
 
 <a name="reativarUsingPOST"></a>
 # **reativarUsingPOST**
-> CartaoResponse reativarUsingPOST(id, opts)
+> CartaoResponse reativarUsingPOST(id)
 
 {{{cartao_resource_reativar}}}
 
@@ -1200,9 +1171,6 @@ var apiInstance = new Pier.GlobaltagcartaoApi()
 
 var id = 789; // {Integer} {{{cartao_resource_reativar_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1211,7 +1179,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.reativarUsingPOST(id, opts, callback);
+api.reativarUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -1219,7 +1187,6 @@ api.reativarUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_reativar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1236,7 +1203,7 @@ No authorization required
 
 <a name="validarCVVUsingPOST"></a>
 # **validarCVVUsingPOST**
-> &#39;String&#39; validarCVVUsingPOST(id, validaCVV, opts)
+> &#39;String&#39; validarCVVUsingPOST(id, validaCVV)
 
 {{{cartao_resource_validar_c_v_v}}}
 
@@ -1252,9 +1219,6 @@ var id = 789; // {Integer} {{{cartao_resource_validar_c_v_v_param_id}}}
 
 var validaCVV = new Pier.ValidaCVVRequest(); // {ValidaCVVRequest} validaCVV
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1263,7 +1227,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarCVVUsingPOST(id, validaCVV, opts, callback);
+api.validarCVVUsingPOST(id, validaCVV, callback);
 ```
 
 ### Parameters
@@ -1272,7 +1236,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_validar_c_v_v_param_id}}} | 
  **validaCVV** | [**ValidaCVVRequest**](ValidaCVVRequest.md)| validaCVV | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1289,7 +1252,7 @@ No authorization required
 
 <a name="validarDadosImpressosBandeiradoUsingGET"></a>
 # **validarDadosImpressosBandeiradoUsingGET**
-> ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts)
+> ValidaCartaoResponse validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
 
 {{{cartao_resource_validar_dados_impressos_bandeirado}}}
 
@@ -1309,9 +1272,6 @@ var dataValidade = "dataValidade_example"; // {String} {{{cartao_resource_valida
 
 var codigoSeguranca = "codigoSeguranca_example"; // {String} {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1320,7 +1280,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts, callback);
+api.validarDadosImpressosBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
 ```
 
 ### Parameters
@@ -1331,7 +1291,6 @@ Name | Type | Description  | Notes
  **nomePortador** | **String**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}} | 
  **dataValidade** | **String**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}} | 
  **codigoSeguranca** | **String**| {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1348,7 +1307,7 @@ No authorization required
 
 <a name="validarDadosImpressosNaoBandeiradoUsingGET"></a>
 # **validarDadosImpressosNaoBandeiradoUsingGET**
-> ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts)
+> ValidaCartaoResponse validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca)
 
 {{{cartao_resource_validar_dados_impressos_nao_bandeirado}}}
 
@@ -1368,9 +1327,6 @@ var dataValidade = "dataValidade_example"; // {String} {{{cartao_resource_valida
 
 var codigoSeguranca = "codigoSeguranca_example"; // {String} {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1379,7 +1335,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, opts, callback);
+api.validarDadosImpressosNaoBandeiradoUsingGET(numeroCartao, nomePortador, dataValidade, codigoSeguranca, callback);
 ```
 
 ### Parameters
@@ -1390,7 +1346,6 @@ Name | Type | Description  | Notes
  **nomePortador** | **String**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}} | 
  **dataValidade** | **String**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}} | 
  **codigoSeguranca** | **String**| {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1407,7 +1362,7 @@ No authorization required
 
 <a name="validarDe55CartaoMastercardUsingGET"></a>
 # **validarDe55CartaoMastercardUsingGET**
-> ValidaCartaoResponse validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma, opts)
+> ValidaCartaoResponse validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma)
 
 {{{cartao_resource_validar_de55_cartao_mastercard}}}
 
@@ -1423,9 +1378,6 @@ var numeroCartao = "numeroCartao_example"; // {String} {{{cartao_resource_valida
 
 var criptograma = "criptograma_example"; // {String} {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1434,7 +1386,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma, opts, callback);
+api.validarDe55CartaoMastercardUsingGET(numeroCartao, criptograma, callback);
 ```
 
 ### Parameters
@@ -1443,7 +1395,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **numeroCartao** | **String**| {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}} | 
  **criptograma** | **String**| {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1460,7 +1411,7 @@ No authorization required
 
 <a name="validarSenhaUsingGET"></a>
 # **validarSenhaUsingGET**
-> ValidaSenhaCartaoResponse validarSenhaUsingGET(id, senha, opts)
+> ValidaSenhaCartaoResponse validarSenhaUsingGET(id, senha)
 
 {{{cartao_resource_validar_senha}}}
 
@@ -1476,9 +1427,6 @@ var id = 789; // {Integer} {{{cartao_resource_validar_senha_param_id}}}
 
 var senha = "senha_example"; // {String} {{{cartao_resource_validar_senha_param_senha}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1487,7 +1435,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarSenhaUsingGET(id, senha, opts, callback);
+api.validarSenhaUsingGET(id, senha, callback);
 ```
 
 ### Parameters
@@ -1496,7 +1444,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{cartao_resource_validar_senha_param_id}}} | 
  **senha** | **String**| {{{cartao_resource_validar_senha_param_senha}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1513,7 +1460,7 @@ No authorization required
 
 <a name="validarTarjaUsingGET"></a>
 # **validarTarjaUsingGET**
-> ValidaCartaoResponse validarTarjaUsingGET(numeroCartao, trilha1, trilha2, opts)
+> ValidaCartaoResponse validarTarjaUsingGET(numeroCartao, trilha1, trilha2)
 
 {{{cartao_resource_validar_tarja}}}
 
@@ -1531,9 +1478,6 @@ var trilha1 = "trilha1_example"; // {String} {{{cartao_resource_validar_tarja_pa
 
 var trilha2 = "trilha2_example"; // {String} {{{cartao_resource_validar_tarja_param_trilha2}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1542,7 +1486,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.validarTarjaUsingGET(numeroCartao, trilha1, trilha2, opts, callback);
+api.validarTarjaUsingGET(numeroCartao, trilha1, trilha2, callback);
 ```
 
 ### Parameters
@@ -1552,7 +1496,6 @@ Name | Type | Description  | Notes
  **numeroCartao** | **String**| {{{cartao_resource_validar_tarja_param_numero_cartao}}} | 
  **trilha1** | **String**| {{{cartao_resource_validar_tarja_param_trilha1}}} | 
  **trilha2** | **String**| {{{cartao_resource_validar_tarja_param_trilha2}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 

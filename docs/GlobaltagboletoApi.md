@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET34**](GlobaltagboletoApi.md#consultarUsingGET34) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
+[**consultarUsingGET36**](GlobaltagboletoApi.md#consultarUsingGET36) | **GET** /api/boletos/{id} | {{{boleto_resource_consultar}}}
 [**enviarBoletoEmailUsingPOST**](GlobaltagboletoApi.md#enviarBoletoEmailUsingPOST) | **POST** /api/boletos/{id}/enviar-email | {{{boleto_resource_enviar_boleto_email}}}
 [**gerarBoletoUsingPOST**](GlobaltagboletoApi.md#gerarBoletoUsingPOST) | **POST** /api/boletos | {{{boleto_resource_gerar_boleto}}}
-[**listarUsingGET45**](GlobaltagboletoApi.md#listarUsingGET45) | **GET** /api/boletos | {{{boleto_resource_listar}}}
+[**listarUsingGET47**](GlobaltagboletoApi.md#listarUsingGET47) | **GET** /api/boletos | {{{boleto_resource_listar}}}
 [**registrarBoletoUsingPOST**](GlobaltagboletoApi.md#registrarBoletoUsingPOST) | **POST** /api/boletos/{id}/registrar | {{{registro_cobranca_resource_registrar_boleto}}}
 [**visualizarBoletoUsingGET**](GlobaltagboletoApi.md#visualizarBoletoUsingGET) | **GET** /api/boletos/{id}/arquivo.pdf | {{{boleto_resource_visualizar_boleto}}}
 
 
-<a name="consultarUsingGET34"></a>
-# **consultarUsingGET34**
-> BoletoResponse consultarUsingGET34(id)
+<a name="consultarUsingGET36"></a>
+# **consultarUsingGET36**
+> BoletoResponse consultarUsingGET36(id, opts)
 
 {{{boleto_resource_consultar}}}
 
@@ -28,6 +28,9 @@ var apiInstance = new Pier.GlobaltagboletoApi()
 
 var id = 789; // {Integer} {{{boleto_resource_consultar_param_id}}}
 
+var opts = { 
+  'zeraValorCodigoBarras': true // {Boolean} {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -36,7 +39,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET34(id, callback);
+api.consultarUsingGET36(id, opts, callback);
 ```
 
 ### Parameters
@@ -44,6 +47,7 @@ api.consultarUsingGET34(id, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{boleto_resource_consultar_param_id}}} | 
+ **zeraValorCodigoBarras** | **Boolean**| {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} | [optional] 
 
 ### Return type
 
@@ -153,9 +157,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET45"></a>
-# **listarUsingGET45**
-> PageBoletoListarResponse listarUsingGET45(opts)
+<a name="listarUsingGET47"></a>
+# **listarUsingGET47**
+> PageBoletoListarResponse listarUsingGET47(opts)
 
 {{{boleto_resource_listar}}}
 
@@ -184,7 +188,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET45(opts, callback);
+api.listarUsingGET47(opts, callback);
 ```
 
 ### Parameters

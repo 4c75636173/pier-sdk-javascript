@@ -18,7 +18,7 @@
   /**
    * globaltagajustefinanceiro service.
    * @module api/GlobaltagajustefinanceiroApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

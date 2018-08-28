@@ -24,7 +24,6 @@ var apiInstance = new Pier.GlobaltaglimiteApi()
 var id = 789; // {Integer} {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -45,7 +44,6 @@ api.listarHistoricoAlteracoesLimitesUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 

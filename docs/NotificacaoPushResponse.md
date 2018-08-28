@@ -1,4 +1,4 @@
-# Pier.NotificacaoPushResponseValue
+# Pier.NotificacaoPushResponse
 
 ## Properties
 Name | Type | Description | Notes

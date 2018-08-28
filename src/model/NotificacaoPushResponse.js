@@ -10,21 +10,21 @@
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.NotificacaoPushResponseValue = factory(root.Pier.ApiClient);
+    root.Pier.NotificacaoPushResponse = factory(root.Pier.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The NotificacaoPushResponseValue model module.
-   * @module model/NotificacaoPushResponseValue
-   * @version 2.68.0
+   * The NotificacaoPushResponse model module.
+   * @module model/NotificacaoPushResponse
+   * @version 2.74.2
    */
 
   /**
-   * Constructs a new <code>NotificacaoPushResponseValue</code>.
+   * Constructs a new <code>NotificacaoPushResponse</code>.
    * {{{notificacao_push_response_description}}}
-   * @alias module:model/NotificacaoPushResponseValue
+   * @alias module:model/NotificacaoPushResponse
    * @class
    * @param idPessoa
    * @param idConta
@@ -48,11 +48,11 @@
   };
 
   /**
-   * Constructs a <code>NotificacaoPushResponseValue</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>NotificacaoPushResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/NotificacaoPushResponseValue} obj Optional instance to populate.
-   * @return {module:model/NotificacaoPushResponseValue} The populated <code>NotificacaoPushResponseValue</code> instance.
+   * @param {module:model/NotificacaoPushResponse} obj Optional instance to populate.
+   * @return {module:model/NotificacaoPushResponse} The populated <code>NotificacaoPushResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) { 
@@ -110,13 +110,13 @@
 
   /**
    * {{{notificacao_push_response_tipo_evento_value}}}
-   * @member {module:model/NotificacaoPushResponseValue.TipoEventoEnum} tipoEvento
+   * @member {module:model/NotificacaoPushResponse.TipoEventoEnum} tipoEvento
    */
   exports.prototype['tipoEvento'] = undefined;
 
   /**
    * {{{notificacao_push_response_status_value}}}
-   * @member {module:model/NotificacaoPushResponseValue.StatusEnum} status
+   * @member {module:model/NotificacaoPushResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
 
@@ -152,7 +152,7 @@
 
   /**
    * {{{notificacao_push_response_plataforma_value}}}
-   * @member {module:model/NotificacaoPushResponseValue.PlataformaEnum} plataforma
+   * @member {module:model/NotificacaoPushResponse.PlataformaEnum} plataforma
    */
   exports.prototype['plataforma'] = undefined;
 
@@ -185,7 +185,13 @@
      * value: OUTROS
      * @const
      */
-    OUTROS: "OUTROS"
+    OUTROS: "OUTROS",
+    
+    /**
+     * value: OTP_3D_SECURE
+     * @const
+     */
+    OTP_3D_SECURE: "OTP_3D_SECURE"
   };  /**
    * Allowed values for the <code>status</code> property.
    * @enum {String}

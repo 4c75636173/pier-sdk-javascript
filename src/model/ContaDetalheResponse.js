@@ -18,7 +18,7 @@
   /**
    * The ContaDetalheResponse model module.
    * @module model/ContaDetalheResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -145,6 +146,9 @@
       }
       if (data.hasOwnProperty('diasAtraso')) {
         obj['diasAtraso'] = ApiClient.convertToType(data['diasAtraso'], 'Integer');
+      }
+      if (data.hasOwnProperty('proximoVencimentoPadrao')) {
+        obj['proximoVencimentoPadrao'] = ApiClient.convertToType(data['proximoVencimentoPadrao'], 'String');
       }
     }
     return obj;
@@ -306,6 +310,12 @@
    * @member {Integer} diasAtraso
    */
   exports.prototype['diasAtraso'] = undefined;
+
+  /**
+   * {{{conta_response_proximo_vencimento_padrao_value}}}
+   * @member {String} proximoVencimentoPadrao
+   */
+  exports.prototype['proximoVencimentoPadrao'] = undefined;
 
 
 

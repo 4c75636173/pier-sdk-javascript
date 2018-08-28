@@ -18,7 +18,7 @@
   /**
    * The CompraContestadaCartaoResponse model module.
    * @module model/CompraContestadaCartaoResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -28,6 +28,8 @@
    * @class
    */
   var exports = function() {
+
+
 
 
 
@@ -50,6 +52,9 @@
       if (data.hasOwnProperty('idCartao')) {
         obj['idCartao'] = ApiClient.convertToType(data['idCartao'], 'Integer');
       }
+      if (data.hasOwnProperty('agingCompras')) {
+        obj['agingCompras'] = ApiClient.convertToType(data['agingCompras'], 'Integer');
+      }
       if (data.hasOwnProperty('agingContestacao')) {
         obj['agingContestacao'] = ApiClient.convertToType(data['agingContestacao'], 'Integer');
       }
@@ -62,6 +67,9 @@
       if (data.hasOwnProperty('bandeira')) {
         obj['bandeira'] = ApiClient.convertToType(data['bandeira'], 'String');
       }
+      if (data.hasOwnProperty('valorCompra')) {
+        obj['valorCompra'] = ApiClient.convertToType(data['valorCompra'], 'String');
+      }
     }
     return obj;
   }
@@ -72,6 +80,12 @@
    * @member {Integer} idCartao
    */
   exports.prototype['idCartao'] = undefined;
+
+  /**
+   * {{{compra_contestada_cartao_response_aging_compras_value}}}
+   * @member {Integer} agingCompras
+   */
+  exports.prototype['agingCompras'] = undefined;
 
   /**
    * {{{compra_contestada_cartao_response_aging_contestacao_value}}}
@@ -96,6 +110,12 @@
    * @member {String} bandeira
    */
   exports.prototype['bandeira'] = undefined;
+
+  /**
+   * {{{compra_contestada_cartao_response_valor_compra_value}}}
+   * @member {String} valorCompra
+   */
+  exports.prototype['valorCompra'] = undefined;
 
 
 

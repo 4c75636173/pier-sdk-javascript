@@ -18,7 +18,7 @@
   /**
    * The ConvenioResponse model module.
    * @module model/ConvenioResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

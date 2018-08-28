@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**consultarPorEmailUsingGET**](GlobaltagnotificacaoApi.md#consultarPorEmailUsingGET) | **GET** /api/codigos-seguranca-email/{id} | {{{codigo_seguranca_resource_consultar_por_email}}}
 [**consultarPorSMSUsingGET**](GlobaltagnotificacaoApi.md#consultarPorSMSUsingGET) | **GET** /api/codigos-seguranca-sms/{id} | {{{codigo_seguranca_resource_consultar_por_s_m_s}}}
 [**consultarTemplateNotificacaoUsingGET**](GlobaltagnotificacaoApi.md#consultarTemplateNotificacaoUsingGET) | **GET** /api/templates-notificacoes/{id} | {{{notificacao_resource_consultar_template_notificacao}}}
+[**enviarOTPUsingPOST**](GlobaltagnotificacaoApi.md#enviarOTPUsingPOST) | **POST** /api/notificacoes/3d-secure | {{{notificacao_resource_3d_secure}}}
 [**gerarTokenEMAILUsingPOST**](GlobaltagnotificacaoApi.md#gerarTokenEMAILUsingPOST) | **POST** /api/notificacoes-email/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_e_m_a_i_l}}}
 [**gerarTokenSMSUsingPOST**](GlobaltagnotificacaoApi.md#gerarTokenSMSUsingPOST) | **POST** /api/notificacoes-sms/gerar-codigo-seguranca | {{{codigo_seguranca_resource_gerar_token_s_m_s}}}
 [**listarConfiguracaoUsingGET**](GlobaltagnotificacaoApi.md#listarConfiguracaoUsingGET) | **GET** /api/configuracoes-email | {{{email_resource_listar_configuracao}}}
@@ -374,6 +375,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TemplateNotificacaoDetalheResponse**](TemplateNotificacaoDetalheResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="enviarOTPUsingPOST"></a>
+# **enviarOTPUsingPOST**
+> Object enviarOTPUsingPOST(secure3dRequest)
+
+{{{notificacao_resource_3d_secure}}}
+
+{{{notificacao_resource_3d_secure_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagnotificacaoApi()
+
+var secure3dRequest = new Pier.Secure3dRequest(); // {Secure3dRequest} secure3dRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.enviarOTPUsingPOST(secure3dRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **secure3dRequest** | [**Secure3dRequest**](Secure3dRequest.md)| secure3dRequest | 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

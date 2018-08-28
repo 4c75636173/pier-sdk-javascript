@@ -18,7 +18,7 @@
   /**
    * globaltagarquivo service.
    * @module api/GlobaltagarquivoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET5 operation.
-     * @callback module:api/GlobaltagarquivoApi~consultarUsingGET5Callback
+     * Callback function to receive the result of the consultarUsingGET6 operation.
+     * @callback module:api/GlobaltagarquivoApi~consultarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ArquivoDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{arquivo_resource_consultar}}}
      * {{{arquivo_resource_consultar_notes}}}
      * @param {Integer} id {{{arquivo_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagarquivoApi~consultarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagarquivoApi~consultarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ArquivoDetalheResponse}
      */
-    this.consultarUsingGET5 = function(id, callback) {
+    this.consultarUsingGET6 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET5";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET6";
       }
 
 
@@ -278,8 +278,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET5 operation.
-     * @callback module:api/GlobaltagarquivoApi~listarUsingGET5Callback
+     * Callback function to receive the result of the listarUsingGET6 operation.
+     * @callback module:api/GlobaltagarquivoApi~listarUsingGET6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageArquivoAUDResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -292,16 +292,16 @@
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.page P\u00E1gina solicitada (Default = 0)
      * @param {Integer} opts.limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
-     * @param {module:api/GlobaltagarquivoApi~listarUsingGET5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagarquivoApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageArquivoAUDResponse}
      */
-    this.listarUsingGET5 = function(id, opts, callback) {
+    this.listarUsingGET6 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET5";
+        throw "Missing the required parameter 'id' when calling listarUsingGET6";
       }
 
 
@@ -330,8 +330,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET6 operation.
-     * @callback module:api/GlobaltagarquivoApi~listarUsingGET6Callback
+     * Callback function to receive the result of the listarUsingGET7 operation.
+     * @callback module:api/GlobaltagarquivoApi~listarUsingGET7Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageArquivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -348,10 +348,10 @@
      * @param {Integer} opts.idTipoArquivo {{{arquivo_request_id_tipo_arquivo_value}}}
      * @param {Integer} opts.idStatusArquivo {{{arquivo_request_id_status_arquivo_value}}}
      * @param {String} opts.extensao {{{arquivo_request_extensao_value}}}
-     * @param {module:api/GlobaltagarquivoApi~listarUsingGET6Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagarquivoApi~listarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageArquivoResponse}
      */
-    this.listarUsingGET6 = function(opts, callback) {
+    this.listarUsingGET7 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

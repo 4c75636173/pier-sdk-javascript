@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**consultarEstagioCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarEstagioCartaoUsingGET) | **GET** /api/estagios-cartoes/{id} | {{{estagio_cartao_resource_consultar_estagio_cartao}}}
 [**consultarStatusCartaoUsingGET**](GlobaltagstatusparametroApi.md#consultarStatusCartaoUsingGET) | **GET** /api/status-cartoes/{id} | {{{status_cartao_resource_consultar_status_cartao}}}
-[**consultarUsingGET36**](GlobaltagstatusparametroApi.md#consultarUsingGET36) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
-[**consultarUsingGET37**](GlobaltagstatusparametroApi.md#consultarUsingGET37) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
+[**consultarUsingGET38**](GlobaltagstatusparametroApi.md#consultarUsingGET38) | **GET** /api/status-contas/{id} | {{{status_conta_resource_consultar}}}
+[**consultarUsingGET39**](GlobaltagstatusparametroApi.md#consultarUsingGET39) | **GET** /api/status-impressoes/{id} | {{{status_impressao_resource_consultar}}}
 [**listarEstagiosCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarEstagiosCartoesUsingGET) | **GET** /api/estagios-cartoes | {{{estagio_cartao_resource_listar_estagios_cartoes}}}
 [**listarStatusCartoesUsingGET**](GlobaltagstatusparametroApi.md#listarStatusCartoesUsingGET) | **GET** /api/status-cartoes | {{{status_cartao_resource_listar_status_cartoes}}}
 [**listarTiposEventosTransacoesUsingGET**](GlobaltagstatusparametroApi.md#listarTiposEventosTransacoesUsingGET) | **GET** /api/tipos-eventos-transacoes | {{{enum_resource_listar_tipos_eventos_transacoes}}}
-[**listarUsingGET47**](GlobaltagstatusparametroApi.md#listarUsingGET47) | **GET** /api/status-contas | {{{status_conta_resource_listar}}}
-[**listarUsingGET48**](GlobaltagstatusparametroApi.md#listarUsingGET48) | **GET** /api/status-impressoes | {{{status_impressao_resource_listar}}}
+[**listarUsingGET49**](GlobaltagstatusparametroApi.md#listarUsingGET49) | **GET** /api/status-contas | {{{status_conta_resource_listar}}}
+[**listarUsingGET50**](GlobaltagstatusparametroApi.md#listarUsingGET50) | **GET** /api/status-impressoes | {{{status_impressao_resource_listar}}}
 
 
 <a name="consultarEstagioCartaoUsingGET"></a>
@@ -107,9 +107,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET36"></a>
-# **consultarUsingGET36**
-> StatusContaResponse consultarUsingGET36(id)
+<a name="consultarUsingGET38"></a>
+# **consultarUsingGET38**
+> StatusContaResponse consultarUsingGET38(id)
 
 {{{status_conta_resource_consultar}}}
 
@@ -131,7 +131,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET36(id, callback);
+api.consultarUsingGET38(id, callback);
 ```
 
 ### Parameters
@@ -153,9 +153,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET37"></a>
-# **consultarUsingGET37**
-> StatusImpressaoResponse consultarUsingGET37(id)
+<a name="consultarUsingGET39"></a>
+# **consultarUsingGET39**
+> StatusImpressaoResponse consultarUsingGET39(id)
 
 {{{status_impressao_resource_consultar}}}
 
@@ -177,7 +177,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET37(id, callback);
+api.consultarUsingGET39(id, callback);
 ```
 
 ### Parameters
@@ -357,9 +357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET47"></a>
-# **listarUsingGET47**
-> PageStatusContaResponse listarUsingGET47(opts)
+<a name="listarUsingGET49"></a>
+# **listarUsingGET49**
+> PageStatusContaResponse listarUsingGET49(opts)
 
 {{{status_conta_resource_listar}}}
 
@@ -395,7 +395,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET47(opts, callback);
+api.listarUsingGET49(opts, callback);
 ```
 
 ### Parameters
@@ -430,9 +430,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET48"></a>
-# **listarUsingGET48**
-> PageStatusImpressaoResponse listarUsingGET48(opts)
+<a name="listarUsingGET50"></a>
+# **listarUsingGET50**
+> PageStatusImpressaoResponse listarUsingGET50(opts)
 
 {{{status_impressao_resource_listar}}}
 
@@ -459,7 +459,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET48(opts, callback);
+api.listarUsingGET50(opts, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The IntegrarArquivoRequest model module.
    * @module model/IntegrarArquivoRequest
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

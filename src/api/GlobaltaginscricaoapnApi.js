@@ -18,7 +18,7 @@
   /**
    * globaltaginscricaoapn service.
    * @module api/GlobaltaginscricaoapnApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -79,8 +79,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET30 operation.
-     * @callback module:api/GlobaltaginscricaoapnApi~listarUsingGET30Callback
+     * Callback function to receive the result of the listarUsingGET31 operation.
+     * @callback module:api/GlobaltaginscricaoapnApi~listarUsingGET31Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageInscricaoAPNResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -99,10 +99,10 @@
      * @param {String} opts.dataDesativacao {{{inscricao_apn_requisicao_data_desativacao_descricao}}}
      * @param {Boolean} opts.ativo {{{inscricao_apn_requisicao_ativo_descricao}}}
      * @param {Integer} opts.idAplicacaoMobile {{{inscricao_apn_requisicao_id_aplicacao_mobile_descricao}}}
-     * @param {module:api/GlobaltaginscricaoapnApi~listarUsingGET30Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaginscricaoapnApi~listarUsingGET31Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageInscricaoAPNResponse}
      */
-    this.listarUsingGET30 = function(opts, callback) {
+    this.listarUsingGET31 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -138,8 +138,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST14 operation.
-     * @callback module:api/GlobaltaginscricaoapnApi~salvarUsingPOST14Callback
+     * Callback function to receive the result of the salvarUsingPOST15 operation.
+     * @callback module:api/GlobaltaginscricaoapnApi~salvarUsingPOST15Callback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/InscricaoAPNResponse>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -149,15 +149,15 @@
      * {{{inscricao_apn_recurso_salvar}}}
      * {{{inscricao_apn_recurso_salvar_notas}}}
      * @param {module:model/InscricaoApnPersistencia} inscricaoPersist inscricaoPersist
-     * @param {module:api/GlobaltaginscricaoapnApi~salvarUsingPOST14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaginscricaoapnApi~salvarUsingPOST15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Array.<module:model/InscricaoAPNResponse>}
      */
-    this.salvarUsingPOST14 = function(inscricaoPersist, callback) {
+    this.salvarUsingPOST15 = function(inscricaoPersist, callback) {
       var postBody = inscricaoPersist;
 
       // verify the required parameter 'inscricaoPersist' is set
       if (inscricaoPersist == undefined || inscricaoPersist == null) {
-        throw "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST14";
+        throw "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST15";
       }
 
 

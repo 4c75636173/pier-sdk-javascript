@@ -18,7 +18,7 @@
   /**
    * globaltagstatusparametro service.
    * @module api/GlobaltagstatusparametroApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET36 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback
+     * Callback function to receive the result of the consultarUsingGET38 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET38Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -136,15 +136,15 @@
      * {{{status_conta_resource_consultar}}}
      * {{{status_conta_resource_consultar_notes}}}
      * @param {Integer} id {{{status_conta_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET38Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusContaResponse}
      */
-    this.consultarUsingGET36 = function(id, callback) {
+    this.consultarUsingGET38 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET38";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET37 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET37Callback
+     * Callback function to receive the result of the consultarUsingGET39 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~consultarUsingGET39Callback
      * @param {String} error Error message, if any.
      * @param {module:model/StatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -182,15 +182,15 @@
      * {{{status_impressao_resource_consultar}}}
      * {{{status_impressao_resource_consultar_notes}}}
      * @param {Integer} id {{{status_impressao_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET37Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~consultarUsingGET39Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/StatusImpressaoResponse}
      */
-    this.consultarUsingGET37 = function(id, callback) {
+    this.consultarUsingGET39 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET37";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET39";
       }
 
 
@@ -366,8 +366,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET47 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~listarUsingGET47Callback
+     * Callback function to receive the result of the listarUsingGET49 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~listarUsingGET49Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -391,10 +391,10 @@
      * @param {Integer} opts.permiteAtribuirComoBloqueio {{{status_conta_request_permite_atribuir_como_bloqueio_value}}}
      * @param {Integer} opts.permiteDesbloquear {{{status_conta_request_permite_desbloquear_value}}}
      * @param {Integer} opts.permiteAtribuirComoCancelamento {{{status_conta_request_permite_atribuir_como_cancelamento_value}}}
-     * @param {module:api/GlobaltagstatusparametroApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~listarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusContaResponse}
      */
-    this.listarUsingGET47 = function(opts, callback) {
+    this.listarUsingGET49 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -435,8 +435,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET48 operation.
-     * @callback module:api/GlobaltagstatusparametroApi~listarUsingGET48Callback
+     * Callback function to receive the result of the listarUsingGET50 operation.
+     * @callback module:api/GlobaltagstatusparametroApi~listarUsingGET50Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageStatusImpressaoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -451,10 +451,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.id {{{status_impressao_request_id_value}}}
      * @param {String} opts.nome {{{status_impressao_request_nome_value}}}
-     * @param {module:api/GlobaltagstatusparametroApi~listarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagstatusparametroApi~listarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageStatusImpressaoResponse}
      */
-    this.listarUsingGET48 = function(opts, callback) {
+    this.listarUsingGET50 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

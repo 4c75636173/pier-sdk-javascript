@@ -18,7 +18,7 @@
   /**
    * The TokenUpdateValue model module.
    * @module model/TokenUpdateValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -33,6 +33,7 @@
 
 
     this['criadoPor'] = criadoPor;
+
 
   };
 
@@ -58,6 +59,9 @@
       }
       if (data.hasOwnProperty('alteradoPor')) {
         obj['alteradoPor'] = ApiClient.convertToType(data['alteradoPor'], 'String');
+      }
+      if (data.hasOwnProperty('idAplicacao')) {
+        obj['idAplicacao'] = ApiClient.convertToType(data['idAplicacao'], 'Integer');
       }
     }
     return obj;
@@ -87,6 +91,12 @@
    * @member {String} alteradoPor
    */
   exports.prototype['alteradoPor'] = undefined;
+
+  /**
+   * {{{token_dto_id_application_value}}}
+   * @member {Integer} idAplicacao
+   */
+  exports.prototype['idAplicacao'] = undefined;
 
 
 

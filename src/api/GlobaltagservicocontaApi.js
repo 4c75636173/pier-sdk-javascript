@@ -18,7 +18,7 @@
   /**
    * globaltagservicoconta service.
    * @module api/GlobaltagservicocontaApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -46,7 +46,6 @@
      * @param {Integer} id {{{conta_resource_ativar_anuidade_param_id}}}
      * @param {Integer} idAnuidade {{{anuidade_request_id_anuidade_value}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -86,7 +85,6 @@
         'idOrigemComercial': opts['idOrigemComercial']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -115,13 +113,10 @@
      * {{{conta_resource_ativar_envio_fatura_email}}}
      * {{{conta_resource_ativar_envio_fatura_email_notes}}}
      * @param {Integer} id {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagservicocontaApi~ativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.ativarEnvioFaturaEmailUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.ativarEnvioFaturaEmailUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -136,7 +131,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -165,13 +159,10 @@
      * {{{conta_resource_desativar_envio_fatura_email}}}
      * {{{conta_resource_desativar_envio_fatura_email_notes}}}
      * @param {Integer} id {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagservicocontaApi~desativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.desativarEnvioFaturaEmailUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.desativarEnvioFaturaEmailUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -186,7 +177,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };

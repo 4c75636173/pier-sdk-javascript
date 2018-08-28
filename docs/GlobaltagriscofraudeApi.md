@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET35**](GlobaltagriscofraudeApi.md#consultarUsingGET35) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
+[**consultarUsingGET37**](GlobaltagriscofraudeApi.md#consultarUsingGET37) | **GET** /api/riscos-fraudes/{id} | {{{risco_fraude_resource_consultar}}}
 [**listarTiposResolucaoUsingGET**](GlobaltagriscofraudeApi.md#listarTiposResolucaoUsingGET) | **GET** /api/tipos-resolucao | {{{risco_fraude_resource_listar_tipos_resolucao}}}
 [**negarUsingPOST**](GlobaltagriscofraudeApi.md#negarUsingPOST) | **POST** /api/riscos-fraudes/{id}/negar | {{{risco_fraude_resource_negar}}}
 [**reconhecerUsingPOST**](GlobaltagriscofraudeApi.md#reconhecerUsingPOST) | **POST** /api/riscos-fraudes/{id}/reconhecer | {{{risco_fraude_resource_reconhecer}}}
 [**validarDadosPortadorUsingPOST**](GlobaltagriscofraudeApi.md#validarDadosPortadorUsingPOST) | **POST** /api/riscos-fraudes/validar-dados-portador | {{{risco_fraude_resource_validar_dados_portador}}}
 
 
-<a name="consultarUsingGET35"></a>
-# **consultarUsingGET35**
-> RiscoFraudeDetalhadoResponse consultarUsingGET35(id)
+<a name="consultarUsingGET37"></a>
+# **consultarUsingGET37**
+> RiscoFraudeDetalhadoResponse consultarUsingGET37(id)
 
 {{{risco_fraude_resource_consultar}}}
 
@@ -35,7 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET35(id, callback);
+api.consultarUsingGET37(id, callback);
 ```
 
 ### Parameters

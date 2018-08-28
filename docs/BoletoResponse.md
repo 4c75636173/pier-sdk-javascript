@@ -37,5 +37,6 @@ Name | Type | Description | Notes
 **idConta** | **Integer** | {{{boleto_response_id_conta_value}}} | [optional] 
 **enderecoCobrancaBeneficiario** | **String** | {{{boleto_response_endereco_cobranca_beneficiario_value}}} | [optional] 
 **status** | **Integer** | {{{boleto_response_status_value}}} | [optional] 
+**boletoRegistrado** | **Boolean** | {{{boleto_response_registrado_value}}} | [optional] 
 
 

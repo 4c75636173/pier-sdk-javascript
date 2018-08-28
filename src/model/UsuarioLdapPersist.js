@@ -18,16 +18,16 @@
   /**
    * The UsuarioLdapPersist model module.
    * @module model/UsuarioLdapPersist
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
    * Constructs a new <code>UsuarioLdapPersist</code>.
-   * {{{usuario_persist_object_description}}}
    * @alias module:model/UsuarioLdapPersist
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -47,17 +47,20 @@
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('nome')) {
-        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
-      }
-      if (data.hasOwnProperty('login')) {
-        obj['login'] = ApiClient.convertToType(data['login'], 'String');
-      }
       if (data.hasOwnProperty('cpf')) {
         obj['cpf'] = ApiClient.convertToType(data['cpf'], 'String');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
+      }
+      if (data.hasOwnProperty('idEmissor')) {
+        obj['idEmissor'] = ApiClient.convertToType(data['idEmissor'], 'Integer');
+      }
+      if (data.hasOwnProperty('login')) {
+        obj['login'] = ApiClient.convertToType(data['login'], 'String');
+      }
+      if (data.hasOwnProperty('nome')) {
+        obj['nome'] = ApiClient.convertToType(data['nome'], 'String');
       }
       if (data.hasOwnProperty('perfis')) {
         obj['perfis'] = ApiClient.convertToType(data['perfis'], [ReferenciaIdPersist]);
@@ -68,31 +71,31 @@
 
 
   /**
-   * {{{usuario_persist_nome_value}}}
-   * @member {String} nome
-   */
-  exports.prototype['nome'] = undefined;
-
-  /**
-   * {{{usuario_persist_login_value}}}
-   * @member {String} login
-   */
-  exports.prototype['login'] = undefined;
-
-  /**
-   * {{{usuario_persist_cpf_value}}}
    * @member {String} cpf
    */
   exports.prototype['cpf'] = undefined;
 
   /**
-   * {{{usuario_persist_email_value}}}
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
 
   /**
-   * {{{usuario_persist_perfis_value}}}
+   * @member {Integer} idEmissor
+   */
+  exports.prototype['idEmissor'] = undefined;
+
+  /**
+   * @member {String} login
+   */
+  exports.prototype['login'] = undefined;
+
+  /**
+   * @member {String} nome
+   */
+  exports.prototype['nome'] = undefined;
+
+  /**
    * @member {Array.<module:model/ReferenciaIdPersist>} perfis
    */
   exports.prototype['perfis'] = undefined;

@@ -8,17 +8,17 @@ Method | HTTP request | Description
 [**alterarUsingPUT12**](GlobaltagoportunidadeApi.md#alterarUsingPUT12) | **PUT** /api/oportunidades/{id} | {{{oportunidade_resource_alterar}}}
 [**alterarUsingPUT20**](GlobaltagoportunidadeApi.md#alterarUsingPUT20) | **PUT** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_alterar}}}
 [**consultarStatusUsingGET**](GlobaltagoportunidadeApi.md#consultarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status/{idStatus} | {{{tipo_oportunidade_resource_consultar_status}}}
-[**consultarUsingGET26**](GlobaltagoportunidadeApi.md#consultarUsingGET26) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
-[**consultarUsingGET45**](GlobaltagoportunidadeApi.md#consultarUsingGET45) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
+[**consultarUsingGET28**](GlobaltagoportunidadeApi.md#consultarUsingGET28) | **GET** /api/oportunidades/{id} | {{{oportunidade_resource_consultar}}}
+[**consultarUsingGET47**](GlobaltagoportunidadeApi.md#consultarUsingGET47) | **GET** /api/tipos-oportunidades/{id} | {{{tipo_oportunidade_resource_consultar}}}
 [**listarAuditoriasStatusUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasStatusUsingGET) | **GET** /api/auditorias-status-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias_status}}}
 [**listarAuditoriasUsingGET**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET) | **GET** /api/auditorias-oportunidades | {{{oportunidade_resource_listar_auditorias}}}
 [**listarAuditoriasUsingGET1**](GlobaltagoportunidadeApi.md#listarAuditoriasUsingGET1) | **GET** /api/auditorias-tipos-oportunidades | {{{tipo_oportunidade_resource_listar_auditorias}}}
 [**listarStatusUsingGET**](GlobaltagoportunidadeApi.md#listarStatusUsingGET) | **GET** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_listar_status}}}
-[**listarUsingGET35**](GlobaltagoportunidadeApi.md#listarUsingGET35) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
-[**listarUsingGET55**](GlobaltagoportunidadeApi.md#listarUsingGET55) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
+[**listarUsingGET36**](GlobaltagoportunidadeApi.md#listarUsingGET36) | **GET** /api/oportunidades | {{{oportunidade_resource_listar}}}
+[**listarUsingGET58**](GlobaltagoportunidadeApi.md#listarUsingGET58) | **GET** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_listar}}}
 [**salvarStatusUsingPOST**](GlobaltagoportunidadeApi.md#salvarStatusUsingPOST) | **POST** /api/tipos-oportunidades/{id}/status | {{{tipo_oportunidade_resource_salvar_status}}}
-[**salvarUsingPOST21**](GlobaltagoportunidadeApi.md#salvarUsingPOST21) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
-[**salvarUsingPOST30**](GlobaltagoportunidadeApi.md#salvarUsingPOST30) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
+[**salvarUsingPOST22**](GlobaltagoportunidadeApi.md#salvarUsingPOST22) | **POST** /api/oportunidades | {{{oportunidade_resource_salvar}}}
+[**salvarUsingPOST31**](GlobaltagoportunidadeApi.md#salvarUsingPOST31) | **POST** /api/tipos-oportunidades | {{{tipo_oportunidade_resource_salvar}}}
 
 
 <a name="alterarStatusUsingPUT"></a>
@@ -220,9 +220,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET26"></a>
-# **consultarUsingGET26**
-> OportunidadeResponse consultarUsingGET26(id)
+<a name="consultarUsingGET28"></a>
+# **consultarUsingGET28**
+> OportunidadeResponse consultarUsingGET28(id)
 
 {{{oportunidade_resource_consultar}}}
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET26(id, callback);
+api.consultarUsingGET28(id, callback);
 ```
 
 ### Parameters
@@ -266,9 +266,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET45"></a>
-# **consultarUsingGET45**
-> TipoOportunidadeResponse consultarUsingGET45(id)
+<a name="consultarUsingGET47"></a>
+# **consultarUsingGET47**
+> TipoOportunidadeResponse consultarUsingGET47(id)
 
 {{{tipo_oportunidade_resource_consultar}}}
 
@@ -290,7 +290,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET45(id, callback);
+api.consultarUsingGET47(id, callback);
 ```
 
 ### Parameters
@@ -573,9 +573,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET35"></a>
-# **listarUsingGET35**
-> PageOportunidadeResponse listarUsingGET35(opts)
+<a name="listarUsingGET36"></a>
+# **listarUsingGET36**
+> PageOportunidadeResponse listarUsingGET36(opts)
 
 {{{oportunidade_resource_listar}}}
 
@@ -607,7 +607,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET35(opts, callback);
+api.listarUsingGET36(opts, callback);
 ```
 
 ### Parameters
@@ -638,9 +638,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET55"></a>
-# **listarUsingGET55**
-> PageTipoOportunidadeResponse listarUsingGET55(opts)
+<a name="listarUsingGET58"></a>
+# **listarUsingGET58**
+> PageTipoOportunidadeResponse listarUsingGET58(opts)
 
 {{{tipo_oportunidade_resource_listar}}}
 
@@ -667,7 +667,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET55(opts, callback);
+api.listarUsingGET58(opts, callback);
 ```
 
 ### Parameters
@@ -742,9 +742,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST21"></a>
-# **salvarUsingPOST21**
-> OportunidadeResponse salvarUsingPOST21(persist)
+<a name="salvarUsingPOST22"></a>
+# **salvarUsingPOST22**
+> OportunidadeResponse salvarUsingPOST22(persist)
 
 {{{oportunidade_resource_salvar}}}
 
@@ -766,7 +766,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST21(persist, callback);
+api.salvarUsingPOST22(persist, callback);
 ```
 
 ### Parameters
@@ -788,9 +788,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST30"></a>
-# **salvarUsingPOST30**
-> TipoOportunidadeResponse salvarUsingPOST30(persist)
+<a name="salvarUsingPOST31"></a>
+# **salvarUsingPOST31**
+> TipoOportunidadeResponse salvarUsingPOST31(persist)
 
 {{{tipo_oportunidade_resource_salvar}}}
 
@@ -812,7 +812,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST30(persist, callback);
+api.salvarUsingPOST31(persist, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The PageEmissorPierResponse model module.
    * @module model/PageEmissorPierResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

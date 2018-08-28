@@ -5,8 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**desativarUsingPUT**](GlobaltaginscricaoapnApi.md#desativarUsingPUT) | **PUT** /api/inscricoes-apn/{id}/desativar | {{{inscricao_apn_recurso_desativar}}}
-[**listarUsingGET30**](GlobaltaginscricaoapnApi.md#listarUsingGET30) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
-[**salvarUsingPOST14**](GlobaltaginscricaoapnApi.md#salvarUsingPOST14) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
+[**listarUsingGET31**](GlobaltaginscricaoapnApi.md#listarUsingGET31) | **GET** /api/inscricoes-apn | {{{inscricao_apn_recurso_listar}}}
+[**salvarUsingPOST15**](GlobaltaginscricaoapnApi.md#salvarUsingPOST15) | **POST** /api/inscricoes-apn | {{{inscricao_apn_recurso_salvar}}}
 
 
 <a name="desativarUsingPUT"></a>
@@ -55,9 +55,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET30"></a>
-# **listarUsingGET30**
-> PageInscricaoAPNResponse listarUsingGET30(opts)
+<a name="listarUsingGET31"></a>
+# **listarUsingGET31**
+> PageInscricaoAPNResponse listarUsingGET31(opts)
 
 {{{inscricao_apn_recurso_listar}}}
 
@@ -88,7 +88,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET30(opts, callback);
+api.listarUsingGET31(opts, callback);
 ```
 
 ### Parameters
@@ -118,9 +118,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST14"></a>
-# **salvarUsingPOST14**
-> [InscricaoAPNResponse] salvarUsingPOST14(inscricaoPersist)
+<a name="salvarUsingPOST15"></a>
+# **salvarUsingPOST15**
+> [InscricaoAPNResponse] salvarUsingPOST15(inscricaoPersist)
 
 {{{inscricao_apn_recurso_salvar}}}
 
@@ -142,7 +142,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST14(inscricaoPersist, callback);
+api.salvarUsingPOST15(inscricaoPersist, callback);
 ```
 
 ### Parameters

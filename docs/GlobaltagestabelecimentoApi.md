@@ -16,13 +16,13 @@ Method | HTTP request | Description
 [**cadastrarUsingPOST4**](GlobaltagestabelecimentoApi.md#cadastrarUsingPOST4) | **POST** /api/grupos-economicos | {{{grupo_economico_resource_cadastrar}}}
 [**consultaOperacaoUsingGET**](GlobaltagestabelecimentoApi.md#consultaOperacaoUsingGET) | **GET** /api/tipos-operacoes-estabelecimentos/{id} | {{{operacao_resource_consulta_operacao}}}
 [**consultarOrigemComercialUsingGET**](GlobaltagestabelecimentoApi.md#consultarOrigemComercialUsingGET) | **GET** /api/origens-comerciais/{id} | {{{origem_comercial_resource_consultar_origem_comercial}}}
-[**consultarUsingGET20**](GlobaltagestabelecimentoApi.md#consultarUsingGET20) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
-[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
-[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
-[**consultarUsingGET25**](GlobaltagestabelecimentoApi.md#consultarUsingGET25) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
-[**consultarUsingGET38**](GlobaltagestabelecimentoApi.md#consultarUsingGET38) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
-[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
-[**consultarUsingGET52**](GlobaltagestabelecimentoApi.md#consultarUsingGET52) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
+[**consultarUsingGET22**](GlobaltagestabelecimentoApi.md#consultarUsingGET22) | **GET** /api/estabelecimentos/{id} | {{{estabelecimento_resource_consultar}}}
+[**consultarUsingGET24**](GlobaltagestabelecimentoApi.md#consultarUsingGET24) | **GET** /api/grupos-economicos/{id} | {{{grupo_economico_resource_consultar}}}
+[**consultarUsingGET26**](GlobaltagestabelecimentoApi.md#consultarUsingGET26) | **GET** /api/maquinetas/{id} | {{{maquineta_resource_consultar}}}
+[**consultarUsingGET27**](GlobaltagestabelecimentoApi.md#consultarUsingGET27) | **GET** /api/regras-operacoes-estabelecimentos/{id} | {{{operacao_credor_resource_consultar}}}
+[**consultarUsingGET40**](GlobaltagestabelecimentoApi.md#consultarUsingGET40) | **GET** /api/telefones-estabelecimentos/{id} | {{{telefone_estabelecimento_resource_consultar}}}
+[**consultarUsingGET42**](GlobaltagestabelecimentoApi.md#consultarUsingGET42) | **GET** /api/terminais/{id} | {{{terminal_resource_consultar}}}
+[**consultarUsingGET54**](GlobaltagestabelecimentoApi.md#consultarUsingGET54) | **GET** /api/adquirentes-estabelecimento/{id} | {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 [**desabilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/desabilitar | {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
 [**desabilitarVinculoUsingPOST1**](GlobaltagestabelecimentoApi.md#desabilitarVinculoUsingPOST1) | **POST** /api/estabelecimentos/{id}/desabilitar-operacao | {{{vinculo_operacao_resource_desabilitar_vinculo}}}
 [**habilitarVinculoUsingPOST**](GlobaltagestabelecimentoApi.md#habilitarVinculoUsingPOST) | **POST** /api/adquirentes-estabelecimento/{id}/habilitar | {{{vinculo_estabelecimento_adquirente_resource_habilitar_vinculo}}}
@@ -35,21 +35,21 @@ Method | HTTP request | Description
 [**listarTiposMaquinetasUsingGET**](GlobaltagestabelecimentoApi.md#listarTiposMaquinetasUsingGET) | **GET** /api/tipos-maquinetas | {{{maquineta_resource_listar_tipos_maquinetas}}}
 [**listarTiposOrigensComerciaisUsingGET**](GlobaltagestabelecimentoApi.md#listarTiposOrigensComerciaisUsingGET) | **GET** /api/tipos-origens-comerciais | {{{tipo_origem_comercial_resource_listar_tipos_origens_comerciais}}}
 [**listarTiposTerminaisUsingGET1**](GlobaltagestabelecimentoApi.md#listarTiposTerminaisUsingGET1) | **GET** /api/tipos-terminais-estabelecimento | {{{terminal_resource_listar_tipos_terminais}}}
-[**listarUsingGET25**](GlobaltagestabelecimentoApi.md#listarUsingGET25) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
-[**listarUsingGET28**](GlobaltagestabelecimentoApi.md#listarUsingGET28) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
-[**listarUsingGET29**](GlobaltagestabelecimentoApi.md#listarUsingGET29) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
-[**listarUsingGET32**](GlobaltagestabelecimentoApi.md#listarUsingGET32) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
-[**listarUsingGET33**](GlobaltagestabelecimentoApi.md#listarUsingGET33) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
-[**listarUsingGET34**](GlobaltagestabelecimentoApi.md#listarUsingGET34) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
-[**listarUsingGET49**](GlobaltagestabelecimentoApi.md#listarUsingGET49) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
-[**listarUsingGET51**](GlobaltagestabelecimentoApi.md#listarUsingGET51) | **GET** /api/terminais | {{{terminal_resource_listar}}}
-[**listarUsingGET64**](GlobaltagestabelecimentoApi.md#listarUsingGET64) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
-[**listarUsingGET65**](GlobaltagestabelecimentoApi.md#listarUsingGET65) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
-[**salvarUsingPOST19**](GlobaltagestabelecimentoApi.md#salvarUsingPOST19) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
-[**salvarUsingPOST20**](GlobaltagestabelecimentoApi.md#salvarUsingPOST20) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
-[**salvarUsingPOST27**](GlobaltagestabelecimentoApi.md#salvarUsingPOST27) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
-[**salvarUsingPOST29**](GlobaltagestabelecimentoApi.md#salvarUsingPOST29) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
-[**salvarUsingPOST34**](GlobaltagestabelecimentoApi.md#salvarUsingPOST34) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
+[**listarUsingGET26**](GlobaltagestabelecimentoApi.md#listarUsingGET26) | **GET** /api/estabelecimentos | {{{estabelecimento_resource_listar}}}
+[**listarUsingGET29**](GlobaltagestabelecimentoApi.md#listarUsingGET29) | **GET** /api/grupos-economicos | {{{grupo_economico_resource_listar}}}
+[**listarUsingGET30**](GlobaltagestabelecimentoApi.md#listarUsingGET30) | **GET** /api/grupos-origens-comerciais | {{{grupo_origem_comercial_resource_listar}}}
+[**listarUsingGET33**](GlobaltagestabelecimentoApi.md#listarUsingGET33) | **GET** /api/maquinetas | {{{maquineta_resource_listar}}}
+[**listarUsingGET34**](GlobaltagestabelecimentoApi.md#listarUsingGET34) | **GET** /api/tipos-moedas | {{{moeda_resource_listar}}}
+[**listarUsingGET35**](GlobaltagestabelecimentoApi.md#listarUsingGET35) | **GET** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_listar}}}
+[**listarUsingGET52**](GlobaltagestabelecimentoApi.md#listarUsingGET52) | **GET** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_listar}}}
+[**listarUsingGET54**](GlobaltagestabelecimentoApi.md#listarUsingGET54) | **GET** /api/terminais | {{{terminal_resource_listar}}}
+[**listarUsingGET67**](GlobaltagestabelecimentoApi.md#listarUsingGET67) | **GET** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_listar}}}
+[**listarUsingGET68**](GlobaltagestabelecimentoApi.md#listarUsingGET68) | **GET** /api/estabelecimentos/{id}/operacoes | {{{vinculo_operacao_resource_listar}}}
+[**salvarUsingPOST20**](GlobaltagestabelecimentoApi.md#salvarUsingPOST20) | **POST** /api/maquinetas | {{{maquineta_resource_salvar}}}
+[**salvarUsingPOST21**](GlobaltagestabelecimentoApi.md#salvarUsingPOST21) | **POST** /api/regras-operacoes-estabelecimentos | {{{operacao_credor_resource_salvar}}}
+[**salvarUsingPOST28**](GlobaltagestabelecimentoApi.md#salvarUsingPOST28) | **POST** /api/telefones-estabelecimentos | {{{telefone_estabelecimento_resource_salvar}}}
+[**salvarUsingPOST30**](GlobaltagestabelecimentoApi.md#salvarUsingPOST30) | **POST** /api/terminais | {{{terminal_resource_salvar}}}
+[**salvarUsingPOST35**](GlobaltagestabelecimentoApi.md#salvarUsingPOST35) | **POST** /api/adquirentes-estabelecimento | {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
 
 <a name="alterarOrigemComercialUsingPUT"></a>
@@ -625,9 +625,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET20"></a>
-# **consultarUsingGET20**
-> EstabelecimentoResponse consultarUsingGET20(id)
+<a name="consultarUsingGET22"></a>
+# **consultarUsingGET22**
+> EstabelecimentoResponse consultarUsingGET22(id)
 
 {{{estabelecimento_resource_consultar}}}
 
@@ -649,7 +649,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET20(id, callback);
+api.consultarUsingGET22(id, callback);
 ```
 
 ### Parameters
@@ -671,9 +671,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET22"></a>
-# **consultarUsingGET22**
-> GrupoEconomicoResponse consultarUsingGET22(id)
+<a name="consultarUsingGET24"></a>
+# **consultarUsingGET24**
+> GrupoEconomicoResponse consultarUsingGET24(id)
 
 {{{grupo_economico_resource_consultar}}}
 
@@ -695,7 +695,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET22(id, callback);
+api.consultarUsingGET24(id, callback);
 ```
 
 ### Parameters
@@ -717,9 +717,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET24"></a>
-# **consultarUsingGET24**
-> MaquinetaResponse consultarUsingGET24(id)
+<a name="consultarUsingGET26"></a>
+# **consultarUsingGET26**
+> MaquinetaResponse consultarUsingGET26(id)
 
 {{{maquineta_resource_consultar}}}
 
@@ -741,7 +741,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET24(id, callback);
+api.consultarUsingGET26(id, callback);
 ```
 
 ### Parameters
@@ -763,9 +763,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET25"></a>
-# **consultarUsingGET25**
-> OperacaoCredorResponse consultarUsingGET25(id)
+<a name="consultarUsingGET27"></a>
+# **consultarUsingGET27**
+> OperacaoCredorResponse consultarUsingGET27(id)
 
 {{{operacao_credor_resource_consultar}}}
 
@@ -787,7 +787,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET25(id, callback);
+api.consultarUsingGET27(id, callback);
 ```
 
 ### Parameters
@@ -809,9 +809,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET38"></a>
-# **consultarUsingGET38**
-> TelefoneEstabelecimentoResponse consultarUsingGET38(id)
+<a name="consultarUsingGET40"></a>
+# **consultarUsingGET40**
+> TelefoneEstabelecimentoResponse consultarUsingGET40(id)
 
 {{{telefone_estabelecimento_resource_consultar}}}
 
@@ -833,7 +833,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET38(id, callback);
+api.consultarUsingGET40(id, callback);
 ```
 
 ### Parameters
@@ -855,9 +855,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET40"></a>
-# **consultarUsingGET40**
-> TerminalResponse consultarUsingGET40(id)
+<a name="consultarUsingGET42"></a>
+# **consultarUsingGET42**
+> TerminalResponse consultarUsingGET42(id)
 
 {{{terminal_resource_consultar}}}
 
@@ -879,7 +879,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET40(id, callback);
+api.consultarUsingGET42(id, callback);
 ```
 
 ### Parameters
@@ -901,9 +901,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET52"></a>
-# **consultarUsingGET52**
-> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52(id)
+<a name="consultarUsingGET54"></a>
+# **consultarUsingGET54**
+> VinculoEstabelecimentoAdquirenteResponse consultarUsingGET54(id)
 
 {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
 
@@ -925,7 +925,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET52(id, callback);
+api.consultarUsingGET54(id, callback);
 ```
 
 ### Parameters
@@ -1601,9 +1601,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET25"></a>
-# **listarUsingGET25**
-> PageEstabelecimentoResponse listarUsingGET25(opts)
+<a name="listarUsingGET26"></a>
+# **listarUsingGET26**
+> PageEstabelecimentoResponse listarUsingGET26(opts)
 
 {{{estabelecimento_resource_listar}}}
 
@@ -1663,7 +1663,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET25(opts, callback);
+api.listarUsingGET26(opts, callback);
 ```
 
 ### Parameters
@@ -1722,9 +1722,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET28"></a>
-# **listarUsingGET28**
-> PageGrupoEconomicoResponse listarUsingGET28(opts)
+<a name="listarUsingGET29"></a>
+# **listarUsingGET29**
+> PageGrupoEconomicoResponse listarUsingGET29(opts)
 
 {{{grupo_economico_resource_listar}}}
 
@@ -1774,7 +1774,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET28(opts, callback);
+api.listarUsingGET29(opts, callback);
 ```
 
 ### Parameters
@@ -1823,9 +1823,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET29"></a>
-# **listarUsingGET29**
-> PageGrupoOrigemComercialResponse listarUsingGET29(opts)
+<a name="listarUsingGET30"></a>
+# **listarUsingGET30**
+> PageGrupoOrigemComercialResponse listarUsingGET30(opts)
 
 {{{grupo_origem_comercial_resource_listar}}}
 
@@ -1851,7 +1851,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET29(opts, callback);
+api.listarUsingGET30(opts, callback);
 ```
 
 ### Parameters
@@ -1876,9 +1876,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET32"></a>
-# **listarUsingGET32**
-> PageMaquinetaResponse listarUsingGET32(opts)
+<a name="listarUsingGET33"></a>
+# **listarUsingGET33**
+> PageMaquinetaResponse listarUsingGET33(opts)
 
 {{{maquineta_resource_listar}}}
 
@@ -1904,7 +1904,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET32(opts, callback);
+api.listarUsingGET33(opts, callback);
 ```
 
 ### Parameters
@@ -1929,9 +1929,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET33"></a>
-# **listarUsingGET33**
-> PageMoedaResponse listarUsingGET33(opts)
+<a name="listarUsingGET34"></a>
+# **listarUsingGET34**
+> PageMoedaResponse listarUsingGET34(opts)
 
 {{{moeda_resource_listar}}}
 
@@ -1959,7 +1959,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET33(opts, callback);
+api.listarUsingGET34(opts, callback);
 ```
 
 ### Parameters
@@ -1986,9 +1986,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET34"></a>
-# **listarUsingGET34**
-> PageOperacaoCredorResponse listarUsingGET34(opts)
+<a name="listarUsingGET35"></a>
+# **listarUsingGET35**
+> PageOperacaoCredorResponse listarUsingGET35(opts)
 
 {{{operacao_credor_resource_listar}}}
 
@@ -2016,7 +2016,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET34(opts, callback);
+api.listarUsingGET35(opts, callback);
 ```
 
 ### Parameters
@@ -2043,9 +2043,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET49"></a>
-# **listarUsingGET49**
-> PageTelefoneEstabelecimentoResponse listarUsingGET49(opts)
+<a name="listarUsingGET52"></a>
+# **listarUsingGET52**
+> PageTelefoneEstabelecimentoResponse listarUsingGET52(opts)
 
 {{{telefone_estabelecimento_resource_listar}}}
 
@@ -2071,7 +2071,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET49(opts, callback);
+api.listarUsingGET52(opts, callback);
 ```
 
 ### Parameters
@@ -2096,9 +2096,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET51"></a>
-# **listarUsingGET51**
-> PageTerminalResponse listarUsingGET51(opts)
+<a name="listarUsingGET54"></a>
+# **listarUsingGET54**
+> PageTerminalResponse listarUsingGET54(opts)
 
 {{{terminal_resource_listar}}}
 
@@ -2127,7 +2127,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET51(opts, callback);
+api.listarUsingGET54(opts, callback);
 ```
 
 ### Parameters
@@ -2155,9 +2155,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET64"></a>
-# **listarUsingGET64**
-> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET64(opts)
+<a name="listarUsingGET67"></a>
+# **listarUsingGET67**
+> PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET67(opts)
 
 {{{vinculo_estabelecimento_adquirente_resource_listar}}}
 
@@ -2185,7 +2185,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET64(opts, callback);
+api.listarUsingGET67(opts, callback);
 ```
 
 ### Parameters
@@ -2212,9 +2212,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET65"></a>
-# **listarUsingGET65**
-> PageVinculoOperacaoResponse listarUsingGET65(id, opts)
+<a name="listarUsingGET68"></a>
+# **listarUsingGET68**
+> PageVinculoOperacaoResponse listarUsingGET68(id, opts)
 
 {{{vinculo_operacao_resource_listar}}}
 
@@ -2244,7 +2244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET65(id, opts, callback);
+api.listarUsingGET68(id, opts, callback);
 ```
 
 ### Parameters
@@ -2272,9 +2272,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST19"></a>
-# **salvarUsingPOST19**
-> MaquinetaResponse salvarUsingPOST19(maquinetaPersist)
+<a name="salvarUsingPOST20"></a>
+# **salvarUsingPOST20**
+> MaquinetaResponse salvarUsingPOST20(maquinetaPersist)
 
 {{{maquineta_resource_salvar}}}
 
@@ -2296,7 +2296,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST19(maquinetaPersist, callback);
+api.salvarUsingPOST20(maquinetaPersist, callback);
 ```
 
 ### Parameters
@@ -2318,9 +2318,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST20"></a>
-# **salvarUsingPOST20**
-> OperacaoCredorResponse salvarUsingPOST20(operacaoCredorPersist)
+<a name="salvarUsingPOST21"></a>
+# **salvarUsingPOST21**
+> OperacaoCredorResponse salvarUsingPOST21(operacaoCredorPersist)
 
 {{{operacao_credor_resource_salvar}}}
 
@@ -2342,7 +2342,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST20(operacaoCredorPersist, callback);
+api.salvarUsingPOST21(operacaoCredorPersist, callback);
 ```
 
 ### Parameters
@@ -2364,9 +2364,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST27"></a>
-# **salvarUsingPOST27**
-> TelefoneEstabelecimentoResponse salvarUsingPOST27(telefoneEstabelecimentoPersist)
+<a name="salvarUsingPOST28"></a>
+# **salvarUsingPOST28**
+> TelefoneEstabelecimentoResponse salvarUsingPOST28(telefoneEstabelecimentoPersist)
 
 {{{telefone_estabelecimento_resource_salvar}}}
 
@@ -2388,7 +2388,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST27(telefoneEstabelecimentoPersist, callback);
+api.salvarUsingPOST28(telefoneEstabelecimentoPersist, callback);
 ```
 
 ### Parameters
@@ -2410,9 +2410,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST29"></a>
-# **salvarUsingPOST29**
-> TerminalResponse salvarUsingPOST29(terminalPersist)
+<a name="salvarUsingPOST30"></a>
+# **salvarUsingPOST30**
+> TerminalResponse salvarUsingPOST30(terminalPersist)
 
 {{{terminal_resource_salvar}}}
 
@@ -2434,7 +2434,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST29(terminalPersist, callback);
+api.salvarUsingPOST30(terminalPersist, callback);
 ```
 
 ### Parameters
@@ -2456,9 +2456,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST34"></a>
-# **salvarUsingPOST34**
-> VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST34(vinculoEstabelecimentoAdquirentePersist)
+<a name="salvarUsingPOST35"></a>
+# **salvarUsingPOST35**
+> VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST35(vinculoEstabelecimentoAdquirentePersist)
 
 {{{vinculo_estabelecimento_adquirente_resource_salvar}}}
 
@@ -2480,7 +2480,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST34(vinculoEstabelecimentoAdquirentePersist, callback);
+api.salvarUsingPOST35(vinculoEstabelecimentoAdquirentePersist, callback);
 ```
 
 ### Parameters

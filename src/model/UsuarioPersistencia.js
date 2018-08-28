@@ -18,7 +18,7 @@
   /**
    * The UsuarioPersistencia model module.
    * @module model/UsuarioPersistencia
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -26,14 +26,17 @@
    * {{{usuario_persistencia_descricao}}}
    * @alias module:model/UsuarioPersistencia
    * @class
+   * @param login
+   * @param email
+   * @param senha
    */
-  var exports = function() {
+  var exports = function(login, email, senha) {
 
 
+    this['login'] = login;
 
-
-
-
+    this['email'] = email;
+    this['senha'] = senha;
 
 
   };

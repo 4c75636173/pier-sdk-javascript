@@ -18,7 +18,7 @@
   /**
    * globaltagboleto service.
    * @module api/GlobaltagboletoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET34 operation.
-     * @callback module:api/GlobaltagboletoApi~consultarUsingGET34Callback
+     * Callback function to receive the result of the consultarUsingGET36 operation.
+     * @callback module:api/GlobaltagboletoApi~consultarUsingGET36Callback
      * @param {String} error Error message, if any.
      * @param {module:model/BoletoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,18 @@
      * {{{boleto_resource_consultar}}}
      * {{{boleto_resource_consultar_notes}}}
      * @param {Integer} id {{{boleto_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagboletoApi~consultarUsingGET34Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
+     * @param {module:api/GlobaltagboletoApi~consultarUsingGET36Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BoletoResponse}
      */
-    this.consultarUsingGET34 = function(id, callback) {
+    this.consultarUsingGET36 = function(id, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET34";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET36";
       }
 
 
@@ -60,6 +63,7 @@
         'id': id
       };
       var queryParams = {
+        'zeraValorCodigoBarras': opts['zeraValorCodigoBarras']
       };
       var headerParams = {
       };
@@ -176,8 +180,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET45 operation.
-     * @callback module:api/GlobaltagboletoApi~listarUsingGET45Callback
+     * Callback function to receive the result of the listarUsingGET47 operation.
+     * @callback module:api/GlobaltagboletoApi~listarUsingGET47Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageBoletoListarResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -194,10 +198,10 @@
      * @param {String} opts.dataVencimento {{{boleto_listar_request_data_vencimento_value}}}
      * @param {Number} opts.valorBoleto {{{boleto_listar_request_valor_value}}}
      * @param {Integer} opts.idTipoBoleto {{{boleto_listar_request_id_tipo_boleto_value}}}
-     * @param {module:api/GlobaltagboletoApi~listarUsingGET45Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagboletoApi~listarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageBoletoListarResponse}
      */
-    this.listarUsingGET45 = function(opts, callback) {
+    this.listarUsingGET47 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

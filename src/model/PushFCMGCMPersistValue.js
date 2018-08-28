@@ -18,7 +18,7 @@
   /**
    * The PushFCMGCMPersistValue model module.
    * @module model/PushFCMGCMPersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -95,19 +95,19 @@
 
 
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+   * {{{push_a_p_n_s_persist_id_pessoa_value}}}
    * @member {Integer} idPessoa
    */
   exports.prototype['idPessoa'] = undefined;
 
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+   * {{{push_a_p_n_s_persist_id_conta_value}}}
    * @member {Integer} idConta
    */
   exports.prototype['idConta'] = undefined;
 
   /**
-   * {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+   * {{{push_a_p_n_s_persist_token_dispositivo_value}}}
    * @member {String} tokenDispositivo
    */
   exports.prototype['tokenDispositivo'] = undefined;
@@ -119,13 +119,13 @@
   exports.prototype['tokenServidor'] = undefined;
 
   /**
-   * {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+   * {{{push_a_p_n_s_persist_titulo_value}}}
    * @member {String} titulo
    */
   exports.prototype['titulo'] = undefined;
 
   /**
-   * {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+   * {{{push_a_p_n_s_persist_conteudo_value}}}
    * @member {String} conteudo
    */
   exports.prototype['conteudo'] = undefined;
@@ -177,7 +177,13 @@
      * value: OUTROS
      * @const
      */
-    OUTROS: "OUTROS"
+    OUTROS: "OUTROS",
+    
+    /**
+     * value: OTP_3D_SECURE
+     * @const
+     */
+    OTP_3D_SECURE: "OTP_3D_SECURE"
   };
 
   return exports;

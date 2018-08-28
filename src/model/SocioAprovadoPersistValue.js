@@ -18,7 +18,7 @@
   /**
    * The SocioAprovadoPersistValue model module.
    * @module model/SocioAprovadoPersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

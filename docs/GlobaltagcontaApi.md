@@ -18,8 +18,9 @@ Method | HTTP request | Description
 [**consultarDividaAtualizadaClienteUsingGET**](GlobaltagcontaApi.md#consultarDividaAtualizadaClienteUsingGET) | **GET** /api/contas/{id}/recuperar-divida-atualizada | {{{conta_resource_consultar_divida_atualizada_cliente}}}
 [**consultarTaxasTarifasUsingGET**](GlobaltagcontaApi.md#consultarTaxasTarifasUsingGET) | **GET** /api/contas/{id}/consultar-taxas-tarifas | {{{conta_resource_consultar_taxas_tarifas}}}
 [**consultarUsingGET1**](GlobaltagcontaApi.md#consultarUsingGET1) | **GET** /api/adesoes-pagamentos-sabados | {{{aderir_pagamento_sabado_recurso_consultar}}}
-[**consultarUsingGET14**](GlobaltagcontaApi.md#consultarUsingGET14) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
-[**consultarUsingGET49**](GlobaltagcontaApi.md#consultarUsingGET49) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**consultarUsingGET16**](GlobaltagcontaApi.md#consultarUsingGET16) | **GET** /api/contas/{id} | {{{conta_resource_consultar}}}
+[**consultarUsingGET51**](GlobaltagcontaApi.md#consultarUsingGET51) | **GET** /api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia} | {{{transferencia_resource_consultar}}}
+[**criarContasMultiAppUsingPOST**](GlobaltagcontaApi.md#criarContasMultiAppUsingPOST) | **POST** /api/contas/cadastrar-conta-multiapp | {{{conta_resource_cadastrar_conta_multiapp}}}
 [**desativarEnvioFaturaEmailUsingPOST**](GlobaltagcontaApi.md#desativarEnvioFaturaEmailUsingPOST) | **POST** /api/contas/{id}/desativar-fatura-email | {{{conta_resource_desativar_envio_fatura_email}}}
 [**gerarBoletoRecargaUsingPOST**](GlobaltagcontaApi.md#gerarBoletoRecargaUsingPOST) | **POST** /api/contas/{id}/gerar-boleto-recarga | {{{conta_resource_gerar_boleto_recarga}}}
 [**gerarCartaoEmbossingUsingPOST**](GlobaltagcontaApi.md#gerarCartaoEmbossingUsingPOST) | **POST** /api/contas/{id}/gerar-cartao-grafica | {{{conta_resource_gerar_cartao_embossing}}}
@@ -31,11 +32,11 @@ Method | HTTP request | Description
 [**listarHistoricoAtrasosFaturasUsingGET**](GlobaltagcontaApi.md#listarHistoricoAtrasosFaturasUsingGET) | **GET** /api/contas/{id}/historicos-faturas-atrasos | {{{conta_resource_listar_historico_atrasos_faturas}}}
 [**listarNaoProcessadasUsingGET**](GlobaltagcontaApi.md#listarNaoProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-nao-processadas | {{{transacoes_correntes_resource_listar_nao_processadas}}}
 [**listarProcessadasUsingGET**](GlobaltagcontaApi.md#listarProcessadasUsingGET) | **GET** /api/contas/{id}/transacoes/listar-processadas | {{{transacoes_correntes_resource_listar_processadas}}}
-[**listarUsingGET18**](GlobaltagcontaApi.md#listarUsingGET18) | **GET** /api/contas | {{{conta_resource_listar}}}
-[**listarUsingGET58**](GlobaltagcontaApi.md#listarUsingGET58) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
-[**listarUsingGET60**](GlobaltagcontaApi.md#listarUsingGET60) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
+[**listarUsingGET19**](GlobaltagcontaApi.md#listarUsingGET19) | **GET** /api/contas | {{{conta_resource_listar}}}
+[**listarUsingGET61**](GlobaltagcontaApi.md#listarUsingGET61) | **GET** /api/contas/{id}/transacoes | {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
+[**listarUsingGET63**](GlobaltagcontaApi.md#listarUsingGET63) | **GET** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_listar}}}
 [**reativarUsingPOST1**](GlobaltagcontaApi.md#reativarUsingPOST1) | **POST** /api/contas/{id}/reativar | {{{conta_resource_reativar}}}
-[**salvarUsingPOST8**](GlobaltagcontaApi.md#salvarUsingPOST8) | **POST** /api/contas | {{{conta_resource_salvar}}}
+[**salvarUsingPOST9**](GlobaltagcontaApi.md#salvarUsingPOST9) | **POST** /api/contas | {{{conta_resource_salvar}}}
 [**simularEmprestimoFinanciamentoUsingPOST**](GlobaltagcontaApi.md#simularEmprestimoFinanciamentoUsingPOST) | **POST** /api/contas/{id}/simular-emprestimos-financiamentos | {{{financiamento_resource_simular_emprestimo_financiamento}}}
 [**transacoesUsingGET**](GlobaltagcontaApi.md#transacoesUsingGET) | **GET** /api/contas/{id}/timeline | {{{conta_resource_transacoes}}}
 [**transferirUsingPOST1**](GlobaltagcontaApi.md#transferirUsingPOST1) | **POST** /api/contas/{id}/transferencias-creditos-cartoes | {{{transferencia_resource_transferir}}}
@@ -64,7 +65,6 @@ var dataAjuste = "dataAjuste_example"; // {String} {{{ajuste_persist_data_ajuste
 var valorAjuste = 3.4; // {Number} {{{ajuste_persist_valor_ajuste_value}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'identificadorExterno': "identificadorExterno_example", // {String} {{{ajuste_persist_identificador_externo_value}}}
   'idTransacaoOriginal': 789 // {Integer} {{{ajuste_persist_id_transacao_original}}}
 };
@@ -87,7 +87,6 @@ Name | Type | Description  | Notes
  **idTipoAjuste** | **Integer**| {{{ajuste_persist_id_tipo_ajuste_value}}} | 
  **dataAjuste** | **String**| {{{ajuste_persist_data_ajuste_value}}} | 
  **valorAjuste** | [**Number**](.md)| {{{ajuste_persist_valor_ajuste_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **identificadorExterno** | **String**| {{{ajuste_persist_identificador_externo_value}}} | [optional] 
  **idTransacaoOriginal** | **Integer**| {{{ajuste_persist_id_transacao_original}}} | [optional] 
 
@@ -106,7 +105,7 @@ No authorization required
 
 <a name="alterarProdutoUsingPOST"></a>
 # **alterarProdutoUsingPOST**
-> &#39;String&#39; alterarProdutoUsingPOST(id, request, opts)
+> &#39;String&#39; alterarProdutoUsingPOST(id, request)
 
 {{{conta_resource_alterar_produto}}}
 
@@ -122,9 +121,6 @@ var id = 789; // {Integer} {{{conta_resource_alterar_produto_param_id}}}
 
 var request = new Pier.AlterarProdutoRequest(); // {AlterarProdutoRequest} request
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -133,7 +129,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarProdutoUsingPOST(id, request, opts, callback);
+api.alterarProdutoUsingPOST(id, request, callback);
 ```
 
 ### Parameters
@@ -142,7 +138,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_produto_param_id}}} | 
  **request** | [**AlterarProdutoRequest**](AlterarProdutoRequest.md)| request | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -159,7 +154,7 @@ No authorization required
 
 <a name="alterarTitularUsingPOST"></a>
 # **alterarTitularUsingPOST**
-> ContaResponse alterarTitularUsingPOST(id, idPessoa, opts)
+> ContaResponse alterarTitularUsingPOST(id, idPessoa)
 
 {{{conta_resource_alterar_titular}}}
 
@@ -175,9 +170,6 @@ var id = 789; // {Integer} {{{conta_resource_alterar_titular_param_id_conta}}}
 
 var idPessoa = 789; // {Integer} {{{conta_resource_alterar_titular_param_id_pessoa}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -186,7 +178,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarTitularUsingPOST(id, idPessoa, opts, callback);
+api.alterarTitularUsingPOST(id, idPessoa, callback);
 ```
 
 ### Parameters
@@ -195,7 +187,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_titular_param_id_conta}}} | 
  **idPessoa** | **Integer**| {{{conta_resource_alterar_titular_param_id_pessoa}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -212,7 +203,7 @@ No authorization required
 
 <a name="alterarVencimentoUsingPUT"></a>
 # **alterarVencimentoUsingPUT**
-> ContaResponse alterarVencimentoUsingPUT(id, novoDiaVencimento, opts)
+> ContaResponse alterarVencimentoUsingPUT(id, novoDiaVencimento)
 
 {{{conta_resource_alterar_vencimento}}}
 
@@ -228,9 +219,6 @@ var id = 789; // {Integer} {{{conta_resource_alterar_vencimento_param_id}}}
 
 var novoDiaVencimento = 56; // {Integer} {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -239,7 +227,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.alterarVencimentoUsingPUT(id, novoDiaVencimento, opts, callback);
+api.alterarVencimentoUsingPUT(id, novoDiaVencimento, callback);
 ```
 
 ### Parameters
@@ -248,7 +236,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_alterar_vencimento_param_id}}} | 
  **novoDiaVencimento** | **Integer**| {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -282,7 +269,6 @@ var id = 789; // {Integer} {{{conta_resource_ativar_anuidade_param_id}}}
 var idAnuidade = 789; // {Integer} {{{anuidade_request_id_anuidade_value}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -308,7 +294,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_anuidade_param_id}}} | 
  **idAnuidade** | **Integer**| {{{anuidade_request_id_anuidade_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -332,7 +317,7 @@ No authorization required
 
 <a name="ativarEnvioFaturaEmailUsingPOST"></a>
 # **ativarEnvioFaturaEmailUsingPOST**
-> Object ativarEnvioFaturaEmailUsingPOST(id, opts)
+> Object ativarEnvioFaturaEmailUsingPOST(id)
 
 {{{conta_resource_ativar_envio_fatura_email}}}
 
@@ -346,9 +331,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_ativar_envio_fatura_email_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -357,7 +339,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.ativarEnvioFaturaEmailUsingPOST(id, opts, callback);
+api.ativarEnvioFaturaEmailUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -365,7 +347,6 @@ api.ativarEnvioFaturaEmailUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_ativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -382,7 +363,7 @@ No authorization required
 
 <a name="bloquearUsingPOST1"></a>
 # **bloquearUsingPOST1**
-> ContaResponse bloquearUsingPOST1(id, idStatus, opts)
+> ContaResponse bloquearUsingPOST1(id, idStatus)
 
 {{{conta_resource_bloquear}}}
 
@@ -398,9 +379,6 @@ var id = 789; // {Integer} {{{conta_resource_bloquear_param_id}}}
 
 var idStatus = 789; // {Integer} {{{conta_resource_bloquear_param_id_status}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -409,7 +387,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.bloquearUsingPOST1(id, idStatus, opts, callback);
+api.bloquearUsingPOST1(id, idStatus, callback);
 ```
 
 ### Parameters
@@ -418,7 +396,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_bloquear_param_id}}} | 
  **idStatus** | **Integer**| {{{conta_resource_bloquear_param_id_status}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -481,7 +458,7 @@ No authorization required
 
 <a name="cancelarUsingPOST1"></a>
 # **cancelarUsingPOST1**
-> ContaResponse cancelarUsingPOST1(id, idStatus, opts)
+> ContaResponse cancelarUsingPOST1(id, idStatus)
 
 {{{conta_resource_cancelar}}}
 
@@ -497,9 +474,6 @@ var id = 789; // {Integer} {{{conta_resource_cancelar_param_id}}}
 
 var idStatus = 789; // {Integer} {{{conta_resource_cancelar_param_id_status}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -508,7 +482,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancelarUsingPOST1(id, idStatus, opts, callback);
+api.cancelarUsingPOST1(id, idStatus, callback);
 ```
 
 ### Parameters
@@ -517,7 +491,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_cancelar_param_id}}} | 
  **idStatus** | **Integer**| {{{conta_resource_cancelar_param_id_status}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -534,7 +507,7 @@ No authorization required
 
 <a name="consultarBeneficioPagamentoAtrasoUsingGET"></a>
 # **consultarBeneficioPagamentoAtrasoUsingGET**
-> BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET(id, opts)
+> BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET(id)
 
 {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
 
@@ -548,9 +521,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -559,7 +529,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarBeneficioPagamentoAtrasoUsingGET(id, opts, callback);
+api.consultarBeneficioPagamentoAtrasoUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -567,7 +537,6 @@ api.consultarBeneficioPagamentoAtrasoUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -584,7 +553,7 @@ No authorization required
 
 <a name="consultarBoletoEmitidoUsingGET"></a>
 # **consultarBoletoEmitidoUsingGET**
-> BoletoResponse consultarBoletoEmitidoUsingGET(id, opts)
+> BoletoResponse consultarBoletoEmitidoUsingGET(id)
 
 {{{conta_resource_consultar_boleto_emitido}}}
 
@@ -598,9 +567,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_consultar_boleto_emitido_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -609,7 +575,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarBoletoEmitidoUsingGET(id, opts, callback);
+api.consultarBoletoEmitidoUsingGET(id, callback);
 ```
 
 ### Parameters
@@ -617,7 +583,6 @@ api.consultarBoletoEmitidoUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_boleto_emitido_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -649,7 +614,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -672,7 +636,6 @@ api.consultarDividaAtualizadaClienteUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -709,7 +672,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -730,7 +692,6 @@ api.consultarTaxasTarifasUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -797,9 +758,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET14"></a>
-# **consultarUsingGET14**
-> ContaDetalheResponse consultarUsingGET14(id, opts)
+<a name="consultarUsingGET16"></a>
+# **consultarUsingGET16**
+> ContaDetalheResponse consultarUsingGET16(id)
 
 {{{conta_resource_consultar}}}
 
@@ -813,9 +774,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_consultar_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -824,7 +782,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET14(id, opts, callback);
+api.consultarUsingGET16(id, callback);
 ```
 
 ### Parameters
@@ -832,7 +790,6 @@ api.consultarUsingGET14(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_consultar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -847,9 +804,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET49"></a>
-# **consultarUsingGET49**
-> TransferenciaDetalheResponse consultarUsingGET49(id, idTransferencia)
+<a name="consultarUsingGET51"></a>
+# **consultarUsingGET51**
+> TransferenciaDetalheResponse consultarUsingGET51(id, idTransferencia)
 
 {{{transferencia_resource_consultar}}}
 
@@ -873,7 +830,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET49(id, idTransferencia, callback);
+api.consultarUsingGET51(id, idTransferencia, callback);
 ```
 
 ### Parameters
@@ -896,9 +853,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="criarContasMultiAppUsingPOST"></a>
+# **criarContasMultiAppUsingPOST**
+> ContaMultiAppResponse criarContasMultiAppUsingPOST(contaMultiAppPersist)
+
+{{{conta_resource_cadastrar_conta_multiapp}}}
+
+{{{conta_resource_cadastrar_conta_multiapp_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcontaApi()
+
+var contaMultiAppPersist = new Pier.ContaMultiAppPersistValue(); // {ContaMultiAppPersistValue} contaMultiAppPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.criarContasMultiAppUsingPOST(contaMultiAppPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contaMultiAppPersist** | [**ContaMultiAppPersistValue**](ContaMultiAppPersistValue.md)| contaMultiAppPersist | 
+
+### Return type
+
+[**ContaMultiAppResponse**](ContaMultiAppResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="desativarEnvioFaturaEmailUsingPOST"></a>
 # **desativarEnvioFaturaEmailUsingPOST**
-> Object desativarEnvioFaturaEmailUsingPOST(id, opts)
+> Object desativarEnvioFaturaEmailUsingPOST(id)
 
 {{{conta_resource_desativar_envio_fatura_email}}}
 
@@ -912,9 +915,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_desativar_envio_fatura_email_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -923,7 +923,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.desativarEnvioFaturaEmailUsingPOST(id, opts, callback);
+api.desativarEnvioFaturaEmailUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -931,7 +931,6 @@ api.desativarEnvioFaturaEmailUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_desativar_envio_fatura_email_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -948,7 +947,7 @@ No authorization required
 
 <a name="gerarBoletoRecargaUsingPOST"></a>
 # **gerarBoletoRecargaUsingPOST**
-> BoletoResponse gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, opts)
+> BoletoResponse gerarBoletoRecargaUsingPOST(id, valor, dataVencimento)
 
 {{{conta_resource_gerar_boleto_recarga}}}
 
@@ -966,9 +965,6 @@ var valor = 3.4; // {Number} {{{boleto_recarga_request_valor_value}}}
 
 var dataVencimento = "dataVencimento_example"; // {String} {{{boleto_recarga_request_data_vencimento_value}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -977,7 +973,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, opts, callback);
+api.gerarBoletoRecargaUsingPOST(id, valor, dataVencimento, callback);
 ```
 
 ### Parameters
@@ -987,7 +983,6 @@ Name | Type | Description  | Notes
  **id** | **Integer**| {{{conta_resource_gerar_boleto_recarga_param_id}}} | 
  **valor** | [**Number**](.md)| {{{boleto_recarga_request_valor_value}}} | 
  **dataVencimento** | **String**| {{{boleto_recarga_request_data_vencimento_value}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1004,7 +999,7 @@ No authorization required
 
 <a name="gerarCartaoEmbossingUsingPOST"></a>
 # **gerarCartaoEmbossingUsingPOST**
-> CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest, opts)
+> CartaoEmbossingResponse gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest)
 
 {{{conta_resource_gerar_cartao_embossing}}}
 
@@ -1020,9 +1015,6 @@ var id = 789; // {Integer} {{{conta_resource_gerar_cartao_embossing_param_id}}}
 
 var cartaoEmbossingRequest = new Pier.CartaoEmbossingRequest(); // {CartaoEmbossingRequest} cartaoEmbossingRequest
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1031,7 +1023,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest, opts, callback);
+api.gerarCartaoEmbossingUsingPOST(id, cartaoEmbossingRequest, callback);
 ```
 
 ### Parameters
@@ -1040,7 +1032,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_embossing_param_id}}} | 
  **cartaoEmbossingRequest** | [**CartaoEmbossingRequest**](CartaoEmbossingRequest.md)| cartaoEmbossingRequest | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1057,7 +1048,7 @@ No authorization required
 
 <a name="gerarCartaoProvisorioUsingPOST"></a>
 # **gerarCartaoProvisorioUsingPOST**
-> CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST(id, opts)
+> CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST(id)
 
 {{{conta_resource_gerar_cartao_provisorio}}}
 
@@ -1071,9 +1062,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1082,7 +1070,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarCartaoProvisorioUsingPOST(id, opts, callback);
+api.gerarCartaoProvisorioUsingPOST(id, callback);
 ```
 
 ### Parameters
@@ -1090,7 +1078,6 @@ api.gerarCartaoProvisorioUsingPOST(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1124,7 +1111,6 @@ var id = 789; // {Integer} {{{conta_resource_gerar_cartao_param_id}}}
 var idPessoa = 789; // {Integer} {{{conta_resource_gerar_cartao_param_id_pessoa}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'idTipoPlastico': 789 // {Integer} {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}}
 };
 
@@ -1144,7 +1130,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_param_id}}} | 
  **idPessoa** | **Integer**| {{{conta_resource_gerar_cartao_param_id_pessoa}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **idTipoPlastico** | **Integer**| {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}} | [optional] 
 
 ### Return type
@@ -1162,7 +1147,7 @@ No authorization required
 
 <a name="gerarCartaoVirtualUsingPOST"></a>
 # **gerarCartaoVirtualUsingPOST**
-> CartaoImpressaoResponse gerarCartaoVirtualUsingPOST(id, dataValidade, opts)
+> CartaoImpressaoResponse gerarCartaoVirtualUsingPOST(id, dataValidade)
 
 {{{conta_resource_gerar_cartao_virtual}}}
 
@@ -1178,9 +1163,6 @@ var id = 789; // {Integer} {{{conta_resource_gerar_cartao_virtual_param_id}}}
 
 var dataValidade = "dataValidade_example"; // {String} {{{conta_resource_gerar_cartao_virtual_param_data_validade}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1189,7 +1171,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.gerarCartaoVirtualUsingPOST(id, dataValidade, opts, callback);
+api.gerarCartaoVirtualUsingPOST(id, dataValidade, callback);
 ```
 
 ### Parameters
@@ -1198,7 +1180,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_gerar_cartao_virtual_param_id}}} | 
  **dataValidade** | **String**| {{{conta_resource_gerar_cartao_virtual_param_data_validade}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1230,7 +1211,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1251,7 +1231,6 @@ api.listarHistoricoAlteracoesLimitesUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_alteracoes_limites_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1286,7 +1265,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_listar_historico_assessoria_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1307,7 +1285,6 @@ api.listarHistoricoAssessoriaUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_assessoria_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1342,7 +1319,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_listar_historico_atrasos_faturas_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1363,7 +1339,6 @@ api.listarHistoricoAtrasosFaturasUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_listar_historico_atrasos_faturas_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1503,9 +1478,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET18"></a>
-# **listarUsingGET18**
-> PageContaResponse listarUsingGET18(opts)
+<a name="listarUsingGET19"></a>
+# **listarUsingGET19**
+> PageContaResponse listarUsingGET19(opts)
 
 {{{conta_resource_listar}}}
 
@@ -1518,7 +1493,6 @@ var Pier = require('Pier');
 var apiInstance = new Pier.GlobaltagcontaApi()
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1540,14 +1514,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET18(opts, callback);
+api.listarUsingGET19(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
@@ -1574,9 +1547,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET58"></a>
-# **listarUsingGET58**
-> PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET58(id, opts)
+<a name="listarUsingGET61"></a>
+# **listarUsingGET61**
+> PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET61(id, opts)
 
 {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
 
@@ -1607,7 +1580,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET58(id, opts, callback);
+api.listarUsingGET61(id, opts, callback);
 ```
 
 ### Parameters
@@ -1636,9 +1609,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET60"></a>
-# **listarUsingGET60**
-> PageTransferenciaResponse listarUsingGET60(id, opts)
+<a name="listarUsingGET63"></a>
+# **listarUsingGET63**
+> PageTransferenciaResponse listarUsingGET63(id, opts)
 
 {{{transferencia_resource_listar}}}
 
@@ -1670,7 +1643,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET60(id, opts, callback);
+api.listarUsingGET63(id, opts, callback);
 ```
 
 ### Parameters
@@ -1702,7 +1675,7 @@ No authorization required
 
 <a name="reativarUsingPOST1"></a>
 # **reativarUsingPOST1**
-> Object reativarUsingPOST1(id, opts)
+> Object reativarUsingPOST1(id)
 
 {{{conta_resource_reativar}}}
 
@@ -1716,9 +1689,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var id = 789; // {Integer} {{{conta_resource_reativar_param_id}}}
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1727,7 +1697,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.reativarUsingPOST1(id, opts, callback);
+api.reativarUsingPOST1(id, callback);
 ```
 
 ### Parameters
@@ -1735,7 +1705,6 @@ api.reativarUsingPOST1(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_reativar_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1750,9 +1719,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST8"></a>
-# **salvarUsingPOST8**
-> ContaResponse salvarUsingPOST8(contaPersist, opts)
+<a name="salvarUsingPOST9"></a>
+# **salvarUsingPOST9**
+> ContaResponse salvarUsingPOST9(contaPersist)
 
 {{{conta_resource_salvar}}}
 
@@ -1766,9 +1735,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 
 var contaPersist = new Pier.ContaPersistValue(); // {ContaPersistValue} contaPersist
 
-var opts = { 
-  'authorization': "authorization_example" // {String} Authorization
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1777,7 +1743,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST8(contaPersist, opts, callback);
+api.salvarUsingPOST9(contaPersist, callback);
 ```
 
 ### Parameters
@@ -1785,7 +1751,6 @@ api.salvarUsingPOST8(contaPersist, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contaPersist** | [**ContaPersistValue**](ContaPersistValue.md)| contaPersist | 
- **authorization** | **String**| Authorization | [optional] 
 
 ### Return type
 
@@ -1866,7 +1831,6 @@ var apiInstance = new Pier.GlobaltagcontaApi()
 var id = 789; // {Integer} {{{conta_resource_transacoes_param_id}}}
 
 var opts = { 
-  'authorization': "authorization_example", // {String} Authorization
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
@@ -1887,7 +1851,6 @@ api.transacoesUsingGET(id, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| {{{conta_resource_transacoes_param_id}}} | 
- **authorization** | **String**| Authorization | [optional] 
  **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 

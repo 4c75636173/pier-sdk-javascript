@@ -18,7 +18,7 @@
   /**
    * The UsuarioUpdateValue model module.
    * @module model/UsuarioUpdateValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -26,13 +26,15 @@
    * {{{usuario_update_description}}}
    * @alias module:model/UsuarioUpdateValue
    * @class
+   * @param login
+   * @param email
    */
-  var exports = function() {
+  var exports = function(login, email) {
 
 
+    this['login'] = login;
 
-
-
+    this['email'] = email;
 
 
   };

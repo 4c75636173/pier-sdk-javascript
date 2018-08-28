@@ -18,7 +18,7 @@
   /**
    * The TokenPersistValue model module.
    * @module model/TokenPersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -37,6 +37,7 @@
     this['base'] = base;
     this['owner'] = owner;
     this['criadoPor'] = criadoPor;
+
   };
 
   /**
@@ -61,6 +62,9 @@
       }
       if (data.hasOwnProperty('criadoPor')) {
         obj['criadoPor'] = ApiClient.convertToType(data['criadoPor'], 'String');
+      }
+      if (data.hasOwnProperty('idAplicacao')) {
+        obj['idAplicacao'] = ApiClient.convertToType(data['idAplicacao'], 'Integer');
       }
     }
     return obj;
@@ -90,6 +94,12 @@
    * @member {String} criadoPor
    */
   exports.prototype['criadoPor'] = undefined;
+
+  /**
+   * {{{token_dto_id_application_value}}}
+   * @member {Integer} idAplicacao
+   */
+  exports.prototype['idAplicacao'] = undefined;
 
 
 

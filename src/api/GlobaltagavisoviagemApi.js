@@ -18,7 +18,7 @@
   /**
    * globaltagavisoviagem service.
    * @module api/GlobaltagavisoviagemApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -33,8 +33,8 @@
 
 
     /**
-     * Callback function to receive the result of the consultarUsingGET7 operation.
-     * @callback module:api/GlobaltagavisoviagemApi~consultarUsingGET7Callback
+     * Callback function to receive the result of the consultarUsingGET8 operation.
+     * @callback module:api/GlobaltagavisoviagemApi~consultarUsingGET8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/AvisoViagemResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -44,15 +44,15 @@
      * {{{aviso_viagem_resource_consultar}}}
      * {{{aviso_viagem_resource_consultar_notes}}}
      * @param {Integer} id {{{aviso_viagem_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagavisoviagemApi~consultarUsingGET7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagavisoviagemApi~consultarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/AvisoViagemResponse}
      */
-    this.consultarUsingGET7 = function(id, callback) {
+    this.consultarUsingGET8 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET7";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET8";
       }
 
 
@@ -171,8 +171,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET8 operation.
-     * @callback module:api/GlobaltagavisoviagemApi~listarUsingGET8Callback
+     * Callback function to receive the result of the listarUsingGET9 operation.
+     * @callback module:api/GlobaltagavisoviagemApi~listarUsingGET9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageAvisoViagemResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -190,10 +190,10 @@
      * @param {String} opts.dataInicio {{{aviso_viagem_request_data_inicio_value}}}
      * @param {String} opts.dataFim {{{aviso_viagem_request_data_fim_value}}}
      * @param {Integer} opts.flagAtivo {{{aviso_viagem_request_flag_ativo_value}}}
-     * @param {module:api/GlobaltagavisoviagemApi~listarUsingGET8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagavisoviagemApi~listarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageAvisoViagemResponse}
      */
-    this.listarUsingGET8 = function(opts, callback) {
+    this.listarUsingGET9 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

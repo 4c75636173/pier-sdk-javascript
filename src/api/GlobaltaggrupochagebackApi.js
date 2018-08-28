@@ -18,7 +18,7 @@
   /**
    * globaltaggrupochageback service.
    * @module api/GlobaltaggrupochagebackApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -43,37 +43,39 @@
     /**
      * {{{codigo_chargeback_resource_listar}}}
      * {{{codigo_chargeback_resource_listar_notes}}}
-     * @param {Integer} id id
+     * @param {Integer} grupoChargebackId grupoChargebackId
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
+     * @param {Integer} opts.id 
+     * @param {String} opts.descricao 
      * @param {Boolean} opts.flagAtm 
-     * @param {Integer} opts.idBandeira 
-     * @param {Integer} opts.groupId 
+     * @param {Integer} opts.grupoChargebackId2 
      * @param {module:api/GlobaltaggrupochagebackApi~listarCodigosUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCodigoChargebackResponse}
      */
-    this.listarCodigosUsingGET = function(id, opts, callback) {
+    this.listarCodigosUsingGET = function(grupoChargebackId, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'id' is set
-      if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarCodigosUsingGET";
+      // verify the required parameter 'grupoChargebackId' is set
+      if (grupoChargebackId == undefined || grupoChargebackId == null) {
+        throw "Missing the required parameter 'grupoChargebackId' when calling listarCodigosUsingGET";
       }
 
 
       var pathParams = {
-        'id': id
+        'grupoChargebackId': grupoChargebackId
       };
       var queryParams = {
         'sort': this.apiClient.buildCollectionParam(opts['sort'], 'multi'),
         'page': opts['page'],
         'limit': opts['limit'],
+        'id': opts['id'],
+        'descricao': opts['descricao'],
         'flagAtm': opts['flagAtm'],
-        'idBandeira': opts['idBandeira'],
-        'groupId': opts['groupId']
+        'grupoChargebackId': opts['grupoChargebackId2']
       };
       var headerParams = {
       };
@@ -86,15 +88,15 @@
       var returnType = PageCodigoChargebackResponse;
 
       return this.apiClient.callApi(
-        '/api/grupos-chargeback/{id}/codigos', 'GET',
+        '/api/grupos-chargeback/{grupoChargebackId}/codigos', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET27 operation.
-     * @callback module:api/GlobaltaggrupochagebackApi~listarUsingGET27Callback
+     * Callback function to receive the result of the listarUsingGET28 operation.
+     * @callback module:api/GlobaltaggrupochagebackApi~listarUsingGET28Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageGrupoChargebackResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -107,10 +109,10 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltaggrupochagebackApi~listarUsingGET27Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaggrupochagebackApi~listarUsingGET28Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageGrupoChargebackResponse}
      */
-    this.listarUsingGET27 = function(opts, callback) {
+    this.listarUsingGET28 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 

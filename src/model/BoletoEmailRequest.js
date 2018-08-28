@@ -18,7 +18,7 @@
   /**
    * The BoletoEmailRequest model module.
    * @module model/BoletoEmailRequest
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

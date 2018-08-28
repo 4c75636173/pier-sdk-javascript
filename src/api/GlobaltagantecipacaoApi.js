@@ -18,7 +18,7 @@
   /**
    * globaltagantecipacao service.
    * @module api/GlobaltagantecipacaoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -252,8 +252,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET13 operation.
-     * @callback module:api/GlobaltagantecipacaoApi~listarUsingGET13Callback
+     * Callback function to receive the result of the listarUsingGET14 operation.
+     * @callback module:api/GlobaltagantecipacaoApi~listarUsingGET14Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCompraResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -271,16 +271,16 @@
      * @param {Boolean} opts.parcelada {{{compra_d_t_o_parcelada_value}}}
      * @param {Boolean} opts.juros {{{compra_d_t_o_juros_value}}}
      * @param {module:model/String} opts.tipoOrigemTransacao {{{compra_d_t_o_tipo_origem_transacao_value}}}
-     * @param {module:api/GlobaltagantecipacaoApi~listarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagantecipacaoApi~listarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCompraResponse}
      */
-    this.listarUsingGET13 = function(idConta, opts, callback) {
+    this.listarUsingGET14 = function(idConta, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling listarUsingGET13";
+        throw "Missing the required parameter 'idConta' when calling listarUsingGET14";
       }
 
 

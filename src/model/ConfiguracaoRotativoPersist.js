@@ -18,7 +18,7 @@
   /**
    * The ConfiguracaoRotativoPersist model module.
    * @module model/ConfiguracaoRotativoPersist
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * globaltagpay service.
    * @module api/GlobaltagpayApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -86,8 +86,8 @@
     }
 
     /**
-     * Callback function to receive the result of the atualizarUsingPUT operation.
-     * @callback module:api/GlobaltagpayApi~atualizarUsingPUTCallback
+     * Callback function to receive the result of the atualizarUsingPUT1 operation.
+     * @callback module:api/GlobaltagpayApi~atualizarUsingPUT1Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -99,25 +99,25 @@
      * @param {String} deviceId {{{cartao_pay_resource_atualizar_param_device_id}}}
      * @param {Integer} id {{{cartao_pay_resource_atualizar_param_id}}}
      * @param {module:model/CartaoPayUpdate} update update
-     * @param {module:api/GlobaltagpayApi~atualizarUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpayApi~atualizarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayResponse}
      */
-    this.atualizarUsingPUT = function(deviceId, id, update, callback) {
+    this.atualizarUsingPUT1 = function(deviceId, id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling atualizarUsingPUT";
+        throw "Missing the required parameter 'deviceId' when calling atualizarUsingPUT1";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling atualizarUsingPUT";
+        throw "Missing the required parameter 'id' when calling atualizarUsingPUT1";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling atualizarUsingPUT";
+        throw "Missing the required parameter 'update' when calling atualizarUsingPUT1";
       }
 
 
@@ -204,8 +204,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET9 operation.
-     * @callback module:api/GlobaltagpayApi~consultarUsingGET9Callback
+     * Callback function to receive the result of the consultarUsingGET11 operation.
+     * @callback module:api/GlobaltagpayApi~consultarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -216,20 +216,20 @@
      * {{{cartao_pay_resource_consultar_notes}}}
      * @param {String} deviceId {{{cartao_pay_resource_consultar_param_device_id}}}
      * @param {Integer} id {{{cartao_pay_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagpayApi~consultarUsingGET9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpayApi~consultarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayDetalheResponse}
      */
-    this.consultarUsingGET9 = function(deviceId, id, callback) {
+    this.consultarUsingGET11 = function(deviceId, id, callback) {
       var postBody = null;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET9";
+        throw "Missing the required parameter 'deviceId' when calling consultarUsingGET11";
       }
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET9";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET11";
       }
 
 
@@ -452,8 +452,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET10 operation.
-     * @callback module:api/GlobaltagpayApi~listarUsingGET10Callback
+     * Callback function to receive the result of the listarUsingGET11 operation.
+     * @callback module:api/GlobaltagpayApi~listarUsingGET11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageCartaoPayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -469,10 +469,10 @@
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {module:model/String} opts.status {{{cartao_pay_request_status_value}}}
      * @param {String} opts.numeroCartao {{{cartao_pay_request_numero_cartao_value}}}
-     * @param {module:api/GlobaltagpayApi~listarUsingGET10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpayApi~listarUsingGET11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageCartaoPayResponse}
      */
-    this.listarUsingGET10 = function(opts, callback) {
+    this.listarUsingGET11 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -505,8 +505,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST5 operation.
-     * @callback module:api/GlobaltagpayApi~salvarUsingPOST5Callback
+     * Callback function to receive the result of the salvarUsingPOST6 operation.
+     * @callback module:api/GlobaltagpayApi~salvarUsingPOST6Callback
      * @param {String} error Error message, if any.
      * @param {module:model/CartaoPayCadastroResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -517,20 +517,20 @@
      * {{{cartao_pay_resource_salvar_notes}}}
      * @param {String} deviceId {{{cartao_pay_resource_salvar_param_device_id}}}
      * @param {module:model/CartaoPayPersist} persist persist
-     * @param {module:api/GlobaltagpayApi~salvarUsingPOST5Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpayApi~salvarUsingPOST6Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoPayCadastroResponse}
      */
-    this.salvarUsingPOST5 = function(deviceId, persist, callback) {
+    this.salvarUsingPOST6 = function(deviceId, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'deviceId' is set
       if (deviceId == undefined || deviceId == null) {
-        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST5";
+        throw "Missing the required parameter 'deviceId' when calling salvarUsingPOST6";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST5";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST6";
       }
 
 

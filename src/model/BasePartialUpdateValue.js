@@ -18,7 +18,7 @@
   /**
    * The BasePartialUpdateValue model module.
    * @module model/BasePartialUpdateValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

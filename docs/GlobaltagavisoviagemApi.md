@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consultarUsingGET7**](GlobaltagavisoviagemApi.md#consultarUsingGET7) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
+[**consultarUsingGET8**](GlobaltagavisoviagemApi.md#consultarUsingGET8) | **GET** /api/avisos-viagens/{id} | {{{aviso_viagem_resource_consultar}}}
 [**desabilitarUsingPOST**](GlobaltagavisoviagemApi.md#desabilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/desabilitar | {{{aviso_viagem_resource_desabilitar}}}
 [**habilitarUsingPOST**](GlobaltagavisoviagemApi.md#habilitarUsingPOST) | **POST** /api/avisos-viagens/{id}/habilitar | {{{aviso_viagem_resource_habilitar}}}
-[**listarUsingGET8**](GlobaltagavisoviagemApi.md#listarUsingGET8) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
+[**listarUsingGET9**](GlobaltagavisoviagemApi.md#listarUsingGET9) | **GET** /api/avisos-viagens | {{{aviso_viagem_resource_listar}}}
 [**salvarUsingPOST3**](GlobaltagavisoviagemApi.md#salvarUsingPOST3) | **POST** /api/avisos-viagens | {{{aviso_viagem_resource_salvar}}}
 
 
-<a name="consultarUsingGET7"></a>
-# **consultarUsingGET7**
-> AvisoViagemResponse consultarUsingGET7(id)
+<a name="consultarUsingGET8"></a>
+# **consultarUsingGET8**
+> AvisoViagemResponse consultarUsingGET8(id)
 
 {{{aviso_viagem_resource_consultar}}}
 
@@ -35,7 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET7(id, callback);
+api.consultarUsingGET8(id, callback);
 ```
 
 ### Parameters
@@ -149,9 +149,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET8"></a>
-# **listarUsingGET8**
-> PageAvisoViagemResponse listarUsingGET8(opts)
+<a name="listarUsingGET9"></a>
+# **listarUsingGET9**
+> PageAvisoViagemResponse listarUsingGET9(opts)
 
 {{{aviso_viagem_resource_listar}}}
 
@@ -181,7 +181,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET8(opts, callback);
+api.listarUsingGET9(opts, callback);
 ```
 
 ### Parameters

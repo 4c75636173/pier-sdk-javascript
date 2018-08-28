@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/LimiteDisponibilidadeResponse'], factory);
+    define(['../ApiClient', '../model/LimiteDisponibilidadeResponse', '../model/SensibilizarSaldoGlobalUpdateValue'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/LimiteDisponibilidadeResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/LimiteDisponibilidadeResponse'), require('../model/SensibilizarSaldoGlobalUpdateValue'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltaglimitedisponibilidadeApi = factory(root.Pier.ApiClient, root.Pier.LimiteDisponibilidadeResponse);
+    root.Pier.GlobaltaglimitedisponibilidadeApi = factory(root.Pier.ApiClient, root.Pier.LimiteDisponibilidadeResponse, root.Pier.SensibilizarSaldoGlobalUpdateValue);
   }
-}(this, function(ApiClient, LimiteDisponibilidadeResponse) {
+}(this, function(ApiClient, LimiteDisponibilidadeResponse, SensibilizarSaldoGlobalUpdateValue) {
   'use strict';
 
   /**
    * globaltaglimitedisponibilidade service.
    * @module api/GlobaltaglimitedisponibilidadeApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -107,8 +107,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET23 operation.
-     * @callback module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET23Callback
+     * Callback function to receive the result of the consultarUsingGET25 operation.
+     * @callback module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET25Callback
      * @param {String} error Error message, if any.
      * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -118,15 +118,15 @@
      * {{{limite_disponibilidade_resource_consultar}}}
      * {{{limite_disponibilidade_resource_consultar_notes}}}
      * @param {Integer} idConta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
-     * @param {module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltaglimitedisponibilidadeApi~consultarUsingGET25Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/LimiteDisponibilidadeResponse}
      */
-    this.consultarUsingGET23 = function(idConta, callback) {
+    this.consultarUsingGET25 = function(idConta, callback) {
       var postBody = null;
 
       // verify the required parameter 'idConta' is set
       if (idConta == undefined || idConta == null) {
-        throw "Missing the required parameter 'idConta' when calling consultarUsingGET23";
+        throw "Missing the required parameter 'idConta' when calling consultarUsingGET25";
       }
 
 
@@ -147,6 +147,58 @@
 
       return this.apiClient.callApi(
         '/api/limites-disponibilidades', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sensibilizarSaldoDisponivelGlobalUsingPOST operation.
+     * @callback module:api/GlobaltaglimitedisponibilidadeApi~sensibilizarSaldoDisponivelGlobalUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LimiteDisponibilidadeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+     * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+     * @param {Integer} id {{{sensibilizar_saldo_global_param_id}}}
+     * @param {module:model/SensibilizarSaldoGlobalUpdateValue} sensibilizarSaldoGlobal sensibilizarSaldoGlobal
+     * @param {module:api/GlobaltaglimitedisponibilidadeApi~sensibilizarSaldoDisponivelGlobalUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/LimiteDisponibilidadeResponse}
+     */
+    this.sensibilizarSaldoDisponivelGlobalUsingPOST = function(id, sensibilizarSaldoGlobal, callback) {
+      var postBody = sensibilizarSaldoGlobal;
+
+      // verify the required parameter 'id' is set
+      if (id == undefined || id == null) {
+        throw "Missing the required parameter 'id' when calling sensibilizarSaldoDisponivelGlobalUsingPOST";
+      }
+
+      // verify the required parameter 'sensibilizarSaldoGlobal' is set
+      if (sensibilizarSaldoGlobal == undefined || sensibilizarSaldoGlobal == null) {
+        throw "Missing the required parameter 'sensibilizarSaldoGlobal' when calling sensibilizarSaldoDisponivelGlobalUsingPOST";
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LimiteDisponibilidadeResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

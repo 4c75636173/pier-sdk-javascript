@@ -18,12 +18,11 @@
   /**
    * The PerfilResponse model module.
    * @module model/PerfilResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
    * Constructs a new <code>PerfilResponse</code>.
-   * {{{perfil_response_object_description}}}
    * @alias module:model/PerfilResponse
    * @class
    */

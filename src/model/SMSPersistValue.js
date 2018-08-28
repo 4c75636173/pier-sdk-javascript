@@ -18,7 +18,7 @@
   /**
    * The SMSPersistValue model module.
    * @module model/SMSPersistValue
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -146,7 +146,13 @@
      * value: OUTROS
      * @const
      */
-    OUTROS: "OUTROS"
+    OUTROS: "OUTROS",
+    
+    /**
+     * value: OTP_3D_SECURE
+     * @const
+     */
+    OTP_3D_SECURE: "OTP_3D_SECURE"
   };
 
   return exports;

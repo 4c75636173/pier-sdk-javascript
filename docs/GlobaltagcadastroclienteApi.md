@@ -12,26 +12,27 @@ Method | HTTP request | Description
 [**atribuirAssinaturaClienteUsingPOST**](GlobaltagcadastroclienteApi.md#atribuirAssinaturaClienteUsingPOST) | **POST** /api/contas/{id}/atribuir-assinatura-cliente | {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
 [**atualizarEnderecoDeCorrespondenciaUsingPUT**](GlobaltagcadastroclienteApi.md#atualizarEnderecoDeCorrespondenciaUsingPUT) | **PUT** /api/enderecos/{id}/alterar-endereco-correspondencia | {{{endereco_resource_atualizar_correspondencia}}}
 [**atualizarUsingPOST**](GlobaltagcadastroclienteApi.md#atualizarUsingPOST) | **POST** /api/contas/{id}/atualizar-registro-integracao | {{{integracao_emissor_resource_atualizar}}}
+[**cadastrarAdicionalUsingPOST**](GlobaltagcadastroclienteApi.md#cadastrarAdicionalUsingPOST) | **POST** /api/contas/{id}/adicionais | {{{adicional_resource_cadastrar_adicional}}}
 [**cadastrarUsingPOST1**](GlobaltagcadastroclienteApi.md#cadastrarUsingPOST1) | **POST** /api/contas/{id}/cadastrar-adicional | {{{adicional_resource_cadastrar}}}
-[**consultarUsingGET19**](GlobaltagcadastroclienteApi.md#consultarUsingGET19) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
 [**consultarUsingGET2**](GlobaltagcadastroclienteApi.md#consultarUsingGET2) | **GET** /api/contas/{id}/adicionais/{idPessoa} | {{{adicional_resource_consultar}}}
-[**consultarUsingGET30**](GlobaltagcadastroclienteApi.md#consultarUsingGET30) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
-[**consultarUsingGET31**](GlobaltagcadastroclienteApi.md#consultarUsingGET31) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
-[**consultarUsingGET39**](GlobaltagcadastroclienteApi.md#consultarUsingGET39) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
+[**consultarUsingGET21**](GlobaltagcadastroclienteApi.md#consultarUsingGET21) | **GET** /api/enderecos/{id} | {{{endereco_resource_consultar}}}
+[**consultarUsingGET32**](GlobaltagcadastroclienteApi.md#consultarUsingGET32) | **GET** /api/pessoas-detalhes/{id} | {{{pessoa_detalhe_resource_consultar}}}
+[**consultarUsingGET33**](GlobaltagcadastroclienteApi.md#consultarUsingGET33) | **GET** /api/pessoas/{id} | {{{pessoa_resource_consultar}}}
+[**consultarUsingGET41**](GlobaltagcadastroclienteApi.md#consultarUsingGET41) | **GET** /api/telefones/{id} | {{{telefone_resource_consultar}}}
 [**inativarUsingPOST**](GlobaltagcadastroclienteApi.md#inativarUsingPOST) | **POST** /api/contas/{id}/adicionais/{idPessoa}/inativar | {{{adicional_resource_inativar}}}
 [**listarSociosUsingGET**](GlobaltagcadastroclienteApi.md#listarSociosUsingGET) | **GET** /api/clientes-pessoas-juridicas/{id}/socios | {{{conta_pessoa_resource_listar_socios}}}
 [**listarUsingGET1**](GlobaltagcadastroclienteApi.md#listarUsingGET1) | **GET** /api/contas/{id}/adicionais | {{{adicional_resource_listar}}}
-[**listarUsingGET24**](GlobaltagcadastroclienteApi.md#listarUsingGET24) | **GET** /api/enderecos | {{{endereco_resource_listar}}}
-[**listarUsingGET38**](GlobaltagcadastroclienteApi.md#listarUsingGET38) | **GET** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_listar}}}
-[**listarUsingGET39**](GlobaltagcadastroclienteApi.md#listarUsingGET39) | **GET** /api/pessoas | {{{pessoa_resource_listar}}}
-[**listarUsingGET50**](GlobaltagcadastroclienteApi.md#listarUsingGET50) | **GET** /api/telefones | {{{telefone_resource_listar}}}
+[**listarUsingGET25**](GlobaltagcadastroclienteApi.md#listarUsingGET25) | **GET** /api/enderecos | {{{endereco_resource_listar}}}
+[**listarUsingGET40**](GlobaltagcadastroclienteApi.md#listarUsingGET40) | **GET** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_listar}}}
+[**listarUsingGET41**](GlobaltagcadastroclienteApi.md#listarUsingGET41) | **GET** /api/pessoas | {{{pessoa_resource_listar}}}
+[**listarUsingGET53**](GlobaltagcadastroclienteApi.md#listarUsingGET53) | **GET** /api/telefones | {{{telefone_resource_listar}}}
 [**salvarPessoaFisicaAprovadaUsingPOST**](GlobaltagcadastroclienteApi.md#salvarPessoaFisicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-fisicas | {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada}}}
 [**salvarPessoaJuridicaAprovadaUsingPOST**](GlobaltagcadastroclienteApi.md#salvarPessoaJuridicaAprovadaUsingPOST) | **POST** /api/clientes-pessoas-juridicas | {{{conta_pessoa_resource_salvar_pessoa_juridica_aprovada}}}
-[**salvarUsingPOST13**](GlobaltagcadastroclienteApi.md#salvarUsingPOST13) | **POST** /api/enderecos | {{{endereco_resource_salvar}}}
-[**salvarUsingPOST16**](GlobaltagcadastroclienteApi.md#salvarUsingPOST16) | **POST** /api/contas/{id}/incluir-registro-integracao | {{{integracao_emissor_resource_salvar}}}
-[**salvarUsingPOST24**](GlobaltagcadastroclienteApi.md#salvarUsingPOST24) | **POST** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_salvar}}}
-[**salvarUsingPOST25**](GlobaltagcadastroclienteApi.md#salvarUsingPOST25) | **POST** /api/pessoas | {{{pessoa_resource_salvar}}}
-[**salvarUsingPOST28**](GlobaltagcadastroclienteApi.md#salvarUsingPOST28) | **POST** /api/telefones | {{{telefone_resource_salvar}}}
+[**salvarUsingPOST14**](GlobaltagcadastroclienteApi.md#salvarUsingPOST14) | **POST** /api/enderecos | {{{endereco_resource_salvar}}}
+[**salvarUsingPOST17**](GlobaltagcadastroclienteApi.md#salvarUsingPOST17) | **POST** /api/contas/{id}/incluir-registro-integracao | {{{integracao_emissor_resource_salvar}}}
+[**salvarUsingPOST25**](GlobaltagcadastroclienteApi.md#salvarUsingPOST25) | **POST** /api/pessoas-detalhes | {{{pessoa_detalhe_resource_salvar}}}
+[**salvarUsingPOST26**](GlobaltagcadastroclienteApi.md#salvarUsingPOST26) | **POST** /api/pessoas | {{{pessoa_resource_salvar}}}
+[**salvarUsingPOST29**](GlobaltagcadastroclienteApi.md#salvarUsingPOST29) | **POST** /api/telefones | {{{telefone_resource_salvar}}}
 
 
 <a name="alterarUsingPUT"></a>
@@ -499,6 +500,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="cadastrarAdicionalUsingPOST"></a>
+# **cadastrarAdicionalUsingPOST**
+> AdicionalContaResponse cadastrarAdicionalUsingPOST(id, adicionalContaPersist)
+
+{{{adicional_resource_cadastrar_adicional}}}
+
+{{{adicional_resource_cadastrar_adicional_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcadastroclienteApi()
+
+var id = 789; // {Integer} {{{adicional_resource_cadastrar_adicional_param_id_conta}}}
+
+var adicionalContaPersist = new Pier.AdicionalContaPersist(); // {AdicionalContaPersist} adicionalContaPersist
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.cadastrarAdicionalUsingPOST(id, adicionalContaPersist, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{adicional_resource_cadastrar_adicional_param_id_conta}}} | 
+ **adicionalContaPersist** | [**AdicionalContaPersist**](AdicionalContaPersist.md)| adicionalContaPersist | 
+
+### Return type
+
+[**AdicionalContaResponse**](AdicionalContaResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="cadastrarUsingPOST1"></a>
 # **cadastrarUsingPOST1**
 > AdicionalDetalheResponse cadastrarUsingPOST1(id, persist)
@@ -538,52 +588,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AdicionalDetalheResponse**](AdicionalDetalheResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="consultarUsingGET19"></a>
-# **consultarUsingGET19**
-> EnderecoResponse consultarUsingGET19(id)
-
-{{{endereco_resource_consultar}}}
-
-{{{endereco_resource_consultar_notes}}}
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.GlobaltagcadastroclienteApi()
-
-var id = 789; // {Integer} {{{endereco_resource_consultar_param_id}}}
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.consultarUsingGET19(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
-
-### Return type
-
-[**EnderecoResponse**](EnderecoResponse.md)
 
 ### Authorization
 
@@ -643,9 +647,55 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET30"></a>
-# **consultarUsingGET30**
-> PessoaDetalheResponse consultarUsingGET30(id)
+<a name="consultarUsingGET21"></a>
+# **consultarUsingGET21**
+> EnderecoResponse consultarUsingGET21(id)
+
+{{{endereco_resource_consultar}}}
+
+{{{endereco_resource_consultar_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcadastroclienteApi()
+
+var id = 789; // {Integer} {{{endereco_resource_consultar_param_id}}}
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.consultarUsingGET21(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{endereco_resource_consultar_param_id}}} | 
+
+### Return type
+
+[**EnderecoResponse**](EnderecoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="consultarUsingGET32"></a>
+# **consultarUsingGET32**
+> PessoaDetalheResponse consultarUsingGET32(id)
 
 {{{pessoa_detalhe_resource_consultar}}}
 
@@ -667,7 +717,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET30(id, callback);
+api.consultarUsingGET32(id, callback);
 ```
 
 ### Parameters
@@ -689,9 +739,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET31"></a>
-# **consultarUsingGET31**
-> PessoaResponse consultarUsingGET31(id)
+<a name="consultarUsingGET33"></a>
+# **consultarUsingGET33**
+> PessoaResponse consultarUsingGET33(id)
 
 {{{pessoa_resource_consultar}}}
 
@@ -713,7 +763,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET31(id, callback);
+api.consultarUsingGET33(id, callback);
 ```
 
 ### Parameters
@@ -735,9 +785,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET39"></a>
-# **consultarUsingGET39**
-> TelefoneResponse consultarUsingGET39(id)
+<a name="consultarUsingGET41"></a>
+# **consultarUsingGET41**
+> TelefoneResponse consultarUsingGET41(id)
 
 {{{telefone_resource_consultar}}}
 
@@ -759,7 +809,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET39(id, callback);
+api.consultarUsingGET41(id, callback);
 ```
 
 ### Parameters
@@ -938,9 +988,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET24"></a>
-# **listarUsingGET24**
-> PageEnderecoResponse listarUsingGET24(opts)
+<a name="listarUsingGET25"></a>
+# **listarUsingGET25**
+> PageEnderecoResponse listarUsingGET25(opts)
 
 {{{endereco_resource_listar}}}
 
@@ -979,7 +1029,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET24(opts, callback);
+api.listarUsingGET25(opts, callback);
 ```
 
 ### Parameters
@@ -1017,9 +1067,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET38"></a>
-# **listarUsingGET38**
-> PagePessoaDetalheResponse listarUsingGET38(opts)
+<a name="listarUsingGET40"></a>
+# **listarUsingGET40**
+> PagePessoaDetalheResponse listarUsingGET40(opts)
 
 {{{pessoa_detalhe_resource_listar}}}
 
@@ -1055,7 +1105,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET38(opts, callback);
+api.listarUsingGET40(opts, callback);
 ```
 
 ### Parameters
@@ -1090,9 +1140,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET39"></a>
-# **listarUsingGET39**
-> PagePessoaResponse listarUsingGET39(opts)
+<a name="listarUsingGET41"></a>
+# **listarUsingGET41**
+> PagePessoaResponse listarUsingGET41(opts)
 
 {{{pessoa_resource_listar}}}
 
@@ -1128,7 +1178,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET39(opts, callback);
+api.listarUsingGET41(opts, callback);
 ```
 
 ### Parameters
@@ -1163,9 +1213,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET50"></a>
-# **listarUsingGET50**
-> PageTelefoneResponse listarUsingGET50(opts)
+<a name="listarUsingGET53"></a>
+# **listarUsingGET53**
+> PageTelefoneResponse listarUsingGET53(opts)
 
 {{{telefone_resource_listar}}}
 
@@ -1197,7 +1247,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET50(opts, callback);
+api.listarUsingGET53(opts, callback);
 ```
 
 ### Parameters
@@ -1320,9 +1370,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST13"></a>
-# **salvarUsingPOST13**
-> EnderecoResponse salvarUsingPOST13(opts)
+<a name="salvarUsingPOST14"></a>
+# **salvarUsingPOST14**
+> EnderecoResponse salvarUsingPOST14(opts)
 
 {{{endereco_resource_salvar}}}
 
@@ -1355,7 +1405,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST13(opts, callback);
+api.salvarUsingPOST14(opts, callback);
 ```
 
 ### Parameters
@@ -1387,9 +1437,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST16"></a>
-# **salvarUsingPOST16**
-> IntegracaoEmissorResponse salvarUsingPOST16(id, opts)
+<a name="salvarUsingPOST17"></a>
+# **salvarUsingPOST17**
+> IntegracaoEmissorResponse salvarUsingPOST17(id, opts)
 
 {{{integracao_emissor_resource_salvar}}}
 
@@ -1414,7 +1464,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST16(id, opts, callback);
+api.salvarUsingPOST17(id, opts, callback);
 ```
 
 ### Parameters
@@ -1437,9 +1487,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST24"></a>
-# **salvarUsingPOST24**
-> PessoaDetalheResponse salvarUsingPOST24(idPessoa, opts)
+<a name="salvarUsingPOST25"></a>
+# **salvarUsingPOST25**
+> PessoaDetalheResponse salvarUsingPOST25(idPessoa, opts)
 
 {{{pessoa_detalhe_resource_salvar}}}
 
@@ -1473,7 +1523,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST24(idPessoa, opts, callback);
+api.salvarUsingPOST25(idPessoa, opts, callback);
 ```
 
 ### Parameters
@@ -1505,9 +1555,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST25"></a>
-# **salvarUsingPOST25**
-> PessoaResponse salvarUsingPOST25(nome, tipo, dataNascimento, opts)
+<a name="salvarUsingPOST26"></a>
+# **salvarUsingPOST26**
+> PessoaResponse salvarUsingPOST26(nome, tipo, dataNascimento, opts)
 
 {{{pessoa_resource_salvar}}}
 
@@ -1542,7 +1592,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST25(nome, tipo, dataNascimento, opts, callback);
+api.salvarUsingPOST26(nome, tipo, dataNascimento, opts, callback);
 ```
 
 ### Parameters
@@ -1573,9 +1623,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST28"></a>
-# **salvarUsingPOST28**
-> TelefoneResponse salvarUsingPOST28(opts)
+<a name="salvarUsingPOST29"></a>
+# **salvarUsingPOST29**
+> TelefoneResponse salvarUsingPOST29(opts)
 
 {{{telefone_resource_salvar}}}
 
@@ -1602,7 +1652,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST28(opts, callback);
+api.salvarUsingPOST29(opts, callback);
 ```
 
 ### Parameters

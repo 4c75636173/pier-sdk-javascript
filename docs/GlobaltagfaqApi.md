@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adicionarUsingPOST**](GlobaltagfaqApi.md#adicionarUsingPOST) | **POST** /api/faqs | {{{faq_resource_adicionar}}}
 [**alterarUsingPUT7**](GlobaltagfaqApi.md#alterarUsingPUT7) | **PUT** /api/faqs/{id} | {{{faq_resource_alterar}}}
-[**consultarUsingGET21**](GlobaltagfaqApi.md#consultarUsingGET21) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
-[**listarUsingGET26**](GlobaltagfaqApi.md#listarUsingGET26) | **GET** /api/faqs | {{{faq_resource_listar}}}
+[**consultarUsingGET23**](GlobaltagfaqApi.md#consultarUsingGET23) | **GET** /api/faqs/{id} | {{{faq_resource_consultar}}}
+[**listarUsingGET27**](GlobaltagfaqApi.md#listarUsingGET27) | **GET** /api/faqs | {{{faq_resource_listar}}}
 
 
 <a name="adicionarUsingPOST"></a>
@@ -131,9 +131,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET21"></a>
-# **consultarUsingGET21**
-> FaqResponse consultarUsingGET21(id)
+<a name="consultarUsingGET23"></a>
+# **consultarUsingGET23**
+> FaqResponse consultarUsingGET23(id)
 
 {{{faq_resource_consultar}}}
 
@@ -155,7 +155,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET21(id, callback);
+api.consultarUsingGET23(id, callback);
 ```
 
 ### Parameters
@@ -177,9 +177,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET26"></a>
-# **listarUsingGET26**
-> PageFaqResponse listarUsingGET26(opts)
+<a name="listarUsingGET27"></a>
+# **listarUsingGET27**
+> PageFaqResponse listarUsingGET27(opts)
 
 {{{faq_resource_listar}}}
 
@@ -211,7 +211,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET26(opts, callback);
+api.listarUsingGET27(opts, callback);
 ```
 
 ### Parameters

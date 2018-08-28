@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AjusteFinanceiroResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/AdesaoPagamentoSabadoResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/ContaDetalheResponse', '../model/TransferenciaDetalheResponse', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageContaResponse', '../model/PageTransacaoProcessadaNaoProcessadaResponse', '../model/PageTransferenciaResponse', '../model/ContaPersistValue', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse'], factory);
+    define(['../ApiClient', '../model/AjusteFinanceiroResponse', '../model/AlterarProdutoRequest', '../model/ContaResponse', '../model/AdesaoPagamentoSabadoResponse', '../model/BeneficioPagamentoAtrasoResponse', '../model/BoletoResponse', '../model/DividaClienteResponse', '../model/PageTaxasRefinanciamentoResponse', '../model/ContaDetalheResponse', '../model/TransferenciaDetalheResponse', '../model/ContaMultiAppResponse', '../model/ContaMultiAppPersistValue', '../model/CartaoEmbossingResponse', '../model/CartaoEmbossingRequest', '../model/CartaoImpressaoProvisorioResponse', '../model/CartaoImpressaoResponse', '../model/PageHistoricoEventosResponse', '../model/PageHistoricoAssessoriaResponse', '../model/PageHistoricoAtrasoFaturaResponse', '../model/PageTransacaoNaoProcessadaResponse', '../model/PageTransacoesCorrentesResponse', '../model/PageContaResponse', '../model/PageTransacaoProcessadaNaoProcessadaResponse', '../model/PageTransferenciaResponse', '../model/ContaPersistValue', '../model/EmprestimoPessoalRequest', '../model/EmprestimoPessoalResponse', '../model/PageTransacaoResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AjusteFinanceiroResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/AdesaoPagamentoSabadoResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/ContaDetalheResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageContaResponse'), require('../model/PageTransacaoProcessadaNaoProcessadaResponse'), require('../model/PageTransferenciaResponse'), require('../model/ContaPersistValue'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AjusteFinanceiroResponse'), require('../model/AlterarProdutoRequest'), require('../model/ContaResponse'), require('../model/AdesaoPagamentoSabadoResponse'), require('../model/BeneficioPagamentoAtrasoResponse'), require('../model/BoletoResponse'), require('../model/DividaClienteResponse'), require('../model/PageTaxasRefinanciamentoResponse'), require('../model/ContaDetalheResponse'), require('../model/TransferenciaDetalheResponse'), require('../model/ContaMultiAppResponse'), require('../model/ContaMultiAppPersistValue'), require('../model/CartaoEmbossingResponse'), require('../model/CartaoEmbossingRequest'), require('../model/CartaoImpressaoProvisorioResponse'), require('../model/CartaoImpressaoResponse'), require('../model/PageHistoricoEventosResponse'), require('../model/PageHistoricoAssessoriaResponse'), require('../model/PageHistoricoAtrasoFaturaResponse'), require('../model/PageTransacaoNaoProcessadaResponse'), require('../model/PageTransacoesCorrentesResponse'), require('../model/PageContaResponse'), require('../model/PageTransacaoProcessadaNaoProcessadaResponse'), require('../model/PageTransferenciaResponse'), require('../model/ContaPersistValue'), require('../model/EmprestimoPessoalRequest'), require('../model/EmprestimoPessoalResponse'), require('../model/PageTransacaoResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagcontaApi = factory(root.Pier.ApiClient, root.Pier.AjusteFinanceiroResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.AdesaoPagamentoSabadoResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.ContaDetalheResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageContaResponse, root.Pier.PageTransacaoProcessadaNaoProcessadaResponse, root.Pier.PageTransferenciaResponse, root.Pier.ContaPersistValue, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse);
+    root.Pier.GlobaltagcontaApi = factory(root.Pier.ApiClient, root.Pier.AjusteFinanceiroResponse, root.Pier.AlterarProdutoRequest, root.Pier.ContaResponse, root.Pier.AdesaoPagamentoSabadoResponse, root.Pier.BeneficioPagamentoAtrasoResponse, root.Pier.BoletoResponse, root.Pier.DividaClienteResponse, root.Pier.PageTaxasRefinanciamentoResponse, root.Pier.ContaDetalheResponse, root.Pier.TransferenciaDetalheResponse, root.Pier.ContaMultiAppResponse, root.Pier.ContaMultiAppPersistValue, root.Pier.CartaoEmbossingResponse, root.Pier.CartaoEmbossingRequest, root.Pier.CartaoImpressaoProvisorioResponse, root.Pier.CartaoImpressaoResponse, root.Pier.PageHistoricoEventosResponse, root.Pier.PageHistoricoAssessoriaResponse, root.Pier.PageHistoricoAtrasoFaturaResponse, root.Pier.PageTransacaoNaoProcessadaResponse, root.Pier.PageTransacoesCorrentesResponse, root.Pier.PageContaResponse, root.Pier.PageTransacaoProcessadaNaoProcessadaResponse, root.Pier.PageTransferenciaResponse, root.Pier.ContaPersistValue, root.Pier.EmprestimoPessoalRequest, root.Pier.EmprestimoPessoalResponse, root.Pier.PageTransacaoResponse);
   }
-}(this, function(ApiClient, AjusteFinanceiroResponse, AlterarProdutoRequest, ContaResponse, AdesaoPagamentoSabadoResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, PageTaxasRefinanciamentoResponse, ContaDetalheResponse, TransferenciaDetalheResponse, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageTransacoesCorrentesResponse, PageContaResponse, PageTransacaoProcessadaNaoProcessadaResponse, PageTransferenciaResponse, ContaPersistValue, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse) {
+}(this, function(ApiClient, AjusteFinanceiroResponse, AlterarProdutoRequest, ContaResponse, AdesaoPagamentoSabadoResponse, BeneficioPagamentoAtrasoResponse, BoletoResponse, DividaClienteResponse, PageTaxasRefinanciamentoResponse, ContaDetalheResponse, TransferenciaDetalheResponse, ContaMultiAppResponse, ContaMultiAppPersistValue, CartaoEmbossingResponse, CartaoEmbossingRequest, CartaoImpressaoProvisorioResponse, CartaoImpressaoResponse, PageHistoricoEventosResponse, PageHistoricoAssessoriaResponse, PageHistoricoAtrasoFaturaResponse, PageTransacaoNaoProcessadaResponse, PageTransacoesCorrentesResponse, PageContaResponse, PageTransacaoProcessadaNaoProcessadaResponse, PageTransferenciaResponse, ContaPersistValue, EmprestimoPessoalRequest, EmprestimoPessoalResponse, PageTransacaoResponse) {
   'use strict';
 
   /**
    * globaltagconta service.
    * @module api/GlobaltagcontaApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -48,7 +48,6 @@
      * @param {String} dataAjuste {{{ajuste_persist_data_ajuste_value}}}
      * @param {Number} valorAjuste {{{ajuste_persist_valor_ajuste_value}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {String} opts.identificadorExterno {{{ajuste_persist_identificador_externo_value}}}
      * @param {Integer} opts.idTransacaoOriginal {{{ajuste_persist_id_transacao_original}}}
      * @param {module:api/GlobaltagcontaApi~ajustarContaUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
@@ -90,7 +89,6 @@
         'idTransacaoOriginal': opts['idTransacaoOriginal']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -120,13 +118,10 @@
      * {{{conta_resource_alterar_produto_notes}}}
      * @param {Integer} id {{{conta_resource_alterar_produto_param_id}}}
      * @param {module:model/AlterarProdutoRequest} request request
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~alterarProdutoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.alterarProdutoUsingPOST = function(id, request, opts, callback) {
-      opts = opts || {};
+    this.alterarProdutoUsingPOST = function(id, request, callback) {
       var postBody = request;
 
       // verify the required parameter 'id' is set
@@ -146,7 +141,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -176,13 +170,10 @@
      * {{{conta_resource_alterar_titular_notes}}}
      * @param {Integer} id {{{conta_resource_alterar_titular_param_id_conta}}}
      * @param {Integer} idPessoa {{{conta_resource_alterar_titular_param_id_pessoa}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~alterarTitularUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.alterarTitularUsingPOST = function(id, idPessoa, opts, callback) {
-      opts = opts || {};
+    this.alterarTitularUsingPOST = function(id, idPessoa, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -203,7 +194,6 @@
         'id_pessoa': idPessoa
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -233,13 +223,10 @@
      * {{{conta_resource_alterar_vencimento_notes}}}
      * @param {Integer} id {{{conta_resource_alterar_vencimento_param_id}}}
      * @param {Integer} novoDiaVencimento {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~alterarVencimentoUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.alterarVencimentoUsingPUT = function(id, novoDiaVencimento, opts, callback) {
-      opts = opts || {};
+    this.alterarVencimentoUsingPUT = function(id, novoDiaVencimento, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -260,7 +247,6 @@
         'novo_dia_vencimento': novoDiaVencimento
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -291,7 +277,6 @@
      * @param {Integer} id {{{conta_resource_ativar_anuidade_param_id}}}
      * @param {Integer} idAnuidade {{{anuidade_request_id_anuidade_value}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -331,7 +316,6 @@
         'idOrigemComercial': opts['idOrigemComercial']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -360,13 +344,10 @@
      * {{{conta_resource_ativar_envio_fatura_email}}}
      * {{{conta_resource_ativar_envio_fatura_email_notes}}}
      * @param {Integer} id {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~ativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.ativarEnvioFaturaEmailUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.ativarEnvioFaturaEmailUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -381,7 +362,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -411,13 +391,10 @@
      * {{{conta_resource_bloquear_notes}}}
      * @param {Integer} id {{{conta_resource_bloquear_param_id}}}
      * @param {Integer} idStatus {{{conta_resource_bloquear_param_id_status}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~bloquearUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.bloquearUsingPOST1 = function(id, idStatus, opts, callback) {
-      opts = opts || {};
+    this.bloquearUsingPOST1 = function(id, idStatus, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -438,7 +415,6 @@
         'id_status': idStatus
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -514,13 +490,10 @@
      * {{{conta_resource_cancelar_notes}}}
      * @param {Integer} id {{{conta_resource_cancelar_param_id}}}
      * @param {Integer} idStatus {{{conta_resource_cancelar_param_id_status}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~cancelarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.cancelarUsingPOST1 = function(id, idStatus, opts, callback) {
-      opts = opts || {};
+    this.cancelarUsingPOST1 = function(id, idStatus, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -541,7 +514,6 @@
         'id_status': idStatus
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -570,13 +542,10 @@
      * {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
      * {{{conta_resource_consultar_beneficio_pagamento_atraso_notes}}}
      * @param {Integer} id {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~consultarBeneficioPagamentoAtrasoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BeneficioPagamentoAtrasoResponse}
      */
-    this.consultarBeneficioPagamentoAtrasoUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarBeneficioPagamentoAtrasoUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -591,7 +560,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -620,13 +588,10 @@
      * {{{conta_resource_consultar_boleto_emitido}}}
      * {{{conta_resource_consultar_boleto_emitido_notes}}}
      * @param {Integer} id {{{conta_resource_consultar_boleto_emitido_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~consultarBoletoEmitidoUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BoletoResponse}
      */
-    this.consultarBoletoEmitidoUsingGET = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarBoletoEmitidoUsingGET = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -641,7 +606,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -671,7 +635,6 @@
      * {{{conta_resource_consultar_divida_atualizada_cliente_notes}}}
      * @param {Integer} id {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -701,7 +664,6 @@
         'idEscritorioCobranca': opts['idEscritorioCobranca']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -731,7 +693,6 @@
      * {{{conta_resource_consultar_taxas_tarifas_notes}}}
      * @param {Integer} id {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -757,7 +718,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -828,8 +788,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET14 operation.
-     * @callback module:api/GlobaltagcontaApi~consultarUsingGET14Callback
+     * Callback function to receive the result of the consultarUsingGET16 operation.
+     * @callback module:api/GlobaltagcontaApi~consultarUsingGET16Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -839,18 +799,15 @@
      * {{{conta_resource_consultar}}}
      * {{{conta_resource_consultar_notes}}}
      * @param {Integer} id {{{conta_resource_consultar_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
-     * @param {module:api/GlobaltagcontaApi~consultarUsingGET14Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~consultarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaDetalheResponse}
      */
-    this.consultarUsingGET14 = function(id, opts, callback) {
-      opts = opts || {};
+    this.consultarUsingGET16 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET14";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET16";
       }
 
 
@@ -860,7 +817,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -878,8 +834,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET49 operation.
-     * @callback module:api/GlobaltagcontaApi~consultarUsingGET49Callback
+     * Callback function to receive the result of the consultarUsingGET51 operation.
+     * @callback module:api/GlobaltagcontaApi~consultarUsingGET51Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaDetalheResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -890,20 +846,20 @@
      * {{{transferencia_resource_consultar_notes}}}
      * @param {Integer} id {{{transferencia_resource_consultar_param_id_conta}}}
      * @param {Integer} idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
-     * @param {module:api/GlobaltagcontaApi~consultarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~consultarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaDetalheResponse}
      */
-    this.consultarUsingGET49 = function(id, idTransferencia, callback) {
+    this.consultarUsingGET51 = function(id, idTransferencia, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET49";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET51";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET49";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET51";
       }
 
 
@@ -931,6 +887,51 @@
     }
 
     /**
+     * Callback function to receive the result of the criarContasMultiAppUsingPOST operation.
+     * @callback module:api/GlobaltagcontaApi~criarContasMultiAppUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContaMultiAppResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{conta_resource_cadastrar_conta_multiapp}}}
+     * {{{conta_resource_cadastrar_conta_multiapp_notes}}}
+     * @param {module:model/ContaMultiAppPersistValue} contaMultiAppPersist contaMultiAppPersist
+     * @param {module:api/GlobaltagcontaApi~criarContasMultiAppUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/ContaMultiAppResponse}
+     */
+    this.criarContasMultiAppUsingPOST = function(contaMultiAppPersist, callback) {
+      var postBody = contaMultiAppPersist;
+
+      // verify the required parameter 'contaMultiAppPersist' is set
+      if (contaMultiAppPersist == undefined || contaMultiAppPersist == null) {
+        throw "Missing the required parameter 'contaMultiAppPersist' when calling criarContasMultiAppUsingPOST";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ContaMultiAppResponse;
+
+      return this.apiClient.callApi(
+        '/api/contas/cadastrar-conta-multiapp', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the desativarEnvioFaturaEmailUsingPOST operation.
      * @callback module:api/GlobaltagcontaApi~desativarEnvioFaturaEmailUsingPOSTCallback
      * @param {String} error Error message, if any.
@@ -942,13 +943,10 @@
      * {{{conta_resource_desativar_envio_fatura_email}}}
      * {{{conta_resource_desativar_envio_fatura_email_notes}}}
      * @param {Integer} id {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~desativarEnvioFaturaEmailUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.desativarEnvioFaturaEmailUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.desativarEnvioFaturaEmailUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -963,7 +961,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -994,13 +991,10 @@
      * @param {Integer} id {{{conta_resource_gerar_boleto_recarga_param_id}}}
      * @param {Number} valor {{{boleto_recarga_request_valor_value}}}
      * @param {String} dataVencimento {{{boleto_recarga_request_data_vencimento_value}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~gerarBoletoRecargaUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/BoletoResponse}
      */
-    this.gerarBoletoRecargaUsingPOST = function(id, valor, dataVencimento, opts, callback) {
-      opts = opts || {};
+    this.gerarBoletoRecargaUsingPOST = function(id, valor, dataVencimento, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1027,7 +1021,6 @@
         'dataVencimento': dataVencimento
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1057,13 +1050,10 @@
      * {{{conta_resource_gerar_cartao_embossing_notes}}}
      * @param {Integer} id {{{conta_resource_gerar_cartao_embossing_param_id}}}
      * @param {module:model/CartaoEmbossingRequest} cartaoEmbossingRequest cartaoEmbossingRequest
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~gerarCartaoEmbossingUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoEmbossingResponse}
      */
-    this.gerarCartaoEmbossingUsingPOST = function(id, cartaoEmbossingRequest, opts, callback) {
-      opts = opts || {};
+    this.gerarCartaoEmbossingUsingPOST = function(id, cartaoEmbossingRequest, callback) {
       var postBody = cartaoEmbossingRequest;
 
       // verify the required parameter 'id' is set
@@ -1083,7 +1073,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1112,13 +1101,10 @@
      * {{{conta_resource_gerar_cartao_provisorio}}}
      * {{{conta_resource_gerar_cartao_provisorio_notes}}}
      * @param {Integer} id {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~gerarCartaoProvisorioUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoImpressaoProvisorioResponse}
      */
-    this.gerarCartaoProvisorioUsingPOST = function(id, opts, callback) {
-      opts = opts || {};
+    this.gerarCartaoProvisorioUsingPOST = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1133,7 +1119,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1164,7 +1149,6 @@
      * @param {Integer} id {{{conta_resource_gerar_cartao_param_id}}}
      * @param {Integer} idPessoa {{{conta_resource_gerar_cartao_param_id_pessoa}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Integer} opts.idTipoPlastico {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}}
      * @param {module:api/GlobaltagcontaApi~gerarCartaoUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoImpressaoResponse}
@@ -1192,7 +1176,6 @@
         'id_tipo_plastico': opts['idTipoPlastico']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1222,13 +1205,10 @@
      * {{{conta_resource_gerar_cartao_virtual_notes}}}
      * @param {Integer} id {{{conta_resource_gerar_cartao_virtual_param_id}}}
      * @param {String} dataValidade {{{conta_resource_gerar_cartao_virtual_param_data_validade}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~gerarCartaoVirtualUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/CartaoImpressaoResponse}
      */
-    this.gerarCartaoVirtualUsingPOST = function(id, dataValidade, opts, callback) {
-      opts = opts || {};
+    this.gerarCartaoVirtualUsingPOST = function(id, dataValidade, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1249,7 +1229,6 @@
         'dataValidade': dataValidade
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1279,7 +1258,6 @@
      * {{{conta_resource_listar_historico_alteracoes_limites_notes}}}
      * @param {Integer} id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1305,7 +1283,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1335,7 +1312,6 @@
      * {{{conta_resource_listar_historico_assessoria_notes}}}
      * @param {Integer} id {{{conta_resource_listar_historico_assessoria_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1361,7 +1337,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1391,7 +1366,6 @@
      * {{{conta_resource_listar_historico_atrasos_faturas_notes}}}
      * @param {Integer} id {{{conta_resource_listar_historico_atrasos_faturas_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1417,7 +1391,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1557,8 +1530,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET18 operation.
-     * @callback module:api/GlobaltagcontaApi~listarUsingGET18Callback
+     * Callback function to receive the result of the listarUsingGET19 operation.
+     * @callback module:api/GlobaltagcontaApi~listarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1568,7 +1541,6 @@
      * {{{conta_resource_listar}}}
      * {{{conta_resource_listar_notes}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1581,10 +1553,10 @@
      * @param {String} opts.dataStatusConta {{{conta_request_data_status_conta_value}}}
      * @param {String} opts.dataCadastro {{{conta_request_data_cadastro_value}}}
      * @param {String} opts.dataUltimaAlteracaoVencimento {{{conta_request_data_ultima_alteracao_vencimento_value}}}
-     * @param {module:api/GlobaltagcontaApi~listarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~listarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaResponse}
      */
-    this.listarUsingGET18 = function(opts, callback) {
+    this.listarUsingGET19 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -1606,7 +1578,6 @@
         'dataUltimaAlteracaoVencimento': opts['dataUltimaAlteracaoVencimento']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1624,8 +1595,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET58 operation.
-     * @callback module:api/GlobaltagcontaApi~listarUsingGET58Callback
+     * Callback function to receive the result of the listarUsingGET61 operation.
+     * @callback module:api/GlobaltagcontaApi~listarUsingGET61Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransacaoProcessadaNaoProcessadaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1643,16 +1614,16 @@
      * @param {String} opts.dataInicio {{{transacoes_processadas_request_data_inicio_value}}}
      * @param {String} opts.dataFim {{{transacoes_processadas_request_data_fim_value}}}
      * @param {Integer} opts.idTipoTransacao {{{transacoes_processadas_request_tipo_transacao}}}
-     * @param {module:api/GlobaltagcontaApi~listarUsingGET58Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~listarUsingGET61Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransacaoProcessadaNaoProcessadaResponse}
      */
-    this.listarUsingGET58 = function(id, opts, callback) {
+    this.listarUsingGET61 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET58";
+        throw "Missing the required parameter 'id' when calling listarUsingGET61";
       }
 
 
@@ -1686,8 +1657,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET60 operation.
-     * @callback module:api/GlobaltagcontaApi~listarUsingGET60Callback
+     * Callback function to receive the result of the listarUsingGET63 operation.
+     * @callback module:api/GlobaltagcontaApi~listarUsingGET63Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1706,16 +1677,16 @@
      * @param {Integer} opts.idContaDestino {{{transferencia_request_id_conta_destino_value}}}
      * @param {Number} opts.valorTransferencia {{{transferencia_request_valor_transferencia_value}}}
      * @param {String} opts.dataTransferencia {{{transferencia_request_data_transferencia_value}}}
-     * @param {module:api/GlobaltagcontaApi~listarUsingGET60Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~listarUsingGET63Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaResponse}
      */
-    this.listarUsingGET60 = function(id, opts, callback) {
+    this.listarUsingGET63 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET60";
+        throw "Missing the required parameter 'id' when calling listarUsingGET63";
       }
 
 
@@ -1761,13 +1732,10 @@
      * {{{conta_resource_reativar}}}
      * {{{conta_resource_reativar_notes}}}
      * @param {Integer} id {{{conta_resource_reativar_param_id}}}
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {module:api/GlobaltagcontaApi~reativarUsingPOST1Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {Object}
      */
-    this.reativarUsingPOST1 = function(id, opts, callback) {
-      opts = opts || {};
+    this.reativarUsingPOST1 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
@@ -1782,7 +1750,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1800,8 +1767,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST8 operation.
-     * @callback module:api/GlobaltagcontaApi~salvarUsingPOST8Callback
+     * Callback function to receive the result of the salvarUsingPOST9 operation.
+     * @callback module:api/GlobaltagcontaApi~salvarUsingPOST9Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -1811,18 +1778,15 @@
      * {{{conta_resource_salvar}}}
      * {{{conta_resource_salvar_notes}}}
      * @param {module:model/ContaPersistValue} contaPersist contaPersist
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
-     * @param {module:api/GlobaltagcontaApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagcontaApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaResponse}
      */
-    this.salvarUsingPOST8 = function(contaPersist, opts, callback) {
-      opts = opts || {};
+    this.salvarUsingPOST9 = function(contaPersist, callback) {
       var postBody = contaPersist;
 
       // verify the required parameter 'contaPersist' is set
       if (contaPersist == undefined || contaPersist == null) {
-        throw "Missing the required parameter 'contaPersist' when calling salvarUsingPOST8";
+        throw "Missing the required parameter 'contaPersist' when calling salvarUsingPOST9";
       }
 
 
@@ -1831,7 +1795,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
@@ -1913,7 +1876,6 @@
      * {{{conta_resource_transacoes_notes}}}
      * @param {Integer} id {{{conta_resource_transacoes_param_id}}}
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization Authorization
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
@@ -1939,7 +1901,6 @@
         'limit': opts['limit']
       };
       var headerParams = {
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };

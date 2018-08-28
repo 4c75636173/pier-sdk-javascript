@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**consultarTaxaAntecipacaoUsingGET**](GlobaltagantecipacaoApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
 [**efetivarAntecipacaoUsingPOST**](GlobaltagantecipacaoApi.md#efetivarAntecipacaoUsingPOST) | **POST** /api/compras-antecipaveis/{id}/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacao}}}
 [**efetivarAntecipacoesUsingPOST**](GlobaltagantecipacaoApi.md#efetivarAntecipacoesUsingPOST) | **POST** /api/compras-antecipaveis/efetivar-antecipacao | {{{compra_antecipavel_resource_efetivar_antecipacoes}}}
-[**listarUsingGET13**](GlobaltagantecipacaoApi.md#listarUsingGET13) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
+[**listarUsingGET14**](GlobaltagantecipacaoApi.md#listarUsingGET14) | **GET** /api/compras-antecipaveis | {{{compra_antecipavel_resource_listar}}}
 [**simularAntecipacaoUsingGET**](GlobaltagantecipacaoApi.md#simularAntecipacaoUsingGET) | **GET** /api/compras-antecipaveis/{id}/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacao}}}
 [**simularAntecipacoesUsingGET**](GlobaltagantecipacaoApi.md#simularAntecipacoesUsingGET) | **GET** /api/compras-antecipaveis/simular-antecipacao | {{{compra_antecipavel_resource_simular_antecipacoes}}}
 
@@ -217,9 +217,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET13"></a>
-# **listarUsingGET13**
-> PageCompraResponse listarUsingGET13(idConta, opts)
+<a name="listarUsingGET14"></a>
+# **listarUsingGET14**
+> PageCompraResponse listarUsingGET14(idConta, opts)
 
 {{{compra_antecipavel_resource_listar}}}
 
@@ -250,7 +250,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET13(idConta, opts, callback);
+api.listarUsingGET14(idConta, opts, callback);
 ```
 
 ### Parameters

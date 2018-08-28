@@ -18,7 +18,7 @@
   /**
    * globaltagdocumento service.
    * @module api/GlobaltagdocumentoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the atualizarUsingPUT3 operation.
-     * @callback module:api/GlobaltagdocumentoApi~atualizarUsingPUT3Callback
+     * Callback function to receive the result of the atualizarUsingPUT4 operation.
+     * @callback module:api/GlobaltagdocumentoApi~atualizarUsingPUT4Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -97,20 +97,20 @@
      * {{{documento_template_resource_atualizar_notes}}}
      * @param {Integer} id {{{documento_template_resource_atualizar_param_id}}}
      * @param {module:model/DocumentoTemplatePersist} persist persist
-     * @param {module:api/GlobaltagdocumentoApi~atualizarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~atualizarUsingPUT4Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.atualizarUsingPUT3 = function(id, persist, callback) {
+    this.atualizarUsingPUT4 = function(id, persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling atualizarUsingPUT3";
+        throw "Missing the required parameter 'id' when calling atualizarUsingPUT4";
       }
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling atualizarUsingPUT3";
+        throw "Missing the required parameter 'persist' when calling atualizarUsingPUT4";
       }
 
 
@@ -137,8 +137,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET17 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback
+     * Callback function to receive the result of the consultarUsingGET19 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET19Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -148,15 +148,15 @@
      * {{{documento_resource_consultar}}}
      * {{{documento_resource_consultar_notes}}}
      * @param {Integer} id {{{documento_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET19Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.consultarUsingGET17 = function(id, callback) {
+    this.consultarUsingGET19 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET17";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET19";
       }
 
 
@@ -183,8 +183,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET18 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET18Callback
+     * Callback function to receive the result of the consultarUsingGET20 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET20Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -194,15 +194,15 @@
      * {{{documento_template_resource_consultar}}}
      * {{{documento_template_resource_consultar_notes}}}
      * @param {Integer} id {{{documento_template_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET18Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.consultarUsingGET18 = function(id, callback) {
+    this.consultarUsingGET20 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET18";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET20";
       }
 
 
@@ -229,8 +229,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET47 operation.
-     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET47Callback
+     * Callback function to receive the result of the consultarUsingGET49 operation.
+     * @callback module:api/GlobaltagdocumentoApi~consultarUsingGET49Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -240,15 +240,15 @@
      * {{{tipo_template_resource_consultar}}}
      * {{{tipo_template_resource_consultar_notes}}}
      * @param {Integer} id {{{tipo_template_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET47Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~consultarUsingGET49Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.consultarUsingGET47 = function(id, callback) {
+    this.consultarUsingGET49 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET47";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET49";
       }
 
 
@@ -320,8 +320,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET21 operation.
-     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET21Callback
+     * Callback function to receive the result of the listarUsingGET22 operation.
+     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET22Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -337,10 +337,10 @@
      * @param {Integer} opts.idTemplateDocumento {{{documento_request_id_template_documento_value}}}
      * @param {String} opts.nome {{{documento_request_nome_value}}}
      * @param {module:model/String} opts.extensao {{{documento_request_extensao_value}}}
-     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoResponse}
      */
-    this.listarUsingGET21 = function(opts, callback) {
+    this.listarUsingGET22 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -373,8 +373,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET22 operation.
-     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET22Callback
+     * Callback function to receive the result of the listarUsingGET23 operation.
+     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET23Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -388,10 +388,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.idTipoTemplate {{{documento_template_request_id_tipo_template_value}}}
-     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET22Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET23Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDocumentoTemplateResponse}
      */
-    this.listarUsingGET22 = function(opts, callback) {
+    this.listarUsingGET23 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -422,8 +422,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET57 operation.
-     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET57Callback
+     * Callback function to receive the result of the listarUsingGET60 operation.
+     * @callback module:api/GlobaltagdocumentoApi~listarUsingGET60Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -436,10 +436,10 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET57Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~listarUsingGET60Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTipoTemplateResponse}
      */
-    this.listarUsingGET57 = function(opts, callback) {
+    this.listarUsingGET60 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -469,8 +469,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST11 operation.
-     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST11Callback
+     * Callback function to receive the result of the salvarUsingPOST12 operation.
+     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST12Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoDetalhadoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -480,15 +480,15 @@
      * {{{documento_resource_salvar}}}
      * {{{documento_resource_salvar_notes}}}
      * @param {module:model/DocumentoParametrosRequest} persist persist
-     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoDetalhadoResponse}
      */
-    this.salvarUsingPOST11 = function(persist, callback) {
+    this.salvarUsingPOST12 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST11";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST12";
       }
 
 
@@ -514,8 +514,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST12 operation.
-     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST12Callback
+     * Callback function to receive the result of the salvarUsingPOST13 operation.
+     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST13Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DocumentoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -525,15 +525,15 @@
      * {{{documento_template_resource_salvar}}}
      * {{{documento_template_resource_salvar_notes}}}
      * @param {module:model/DocumentoTemplatePersist} persist persist
-     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST12Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST13Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DocumentoTemplateResponse}
      */
-    this.salvarUsingPOST12 = function(persist, callback) {
+    this.salvarUsingPOST13 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST12";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST13";
       }
 
 
@@ -559,8 +559,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST31 operation.
-     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST31Callback
+     * Callback function to receive the result of the salvarUsingPOST32 operation.
+     * @callback module:api/GlobaltagdocumentoApi~salvarUsingPOST32Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TipoTemplateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -570,15 +570,15 @@
      * {{{tipo_template_resource_salvar}}}
      * {{{tipo_template_resource_salvar_notes}}}
      * @param {module:model/TipoTemplateRequest} persist persist
-     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST31Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdocumentoApi~salvarUsingPOST32Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TipoTemplateResponse}
      */
-    this.salvarUsingPOST31 = function(persist, callback) {
+    this.salvarUsingPOST32 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST31";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST32";
       }
 
 

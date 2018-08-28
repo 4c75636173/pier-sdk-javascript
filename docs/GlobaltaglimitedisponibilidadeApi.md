@@ -5,7 +5,8 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarUsingPUT9**](GlobaltaglimitedisponibilidadeApi.md#alterarUsingPUT9) | **PUT** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_alterar}}}
-[**consultarUsingGET23**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET23) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**consultarUsingGET25**](GlobaltaglimitedisponibilidadeApi.md#consultarUsingGET25) | **GET** /api/limites-disponibilidades | {{{limite_disponibilidade_resource_consultar}}}
+[**sensibilizarSaldoDisponivelGlobalUsingPOST**](GlobaltaglimitedisponibilidadeApi.md#sensibilizarSaldoDisponivelGlobalUsingPOST) | **POST** /api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global | {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
 
 
 <a name="alterarUsingPUT9"></a>
@@ -82,9 +83,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET23"></a>
-# **consultarUsingGET23**
-> LimiteDisponibilidadeResponse consultarUsingGET23(idConta)
+<a name="consultarUsingGET25"></a>
+# **consultarUsingGET25**
+> LimiteDisponibilidadeResponse consultarUsingGET25(idConta)
 
 {{{limite_disponibilidade_resource_consultar}}}
 
@@ -106,7 +107,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET23(idConta, callback);
+api.consultarUsingGET25(idConta, callback);
 ```
 
 ### Parameters
@@ -114,6 +115,55 @@ api.consultarUsingGET23(idConta, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idConta** | **Integer**| {{{limite_disponibilidade_resource_consultar_param_id_conta}}} | 
+
+### Return type
+
+[**LimiteDisponibilidadeResponse**](LimiteDisponibilidadeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="sensibilizarSaldoDisponivelGlobalUsingPOST"></a>
+# **sensibilizarSaldoDisponivelGlobalUsingPOST**
+> LimiteDisponibilidadeResponse sensibilizarSaldoDisponivelGlobalUsingPOST(id, sensibilizarSaldoGlobal)
+
+{{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+
+{{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltaglimitedisponibilidadeApi()
+
+var id = 789; // {Integer} {{{sensibilizar_saldo_global_param_id}}}
+
+var sensibilizarSaldoGlobal = new Pier.SensibilizarSaldoGlobalUpdateValue(); // {SensibilizarSaldoGlobalUpdateValue} sensibilizarSaldoGlobal
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.sensibilizarSaldoDisponivelGlobalUsingPOST(id, sensibilizarSaldoGlobal, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| {{{sensibilizar_saldo_global_param_id}}} | 
+ **sensibilizarSaldoGlobal** | [**SensibilizarSaldoGlobalUpdateValue**](SensibilizarSaldoGlobalUpdateValue.md)| sensibilizarSaldoGlobal | 
 
 ### Return type
 

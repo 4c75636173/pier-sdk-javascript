@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/UsuarioUpdateValue', '../model/UsuarioResponse', '../model/ControleSegurancaDispositivoResponse', '../model/ControleSegurancaDispositivoUpdateValor', '../model/PageUsuarioContasResponse', '../model/PageControleSegurancaDispositivoResponse', '../model/PageUsuarioResponse', '../model/UsuarioPersistencia', '../model/ControleSegurancaDispositivoPersistencia', '../model/UsuarioSenhaFortePersistencia'], factory);
+    define(['../ApiClient', '../model/UsuarioUpdateValue', '../model/UsuarioResponse', '../model/ControleSegurancaDispositivoResponse', '../model/ControleSegurancaDispositivoUpdateValor', '../model/PageUsuarioContasResponse', '../model/PageControleSegurancaDispositivoResponse', '../model/PageUsuarioResponse', '../model/ControleSegurancaDispositivoPersistencia', '../model/UsuarioPersistencia', '../model/UsuarioSenhaFortePersistencia'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/UsuarioUpdateValue'), require('../model/UsuarioResponse'), require('../model/ControleSegurancaDispositivoResponse'), require('../model/ControleSegurancaDispositivoUpdateValor'), require('../model/PageUsuarioContasResponse'), require('../model/PageControleSegurancaDispositivoResponse'), require('../model/PageUsuarioResponse'), require('../model/UsuarioPersistencia'), require('../model/ControleSegurancaDispositivoPersistencia'), require('../model/UsuarioSenhaFortePersistencia'));
+    module.exports = factory(require('../ApiClient'), require('../model/UsuarioUpdateValue'), require('../model/UsuarioResponse'), require('../model/ControleSegurancaDispositivoResponse'), require('../model/ControleSegurancaDispositivoUpdateValor'), require('../model/PageUsuarioContasResponse'), require('../model/PageControleSegurancaDispositivoResponse'), require('../model/PageUsuarioResponse'), require('../model/ControleSegurancaDispositivoPersistencia'), require('../model/UsuarioPersistencia'), require('../model/UsuarioSenhaFortePersistencia'));
   } else {
     // Browser globals (root is window)
     if (!root.Pier) {
       root.Pier = {};
     }
-    root.Pier.GlobaltagusuarioApi = factory(root.Pier.ApiClient, root.Pier.UsuarioUpdateValue, root.Pier.UsuarioResponse, root.Pier.ControleSegurancaDispositivoResponse, root.Pier.ControleSegurancaDispositivoUpdateValor, root.Pier.PageUsuarioContasResponse, root.Pier.PageControleSegurancaDispositivoResponse, root.Pier.PageUsuarioResponse, root.Pier.UsuarioPersistencia, root.Pier.ControleSegurancaDispositivoPersistencia, root.Pier.UsuarioSenhaFortePersistencia);
+    root.Pier.GlobaltagusuarioApi = factory(root.Pier.ApiClient, root.Pier.UsuarioUpdateValue, root.Pier.UsuarioResponse, root.Pier.ControleSegurancaDispositivoResponse, root.Pier.ControleSegurancaDispositivoUpdateValor, root.Pier.PageUsuarioContasResponse, root.Pier.PageControleSegurancaDispositivoResponse, root.Pier.PageUsuarioResponse, root.Pier.ControleSegurancaDispositivoPersistencia, root.Pier.UsuarioPersistencia, root.Pier.UsuarioSenhaFortePersistencia);
   }
-}(this, function(ApiClient, UsuarioUpdateValue, UsuarioResponse, ControleSegurancaDispositivoResponse, ControleSegurancaDispositivoUpdateValor, PageUsuarioContasResponse, PageControleSegurancaDispositivoResponse, PageUsuarioResponse, UsuarioPersistencia, ControleSegurancaDispositivoPersistencia, UsuarioSenhaFortePersistencia) {
+}(this, function(ApiClient, UsuarioUpdateValue, UsuarioResponse, ControleSegurancaDispositivoResponse, ControleSegurancaDispositivoUpdateValor, PageUsuarioContasResponse, PageControleSegurancaDispositivoResponse, PageUsuarioResponse, ControleSegurancaDispositivoPersistencia, UsuarioPersistencia, UsuarioSenhaFortePersistencia) {
   'use strict';
 
   /**
    * globaltagusuario service.
    * @module api/GlobaltagusuarioApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -244,8 +244,8 @@
     }
 
     /**
-     * Callback function to receive the result of the atualizarUsingPUT2 operation.
-     * @callback module:api/GlobaltagusuarioApi~atualizarUsingPUT2Callback
+     * Callback function to receive the result of the atualizarUsingPUT3 operation.
+     * @callback module:api/GlobaltagusuarioApi~atualizarUsingPUT3Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ControleSegurancaDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -255,15 +255,15 @@
      * {{{controle_seguranca_dispositivo_atualizar}}}
      * {{{controle_seguranca_dispositivo_atualizar_notas}}}
      * @param {module:model/ControleSegurancaDispositivoUpdateValor} update update
-     * @param {module:api/GlobaltagusuarioApi~atualizarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~atualizarUsingPUT3Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ControleSegurancaDispositivoResponse}
      */
-    this.atualizarUsingPUT2 = function(update, callback) {
+    this.atualizarUsingPUT3 = function(update, callback) {
       var postBody = update;
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling atualizarUsingPUT2";
+        throw "Missing the required parameter 'update' when calling atualizarUsingPUT3";
       }
 
 
@@ -343,8 +343,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET15 operation.
-     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET15Callback
+     * Callback function to receive the result of the consultarUsingGET17 operation.
+     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageControleSegurancaDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -358,16 +358,16 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageControleSegurancaDispositivoResponse}
      */
-    this.consultarUsingGET15 = function(idUsuario, opts, callback) {
+    this.consultarUsingGET17 = function(idUsuario, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'idUsuario' is set
       if (idUsuario == undefined || idUsuario == null) {
-        throw "Missing the required parameter 'idUsuario' when calling consultarUsingGET15";
+        throw "Missing the required parameter 'idUsuario' when calling consultarUsingGET17";
       }
 
 
@@ -397,8 +397,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET51 operation.
-     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET51Callback
+     * Callback function to receive the result of the consultarUsingGET53 operation.
+     * @callback module:api/GlobaltagusuarioApi~consultarUsingGET53Callback
      * @param {String} error Error message, if any.
      * @param {module:model/UsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -408,15 +408,15 @@
      * {{{usuario_resource_consultar}}}
      * {{{usuario_resource_consultar_notes}}}
      * @param {Integer} id {{{usuario_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET51Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~consultarUsingGET53Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/UsuarioResponse}
      */
-    this.consultarUsingGET51 = function(id, callback) {
+    this.consultarUsingGET53 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET51";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET53";
       }
 
 
@@ -489,8 +489,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET62 operation.
-     * @callback module:api/GlobaltagusuarioApi~listarUsingGET62Callback
+     * Callback function to receive the result of the listarUsingGET65 operation.
+     * @callback module:api/GlobaltagusuarioApi~listarUsingGET65Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageUsuarioResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -507,10 +507,10 @@
      * @param {String} opts.cpf {{{usuario_request_cpf_value}}}
      * @param {String} opts.email {{{usuario_request_email_value}}}
      * @param {module:model/String} opts.status {{{usuario_request_status_value}}}
-     * @param {module:api/GlobaltagusuarioApi~listarUsingGET62Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~listarUsingGET65Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageUsuarioResponse}
      */
-    this.listarUsingGET62 = function(opts, callback) {
+    this.listarUsingGET65 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -590,53 +590,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST33 operation.
-     * @callback module:api/GlobaltagusuarioApi~salvarUsingPOST33Callback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UsuarioResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * {{{usuario_resource_salvar}}}
-     * {{{usuario_resource_salvar_notes}}}
-     * @param {module:model/UsuarioPersistencia} persist persist
-     * @param {module:api/GlobaltagusuarioApi~salvarUsingPOST33Callback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {module:model/UsuarioResponse}
-     */
-    this.salvarUsingPOST33 = function(persist, callback) {
-      var postBody = persist;
-
-      // verify the required parameter 'persist' is set
-      if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST33";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = UsuarioResponse;
-
-      return this.apiClient.callApi(
-        '/api/usuarios', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the salvarUsingPOST9 operation.
-     * @callback module:api/GlobaltagusuarioApi~salvarUsingPOST9Callback
+     * Callback function to receive the result of the salvarUsingPOST10 operation.
+     * @callback module:api/GlobaltagusuarioApi~salvarUsingPOST10Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ControleSegurancaDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -646,15 +601,15 @@
      * {{{controle_seguranca_dispositivo_salvar}}}
      * {{{controle_seguranca_dispositivo_salvar_notas}}}
      * @param {module:model/ControleSegurancaDispositivoPersistencia} persist persist
-     * @param {module:api/GlobaltagusuarioApi~salvarUsingPOST9Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagusuarioApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ControleSegurancaDispositivoResponse}
      */
-    this.salvarUsingPOST9 = function(persist, callback) {
+    this.salvarUsingPOST10 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST9";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST10";
       }
 
 
@@ -674,6 +629,51 @@
 
       return this.apiClient.callApi(
         '/api/controles-seguranca-dispositivos', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the salvarUsingPOST34 operation.
+     * @callback module:api/GlobaltagusuarioApi~salvarUsingPOST34Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UsuarioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * {{{usuario_resource_salvar}}}
+     * {{{usuario_resource_salvar_notes}}}
+     * @param {module:model/UsuarioPersistencia} persist persist
+     * @param {module:api/GlobaltagusuarioApi~salvarUsingPOST34Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {module:model/UsuarioResponse}
+     */
+    this.salvarUsingPOST34 = function(persist, callback) {
+      var postBody = persist;
+
+      // verify the required parameter 'persist' is set
+      if (persist == undefined || persist == null) {
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST34";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = UsuarioResponse;
+
+      return this.apiClient.callApi(
+        '/api/usuarios', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

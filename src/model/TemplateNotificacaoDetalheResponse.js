@@ -18,7 +18,7 @@
   /**
    * The TemplateNotificacaoDetalheResponse model module.
    * @module model/TemplateNotificacaoDetalheResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -176,7 +176,13 @@
      * value: NOTIFICACAO_EMAIL
      * @const
      */
-    NOTIFICACAO_EMAIL: "NOTIFICACAO_EMAIL"
+    NOTIFICACAO_EMAIL: "NOTIFICACAO_EMAIL",
+    
+    /**
+     * value: OTP_3D_SECURE
+     * @const
+     */
+    OTP_3D_SECURE: "OTP_3D_SECURE"
   };  /**
    * Allowed values for the <code>tipoNotificacao</code> property.
    * @enum {String}
@@ -206,6 +212,12 @@
      * @const
      */
     PUSH_GCM: "PUSH_GCM",
+    
+    /**
+     * value: WEBHOOK
+     * @const
+     */
+    WEBHOOK: "WEBHOOK",
     
     /**
      * value: EMAIL

@@ -18,7 +18,7 @@
   /**
    * globaltagtransferenciabancaria service.
    * @module api/GlobaltagtransferenciabancariaApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the atualizarUsingPUT1 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~atualizarUsingPUT1Callback
+     * Callback function to receive the result of the atualizarUsingPUT2 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~atualizarUsingPUT2Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -97,20 +97,20 @@
      * {{{conta_bancaria_resource_atualizar_notes}}}
      * @param {Integer} id {{{conta_bancaria_resource_atualizar_param_id}}}
      * @param {module:model/ContaBancariaPortadorUpdateValue} update update
-     * @param {module:api/GlobaltagtransferenciabancariaApi~atualizarUsingPUT1Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~atualizarUsingPUT2Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.atualizarUsingPUT1 = function(id, update, callback) {
+    this.atualizarUsingPUT2 = function(id, update, callback) {
       var postBody = update;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling atualizarUsingPUT1";
+        throw "Missing the required parameter 'id' when calling atualizarUsingPUT2";
       }
 
       // verify the required parameter 'update' is set
       if (update == undefined || update == null) {
-        throw "Missing the required parameter 'update' when calling atualizarUsingPUT1";
+        throw "Missing the required parameter 'update' when calling atualizarUsingPUT2";
       }
 
 
@@ -328,8 +328,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET13 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET13Callback
+     * Callback function to receive the result of the consultarUsingGET15 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET15Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -339,15 +339,15 @@
      * {{{conta_bancaria_resource_consultar}}}
      * {{{conta_bancaria_resource_consultar_notes}}}
      * @param {Integer} id {{{conta_bancaria_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET13Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET15Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.consultarUsingGET13 = function(id, callback) {
+    this.consultarUsingGET15 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET13";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET15";
       }
 
 
@@ -374,8 +374,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET48 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET48Callback
+     * Callback function to receive the result of the consultarUsingGET50 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET50Callback
      * @param {String} error Error message, if any.
      * @param {module:model/TransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -388,21 +388,21 @@
      * @param {Integer} idTransferencia {{{transferencia_bancaria_resource_consultar_param_id_evento}}}
      * @param {Object} opts Optional parameters
      * @param {Integer} opts.idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET48Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~consultarUsingGET50Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/TransferenciaBancariaResponse}
      */
-    this.consultarUsingGET48 = function(id, idTransferencia, opts, callback) {
+    this.consultarUsingGET50 = function(id, idTransferencia, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET48";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET50";
       }
 
       // verify the required parameter 'idTransferencia' is set
       if (idTransferencia == undefined || idTransferencia == null) {
-        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48";
+        throw "Missing the required parameter 'idTransferencia' when calling consultarUsingGET50";
       }
 
 
@@ -486,8 +486,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET16 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~listarUsingGET16Callback
+     * Callback function to receive the result of the listarUsingGET17 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~listarUsingGET17Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -510,10 +510,10 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~listarUsingGET16Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~listarUsingGET17Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageContaBancariaPortadorResponse}
      */
-    this.listarUsingGET16 = function(opts, callback) {
+    this.listarUsingGET17 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -553,8 +553,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET59 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~listarUsingGET59Callback
+     * Callback function to receive the result of the listarUsingGET62 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~listarUsingGET62Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageTransferenciaBancariaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -569,16 +569,16 @@
      * @param {Array.<String>} opts.sort {{{global_menssagem_sort_sort}}}
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
-     * @param {module:api/GlobaltagtransferenciabancariaApi~listarUsingGET59Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~listarUsingGET62Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageTransferenciaBancariaResponse}
      */
-    this.listarUsingGET59 = function(id, opts, callback) {
+    this.listarUsingGET62 = function(id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling listarUsingGET59";
+        throw "Missing the required parameter 'id' when calling listarUsingGET62";
       }
 
 
@@ -661,8 +661,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST7 operation.
-     * @callback module:api/GlobaltagtransferenciabancariaApi~salvarUsingPOST7Callback
+     * Callback function to receive the result of the salvarUsingPOST8 operation.
+     * @callback module:api/GlobaltagtransferenciabancariaApi~salvarUsingPOST8Callback
      * @param {String} error Error message, if any.
      * @param {module:model/ContaBancariaPortadorResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -672,15 +672,15 @@
      * {{{conta_bancaria_resource_salvar}}}
      * {{{conta_bancaria_resource_salvar_notes}}}
      * @param {module:model/ContaBancariaPortadorPersistValue} persist persist
-     * @param {module:api/GlobaltagtransferenciabancariaApi~salvarUsingPOST7Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagtransferenciabancariaApi~salvarUsingPOST8Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/ContaBancariaPortadorResponse}
      */
-    this.salvarUsingPOST7 = function(persist, callback) {
+    this.salvarUsingPOST8 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST7";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST8";
       }
 
 

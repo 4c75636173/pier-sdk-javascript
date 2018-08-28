@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**[NotificacaoPushResponseValue]**](NotificacaoPushResponseValue.md) |  | [optional] 
+**content** | [**[NotificacaoPushResponse]**](NotificacaoPushResponse.md) |  | [optional] 
 **first** | **Boolean** |  | [optional] 
 **firstPage** | **Boolean** |  | [optional] 
 **hasContent** | **Boolean** |  | [optional] 

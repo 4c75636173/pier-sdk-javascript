@@ -18,7 +18,7 @@
   /**
    * globaltagdispositivo service.
    * @module api/GlobaltagdispositivoApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -125,8 +125,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET20 operation.
-     * @callback module:api/GlobaltagdispositivoApi~listarUsingGET20Callback
+     * Callback function to receive the result of the listarUsingGET21 operation.
+     * @callback module:api/GlobaltagdispositivoApi~listarUsingGET21Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PageDispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -144,10 +144,10 @@
      * @param {Integer} opts.idAplicacaoMobile {{{dispositivo_request_id_aplicacao_mobile_value}}}
      * @param {String} opts.dataCriacao {{{dispositivo_request_data_criacao_value}}}
      * @param {String} opts.dataDesativacao {{{dispositivo_request_data_desativacao_value}}}
-     * @param {module:api/GlobaltagdispositivoApi~listarUsingGET20Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdispositivoApi~listarUsingGET21Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PageDispositivoResponse}
      */
-    this.listarUsingGET20 = function(opts, callback) {
+    this.listarUsingGET21 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -182,8 +182,8 @@
     }
 
     /**
-     * Callback function to receive the result of the salvarUsingPOST10 operation.
-     * @callback module:api/GlobaltagdispositivoApi~salvarUsingPOST10Callback
+     * Callback function to receive the result of the salvarUsingPOST11 operation.
+     * @callback module:api/GlobaltagdispositivoApi~salvarUsingPOST11Callback
      * @param {String} error Error message, if any.
      * @param {module:model/DispositivoResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -193,15 +193,15 @@
      * {{{dispositivo_resource_salvar}}}
      * {{{dispositivo_resource_salvar_notes}}}
      * @param {module:model/DispositivoPersistValue} persist persist
-     * @param {module:api/GlobaltagdispositivoApi~salvarUsingPOST10Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagdispositivoApi~salvarUsingPOST11Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/DispositivoResponse}
      */
-    this.salvarUsingPOST10 = function(persist, callback) {
+    this.salvarUsingPOST11 = function(persist, callback) {
       var postBody = persist;
 
       // verify the required parameter 'persist' is set
       if (persist == undefined || persist == null) {
-        throw "Missing the required parameter 'persist' when calling salvarUsingPOST10";
+        throw "Missing the required parameter 'persist' when calling salvarUsingPOST11";
       }
 
 

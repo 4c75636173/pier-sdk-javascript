@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alterarConvenioUsingPUT**](GlobaltagcadastrogeralApi.md#alterarConvenioUsingPUT) | **PUT** /api/convenios/{id} | Altera os dados banc\u00E1rios de um determinado conv\u00EAnio
+[**alterarCorteUsingPUT**](GlobaltagcadastrogeralApi.md#alterarCorteUsingPUT) | **PUT** /api/vencimentos/{dataVencimento} | {{{vencimento_resource_alterar}}}
 [**alterarUsingPUT1**](GlobaltagcadastrogeralApi.md#alterarUsingPUT1) | **PUT** /api/campanhas/{id} | {{{campanha_resource_alterar}}}
 [**alterarUsingPUT2**](GlobaltagcadastrogeralApi.md#alterarUsingPUT2) | **PUT** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_alterar}}}
 [**alterarUsingPUT3**](GlobaltagcadastrogeralApi.md#alterarUsingPUT3) | **PUT** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_alterar}}}
@@ -14,16 +15,16 @@ Method | HTTP request | Description
 [**consultarCampanhaUsingGET**](GlobaltagcadastrogeralApi.md#consultarCampanhaUsingGET) | **GET** /api/campanhas/{id} | {{{campanha_resource_consultar_campanha}}}
 [**consultarConvenioUsingGET**](GlobaltagcadastrogeralApi.md#consultarConvenioUsingGET) | **GET** /api/convenios/{id} | Consultar dados banc\u00E1rios pelo id do conv\u00EAnio
 [**consultarTaxaAntecipacaoUsingGET**](GlobaltagcadastrogeralApi.md#consultarTaxaAntecipacaoUsingGET) | **GET** /api/produtos/{id}/consultar-taxa-antecipacao | {{{produto_resource_consultar_taxa_antecipacao}}}
-[**consultarUsingGET11**](GlobaltagcadastrogeralApi.md#consultarUsingGET11) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
-[**consultarUsingGET12**](GlobaltagcadastrogeralApi.md#consultarUsingGET12) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
-[**consultarUsingGET32**](GlobaltagcadastrogeralApi.md#consultarUsingGET32) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
-[**consultarUsingGET41**](GlobaltagcadastrogeralApi.md#consultarUsingGET41) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
-[**consultarUsingGET42**](GlobaltagcadastrogeralApi.md#consultarUsingGET42) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
-[**consultarUsingGET43**](GlobaltagcadastrogeralApi.md#consultarUsingGET43) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
-[**consultarUsingGET44**](GlobaltagcadastrogeralApi.md#consultarUsingGET44) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
-[**consultarUsingGET46**](GlobaltagcadastrogeralApi.md#consultarUsingGET46) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
-[**consultarUsingGET6**](GlobaltagcadastrogeralApi.md#consultarUsingGET6) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
-[**consultarUsingGET8**](GlobaltagcadastrogeralApi.md#consultarUsingGET8) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
+[**consultarUsingGET13**](GlobaltagcadastrogeralApi.md#consultarUsingGET13) | **GET** /api/configuracoes-registro-cobranca/{id} | {{{configuracao_registro_cobranca_resource_consultar}}}
+[**consultarUsingGET14**](GlobaltagcadastrogeralApi.md#consultarUsingGET14) | **GET** /api/configuracoes-rotativos/{id} | {{{configuracao_rotativo_resource_consultar}}}
+[**consultarUsingGET34**](GlobaltagcadastrogeralApi.md#consultarUsingGET34) | **GET** /api/produtos/{id} | {{{produto_resource_consultar}}}
+[**consultarUsingGET43**](GlobaltagcadastrogeralApi.md#consultarUsingGET43) | **GET** /api/tipos-ajustes/{id} | {{{tipo_transacoes_ajuste_resource_consultar}}}
+[**consultarUsingGET44**](GlobaltagcadastrogeralApi.md#consultarUsingGET44) | **GET** /api/tipos-boletos | {{{tipo_boleto_resource_consultar}}}
+[**consultarUsingGET45**](GlobaltagcadastrogeralApi.md#consultarUsingGET45) | **GET** /api/tipos-enderecos/{id} | {{{tipo_endereco_resource_consultar}}}
+[**consultarUsingGET46**](GlobaltagcadastrogeralApi.md#consultarUsingGET46) | **GET** /api/tipos-operacoes | {{{tipo_operacao_resource_consultar}}}
+[**consultarUsingGET48**](GlobaltagcadastrogeralApi.md#consultarUsingGET48) | **GET** /api/tipos-telefones/{id} | {{{tipo_telefone_resource_consultar}}}
+[**consultarUsingGET7**](GlobaltagcadastrogeralApi.md#consultarUsingGET7) | **GET** /api/atendimento-clientes/{id} | {{{atendimento_cliente_resource_consultar}}}
+[**consultarUsingGET9**](GlobaltagcadastrogeralApi.md#consultarUsingGET9) | **GET** /api/bancos/{id} | {{{banco_resource_consultar}}}
 [**listarCampanhasUsingGET**](GlobaltagcadastrogeralApi.md#listarCampanhasUsingGET) | **GET** /api/campanhas | {{{campanha_resource_listar_campanhas}}}
 [**listarContasPorPessoaUsingGET**](GlobaltagcadastrogeralApi.md#listarContasPorPessoaUsingGET) | **GET** /api/pessoas/listar-contas | {{{pessoa_resource_listar_contas_por_pessoa}}}
 [**listarConveniosUsingGET**](GlobaltagcadastrogeralApi.md#listarConveniosUsingGET) | **GET** /api/convenios | Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
@@ -35,20 +36,20 @@ Method | HTTP request | Description
 [**listarParentescosUsingGET**](GlobaltagcadastrogeralApi.md#listarParentescosUsingGET) | **GET** /api/parentescos | {{{campo_codificado_resource_listar_parentescos}}}
 [**listarProfissoesUsingGET**](GlobaltagcadastrogeralApi.md#listarProfissoesUsingGET) | **GET** /api/profissoes | {{{campo_codificado_resource_listar_profissoes}}}
 [**listarTiposCampanhasUsingGET**](GlobaltagcadastrogeralApi.md#listarTiposCampanhasUsingGET) | **GET** /api/tipos-campanhas | {{{tipo_campanha_resource_listar_tipos_campanhas}}}
-[**listarUsingGET14**](GlobaltagcadastrogeralApi.md#listarUsingGET14) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
-[**listarUsingGET15**](GlobaltagcadastrogeralApi.md#listarUsingGET15) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
-[**listarUsingGET41**](GlobaltagcadastrogeralApi.md#listarUsingGET41) | **GET** /api/portadores | {{{portador_resource_listar}}}
-[**listarUsingGET42**](GlobaltagcadastrogeralApi.md#listarUsingGET42) | **GET** /api/produtos | {{{produto_resource_listar}}}
-[**listarUsingGET43**](GlobaltagcadastrogeralApi.md#listarUsingGET43) | **GET** /api/promotores | {{{promotor_resource_listar}}}
-[**listarUsingGET52**](GlobaltagcadastrogeralApi.md#listarUsingGET52) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
-[**listarUsingGET54**](GlobaltagcadastrogeralApi.md#listarUsingGET54) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
-[**listarUsingGET56**](GlobaltagcadastrogeralApi.md#listarUsingGET56) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
-[**listarUsingGET63**](GlobaltagcadastrogeralApi.md#listarUsingGET63) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
-[**listarUsingGET7**](GlobaltagcadastrogeralApi.md#listarUsingGET7) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
-[**listarUsingGET9**](GlobaltagcadastrogeralApi.md#listarUsingGET9) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listarUsingGET10**](GlobaltagcadastrogeralApi.md#listarUsingGET10) | **GET** /api/bancos | {{{banco_resource_listar}}}
+[**listarUsingGET15**](GlobaltagcadastrogeralApi.md#listarUsingGET15) | **GET** /api/configuracoes-registro-cobranca | {{{configuracao_registro_cobranca_resource_listar}}}
+[**listarUsingGET16**](GlobaltagcadastrogeralApi.md#listarUsingGET16) | **GET** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_listar}}}
+[**listarUsingGET43**](GlobaltagcadastrogeralApi.md#listarUsingGET43) | **GET** /api/portadores | {{{portador_resource_listar}}}
+[**listarUsingGET44**](GlobaltagcadastrogeralApi.md#listarUsingGET44) | **GET** /api/produtos | {{{produto_resource_listar}}}
+[**listarUsingGET45**](GlobaltagcadastrogeralApi.md#listarUsingGET45) | **GET** /api/promotores | {{{promotor_resource_listar}}}
+[**listarUsingGET55**](GlobaltagcadastrogeralApi.md#listarUsingGET55) | **GET** /api/tipos-ajustes | {{{tipo_ajuste_resource_consultar}}}
+[**listarUsingGET57**](GlobaltagcadastrogeralApi.md#listarUsingGET57) | **GET** /api/tipos-enderecos | {{{tipo_endereco_resource_listar}}}
+[**listarUsingGET59**](GlobaltagcadastrogeralApi.md#listarUsingGET59) | **GET** /api/tipos-telefones | {{{tipo_telefone_resource_listar}}}
+[**listarUsingGET66**](GlobaltagcadastrogeralApi.md#listarUsingGET66) | **GET** /api/vencimentos | {{{vencimento_resource_listar}}}
+[**listarUsingGET8**](GlobaltagcadastrogeralApi.md#listarUsingGET8) | **GET** /api/atendimento-clientes | {{{atendimento_cliente_resource_listar}}}
 [**salvarUsingPOST2**](GlobaltagcadastrogeralApi.md#salvarUsingPOST2) | **POST** /api/atendimento-clientes | {{{atendimento_cliente_resource_salvar}}}
-[**salvarUsingPOST4**](GlobaltagcadastrogeralApi.md#salvarUsingPOST4) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
-[**salvarUsingPOST6**](GlobaltagcadastrogeralApi.md#salvarUsingPOST6) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
+[**salvarUsingPOST5**](GlobaltagcadastrogeralApi.md#salvarUsingPOST5) | **POST** /api/campanhas | {{{campanha_resource_salvar}}}
+[**salvarUsingPOST7**](GlobaltagcadastrogeralApi.md#salvarUsingPOST7) | **POST** /api/configuracoes-rotativos | {{{configuracao_rotativo_resource_salvar}}}
 
 
 <a name="alterarConvenioUsingPUT"></a>
@@ -90,6 +91,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConvenioResponse**](ConvenioResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="alterarCorteUsingPUT"></a>
+# **alterarCorteUsingPUT**
+> ControleVencimentoResponse alterarCorteUsingPUT(dataVencimento, update)
+
+{{{vencimento_resource_alterar}}}
+
+{{{vencimento_resource_alterar_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcadastrogeralApi()
+
+var dataVencimento = "dataVencimento_example"; // {String} {{{fatura_resource_consultar_fatura_param_data_vencimento}}}
+
+var update = new Pier.VencimentoUpdate(); // {VencimentoUpdate} update
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.alterarCorteUsingPUT(dataVencimento, update, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dataVencimento** | **String**| {{{fatura_resource_consultar_fatura_param_data_vencimento}}} | 
+ **update** | [**VencimentoUpdate**](VencimentoUpdate.md)| update | 
+
+### Return type
+
+[**ControleVencimentoResponse**](ControleVencimentoResponse.md)
 
 ### Authorization
 
@@ -529,9 +579,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET11"></a>
-# **consultarUsingGET11**
-> ConfiguracaoRegistroCobrancaResponse consultarUsingGET11(id)
+<a name="consultarUsingGET13"></a>
+# **consultarUsingGET13**
+> ConfiguracaoRegistroCobrancaResponse consultarUsingGET13(id)
 
 {{{configuracao_registro_cobranca_resource_consultar}}}
 
@@ -553,7 +603,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET11(id, callback);
+api.consultarUsingGET13(id, callback);
 ```
 
 ### Parameters
@@ -575,9 +625,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET12"></a>
-# **consultarUsingGET12**
-> ConfiguracaoRotativoDetalheResponse consultarUsingGET12(id)
+<a name="consultarUsingGET14"></a>
+# **consultarUsingGET14**
+> ConfiguracaoRotativoDetalheResponse consultarUsingGET14(id)
 
 {{{configuracao_rotativo_resource_consultar}}}
 
@@ -599,7 +649,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET12(id, callback);
+api.consultarUsingGET14(id, callback);
 ```
 
 ### Parameters
@@ -621,9 +671,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET32"></a>
-# **consultarUsingGET32**
-> ProdutoDetalhesResponse consultarUsingGET32(id)
+<a name="consultarUsingGET34"></a>
+# **consultarUsingGET34**
+> ProdutoDetalhesResponse consultarUsingGET34(id)
 
 {{{produto_resource_consultar}}}
 
@@ -645,7 +695,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET32(id, callback);
+api.consultarUsingGET34(id, callback);
 ```
 
 ### Parameters
@@ -667,9 +717,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET41"></a>
-# **consultarUsingGET41**
-> TipoAjusteResponse consultarUsingGET41(id)
+<a name="consultarUsingGET43"></a>
+# **consultarUsingGET43**
+> TipoAjusteResponse consultarUsingGET43(id)
 
 {{{tipo_transacoes_ajuste_resource_consultar}}}
 
@@ -691,7 +741,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET41(id, callback);
+api.consultarUsingGET43(id, callback);
 ```
 
 ### Parameters
@@ -713,9 +763,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET42"></a>
-# **consultarUsingGET42**
-> PageTipoBoletoResponse consultarUsingGET42(opts)
+<a name="consultarUsingGET44"></a>
+# **consultarUsingGET44**
+> PageTipoBoletoResponse consultarUsingGET44(opts)
 
 {{{tipo_boleto_resource_consultar}}}
 
@@ -743,7 +793,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET42(opts, callback);
+api.consultarUsingGET44(opts, callback);
 ```
 
 ### Parameters
@@ -770,9 +820,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET43"></a>
-# **consultarUsingGET43**
-> TipoEnderecoResponse consultarUsingGET43(id)
+<a name="consultarUsingGET45"></a>
+# **consultarUsingGET45**
+> TipoEnderecoResponse consultarUsingGET45(id)
 
 {{{tipo_endereco_resource_consultar}}}
 
@@ -794,7 +844,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET43(id, callback);
+api.consultarUsingGET45(id, callback);
 ```
 
 ### Parameters
@@ -816,9 +866,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET44"></a>
-# **consultarUsingGET44**
-> TipoOperacaoResponse consultarUsingGET44(idCartao, idEstabelecimento, codigoProcessamento)
+<a name="consultarUsingGET46"></a>
+# **consultarUsingGET46**
+> TipoOperacaoResponse consultarUsingGET46(idCartao, idEstabelecimento, codigoProcessamento)
 
 {{{tipo_operacao_resource_consultar}}}
 
@@ -844,7 +894,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET44(idCartao, idEstabelecimento, codigoProcessamento, callback);
+api.consultarUsingGET46(idCartao, idEstabelecimento, codigoProcessamento, callback);
 ```
 
 ### Parameters
@@ -868,9 +918,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET46"></a>
-# **consultarUsingGET46**
-> TipoTelefoneResponse consultarUsingGET46(id)
+<a name="consultarUsingGET48"></a>
+# **consultarUsingGET48**
+> TipoTelefoneResponse consultarUsingGET48(id)
 
 {{{tipo_telefone_resource_consultar}}}
 
@@ -892,7 +942,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET46(id, callback);
+api.consultarUsingGET48(id, callback);
 ```
 
 ### Parameters
@@ -914,9 +964,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET6"></a>
-# **consultarUsingGET6**
-> AtendimentoClienteResponse consultarUsingGET6(id)
+<a name="consultarUsingGET7"></a>
+# **consultarUsingGET7**
+> AtendimentoClienteResponse consultarUsingGET7(id)
 
 {{{atendimento_cliente_resource_consultar}}}
 
@@ -938,7 +988,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET6(id, callback);
+api.consultarUsingGET7(id, callback);
 ```
 
 ### Parameters
@@ -960,9 +1010,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="consultarUsingGET8"></a>
-# **consultarUsingGET8**
-> BancoResponse consultarUsingGET8(id)
+<a name="consultarUsingGET9"></a>
+# **consultarUsingGET9**
+> BancoResponse consultarUsingGET9(id)
 
 {{{banco_resource_consultar}}}
 
@@ -984,7 +1034,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.consultarUsingGET8(id, callback);
+api.consultarUsingGET9(id, callback);
 ```
 
 ### Parameters
@@ -1575,9 +1625,60 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET14"></a>
-# **listarUsingGET14**
-> ConfiguracaoRegistroCobrancaResponse listarUsingGET14(opts)
+<a name="listarUsingGET10"></a>
+# **listarUsingGET10**
+> PageBancoResponse listarUsingGET10(opts)
+
+{{{banco_resource_listar}}}
+
+{{{banco_resource_listar_notes}}}
+
+### Example
+```javascript
+var Pier = require('Pier');
+
+var apiInstance = new Pier.GlobaltagcadastrogeralApi()
+
+var opts = { 
+  'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
+  'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
+  'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.listarUsingGET10(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
+ **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
+ **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
+
+### Return type
+
+[**PageBancoResponse**](PageBancoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP reuqest headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listarUsingGET15"></a>
+# **listarUsingGET15**
+> ConfiguracaoRegistroCobrancaResponse listarUsingGET15(opts)
 
 {{{configuracao_registro_cobranca_resource_listar}}}
 
@@ -1602,7 +1703,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET14(opts, callback);
+api.listarUsingGET15(opts, callback);
 ```
 
 ### Parameters
@@ -1626,9 +1727,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET15"></a>
-# **listarUsingGET15**
-> PageConfiguracaoRotativoResponse listarUsingGET15(opts)
+<a name="listarUsingGET16"></a>
+# **listarUsingGET16**
+> PageConfiguracaoRotativoResponse listarUsingGET16(opts)
 
 {{{configuracao_rotativo_resource_listar}}}
 
@@ -1654,7 +1755,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET15(opts, callback);
+api.listarUsingGET16(opts, callback);
 ```
 
 ### Parameters
@@ -1679,9 +1780,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET41"></a>
-# **listarUsingGET41**
-> PagePortadorResponse listarUsingGET41(opts)
+<a name="listarUsingGET43"></a>
+# **listarUsingGET43**
+> PagePortadorResponse listarUsingGET43(opts)
 
 {{{portador_resource_listar}}}
 
@@ -1716,7 +1817,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET41(opts, callback);
+api.listarUsingGET43(opts, callback);
 ```
 
 ### Parameters
@@ -1750,9 +1851,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET42"></a>
-# **listarUsingGET42**
-> PageProdutoResponse listarUsingGET42(opts)
+<a name="listarUsingGET44"></a>
+# **listarUsingGET44**
+> PageProdutoResponse listarUsingGET44(opts)
 
 {{{produto_resource_listar}}}
 
@@ -1780,7 +1881,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET42(opts, callback);
+api.listarUsingGET44(opts, callback);
 ```
 
 ### Parameters
@@ -1807,9 +1908,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET43"></a>
-# **listarUsingGET43**
-> PagePromotorResponse listarUsingGET43(opts)
+<a name="listarUsingGET45"></a>
+# **listarUsingGET45**
+> PagePromotorResponse listarUsingGET45(opts)
 
 {{{promotor_resource_listar}}}
 
@@ -1839,7 +1940,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET43(opts, callback);
+api.listarUsingGET45(opts, callback);
 ```
 
 ### Parameters
@@ -1868,9 +1969,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET52"></a>
-# **listarUsingGET52**
-> PageTipoAjusteResponse listarUsingGET52(opts)
+<a name="listarUsingGET55"></a>
+# **listarUsingGET55**
+> PageTipoAjusteResponse listarUsingGET55(opts)
 
 {{{tipo_ajuste_resource_consultar}}}
 
@@ -1897,7 +1998,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET52(opts, callback);
+api.listarUsingGET55(opts, callback);
 ```
 
 ### Parameters
@@ -1923,9 +2024,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET54"></a>
-# **listarUsingGET54**
-> PageTipoEnderecoResponse listarUsingGET54(opts)
+<a name="listarUsingGET57"></a>
+# **listarUsingGET57**
+> PageTipoEnderecoResponse listarUsingGET57(opts)
 
 {{{tipo_endereco_resource_listar}}}
 
@@ -1952,7 +2053,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET54(opts, callback);
+api.listarUsingGET57(opts, callback);
 ```
 
 ### Parameters
@@ -1978,9 +2079,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET56"></a>
-# **listarUsingGET56**
-> PageTipoTelefoneResponse listarUsingGET56(opts)
+<a name="listarUsingGET59"></a>
+# **listarUsingGET59**
+> PageTipoTelefoneResponse listarUsingGET59(opts)
 
 {{{tipo_telefone_resource_listar}}}
 
@@ -2007,7 +2108,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET56(opts, callback);
+api.listarUsingGET59(opts, callback);
 ```
 
 ### Parameters
@@ -2033,9 +2134,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET63"></a>
-# **listarUsingGET63**
-> PageControleVencimentoResponse listarUsingGET63(opts)
+<a name="listarUsingGET66"></a>
+# **listarUsingGET66**
+> PageControleVencimentoResponse listarUsingGET66(opts)
 
 {{{vencimento_resource_listar}}}
 
@@ -2051,7 +2152,8 @@ var opts = {
   'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
   'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
   'limit': 56, // {Integer} {{{global_menssagem_sort_limit}}}
-  'dataVencimento': "dataVencimento_example" // {String} {{{controle_vencimento_request_data_vencimento_value}}}
+  'dataVencimento': "dataVencimento_example", // {String} {{{controle_vencimento_request_data_vencimento_value}}}
+  'dataVencimentoFim': "dataVencimentoFim_example" // {String} {{{calendario_fatura_request_data_fim_value}}}
 };
 
 var callback = function(error, data, response) {
@@ -2061,7 +2163,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET63(opts, callback);
+api.listarUsingGET66(opts, callback);
 ```
 
 ### Parameters
@@ -2072,6 +2174,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
  **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
  **dataVencimento** | **String**| {{{controle_vencimento_request_data_vencimento_value}}} | [optional] 
+ **dataVencimentoFim** | **String**| {{{calendario_fatura_request_data_fim_value}}} | [optional] 
 
 ### Return type
 
@@ -2086,9 +2189,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="listarUsingGET7"></a>
-# **listarUsingGET7**
-> PageAtendimentoClienteResponse listarUsingGET7(opts)
+<a name="listarUsingGET8"></a>
+# **listarUsingGET8**
+> PageAtendimentoClienteResponse listarUsingGET8(opts)
 
 {{{atendimento_cliente_resource_listar}}}
 
@@ -2117,7 +2220,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listarUsingGET7(opts, callback);
+api.listarUsingGET8(opts, callback);
 ```
 
 ### Parameters
@@ -2135,57 +2238,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageAtendimentoClienteResponse**](PageAtendimentoClienteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP reuqest headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="listarUsingGET9"></a>
-# **listarUsingGET9**
-> PageBancoResponse listarUsingGET9(opts)
-
-{{{banco_resource_listar}}}
-
-{{{banco_resource_listar_notes}}}
-
-### Example
-```javascript
-var Pier = require('Pier');
-
-var apiInstance = new Pier.GlobaltagcadastrogeralApi()
-
-var opts = { 
-  'sort': ["sort_example"], // {[String]} {{{global_menssagem_sort_sort}}}
-  'page': 56, // {Integer} {{{global_menssagem_sort_page_value}}}
-  'limit': 56 // {Integer} {{{global_menssagem_sort_limit}}}
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.listarUsingGET9(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sort** | [**[String]**](String.md)| {{{global_menssagem_sort_sort}}} | [optional] 
- **page** | **Integer**| {{{global_menssagem_sort_page_value}}} | [optional] 
- **limit** | **Integer**| {{{global_menssagem_sort_limit}}} | [optional] 
-
-### Return type
-
-[**PageBancoResponse**](PageBancoResponse.md)
 
 ### Authorization
 
@@ -2259,9 +2311,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST4"></a>
-# **salvarUsingPOST4**
-> CampanhaResponse salvarUsingPOST4(campanhaPersist)
+<a name="salvarUsingPOST5"></a>
+# **salvarUsingPOST5**
+> CampanhaResponse salvarUsingPOST5(campanhaPersist)
 
 {{{campanha_resource_salvar}}}
 
@@ -2283,7 +2335,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST4(campanhaPersist, callback);
+api.salvarUsingPOST5(campanhaPersist, callback);
 ```
 
 ### Parameters
@@ -2305,9 +2357,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="salvarUsingPOST6"></a>
-# **salvarUsingPOST6**
-> ConfiguracaoRotativoDetalheResponse salvarUsingPOST6(configuracaoRotativoPersist)
+<a name="salvarUsingPOST7"></a>
+# **salvarUsingPOST7**
+> ConfiguracaoRotativoDetalheResponse salvarUsingPOST7(configuracaoRotativoPersist)
 
 {{{configuracao_rotativo_resource_salvar}}}
 
@@ -2329,7 +2381,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.salvarUsingPOST6(configuracaoRotativoPersist, callback);
+api.salvarUsingPOST7(configuracaoRotativoPersist, callback);
 ```
 
 ### Parameters

@@ -18,7 +18,7 @@
   /**
    * The GrupoEconomicoDTO model module.
    * @module model/GrupoEconomicoDTO
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

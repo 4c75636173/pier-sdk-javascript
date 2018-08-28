@@ -18,7 +18,7 @@
   /**
    * The PageContaDebitoRecorrenteResponse model module.
    * @module model/PageContaDebitoRecorrenteResponse
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**

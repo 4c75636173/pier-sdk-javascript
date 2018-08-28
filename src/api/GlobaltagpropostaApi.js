@@ -18,7 +18,7 @@
   /**
    * globaltagproposta service.
    * @module api/GlobaltagpropostaApi
-   * @version 2.68.0
+   * @version 2.74.2
    */
 
   /**
@@ -85,8 +85,8 @@
     }
 
     /**
-     * Callback function to receive the result of the consultarUsingGET33 operation.
-     * @callback module:api/GlobaltagpropostaApi~consultarUsingGET33Callback
+     * Callback function to receive the result of the consultarUsingGET35 operation.
+     * @callback module:api/GlobaltagpropostaApi~consultarUsingGET35Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PropostaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -96,15 +96,15 @@
      * {{{proposta_resource_consultar}}}
      * {{{proposta_resource_consultar_notes}}}
      * @param {Integer} id {{{proposta_resource_consultar_param_id}}}
-     * @param {module:api/GlobaltagpropostaApi~consultarUsingGET33Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpropostaApi~consultarUsingGET35Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PropostaResponse}
      */
-    this.consultarUsingGET33 = function(id, callback) {
+    this.consultarUsingGET35 = function(id, callback) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling consultarUsingGET33";
+        throw "Missing the required parameter 'id' when calling consultarUsingGET35";
       }
 
 
@@ -182,8 +182,8 @@
     }
 
     /**
-     * Callback function to receive the result of the listarUsingGET44 operation.
-     * @callback module:api/GlobaltagpropostaApi~listarUsingGET44Callback
+     * Callback function to receive the result of the listarUsingGET46 operation.
+     * @callback module:api/GlobaltagpropostaApi~listarUsingGET46Callback
      * @param {String} error Error message, if any.
      * @param {module:model/PagePropostaResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -197,10 +197,10 @@
      * @param {Integer} opts.page {{{global_menssagem_sort_page_value}}}
      * @param {Integer} opts.limit {{{global_menssagem_sort_limit}}}
      * @param {Integer} opts.status {{{proposta_request_status_value}}}
-     * @param {module:api/GlobaltagpropostaApi~listarUsingGET44Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/GlobaltagpropostaApi~listarUsingGET46Callback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/PagePropostaResponse}
      */
-    this.listarUsingGET44 = function(opts, callback) {
+    this.listarUsingGET46 = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
